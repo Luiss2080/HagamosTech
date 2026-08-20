@@ -1,6 +1,10 @@
 const express = require('express');
 const cors = require('cors');
+const os = require('os');
 require('dotenv').config();
+
+const PORT = process.env.PORT || 3000;
+const LOCAL_IP = (Object.values(os.networkInterfaces()).flat().find(i => i.family === 'IPv4' && !i.internal) || {}).address || 'localhost';
 
 const app = express();
 
@@ -28,28 +32,13 @@ app.use((req, res, next) => {
 
 // --- ESTRUCTURA MVC: IMPORTACIÓN DE RUTAS ---
 const catalogoRoutes = require('./store/routes/01_catalogoRoutes');
-const authRoutes = require('./system/routes/01_authRoutes');
+const authRoutes = require('./auth/routes/01_authRoutes');
 const pagoRoutes = require('./store/routes/04_pagoRoutes');
 const carritoRoutes = require('./store/routes/02_carritoRoutes');
 const compraRoutes = require('./store/routes/03_compraRoutes');
 const contactoRoutes = require('./store/routes/05_contactoRoutes');
-const AuthController = require('./system/controllers/01_AuthController');
-
-// Rutas modulares del panel administrativo
-const usuarioRoutes = require('./system/routes/03_usuarioRoutes');
-const rolRoutes = require('./system/routes/04_rolRoutes');
-const permisoRoutes = require('./system/routes/05_permisoRoutes');
-const clienteRoutes = require('./system/routes/02_clienteRoutes');
-const cuponRoutes = require('./system/routes/06_cuponRoutes');
-const productoRoutes = require('./system/routes/08_productoRoutes');
-const ventaRoutes = require('./system/routes/09_ventaRoutes');
-const stockRoutes = require('./system/routes/10_stockRoutes');
-const compraInsumoRoutes = require('./system/routes/11_compraInsumoRoutes');
-const sucursalRoutes = require('./system/routes/12_sucursalRoutes');
-const deliveryRoutes = require('./system/routes/13_deliveryRoutes');
-const hornoRoutes = require('./system/routes/14_hornoRoutes');
-
-const { SystemController, LOCAL_IP, PORT } = require('./system/controllers/06_SystemController');
+const AuthController = require('./auth/controllers/01_AuthController');
+const cuponRoutes = require('./auth/routes/06_cuponRoutes');
 
 // --- ESTRUCTURA MVC: REGISTRO DE RUTAS ---
 app.use('/api/catalogo', catalogoRoutes);
@@ -58,20 +47,7 @@ app.use('/api/pagos', pagoRoutes);
 app.use('/api/carrito', carritoRoutes);
 app.use('/api/compras', compraRoutes);
 app.use('/api/contacto', contactoRoutes);
-
-// Registro de rutas modulares del panel
-app.use('/api/usuarios-sistema', usuarioRoutes);
-app.use('/api/roles-sistema', rolRoutes);
-app.use('/api/permisos-sistema', permisoRoutes);
-app.use('/api/clientes-sistema', clienteRoutes);
 app.use('/api/cupones-sistema', cuponRoutes);
-app.use('/api/productos-sistema', productoRoutes);
-app.use('/api/ventas-sistema', ventaRoutes);
-app.use('/api/stock-sistema', stockRoutes);
-app.use('/api/compras-sistema', compraInsumoRoutes);
-app.use('/api/sucursales-sistema', sucursalRoutes);
-app.use('/api/delivery-sistema', deliveryRoutes);
-app.use('/api/horno-sistema', hornoRoutes);
 
 // --- MOCK ROUTES TEMPORALES ---
 // Esto silencia los errores 404 en consola de los hooks que aún no tienen backend real
@@ -102,10 +78,6 @@ app.post('/api/logout', (req, res) => res.json({ exito: true }));
 app.get('/api/perfil/2fa/setup', AuthController.obtenerSetup2FA);
 app.post('/api/perfil/2fa/enable', AuthController.activar2FA);
 app.post('/api/perfil/2fa/disable', AuthController.desactivar2FA);
-
-// Rutas de sistema
-app.get('/api/config', SystemController.getConfig);
-app.get('/api/estado', SystemController.getStatus);
 
 // --- MOCK CATCH-ALL: silencia 404 de endpoints aún sin backend real ---
 // Cubre módulos que el frontend consulta pero que aún no tienen controlador:
