@@ -139,6 +139,215 @@ model ClienteUsuario {
   telefono           String?
   fechaCreacion      DateTime        @default(now())
   fechaActualizacion DateTime        @updatedAt
+  carrito_item       carrito_item[]
+  compra             compra[]
 
   @@map("usuarios_clientes")
+}
+
+model PasosCatalogo {
+  id          Int     @id @default(autoincrement())
+  clave       String  @unique
+  icono       String
+  colorIcono  String
+  titulo      String
+  descripcion String  @db.Text
+  chip        String?
+  orden       Int     @default(0)
+
+  @@map("pasos_catalogo")
+}
+
+model categoria {
+  id                 Int        @id @default(autoincrement())
+  enlace             String     @unique(map: "Categoria_enlace_key")
+  titulo             String
+  subtitulo          String?
+  descripcion        String?    @db.Text
+  icono              String?
+  etiqueta           String?
+  acento             String?
+  orden              Int        @default(0)
+  activo             Boolean    @default(true)
+  fechaCreacion      DateTime   @default(now())
+  fechaActualizacion DateTime   @updatedAt
+  producto           producto[]
+}
+
+model producto {
+  id                       Int       @id @default(autoincrement())
+  enlace                   String    @unique(map: "Producto_enlace_key")
+  nombre                   String
+  precio                   Float
+  precioAnterior           Float?
+  descuento                String?
+  calificacion             String?
+  imagen                   String?
+  insignia                 String?
+  descripcion              String?   @db.Text
+  descripcionCorta         String?   @db.Text
+  disponibilidad           String?
+  categoriaId              Int
+  stock                    Int       @default(0)
+  activo                   Boolean   @default(true)
+  fechaCreacion            DateTime  @default(now())
+  fechaActualizacion       DateTime  @updatedAt
+  carrito_item             carrito_item[]
+  compra_item              compra_item[]
+  inventarioSucursal       InventarioSucursal[]
+  categoria                categoria @relation(fields: [categoriaId], references: [id])
+
+  @@index([categoriaId], map: "producto_categoriaId_fkey")
+}
+
+model carrito_item {
+  id            Int           @id @default(autoincrement())
+  usuarioId     Int
+  productoId    Int
+  cantidad      Int           @default(1)
+  fechaCreacion DateTime      @default(now())
+  producto      producto      @relation(fields: [productoId], references: [id])
+  usuario       ClienteUsuario @relation(fields: [usuarioId], references: [id])
+
+  @@index([productoId], map: "carrito_item_productoId_fkey")
+  @@index([usuarioId], map: "carrito_item_usuarioId_fkey")
+}
+
+model compra {
+  id                 Int               @id @default(autoincrement())
+  codigo             String            @unique
+  usuarioId          Int
+  sucursalId         Int
+  metodoPago         compra_metodoPago @default(qr)
+  estado             compra_estado     @default(pendiente_pago)
+  totalBs            Float
+  nombreCompleto     String?
+  telefono           String?
+  ciudad             String?
+  direccion          String?
+  notas              String?           @db.Text
+  fechaCreacion      DateTime          @default(now())
+  fechaActualizacion DateTime          @updatedAt
+  sucursal           sucursal          @relation(fields: [sucursalId], references: [id])
+  usuario            ClienteUsuario    @relation(fields: [usuarioId], references: [id])
+  compra_item        compra_item[]
+  pago               pago[]
+
+  @@index([sucursalId], map: "compra_sucursalId_fkey")
+  @@index([usuarioId], map: "compra_usuarioId_fkey")
+}
+
+model compra_item {
+  id             Int      @id @default(autoincrement())
+  compraId       Int
+  productoId     Int
+  cantidad       Int
+  precioUnitario Float
+  subtotal       Float
+  compra         compra   @relation(fields: [compraId], references: [id])
+  producto       producto @relation(fields: [productoId], references: [id])
+
+  @@index([compraId], map: "compra_item_compraId_fkey")
+  @@index([productoId], map: "compra_item_productoId_fkey")
+}
+
+model sucursal {
+  id                       Int                        @id @default(autoincrement())
+  nombre                   String
+  ciudad                   String
+  direccion                String?
+  telefono                 String?
+  horario                  String?
+  servicios                String?
+  activo                   Boolean                    @default(true)
+  fechaCreacion            DateTime                   @default(now())
+  fechaActualizacion       DateTime                   @updatedAt
+  compra                   compra[]
+  inventarioSucursal       InventarioSucursal[]
+
+  @@index([ciudad], map: "idx_sucursal_ciudad")
+}
+
+model InventarioSucursal {
+  id                 Int       @id @default(autoincrement())
+  sucursalId         Int
+  productoId         Int
+  stock              Int       @default(0)
+  minimo             Int       @default(5)
+  fechaCreacion      DateTime  @default(now())
+  fechaActualizacion DateTime  @updatedAt
+  producto           producto  @relation(fields: [productoId], references: [id])
+  sucursal           sucursal  @relation(fields: [sucursalId], references: [id])
+
+  @@unique([sucursalId, productoId], map: "detalle_sucursal_product_sucursal_producto_unique")
+  @@index([productoId], map: "detalle_sucursal_product_productoId_fkey")
+  @@index([sucursalId], map: "detalle_sucursal_product_sucursalId_fkey")
+  @@map("inventario_sucursal")
+}
+
+model pago {
+  id            Int             @id @default(autoincrement())
+  compraId      Int
+  metodoPago    pago_metodoPago @default(qr)
+  estado        pago_estado     @default(pendiente)
+  monto         Float
+  referencia    String?
+  fechaPago     DateTime?
+  fechaCreacion DateTime        @default(now())
+  compra        compra          @relation(fields: [compraId], references: [id])
+
+  @@index([compraId], map: "pago_compraId_fkey")
+}
+
+model mensaje {
+  id            Int             @id @default(autoincrement())
+  nombre        String
+  correo        String
+  telefono      String?
+  asunto        String?
+  mensaje       String          @db.Text
+  tipo          mensaje_tipo?   @default(contacto)
+  estado        mensaje_estado? @default(nuevo)
+  fechaCreacion DateTime        @default(now())
+}
+
+enum pago_metodoPago {
+  qr
+  tarjeta
+  transferencia
+  efectivo
+}
+
+enum pago_estado {
+  pendiente
+  pagado
+  fallido
+  en_verificacion
+}
+
+enum compra_metodoPago {
+  qr
+  tarjeta
+  transferencia
+  efectivo
+}
+
+enum compra_estado {
+  pendiente_pago
+  pagado
+  cancelado
+}
+
+enum mensaje_tipo {
+  contacto
+  pedido
+  sugerencia
+  soporte
+}
+
+enum mensaje_estado {
+  nuevo
+  leido
+  respondido
+  archivado
 }
