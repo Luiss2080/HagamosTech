@@ -17,6 +17,33 @@ const NAV_ITEMS = [
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/#personalizado', icon: 'fa-lightbulb' },
         ]
     },
+    {
+        id: 'servicios',
+        label: 'Servicios',
+        icon: 'fa-screwdriver-wrench',
+        type: 'dropdown',
+        subItems: [
+            { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/#tecnologia', icon: 'fa-globe' },
+            { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/#tecnologia', icon: 'fa-mobile-screen-button' },
+            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/#tecnologia', icon: 'fa-gear' },
+            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/#tecnologia', icon: 'fa-robot' },
+            { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/#negocios', icon: 'fa-store' },
+            { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/#academia', icon: 'fa-graduation-cap' },
+        ]
+    },
+    {
+        id: 'para-quien',
+        label: '¿Para quién?',
+        icon: 'fa-users',
+        type: 'dropdown',
+        subItems: [
+            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/#academia', icon: 'fa-user-graduate' },
+            { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/#negocios', icon: 'fa-rocket' },
+            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/#negocios', icon: 'fa-shop' },
+            { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/#tecnologia', icon: 'fa-building' },
+            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/#personalizado', icon: 'fa-user' },
+        ]
+    },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'scroll', target: 'flujo' },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
 ];
@@ -283,7 +310,7 @@ const Header = () => {
                                                 <span>{item.label}</span>
                                                 <i className="fas fa-chevron-down text-[8px] transition-transform duration-300 group-hover:rotate-180"></i>
                                             </button>
-                                            <div className={`nav-dropdown-menu ${item.id === 'soluciones' ? '!min-w-[280px]' : ''}`}>
+                                            <div className={`nav-dropdown-menu ${item.id === 'servicios' || item.id === 'para-quien' || item.id === 'que-hacemos' ? '!min-w-[300px]' : ''}`}>
                                                 <div className="flex flex-col gap-1 p-2">
                                                     {item.subItems.map(subItem => (
                                                         <button 
