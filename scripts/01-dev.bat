@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ==========================================
-echo   LOS CASTORES - INICIAR DESARROLLO LOCAL
+echo   HagamosTech - INICIAR DESARROLLO LOCAL
 echo ==========================================
 echo.
 
@@ -31,20 +31,20 @@ echo.
 
 REM --- Iniciar Backend Node.js ---
 echo [1/2] Iniciando API Node.js (puerto 3000)...
-start "Los Castores API" cmd /k "cd /d "%PROJECT_DIR%\server" && npm run dev"
+start "HagamosTech API" cmd /k "cd /d "%PROJECT_DIR%\server" && npm run dev"
 
 timeout /t 3 /nobreak >nul
 
 REM --- Iniciar Frontend Vite ---
 echo [2/2] Iniciando Frontend Vite (puerto 4001)...
-start "Los Castores Web" cmd /k "cd /d "%PROJECT_DIR%" && npm run dev"
+start "HagamosTech Web" cmd /k "cd /d "%PROJECT_DIR%" && npm run dev"
 
 echo.
 echo ==========================================
 echo   APLICACIONES INICIADAS
 echo ==========================================
 echo.
-echo Frontend:  http://localhost:4001
+echo Frontend:  http://localhost:4000
 echo Backend:   http://localhost:3000
 echo API:       http://localhost:3000/api
 echo.

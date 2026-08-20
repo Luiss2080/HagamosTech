@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 echo ==========================================
-echo   LOS CASTORES - BUILD PARA PRODUCCION
+echo   HagamosTech - BUILD PARA PRODUCCION
 echo ==========================================
 echo.
 
