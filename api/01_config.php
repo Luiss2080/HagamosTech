@@ -26,15 +26,15 @@ if ($isLocal) {
     $host = '127.0.0.1';
     $user = 'root';
     $pass = '';
-    $db   = 'Loshagamostech';
+    $db   = 'HagamosTech';
     $port = 3306;
 } else {
     // PRODUCCIÓN (Servidor)
     // IMPORTANTE: Cambiar estas credenciales según tu hosting
     $host = 'localhost'; // O el host que te proporcione tu proveedor
-    $user = 'loscatores_user'; // Cambiar por usuario real del servidor
+    $user = 'hagamostech_user'; // Cambiar por usuario real del servidor
     $pass = 'password_seguro'; // Cambiar por password real
-    $db   = 'Loshagamostech';
+    $db   = 'HagamosTech';
     $port = 3306;
 }
 
@@ -84,7 +84,7 @@ function requireAuth($pdo) {
         respond(['error' => 'Unauthorized - Token required'], 401);
     }
     
-    $stmt = $pdo->prepare("SELECT * FROM usuario WHERE id = ?");
+    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE id = ?");
     $stmt->execute([$token]);
     $user = $stmt->fetch();
     
@@ -95,7 +95,7 @@ function requireAuth($pdo) {
     return $user;
 }
 
-function generateCode($prefix = 'LC') {
+function generateCode($prefix = 'HT') {
     return $prefix . '-' . date('Ymd') . '-' . strtoupper(substr(uniqid(), -6));
 }
 

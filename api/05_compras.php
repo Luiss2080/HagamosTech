@@ -33,7 +33,7 @@ if ($method === 'POST' && $action === 'crear') {
         return $sum + ($item['precio'] * $item['cantidad']);
     }, 0);
     
-    $codigo = generateCode('LC');
+    $codigo = generateCode('HT');
     
     $stmt = $pdo->prepare("
         INSERT INTO compra (codigo, usuarioId, sucursalId, metodoPago, estado, totalBs, nombreCompleto, telefono, ciudad, direccion, notas, fechaActualizacion)

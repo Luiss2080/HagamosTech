@@ -3,24 +3,24 @@ const fs = require('fs');
 const path = require('path');
 
 // =====================================================================
-// Los Castores SCZ - Database Migration & Seeder Tool
+// HagamosTech - Database Migration & Seeder Tool
 // Usa los scripts maestros:
-//   01_esquema_LosCastoresSCZ.sql   -> crea toda la estructura (DROP + CREATE)
-//   02_datos_LosCastoresSCZ.sql     -> inserta los datos semilla
+//   01_esquema_HagamosTech.sql   -> crea toda la estructura (DROP + CREATE)
+//   02_datos_HagamosTech.sql     -> inserta los datos semilla
 // =====================================================================
 
 const DB_CONFIG = {
   host: '127.0.0.1',
   user: 'root',
   password: '',
-  database: 'LosCastoresSCZ',
+  database: 'HagamosTech',
   port: 3306,
   multipleStatements: true,
 };
 
 const DATABASE_DIR = __dirname;
-const SCHEMA_FILE = path.join(DATABASE_DIR, '01_esquema_LosCastoresSCZ.sql');
-const SEEDS_FILE = path.join(DATABASE_DIR, '02_datos_LosCastoresSCZ.sql');
+const SCHEMA_FILE = path.join(DATABASE_DIR, '01_esquema_HagamosTech.sql');
+const SEEDS_FILE = path.join(DATABASE_DIR, '02_datos_HagamosTech.sql');
 
 let connection;
 
@@ -113,15 +113,15 @@ Para reconstruir la base de datos por completo usa:
 
     default:
       console.log(`
-Los Castores SCZ - Database Tool
-================================
+HagamosTech - Database Tool
+==========================
 
 Usage: node database/runner.cjs <command>
 
 Commands:
   status              Show current database tables
-  migrate             Apply schema (01_esquema_LosCastoresSCZ.sql)
-  seed                Apply seed data (02_datos_LosCastoresSCZ.sql)
+  migrate             Apply schema (01_esquema_HagamosTech.sql)
+  seed                Apply seed data (02_datos_HagamosTech.sql)
   refresh / fresh     Drop all tables, then migrate + seed
       `);
   }

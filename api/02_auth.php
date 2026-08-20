@@ -13,7 +13,7 @@ if ($method === 'POST' && $action === 'login') {
         respond(['error' => 'Correo y contraseÃ±a requeridos'], 400);
     }
     
-    $stmt = $pdo->prepare("SELECT * FROM usuario WHERE correo = ?");
+    $stmt = $pdo->prepare("SELECT * FROM usuarios WHERE correo = ?");
     $stmt->execute([$correo]);
     $user = $stmt->fetch();
     
@@ -41,7 +41,7 @@ if ($method === 'POST' && $action === 'registro') {
         respond(['error' => 'Correo y contraseÃ±a requeridos'], 400);
     }
     
-    $stmt = $pdo->prepare("SELECT id FROM usuario WHERE correo = ?");
+    $stmt = $pdo->prepare("SELECT id FROM usuarios WHERE correo = ?");
     $stmt->execute([$correo]);
     if ($stmt->fetch()) {
         respond(['error' => 'El correo ya estÃ¡ registrado'], 409);
@@ -49,7 +49,7 @@ if ($method === 'POST' && $action === 'registro') {
     
     $hash = password_hash($contrasena, PASSWORD_DEFAULT);
     
-    $stmt = $pdo->prepare("INSERT INTO usuario (correo, contrasena, nombre, fechaActualizacion) VALUES (?, ?, ?, NOW())");
+    $stmt = $pdo->prepare("INSERT INTO usuarios (correo, contrasena, nombre, fechaActualizacion) VALUES (?, ?, ?, NOW())");
     $stmt->execute([$correo, $hash, $nombre]);
     
     $userId = $pdo->lastInsertId();
