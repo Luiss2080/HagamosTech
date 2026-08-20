@@ -10,23 +10,29 @@ const FondoTech = ({ hideWaves }) => {
             <div className="absolute top-[-10%] left-[-8%] w-[46%] h-[46%] bg-[#A3E635]/15 rounded-full blur-[110px] animate-float-slow"></div>
             <div className="absolute bottom-[-12%] right-[-10%] w-[48%] h-[48%] bg-[#84CC16]/10 rounded-full blur-[130px] animate-float-medium"></div>
 
-            {/* Circuit grid */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDI0IEwgNDggMjQgTSAyNCAwIEwgMjQgNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNjMsMjMwLDUzLDAuMTUpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-70 mix-blend-screen"></div>
+            {/* Circuit grid (very subtle) */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDI0IEwgNDggMjQgTSAyNCAwIEwgMjQgNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNjMsMjMwLDUzLDAuMDgpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50 mix-blend-screen"></div>
 
-            {/* Diagonal tech streaks */}
-            <div className="absolute inset-y-[-20%] -left-1/4 w-[20%] rotate-12 bg-gradient-to-b from-transparent via-[#A3E635]/10 to-transparent"></div>
-            <div className="absolute inset-y-[-20%] left-[70%] w-[16%] rotate-[-12deg] bg-gradient-to-b from-transparent via-[#84CC16]/10 to-transparent"></div>
-
-            {/* Floating data particles */}
-            <div className="absolute top-[12%] left-[12%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-pulse-glow"></div>
-            <div className="absolute top-[20%] left-[38%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/50 animate-float-fast" style={{animationDelay:'0.4s'}}></div>
-            <div className="absolute top-[30%] right-[20%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{animationDelay:'0.8s'}}></div>
-            <div className="absolute top-[48%] left-[16%] w-1.5 h-1.5 rounded-full bg-[#84CC16]/60 animate-float-medium" style={{animationDelay:'1.2s'}}></div>
-            <div className="absolute top-[55%] right-[12%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-pulse-glow" style={{animationDelay:'1s'}}></div>
-            <div className="absolute top-[68%] left-[30%] w-2 h-2 rounded-full bg-[#84CC16]/50 animate-float-slow" style={{animationDelay:'0.6s'}}></div>
-            <div className="absolute top-[78%] right-[34%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{animationDelay:'1.5s'}}></div>
-            <div className="absolute bottom-[14%] left-[48%] w-2 h-2 rounded-full bg-[#A3E635]/50 animate-float-fast" style={{animationDelay:'0.3s'}}></div>
-            <div className="absolute bottom-[24%] right-[18%] w-2.5 h-2.5 rounded-full bg-[#84CC16]/50 animate-pulse-glow" style={{animationDelay:'1.8s'}}></div>
+            {/* Floating data particles (more, animated) */}
+            <div className="absolute top-[10%] left-[10%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-pulse-glow"></div>
+            <div className="absolute top-[16%] left-[28%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/50 animate-float-fast" style={{animationDelay:'0.4s'}}></div>
+            <div className="absolute top-[22%] left-[44%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{animationDelay:'0.8s'}}></div>
+            <div className="absolute top-[14%] right-[24%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-float-medium" style={{animationDelay:'1.2s'}}></div>
+            <div className="absolute top-[30%] right-[10%] w-1.5 h-1.5 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{animationDelay:'0.6s'}}></div>
+            <div className="absolute top-[38%] left-[14%] w-2 h-2 rounded-full bg-[#A3E635]/80 animate-float-slow" style={{animationDelay:'1.5s'}}></div>
+            <div className="absolute top-[44%] left-[60%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/50 animate-pulse-glow" style={{animationDelay:'0.3s'}}></div>
+            <div className="absolute top-[52%] right-[18%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/60 animate-float-fast" style={{animationDelay:'1s'}}></div>
+            <div className="absolute top-[58%] left-[24%] w-2 h-2 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{animationDelay:'1.8s'}}></div>
+            <div className="absolute top-[64%] left-[46%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/70 animate-float-medium" style={{animationDelay:'0.7s'}}></div>
+            <div className="absolute top-[70%] right-[30%] w-2 h-2 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{animationDelay:'1.3s'}}></div>
+            <div className="absolute top-[76%] left-[16%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/50 animate-float-slow" style={{animationDelay:'0.5s'}}></div>
+            <div className="absolute top-[82%] right-[14%] w-1.5 h-1.5 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{animationDelay:'1.6s'}}></div>
+            <div className="absolute bottom-[12%] left-[38%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-float-fast" style={{animationDelay:'0.9s'}}></div>
+            <div className="absolute bottom-[20%] right-[40%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/55 animate-pulse-glow" style={{animationDelay:'0.2s'}}></div>
+            <div className="absolute bottom-[28%] left-[58%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/60 animate-float-medium" style={{animationDelay:'1.1s'}}></div>
+            <div className="absolute bottom-[10%] left-[12%] w-2 h-2 rounded-full bg-[#84CC16]/50 animate-pulse-glow" style={{animationDelay:'1.4s'}}></div>
+            <div className="absolute top-[26%] left-[72%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/60 animate-float-slow" style={{animationDelay:'0.6s'}}></div>
+            <div className="absolute top-[48%] right-[46%] w-2 h-2 rounded-full bg-[#A3E635]/55 animate-pulse-glow" style={{animationDelay:'1.7s'}}></div>
 
             {/* Scanline / raster effect */}
             <div className="absolute inset-0 opacity-[0.06] mix-blend-overlay"
