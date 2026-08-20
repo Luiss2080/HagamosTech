@@ -1,11 +1,11 @@
 import React from 'react';
 import PageHero from '../../../components/func/MigasPan';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import FondoTech from '../../../components/fondos/FondoTech';
 
 const HeroTerminos = () => {
     return (
         <div className="relative z-10">
-            <CircuitBackground />
+            <FondoTech />
             <PageHero
                 title="Términos de"
                 highlight="Servicio."
