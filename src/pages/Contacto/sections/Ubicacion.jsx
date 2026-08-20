@@ -1,6 +1,5 @@
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
-import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const Ubicacion = () => {
     const infoCards = [
@@ -36,17 +35,14 @@ const Ubicacion = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                             {infoCards.map((item, i) => (
-                                <div key={i} className={`relative p-5 rounded-3xl ${item.theme} border ${item.border} shadow-lg ${item.shadow} hover:scale-105 hover:border-[#A3E635]/50 backdrop-blur-md transition-all duration-300 group overflow-hidden flex flex-col items-center justify-center text-center`}>
-
-                                    {/* CircleParticles Background */}
-                                    <CircleParticles count={12} colorScheme="dark" />
+                                <div key={i} className={`relative p-5 rounded-3xl ${item.theme} border-2 ${item.border} shadow-lg ${item.shadow} hover:scale-105 transition-all duration-300 group overflow-hidden flex flex-col items-center justify-center text-center`}>
 
                                     <div className="relative z-10 w-full flex flex-col items-center">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.iconBg} shadow-sm mb-3 text-2xl group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300`}>
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.iconBg} shadow-sm mb-3 text-2xl group-hover:rotate-6 transition-transform duration-300`}>
                                             <i className={`fas ${item.icon}`}></i>
                                         </div>
-                                        <h4 className="font-black uppercase tracking-[0.2em] text-[9px] mb-1 text-[#A3E635]">{item.title}</h4>
-                                        <p className="text-sm font-black leading-tight tracking-wide text-white">{item.value}</p>
+                                        <h4 className="font-black uppercase tracking-[0.2em] text-[9px] mb-1 opacity-90">{item.title}</h4>
+                                        <p className="text-sm font-black leading-tight tracking-wide">{item.value}</p>
                                     </div>
                                 </div>
                             ))}

@@ -8,17 +8,17 @@ const recursosData = [
         desc: "Contanos tu idea, problema o necesidad y te ayudamos a definir la mejor solución tecnológica.",
         icon: "fa-lightbulb",
         theme: {
-            cardBg: "bg-white/[0.04]",
-            accentLine: "bg-[#A3E635]",
-            iconBg: "bg-[#A3E635]/15",
-            iconColor: "text-[#A3E635]",
-            textColor: "text-white",
-            descColor: "text-white/70",
-            borderColor: "border-[#A3E635]/25",
-            shadow: "shadow-xl shadow-[#A3E635]/10",
-            buttonBg: "bg-[#A3E635]",
-            buttonText: "text-[#0A0A0A]",
-            buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
+            cardBg: "bg-[#A3E635]",
+            accentLine: "bg-[#0A0A0A]",
+            iconBg: "bg-white/20",
+            iconColor: "text-[#0A0A0A]",
+            textColor: "text-[#0A0A0A]",
+            descColor: "text-[#0A0A0A]/80",
+            borderColor: "border-[#A3E635]",
+            shadow: "shadow-2xl shadow-[#A3E635]/20",
+            buttonBg: "bg-[#0A0A0A]",
+            buttonText: "text-white",
+            buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
             { label: "Ideas", icon: "fa-lightbulb" },
