@@ -78,7 +78,7 @@ const QueHacemos = () => {
                         Partimos de tu necesidad, <span className="text-[#84CC16]">no de un catálogo rígido</span>
                     </h2>
                     <p className="section-description mt-5 text-slate-600">
-                        Contanos qué querés lograr. Nosotros analizamos y encontramos la mejor forma de hacerlo realidad con tecnología, creatividad y conocimiento.
+                        Atendemos a <strong>todo tipo de cliente</strong> —estudiantes, emprendedores, pequeños negocios, empresas o personas particulares— para resolver <strong>cualquier necesidad digital o tecnológica</strong>. Contanos qué querés lograr y nosotros analizamos y encontramos la mejor forma de hacerlo realidad.
                     </p>
                 </div>
 
