@@ -1,37 +1,37 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import FondoTech from '../../../components/fondos/FondoTech';
 
 const POLITICAS = [
-    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Aceptamos efectivo, QR Simple, transferencia y POS próximamente. Todos los pagos se confirman antes de preparar el pedido.', color: 'bg-[#FF4D00]' },
-    { icon: 'fa-rotate-left', titulo: 'Cancelaciones', desc: 'Podés cancelar gratis hasta 30 minutos antes de la entrega. Si cancelás después, podés retirar el pedido igual.', color: 'bg-[#5D3A1F]' },
-    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'Indicá tu NIT al hacer el pedido. Recibís comprobante digital y factura física en local al día siguiente.', color: 'bg-[#8B4513]' },
-    { icon: 'fa-shield', titulo: 'Seguridad', desc: 'Tus datos de pago están cifrados y nunca se comparten con terceros. Los pagos se procesan por plataformas seguras.', color: 'bg-[#CC3D00]' },
+    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Aceptamos QR, transferencia bancaria y otros medios digitales. Los pagos se confirman antes de iniciar el desarrollo.', color: 'bg-[#A3E635]' },
+    { icon: 'fa-rotate-left', titulo: 'Cancelaciones', desc: 'Podés cancelar o pausar tu solicitud antes de que comience el desarrollo. Coordinamos los tiempos contigo.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'Indicá tu NIT al contratar. Recibís comprobante digital y factura por cada servicio entregado.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-shield', titulo: 'Seguridad', desc: 'Tus datos de pago están cifrados y nunca se comparten con terceros. Los pagos se procesan por plataformas seguras.', color: 'bg-[#171717]' },
 ];
 
 const ComprasPagos = () => {
     return (
         <div className="relative">
             <section className="relative z-10 py-4">
-                <CircuitBackground />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#8B4513]/10 text-[#8B4513] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#8B4513]/20">
-                            <i className="fas fa-wallet text-[#8B4513] mr-1"></i> Compras y Pagos
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#84CC16] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
+                            <i className="fas fa-wallet text-[#84CC16] mr-1"></i> Compras y Pagos
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            Políticas de <span className="relative inline-block text-[#FF4D00]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-3 leading-tight">
+                            Políticas de <span className="relative inline-block text-[#84CC16]">
                                 compra
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
-                        <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                        <p className="text-slate-600 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                             Así manejamos tus compras, pagos y facturación.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {POLITICAS.map((item, i) => (
-                            <div key={i} className={`relative rounded-[2rem] p-6 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${item.color} text-white shadow-xl shadow-orange-950/10`}>
+                            <div key={i} className={`relative rounded-[2rem] p-6 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${item.color} text-white shadow-xl shadow-black/10`}>
                                 <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                                 {/* Orbes decorativos */}
                                 <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/15 blur-2xl animate-float-slow pointer-events-none"></div>
