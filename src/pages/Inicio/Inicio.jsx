@@ -1,6 +1,5 @@
 import React from 'react';
 import HeroHagamosTech from './sections/HeroHagamosTech';
-import { QueHacemos, FlujoTrabajo } from './sections/QueHacemos';
 import InstitucionesCarrusel from './sections/InstitucionesCarrusel';
 import ServiciosGrid from './sections/ServiciosGrid';
 import VentajasCarrusel from './sections/VentajasCarrusel';
@@ -13,8 +12,6 @@ const Inicio = () => {
     return (
         <div id="app" className="relative overflow-hidden">
             <HeroHagamosTech />
-            <QueHacemos />
-            <FlujoTrabajo />
 
             <InstitucionesCarrusel />
 
