@@ -1,6 +1,5 @@
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
-import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const recursosData = [
     {
