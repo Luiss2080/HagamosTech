@@ -11,7 +11,7 @@ const Ubicacion = () => {
     ];
 
     return (
-        <section id="ubicación" className="relative z-10 py-4 border-t border-gray-100">
+        <section id="ubicación" className="relative z-10 py-4 border-t border-[#A3E635]/15">
             <FondoTech />
             <div className="w-full px-4 sm:px-8 md:px-16 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center">
@@ -29,7 +29,7 @@ const Ubicacion = () => {
                                     <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                 </span>
                             </h2>
-                            <p className="text-slate-600 font-medium max-w-lg text-base sm:text-lg leading-relaxed">
+                            <p className="text-white/70 font-medium max-w-lg text-base sm:text-lg leading-relaxed">
                                 Visítanos o escríbenos para conversar sobre tu proyecto, idea o necesidad. Estamos para ayudarte a convertirla en una solución real.
                             </p>
                         </div>
@@ -60,7 +60,7 @@ const Ubicacion = () => {
                         <div className="absolute top-6 right-6 z-30 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-fade-in-up">
                             <div className="flex items-center gap-3">
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-gray-500 tracking-wider text-right">Oficina principal</p>
+                                    <p className="text-[10px] font-black uppercase text-white/50 tracking-wider text-right">Oficina principal</p>
                                     <p className="text-sm font-bold text-[#0A0A0A] text-right">HagamosTech</p>
                                 </div>
                                 <div className="w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-[#0A0A0A] shadow-md">
@@ -94,6 +94,13 @@ const Ubicacion = () => {
                     </div>
 
                 </div>
+            </div>
+
+            {/* Ola de cierre (estilo FondoTech) */}
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180 opacity-30 z-0">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-[calc(100%+1.3px)] h-[80px] block">
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#0A0A0A]"></path>
+                </svg>
             </div>
         </section>
     );
