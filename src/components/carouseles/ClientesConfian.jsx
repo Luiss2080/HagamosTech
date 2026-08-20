@@ -16,21 +16,21 @@ import {
 } from './LogosClientes';
 
 const ROW1 = [
-  { name: 'Shougang', logoComponent: ShougangLogo, industry: 'Log+â-¡stica y Transporte', icon: 'fa-truck-fast', metric: 'Eficiencia: +94%' },
-  { name: 'Arca Continental', logoComponent: ArcaContinentalLogo, industry: 'Manufactura y Distribuci+â-¦n', icon: 'fa-warehouse', metric: 'Despliegue: 100%' },
-  { name: 'Urbano', logoComponent: UrbanoLogo, industry: 'Tecnolog+â-¡a / Movilidad', icon: 'fa-dolly', metric: 'Env+â-¡os: +98%' },
+  { name: 'Shougang', logoComponent: ShougangLogo, industry: 'Log+ï¿½-ï¿½stica y Transporte', icon: 'fa-truck-fast', metric: 'Eficiencia: +94%' },
+  { name: 'Arca Continental', logoComponent: ArcaContinentalLogo, industry: 'Manufactura y Distribuci+ï¿½-ï¿½n', icon: 'fa-warehouse', metric: 'Despliegue: 100%' },
+  { name: 'Urbano', logoComponent: UrbanoLogo, industry: 'Tecnolog+ï¿½-ï¿½a / Movilidad', icon: 'fa-dolly', metric: 'Env+ï¿½-ï¿½os: +98%' },
   { name: 'Texfina', logoComponent: TexfinaLogo, industry: 'Corporativo', icon: 'fa-building', metric: 'Procesos: +95%' },
   { name: 'Tai Loy', logoComponent: TaiLoyLogo, industry: 'E-commerce', icon: 'fa-store', metric: 'Ventas: +120%' },
   { name: 'Rintisa', logoComponent: RintisaLogo, industry: 'Fintech', icon: 'fa-wallet', metric: 'Seguridad: 100%' }
 ];
 
 const ROW2 = [
-  { name: 'Auna', logoComponent: AunaLogo, industry: 'Salud', icon: 'fa-heart-pulse', metric: 'Atenci+â-¦n: +99%' },
+  { name: 'Auna', logoComponent: AunaLogo, industry: 'Salud', icon: 'fa-heart-pulse', metric: 'Atenci+ï¿½-ï¿½n: +99%' },
   { name: 'BSF Almacenes', logoComponent: BsfLogo, industry: 'Corporativo', icon: 'fa-boxes-stacked', metric: 'Capacidad: +96%' },
-  { name: 'Daryza', logoComponent: DaryzaLogo, industry: 'Consultor+â-¡a', icon: 'fa-user-tie', metric: 'Retorno: +93%' },
-  { name: 'Grupo Efe', logoComponent: GrupoEfeLogo, industry: 'Tecnolog+â-¡a', icon: 'fa-laptop-code', metric: 'Sistemas: +97%' },
-  { name: 'Nexa', logoComponent: NexaLogo, industry: 'TI y Consultor+â-¡a', icon: 'fa-network-wired', metric: 'Uptime: 99.9%' },
-  { name: 'Colso', logoComponent: ColsoLogo, industry: 'Log+â-¡stica', icon: 'fa-truck-ramp-box', metric: 'Tiempos: -24%' }
+  { name: 'Daryza', logoComponent: DaryzaLogo, industry: 'Consultor+ï¿½-ï¿½a', icon: 'fa-user-tie', metric: 'Retorno: +93%' },
+  { name: 'Grupo Efe', logoComponent: GrupoEfeLogo, industry: 'Tecnolog+ï¿½-ï¿½a', icon: 'fa-laptop-code', metric: 'Sistemas: +97%' },
+  { name: 'Nexa', logoComponent: NexaLogo, industry: 'TI y Consultor+ï¿½-ï¿½a', icon: 'fa-network-wired', metric: 'Uptime: 99.9%' },
+  { name: 'Colso', logoComponent: ColsoLogo, industry: 'Log+ï¿½-ï¿½stica', icon: 'fa-truck-ramp-box', metric: 'Tiempos: -24%' }
 ];
 
 const TrustedClients = () => {
@@ -38,7 +38,7 @@ const TrustedClients = () => {
   const marqueeRow2 = [...ROW2, ...ROW2, ...ROW2];
 
   return (
-    <section className="pt-0 pb-16 bg-transparent relative z-10 w-full overflow-hidden reveal">
+    <section className="pt-16 pb-16 bg-[#0A0A0A] relative z-10 w-full overflow-hidden reveal">
       <style>{`
         @keyframes marqueeLeft {
           0% { transform: translateX(0); }
@@ -72,14 +72,14 @@ const TrustedClients = () => {
         {/* Title */}
         <div className="text-center mb-4 px-6">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black text-white leading-none">
-            Clientes y marcas que <span className="text-[#A3E635] relative inline-block">conf+â-¡an en nosotros<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
+            Clientes y marcas que <span className="text-[#A3E635] relative inline-block">conf+ï¿½-ï¿½an en nosotros<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
           </h2>
         </div>
 
         {/* Description */}
         <div className="text-center max-w-3xl mx-auto mb-10 px-6">
           <p className="text-sm font-semibold text-white/60 leading-relaxed">
-            Trabajamos junto a empresas l+â-¡deres de diferentes industrias, ayud+â-índolas a innovar, automatizar procesos y alcanzar sus objetivos con tecnolog+â-¡a.
+            Trabajamos junto a empresas l+ï¿½-ï¿½deres de diferentes industrias, ayud+ï¿½-ï¿½ndolas a innovar, automatizar procesos y alcanzar sus objetivos con tecnolog+ï¿½-ï¿½a.
           </p>
         </div>
 
