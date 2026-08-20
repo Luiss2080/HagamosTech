@@ -1,75 +1,75 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import FondoTech from '../../../components/fondos/FondoTech';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const recursosData = [
     {
-        title: "Pedidos Especiales",
-        desc: "Cotiza salteñas para tus eventos, cumpleaños y reuniones corporativas.",
-        icon: "fa-boxes-stacked",
+        title: "Consultas de Proyectos",
+        desc: "Contanos tu idea, problema o necesidad y te ayudamos a definir la mejor solución tecnológica.",
+        icon: "fa-lightbulb",
         theme: {
-            cardBg: "bg-[#FF4D00]",
-            accentLine: "bg-[#5D3A1F]",
+            cardBg: "bg-[#A3E635]",
+            accentLine: "bg-[#0A0A0A]",
             iconBg: "bg-white/20",
-            iconColor: "text-white",
-            textColor: "text-white",
-            descColor: "text-orange-100",
-            borderColor: "border-[#FF4D00]",
-            shadow: "shadow-2xl shadow-orange-500/20",
-            buttonBg: "bg-white",
-            buttonText: "text-[#FF4D00]",
-            buttonHover: "hover:bg-[#5D3A1F] hover:text-white"
+            iconColor: "text-[#0A0A0A]",
+            textColor: "text-[#0A0A0A]",
+            descColor: "text-[#0A0A0A]/80",
+            borderColor: "border-[#A3E635]",
+            shadow: "shadow-2xl shadow-[#A3E635]/20",
+            buttonBg: "bg-[#0A0A0A]",
+            buttonText: "text-white",
+            buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
-            { label: "Eventos", icon: "fa-glass-cheers" },
-            { label: "Por Mayor", icon: "fa-box" },
-            { label: "Cumpleaños", icon: "fa-cake-candles" }
+            { label: "Ideas", icon: "fa-lightbulb" },
+            { label: "Análisis", icon: "fa-magnifying-glass" },
+            { label: "Propuestas", icon: "fa-diagram-project" }
         ]
     },
     {
-        title: "Atención al Cliente",
-        desc: "Resolvemos tus dudas sobre horarios, sucursales y menú disponible.",
+        title: "Atención y Soporte",
+        desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
         icon: "fa-headset",
         theme: {
-            cardBg: "bg-[#5D3A1F]",
-            accentLine: "bg-[#FF4D00]",
+            cardBg: "bg-[#0A0A0A]",
+            accentLine: "bg-[#A3E635]",
             iconBg: "bg-white/10",
-            iconColor: "text-[#FF4D00]",
+            iconColor: "text-[#A3E635]",
             textColor: "text-white",
             descColor: "text-gray-300",
-            borderColor: "border-[#5D3A1F]",
-            shadow: "shadow-xl hover:shadow-2xl shadow-[#5D3A1F]/20",
-            buttonBg: "bg-[#FF4D00]",
-            buttonText: "text-white",
-            buttonHover: "hover:bg-[#CC3D00] hover:text-white"
+            borderColor: "border-[#0A0A0A]",
+            shadow: "shadow-xl hover:shadow-2xl shadow-black/20",
+            buttonBg: "bg-[#A3E635]",
+            buttonText: "text-[#0A0A0A]",
+            buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
         },
         tags: [
-            { label: "Menú", icon: "fa-utensils" },
-            { label: "Horarios", icon: "fa-clock" },
-            { label: "Sucursales", icon: "fa-store" }
+            { label: "Tecnología", icon: "fa-microchip" },
+            { label: "Academia", icon: "fa-graduation-cap" },
+            { label: "Soporte", icon: "fa-circle-question" }
         ]
     },
     {
-        title: "Delivery Rápido",
-        desc: "Consulta zonas de cobertura y pide tus salteñas calientes hasta tu puerta.",
-        icon: "fa-motorcycle",
+        title: "Soluciones Rápidas",
+        desc: "Desde una página web hasta la automatización de un proceso para tu negocio.",
+        icon: "fa-bolt",
         theme: {
-            cardBg: "bg-[#8B4513]",
-            accentLine: "bg-[#FF4D00]",
+            cardBg: "bg-[#171717]",
+            accentLine: "bg-[#A3E635]",
             iconBg: "bg-white/20",
             iconColor: "text-white",
             textColor: "text-white",
             descColor: "text-white/90",
-            borderColor: "border-[#8B4513]",
-            shadow: "shadow-xl hover:shadow-2xl shadow-[#8B4513]/20",
-            buttonBg: "bg-[#FF4D00]",
-            buttonText: "text-white",
-            buttonHover: "hover:bg-[#CC3D00] hover:text-white"
+            borderColor: "border-[#171717]",
+            shadow: "shadow-xl hover:shadow-2xl shadow-black/20",
+            buttonBg: "bg-[#A3E635]",
+            buttonText: "text-[#0A0A0A]",
+            buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
         },
         tags: [
-            { label: "Cobertura", icon: "fa-map-location-dot" },
-            { label: "Rápido", icon: "fa-bolt" },
-            { label: "Caliente", icon: "fa-fire" }
+            { label: "Web", icon: "fa-globe" },
+            { label: "Automatización", icon: "fa-gear" },
+            { label: "IA", icon: "fa-robot" }
         ]
     }
 ];
@@ -78,16 +78,16 @@ const Recursos = () => {
     return (
         <div className="relative">
             <section id="recursos" className="relative z-10 py-4">
-                <CircuitBackground />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-6xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-4 leading-tight">
-                            Recursos de <span className="relative inline-block px-2 text-[#FF4D00]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-4 leading-tight">
+                            Recursos de <span className="relative inline-block px-2 text-[#84CC16]">
                                 Atención
-                                <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-slate-800 opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                             </span>
                         </h2>
-                        <p className="text-[#1F2937] font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">Todo lo que necesitas saber para disfrutar del mejor sabor.</p>
+                        <p className="text-slate-600 font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">Todo lo que necesitás saber para empezar a convertir tu necesidad en solución.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -120,7 +120,7 @@ const Recursos = () => {
                                             const icon = typeof tag === 'string' ? null : tag.icon;
 
                                             return (
-                                                <span key={label} className="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-white/70 text-[#5D3A1F] border border-white/80 inline-flex items-center gap-1.5">
+                                                <span key={label} className="px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider bg-white/70 text-[#0A0A0A] border border-white/80 inline-flex items-center gap-1.5">
                                                     {icon && <i className={`fas ${icon} text-[10px]`}></i>}
                                                     {label}
                                                 </span>
