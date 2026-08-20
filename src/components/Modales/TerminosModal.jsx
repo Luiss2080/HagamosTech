@@ -127,7 +127,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
-                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/HagamosTech' },
                                             { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
                                             { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },

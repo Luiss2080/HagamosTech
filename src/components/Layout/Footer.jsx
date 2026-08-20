@@ -47,7 +47,7 @@ const Footer = () => {
             </p>
             <div className="flex items-center justify-center gap-4 pt-3">
               {[
-                { icon: "fa-facebook-f", href: "https://www.facebook.com/LosHagamosTechSC", hover: "hover:bg-[#1877F2]" },
+                { icon: "fa-facebook-f", href: "https://www.facebook.com/HagamosTech", hover: "hover:bg-[#1877F2]" },
                 { icon: "fa-instagram", href: "https://www.instagram.com/hagamostech/", hover: "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]" },
                 { icon: "fa-tiktok", href: "https://www.tiktok.com/@hagamostech", hover: "hover:bg-black" },
                 { icon: "fa-whatsapp", href: "https://wa.me/59161320004", hover: "hover:bg-[#25D366]" }

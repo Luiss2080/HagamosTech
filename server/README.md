@@ -33,7 +33,7 @@ server/
 | `servidor.js` | Inicializa Express, registra rutas, inicia servidor en puerto 3000 |
 | `prisma/esquema.prisma` | Define todos los modelos de la base de datos (MySQL) |
 | `prisma/semilla.js` | Script que ejecuta todos los seeds en orden |
-| `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/Loshagamostech` |
+| `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/HagamosTech` |
 
 ## API Endpoints
 
@@ -101,7 +101,7 @@ cd server && npx prisma studio
 
 | Variable | Valor local | Descripción |
 |----------|-------------|-------------|
-| `DATABASE_URL` | `mysql://root:@localhost:3306/Loshagamostech` | Conexión a MySQL |
+| `DATABASE_URL` | `mysql://root:@localhost:3306/HagamosTech` | Conexión a MySQL |
 | `PORT` | `3000` | Puerto del servidor |
 | `NODE_ENV` | `development` | Entorno |
 | `JWT_SECRET` | `hagamostech_dev_secret_key_2026` | Secret para tokens |

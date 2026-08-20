@@ -1,7 +1,7 @@
 import os
 import re
 
-filepath = r'c:\laragon\www\LosHagamosTech\server\system\utils\01_mailer.js'
+filepath = r'c:\laragon\www\HagamosTech\server\system\utils\01_mailer.js'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 

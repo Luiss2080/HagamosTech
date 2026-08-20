@@ -2,7 +2,7 @@ https://www.tiktok.com/@hagamostech
 
 https://www.instagram.com/hagamostech/
 
-https://www.facebook.com/LosHagamosTechSC
+https://www.facebook.com/HagamosTech
 
 Numeros de wthassApp
 60936506

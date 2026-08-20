@@ -347,7 +347,7 @@ const LoadingScreen = ({ onComplete }) => {
         {/* ── Redes sociales ── */}
         <div className="flex items-center gap-2 mt-2 mb-1">
           {[
-            { icon: 'fa-facebook-f', href: 'https://www.facebook.com/LosHagamosTechSC',        color: '#1877F2', label: 'Facebook'  },
+            { icon: 'fa-facebook-f', href: 'https://www.facebook.com/HagamosTech',        color: '#1877F2', label: 'Facebook'  },
             { icon: 'fa-instagram',  href: 'https://www.instagram.com/hagamostech/', color: '#E1306C', label: 'Instagram' },
             { icon: 'fa-tiktok',     href: 'https://www.tiktok.com/@hagamostech',           color: '#010101', label: 'TikTok'    },
             { icon: 'fa-whatsapp',   href: 'https://wa.me/59161320004',                    color: '#25D366', label: 'WhatsApp'  },

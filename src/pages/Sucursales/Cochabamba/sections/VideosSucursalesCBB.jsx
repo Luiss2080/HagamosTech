@@ -234,7 +234,7 @@ const VideosSucursalesCBB = () => {
                                                 <div className="flex justify-center gap-3">
                                                     {[
                                                         { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
-                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH' },
+                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/HAGAMOSTECH' },
                                                         { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
                                                         { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                                     ].map((item, i) => (
