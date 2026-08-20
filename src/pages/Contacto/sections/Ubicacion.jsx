@@ -1,36 +1,36 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import FondoTech from '../../../components/fondos/FondoTech';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const Ubicacion = () => {
     const infoCards = [
-        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#FF4D00] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-orange-500/20", border: "border-[#FF4D00]" },
-        { icon: "fa-clock", title: "Horario", value: "Lun - Sab: 8:00 - 13:00", theme: "bg-[#5D3A1F] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-[#5D3A1F]/20", border: "border-[#5D3A1F]" },
-        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#FF4D00] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-orange-500/20", border: "border-[#FF4D00]" },
-        { icon: "fa-envelope", title: "Email", value: "pedidos@hagamostech.bo", theme: "bg-[#8B4513] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-[#8B4513]/20", border: "border-[#8B4513]" }
+        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
+        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" },
+        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
+        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" }
     ];
 
     return (
         <section id="ubicación" className="relative z-10 py-4 border-t border-gray-100">
-            <CircuitBackground />
+            <FondoTech />
             <div className="w-full px-4 sm:px-8 md:px-16 relative z-20">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-12 items-center">
 
                     {/* Left: Info (5 cols) */}
                     <div className="order-2 lg:order-1 lg:col-span-5 flex flex-col justify-center items-center h-full text-center">
                         <div className="mb-8">
-                            <span className="inline-block py-1.5 px-4 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#FF4D00]/20">
-                                <i className="fas fa-map-marked-alt text-[#FF4D00] mr-1"></i> Punto de Atención
+                            <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#84CC16] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
+                                <i className="fas fa-map-marked-alt text-[#84CC16] mr-1"></i> Punto de Atención
                             </span>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-4 leading-tight">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-4 leading-tight">
                                 Encuéntranos en nuestra <br/>
-                                <span className="relative inline-block px-2 text-[#FF4D00]">
+                                <span className="relative inline-block px-2 text-[#84CC16]">
                                     sede central.
-                                    <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-slate-800 opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                                    <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                                 </span>
                             </h2>
-                            <p className="text-[#1F2937] font-medium max-w-lg text-base sm:text-lg leading-relaxed">
-                                Visítanos para disfrutar de nuestras deliciosas salteñas, jugos frescos y atención de primera.
+                            <p className="text-slate-600 font-medium max-w-lg text-base sm:text-lg leading-relaxed">
+                                Visítanos o escríbenos para conversar sobre tu proyecto, idea o necesidad. Estamos para ayudarte a convertirla en una solución real.
                             </p>
                         </div>
 
@@ -54,32 +54,32 @@ const Ubicacion = () => {
                     </div>
 
                     {/* Right: Map (7 cols) */}
-                    <div className="order-1 lg:order-2 lg:col-span-7 h-[350px] sm:h-[500px] lg:h-[650px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-orange-950/15 border-4 border-white relative z-10 transform hover:scale-[1.005] transition-transform duration-500 group">
+                    <div className="order-1 lg:order-2 lg:col-span-7 h-[350px] sm:h-[500px] lg:h-[650px] rounded-[2rem] sm:rounded-[3rem] overflow-hidden shadow-2xl shadow-black/15 border-4 border-white relative z-10 transform hover:scale-[1.005] transition-transform duration-500 group">
 
                         {/* Floating Elements on Map Container */}
                         <div className="absolute top-6 right-6 z-30 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-fade-in-up">
                             <div className="flex items-center gap-3">
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-gray-500 tracking-wider text-right">Sede Central</p>
-                                    <p className="text-sm font-bold text-[#8B4513] text-right">HagamosTech Salteñeria</p>
+                                    <p className="text-[10px] font-black uppercase text-gray-500 tracking-wider text-right">Oficina principal</p>
+                                    <p className="text-sm font-bold text-[#0A0A0A] text-right">HagamosTech</p>
                                 </div>
-                                <div className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center text-white shadow-md">
+                                <div className="w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-[#0A0A0A] shadow-md">
                                     <i className="fas fa-store"></i>
                                 </div>
                             </div>
                         </div>
 
-                        <div className="absolute bottom-6 left-6 z-30 bg-[#5D3A1F] text-white px-6 py-3 rounded-full shadow-lg font-black text-xs uppercase tracking-widest border-2 border-white animate-bounce-slow">
-                            <i className="fas fa-map-marker-alt mr-2 text-[#FF4D00]"></i> Te esperamos aquí
+                        <div className="absolute bottom-6 left-6 z-30 bg-[#0A0A0A] text-white px-6 py-3 rounded-full shadow-lg font-black text-xs uppercase tracking-widest border-2 border-white animate-bounce-slow">
+                            <i className="fas fa-map-marker-alt mr-2 text-[#A3E635]"></i> Te esperamos aquí
                         </div>
 
-                        <div className="absolute top-6 left-6 z-30 bg-[#5D3A1F] text-white px-4 py-2 rounded-2xl shadow-lg border border-white/10">
-                            <p className="text-[10px] font-black uppercase tracking-wider text-white/70">Atención y Pedidos</p>
-                            <p className="text-xs font-bold mt-1 flex items-center gap-2"><i className="fas fa-utensils text-[#FF4D00]"></i> Salteñas, jugos y desayunos</p>
+                        <div className="absolute top-6 left-6 z-30 bg-[#0A0A0A] text-white px-4 py-2 rounded-2xl shadow-lg border border-white/10">
+                            <p className="text-[10px] font-black uppercase tracking-wider text-white/70">Proyectos y Consultas</p>
+                            <p className="text-xs font-bold mt-1 flex items-center gap-2"><i className="fas fa-lightbulb text-[#A3E635]"></i> Ideas, problemas y soluciones</p>
                         </div>
 
                         {/* Map Overlay Logic */}
-                        <div className="absolute inset-0 bg-[#FF4D00]/10 pointer-events-none z-20 group-hover:opacity-0 transition-opacity duration-500"></div>
+                        <div className="absolute inset-0 bg-[#A3E635]/10 pointer-events-none z-20 group-hover:opacity-0 transition-opacity duration-500"></div>
 
                         <iframe
                             src="https://maps.google.com/maps?q=-17.7813692,-63.1851308&z=14&ie=UTF8&iwloc=&output=embed"
