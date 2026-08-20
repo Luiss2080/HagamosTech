@@ -1,32 +1,122 @@
 import React from 'react';
-import PageHero from '../../../components/func/MigasPan';
+import { Link, useLocation } from 'react-router-dom';
+import useModalStore from '../../../store/useModalStore';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const HeroContacto = () => {
+    const navigate = useNavigate();
+    const location = useLocation();
+    const openModal = useModalStore((state) => state.openModal);
+
     return (
-        <div className="relative z-10">
+        <section
+            className="relative overflow-hidden pt-28 sm:pt-32 pb-16 lg:pb-24 bg-[#0A0A0A] border-b border-[#A3E635]/15"
+            id="contacto"
+        >
             <FondoTech />
-            <PageHero
-                title="Contanos qué"
-                highlight="necesitás."
-                description="No hace falta que sepas de tecnología. Explicanos tu idea, problema o necesidad y nosotros encontramos la mejor forma de resolverla. Esta sección te brinda asistencia directa para consultas, proyectos y soporte."
-            >
-                <div className="flex flex-wrap justify-center gap-4">
-                    {[
-                        { label: 'Consultas', icon: 'fa-message' },
-                        { label: 'Proyectos', icon: 'fa-diagram-project' },
-                        { label: 'Soporte', icon: 'fa-headset' },
-                        { label: 'Contacto', icon: 'fa-phone-volume' }
-                    ].map((item, i) => (
-                        <div key={i} className="group px-6 py-3 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] font-black text-[11px] uppercase tracking-[0.15em] transition-all shadow-lg shadow-[#A3E635]/10 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer">
-                            <i className={`fas ${item.icon} text-[11px]`}></i>
-                            {item.label}
-                            <i className="fas fa-chevron-right text-[10px] transition-colors group-hover:translate-x-0.5"></i>
-                        </div>
-                    ))}
+
+            {/* ---- Migas de pan en estilo tech (discreto) ---- */}
+            <div className="container mx-auto px-6 lg:px-12 xl:px-16 relative z-10 max-w-[1440px] w-full">
+                <div className="flex items-center gap-2 mb-8">
+                    <Link to="/" className="w-8 h-8 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-all shrink-0 shadow-sm">
+                        <i className="fa-solid fa-house text-xs"></i>
+                    </Link>
+                    <span className="text-[10px] font-black text-white/50 uppercase tracking-widest">INICIO</span>
+                    <span className="text-[#A3E635]/40">/</span>
+                    <span className="text-[10px] font-black text-[#A3E635] uppercase tracking-widest">{location.pathname.replace('/', '') || 'contacto'}</span>
                 </div>
-            </PageHero>
-        </div>
+            </div>
+
+            <div className="container mx-auto px-6 lg:px-12 xl:px-16 relative z-10 max-w-[1440px] w-full">
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+
+                    {/* Left Column - Message */}
+                    <div className="lg:col-span-6 flex flex-col gap-7 text-center lg:text-left items-center lg:items-start justify-center animate-fade-in-up">
+
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em]">
+                            <i className="fas fa-headset"></i> Estamos para ayudarte
+                        </span>
+
+                        <h1
+                            className="uppercase text-[2.4rem] leading-[1.02] sm:text-5xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-black font-heading text-white tracking-normal"
+                            style={{ transform: 'scaleX(1.06)', transformOrigin: 'left center', WebkitTextStrokeWidth: '1.4px', WebkitTextStrokeColor: 'currentColor' }}
+                        >
+                            <span className="block">¿Idea, problema</span>
+                            <span className="block">o necesidad?</span>
+                            <span className="relative inline-block text-[#A3E635] drop-shadow-[0_0_25px_rgba(163,230,53,0.45)]">
+                                Contáctanos.
+                                <svg
+                                    className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_10px_rgba(163,230,53,0.55)]"
+                                    viewBox="0 0 220 12" preserveAspectRatio="none"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                ><path d="M8,8 C22,5 40,7.5 60,7.5 C150,7.5 185,7.5 208,7.5 C214,7.5 218,6 216,7.5"
+                                    stroke="currentColor"
+                                    strokeWidth="7"
+                                    strokeLinecap="round"
+                                />
+                                </svg>
+                            </span>
+                        </h1>
+
+                        <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                            No hace falta que sepas de tecnología. Explicanos tu <strong className="text-white">idea</strong>, <strong className="text-white">problema</strong> o <strong className="text-white">necesidad</strong> y nosotros encontramos la mejor forma de resolverla. Asistencia directa para <strong className="text-white">consultas</strong>, <strong className="text-white">proyectos</strong> y <strong className="text-white">soporte</strong>.
+                        </p>
+
+                        <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center lg:justify-start">
+                            <button
+                                onClick={() => openModal('contactModal')}
+                                className="group flex items-center justify-center gap-3 w-full sm:w-[260px] h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full shadow-lg shadow-[#A3E635]/25 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 transition-all duration-300 text-[11px] font-black uppercase tracking-[0.14em] cursor-pointer whitespace-nowrap"
+                            >
+                                <i className="fas fa-comment-dots text-[14px] flex-shrink-0"></i>
+                                <span>Contanos qué necesitás</span>
+                            </button>
+
+                            <button
+                                onClick={() => {
+                                    const el = document.getElementById('ubicacion');
+                                    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                                }}
+                                className="group flex items-center justify-center gap-3 w-full sm:w-[230px] h-12 px-6 bg-transparent hover:bg-white/5 text-white font-black text-[11px] uppercase tracking-[0.14em] rounded-full border border-white/20 hover:border-[#A3E635]/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
+                            >
+                                <i className="fas fa-location-dot text-[13px] flex-shrink-0 text-[#A3E635]"></i>
+                                <span>Ver ubicaciones</span>
+                            </button>
+                        </div>
+
+                        <div className="flex items-center gap-3 pt-2 opacity-85">
+                            <div className="flex -space-x-1.5">
+                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
+                                    <i className="fas fa-message"></i>
+                                </div>
+                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
+                                    <i className="fas fa-diagram-project"></i>
+                                </div>
+                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
+                                    <i className="fas fa-headset"></i>
+                                </div>
+                            </div>
+                            <span className="text-[9px] font-black text-white/60 uppercase tracking-widest leading-none">
+                                Consultas · Proyectos · Soporte
+                            </span>
+                        </div>
+                    </div>
+
+                    {/* Right Column - Static representative image */}
+                    <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
+                        <div className="relative w-full max-w-md">
+                            <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-[2rem]"></div>
+                            <img
+                                src="/img/03_Banners/hero-tech.jpg"
+                                alt="Contáctanos con HagamosTech"
+                                className="relative w-full h-auto rounded-[2rem] object-cover shadow-[0_0_50px_rgba(163,230,53,0.20)] border border-[#A3E635]/20"
+                            />
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
     );
 };
 
