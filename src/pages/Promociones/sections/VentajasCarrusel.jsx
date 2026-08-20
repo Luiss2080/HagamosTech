@@ -7,7 +7,7 @@ const originalHighlights = [
         id: 'sabor',
         title: 'Sabor',
         highlight: 'Tradicional',
-        desc: 'Desde 1989 horneamos salteÒas con la receta original que conquistÛ Santa Cruz. Cada bocado conserva el sabor autÈntico que nos hizo famosos.',
+        desc: 'Desde 1989 horneamos salte√±as con la receta original que conquist√≥ Santa Cruz. Cada bocado conserva el sabor aut√©ntico que nos hizo famosos.',
         icon: 'fa-fire-burner',
         badge: 'Receta desde 1989',
         color: "bg-[#FF4D00]",
@@ -18,14 +18,14 @@ const originalHighlights = [
             { icon: 'fa-scroll', text: 'Receta Original' },
             { icon: 'fa-drumstick-bite', text: 'Masa Crocante' },
             { icon: 'fa-drumstick-bite', text: 'Relleno Jugoso' },
-            { icon: 'fa-medal', text: '35+ AÒos' }
+            { icon: 'fa-medal', text: '35+ A√±os' }
         ]
     },
     {
         id: 'frescos',
         title: 'Ingredientes',
         highlight: 'Frescos',
-        desc: 'Seleccionamos cada insumo diariamente. Nada se recicla ni se recalienta: todo se prepara en el dÌa para garantizar un sabor inigualable.',
+        desc: 'Seleccionamos cada insumo diariamente. Nada se recicla ni se recalienta: todo se prepara en el d√≠a para garantizar un sabor inigualable.',
         icon: 'fa-leaf',
         badge: '100% Fresco',
         color: "bg-[#5D3A1F]",
@@ -34,7 +34,7 @@ const originalHighlights = [
         badgeColor: "bg-white/10 text-[#FF4D00] border-[#FF4D00]/20",
         borderColor: "border-[#FF4D00]/20",
         features: [
-            { icon: 'fa-seedling', text: 'Insumos del DÌa' },
+            { icon: 'fa-seedling', text: 'Insumos del D√≠a' },
             { icon: 'fa-clock', text: 'Horneado 4am' },
             { icon: 'fa-xmark', text: 'Sin Recalentar' },
             { icon: 'fa-check-double', text: 'Calidad Diaria' }
@@ -43,8 +43,8 @@ const originalHighlights = [
     {
         id: 'delivery',
         title: 'Delivery',
-        highlight: 'R·pido',
-        desc: 'Llevamos tus salteÒas calentitas hasta tu puerta en menos de 30 minutos. Cobertura en toda la zona urbana de Santa Cruz.',
+        highlight: 'R√°pido',
+        desc: 'Llevamos tus salte√±as calentitas hasta tu puerta en menos de 30 minutos. Cobertura en toda la zona urbana de Santa Cruz.',
         icon: 'fa-motorcycle',
         badge: 'Entrega Express',
         color: "bg-[#FF4D00]",
@@ -62,7 +62,7 @@ const originalHighlights = [
         id: 'calidad',
         title: 'Calidad',
         highlight: 'Garantizada',
-        desc: 'Miles de clientes avalan nuestro producto y servicio. SalteÒas hechas con dedicaciÛn, cariÒo y los m·s altos est·ndares de higiene.',
+        desc: 'Miles de clientes avalan nuestro producto y servicio. Salte√±as hechas con dedicaci√≥n, cari√±o y los m√°s altos est√°ndares de higiene.',
         icon: 'fa-shield-halved',
         badge: 'Confianza Total',
         color: "bg-white",
@@ -79,9 +79,9 @@ const originalHighlights = [
     },
     {
         id: 'atencion',
-        title: 'AtenciÛn',
+        title: 'Atenci√≥n',
         highlight: 'Personalizada',
-        desc: 'Te recibimos con una sonrisa en cada sucursal. Sos parte de la familia HagamosTech y asÌ te hacemos sentir en cada visita.',
+        desc: 'Te recibimos con una sonrisa en cada sucursal. Sos parte de la familia HagamosTech y as√≠ te hacemos sentir en cada visita.',
         icon: 'fa-user-tie',
         badge: 'Trato Familiar',
         color: "bg-[#8B4513]",
@@ -221,19 +221,19 @@ const VentajasCarrusel = () => {
                 <div className="container mx-auto px-4 sm:px-6 text-center max-w-5xl mb-4">
                     <Breadcrumb
                         paths={[{ label: 'Promociones' }]}
-                        badgeText="Ventajas Oficiales ó HAGAMOSTECH"
+                        badgeText="Ventajas Oficiales ‚Äî HAGAMOSTECH"
                         icon="fa-tags"
                         align="center"
                     />
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#8B4513] leading-tight mb-5 sm:mb-6 tracking-tighter">
-                        Por quÈ elegir <br />
+                        Por qu√© elegir <br />
                         <span className="relative inline-block px-2">
                             <span className="relative z-10 text-[#FF4D00]">HagamosTech</span>
                             <svg className="absolute w-full h-3 -bottom-1 left-0 z-0 text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg>
                         </span>
                     </h2>
                     <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                        DescubrÌ todo lo que hace especial a HagamosTech: sabor tradicional, ingredientes frescos, delivery r·pido y una atenciÛn que te hace sentir parte de la familia.
+                        Descubr√≠ todo lo que hace especial a HagamosTech: sabor tradicional, ingredientes frescos, delivery r√°pido y una atenci√≥n que te hace sentir parte de la familia.
                     </p>
                 </div>
 
