@@ -3,7 +3,7 @@ import CircuitBackground from '../../../components/fondos/FondoSaltenas';
 
 const TIPOS_COOKIES = [
     { id: 'esenciales', icon: 'fa-lock', titulo: 'Esenciales', desc: 'Necesarias para que el sitio funcione: carrito, sesión y seguridad.', color: 'bg-[#FF4D00]', soft: 'bg-[#FF4D00]/10 text-[#FF4D00] border-[#FF4D00]/25', obligatoria: true },
-    { id: 'funcionales', icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', desc: 'Recuerdan tus preferencias: idioma, zona y sabores favoritos.', color: 'bg-[#5D3A1F]', soft: 'bg-[#5D3A1F]/10 text-[#5D3A1F] border-[#5D3A1F]/25', obligatoria: false },
+    { id: 'funcionales', icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', desc: 'Recuerdan tus preferencias: idioma, zona y configuración.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/5 text-[#0A0A0A] border-[#0A0A0A]/15', obligatoria: false },
     { id: 'analiticas', icon: 'fa-chart-line', titulo: 'Analíticas', desc: 'Nos ayudan a entender cómo usás el sitio para mejorarlo.', color: 'bg-[#8B4513]', soft: 'bg-[#8B4513]/10 text-[#8B4513] border-[#8B4513]/25', obligatoria: false },
     { id: 'publicidad', icon: 'fa-bullhorn', titulo: 'Publicidad', desc: 'Muestran promociones relevantes según tus gustos.', color: 'bg-[#CC3D00]', soft: 'bg-[#CC3D00]/10 text-[#CC3D00] border-[#CC3D00]/25', obligatoria: false },
 ];
