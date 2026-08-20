@@ -90,15 +90,37 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                    {/* Right Column - Brand image */}
+                    {/* Right Column - Visual tech hub */}
                     <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
-                        <div className="relative w-full max-w-md">
-                            <div className="absolute inset-0 bg-[#A3E635]/20 blur-3xl rounded-full"></div>
-                            <img
-                                src="/img/02_Logos/LogoHeader.png"
-                                alt="HagamosTech"
-                                className="relative w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(163,230,53,0.35)] animate-float-medium"
-                            />
+                        <div className="relative w-full max-w-sm aspect-square">
+                            <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-full"></div>
+
+                            {/* Connection lines */}
+                            <svg className="absolute inset-0 w-full h-full opacity-70" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                <line x1="50" y1="50" x2="50" y2="9" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
+                                <line x1="50" y1="50" x2="91" y2="50" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
+                                <line x1="50" y1="50" x2="50" y2="91" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
+                                <line x1="50" y1="50" x2="9" y2="50" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
+                            </svg>
+
+                            {/* Center hub */}
+                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#0A0A0A] border-2 border-[#A3E635]/60 flex items-center justify-center text-[#A3E635] text-3xl shadow-[0_0_45px_rgba(163,230,53,0.45)] animate-pulse-glow">
+                                <i className="fas fa-bolt"></i>
+                            </div>
+
+                            {/* Nodes */}
+                            <div className="absolute left-1/2 top-[3%] -translate-x-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-slow">
+                                <i className="fas fa-microchip"></i>
+                            </div>
+                            <div className="absolute right-[3%] top-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-medium" style={{ animationDelay: '0.8s' }}>
+                                <i className="fas fa-graduation-cap"></i>
+                            </div>
+                            <div className="absolute left-1/2 bottom-[3%] -translate-x-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-slow" style={{ animationDelay: '1.4s' }}>
+                                <i className="fas fa-store"></i>
+                            </div>
+                            <div className="absolute left-[3%] top-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-medium" style={{ animationDelay: '0.4s' }}>
+                                <i className="fas fa-lightbulb"></i>
+                            </div>
                         </div>
                     </div>
 
