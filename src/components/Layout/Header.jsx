@@ -45,6 +45,18 @@ const NAV_ITEMS = [
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'scroll', target: 'flujo' },
+    {
+        id: 'sobre-nosotros',
+        label: 'Sobre Nosotros',
+        icon: 'fa-circle-info',
+        type: 'dropdown',
+        subItems: [
+            { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
+            { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
+            { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
+            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/sobre-nosotros#publico', icon: 'fa-users' },
+        ]
+    },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
 ];
 
@@ -310,7 +322,7 @@ const Header = () => {
                                                 <span>{item.label}</span>
                                                 <i className="fas fa-chevron-down text-[8px] transition-transform duration-300 group-hover:rotate-180"></i>
                                             </button>
-                                            <div className={`nav-dropdown-menu ${item.id === 'servicios' || item.id === 'para-quien' || item.id === 'que-hacemos' ? '!min-w-[300px]' : ''}`}>
+                                            <div className={`nav-dropdown-menu ${item.id === 'servicios' || item.id === 'para-quien' || item.id === 'que-hacemos' || item.id === 'sobre-nosotros' ? '!min-w-[300px]' : ''}`}>
                                                 <div className="flex flex-col gap-1 p-2">
                                                     {item.subItems.map(subItem => (
                                                         <button 
