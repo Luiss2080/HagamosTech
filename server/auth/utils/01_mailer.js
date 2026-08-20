@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
 
-const BRAND = 'HAGAMOSTECH SCZ';
+const BRAND = 'HAGAMOSTECH';
 const config = {
     host: process.env.SMTP_HOST || '',
     port: parseInt(process.env.SMTP_PORT || '465', 10),
