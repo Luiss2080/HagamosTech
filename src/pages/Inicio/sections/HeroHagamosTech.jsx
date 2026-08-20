@@ -31,24 +31,26 @@ const HeroHagamosTech = () => {
                             <i className="fas fa-bolt"></i> Soluciones digitales y tecnológicas
                         </span>
 
-                        <h1 className="uppercase text-[2.6rem] leading-[1.05] sm:text-6xl md:text-6xl lg:text-7xl xl:text-[4.5rem] font-black font-heading text-white tracking-tight">
-                            <span className="block">¿Tenés una idea, un</span>
-                            <span className="block">problema o una</span>
+                        <h1
+                            className="uppercase text-[2.4rem] leading-[1.02] sm:text-5xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-black font-heading text-white tracking-normal"
+                            style={{ transform: 'scaleX(1.08)', transformOrigin: 'left center' }}
+                        >
+                            <span className="block">¿Idea, problema</span>
+                            <span className="block">o necesidad?</span>
                             <span className="relative inline-block text-[#A3E635] drop-shadow-[0_0_25px_rgba(163,230,53,0.45)]">
-                                necesidad?
+                                Hagámoslo.
                                 <svg
                                     className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_10px_rgba(163,230,53,0.55)]"
-                                    viewBox="0 0 200 12" preserveAspectRatio="none"
+                                    viewBox="0 0 220 12" preserveAspectRatio="none"
                                     fill="none"
                                     xmlns="http://www.w3.org/2000/svg"
-                                ><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5"
+                                ><path d="M8,8 C22,5 40,7.5 60,7.5 C150,7.5 185,7.5 208,7.5 C214,7.5 218,6 216,7.5"
                                     stroke="currentColor"
                                     strokeWidth="7"
                                     strokeLinecap="round"
                                 />
                                 </svg>
                             </span>
-                            <span className="block text-white">Hagámoslo.</span>
                         </h1>
 
                         <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
