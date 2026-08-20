@@ -90,36 +90,52 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                    {/* Right Column - Visual tech hub */}
+                    {/* Right Column - Static representative visual */}
                     <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
-                        <div className="relative w-full max-w-sm aspect-square">
-                            <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-full"></div>
+                        <div className="relative w-full max-w-md">
+                            <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-[2rem]"></div>
 
-                            {/* Connection lines */}
-                            <svg className="absolute inset-0 w-full h-full opacity-70" viewBox="0 0 100 100" preserveAspectRatio="none">
-                                <line x1="50" y1="50" x2="50" y2="9" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
-                                <line x1="50" y1="50" x2="91" y2="50" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
-                                <line x1="50" y1="50" x2="50" y2="91" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
-                                <line x1="50" y1="50" x2="9" y2="50" stroke="#A3E635" strokeWidth="0.5" strokeOpacity="0.35" />
-                            </svg>
+                            <div className="relative rounded-[2rem] bg-[#0A0A0A] border border-[#A3E635]/30 p-5 shadow-[0_0_50px_rgba(163,230,53,0.15)]">
+                                {/* Window bar */}
+                                <div className="flex items-center gap-2 mb-5">
+                                    <span className="w-3 h-3 rounded-full bg-[#A3E635]/70"></span>
+                                    <span className="w-3 h-3 rounded-full bg-white/20"></span>
+                                    <span className="w-3 h-3 rounded-full bg-white/20"></span>
+                                    <span className="ml-3 text-[11px] font-bold text-white/40 tracking-wide">hagamostech · soluciones</span>
+                                </div>
 
-                            {/* Center hub */}
-                            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full bg-[#0A0A0A] border-2 border-[#A3E635]/60 flex items-center justify-center text-[#A3E635] text-3xl shadow-[0_0_45px_rgba(163,230,53,0.45)] animate-pulse-glow">
-                                <i className="fas fa-bolt"></i>
-                            </div>
+                                {/* Content grid */}
+                                <div className="grid grid-cols-2 gap-3">
+                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
+                                        <i className="fas fa-microchip text-[#A3E635] text-xl"></i>
+                                        <span className="text-white text-sm font-black">Tecnología</span>
+                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-3/4 bg-[#A3E635] rounded-full"></div></div>
+                                    </div>
+                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
+                                        <i className="fas fa-graduation-cap text-[#A3E635] text-xl"></i>
+                                        <span className="text-white text-sm font-black">Academia</span>
+                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-2/3 bg-[#A3E635] rounded-full"></div></div>
+                                    </div>
+                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
+                                        <i className="fas fa-store text-[#A3E635] text-xl"></i>
+                                        <span className="text-white text-sm font-black">Negocios</span>
+                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-1/2 bg-[#A3E635] rounded-full"></div></div>
+                                    </div>
+                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
+                                        <i className="fas fa-lightbulb text-[#A3E635] text-xl"></i>
+                                        <span className="text-white text-sm font-black">A medida</span>
+                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-5/6 bg-[#A3E635] rounded-full"></div></div>
+                                    </div>
+                                </div>
 
-                            {/* Nodes */}
-                            <div className="absolute left-1/2 top-[3%] -translate-x-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-slow">
-                                <i className="fas fa-microchip"></i>
-                            </div>
-                            <div className="absolute right-[3%] top-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-medium" style={{ animationDelay: '0.8s' }}>
-                                <i className="fas fa-graduation-cap"></i>
-                            </div>
-                            <div className="absolute left-1/2 bottom-[3%] -translate-x-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-slow" style={{ animationDelay: '1.4s' }}>
-                                <i className="fas fa-store"></i>
-                            </div>
-                            <div className="absolute left-[3%] top-1/2 -translate-y-1/2 w-16 h-16 rounded-2xl bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[#A3E635] text-xl shadow-[0_0_25px_rgba(163,230,53,0.25)] animate-float-medium" style={{ animationDelay: '0.4s' }}>
-                                <i className="fas fa-lightbulb"></i>
+                                {/* Chart row */}
+                                <div className="mt-4 rounded-xl bg-white/[0.04] border border-white/10 p-4 flex items-end gap-3 h-24">
+                                    <div className="w-1/5 bg-[#A3E635]/30 rounded-t-md h-1/3"></div>
+                                    <div className="w-1/5 bg-[#A3E635]/50 rounded-t-md h-1/2"></div>
+                                    <div className="w-1/5 bg-[#A3E635]/70 rounded-t-md h-2/3"></div>
+                                    <div className="w-1/5 bg-[#A3E635]/90 rounded-t-md h-5/6"></div>
+                                    <div className="w-1/5 bg-[#A3E635] rounded-t-md h-full"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
