@@ -3,13 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import useModalStore from '../../../store/useModalStore';
 import FondoTech from '../../../components/fondos/FondoTech';
 
-const HERO_CARDS = [
-    { id: 'tecnologia', icon: 'fa-microchip', title: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.' },
-    { id: 'academia', icon: 'fa-graduation-cap', title: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.' },
-    { id: 'negocios', icon: 'fa-store', title: 'Negocios', desc: 'Digitalización, páginas web y automatización.' },
-    { id: 'personalizado', icon: 'fa-lightbulb', title: 'Soluciones a medida', desc: '¿No sabés qué necesitás? Contanos el problema.' },
-];
-
 const HeroHagamosTech = () => {
     const navigate = useNavigate();
     const openModal = useModalStore((state) => state.openModal);
@@ -97,23 +90,15 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                    {/* Right Column - Solution cards grid */}
+                    {/* Right Column - Brand image */}
                     <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 w-full max-w-xl">
-                            {HERO_CARDS.map((card, i) => (
-                                <div
-                                    key={card.id}
-                                    id={card.id}
-                                    className="group relative rounded-3xl p-6 bg-white/[0.03] border border-white/10 hover:border-[#A3E635]/40 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_10px_30px_rgba(163,230,53,0.12)] backdrop-blur-sm"
-                                    style={{ animationDelay: `${i * 0.1}s` }}
-                                >
-                                    <div className="w-12 h-12 rounded-2xl bg-[#A3E635]/10 border border-[#A3E635]/20 flex items-center justify-center text-[#A3E635] text-lg mb-4 transition-colors group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A]">
-                                        <i className={`fas ${card.icon}`}></i>
-                                    </div>
-                                    <h3 className="text-white font-black text-lg mb-1.5">{card.title}</h3>
-                                    <p className="text-white/60 text-sm font-medium leading-snug">{card.desc}</p>
-                                </div>
-                            ))}
+                        <div className="relative w-full max-w-md">
+                            <div className="absolute inset-0 bg-[#A3E635]/20 blur-3xl rounded-full"></div>
+                            <img
+                                src="/img/02_Logos/LogoHeader.png"
+                                alt="HagamosTech"
+                                className="relative w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(163,230,53,0.35)] animate-float-medium"
+                            />
                         </div>
                     </div>
 

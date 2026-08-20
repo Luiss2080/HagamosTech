@@ -1,50 +1,49 @@
 import React from 'react';
 
 const DOTS = [
-    { top: '10%', left: '10%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0s' },
-    { top: '16%', left: '28%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.5s' },
-    { top: '22%', left: '44%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
+    { top: '10%', left: '10%', size: 9, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0s' },
+    { top: '16%', left: '28%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.5s' },
+    { top: '22%', left: '44%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
     { top: '14%', right: '24%', size: 8, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '2s' },
-    { top: '30%', right: '10%', size: 6, type: 'plus', color: '#84CC16', anim: 'animate-spin-slow', delay: '0.8s' },
+    { top: '30%', right: '10%', size: 9, type: 'plus', color: '#84CC16', anim: 'animate-spin-slow', delay: '0.8s' },
     { top: '38%', left: '14%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.4s' },
-    { top: '44%', left: '60%', size: 7, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '0.3s' },
-    { top: '52%', right: '18%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.6s' },
+    { top: '44%', left: '60%', size: 9, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '0.3s' },
+    { top: '52%', right: '18%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.6s' },
     { top: '58%', left: '24%', size: 8, type: 'square', color: '#84CC16', anim: 'animate-twinkle', delay: '1.7s' },
-    { top: '64%', left: '46%', size: 6, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '0.9s' },
-    { top: '70%', right: '30%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '2.2s' },
-    { top: '76%', left: '16%', size: 10, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '1.1s' },
-    { top: '82%', right: '14%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-twinkle', delay: '0.6s' },
-    { bottom: '12%', left: '38%', size: 8, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '1.9s' },
-    { bottom: '20%', right: '40%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0.2s' },
-    { bottom: '28%', left: '58%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '2.4s' },
+    { top: '64%', left: '46%', size: 7, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '0.9s' },
+    { top: '70%', right: '30%', size: 9, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '2.2s' },
+    { top: '76%', left: '16%', size: 11, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '1.1s' },
+    { top: '82%', right: '14%', size: 7, type: 'dot', color: '#84CC16', anim: 'animate-twinkle', delay: '0.6s' },
+    { bottom: '12%', left: '38%', size: 9, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '1.9s' },
+    { bottom: '20%', right: '40%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0.2s' },
+    { bottom: '28%', left: '58%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '2.4s' },
     { bottom: '10%', left: '12%', size: 8, type: 'diamond', color: '#84CC16', anim: 'animate-twinkle', delay: '1.5s' },
-    { top: '26%', left: '72%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.7s' },
-    { top: '48%', right: '46%', size: 8, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '2.8s' },
-    { top: '60%', right: '58%', size: 6, type: 'ring', color: '#84CC16', anim: 'animate-ring-ping', delay: '1.3s' },
+    { top: '26%', left: '72%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.7s' },
+    { top: '48%', right: '46%', size: 9, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '2.8s' },
+    { top: '60%', right: '58%', size: 9, type: 'ring', color: '#84CC16', anim: 'animate-ring-ping', delay: '1.3s' },
     { top: '34%', left: '82%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
-    { top: '88%', left: '60%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.4s' },
-    { top: '6%', right: '55%', size: 7, type: 'diamond', color: '#A3E635', anim: 'animate-twinkle', delay: '2.1s' },
+    { top: '88%', left: '60%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.4s' },
+    { top: '6%', right: '55%', size: 8, type: 'diamond', color: '#A3E635', anim: 'animate-twinkle', delay: '2.1s' },
 ];
 
 const Dot = ({ d }) => {
-    const style = { top: d.top, left: d.left, right: d.right, bottom: d.bottom, animationDelay: d.delay };
-    const common = `${d.anim}`;
+    const pos = { top: d.top, left: d.left, right: d.right, bottom: d.bottom, animationDelay: d.delay };
 
     if (d.type === 'ring') {
         return (
             <span
-                className={`absolute rounded-full border-2 ${common}`}
-                style={{ ...style, width: d.size, height: d.size, borderColor: d.color }}
+                className={`absolute rounded-full border-2 ${d.anim}`}
+                style={{ ...pos, width: d.size, height: d.size, borderColor: d.color }}
             ></span>
         );
     }
     if (d.type === 'plus') {
         return (
             <span
-                className={`absolute ${common}`}
-                style={{ ...style, width: d.size, height: d.size, color: d.color }}
+                className={`absolute flex items-center justify-center ${d.anim}`}
+                style={{ ...pos, width: d.size, height: d.size, color: d.color }}
             >
-                <svg viewBox="0 0 10 10" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <svg viewBox="0 0 10 10" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                     <path d="M5 1 V9 M1 5 H9" />
                 </svg>
             </span>
@@ -53,23 +52,23 @@ const Dot = ({ d }) => {
     if (d.type === 'diamond') {
         return (
             <span
-                className={`absolute bg-current rotate-45 ${common}`}
-                style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+                className={`absolute ${d.anim}`}
+                style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
             ></span>
         );
     }
     if (d.type === 'square') {
         return (
             <span
-                className={`absolute bg-current rounded-[2px] ${common}`}
-                style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+                className={`absolute rounded-[2px] ${d.anim}`}
+                style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color }}
             ></span>
         );
     }
     return (
         <span
-            className={`absolute bg-current rounded-full ${common}`}
-            style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+            className={`absolute rounded-full ${d.anim}`}
+            style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color }}
         ></span>
     );
 };
