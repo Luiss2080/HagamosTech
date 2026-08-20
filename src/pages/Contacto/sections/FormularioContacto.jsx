@@ -32,6 +32,7 @@ const FormularioContacto = () => {
 
     return (
         <div id="support" className="relative z-10 py-8">
+            <FondoTech />
             <section className="container mx-auto px-4 relative z-10 pt-8">
                 <div className="text-center mb-4 max-w-3xl mx-auto">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-4 leading-tight">
