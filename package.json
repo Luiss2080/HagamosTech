@@ -1,0 +1,53 @@
+{
+  "name": "loscatores-web",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host --port 4000",
+    "dev:server": "cd server && npm run dev",
+    "dev:all": "npx concurrently \"npm run dev\" \"npm run dev:server\"",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "db:status": "node database/runner.cjs status",
+    "db:migrate": "node database/runner.cjs migrate",
+    "db:seed": "node database/runner.cjs seed",
+    "db:rollback": "node database/runner.cjs rollback",
+    "db:rollback-seed": "node database/runner.cjs rollback-seed",
+    "db:refresh": "node database/runner.cjs refresh",
+    "db:fresh": "node database/runner.cjs fresh",
+    "test:clientes": "node --test tests/01_clientes.test.cjs",
+    "test:usuarios": "node --test tests/03_usuarios.test.cjs",
+    "test:roles": "node --test tests/02_roles_permisos.test.cjs",
+    "test:all": "node --test --test-concurrency=1 tests/01_clientes.test.cjs tests/03_usuarios.test.cjs tests/02_roles_permisos.test.cjs"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.2.2",
+    "axios": "^1.15.0",
+    "framer-motion": "^12.38.0",
+    "js-cookie": "^3.0.5",
+    "lucide-react": "^0.475.0",
+    "next-themes": "^0.4.6",
+    "qrcode.react": "^4.2.0",
+    "react": "^19.2.4",
+    "react-credit-cards-2": "^1.2.0",
+    "react-dom": "^19.2.4",
+    "react-router-dom": "^7.14.0",
+    "recharts": "^3.10.1",
+    "tailwindcss": "^4.2.2",
+    "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "concurrently": "^9.2.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "vite": "^8.0.4"
+  }
+}

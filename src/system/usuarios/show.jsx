@@ -1,0 +1,23 @@
+export { default } from './modals/UsuarioDetailModal';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
