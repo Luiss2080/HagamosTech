@@ -102,51 +102,6 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                            <div className="relative rounded-[2rem] bg-[#0A0A0A] border border-[#A3E635]/30 p-5 shadow-[0_0_50px_rgba(163,230,53,0.15)]">
-                                {/* Window bar */}
-                                <div className="flex items-center gap-2 mb-5">
-                                    <span className="w-3 h-3 rounded-full bg-[#A3E635]/70"></span>
-                                    <span className="w-3 h-3 rounded-full bg-white/20"></span>
-                                    <span className="w-3 h-3 rounded-full bg-white/20"></span>
-                                    <span className="ml-3 text-[11px] font-bold text-white/40 tracking-wide">hagamostech · soluciones</span>
-                                </div>
-
-                                {/* Content grid */}
-                                <div className="grid grid-cols-2 gap-3">
-                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
-                                        <i className="fas fa-microchip text-[#A3E635] text-xl"></i>
-                                        <span className="text-white text-sm font-black">Tecnología</span>
-                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-3/4 bg-[#A3E635] rounded-full"></div></div>
-                                    </div>
-                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
-                                        <i className="fas fa-graduation-cap text-[#A3E635] text-xl"></i>
-                                        <span className="text-white text-sm font-black">Academia</span>
-                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-2/3 bg-[#A3E635] rounded-full"></div></div>
-                                    </div>
-                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
-                                        <i className="fas fa-store text-[#A3E635] text-xl"></i>
-                                        <span className="text-white text-sm font-black">Negocios</span>
-                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-1/2 bg-[#A3E635] rounded-full"></div></div>
-                                    </div>
-                                    <div className="rounded-xl bg-white/[0.04] border border-white/10 p-4 flex flex-col gap-2">
-                                        <i className="fas fa-lightbulb text-[#A3E635] text-xl"></i>
-                                        <span className="text-white text-sm font-black">A medida</span>
-                                        <div className="h-1.5 w-full rounded-full bg-white/10 overflow-hidden"><div className="h-full w-5/6 bg-[#A3E635] rounded-full"></div></div>
-                                    </div>
-                                </div>
-
-                                {/* Chart row */}
-                                <div className="mt-4 rounded-xl bg-white/[0.04] border border-white/10 p-4 flex items-end gap-3 h-24">
-                                    <div className="w-1/5 bg-[#A3E635]/30 rounded-t-md h-1/3"></div>
-                                    <div className="w-1/5 bg-[#A3E635]/50 rounded-t-md h-1/2"></div>
-                                    <div className="w-1/5 bg-[#A3E635]/70 rounded-t-md h-2/3"></div>
-                                    <div className="w-1/5 bg-[#A3E635]/90 rounded-t-md h-5/6"></div>
-                                    <div className="w-1/5 bg-[#A3E635] rounded-t-md h-full"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </section>
