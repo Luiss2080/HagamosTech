@@ -69,16 +69,16 @@ select option {
 }
 
 ::-webkit-scrollbar-track {
-  background: #FFF5EC;
+  background: #0A0A0A;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #8B4513;
+  background: #A3E635;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #5D3A1F;
+  background: #84CC16;
 }
 
 ::-webkit-scrollbar-corner {
