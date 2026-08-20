@@ -31,10 +31,10 @@ const HeroHagamosTech = () => {
                             <i className="fas fa-bolt"></i> Soluciones digitales y tecnológicas
                         </span>
 
-                        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-[3.7rem] font-black font-heading text-white leading-[1.12] tracking-tight">
+                        <h1 className="uppercase text-[2.6rem] leading-[1.05] sm:text-6xl md:text-6xl lg:text-7xl xl:text-[4.5rem] font-black font-heading text-white tracking-tight">
                             <span className="block">¿Tenés una idea, un</span>
                             <span className="block">problema o una</span>
-                            <span className="relative inline-block text-[#A3E635]">
+                            <span className="relative inline-block text-[#A3E635] drop-shadow-[0_0_25px_rgba(163,230,53,0.45)]">
                                 necesidad?
                                 <svg
                                     className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_10px_rgba(163,230,53,0.55)]"

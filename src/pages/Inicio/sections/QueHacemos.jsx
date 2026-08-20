@@ -74,7 +74,7 @@ const QueHacemos = () => {
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] text-[11px] font-black uppercase tracking-[0.18em] mb-5">
                         <i className="fas fa-layer-group"></i> ¿Qué hacemos?
                     </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-[#0A0A0A] leading-tight">
+                    <h2 className="uppercase text-3xl sm:text-4xl lg:text-6xl font-black font-heading text-[#0A0A0A] leading-[1.05] tracking-tight">
                         Partimos de tu necesidad, <span className="text-[#84CC16]">no de un catálogo rígido</span>
                     </h2>
                     <p className="section-description mt-5 text-slate-600">
@@ -157,7 +157,7 @@ const FlujoTrabajo = () => {
                     <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em] mb-5">
                         <i className="fas fa-diagram-project"></i> Cómo trabajamos
                     </span>
-                    <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white leading-tight">
+                    <h2 className="uppercase text-3xl sm:text-4xl lg:text-6xl font-black font-heading text-white leading-[1.05] tracking-tight">
                         De tu problema a la <span className="text-[#A3E635]">solución real</span>
                     </h2>
                     <p className="text-white/60 mt-5 text-base sm:text-lg font-medium leading-relaxed">

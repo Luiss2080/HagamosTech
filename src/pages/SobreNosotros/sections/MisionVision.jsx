@@ -20,7 +20,7 @@ const MisionVision = () => {
                                     <i className="fas fa-bullseye"></i> Nuestra Misión
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-white mb-5 leading-[0.95] tracking-tight">
+                                <h2 className="uppercase text-3xl md:text-4xl lg:text-5xl font-black font-heading text-white mb-5 leading-[1.05] tracking-tight">
                                     Tu necesidad, <br/><span className="text-[#A3E635]">nuestra solución.</span>
                                 </h2>
 
@@ -50,7 +50,7 @@ const MisionVision = () => {
                                     <i className="fas fa-eye"></i> Nuestra Visión
                                 </div>
 
-                                <h2 className="text-3xl md:text-4xl lg:text-5xl font-black font-heading text-[#0A0A0A] mb-5 leading-[0.95] tracking-tight">
+                                <h2 className="uppercase text-3xl md:text-4xl lg:text-5xl font-black font-heading text-[#0A0A0A] mb-5 leading-[1.05] tracking-tight">
                                     La puerta a lo <br/><span className="text-[#171717]">digital.</span>
                                 </h2>
 

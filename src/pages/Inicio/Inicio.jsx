@@ -20,7 +20,7 @@ const Inicio = () => {
                         <span className="relative inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em] mb-6">
                             <i className="fas fa-rocket"></i> HagamosTech
                         </span>
-                        <h2 className="relative text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white leading-tight max-w-3xl mx-auto">
+                        <h2 className="relative uppercase text-3xl sm:text-4xl lg:text-5xl font-black font-heading text-white leading-[1.1] tracking-tight max-w-3xl mx-auto">
                             “No necesitás saber qué solución tecnológica necesitás. Solo contanos qué problema tenés.”
                         </h2>
                         <p className="relative text-white/60 mt-5 text-base sm:text-lg font-medium max-w-2xl mx-auto">
