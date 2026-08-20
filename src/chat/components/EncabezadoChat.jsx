@@ -6,7 +6,7 @@ const ChatHeader = ({ botName, botRole, onToggle, onToggleMenu }) => (
     <div className="flex items-center gap-3">
       <div className="relative">
         <div className="w-11 h-11 bg-transparent flex items-center justify-center">
-          <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko Castor" className="w-full h-full object-cover mix-blend-multiply" />
+          <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko HagamosTech" className="w-full h-full object-cover mix-blend-multiply" />
         </div>
         <div className="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-[#4ADE80] rounded-full border-2 border-[#FFD1B3] shadow-sm"></div>
       </div>

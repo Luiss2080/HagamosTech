@@ -15,7 +15,7 @@ const ChatToggle = ({ onClick }) => (
     <div className="w-[95%] h-[95%] rounded-xl overflow-hidden flex items-center justify-center">
       <img 
         src="/img/02_Logos/NikoAvatar.jpg" 
-        alt="Niko Castor" 
+        alt="Niko HagamosTech" 
         className="w-full h-full object-cover scale-110 group-hover:scale-125 transition-transform mix-blend-multiply"
       />
     </div>

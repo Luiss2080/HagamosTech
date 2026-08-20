@@ -33,7 +33,7 @@ const ChatMessages = ({ messages, isTyping, activeCategory, onQuestionClick }) =
             <div className={`flex gap-2 max-w-[90%] ${msg.type === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               {msg.type === 'bot' && (
                 <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center mt-1 relative z-10">
-                  <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko Castor" className="w-full h-full object-cover mix-blend-multiply" />
+                  <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko HagamosTech" className="w-full h-full object-cover mix-blend-multiply" />
                 </div>
               )}
 
@@ -58,7 +58,7 @@ const ChatMessages = ({ messages, isTyping, activeCategory, onQuestionClick }) =
         {isTyping && (
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className="flex gap-2">
             <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center mt-1 relative z-10">
-              <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko Castor" className="w-full h-full object-cover mix-blend-multiply" />
+              <img src="/img/02_Logos/NikoAvatar.jpg" alt="Niko HagamosTech" className="w-full h-full object-cover mix-blend-multiply" />
             </div>
             <TypingIndicator />
           </motion.div>

@@ -18,6 +18,7 @@ const replacements = [
   [/los castores/g, 'HagamosTech'],
   [/CASTORES/g, 'HAGAMOSTECH'],
   [/Castores/g, 'HagamosTech'],
+  [/Castor/g, 'HagamosTech'],
   [/castores/g, 'HagamosTech'],
 ];
 

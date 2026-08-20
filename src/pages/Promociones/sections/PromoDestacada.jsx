@@ -4,7 +4,7 @@ import CircuitBackground from '../../../components/fondos/FondoSaltenas';
 const PromoDestacada = () => {
     const combos = [
         { nombre: 'Combo Pacata', precio: 'Bs. 18', normal: 'Bs. 22', img: '/img/05_Productos/Salteñas/ComboPacata.png', desc: 'Salteña + refresco + postre casero. La mejor combinación para tu media mañana.', color: 'bg-[#FF4D00]' },
-        { nombre: 'Desayuno Castor', precio: 'Bs. 15', normal: 'Bs. 19', img: '/img/05_Productos/Combos/Desayuno.png', desc: 'Salteña + café o chocolatada + tostada con mantequilla. Arrancá el día con energía.', color: 'bg-[#5D3A1F]' },
+        { nombre: 'Desayuno HagamosTech', precio: 'Bs. 15', normal: 'Bs. 19', img: '/img/05_Productos/Combos/Desayuno.png', desc: 'Salteña + café o chocolatada + tostada con mantequilla. Arrancá el día con energía.', color: 'bg-[#5D3A1F]' },
         { nombre: 'Salteñas con Tostada', precio: 'Bs. 20', normal: 'Bs. 25', img: '/img/05_Productos/Combos/SalteñasConTostada.png', desc: '2 salteñas surtidas + tostada grande + jugo natural. Ideal para compartir.', color: 'bg-[#8B4513]' },
     ];
 

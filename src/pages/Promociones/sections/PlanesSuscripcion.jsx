@@ -3,7 +3,7 @@ import CircuitBackground from '../../../components/fondos/FondoSaltenas';
 
 const MEMBRESIAS = [
     {
-        name: 'Castor Bronce',
+        name: 'HagamosTech Bronce',
         desc: 'Para los que empiezan a disfrutar',
         priceMonthly: '50',
         priceAnnual: '40',
@@ -30,7 +30,7 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Castor Plata',
+        name: 'HagamosTech Plata',
         desc: 'Nuestro favorito para clientes frecuentes',
         priceMonthly: '120',
         priceAnnual: '96',
@@ -58,7 +58,7 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Castor Oro',
+        name: 'HagamosTech Oro',
         desc: 'La experiencia premium completa',
         priceMonthly: '250',
         priceAnnual: '200',
