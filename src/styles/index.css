@@ -196,10 +196,10 @@ select option {
   opacity: 0;
   visibility: hidden;
   min-width: 240px;
-  background: rgba(255, 245, 236, 0.98);
+  background: rgba(10, 10, 10, 0.98);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 77, 0, 0.15);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(163, 230, 53, 0.25);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   border-radius: 12px;
   padding: 10px 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -214,9 +214,9 @@ select option {
   transform: translateX(-50%) rotate(45deg);
   width: 12px;
   height: 12px;
-  background: #FFF5EC;
-  border-left: 1px solid rgba(255, 77, 0, 0.15);
-  border-top: 1px solid rgba(255, 77, 0, 0.15);
+  background: #0A0A0A;
+  border-left: 1px solid rgba(163, 230, 53, 0.25);
+  border-top: 1px solid rgba(163, 230, 53, 0.25);
 }
 
 .nav-item-container:hover .nav-dropdown-menu {
