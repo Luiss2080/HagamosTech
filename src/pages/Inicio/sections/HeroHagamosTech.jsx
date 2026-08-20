@@ -90,10 +90,17 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                    {/* Right Column - Static representative visual */}
+                    {/* Right Column - Static representative image */}
                     <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
                         <div className="relative w-full max-w-md">
                             <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-[2rem]"></div>
+                            <img
+                                src="/img/03_Banners/hero-tech.jpg"
+                                alt="Soluciones tecnológicas HagamosTech"
+                                className="relative w-full h-auto rounded-[2rem] object-cover shadow-[0_0_50px_rgba(163,230,53,0.20)] border border-[#A3E635]/20"
+                            />
+                        </div>
+                    </div>
 
                             <div className="relative rounded-[2rem] bg-[#0A0A0A] border border-[#A3E635]/30 p-5 shadow-[0_0_50px_rgba(163,230,53,0.15)]">
                                 {/* Window bar */}
