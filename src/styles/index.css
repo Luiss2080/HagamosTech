@@ -7,10 +7,14 @@
   --font-montserrat: "Nunito", sans-serif;
   --font-heading: "Fredoka", sans-serif;
   --font-body: "Nunito", sans-serif;
-  --color-primary: #FF4D00;
-  --color-primary-dark: #CC3D00;
-  --color-accent: #5D3A1F;
-  --color-accent-dark: #452A16;
+  --color-primary: #A3E635;
+  --color-primary-dark: #84CC16;
+  --color-accent: #0A0A0A;
+  --color-accent-dark: #171717;
+  --color-lime: #A3E635;
+  --color-lime-dark: #84CC16;
+  --color-ink: #0A0A0A;
+  --color-paper: #FFFFFF;
 }
 
 @layer base {
@@ -21,21 +25,21 @@
 
   body {
     @apply font-montserrat text-slate-900 m-0 p-0 transition-colors duration-500;
-    background-color: #f8fafc;
+    background-color: #FFFFFF;
     min-height: 100%;
     scrollbar-width: thin;
-    scrollbar-color: #8B4513 #FFF5EC;
+    scrollbar-color: #A3E635 #0A0A0A;
   }
-  
+
   /* Theme standard form controls and calendar pickers */
   input[type="date"], input[type="datetime-local"], input[type="time"], input[type="month"], input[type="checkbox"], input[type="radio"] {
-    accent-color: #6B442A;
+    accent-color: #84CC16;
   }
 }
 
 /* ===== ESTILIZADO DE SELECTS PERSONALIZADOS LOS CASTORES ===== */
 select {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%23E95A0C'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2384CC16'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2.5' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 0.75rem center;
   background-size: 1.1em;
