@@ -4,10 +4,10 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const Ubicacion = () => {
     const infoCards = [
-        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
-        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
-        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
-        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" }
+        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
+        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" },
+        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
+        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" }
     ];
 
     return (
