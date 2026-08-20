@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 import useCarritoStore from '../../../useCarritoStore';
 import CATEGORIAS from '../../data/productos';
 
