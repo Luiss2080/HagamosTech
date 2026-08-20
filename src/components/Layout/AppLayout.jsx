@@ -5,13 +5,11 @@ import Footer from './Footer';
 import useAuthStore from '../../store/useAutenticacionStore';
 import ChatWhatsApp from '../Widgets/ChatWhatsApp';
 import ChatAssistant from '../../chat/AsistenteChat';
-import WidgetPedido from '../../system/components/widgets/WidgetPedido';
-import WidgetCocina from '../../system/components/widgets/WidgetCocina';
 
 const checkIsValidRoute = (path) => {
     // Exact static routes
     const exacts = [
-      '/', '/condiciones', '/catalogo', '/store/home',
+      '/', '/condiciones', '/catalogo',
       '/sobre-nosotros', '/opiniones', '/contactanos', '/contacto',
       '/pago-movil', '/perfil', '/config', '/configuracion', '/perfil/compras',
       '/competencia/2023', '/competencia/2024', '/competencia/2025',
@@ -31,12 +29,6 @@ const checkIsValidRoute = (path) => {
         if (segment && !segment.includes('/')) return true;
     }
 
-    // Dynamic dashboard tabs: /store/home/:tab
-    if (path.startsWith('/store/home/')) {
-        const segment = path.replace('/store/home/', '');
-        if (segment && !segment.includes('/')) return true;
-    }
-
     return false;
 };
 
@@ -48,29 +40,17 @@ const AppLayout = ({ children }) => {
         fetchProfile();
     }, [fetchProfile]);
     
-    const isSystemPath = location.pathname.startsWith('/store/home');
-    const hideHeaderFooter = isSystemPath;
-
     return (
         <div className="flex flex-col min-h-screen relative bg-slate-50">
-            {!hideHeaderFooter && <Header />}
+            <Header />
             <main className="flex-grow relative z-10">
                 {children}
             </main>
-            {!hideHeaderFooter && <Footer />}
+            <Footer />
             
-            {/* Conditional Global Widgets */}
-            {isSystemPath ? (
-              <>
-                <WidgetPedido />
-                <WidgetCocina />
-              </>
-            ) : (
-              <>
-                <ChatWhatsApp />
-                <ChatAssistant />
-              </>
-            )}
+            {/* Widgets globales */}
+            <ChatWhatsApp />
+            <ChatAssistant />
         </div>
     );
 };

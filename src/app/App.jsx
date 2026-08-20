@@ -22,9 +22,6 @@ import GuestModalsManager from '../components/Modales/GuestModalsManager';
 
 import ChatWhatsApp from '../components/Widgets/ChatWhatsApp';
 import ChatAssistant from '../chat/AsistenteChat';
-import WidgetPedido from '../system/components/widgets/WidgetPedido';
-import WidgetCocina from '../system/components/widgets/WidgetCocina';
-import StoreHome from '../system/dashboard/admin/StoreHome';
 import SobreNosotrosIndex from '../pages/SobreNosotros/Nosotros';
 import Historia from '../pages/SobreNosotros/sections/Historia';
 import MisionVision from '../pages/SobreNosotros/sections/MisionVision';
@@ -172,7 +169,6 @@ const App = () => {
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
               <Route path="/cookies" element={<CookiesPagina />} />
-              <Route path="/store/home/:tab?" element={<StoreHome />} />
               <Route path="/sobre-nosotros" element={<SobreNosotrosIndex />} />
               <Route path="/sobre-nosotros/historia" element={<Historia />} />
               <Route path="/sobre-nosotros/mision-vision" element={<MisionVision />} />
