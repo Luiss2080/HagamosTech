@@ -28,12 +28,13 @@ const DOTS = [
 
 const Dot = ({ d }) => {
     const pos = { top: d.top, left: d.left, right: d.right, bottom: d.bottom, animationDelay: d.delay };
+    const glow = { filter: `drop-shadow(0 0 6px ${d.color})` };
 
     if (d.type === 'ring') {
         return (
             <span
                 className={`absolute rounded-full border-2 ${d.anim}`}
-                style={{ ...pos, width: d.size, height: d.size, borderColor: d.color }}
+                style={{ ...pos, ...glow, width: d.size, height: d.size, borderColor: d.color }}
             ></span>
         );
     }
@@ -41,7 +42,7 @@ const Dot = ({ d }) => {
         return (
             <span
                 className={`absolute flex items-center justify-center ${d.anim}`}
-                style={{ ...pos, width: d.size, height: d.size, color: d.color }}
+                style={{ ...pos, ...glow, width: d.size, height: d.size, color: d.color }}
             >
                 <svg viewBox="0 0 10 10" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round">
                     <path d="M5 1 V9 M1 5 H9" />
@@ -53,22 +54,22 @@ const Dot = ({ d }) => {
         return (
             <span
                 className={`absolute ${d.anim}`}
-                style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
+                style={{ ...pos, ...glow, width: d.size, height: d.size, backgroundColor: d.color, clipPath: 'polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)' }}
             ></span>
         );
     }
     if (d.type === 'square') {
         return (
             <span
-                className={`absolute rounded-[2px] ${d.anim}`}
-                style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color }}
+                className={`absolute rounded-xl ${d.anim}`}
+                style={{ ...pos, ...glow, width: d.size, height: d.size, backgroundColor: d.color }}
             ></span>
         );
     }
     return (
         <span
             className={`absolute rounded-full ${d.anim}`}
-            style={{ ...pos, width: d.size, height: d.size, backgroundColor: d.color }}
+            style={{ ...pos, ...glow, width: d.size, height: d.size, backgroundColor: d.color }}
         ></span>
     );
 };
@@ -88,9 +89,9 @@ const FondoTech = ({ hideWaves }) => {
             ))}
 
             {!hideWaves && (
-                <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] opacity-30">
+                <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] opacity-60">
                     <svg relative="true" viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-[calc(100%+1.3px)] h-[80px] block">
-                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#0A0A0A]"></path>
+                        <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#A3E635]"></path>
                     </svg>
                 </div>
             )}

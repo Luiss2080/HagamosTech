@@ -22,7 +22,7 @@ const Ubicacion = () => {
                             <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#84CC16] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
                                 <i className="fas fa-map-marked-alt text-[#84CC16] mr-1"></i> Punto de Atención
                             </span>
-                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-4 leading-tight">
+                            <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-4 leading-tight">
                                 Encuéntranos en nuestra <br/>
                                 <span className="relative inline-block px-2 text-[#84CC16]">
                                     sede central.

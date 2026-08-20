@@ -81,7 +81,7 @@ const Recursos = () => {
                 <FondoTech />
                 <div className="container mx-auto px-6 max-w-6xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-4 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-4 leading-tight">
                             Recursos de <span className="relative inline-block px-2 text-[#84CC16]">
                                 Atención
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
