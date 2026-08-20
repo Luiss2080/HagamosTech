@@ -1,68 +1,92 @@
 import React from 'react';
 
+const DOTS = [
+    { top: '10%', left: '10%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0s' },
+    { top: '16%', left: '28%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.5s' },
+    { top: '22%', left: '44%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
+    { top: '14%', right: '24%', size: 8, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '2s' },
+    { top: '30%', right: '10%', size: 6, type: 'plus', color: '#84CC16', anim: 'animate-spin-slow', delay: '0.8s' },
+    { top: '38%', left: '14%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.4s' },
+    { top: '44%', left: '60%', size: 7, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '0.3s' },
+    { top: '52%', right: '18%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.6s' },
+    { top: '58%', left: '24%', size: 8, type: 'square', color: '#84CC16', anim: 'animate-twinkle', delay: '1.7s' },
+    { top: '64%', left: '46%', size: 6, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '0.9s' },
+    { top: '70%', right: '30%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '2.2s' },
+    { top: '76%', left: '16%', size: 10, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '1.1s' },
+    { top: '82%', right: '14%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-twinkle', delay: '0.6s' },
+    { bottom: '12%', left: '38%', size: 8, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '1.9s' },
+    { bottom: '20%', right: '40%', size: 10, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0.2s' },
+    { bottom: '28%', left: '58%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '2.4s' },
+    { bottom: '10%', left: '12%', size: 8, type: 'diamond', color: '#84CC16', anim: 'animate-twinkle', delay: '1.5s' },
+    { top: '26%', left: '72%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.7s' },
+    { top: '48%', right: '46%', size: 8, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '2.8s' },
+    { top: '60%', right: '58%', size: 6, type: 'ring', color: '#84CC16', anim: 'animate-ring-ping', delay: '1.3s' },
+    { top: '34%', left: '82%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
+    { top: '88%', left: '60%', size: 6, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.4s' },
+    { top: '6%', right: '55%', size: 7, type: 'diamond', color: '#A3E635', anim: 'animate-twinkle', delay: '2.1s' },
+];
+
+const Dot = ({ d }) => {
+    const style = { top: d.top, left: d.left, right: d.right, bottom: d.bottom, animationDelay: d.delay };
+    const common = `${d.anim}`;
+
+    if (d.type === 'ring') {
+        return (
+            <span
+                className={`absolute rounded-full border-2 ${common}`}
+                style={{ ...style, width: d.size, height: d.size, borderColor: d.color }}
+            ></span>
+        );
+    }
+    if (d.type === 'plus') {
+        return (
+            <span
+                className={`absolute ${common}`}
+                style={{ ...style, width: d.size, height: d.size, color: d.color }}
+            >
+                <svg viewBox="0 0 10 10" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                    <path d="M5 1 V9 M1 5 H9" />
+                </svg>
+            </span>
+        );
+    }
+    if (d.type === 'diamond') {
+        return (
+            <span
+                className={`absolute bg-current rotate-45 ${common}`}
+                style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+            ></span>
+        );
+    }
+    if (d.type === 'square') {
+        return (
+            <span
+                className={`absolute bg-current rounded-[2px] ${common}`}
+                style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+            ></span>
+        );
+    }
+    return (
+        <span
+            className={`absolute bg-current rounded-full ${common}`}
+            style={{ ...style, width: d.size, height: d.size, backgroundColor: d.color }}
+        ></span>
+    );
+};
+
 const FondoTech = ({ hideWaves }) => {
     return (
         <div className="absolute inset-0 z-0 overflow-hidden bg-[#050505] pointer-events-none">
-            {/* Deep ambient gradient */}
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(163,230,53,0.10),transparent_45%),radial-gradient(circle_at_80%_75%,rgba(132,204,22,0.08),transparent_45%),radial-gradient(circle_at_70%_15%,rgba(163,230,53,0.06),transparent_40%)]"></div>
+            {/* Soft ambient glow */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_25%,rgba(163,230,53,0.10),transparent_50%),radial-gradient(circle_at_75%_70%,rgba(132,204,22,0.08),transparent_50%)]"></div>
 
-            {/* Large glowing orbs */}
-            <div className="absolute top-[-10%] left-[-8%] w-[46%] h-[46%] bg-[#A3E635]/15 rounded-full blur-[110px] animate-float-slow"></div>
-            <div className="absolute bottom-[-12%] right-[-10%] w-[48%] h-[48%] bg-[#84CC16]/10 rounded-full blur-[130px] animate-float-medium"></div>
+            {/* Circuit grid (cuadrícula) */}
+            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDI0IEwgNDggMjQgTSAyNCAwIEwgMjQgNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNjMsMjMwLDUzLDAuMTApIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-60 mix-blend-screen"></div>
 
-            {/* Moving circuit grid */}
-            <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0OCIgaGVpZ2h0PSI0OCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDI0IEwgNDggMjQgTSAyNCAwIEwgMjQgNDgiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgxNjMsMjMwLDUzLDAuMDgpIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=')] opacity-50 mix-blend-screen animate-grid-pan"></div>
-
-            {/* Rotating scan sweep (tech radar) */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vmin] h-[120vmin] opacity-20 animate-scan-sweep"
-                 style={{ background: 'conic-gradient(from 0deg, transparent 0deg, rgba(163,230,53,0.25) 12deg, transparent 24deg)' }}></div>
-
-            {/* Flowing data lines (SVG) */}
-            <svg className="absolute inset-0 w-full h-full opacity-60 mix-blend-screen" preserveAspectRatio="none" viewBox="0 0 1000 600">
-                <defs>
-                    <linearGradient id="flow" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stopColor="#A3E635" stopOpacity="0" />
-                        <stop offset="50%" stopColor="#A3E635" stopOpacity="1" />
-                        <stop offset="100%" stopColor="#A3E635" stopOpacity="0" />
-                    </linearGradient>
-                </defs>
-                <path d="M-20,120 H300 L360,180 V360 L440,440 H820" fill="none" stroke="url(#flow)" strokeWidth="2" strokeDasharray="16 14" className="animate-dash-flow" />
-                <path d="M1020,80 H700 L640,140 V300 L560,360 H160" fill="none" stroke="url(#flow)" strokeWidth="2" strokeDasharray="14 16" className="animate-dash-flow" style={{ animationDelay: '1.2s' }} />
-                <path d="M-20,520 H220 L280,460 V260 L380,160 H780" fill="none" stroke="url(#flow)" strokeWidth="1.5" strokeDasharray="12 18" className="animate-dash-flow" style={{ animationDelay: '2s' }} />
-            </svg>
-
-            {/* Blinking nodes at intersections */}
-            <div className="absolute top-[18%] left-[30%] w-1.5 h-1.5 bg-[#A3E635] rounded-sm animate-node-blink"></div>
-            <div className="absolute top-[42%] left-[62%] w-1.5 h-1.5 bg-[#A3E635] rounded-sm animate-node-blink" style={{ animationDelay: '0.8s' }}></div>
-            <div className="absolute top-[70%] left-[22%] w-1.5 h-1.5 bg-[#84CC16] rounded-sm animate-node-blink" style={{ animationDelay: '1.5s' }}></div>
-            <div className="absolute top-[58%] right-[28%] w-1.5 h-1.5 bg-[#A3E635] rounded-sm animate-node-blink" style={{ animationDelay: '2.1s' }}></div>
-            <div className="absolute top-[30%] right-[40%] w-1.5 h-1.5 bg-[#A3E635] rounded-sm animate-node-blink" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-[82%] left-[50%] w-1.5 h-1.5 bg-[#84CC16] rounded-sm animate-node-blink" style={{ animationDelay: '0.4s' }}></div>
-
-            {/* Floating data particles (more, animated) */}
-            <div className="absolute top-[10%] left-[10%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-pulse-glow"></div>
-            <div className="absolute top-[16%] left-[28%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/50 animate-float-fast" style={{ animationDelay: '0.4s' }}></div>
-            <div className="absolute top-[22%] left-[44%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{ animationDelay: '0.8s' }}></div>
-            <div className="absolute top-[14%] right-[24%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-float-medium" style={{ animationDelay: '1.2s' }}></div>
-            <div className="absolute top-[30%] right-[10%] w-1.5 h-1.5 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{ animationDelay: '0.6s' }}></div>
-            <div className="absolute top-[38%] left-[14%] w-2 h-2 rounded-full bg-[#A3E635]/80 animate-float-slow" style={{ animationDelay: '1.5s' }}></div>
-            <div className="absolute top-[44%] left-[60%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/50 animate-pulse-glow" style={{ animationDelay: '0.3s' }}></div>
-            <div className="absolute top-[52%] right-[18%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/60 animate-float-fast" style={{ animationDelay: '1s' }}></div>
-            <div className="absolute top-[58%] left-[24%] w-2 h-2 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{ animationDelay: '1.8s' }}></div>
-            <div className="absolute top-[64%] left-[46%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/70 animate-float-medium" style={{ animationDelay: '0.7s' }}></div>
-            <div className="absolute top-[70%] right-[30%] w-2 h-2 rounded-full bg-[#A3E635]/60 animate-pulse-glow" style={{ animationDelay: '1.3s' }}></div>
-            <div className="absolute top-[76%] left-[16%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/50 animate-float-slow" style={{ animationDelay: '0.5s' }}></div>
-            <div className="absolute top-[82%] right-[14%] w-1.5 h-1.5 rounded-full bg-[#84CC16]/60 animate-pulse-glow" style={{ animationDelay: '1.6s' }}></div>
-            <div className="absolute bottom-[12%] left-[38%] w-2 h-2 rounded-full bg-[#A3E635]/70 animate-float-fast" style={{ animationDelay: '0.9s' }}></div>
-            <div className="absolute bottom-[20%] right-[40%] w-2.5 h-2.5 rounded-full bg-[#A3E635]/55 animate-pulse-glow" style={{ animationDelay: '0.2s' }}></div>
-            <div className="absolute bottom-[28%] left-[58%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/60 animate-float-medium" style={{ animationDelay: '1.1s' }}></div>
-            <div className="absolute bottom-[10%] left-[12%] w-2 h-2 rounded-full bg-[#84CC16]/50 animate-pulse-glow" style={{ animationDelay: '1.4s' }}></div>
-            <div className="absolute top-[26%] left-[72%] w-1.5 h-1.5 rounded-full bg-[#A3E635]/60 animate-float-slow" style={{ animationDelay: '0.6s' }}></div>
-            <div className="absolute top-[48%] right-[46%] w-2 h-2 rounded-full bg-[#A3E635]/55 animate-pulse-glow" style={{ animationDelay: '1.7s' }}></div>
-
-            {/* Scrolling perspective floor */}
-            <div className="absolute -bottom-40 left-1/2 -translate-x-1/2 w-[160%] h-[420px] opacity-40 animate-floor-scroll"
-                 style={{ backgroundImage: 'linear-gradient(#A3E63522 1px, transparent 1px), linear-gradient(90deg, #A3E63522 1px, transparent 1px)', backgroundSize: '48px 48px', transform: 'perspective(600px) rotateX(60deg)', webkitMaskImage: 'linear-gradient(to top, black, transparent)' }}></div>
+            {/* Varied animated dots */}
+            {DOTS.map((d, i) => (
+                <Dot key={i} d={d} />
+            ))}
 
             {!hideWaves && (
                 <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] opacity-30">
