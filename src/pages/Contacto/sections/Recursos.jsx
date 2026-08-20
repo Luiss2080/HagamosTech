@@ -92,7 +92,7 @@ const Recursos = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {recursosData.map((item, i) => (
-                            <div key={i} className={`relative rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 group overflow-hidden border ${item.theme.cardBg} ${item.theme.textColor} ${item.theme.shadow} ${item.theme.borderColor} hover:-translate-y-2 z-10`}>
+                                <div key={i} className={`relative rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 group overflow-hidden border backdrop-blur-md ${item.theme.cardBg} ${item.theme.textColor} ${item.theme.shadow} ${item.theme.borderColor} hover:-translate-y-2 hover:border-[#A3E635]/50 hover:shadow-[#A3E635]/20 z-10`}>
 
                                 {/* CircleParticles Background */}
                                 <CircleParticles count={16} colorScheme="dark" />

@@ -46,7 +46,7 @@ const FormularioContacto = () => {
                     </p>
                 </div>
 
-                <div className="relative max-w-6xl mx-auto overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl transition-all border border-gray-200">
+                <div className="relative max-w-6xl mx-auto overflow-hidden rounded-[2.5rem] bg-white/[0.04] text-left shadow-2xl backdrop-blur-md transition-all border border-[#A3E635]/25">
                     <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
 
                         {/* Left Side */}
@@ -121,7 +121,7 @@ const FormularioContacto = () => {
                         </div>
 
                         {/* Right Side (Form) */}
-                        <div className="relative flex flex-col justify-center h-full bg-white p-5 lg:p-6">
+                        <div className="relative flex flex-col justify-center h-full bg-white/[0.03] backdrop-blur-md p-5 lg:p-6">
                             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                                 <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                                 <div className="absolute top-1/2 -left-10 w-40 h-40 bg-[#0A0A0A]/10 rounded-full blur-2xl"></div>
