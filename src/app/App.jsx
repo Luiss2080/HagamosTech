@@ -5,8 +5,7 @@ import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
-import HeroSaltenas from '../pages/Inicio/sections/HeroSaltenas';
-import SucursalesCarrusel from '../pages/Inicio/sections/SucursalesCarrusel';
+import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
 import TerminosPagina from '../pages/Terminos/TerminosPagina';
@@ -157,10 +156,9 @@ const App = () => {
       <div className={`transition-opacity duration-700 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
           <AppLayout>
             <Routes>
-              <Route path="/" element={<Inicio />} />
-              <Route path="/inicio/hero" element={<HeroSaltenas />} />
-              <Route path="/inicio/sucursales" element={<SucursalesCarrusel onOpenModal={() => {}} />} />
-              <Route path="/servicios/delivery" element={<DeliveryExpress />} />
+                <Route path="/" element={<Inicio />} />
+                <Route path="/inicio/hero" element={<HeroHagamosTech />} />
+                <Route path="/servicios/delivery" element={<DeliveryExpress />} />
               <Route path="/servicios/mayor" element={<PedidosPorMayor />} />
               <Route path="/servicios/eventos" element={<EventosCatering />} />
               <Route path="/servicios/corporativo" element={<ServicioCorporativo />} />
