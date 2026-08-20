@@ -130,7 +130,7 @@ const FormularioContacto = () => {
                             </div>
 
                             <div className="relative z-10 w-full max-w-[540px] mx-auto">
-                                <div className="mb-3.5 text-center bg-white p-4 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
+                                <div className="mb-3.5 text-center bg-white p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635]"></div>
                                     <div className="inline-flex items-center gap-2 mb-1.5">
                                         <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
@@ -138,69 +138,69 @@ const FormularioContacto = () => {
                                         </span>
                                         <h3 className="text-2xl font-black font-heading text-[#0A0A0A] tracking-tight">Escríbenos</h3>
                                     </div>
-                                    <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Contáctate con el equipo HagamosTech</p>
+                                    <p className="text-xs text-white/50 font-bold uppercase tracking-wide">Contáctate con el equipo HagamosTech</p>
                                 </div>
 
                                 <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                                    <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-microchip text-[11px]"></i>
                                         </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Área</p>
-                                        <p className="text-[13px] font-extrabold text-[#0A0A0A]">Tecnología</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Área</p>
+                                        <p className="text-[13px] font-extrabold text-white">Tecnología</p>
                                     </div>
-                                    <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-lightbulb text-[11px]"></i>
                                         </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Enfoque</p>
-                                        <p className="text-[13px] font-extrabold text-[#0A0A0A]">Tu necesidad</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Enfoque</p>
+                                        <p className="text-[13px] font-extrabold text-white">Tu necesidad</p>
                                     </div>
-                                    <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-clock text-[11px]"></i>
                                         </div>
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Atención</p>
-                                        <p className="text-[13px] font-extrabold text-[#0A0A0A]">Rápida</p>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Atención</p>
+                                        <p className="text-[13px] font-extrabold text-white">Rápida</p>
                                     </div>
                                 </div>
 
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-3.5" autoComplete="off">
-                                    <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4 shadow-sm">
                                         <div className="mb-3 flex items-center gap-2">
                                             <span className="w-7 h-7 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                                 <i className="fas fa-id-card text-[11px]"></i>
                                             </span>
                                            
-                                           <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Tus Datos</p>
+                                           <p className="text-[11px] font-black uppercase tracking-widest text-white/50">Tus Datos</p>
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="text" name="name" value={formData.name} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#0A0A0A] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Nombre completo</label>
-                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-user text-base"></i></div>
+                                            <input type="text" name="name" value={formData.name} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
+                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Nombre completo</label>
+                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-user text-base"></i></div>
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#0A0A0A] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Celular" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Celular</label>
-                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-phone-alt text-base"></i></div>
+                                            <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Celular" required />
+                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Celular</label>
+                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-phone-alt text-base"></i></div>
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="email" name="email" value={formData.email} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#0A0A0A] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Email" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
-                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
+                                            <input type="email" name="email" value={formData.email} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Email" required />
+                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
+                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                         </div>
 
                                         <div className="relative group">
-                                            <textarea name="message" rows="3" value={formData.message} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#0A0A0A] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent resize-none" placeholder="Mensaje" required></textarea>
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Mensaje</label>
-                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-comment-dots text-base"></i></div>
+                                            <textarea name="message" rows="3" value={formData.message} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent resize-none" placeholder="Mensaje" required></textarea>
+                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Mensaje</label>
+                                            <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-comment-dots text-base"></i></div>
                                         </div>
                                     </div>
 
-                                    <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
+                                    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5 shadow-sm">
                                         <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-[#0A0A0A] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                             <span className="relative z-10">{isSubmitting ? 'Enviando...' : 'ENVIAR MENSAJE'}</span>
                                             <div className="w-6 h-6 bg-white/20 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-[#0A0A0A] text-xs"></i></div>
@@ -208,7 +208,7 @@ const FormularioContacto = () => {
                                         </button>
                                     </div>
 
-                                    <div className="rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed text-center">
+                                    <div className="rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-[11px] text-white/60 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#84CC16] flex-shrink-0"></i>
                                             <span>Te responderemos a la brevedad posible a través de WhatsApp.</span>
