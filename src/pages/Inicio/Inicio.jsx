@@ -1,6 +1,9 @@
 import React from 'react';
 import HeroHagamosTech from './sections/HeroHagamosTech';
 import { QueHacemos, FlujoTrabajo } from './sections/QueHacemos';
+import ServiciosInicio from './sections/ServiciosInicio';
+import NovedadesInicio from './sections/NovedadesInicio';
+import ClientesConfian from '../../components/carouseles/ClientesConfian';
 import useModalStore from '../../store/useModalStore';
 
 const Inicio = () => {
@@ -10,6 +13,10 @@ const Inicio = () => {
         <div id="app" className="relative overflow-hidden">
             <HeroHagamosTech />
             <QueHacemos />
+            <FlujoTrabajo />
+            <ServiciosInicio />
+            <ClientesConfian />
+            <NovedadesInicio />
             <FlujoTrabajo />
 
             {/* CTA final */}
