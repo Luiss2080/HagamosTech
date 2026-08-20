@@ -9,18 +9,7 @@
     "dev:all": "npx concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "db:status": "node database/runner.cjs status",
-    "db:migrate": "node database/runner.cjs migrate",
-    "db:seed": "node database/runner.cjs seed",
-    "db:rollback": "node database/runner.cjs rollback",
-    "db:rollback-seed": "node database/runner.cjs rollback-seed",
-    "db:refresh": "node database/runner.cjs refresh",
-    "db:fresh": "node database/runner.cjs fresh",
-    "test:clientes": "node --test tests/01_clientes.test.cjs",
-    "test:usuarios": "node --test tests/03_usuarios.test.cjs",
-    "test:roles": "node --test tests/02_roles_permisos.test.cjs",
-    "test:all": "node --test --test-concurrency=1 tests/01_clientes.test.cjs tests/03_usuarios.test.cjs tests/02_roles_permisos.test.cjs"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
