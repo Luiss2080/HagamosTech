@@ -9,7 +9,7 @@ const HeroPrivacidad = () => {
             <PageHero
                 title="Política de"
                 highlight="Privacidad."
-                description="En Los Castores nos tomamos muy en serio la protección de tus datos personales. Conocé cómo recopilamos, usamos y protegemos tu información."
+                description="En HagamosTech nos tomamos muy en serio la protección de tus datos personales. Conocé cómo recopilamos, usamos y protegemos tu información."
             />
         </div>
     );

@@ -62,7 +62,7 @@ const SucursalForm = ({ form, set, onBackToList, onSubmit, modo, titulo }) => {
             <label className="block text-[10px] font-black uppercase tracking-wider text-[#E95A0C]">NOMBRE DE LA SUCURSAL <b className="text-red-500">*</b></label>
             <div className="relative">
               <i className="fas fa-store absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
-              <input type="text" required value={form.nombre} onChange={(e) => set('nombre', e.target.value)} placeholder="Ej: Los Castores Equipetrol" className={`${inputCls} pl-9`} />
+              <input type="text" required value={form.nombre} onChange={(e) => set('nombre', e.target.value)} placeholder="Ej: HagamosTech Equipetrol" className={`${inputCls} pl-9`} />
             </div>
           </div>
           <div className="space-y-1">

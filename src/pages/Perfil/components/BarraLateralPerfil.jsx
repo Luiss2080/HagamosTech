@@ -45,7 +45,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                 {/* 1. SECCIÃ“N DE CABECERA BRANDING (Como en el panel del usuario) */}
                 <div className="w-full pb-3.5 border-b border-white/10 text-left">
                     <h1 className="text-xs font-black uppercase tracking-wider text-white flex items-center gap-1.5">
-                        <i className="fas fa-microchip text-amber-400"></i> Los Castores
+                        <i className="fas fa-microchip text-amber-400"></i> HagamosTech
                     </h1>
                     <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Instituto de RobÃ³tica & IA</p>
                 </div>
@@ -100,7 +100,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                 <div className="w-full bg-black/15 border border-white/5 rounded-2xl p-3.5 text-left shadow-inner">
                     <div className="flex items-center justify-between mb-1.5">
                         <span className="text-[8px] font-black uppercase tracking-widest text-[#c5a059] flex items-center gap-1">
-                            <i className="fas fa-crown text-amber-400 text-[9px]"></i> Club Los Castores
+                            <i className="fas fa-crown text-amber-400 text-[9px]"></i> Club HagamosTech
                         </span>
                         <span className="text-[8px] font-black text-white">2,450 / 3,000 pts</span>
                     </div>
@@ -268,7 +268,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <div className="absolute top-0 right-0 w-24 h-24 bg-[#c5a059]/10 rounded-full blur-2xl pointer-events-none" />
                             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#a41e22]/5 rounded-full blur-3xl pointer-events-none" />
                             
-                            <h3 className="font-serif text-[#a41e22] text-xl font-bold italic tracking-wide">Los Castores</h3>
+                            <h3 className="font-serif text-[#a41e22] text-xl font-bold italic tracking-wide">HagamosTech</h3>
                             <p className="text-[8px] font-black uppercase tracking-[0.25em] text-[#c5a059] mt-1">Robotics & Software Academy</p>
                             
                             <div className="w-10 h-0.5 bg-slate-350 mx-auto my-3" />

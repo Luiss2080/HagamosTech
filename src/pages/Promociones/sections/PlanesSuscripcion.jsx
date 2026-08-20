@@ -98,7 +98,7 @@ const PlanesSuscripcion = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#FF4D00]/20">
-                            <i className="fas fa-user-check text-[#FF4D00] mr-1"></i> Membresía Castores
+                            <i className="fas fa-user-check text-[#FF4D00] mr-1"></i> Membresía HagamosTech
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
                             Unite al <span className="relative inline-block text-[#FF4D00]">

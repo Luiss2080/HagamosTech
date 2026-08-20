@@ -85,12 +85,12 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
               <div className="flex items-center gap-3">
                 <div className="relative">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center p-1 overflow-hidden">
-                    <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" className="w-full h-full object-contain" />
+                    <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" className="w-full h-full object-contain" />
                   </div>
                   <div className="absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 bg-[#25d366] rounded-full border-2 border-[#008069]"></div>
                 </div>
                 <div className="flex flex-col">
-                  <h3 className="font-semibold text-white text-[15px] leading-tight tracking-wide">LOS CASTORES</h3>
+                  <h3 className="font-semibold text-white text-[15px] leading-tight tracking-wide">HAGAMOSTECH</h3>
                   <div className="text-[11px] text-emerald-100 font-normal">
                     {isTyping ? 'escribiendo...' : 'en línea'}
                   </div>
@@ -140,8 +140,8 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
                         <div className="absolute -left-[8px] top-0 w-0 h-0 border-r-[8px] border-r-white border-b-[10px] border-b-transparent z-10 filter drop-shadow-[-1px_0_1px_rgba(0,0,0,0.06)]"></div>
                         
                         <div className="p-2.5 pb-1.5 text-[14.5px] leading-relaxed relative bg-white text-[#111B21] rounded-lg rounded-tl-none z-20 shadow-[0_1px_1px_rgba(0,0,0,0.1)]">
-                          <span className="font-semibold text-[#008069] text-[12.5px] block mb-1">Los Castores</span>
-                          ¡Hola! 👋 Bienvenido al canal oficial de LOS CASTORES.
+                          <span className="font-semibold text-[#008069] text-[12.5px] block mb-1">HagamosTech</span>
+                          ¡Hola! 👋 Bienvenido al canal oficial de HAGAMOSTECH.
                           <br/><br/>
                           Escríbenos tu consulta y un asesor te atenderá al instante. 👇
                           

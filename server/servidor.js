@@ -117,7 +117,7 @@ app.use('/api', (req, res) => {
 
 // --- Inicio del Servidor ---
 app.listen(PORT, '0.0.0.0', () => {
-    console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] Los Castores - Full MVC Stack`);
+    console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
     console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${PORT}`);
     console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${PORT}`);
 });

@@ -37,7 +37,7 @@ const ContactoPrivacidad = () => {
                                 </div>
                             </div>
                             <div className="flex flex-col gap-3">
-                                <a href="https://wa.me/59161320004?text=Hola%20Los%20Castores!%20Tengo%20una%20consulta%20sobre%20privacidad" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
+                                <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Tengo%20una%20consulta%20sobre%20privacidad" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
                                     <div className="w-12 h-12 rounded-xl bg-[#25D366] flex items-center justify-center text-white text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                                         <i className="fab fa-whatsapp"></i>
                                     </div>
@@ -47,13 +47,13 @@ const ContactoPrivacidad = () => {
                                     </div>
                                     <i className="fas fa-arrow-right text-white/50 group-hover:translate-x-1 transition-transform ml-auto"></i>
                                 </a>
-                                <a href="mailto:privacidad@loscastores.bo" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
+                                <a href="mailto:privacidad@hagamostech.bo" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
                                     <div className="w-12 h-12 rounded-xl bg-[#FF4D00] flex items-center justify-center text-white text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                                         <i className="fas fa-envelope"></i>
                                     </div>
                                     <div className="text-left">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/60">Email</p>
-                                        <p className="text-white font-black text-sm group-hover:text-amber-300 transition-colors">privacidad@loscastores.bo</p>
+                                        <p className="text-white font-black text-sm group-hover:text-amber-300 transition-colors">privacidad@hagamostech.bo</p>
                                     </div>
                                     <i className="fas fa-arrow-right text-white/50 group-hover:translate-x-1 transition-transform ml-auto"></i>
                                 </a>

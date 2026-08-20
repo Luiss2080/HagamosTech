@@ -7,7 +7,7 @@ const PreviaFactura = ({ carrito, mesa, total }) => {
   return (
     <div className="rounded-xl border border-dashed border-gray-300 bg-[#FFFDF9] p-4 font-mono text-[11px] text-gray-700">
       <div className="text-center pb-2 mb-2 border-b border-dashed border-gray-300">
-        <p className="font-black text-[#FF4D00] text-sm tracking-widest">LOS CASTORES</p>
+        <p className="font-black text-[#FF4D00] text-sm tracking-widest">HAGAMOSTECH</p>
         <p className="text-[9px] uppercase tracking-widest text-gray-400">Salteñería Tradicional</p>
       </div>
 

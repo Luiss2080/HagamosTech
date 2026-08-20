@@ -1,6 +1,6 @@
 import os
 
-filepath = r'c:\laragon\www\LosCastores\server\system\utils\01_mailer.js'
+filepath = r'c:\laragon\www\LosHagamosTech\server\system\utils\01_mailer.js'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
@@ -38,7 +38,7 @@ new_html = """function plantillaBase({ titulo, subtitulo, contenido, anio = new 
     <tr>
       <!-- Logo a la izquierda -->
       <td align="left" style="width:110px;">
-        <img src="cid:logoheader@loscastores.com" alt="${BRAND}" width="110" style="display:block; max-width:100%; height:auto;">
+        <img src="cid:logoheader@hagamostech.com" alt="${BRAND}" width="110" style="display:block; max-width:100%; height:auto;">
       </td>
       <!-- Menú interactivo -->
       <td align="right" valign="middle">

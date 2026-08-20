@@ -106,7 +106,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                 setFeedback({
                     type: 'success',
                     title: 'Cuenta creada',
-                    message: 'Tu cuenta de LOS CASTORES fue creada correctamente. A continuación puedes activar tu prueba de invitado o explorar.',
+                    message: 'Tu cuenta de HAGAMOSTECH fue creada correctamente. A continuación puedes activar tu prueba de invitado o explorar.',
                     afterClose: () => {
                         setFormData(INITIAL_FORM);
                         onClose();
@@ -148,7 +148,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                 setFeedback({
                     type: 'success',
                     title: 'Correo verificado',
-                    message: 'Tu cuenta de LOS CASTORES fue creada y verificada correctamente. A continuación puedes activar tu prueba de invitado o explorar.',
+                    message: 'Tu cuenta de HAGAMOSTECH fue creada y verificada correctamente. A continuación puedes activar tu prueba de invitado o explorar.',
                     afterClose: () => {
                         setFormData(INITIAL_FORM);
                         onClose();
@@ -233,14 +233,14 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                 <div className="relative z-10 flex flex-col items-center text-center">
                                     <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md group">
                                         <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden group-hover:scale-105 group-hover:-translate-y-2 group-hover:rotate-[5deg] transition-all duration-500">
-                                            <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" className="h-full w-full object-contain" />
+                                            <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" className="h-full w-full object-contain" />
                                         </div>
                                     </div>
 
                                     <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                         Crea tu cuenta en <br />
                                         <span className="text-white relative inline-block">
-                                            LOS CASTORES
+                                            HAGAMOSTECH
                                             <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                                         </span>
                                     </h2>
@@ -250,7 +250,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Registro LOS CASTORES
+                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Registro HAGAMOSTECH
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
@@ -274,12 +274,12 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                 </div>
                                 
                                 <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
-                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
                                             <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -447,7 +447,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                     <div className="mt-3.5 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#FF4D00] flex-shrink-0"></i>
-                                            <span>Si tienes dudas, contacta al soporte LOS CASTORES en WhatsApp al +591 61320004.</span>
+                                            <span>Si tienes dudas, contacta al soporte HAGAMOSTECH en WhatsApp al +591 61320004.</span>
                                         </div>
                                     </div>
                                 </div>

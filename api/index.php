@@ -1,5 +1,5 @@
 <?php
-// Los Castores API - Main Router
+// HagamosTech API - Main Router
 require_once __DIR__ . '/01_config.php';
 
 $uri = $_SERVER['REQUEST_URI'];
@@ -13,7 +13,7 @@ $segments = array_filter(explode('/', trim($path, '/')));
 if (empty($segments)) {
     respond([
         'status' => 'ok',
-        'message' => 'Los Castores API v1.0',
+        'message' => 'HagamosTech API v1.0',
         'time' => date('Y-m-d H:i:s')
     ]);
 }

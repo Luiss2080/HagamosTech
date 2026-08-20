@@ -37,7 +37,7 @@ const CarritoModal = () => {
 
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                      <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
+                      <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
                     </div>
 
                     <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
@@ -60,12 +60,12 @@ const CarritoModal = () => {
                     </div>
 
                     <div className="w-full pt-4 mt-3 flex flex-col items-center border-t border-white/20">
-                      <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                      <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                       <div className="flex justify-center gap-3">
                         {[
-                          { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                          { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                          { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                          { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                          { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                          { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                           { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                         ].map((item, i) => (
                           <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -95,7 +95,7 @@ const CarritoModal = () => {
                         </span>
                         <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Detalle de Compra</h3>
                       </div>
-                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Revisá tu pedido LOS CASTORES</p>
+                      <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Revisá tu pedido HAGAMOSTECH</p>
                     </div>
 
                     {items.length === 0 ? (

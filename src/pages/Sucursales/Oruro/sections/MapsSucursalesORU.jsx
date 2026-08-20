@@ -3,8 +3,8 @@ import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
 import CircleParticles from '../../../../components/fondos/ParticulasCirculares';
 
 const SUCURSALES_MAPS = [
-  { id: 'oru-1', name: 'Franquicia 1', fullName: 'Los Castores Franquicia 1', address: 'Murguía 982', phone: '68929329', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.9667,-67.1167', mapLink: 'https://maps.app.goo.gl/qEhwMp7xotXRgwum6' },
-  { id: 'oru-2', name: 'Centro Oruro', fullName: 'Los Castores Centro Oruro', address: 'Potosí 318', phone: '72302533', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo · Llevar · Delivery · Cafetería', coords: '-17.9800,-67.1500', mapLink: 'https://maps.app.goo.gl/Lk6ZDu2e43psPZa8A' }
+  { id: 'oru-1', name: 'Franquicia 1', fullName: 'HagamosTech Franquicia 1', address: 'Murguía 982', phone: '68929329', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.9667,-67.1167', mapLink: 'https://maps.app.goo.gl/qEhwMp7xotXRgwum6' },
+  { id: 'oru-2', name: 'Centro Oruro', fullName: 'HagamosTech Centro Oruro', address: 'Potosí 318', phone: '72302533', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo · Llevar · Delivery · Cafetería', coords: '-17.9800,-67.1500', mapLink: 'https://maps.app.goo.gl/Lk6ZDu2e43psPZa8A' }
 ];
 
 const MapsSucursalesORU = () => {

@@ -9,7 +9,7 @@ const HeroContacto = () => {
             <PageHero
                 title="Estamos aquí para"
                 highlight="atenderte."
-                description="En Los Castores te ofrecemos las mejores salteñas con el verdadero sabor tradicional. Esta sección te brinda asistencia directa para pedidos, reservas y atención al cliente."
+                description="En HagamosTech te ofrecemos las mejores salteñas con el verdadero sabor tradicional. Esta sección te brinda asistencia directa para pedidos, reservas y atención al cliente."
             >
                 <div className="flex flex-wrap justify-center gap-4">
                     {[

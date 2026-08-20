@@ -1,13 +1,13 @@
 import os
 
-filepath = r'c:\laragon\www\LosCastores\server\system\utils\01_mailer.js'
+filepath = r'c:\laragon\www\LosHagamosTech\server\system\utils\01_mailer.js'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
 new_content = """const nodemailer = require('nodemailer');
 const path = require('path');
 
-const BRAND = 'LOS CASTORES SCZ';
+const BRAND = 'HAGAMOSTECH SCZ';
 const config = {
     host: process.env.SMTP_HOST || '',
     port: parseInt(process.env.SMTP_PORT || '465', 10),

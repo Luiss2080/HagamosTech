@@ -1,5 +1,5 @@
 <?php
-// Los Castores API - Cart Endpoints
+// HagamosTech API - Cart Endpoints
 require_once __DIR__ . '/01_config.php';
 
 $method = $_SERVER['REQUEST_METHOD'];

@@ -1,5 +1,5 @@
 import os
-path = r'c:\laragon\www\LosCastores\src\components\Modales\RegistroModal.jsx'
+path = r'c:\laragon\www\LosHagamosTech\src\components\Modales\RegistroModal.jsx'
 with open(path, 'r', encoding='utf-8') as f:
     c = f.read()
 replacements = [

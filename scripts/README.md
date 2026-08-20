@@ -71,4 +71,4 @@ Producción:
 - **Puertos:** Si el puerto 3000 o 4001 están ocupados, modifica en `server/.env` y `vite.config.js`
 
 ---
-*Los Castores - 2026*
+*HagamosTech - 2026*

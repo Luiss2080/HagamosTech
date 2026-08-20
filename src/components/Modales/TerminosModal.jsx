@@ -4,7 +4,7 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 const TERMS_SECTIONS = [
     {
         title: '1. Servicios educativos y de software',
-        text: 'LOS CASTORES ofrece cursos de robótica educativa, libros escolares de primaria y secundaria, desarrollo de software a medida, páginas web y soluciones tecnológicas empresariales. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
+        text: 'HAGAMOSTECH ofrece cursos de robótica educativa, libros escolares de primaria y secundaria, desarrollo de software a medida, páginas web y soluciones tecnológicas empresariales. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
     },
     {
         title: '2. Inscripción y acceso a cursos',
@@ -12,7 +12,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '3. Libros y materiales educativos',
-        text: 'Los libros digitales e impresos de LOS CASTORES están protegidos por derechos de autor. No está permitida la reproducción, distribución o comercialización no autorizada. Las imágenes de portada y contenido son referenciales.',
+        text: 'Los libros digitales e impresos de HAGAMOSTECH están protegidos por derechos de autor. No está permitida la reproducción, distribución o comercialización no autorizada. Las imágenes de portada y contenido son referenciales.',
     },
     {
         title: '4. Desarrollo de software y páginas web',
@@ -96,7 +96,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     </h2>
 
                                     <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-5 drop-shadow-md">
-                                        Informacion legal para compradores LOS CASTORES sobre productos, promociones, pagos, garantias y entregas.
+                                        Informacion legal para compradores HAGAMOSTECH sobre productos, promociones, pagos, garantias y entregas.
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-black uppercase tracking-widest mb-5 shadow-lg">
@@ -124,12 +124,12 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                 </div>
                                 
                                 <div className="w-full mt-auto pt-2 flex flex-col items-center">
-                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
-                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
                                             <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#c5a059] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -157,7 +157,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                             </span>
                                             <h3 className="text-2xl font-black text-[#111827] tracking-tight">Terminos y Condiciones</h3>
                                         </div>
-                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Compra segura en LOS CASTORES</p>
+                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Compra segura en HAGAMOSTECH</p>
                                     </div>
 
                                     <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm max-h-[56vh] overflow-y-auto space-y-3">
@@ -172,7 +172,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     <div className="mt-4 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed">
                                         <div className="flex items-start gap-2">
                                             <i className="fas fa-circle-info text-[#a41e22] mt-0.5"></i>
-                                            <span>Al continuar navegando y comprando en LOS CASTORES, aceptas estas condiciones comerciales y legales.</span>
+                                            <span>Al continuar navegando y comprando en HAGAMOSTECH, aceptas estas condiciones comerciales y legales.</span>
                                         </div>
                                     </div>
                                 </div>

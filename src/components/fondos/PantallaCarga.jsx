@@ -249,7 +249,7 @@ const LoadingScreen = ({ onComplete }) => {
         <div className="lc-logo lc-card-in mb-4" style={{ animationDelay:'.1s' }}>
           <img
             src="/img/02_Logos/LogoHeader.png"
-            alt="Los Castores"
+            alt="HagamosTech"
             className="h-24 sm:h-28 w-auto object-contain"
             style={{ filter:'drop-shadow(0 6px 24px rgba(255,77,0,0.28))' }}
           />
@@ -347,9 +347,9 @@ const LoadingScreen = ({ onComplete }) => {
         {/* ── Redes sociales ── */}
         <div className="flex items-center gap-2 mt-2 mb-1">
           {[
-            { icon: 'fa-facebook-f', href: 'https://www.facebook.com/LosCastoresSC',        color: '#1877F2', label: 'Facebook'  },
-            { icon: 'fa-instagram',  href: 'https://www.instagram.com/castoresscz/', color: '#E1306C', label: 'Instagram' },
-            { icon: 'fa-tiktok',     href: 'https://www.tiktok.com/@castores.scz',           color: '#010101', label: 'TikTok'    },
+            { icon: 'fa-facebook-f', href: 'https://www.facebook.com/LosHagamosTechSC',        color: '#1877F2', label: 'Facebook'  },
+            { icon: 'fa-instagram',  href: 'https://www.instagram.com/hagamostech/', color: '#E1306C', label: 'Instagram' },
+            { icon: 'fa-tiktok',     href: 'https://www.tiktok.com/@hagamostech',           color: '#010101', label: 'TikTok'    },
             { icon: 'fa-whatsapp',   href: 'https://wa.me/59161320004',                    color: '#25D366', label: 'WhatsApp'  },
           ].map((s, i) => (
             <a

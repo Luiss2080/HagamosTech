@@ -30,7 +30,7 @@ const initialVideos = [
     tiktokId: '7657244089661951252',
     title: 'Calidad y Sabor',
     views: 'Nuevo',
-    desc: 'Los Castores te ofrece el verdadero sabor de Bolivia.',
+    desc: 'HagamosTech te ofrece el verdadero sabor de Bolivia.',
   },
   {
     id: 5,
@@ -170,7 +170,7 @@ const HeroSaltenas = () => {
 
                         {/* Description */}
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            <strong className="text-[#8B4513]">Los Castores</strong> te ofrece el verdadero sabor tradicional, horneado diariamente con los mejores ingredientes para alegrar tus mañanas.
+                            <strong className="text-[#8B4513]">HagamosTech</strong> te ofrece el verdadero sabor tradicional, horneado diariamente con los mejores ingredientes para alegrar tus mañanas.
                         </p>
 
                         {/* Centered CTAs */}
@@ -206,7 +206,7 @@ const HeroSaltenas = () => {
                                 </div>
                             </div>
                             <span className="text-[9px] font-black text-gray-500 uppercase tracking-widest leading-none">
-                                Miles de clientes disfrutan el sabor de Los Castores
+                                Miles de clientes disfrutan el sabor de HagamosTech
                             </span>
                         </div>
                     </div>

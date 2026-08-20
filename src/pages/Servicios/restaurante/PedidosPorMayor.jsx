@@ -142,7 +142,7 @@ const PedidosPorMayor = () => {
             <CtaServicio
                 frase="¿Tenés un negocio o querés revender? Cotizá tu pedido por mayor ahora y empezá a ahorrar desde la primera compra."
                 gradiente="from-[#8B4513] via-[#5D3A1F] to-[#452A16]"
-                whatsappTexto="Hola Los Castores! Quiero cotizar un pedido por mayor"
+                whatsappTexto="Hola HagamosTech! Quiero cotizar un pedido por mayor"
                 badges={[
                     { icon: 'fa-tag', label: 'Hasta 20% OFF', color: 'bg-[#FF4D00]' },
                     { icon: 'fa-receipt', label: 'Factura con NIT', color: 'bg-[#5D3A1F]' },

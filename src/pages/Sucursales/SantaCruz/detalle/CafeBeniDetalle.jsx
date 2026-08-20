@@ -44,7 +44,7 @@ const DetailCafeBeni = () => {
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-50 rounded-full blur-[100px] pointer-events-none"></div>
 
             <HeroDetalleSeccion
-                titulo="Los Castores"
+                titulo="HagamosTech"
                 resaltado="Café Beni."
                 descripcion="Nuestra experiencia gourmet. Donde la tradición salteñera se encuentra con el café de especialidad y un ambiente único frente al parque."
             />

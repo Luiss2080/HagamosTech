@@ -43,7 +43,7 @@ const CtaServicio = ({ frase, gradiente = 'from-[#8B4513] via-[#5D3A1F] to-[#452
 
                             {/* Botones */}
                             <div className="flex flex-wrap justify-center gap-3 mb-6">
-                                <a href={`https://wa.me/59161320004?text=${encodeURIComponent(whatsappTexto || 'Hola Los Castores! Quiero información sobre sus servicios')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">
+                                <a href={`https://wa.me/59161320004?text=${encodeURIComponent(whatsappTexto || 'Hola HagamosTech! Quiero información sobre sus servicios')}`} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">
                                     <i className="fab fa-whatsapp text-lg"></i> Consultar ahora
                                 </a>
                                 <a href="tel:+59161320004" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#FF4D00] hover:bg-[#CC3D00] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">

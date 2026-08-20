@@ -6,7 +6,7 @@ const BeneficiosDetalle = () => {
     { icon: 'fa-shield-halved', titulo: 'Calidad Garantizada', desc: 'Productos frescos con la calidad que nos distingue.', color: 'bg-[#FF4D00]' },
     { icon: 'fa-truck-fast', titulo: 'Delivery Express', desc: 'Llevamos tu pedido calentito a la puerta de tu casa.', color: 'bg-[#5D3A1F]' },
     { icon: 'fa-rotate-left', titulo: 'Satisfacción', desc: 'Si algo no está perfecto, lo resolvemos al instante.', color: 'bg-[#8B4513]' },
-    { icon: 'fa-headset', titulo: 'Soporte Los Castores', desc: 'Atención humana real para ayudarte en lo que necesites.', color: 'bg-[#CC3D00]' },
+    { icon: 'fa-headset', titulo: 'Soporte HagamosTech', desc: 'Atención humana real para ayudarte en lo que necesites.', color: 'bg-[#CC3D00]' },
   ];
 
   return (
@@ -25,7 +25,7 @@ const BeneficiosDetalle = () => {
               </span>
             </h2>
             <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-              Cada compra incluye estas garantías Los Castores.
+              Cada compra incluye estas garantías HagamosTech.
             </p>
           </div>
 

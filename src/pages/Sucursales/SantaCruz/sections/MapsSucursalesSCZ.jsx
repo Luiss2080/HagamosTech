@@ -3,10 +3,10 @@ import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
 import CircleParticles from '../../../../components/fondos/ParticulasCirculares';
 
 const SUCURSALES_MAPS = [
-  { id: 'scz-1', name: 'Equipetrol', fullName: 'Los Castores Equipetrol', address: 'Av. Cristóbal de Mendoza, esquina', phone: '3 3430197', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7740,-63.1820', mapLink: 'https://maps.app.goo.gl/L6pWgHan11aPfE4p7' },
-  { id: 'scz-2', name: '2do Anillo', fullName: 'Los Castores 2do Anillo', address: '6R59+5W7', phone: '3 3391432', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7830,-63.1705', mapLink: 'https://maps.app.goo.gl/GYF5RyA9vtDnDJ9WA' },
-  { id: 'scz-3', name: 'Av. Piraí', fullName: 'Salteñas Los Castores Av. Piraí', address: 'Av. Piraí 344', phone: '3 3552038', schedule: 'Lun a Sáb · 7:45 a.m. – 1:00 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7890,-63.1600', mapLink: 'https://maps.app.goo.gl/vyDVunvkBmjqjKbf7' },
-  { id: 'scz-4', name: 'Café Beni', fullName: 'Los Castores Café Beni', address: 'Av. Beni 2160', phone: '+591 61320004', schedule: 'Lun a Sáb · 7:00 a.m. – 2:00 p.m.', services: 'Consumo en el lugar · Cafetería Especial', coords: '-17.7680,-63.1750', mapLink: 'https://maps.app.goo.gl/wwNLzMyyizWoJXBGA' }
+  { id: 'scz-1', name: 'Equipetrol', fullName: 'HagamosTech Equipetrol', address: 'Av. Cristóbal de Mendoza, esquina', phone: '3 3430197', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7740,-63.1820', mapLink: 'https://maps.app.goo.gl/L6pWgHan11aPfE4p7' },
+  { id: 'scz-2', name: '2do Anillo', fullName: 'HagamosTech 2do Anillo', address: '6R59+5W7', phone: '3 3391432', schedule: 'Lun a Sáb · Hasta la 1:30 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7830,-63.1705', mapLink: 'https://maps.app.goo.gl/GYF5RyA9vtDnDJ9WA' },
+  { id: 'scz-3', name: 'Av. Piraí', fullName: 'Salteñas HagamosTech Av. Piraí', address: 'Av. Piraí 344', phone: '3 3552038', schedule: 'Lun a Sáb · 7:45 a.m. – 1:00 p.m.', services: 'Consumo en el lugar · Para llevar · Delivery', coords: '-17.7890,-63.1600', mapLink: 'https://maps.app.goo.gl/vyDVunvkBmjqjKbf7' },
+  { id: 'scz-4', name: 'Café Beni', fullName: 'HagamosTech Café Beni', address: 'Av. Beni 2160', phone: '+591 61320004', schedule: 'Lun a Sáb · 7:00 a.m. – 2:00 p.m.', services: 'Consumo en el lugar · Cafetería Especial', coords: '-17.7680,-63.1750', mapLink: 'https://maps.app.goo.gl/wwNLzMyyizWoJXBGA' }
 ];
 
 const MapsSucursalesSCZ = () => {

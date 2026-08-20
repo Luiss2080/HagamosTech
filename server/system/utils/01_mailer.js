@@ -1,7 +1,7 @@
 const nodemailer = require('nodemailer');
 const path = require('path');
 
-const BRAND = 'LOS CASTORES SCZ';
+const BRAND = 'HAGAMOSTECH SCZ';
 const config = {
     host: process.env.SMTP_HOST || '',
     port: parseInt(process.env.SMTP_PORT || '465', 10),
@@ -81,7 +81,7 @@ function plantillaBase({ titulo, subtitulo, contenido, anio = new Date().getFull
     <tr>
       <!-- Logo a la izquierda -->
       <td align="left" style="width:110px;">
-        <img src="cid:logoheader@loscastores.com" alt="${BRAND}" width="110" style="display:block; max-width:100%; height:auto;">
+        <img src="cid:logoheader@hagamostech.com" alt="${BRAND}" width="110" style="display:block; max-width:100%; height:auto;">
       </td>
       <!-- Menú interactivo -->
       <td align="right" valign="middle">
@@ -229,7 +229,7 @@ const obtenerAttachments = () => [
     {
         filename: 'LogoHeader.png',
         content: fs.readFileSync(path.join(__dirname, '../../../public/img/02_Logos/LogoHeader.png')),
-        cid: 'logoheader@loscastores.com',
+        cid: 'logoheader@hagamostech.com',
         contentType: 'image/png',
         contentDisposition: 'inline'
     }

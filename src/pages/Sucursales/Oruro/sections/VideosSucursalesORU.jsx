@@ -5,7 +5,7 @@ import CircleParticles from '../../../../components/fondos/ParticulasCirculares'
 const VIDEOS = [
   { id: 1, tiktokId: '7585354813295086859', title: 'Nuevo en Oruro', views: 'Nuevo', desc: 'Acabamos de llegar a la capital del folklore con todo nuestro sabor tradicional.' },
   { id: 2, tiktokId: '7414946268507639045', title: 'Sabor del Altiplano', views: 'Popular', desc: 'Las salteñas más ricas ahora en Oruro. Ingredientes frescos y la misma receta de siempre.' },
-  { id: 3, tiktokId: '7657645476270853396', title: 'Tradición Viva', views: 'Tendencia', desc: 'El auténtico sabor de Los Castores ahora más cerca de vos, en pleno corazón de Oruro.' },
+  { id: 3, tiktokId: '7657645476270853396', title: 'Tradición Viva', views: 'Tendencia', desc: 'El auténtico sabor de HagamosTech ahora más cerca de vos, en pleno corazón de Oruro.' },
   { id: 4, tiktokId: '7572028971487939896', title: 'Calidad Andina', views: 'Destacado', desc: 'Seleccionamos los mejores ingredientes para que disfrutes la salteña perfecta en Oruro.' },
   { id: 5, tiktokId: '7378997525782547717', title: 'El Arte de Hornear', views: 'Nuevo', desc: 'Conocé cómo elaboramos nuestras salteñas con el mismo cariño de siempre en cada sucursal.' }
 ];
@@ -206,7 +206,7 @@ const VideosSucursalesORU = () => {
                                         </div>
                                         <div className="relative z-10 flex flex-col items-center text-center">
                                             <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                                                <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
+                                                <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
                                             </div>
                                             <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                                 {modalVideo.title}<br />
@@ -226,16 +226,16 @@ const VideosSucursalesORU = () => {
                                                 </div>
                                                 <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-center backdrop-blur-sm">
                                                     <i className="fas fa-store text-white/80 text-sm mb-1 block"></i>
-                                                    <p className="text-[10px] font-extrabold text-white">LOS CASTORES</p>
+                                                    <p className="text-[10px] font-extrabold text-white">HAGAMOSTECH</p>
                                                 </div>
                                             </div>
                                             <div className="w-full mt-auto pt-4 flex flex-col items-center">
                                                 <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Síguenos</p>
                                                 <div className="flex justify-center gap-3">
                                                     {[
-                                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
-                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
+                                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
+                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
                                                         { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                                     ].map((item, i) => (
                                                         <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#FF4D00] hover:text-white transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -267,7 +267,7 @@ const VideosSucursalesORU = () => {
                                         </div>
                                         <p className="relative z-10 mt-5 text-xs font-black uppercase tracking-widest text-gray-500">
                                             <i className="fab fa-tiktok mr-1.5 text-[#8B4513]"></i>
-                                            {modalVideo.title} <span className="text-[#8B4513]">- LOS CASTORES</span>
+                                            {modalVideo.title} <span className="text-[#8B4513]">- HAGAMOSTECH</span>
                                         </p>
                                     </div>
                                 </div>

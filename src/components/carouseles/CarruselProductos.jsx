@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
 
         <div className="absolute top-3 left-3 flex items-center gap-1.5">
           <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#FF4D00] text-white text-[8px] font-black uppercase tracking-wider shadow-md">
-            <i className="fas fa-star text-[7px]"></i> CASTORES
+            <i className="fas fa-star text-[7px]"></i> HAGAMOSTECH
           </span>
         </div>
 

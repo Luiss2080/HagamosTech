@@ -1,6 +1,6 @@
 # Inicio - Página Principal
 
-Landing page del sitio LOS CASTORES con secciones promocionales.
+Landing page del sitio HAGAMOSTECH con secciones promocionales.
 
 ## Archivos
 

@@ -208,7 +208,7 @@ const VideosSucursalesSCZ = () => {
                                         </div>
                                         <div className="relative z-10 flex flex-col items-center text-center">
                                             <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                                                <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
+                                                <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
                                             </div>
                                             <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                                 {modalVideo.title}<br />
@@ -219,7 +219,7 @@ const VideosSucursalesSCZ = () => {
                                             </h2>
                                             <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">{modalVideo.desc}</p>
                                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                                                <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Sucursales LOS CASTORES
+                                                <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Sucursales HAGAMOSTECH
                                             </div>
                                             <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                                                 <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-center backdrop-blur-sm">
@@ -228,16 +228,16 @@ const VideosSucursalesSCZ = () => {
                                                 </div>
                                                 <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-center backdrop-blur-sm">
                                                     <i className="fas fa-store-alt text-white/80 text-sm mb-1 block"></i>
-                                                    <p className="text-[10px] font-extrabold text-white">LOS CASTORES</p>
+                                                    <p className="text-[10px] font-extrabold text-white">HAGAMOSTECH</p>
                                                 </div>
                                             </div>
                                             <div className="w-full mt-auto pt-4 flex flex-col items-center">
                                                 <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Síguenos</p>
                                                 <div className="flex justify-center gap-3">
                                                     {[
-                                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
-                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
+                                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
+                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
                                                         { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                                     ].map((item, i) => (
                                                         <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -270,7 +270,7 @@ const VideosSucursalesSCZ = () => {
                                         </div>
                                         <p className="relative z-10 mt-5 text-xs font-black uppercase tracking-widest text-gray-500">
                                             <i className="fab fa-tiktok mr-1.5 text-[#FF4D00]"></i>
-                                            {modalVideo.title} <span className="text-[#FF4D00]">- LOS CASTORES</span>
+                                            {modalVideo.title} <span className="text-[#FF4D00]">- HAGAMOSTECH</span>
                                         </p>
                                     </div>
                                 </div>

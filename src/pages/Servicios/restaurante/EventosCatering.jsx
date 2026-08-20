@@ -123,7 +123,7 @@ const EventosCatering = () => {
             <CtaServicio
                 frase="Contanos sobre tu evento y te armamos una propuesta a medida, con el mejor sabor de Santa Cruz."
                 gradiente="from-[#8B4513] via-[#5D3A1F] to-[#452A16]"
-                whatsappTexto="Hola Los Castores! Quiero cotizar catering para mi evento"
+                whatsappTexto="Hola HagamosTech! Quiero cotizar catering para mi evento"
                 badges={[
                     { icon: 'fa-users', label: '10 a 100+ personas', color: 'bg-[#FF4D00]' },
                     { icon: 'fa-gift', label: 'Catering completo', color: 'bg-[#5D3A1F]' },

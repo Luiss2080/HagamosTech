@@ -45,7 +45,7 @@ const SaltenasPagina = () => {
                 resaltado="el detalle"
             />
             <CtaProducto
-                frase="Pedí tus salteñas favoritas y llevá el verdadero sabor de Los Castores a tu mesa."
+                frase="Pedí tus salteñas favoritas y llevá el verdadero sabor de HagamosTech a tu mesa."
                 enlaceMenu="/menu/saltenas"
             />
         </div>

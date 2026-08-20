@@ -1,16 +1,16 @@
 import os
 import re
 
-filepath = r'c:\laragon\www\LosCastores\server\system\utils\01_mailer.js'
+filepath = r'c:\laragon\www\LosHagamosTech\server\system\utils\01_mailer.js'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
 # Fix CID
-content = content.replace('cid:logoHeader', 'cid:logoHeader@castores.com')
-content = content.replace('cid:logoFooter', 'cid:logoFooter@castores.com')
-content = content.replace("'cid': 'logoHeader'", "'cid': 'logoHeader@castores.com',\n        contentDisposition: 'inline'")
-content = content.replace("cid: 'logoHeader'", "cid: 'logoHeader@castores.com',\n        contentDisposition: 'inline'")
-content = content.replace("cid: 'logoFooter'", "cid: 'logoFooter@castores.com',\n        contentDisposition: 'inline'")
+content = content.replace('cid:logoHeader', 'cid:logoHeader@HagamosTech.com')
+content = content.replace('cid:logoFooter', 'cid:logoFooter@HagamosTech.com')
+content = content.replace("'cid': 'logoHeader'", "'cid': 'logoHeader@HagamosTech.com',\n        contentDisposition: 'inline'")
+content = content.replace("cid: 'logoHeader'", "cid: 'logoHeader@HagamosTech.com',\n        contentDisposition: 'inline'")
+content = content.replace("cid: 'logoFooter'", "cid: 'logoFooter@HagamosTech.com',\n        contentDisposition: 'inline'")
 
 # Remove automatic email text
 content = re.sub(r'<p[^>]*>Correo generado automáticamente\. No respondas\.</p>', '', content)

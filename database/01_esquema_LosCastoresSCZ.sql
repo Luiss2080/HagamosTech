@@ -1,14 +1,14 @@
 -- =====================================================================
--- LosCastoresSCZ - Esquema completo (Salteñería Los Castores)
+-- Loshagamostech - Esquema completo (Salteñería HagamosTech)
 -- Autenticación + Catálogo (store) + Clientes
 -- Mejorado respecto al esquema original: FKs reales, utf8mb4, seguridad
 -- =====================================================================
 
-CREATE DATABASE IF NOT EXISTS `LosCastoresSCZ`
+CREATE DATABASE IF NOT EXISTS `Loshagamostech`
   CHARACTER SET utf8mb4
   COLLATE utf8mb4_unicode_ci;
 
-USE `LosCastoresSCZ`;
+USE `Loshagamostech`;
 
 SET FOREIGN_KEY_CHECKS = 0;
 

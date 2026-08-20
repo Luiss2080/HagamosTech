@@ -1,8 +1,8 @@
-https://www.tiktok.com/@castores.scz
+https://www.tiktok.com/@hagamostech
 
-https://www.instagram.com/castoresscz/
+https://www.instagram.com/hagamostech/
 
-https://www.facebook.com/LosCastoresSC
+https://www.facebook.com/LosHagamosTechSC
 
 Numeros de wthassApp
 60936506

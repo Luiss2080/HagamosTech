@@ -6,7 +6,7 @@ const BENEFICIOS = [
   { icon: 'fa-bolt', title: 'Servicio Rápido', desc: 'Sabemos que tu tiempo vale. En Oruro te atendemos con la misma eficiencia y calidez que nos caracteriza en todo el país.' },
   { icon: 'fa-leaf', title: 'Ingredientes Frescos', desc: 'Seleccionamos los mejores insumos cada día. Nada se recicla, todo se prepara fresco para garantizar el sabor inigualable.' },
   { icon: 'fa-medal', title: 'Calidad Garantizada', desc: 'Más de 35 años de tradición nos respaldan. Cada salteña lleva nuestra promesa de excelencia donde sea que estés.' },
-  { icon: 'fa-hand-holding-heart', title: 'Atención Cercana', desc: 'Acabamos de llegar a Oruro y ya te recibimos con los brazos abiertos. Sos parte de la familia Los Castores.' }
+  { icon: 'fa-hand-holding-heart', title: 'Atención Cercana', desc: 'Acabamos de llegar a Oruro y ya te recibimos con los brazos abiertos. Sos parte de la familia HagamosTech.' }
 ];
 
 const BeneficiosSucursalesORU = () => {

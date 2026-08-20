@@ -8,7 +8,7 @@ Horario de atención
 Servicios disponibles
 Botón "Cómo llegar" (Google Maps)
 Sucursales Santa Cruz
-1. Los Castores
+1. HagamosTech
 
 Dirección:
 Av. Cristóbal de Mendoza, esquina.
@@ -28,7 +28,7 @@ Entrega a domicilio
 Google Maps
 https://maps.app.goo.gl/L6pWgHan11aPfE4p7
 
-2. Los Castores
+2. HagamosTech
 
 Ubicación:
 6R59+5W7
@@ -48,7 +48,7 @@ Entrega a domicilio
 Google Maps
 https://maps.app.goo.gl/GYF5RyA9vtDnDJ9WA
 
-3. Salteñas Los Castores
+3. Salteñas HagamosTech
 
 Dirección:
 Av. Piraí 344
@@ -68,7 +68,7 @@ Entrega a domicilio
 Google Maps
 https://maps.app.goo.gl/vyDVunvkBmjqjKbf7
 
-4. Los Castores Café
+4. HagamosTech Café
 
 Dirección:
 Av. Beni 2160
@@ -81,7 +81,7 @@ Google Maps
 https://maps.app.goo.gl/wwNLzMyyizWoJXBGA
 
 Sucursales Cochabamba
-1. Castores "Salteñas Bien Cochalas" – Recoleta
+1. HagamosTech "Salteñas Bien Cochalas" – Recoleta
 
 Dirección
 C. A. Padilla 541
@@ -95,7 +95,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/wLX45LiJwESxNX6P8
 
-2. Castores "Salteñas Bien Cochalas" – Prado
+2. HagamosTech "Salteñas Bien Cochalas" – Prado
 
 Dirección
 Av. Ballivián #790, esquina Oruro
@@ -109,7 +109,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/cF6ADUQTcVJTfa8b9
 
-3. Castores "Salteñas Bien Cochalas"
+3. HagamosTech "Salteñas Bien Cochalas"
 
 Ubicación
 JV73+Q2Q
@@ -123,7 +123,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/wD2ZH6PJvbbMJAe87
 
-4. Castores
+4. HagamosTech
 
 Dirección
 Av. Simón López
@@ -137,7 +137,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/2L4KujA1rQGMvgGQA
 
-5. Castores Salteñería
+5. HagamosTech Salteñería
 
 Dirección
 15 de Agosto
@@ -151,7 +151,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/oCanVtHB3bgvXcR76
 
-6. Castores "Salteñas Bien Cochalas" – Beijing
+6. HagamosTech "Salteñas Bien Cochalas" – Beijing
 
 Teléfono
 69257952
@@ -163,7 +163,7 @@ Google Maps
 https://maps.app.goo.gl/adtLuPNNm7nEuxck7
 
 Sucursales Oruro
-1. Salteñería Castores – Franquicia Oruro 1
+1. Salteñería HagamosTech – Franquicia Oruro 1
 
 Dirección
 Murguía 982
@@ -177,7 +177,7 @@ Abierto hasta las 3:00 p.m.
 Google Maps
 https://maps.app.goo.gl/qEhwMp7xotXRgwum6
 
-2. Los Castores Salteñería
+2. HagamosTech Salteñería
 
 Dirección
 Potosí 318, entre Adolfo Mier y Junín

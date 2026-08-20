@@ -54,7 +54,7 @@ const CtaCookies = () => {
                                 <Link to="/menu/saltenas" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#FF4D00] hover:bg-[#CC3D00] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl shadow-orange-500/30 hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">
                                     <i className="fas fa-fire-burner text-lg"></i> Ver salteñas
                                 </Link>
-                                <a href="https://wa.me/59161320004?text=Hola%20Los%20Castores!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">
+                                <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20hacer%20un%20pedido" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2.5 px-7 py-3.5 bg-[#25D366] hover:bg-[#1DA851] text-white rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-xl hover:shadow-2xl hover:-translate-y-1 active:scale-95 transition-all">
                                     <i className="fab fa-whatsapp text-lg"></i> Pedir ahora
                                 </a>
                             </div>

@@ -5,9 +5,9 @@ import CircleParticles from '../../../../components/fondos/ParticulasCirculares'
 const VIDEOS = [
   { id: 1, tiktokId: '7536369762343865605', title: 'Salteñas CBB', views: 'Popular', desc: 'Descubrí el sabor auténtico de Cochabamba con nuestras salteñas horneadas a diario.' },
   { id: 2, tiktokId: '7582370866218995000', title: 'Tradición CBB', views: 'Nuevo', desc: 'La receta que conquistó Cochabamba desde 1989 sigue más vigente que nunca.' },
-  { id: 3, tiktokId: '7660909297131343122', title: 'Esencia Castores', views: 'Tendencia', desc: 'Conocé nuestras sucursales y el ambiente único que te espera en cada una.' },
+  { id: 3, tiktokId: '7660909297131343122', title: 'Esencia HagamosTech', views: 'Tendencia', desc: 'Conocé nuestras sucursales y el ambiente único que te espera en cada una.' },
   { id: 4, tiktokId: '7644724528437906695', title: 'Calidad Total', views: 'Destacado', desc: 'Ingredientes frescos, horneado artesanal y un sabor que no encontrás en otro lado.' },
-  { id: 5, tiktokId: '7572028971487939896', title: 'Detrás del Sabor', views: 'Nuevo', desc: 'El proceso artesanal que hace única a cada salteña de Los Castores Cochabamba.' }
+  { id: 5, tiktokId: '7572028971487939896', title: 'Detrás del Sabor', views: 'Nuevo', desc: 'El proceso artesanal que hace única a cada salteña de HagamosTech Cochabamba.' }
 ];
 
 const VideosSucursalesCBB = () => {
@@ -206,7 +206,7 @@ const VideosSucursalesCBB = () => {
                                         </div>
                                         <div className="relative z-10 flex flex-col items-center text-center">
                                             <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                                                <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
+                                                <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" loading="lazy" decoding="async" className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]" />
                                             </div>
                                             <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                                 {modalVideo.title}<br />
@@ -226,7 +226,7 @@ const VideosSucursalesCBB = () => {
                                                 </div>
                                                 <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-center backdrop-blur-sm">
                                                     <i className="fas fa-shop text-white/80 text-sm mb-1 block"></i>
-                                                    <p className="text-[10px] font-extrabold text-white">LOS CASTORES</p>
+                                                    <p className="text-[10px] font-extrabold text-white">HAGAMOSTECH</p>
                                                 </div>
                                             </div>
                                             <div className="w-full mt-auto pt-4 flex flex-col items-center">
@@ -234,7 +234,7 @@ const VideosSucursalesCBB = () => {
                                                 <div className="flex justify-center gap-3">
                                                     {[
                                                         { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
-                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSCASTORES' },
+                                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH' },
                                                         { icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
                                                         { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                                     ].map((item, i) => (
@@ -267,7 +267,7 @@ const VideosSucursalesCBB = () => {
                                         </div>
                                         <p className="relative z-10 mt-5 text-xs font-black uppercase tracking-widest text-gray-500">
                                             <i className="fab fa-tiktok mr-1.5 text-[#FF4D00]"></i>
-                                            {modalVideo.title} <span className="text-[#FF4D00]">- LOS CASTORES</span>
+                                            {modalVideo.title} <span className="text-[#FF4D00]">- HAGAMOSTECH</span>
                                         </p>
                                     </div>
                                 </div>

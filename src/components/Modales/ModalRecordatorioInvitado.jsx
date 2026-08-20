@@ -55,7 +55,7 @@ const ModalRecordatorioInvitado = ({ isOpen, onClose, diasRestantes }) => {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Soporte LOS CASTORES 24/7
+                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Soporte HAGAMOSTECH 24/7
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
@@ -78,12 +78,12 @@ const ModalRecordatorioInvitado = ({ isOpen, onClose, diasRestantes }) => {
                                     </div>
                                     
                                     <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                        <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                        <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                         <div className="flex justify-center gap-3">
                                             {[
-                                                { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                                { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                                { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                                { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                                { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                                { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                                 { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                             ].map((item, i) => (
                                                 <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#c5a059] transition-all duration-300 shadow-lg hover:-translate-y-1">

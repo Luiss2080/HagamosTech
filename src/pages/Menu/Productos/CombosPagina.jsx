@@ -29,7 +29,7 @@ const CombosPagina = () => {
             <CalculadoraCombos />
             <GaleriaSabores
                 imagenes={[
-                    { src: '/img/05_Productos/Combos/Desayuno.png', nombre: 'Desayuno Castorense', etiqueta: 'Para arrancar' },
+                    { src: '/img/05_Productos/Combos/Desayuno.png', nombre: 'Desayuno HagamosTech', etiqueta: 'Para arrancar' },
                     { src: '/img/05_Productos/Combos/SalteñasConTostada.png', nombre: 'Salteña con Tostada', etiqueta: 'La Favorita' },
                     { src: '/img/05_Productos/Salteñas/ComboPacata.png', nombre: 'Combo Pacata', etiqueta: 'Para compartir' },
                 ]}

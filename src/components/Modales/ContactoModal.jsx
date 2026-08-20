@@ -113,7 +113,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <div className="mb-7 inline-flex items-center justify-center rounded-full bg-white/20 p-3 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
                                                 <img
                                                     src="/img/01_Layout/01_Logo.png"
-                                                    alt="LOS CASTORES"
+                                                    alt="HAGAMOSTECH"
                                                     loading="lazy"
                                                     decoding="async"
                                                     className="h-36 w-36 rounded-full object-contain"
@@ -123,7 +123,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <h2 className="text-4xl font-black text-white leading-tight mb-3 tracking-tight drop-shadow-lg">
                                                 ConÃ©ctate con <br />
                                                 <span className="text-[#c5a059] relative inline-block">
-                                                    LOS CASTORES
+                                                    HAGAMOSTECH
                                                     <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#c5a059]/40" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                                 </span>
                                             </h2>
@@ -132,7 +132,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             </p>
 
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widest mb-8 shadow-lg">
-                                                <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Soporte LOS CASTORES
+                                                <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Soporte HAGAMOSTECH
                                             </div>
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
@@ -148,12 +148,12 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                         </div>
 
                                         <div className="w-full max-w-xs">
-                                            <p className="text-[10px] font-bold text-white/80 uppercase tracking-widest mb-3">Redes LOS CASTORES</p>
+                                            <p className="text-[10px] font-bold text-white/80 uppercase tracking-widest mb-3">Redes HAGAMOSTECH</p>
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                                                 {[
                                                     { label: 'TikTok', icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
-                                                    { label: 'Facebook', icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSCASTORES?locale=es_LA' },
+                                                    { label: 'Facebook', icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH?locale=es_LA' },
                                                     { label: 'Instagram', icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
                                                     { label: 'WhatsApp', icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                                 ].map((item) => (

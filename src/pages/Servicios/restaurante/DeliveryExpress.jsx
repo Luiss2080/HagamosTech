@@ -105,7 +105,7 @@ const DeliveryExpress = () => {
             <CtaServicio
                 frase="Pedí tu delivery ahora y recibí las salteñas más ricas de Santa Cruz en tu puerta."
                 gradiente="from-[#FF4D00] to-[#CC3D00]"
-                whatsappTexto="Hola Los Castores! Quiero pedir delivery express"
+                whatsappTexto="Hola HagamosTech! Quiero pedir delivery express"
             />
         </div>
     );

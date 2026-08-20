@@ -5,7 +5,7 @@ import Breadcrumb from '../../components/func/MigasPan';
 const TERMS_SECTIONS = [
     {
         title: '1. Alcance y aceptacion',
-        text: 'Al comprar en Los Castores, el cliente acepta estas condiciones sobre productos, pagos, garantias, cambios y uso de la plataforma web.',
+        text: 'Al comprar en HagamosTech, el cliente acepta estas condiciones sobre productos, pagos, garantias, cambios y uso de la plataforma web.',
     },
     {
         title: '2. Productos y disponibilidad',
@@ -17,7 +17,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '4. Pagos y facturacion',
-        text: 'Se aceptan los medios de pago habilitados por Los Castores. La emision de factura se realiza con los datos proporcionados por el cliente.',
+        text: 'Se aceptan los medios de pago habilitados por HagamosTech. La emision de factura se realiza con los datos proporcionados por el cliente.',
     },
     {
         title: '5. Entrega y envios',
@@ -33,7 +33,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '8. Modificaciones',
-        text: 'Los Castores se reserva el derecho de modificar estas condiciones en cualquier momento para adaptar cambios legales o comerciales.',
+        text: 'HagamosTech se reserva el derecho de modificar estas condiciones en cualquier momento para adaptar cambios legales o comerciales.',
     }
 ];
 
@@ -64,7 +64,7 @@ const Condiciones = () => {
                             <div>
                                 <Breadcrumb
                                     paths={[{ label: 'Condiciones' }]}
-                                    badgeText="Condiciones Oficiales — LOS CASTORES"
+                                    badgeText="Condiciones Oficiales — HAGAMOSTECH"
                                     icon="fa-file-contract"
                                     align="start"
                                 />
@@ -74,7 +74,7 @@ const Condiciones = () => {
                                 </h1>
 
                                 <p className="mt-4 max-w-xl text-sm leading-6 text-blue-50 sm:text-base">
-                                    Consulta las reglas de compra, entrega, garantia y uso de Los Castores en una pagina clara, compacta y pensada para clientes.
+                                    Consulta las reglas de compra, entrega, garantia y uso de HagamosTech en una pagina clara, compacta y pensada para clientes.
                                 </p>
                             </div>
 
@@ -103,7 +103,7 @@ const Condiciones = () => {
                             <div>
                                 <span className="inline-flex items-center gap-2 rounded-full bg-[#fef2f2] px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#a41e22] ring-1 ring-[#fca5a5]">
                                     <i className="fas fa-file-contract"></i>
-Los Castores
+HagamosTech
                                 </span>
                                 <h2 className="mt-3 text-2xl font-black text-[#0d1b3e] sm:text-3xl">Condiciones de uso</h2>
                             </div>
@@ -133,7 +133,7 @@ Los Castores
                                     <i className="fas fa-circle-info"></i>
                                 </span>
                                 <p>
-                                    Al continuar navegando y comprando en Los Castores, aceptas estas condiciones comerciales y legales. Si necesitas revisar el detalle visual completo, usa el modal de Términos y Condiciones desde cualquier parte del sitio.
+                                    Al continuar navegando y comprando en HagamosTech, aceptas estas condiciones comerciales y legales. Si necesitas revisar el detalle visual completo, usa el modal de Términos y Condiciones desde cualquier parte del sitio.
                                 </p>
                             </div>
                         </div>

@@ -32,7 +32,7 @@ const VentajasPromo = () => {
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Aprovechá cada beneficio pensado para que disfrutes más y pagues menos en cada visita a Los Castores.
+                            Aprovechá cada beneficio pensado para que disfrutes más y pagues menos en cada visita a HagamosTech.
                         </p>
                     </div>
 

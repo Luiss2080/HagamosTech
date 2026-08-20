@@ -1,5 +1,5 @@
 <?php
-// Los Castores API - Configuración de Base de Datos
+// HagamosTech API - Configuración de Base de Datos
 // Detecta automáticamente el entorno: local vs producción
 
 header('Access-Control-Allow-Origin: *');
@@ -26,7 +26,7 @@ if ($isLocal) {
     $host = '127.0.0.1';
     $user = 'root';
     $pass = '';
-    $db   = 'LosCastoresSCZ';
+    $db   = 'Loshagamostech';
     $port = 3306;
 } else {
     // PRODUCCIÓN (Servidor)
@@ -34,7 +34,7 @@ if ($isLocal) {
     $host = 'localhost'; // O el host que te proporcione tu proveedor
     $user = 'loscatores_user'; // Cambiar por usuario real del servidor
     $pass = 'password_seguro'; // Cambiar por password real
-    $db   = 'LosCastoresSCZ';
+    $db   = 'Loshagamostech';
     $port = 3306;
 }
 

@@ -45,7 +45,7 @@ const Bienvenida = ({ onComenzar }) => (
            <motion.div variants={lcSteam} transition={{ delay: 1.5, duration: 2.2, repeat: Infinity }} className="w-1 h-20 bg-gradient-to-t from-white/40 to-transparent blur-md"></motion.div>
         </div>
         <motion.div animate={{ y: [-8, 8, -8] }} transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }} className="relative z-10 w-40 h-40 sm:w-48 sm:h-48 rounded-[40px] bg-white shadow-[0_20px_60px_-15px_rgba(255,77,0,0.4)] border-4 border-white flex items-center justify-center p-6">
-          <img src="/img/02_Logos/LogoModal.png" alt="Los Castores" className="w-full h-full object-contain filter drop-shadow-xl" />
+          <img src="/img/02_Logos/LogoModal.png" alt="HagamosTech" className="w-full h-full object-contain filter drop-shadow-xl" />
         </motion.div>
       </div>
 

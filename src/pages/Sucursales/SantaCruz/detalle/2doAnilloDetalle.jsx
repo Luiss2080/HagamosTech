@@ -44,7 +44,7 @@ const Detail2doAnillo = () => {
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-50 rounded-full blur-[100px] pointer-events-none"></div>
 
             <HeroDetalleSeccion
-                titulo="Los Castores"
+                titulo="HagamosTech"
                 resaltado="2do Anillo."
                 descripcion="La sucursal más transitada de la ciudad. Sobre la vía más rápida de Santa Cruz, ideal para una parada express con el mejor sabor."
             />

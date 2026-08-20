@@ -1,5 +1,5 @@
 async function seed(prisma) {
-    console.log('Sembrando flujo de compra Los Castores...');
+    console.log('Sembrando flujo de compra HagamosTech...');
 
     const pasos = [
         {

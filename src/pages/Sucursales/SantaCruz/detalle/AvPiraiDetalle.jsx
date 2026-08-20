@@ -142,7 +142,7 @@ export const DetailAvPirai = () => {
   const granos = [
     { name: 'Caranavi Clásico', type: 'Lavado', notes: 'Chocolate, caramelo, nuez', roast: 'Medio', icon: 'fa-mountain' },
     { name: 'Samaipata Reserva', type: 'Natural', notes: 'Frutas rojas, miel, floral', roast: 'Claro', icon: 'fa-leaf' },
-    { name: 'Blend Castores', type: 'Honey', notes: 'Cacao, panela, fruta madura', roast: 'Medio-Oscuro', icon: 'fa-fire' },
+    { name: 'Blend HagamosTech', type: 'Honey', notes: 'Cacao, panela, fruta madura', roast: 'Medio-Oscuro', icon: 'fa-fire' },
   ];
 
   return (
@@ -153,7 +153,7 @@ export const DetailAvPirai = () => {
       <div className="relative z-10">
         <CircuitBackground />
         <PageHero
-          title="Salteñas Los Castores"
+          title="Salteñas HagamosTech"
           highlight="Av. Piraí."
           description="Showcase de secciones: todas las ideas creativas reunidas en una sola página para que elijas cuáles te gustan."
         />
@@ -484,7 +484,7 @@ export const DetailAvPirai = () => {
                   <i className="fas fa-xmark text-red-400 text-lg"></i>
                 </div>
                 <div className="text-center bg-green-50 rounded-xl p-3 border border-green-100">
-                  <p className="text-[9px] font-black uppercase tracking-wider text-green-600 mb-1">Los Castores Av. Piraí</p>
+                  <p className="text-[9px] font-black uppercase tracking-wider text-green-600 mb-1">HagamosTech Av. Piraí</p>
                   <i className="fas fa-check text-green-500 text-lg"></i>
                 </div>
               </div>
@@ -553,7 +553,7 @@ export const DetailAvPirai = () => {
             <div className="relative z-10">
               <i className="fas fa-quote-right text-5xl text-white/20 mb-4"></i>
               <p className="text-xl sm:text-2xl font-black font-heading text-white mb-4 italic">"No hay mejor manera de empezar el día que con una salteña caliente y una sonrisa."</p>
-              <p className="text-sm font-bold text-white/70">— Don Mario, Fundador de Los Castores</p>
+              <p className="text-sm font-bold text-white/70">— Don Mario, Fundador de HagamosTech</p>
             </div>
           </div>
         </div>
@@ -667,7 +667,7 @@ export const DetailAvPirai = () => {
               <i className="fas fa-envelope-open-text text-5xl text-white/20 mb-4"></i>
               <h2 className="text-2xl sm:text-3xl font-black font-heading text-white mb-3">¿Querés enterarte de todo?</h2>
               <p className="text-white/80 font-semibold mb-6 max-w-md mx-auto">Nuevos sabores, eventos, promos especiales y mucho más directo a tu WhatsApp.</p>
-              <a href="https://wa.me/59161320004?text=Hola%20Los%20Castores!%20Quiero%20recibir%20novedades" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#8B4513] rounded-full font-black text-sm uppercase tracking-wider shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
+              <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20recibir%20novedades" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-8 py-4 bg-white text-[#8B4513] rounded-full font-black text-sm uppercase tracking-wider shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all duration-300">
                 <i className="fab fa-whatsapp text-xl"></i>
                 Suscribirme por WhatsApp
                 <i className="fas fa-arrow-right"></i>
@@ -683,7 +683,7 @@ export const DetailAvPirai = () => {
           <div className="bg-gradient-to-r from-[#8B4513] to-[#6B3410] rounded-[2.5rem] p-10 shadow-2xl shadow-[#8B4513]/25 relative overflow-hidden">
             <CircleParticles count={14} colorScheme="dark" />
             <div className="relative z-10">
-              <h3 className="text-3xl font-black font-heading text-white mb-3">Madrugá con Los Castores</h3>
+              <h3 className="text-3xl font-black font-heading text-white mb-3">Madrugá con HagamosTech</h3>
               <p className="text-white/90 font-semibold mb-6">Av. Piraí 344 · Café de cortesía hasta las 9 a.m.</p>
               <div className="flex flex-wrap justify-center gap-3">
                 <a href="tel:33552038" className="px-6 py-3 bg-white text-[#8B4513] rounded-full font-black text-xs uppercase tracking-wider shadow-lg hover:-translate-y-0.5 transition-all flex items-center gap-2"><i className="fas fa-phone"></i>3 3552038</a>

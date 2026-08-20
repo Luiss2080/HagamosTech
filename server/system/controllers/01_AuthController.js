@@ -8,7 +8,7 @@ const {
 const { enviarCorreoVerificacion, enviarCorreoRecuperacion } = require('../utils/01_mailer');
 
 // Roles que exigen doble factor (2FA / Google Authenticator) al iniciar sesión
-const ROLES_2FA = [1, 12, 13]; // Administrador, Secretaria, Personal LosCastores
+const ROLES_2FA = [1, 12, 13]; // Administrador, Secretaria, Personal LosHagamosTech
 
 const leer2FA = async (usuarioId) => {
     const u = await prisma.usuario.findUnique({

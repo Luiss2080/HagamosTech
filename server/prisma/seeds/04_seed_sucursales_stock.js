@@ -1,12 +1,12 @@
 module.exports = async (prisma) => {
-    console.log('Sembrando Sucursales y Stock Los Castores...');
+    console.log('Sembrando Sucursales y Stock HagamosTech...');
 
     const sucursal = await prisma.sucursal.upsert({
         where: { id: 1 },
         update: {},
         create: {
             id: 1,
-            nombre: 'Los Castores - Casa Matriz',
+            nombre: 'HagamosTech - Casa Matriz',
             ciudad: 'Santa Cruz de la Sierra',
             direccion: 'Av. El Trompillo, entre 2do y 3er anillo',
             telefono: '70000000',
@@ -35,5 +35,5 @@ module.exports = async (prisma) => {
         });
     }
 
-    console.log(`Stock inicial asignado para ${productos.length} productos en Los Castores Central.`);
+    console.log(`Stock inicial asignado para ${productos.length} productos en HagamosTech Central.`);
 };

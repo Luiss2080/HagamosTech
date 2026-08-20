@@ -5,7 +5,7 @@ const Error403 = () => (
   <ErrorBase
     code={403}
     title="Acceso denegado"
-    description="No tienes los permisos necesarios para acceder a esta sección de Los Castores. Contacta al administrador si crees que es un error."
+    description="No tienes los permisos necesarios para acceder a esta sección de HagamosTech. Contacta al administrador si crees que es un error."
     icon="fa-shield-halved"
     logs={[
       { type: 'info', text: 'Validando permisos del usuario en la plataforma...' },

@@ -9,7 +9,7 @@ const HeroTerminos = () => {
             <PageHero
                 title="Términos de"
                 highlight="Servicio."
-                description="Las condiciones que rigen el uso de nuestro sitio web, la realización de pedidos y todos los servicios que ofrecemos en Los Castores."
+                description="Las condiciones que rigen el uso de nuestro sitio web, la realización de pedidos y todos los servicios que ofrecemos en HagamosTech."
             />
         </div>
     );

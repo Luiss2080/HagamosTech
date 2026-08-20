@@ -83,7 +83,7 @@ function verificarCodigo(secret, codigo, window = 1) {
 
 // ── URI otpauth (para el QR de Google Authenticator) ──────────────────
 
-function otpauthUrl(secret, cuenta, emisor = 'LOS CASTORES') {
+function otpauthUrl(secret, cuenta, emisor = 'HAGAMOSTECH') {
     const params = new URLSearchParams({
         secret,
         issuer: emisor,

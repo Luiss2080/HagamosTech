@@ -1,6 +1,6 @@
 import os
 
-filepath = r'c:\laragon\www\LosCastores\server\system\utils\01_mailer.js'
+filepath = r'c:\laragon\www\LosHagamosTech\server\system\utils\01_mailer.js'
 with open(filepath, 'r', encoding='utf-8') as f:
     content = f.read()
 
@@ -32,7 +32,7 @@ new_html = """function plantillaBase({ titulo, subtitulo, contenido, anio = new 
     <tr>
       <!-- Logo a la izquierda -->
       <td align="left" style="width:130px;">
-        <img src="cid:logoheader@loscastores.com" alt="${BRAND}" width="120" style="display:block; max-width:100%; height:auto;">
+        <img src="cid:logoheader@hagamostech.com" alt="${BRAND}" width="120" style="display:block; max-width:100%; height:auto;">
       </td>
       <!-- Menú de navegación a la derecha (Estilo Web) -->
       <td align="right" valign="middle">
@@ -77,7 +77,7 @@ const obtenerAttachments = () => [
     {
         filename: 'LogoHeader.png',
         content: fs.readFileSync(path.join(__dirname, '../../../public/img/02_Logos/LogoHeader.png')),
-        cid: 'logoheader@loscastores.com',
+        cid: 'logoheader@hagamostech.com',
         contentType: 'image/png',
         contentDisposition: 'inline'
     }

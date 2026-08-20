@@ -58,7 +58,7 @@ const ModalSucursal = ({ sucursal, onClose }) => {
                                         <div className="w-32 h-32 lg:w-40 lg:h-40 rounded-full border-[4px] border-white/20 p-2.5 bg-white shadow-xl flex items-center justify-center relative">
                                             <div className="absolute inset-0 rounded-full border border-orange-500/10 scale-105"></div>
                                             <div className="w-full h-full rounded-full bg-white flex items-center justify-center p-2">
-                                                <img src="/img/02_Logos/LogoModal.png" alt="Los Castores" className="max-w-full max-h-full object-contain drop-shadow-md" />
+                                                <img src="/img/02_Logos/LogoModal.png" alt="HagamosTech" className="max-w-full max-h-full object-contain drop-shadow-md" />
                                             </div>
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@ const ModalSucursal = ({ sucursal, onClose }) => {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm mt-2">
-                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Pedidos LOS CASTORES
+                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Pedidos HAGAMOSTECH
                                     </div>
 
                                     {/* Services Grid (4 boxes like Login) */}
@@ -112,9 +112,9 @@ const ModalSucursal = ({ sucursal, onClose }) => {
                                     <div className="w-full mt-auto pt-4 pb-2">
                                         <p className="text-[9px] font-black text-white/70 uppercase tracking-[0.2em] mb-3">CONECTA CON NOSOTROS</p>
                                         <div className="flex justify-center gap-3">
-                                            <a href="https://www.facebook.com/LosCastoresSC" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-facebook-f text-sm"></i></a>
-                                            <a href="https://www.instagram.com/castoresscz/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-instagram text-sm"></i></a>
-                                            <a href="https://www.tiktok.com/@castores.scz" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-tiktok text-sm"></i></a>
+                                            <a href="https://www.facebook.com/LosHagamosTechSC" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-facebook-f text-sm"></i></a>
+                                            <a href="https://www.instagram.com/hagamostech/" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-instagram text-sm"></i></a>
+                                            <a href="https://www.tiktok.com/@hagamostech" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-tiktok text-sm"></i></a>
                                             <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="w-9 h-9 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-[#FF4D00] transition-all shadow-lg hover:-translate-y-1"><i className="fab fa-whatsapp text-sm"></i></a>
                                         </div>
                                     </div>
@@ -204,7 +204,7 @@ const ModalSucursal = ({ sucursal, onClose }) => {
                                             <h3 className="text-[15px] font-black uppercase tracking-widest text-[#111827]">Servicios Disponibles</h3>
                                         </div>
                                         <p className="text-[13px] text-gray-500 font-medium leading-relaxed">
-                                            En esta sucursal te ofrecemos: <strong className="text-gray-700">{services.join(', ')}</strong>. Todo preparado con la mejor calidad de Los Castores.
+                                            En esta sucursal te ofrecemos: <strong className="text-gray-700">{services.join(', ')}</strong>. Todo preparado con la mejor calidad de HagamosTech.
                                         </p>
                                     </div>
 

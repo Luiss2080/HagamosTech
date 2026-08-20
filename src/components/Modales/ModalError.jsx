@@ -51,7 +51,7 @@ const ModalError = ({
                                 <div className="relative z-10 flex flex-col items-center text-center">
                                     <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md relative">
                                         <div className="h-36 w-36 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
-                                            <img src="/img/02_Logos/LogoModal.png" alt="LOS CASTORES" className="h-full w-full object-contain" />
+                                            <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" className="h-full w-full object-contain" />
                                         </div>
                                         <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-red-500 border-2 border-white flex items-center justify-center shadow-lg">
                                             <i className="fas fa-xmark text-white text-sm"></i>
@@ -95,12 +95,12 @@ const ModalError = ({
                                 </div>
                                 
                                 <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
-                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
                                             <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -185,7 +185,7 @@ const ModalError = ({
                                     <div className="mt-3 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#FF4D00] flex-shrink-0"></i>
-                                            <span>Si el problema persiste, contacta al soporte LOS CASTORES en WhatsApp al +591 61320004.</span>
+                                            <span>Si el problema persiste, contacta al soporte HAGAMOSTECH en WhatsApp al +591 61320004.</span>
                                         </div>
                                     </div>
                                 </div>

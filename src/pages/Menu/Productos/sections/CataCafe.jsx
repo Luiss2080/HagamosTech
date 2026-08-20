@@ -4,7 +4,7 @@ import SeccionProducto from '../shared/SeccionProducto';
 const GRANOS = [
     { nombre: 'Caranavi', tipo: 'Lavado', notas: 'Chocolate, caramelo, nuez', tueste: 'Medio', color: 'from-[#8B4513] to-[#5D3010]', img: '/img/05_Productos/Cafe/Americano.png', icon: 'fa-mountain' },
     { nombre: 'Samaipata', tipo: 'Natural', notas: 'Frutas rojas, miel, floral', tueste: 'Claro', color: 'from-[#FF4D00] to-[#CC3D00]', img: '/img/05_Productos/Cafe/Capuccino.png', icon: 'fa-leaf' },
-    { nombre: 'Blend Castores', tipo: 'Honey', notas: 'Cacao, panela, fruta madura', tueste: 'Medio-Oscuro', color: 'from-[#5D3A1F] to-[#452A16]', img: '/img/05_Productos/Cafe/Mokaccino.png', icon: 'fa-fire' },
+    { nombre: 'Blend HagamosTech', tipo: 'Honey', notas: 'Cacao, panela, fruta madura', tueste: 'Medio-Oscuro', color: 'from-[#5D3A1F] to-[#452A16]', img: '/img/05_Productos/Cafe/Mokaccino.png', icon: 'fa-fire' },
 ];
 
 const CataCafe = () => {

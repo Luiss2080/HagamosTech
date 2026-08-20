@@ -5,7 +5,7 @@ const Error419 = () => (
   <ErrorBase
     code={419}
     title="Sesión expirada"
-    description="Tu sesión en Los Castores ha caducado por inactividad. Vuelve a iniciar sesión para continuar disfrutando de nuestras salteñas."
+    description="Tu sesión en HagamosTech ha caducado por inactividad. Vuelve a iniciar sesión para continuar disfrutando de nuestras salteñas."
     icon="fa-clock-rotate-left"
     logs={[
       { type: 'info', text: 'Verificando validez del token de sesión activa...' },

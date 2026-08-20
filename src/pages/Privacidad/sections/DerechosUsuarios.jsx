@@ -103,7 +103,7 @@ const DerechosUsuarios = () => {
                                 </div>
 
                                 <div className="mt-auto">
-                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20Castores!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#FF4D00] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
+                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#FF4D00] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
                                         <i className="fab fa-whatsapp"></i> Ejercer este derecho
                                     </a>
                                 </div>

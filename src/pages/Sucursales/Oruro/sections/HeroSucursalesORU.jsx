@@ -4,8 +4,8 @@ import PageHero from '../../../../components/func/MigasPan';
 import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
 
 const SUCURSALES = [
-  { id: 'oru-1', slug: 'franquicia-1', name: 'Los Castores Franquicia 1', badge: 'ORU 01', address: 'Murguía 982', phone: '68929329', schedule: 'Hasta las 3:00 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'WiFi', 'Jugos', 'Familiar'], mapLink: 'https://maps.app.goo.gl/qEhwMp7xotXRgwum6', img: '/img/10_sucursales/Oruro/01_Sucursal.png', desc: 'Nuestra primera sucursal en Oruro. Llevamos el auténtico sabor tradicional a la tierra del folklore con la misma receta de siempre.' },
-  { id: 'oru-2', slug: 'centro-oruro', name: 'Los Castores Centro Oruro', badge: 'ORU 02', address: 'Potosí 318', phone: '72302533', schedule: 'Hasta la 1:30 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'Cafetería', 'Bebidas', 'Rápido'], mapLink: 'https://maps.app.goo.gl/Lk6ZDu2e43psPZa8A', img: '/img/10_sucursales/Oruro/02_Sucursal.png', desc: 'En pleno centro de la ciudad. Cerca de todo, perfecta para una pausa con las salteñas más ricas rumbo al mercado o la plaza.' }
+  { id: 'oru-1', slug: 'franquicia-1', name: 'HagamosTech Franquicia 1', badge: 'ORU 01', address: 'Murguía 982', phone: '68929329', schedule: 'Hasta las 3:00 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'WiFi', 'Jugos', 'Familiar'], mapLink: 'https://maps.app.goo.gl/qEhwMp7xotXRgwum6', img: '/img/10_sucursales/Oruro/01_Sucursal.png', desc: 'Nuestra primera sucursal en Oruro. Llevamos el auténtico sabor tradicional a la tierra del folklore con la misma receta de siempre.' },
+  { id: 'oru-2', slug: 'centro-oruro', name: 'HagamosTech Centro Oruro', badge: 'ORU 02', address: 'Potosí 318', phone: '72302533', schedule: 'Hasta la 1:30 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'Cafetería', 'Bebidas', 'Rápido'], mapLink: 'https://maps.app.goo.gl/Lk6ZDu2e43psPZa8A', img: '/img/10_sucursales/Oruro/02_Sucursal.png', desc: 'En pleno centro de la ciudad. Cerca de todo, perfecta para una pausa con las salteñas más ricas rumbo al mercado o la plaza.' }
 ];
 
 const HeroSucursalesORU = () => {
@@ -15,7 +15,7 @@ const HeroSucursalesORU = () => {
             <PageHero
                 title="Sucursales en"
                 highlight="Oruro."
-                description="Dos puntos de atención en la capital del folklore para que disfrutes del verdadero sabor de Los Castores."
+                description="Dos puntos de atención en la capital del folklore para que disfrutes del verdadero sabor de HagamosTech."
             >
                 <div className="flex flex-wrap justify-center gap-3 mt-1">
                     {SUCURSALES.map((s) => (

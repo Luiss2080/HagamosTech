@@ -31,7 +31,7 @@ const SaltenasCongeladas = () => {
             <HeroServicio
                 titulo="Salteñas"
                 resaltado="Congeladas."
-                descripcion="Llevate el auténtico sabor de Los Castores a casa. Packs congelados para hornear en minutos, en cualquier ciudad."
+                descripcion="Llevate el auténtico sabor de HagamosTech a casa. Packs congelados para hornear en minutos, en cualquier ciudad."
             />
 
             {/* Packs */}
@@ -164,9 +164,9 @@ const SaltenasCongeladas = () => {
             />
 
             <CtaServicio
-                frase="Pedí tus packs congelados y llevá el sabor de Los Castores donde vayas. El horno de tu casa es el secreto."
+                frase="Pedí tus packs congelados y llevá el sabor de HagamosTech donde vayas. El horno de tu casa es el secreto."
                 gradiente="from-[#8B4513] via-[#5D3A1F] to-[#452A16]"
-                whatsappTexto="Hola Los Castores! Quiero pedir salteñas congeladas"
+                whatsappTexto="Hola HagamosTech! Quiero pedir salteñas congeladas"
                 badges={[
                     { icon: 'fa-snowflake', label: 'Cadena de frío', color: 'bg-[#FF4D00]' },
                     { icon: 'fa-clock', label: 'Listas en 25 min', color: 'bg-[#5D3A1F]' },

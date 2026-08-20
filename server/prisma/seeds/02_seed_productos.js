@@ -1,5 +1,5 @@
 ﻿async function seed(prisma) {
-    console.log('Sembrando productos Los Castores...');
+    console.log('Sembrando productos HagamosTech...');
     
     const categorias = await prisma.categoria.findMany();
     const catMap = {};

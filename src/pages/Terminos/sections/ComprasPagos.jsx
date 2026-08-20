@@ -44,7 +44,7 @@ const ComprasPagos = () => {
                                     <h3 className="text-lg font-black mb-2 leading-tight">{item.titulo}</h3>
                                     <p className="text-xs font-medium opacity-90 leading-relaxed">{item.desc}</p>
                                     <div className="mt-4 pt-3 border-t border-white/25 inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest opacity-80">
-                                        <i className="fas fa-hand-holding-dollar text-[9px]"></i> Los Castores
+                                        <i className="fas fa-hand-holding-dollar text-[9px]"></i> HagamosTech
                                     </div>
                                 </div>
                             </div>

@@ -15,17 +15,17 @@ const BANCO_CONOCIMIENTO = [
   {
     id: "saludos",
     keywords: ["hola", "buenos dias", "buenas tardes", "buenas noches", "saludos", "estimado", "niko", "comunicacion", "contacto"],
-    answer: "¡Hola! Bienvenido a Los Castores. Soy Niko, tu asistente virtual. Estoy aquí para ayudarte con información sobre nuestro menú de salteñas, horarios, sucursales y envíos. ¿En qué te puedo ayudar hoy?"
+    answer: "¡Hola! Bienvenido a HagamosTech. Soy Niko, tu asistente virtual. Estoy aquí para ayudarte con información sobre nuestro menú de salteñas, horarios, sucursales y envíos. ¿En qué te puedo ayudar hoy?"
   },
   {
     id: "despedida",
     keywords: ["adios", "chao", "nos vemos", "hasta luego", "bye", "cuidate", "feliz dia", "terminar", "cerrar", "finalizar"],
-    answer: "¡Gracias por comunicarte con Los Castores! Esperamos verte pronto disfrutando de las mejores salteñas. ¡Que tengas un excelente día!"
+    answer: "¡Gracias por comunicarte con HagamosTech! Esperamos verte pronto disfrutando de las mejores salteñas. ¡Que tengas un excelente día!"
   },
   {
     id: "agradecimiento",
     keywords: ["gracias", "excelente", "amable", "ok", "bien", "perfecto", "mil gracias", "genial", "entendido", "comprendido"],
-    answer: "¡Es un placer atenderte! En Los Castores trabajamos para ofrecerte siempre lo mejor. Si tienes otra consulta, no dudes en preguntar."
+    answer: "¡Es un placer atenderte! En HagamosTech trabajamos para ofrecerte siempre lo mejor. Si tienes otra consulta, no dudes en preguntar."
   },
   {
     id: "menu_saltenas",
@@ -55,12 +55,12 @@ const BANCO_CONOCIMIENTO = [
   {
     id: "contacto_humano",
     keywords: ["hablar", "whatsapp", "vendedor", "telefono", "celular", "llamar", "atencion directa", "soporte humano", "asesor directo", "persona", "humano"],
-    answer: "Si deseas realizar un pedido grande o necesitas atención personalizada, puedes comunicarte directamente con nuestro equipo de atención al cliente:\n\n💬 **WhatsApp / Pedidos:** [+591 61320004](https://api.whatsapp.com/send?phone=59161320004)\n📧 **Email:** contacto@loscastores.bo"
+    answer: "Si deseas realizar un pedido grande o necesitas atención personalizada, puedes comunicarte directamente con nuestro equipo de atención al cliente:\n\n💬 **WhatsApp / Pedidos:** [+591 61320004](https://api.whatsapp.com/send?phone=59161320004)\n📧 **Email:** contacto@hagamostech.bo"
   },
   {
     id: "eventos_catering",
     keywords: ["evento", "catering", "fiesta", "cumpleaños", "reunion", "oficina", "cantidad", "por mayor", "pedido grande", "reserva"],
-    answer: "¡Por supuesto! En Los Castores ofrecemos servicio de **Eventos y Catering**.\n\nAtendemos pedidos por mayor para cumpleaños, reuniones de oficina, desayunos de trabajo y celebraciones. Te recomendamos hacer tu reserva con al menos 24 horas de anticipación para asegurar disponibilidad y entrega puntual."
+    answer: "¡Por supuesto! En HagamosTech ofrecemos servicio de **Eventos y Catering**.\n\nAtendemos pedidos por mayor para cumpleaños, reuniones de oficina, desayunos de trabajo y celebraciones. Te recomendamos hacer tu reserva con al menos 24 horas de anticipación para asegurar disponibilidad y entrega puntual."
   }
 ];
 

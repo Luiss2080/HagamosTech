@@ -111,7 +111,7 @@ const DashboardHome = ({
   const distributionData = [
     { name: 'Clientes Frec.', value: guestCount, color: '#3b82f6' }, // Blue
     { name: 'Personal', value: teacherCount, color: '#a855f7' },  // Purple
-    { name: 'Admins', value: adminCount, color: '#E95A0C' },      // Red Los Castores
+    { name: 'Admins', value: adminCount, color: '#E95A0C' },      // Red HagamosTech
     { name: 'Delivery', value: sellerCount, color: '#f59e0b' }  // Amber
   ].filter(d => d.value > 0);
 

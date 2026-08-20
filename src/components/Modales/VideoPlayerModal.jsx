@@ -49,7 +49,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                     <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
                                         <img
                                             src="/img/02_Icons/04_avatar-whatsapp.png"
-                                            alt="LOS CASTORES"
+                                            alt="HAGAMOSTECH"
                                             loading="lazy"
                                             decoding="async"
                                             className="h-28 w-28 rounded-full object-contain bg-white"
@@ -84,7 +84,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                         <div className="grid grid-cols-2 gap-2">
                                             {[
                                                 { label: 'TikTok', icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
-                                                { label: 'Facebook', icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSCASTORES?locale=es_LA' },
+                                                { label: 'Facebook', icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH?locale=es_LA' },
                                                 { label: 'Instagram', icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
                                                 { label: 'WhatsApp', icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                             ].map((item) => (
@@ -129,7 +129,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
 
                                 {/* Video Title */}
                                 <p className="relative z-10 mt-4 text-xs font-black uppercase tracking-widest text-gray-500">
-                                    {video.title} <span className="text-[#a41e22]">- LOS CASTORES</span>
+                                    {video.title} <span className="text-[#a41e22]">- HAGAMOSTECH</span>
                                 </p>
                             </div>
 

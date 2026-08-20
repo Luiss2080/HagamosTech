@@ -54,4 +54,4 @@ html.dark .glass-card { ... }  /* Estilos de cards en modo oscuro */
 - Probar siempre en modo oscuro después de agregar nuevas secciones
 
 ---
-*Los Castores - 2026*
+*HagamosTech - 2026*

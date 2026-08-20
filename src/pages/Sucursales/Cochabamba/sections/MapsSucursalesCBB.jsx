@@ -3,12 +3,12 @@ import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
 import CircleParticles from '../../../../components/fondos/ParticulasCirculares';
 
 const SUCURSALES_MAPS = [
-  { id: 'cbb-1', name: 'Recoleta', fullName: 'Los Castores Recoleta', address: 'C. A. Padilla 541', phone: '4 4798010', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · WiFi · Terraza', coords: '-17.3895,-66.1568', mapLink: 'https://maps.app.goo.gl/wLX45LiJwESxNX6P8' },
-  { id: 'cbb-2', name: 'Prado', fullName: 'Los Castores Prado', address: 'Av. Ballivián #790', phone: '4 4259585', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.3935,-66.1570', mapLink: 'https://maps.app.goo.gl/cF6ADUQTcVJTfa8b9' },
-  { id: 'cbb-3', name: 'Centro', fullName: 'Los Castores Centro', address: 'JV73+Q2Q', phone: '4 4222789', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · Cafetería', coords: '-17.3940,-66.1560', mapLink: 'https://maps.app.goo.gl/wD2ZH6PJvbbMJAe87' },
-  { id: 'cbb-4', name: 'Simón López', fullName: 'Los Castores Simón López', address: 'Av. Simón López', phone: '4 4500292', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.3740,-66.1600', mapLink: 'https://maps.app.goo.gl/2L4KujA1rQGMvgGQA' },
-  { id: 'cbb-5', name: '15 de Agosto', fullName: 'Los Castores 15 de Agosto', address: '15 de Agosto', phone: '4 4423596', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery', coords: '-17.3800,-66.1500', mapLink: 'https://maps.app.goo.gl/oCanVtHB3bgvXcR76' },
-  { id: 'cbb-6', name: 'Beijing', fullName: 'Los Castores Beijing', address: 'Av. Beijing', phone: '69257952', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Cafetería', coords: '-17.3700,-66.1700', mapLink: 'https://maps.app.goo.gl/adtLuPNNm7nEuxck7' }
+  { id: 'cbb-1', name: 'Recoleta', fullName: 'HagamosTech Recoleta', address: 'C. A. Padilla 541', phone: '4 4798010', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · WiFi · Terraza', coords: '-17.3895,-66.1568', mapLink: 'https://maps.app.goo.gl/wLX45LiJwESxNX6P8' },
+  { id: 'cbb-2', name: 'Prado', fullName: 'HagamosTech Prado', address: 'Av. Ballivián #790', phone: '4 4259585', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.3935,-66.1570', mapLink: 'https://maps.app.goo.gl/cF6ADUQTcVJTfa8b9' },
+  { id: 'cbb-3', name: 'Centro', fullName: 'HagamosTech Centro', address: 'JV73+Q2Q', phone: '4 4222789', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · Cafetería', coords: '-17.3940,-66.1560', mapLink: 'https://maps.app.goo.gl/wD2ZH6PJvbbMJAe87' },
+  { id: 'cbb-4', name: 'Simón López', fullName: 'HagamosTech Simón López', address: 'Av. Simón López', phone: '4 4500292', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery · WiFi', coords: '-17.3740,-66.1600', mapLink: 'https://maps.app.goo.gl/2L4KujA1rQGMvgGQA' },
+  { id: 'cbb-5', name: '15 de Agosto', fullName: 'HagamosTech 15 de Agosto', address: '15 de Agosto', phone: '4 4423596', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Delivery', coords: '-17.3800,-66.1500', mapLink: 'https://maps.app.goo.gl/oCanVtHB3bgvXcR76' },
+  { id: 'cbb-6', name: 'Beijing', fullName: 'HagamosTech Beijing', address: 'Av. Beijing', phone: '69257952', schedule: 'Lun a Sáb · Hasta las 3:00 p.m.', services: 'Consumo · Llevar · Cafetería', coords: '-17.3700,-66.1700', mapLink: 'https://maps.app.goo.gl/adtLuPNNm7nEuxck7' }
 ];
 
 const MapsSucursalesCBB = () => {

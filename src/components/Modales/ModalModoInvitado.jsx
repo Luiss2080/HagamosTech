@@ -104,7 +104,7 @@ const ModalModoInvitado = ({ isOpen, onClose }) => {
                                     <h2 className="text-3xl font-black text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                         Regalo de Bienvenida <br />
                                         <span className="text-white relative inline-block">
-                                            LOS CASTORES
+                                            HAGAMOSTECH
                                             <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                                         </span>
                                     </h2>
@@ -113,7 +113,7 @@ const ModalModoInvitado = ({ isOpen, onClose }) => {
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Soporte LOS CASTORES 24/7
+                                        <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Soporte HAGAMOSTECH 24/7
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
@@ -136,12 +136,12 @@ const ModalModoInvitado = ({ isOpen, onClose }) => {
                                     </div>
                                     
                                     <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                        <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                        <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                         <div className="flex justify-center gap-3">
                                             {[
-                                                { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                                { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                                { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                                { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                                { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                                { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                                 { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                             ].map((item, i) => (
                                                 <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#c5a059] transition-all duration-300 shadow-lg hover:-translate-y-1">
@@ -173,7 +173,7 @@ const ModalModoInvitado = ({ isOpen, onClose }) => {
                                                     </span>
                                                     <h3 className="text-2xl font-black text-[#111827] tracking-tight">Cupón de Descuento</h3>
                                                 </div>
-                                                <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">EXCLUSIVO PARA NUEVOS CASTORES</p>
+                                                <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">EXCLUSIVO PARA NUEVOS HAGAMOSTECH</p>
                                             </div>
 
                                             <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">

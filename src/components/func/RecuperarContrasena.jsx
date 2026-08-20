@@ -61,11 +61,11 @@ const RecuperarContrasena = () => {
             {/* Miga de pan + Título + Descripción */}
             <Breadcrumb
                 paths={[{ label: 'Iniciar Sesión', url: '/' }, { label: 'Recuperar Contraseña' }]}
-                badgeText="Recuperación de Acceso — LOS CASTORES"
+                badgeText="Recuperación de Acceso — HAGAMOSTECH"
                 icon="fa-solid fa-key"
                 title="Restablece tu"
                 highlight="contraseña"
-                description="Ingresa tu nueva contraseña para recuperar el acceso a tu cuenta de LOS CASTORES."
+                description="Ingresa tu nueva contraseña para recuperar el acceso a tu cuenta de HAGAMOSTECH."
             />
 
             {/* Cuerpo estilo modal de inicio de sesión */}
@@ -83,7 +83,7 @@ const RecuperarContrasena = () => {
                             <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
                                 <img
                                     src="/img/02_Icons/04_avatar-whatsapp.png"
-                                    alt="LOS CASTORES"
+                                    alt="HAGAMOSTECH"
                                     loading="lazy"
                                     decoding="async"
                                     className="h-40 w-40 rounded-full object-contain bg-white"
@@ -93,7 +93,7 @@ const RecuperarContrasena = () => {
                             <h2 className="text-3xl font-black text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                 Recupera el acceso a <br />
                                 <span className="text-[#c5a059] relative inline-block">
-                                    tu cuenta LOS CASTORES
+                                    tu cuenta HAGAMOSTECH
                                     <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-amber-500/40" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                                 </span>
                             </h2>
@@ -102,16 +102,16 @@ const RecuperarContrasena = () => {
                             </p>
 
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg">
-                                <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Soporte LOS CASTORES 24/7
+                                <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Soporte HAGAMOSTECH 24/7
                             </div>
 
                             <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                 <div className="flex justify-center gap-3">
                                     {[
-                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosCastoresSC' },
-                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/castoresscz/' },
-                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@castores.scz' },
+                                        { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LosHagamosTechSC' },
+                                        { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                        { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                         { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                     ].map((item, i) => (
                                         <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#c5a059] transition-all duration-300 shadow-lg hover:-translate-y-1">

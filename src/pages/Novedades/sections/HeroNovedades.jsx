@@ -4,10 +4,10 @@ import CircuitBackground from '../../../components/fondos/FondoSaltenas';
 import AnunciosTicker from './AnunciosTicker';
 
 const NOTICIAS = [
-    { id: 1, fecha: '28 Ago', categoria: 'Sucursales', icon: 'fa-store', titulo: 'Abrimos nueva sucursal en Oruro', resumen: 'La capital del folklore ya tiene su Los Castores con dos puntos de atención para acercarte el sabor de siempre.', img: '/img/10_sucursales/Oruro/01_Sucursal.png', tag: 'NUEVO' },
+    { id: 1, fecha: '28 Ago', categoria: 'Sucursales', icon: 'fa-store', titulo: 'Abrimos nueva sucursal en Oruro', resumen: 'La capital del folklore ya tiene su HagamosTech con dos puntos de atención para acercarte el sabor de siempre.', img: '/img/10_sucursales/Oruro/01_Sucursal.png', tag: 'NUEVO' },
     { id: 2, fecha: '15 Ago', categoria: 'Reconocimiento', icon: 'fa-trophy', titulo: 'Premio "Mejor Salteñería 2026"', resumen: 'Los lectores de la ciudad nos eligieron por quinto año consecutivo como la mejor salteñería de Santa Cruz.', img: '/img/10_sucursales/SantaCruz/01_Sucursal.png', tag: 'PREMIOS' },
     { id: 3, fecha: '02 Ago', categoria: 'Producción', icon: 'fa-fire-burner', titulo: 'Nuevo horno artesanal', resumen: 'Invertimos en un horno de ladrillo que aumenta nuestra capacidad de horneado manteniendo el sabor de siempre.', img: '/img/10_sucursales/SantaCruz/02_Sucursal.png', tag: 'INNOVACIÓN' },
-    { id: 4, fecha: '20 Jul', categoria: 'Equipo', icon: 'fa-people-group', titulo: 'Nuevos integrantes al equipo', resumen: 'Más de 15 personas se sumaron a la familia Los Castores para atenderte mejor en todas las sucursales.', img: '/img/10_sucursales/Cochabamba/01_Sucursal.png', tag: 'EQUIPO' },
+    { id: 4, fecha: '20 Jul', categoria: 'Equipo', icon: 'fa-people-group', titulo: 'Nuevos integrantes al equipo', resumen: 'Más de 15 personas se sumaron a la familia HagamosTech para atenderte mejor en todas las sucursales.', img: '/img/10_sucursales/Cochabamba/01_Sucursal.png', tag: 'EQUIPO' },
     { id: 5, fecha: '05 Jul', categoria: 'Alianzas', icon: 'fa-handshake', titulo: 'Convenio con productores locales', resumen: 'Trabajamos directamente con granjas de la región para garantizar ingredientes frescos todos los días.', img: '/img/10_sucursales/Cochabamba/04_Sucursal.png', tag: 'ALIANZAS' },
     { id: 6, fecha: '18 Jun', categoria: 'Evento', icon: 'fa-music', titulo: 'Primer festival gastronómico', resumen: 'Participamos con un stand propio y nuestra salteña gigante, el hit de la feria. ¡Gracias a todos!', img: '/img/10_sucursales/Oruro/02_Sucursal.png', tag: 'EVENTO' },
 ];
@@ -37,7 +37,7 @@ const HeroNovedades = () => {
             {/* Hero compacto */}
             <PageHero
                 title="Novedades de"
-                highlight="Los Castores."
+                highlight="HagamosTech."
                 description="Enterate de todo lo nuevo: sabores de temporada, lanzamientos exclusivos, combos especiales y noticias de nuestra salteñería. Siempre hay algo fresco para probar."
                 className="!pb-0"
             />

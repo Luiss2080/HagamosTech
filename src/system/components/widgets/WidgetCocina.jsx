@@ -119,7 +119,7 @@ const VistaBienvenida = ({ onContinuar }) => (
     <div className="lc-logo lc-card-in mb-10 relative z-10" style={{ animationDelay:'.2s' }}>
       <img
         src="/img/02_Logos/LogoHeader.png"
-        alt="Los Castores"
+        alt="HagamosTech"
         className="h-32 sm:h-40 w-auto object-contain"
       />
     </div>

@@ -41,7 +41,7 @@ const PagoMovil = () => {
             {/* Golden Header */}
             <div className="mb-2 flex justify-center z-10 animate-fade-in">
               <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#c5a059]/40 bg-amber-500/10 text-[9px] font-black uppercase tracking-widest text-[#a88544] shadow-sm leading-none">
-                <i className="fa-solid fa-mobile-screen-button"></i> Pago Seguro LOS CASTORES
+                <i className="fa-solid fa-mobile-screen-button"></i> Pago Seguro HAGAMOSTECH
               </span>
             </div>
 
@@ -54,7 +54,7 @@ const PagoMovil = () => {
                 {status === 'pending' && (
                     <>
                         <h1 className="text-3xl font-black mb-2">Confirmar Pago</h1>
-                        <p className="text-slate-400 text-sm mb-8 font-medium">EstÃ¡s a un paso de completar tu compra en Los Castores</p>
+                        <p className="text-slate-400 text-sm mb-8 font-medium">EstÃ¡s a un paso de completar tu compra en HagamosTech</p>
 
                         <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-8">
                             <p className="text-[10px] font-black uppercase tracking-widest text-[#FFC107] mb-2 text-left">Monto a Pagar</p>
@@ -86,7 +86,7 @@ const PagoMovil = () => {
                         </div>
                         
                         <div className="text-[10px] text-slate-500 font-bold uppercase tracking-widest">
-                            Gracias por elegir Los Castores
+                            Gracias por elegir HagamosTech
                         </div>
                     </div>
                 )}

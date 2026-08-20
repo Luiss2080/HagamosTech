@@ -45,7 +45,7 @@ const DetailEquipetrol = () => {
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-orange-50 rounded-full blur-[100px] pointer-events-none"></div>
 
             <HeroDetalleSeccion
-                titulo="Los Castores"
+                titulo="HagamosTech"
                 resaltado="Equipetrol."
                 descripcion="Nuestra sucursal insignia. La primera, la más grande y la que marcó el camino para todas las demás. Tradición desde 1989."
             />

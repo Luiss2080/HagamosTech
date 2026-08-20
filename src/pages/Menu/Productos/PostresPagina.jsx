@@ -9,7 +9,7 @@ const BENEFICIOS = [
   { icon: 'fa-ice-cream', titulo: 'Helado Artesanal', desc: 'Cremoso y elaborado con ingredientes de primera calidad.' },
   { icon: 'fa-candy-cane', titulo: 'Toppings Variados', desc: 'Salsas, frutas, galletas y mucho más para personalizar tu postre.' },
   { icon: 'fa-snowflake', titulo: 'Bien Frío', desc: 'Servido en la temperatura perfecta para disfrutar al máximo.' },
-  { icon: 'fa-heart', titulo: 'El Mejor Final', desc: 'El cierre dulce ideal para tu experiencia Los Castores.' },
+  { icon: 'fa-heart', titulo: 'El Mejor Final', desc: 'El cierre dulce ideal para tu experiencia HagamosTech.' },
 ];
 
 const PostresPagina = () => {

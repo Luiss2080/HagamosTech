@@ -22,7 +22,7 @@ const SobreNosotrosPagina = () => {
                     highlight="Historia"
                     description={(
                         <>
-                            <strong>LOS CASTORES</strong> nace con el objetivo de llevar el verdadero sabor tradicional a tu mesa. Desde 1989, nos dedicamos a hornear las mejores salteñas bolivianas, alegrando las mañanas de miles de clientes.
+                            <strong>HAGAMOSTECH</strong> nace con el objetivo de llevar el verdadero sabor tradicional a tu mesa. Desde 1989, nos dedicamos a hornear las mejores salteñas bolivianas, alegrando las mañanas de miles de clientes.
                         </>
                     )}
                 />

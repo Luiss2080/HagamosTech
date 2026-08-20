@@ -33,7 +33,7 @@ server/
 | `servidor.js` | Inicializa Express, registra rutas, inicia servidor en puerto 3000 |
 | `prisma/esquema.prisma` | Define todos los modelos de la base de datos (MySQL) |
 | `prisma/semilla.js` | Script que ejecuta todos los seeds en orden |
-| `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/LosCastoresSCZ` |
+| `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/Loshagamostech` |
 
 ## API Endpoints
 
@@ -101,7 +101,7 @@ cd server && npx prisma studio
 
 | Variable | Valor local | Descripción |
 |----------|-------------|-------------|
-| `DATABASE_URL` | `mysql://root:@localhost:3306/LosCastoresSCZ` | Conexión a MySQL |
+| `DATABASE_URL` | `mysql://root:@localhost:3306/Loshagamostech` | Conexión a MySQL |
 | `PORT` | `3000` | Puerto del servidor |
 | `NODE_ENV` | `development` | Entorno |
 | `JWT_SECRET` | `loscatores_dev_secret_key_2026` | Secret para tokens |
@@ -114,4 +114,4 @@ cd server && npx prisma studio
 - En producción se usa el backend PHP (`api/`) en lugar de este Node.js
 
 ---
-*Los Castores - 2026*
+*HagamosTech - 2026*

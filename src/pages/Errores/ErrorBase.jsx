@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 /**
  * Componente base reutilizable para todas las páginas de error.
  * Mantiene la animación glitch en el número pero con los colores
- * y estilo del nuevo diseño de Los Castores (naranja/marrón/crema).
+ * y estilo del nuevo diseño de HagamosTech (naranja/marrón/crema).
  */
 const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclamation', action = { to: '/', label: 'Volver al inicio' } }) => (
   <div className="w-full min-h-screen flex items-center justify-center relative overflow-hidden px-6 pt-28 pb-16">

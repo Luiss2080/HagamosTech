@@ -1,5 +1,5 @@
 async function seed(prisma) {
-    console.log('Sembrando categorías Los Castores...');
+    console.log('Sembrando categorías HagamosTech...');
     
     const categorias = [
         {

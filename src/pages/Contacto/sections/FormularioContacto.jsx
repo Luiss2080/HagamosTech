@@ -22,7 +22,7 @@ const FormularioContacto = () => {
         if (isSubmitting) return;
         setIsSubmitting(true);
 
-        const texto = `*Nuevo mensaje desde LOS CASTORES - Contacto*%0A%0A*Nombre:* ${encodeURIComponent(formData.name)}%0A*Celular:* ${encodeURIComponent(formData.phone)}%0A*Email:* ${encodeURIComponent(formData.email)}%0A*Mensaje:* ${encodeURIComponent(formData.message)}`;
+        const texto = `*Nuevo mensaje desde HAGAMOSTECH - Contacto*%0A%0A*Nombre:* ${encodeURIComponent(formData.name)}%0A*Celular:* ${encodeURIComponent(formData.phone)}%0A*Email:* ${encodeURIComponent(formData.email)}%0A*Mensaje:* ${encodeURIComponent(formData.message)}`;
 
         window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`, '_blank');
 
@@ -61,7 +61,7 @@ const FormularioContacto = () => {
                                 <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
                                     <img
                                         src="/img/02_Logos/LogoModal.png"
-                                        alt="LOS CASTORES"
+                                        alt="HAGAMOSTECH"
                                         loading="lazy"
                                         decoding="async"
                                         className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"
@@ -71,7 +71,7 @@ const FormularioContacto = () => {
                                 <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                     Conéctate con <br />
                                     <span className="text-white relative inline-block">
-                                        LOS CASTORES
+                                        HAGAMOSTECH
                                         <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-white/40" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                     </span>
                                 </h2>
@@ -80,7 +80,7 @@ const FormularioContacto = () => {
                                 </p>
 
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                                    <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Pedidos LOS CASTORES
+                                    <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Pedidos HAGAMOSTECH
                                 </div>
 
                                 <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
@@ -103,10 +103,10 @@ const FormularioContacto = () => {
                                 </div>
 
                                 <div className="w-full mt-auto pt-4 flex flex-col items-center">
-                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con LOS CASTORES</p>
+                                    <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
-                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSCASTORES?locale=es_LA' },
+                                            { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH?locale=es_LA' },
                                             { icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
                                             { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
@@ -138,7 +138,7 @@ const FormularioContacto = () => {
                                         </span>
                                         <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Escríbenos</h3>
                                     </div>
-                                    <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Contáctate con el equipo Los Castores</p>
+                                    <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Contáctate con el equipo HagamosTech</p>
                                 </div>
 
                                 <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">

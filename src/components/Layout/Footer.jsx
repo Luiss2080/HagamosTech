@@ -38,7 +38,7 @@ const Footer = () => {
             <Link to="/" className="group inline-block">
               <img
                 src="/img/02_Logos/LogoFooter.png"
-                alt="Logo LOS CASTORES"
+                alt="Logo HAGAMOSTECH"
                 className="h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-xl"
               />
             </Link>
@@ -47,9 +47,9 @@ const Footer = () => {
             </p>
             <div className="flex items-center justify-center gap-4 pt-3">
               {[
-                { icon: "fa-facebook-f", href: "https://www.facebook.com/LosCastoresSC", hover: "hover:bg-[#1877F2]" },
-                { icon: "fa-instagram", href: "https://www.instagram.com/castoresscz/", hover: "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]" },
-                { icon: "fa-tiktok", href: "https://www.tiktok.com/@castores.scz", hover: "hover:bg-black" },
+                { icon: "fa-facebook-f", href: "https://www.facebook.com/LosHagamosTechSC", hover: "hover:bg-[#1877F2]" },
+                { icon: "fa-instagram", href: "https://www.instagram.com/hagamostech/", hover: "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]" },
+                { icon: "fa-tiktok", href: "https://www.tiktok.com/@hagamostech", hover: "hover:bg-black" },
                 { icon: "fa-whatsapp", href: "https://wa.me/59161320004", hover: "hover:bg-[#25D366]" }
               ].map((social, i) => (
                 <a
@@ -127,7 +127,7 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/60 uppercase tracking-widest mb-1">Email</span>
-                  <a href="mailto:contacto@loscastores.bo" className="text-[14px] text-[#FFE8D6]/90 font-medium hover:text-white transition-colors">contacto@loscastores.bo</a>
+                  <a href="mailto:contacto@hagamostech.bo" className="text-[14px] text-[#FFE8D6]/90 font-medium hover:text-white transition-colors">contacto@hagamostech.bo</a>
                 </div>
               </li>
               <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
@@ -155,7 +155,7 @@ const Footer = () => {
         {/* Footer Bottom */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="text-[13px] text-[#FFE8D6]/70 font-semibold tracking-wide">
-            &copy; {new Date().getFullYear()} Los Castores. Todos los derechos reservados.
+            &copy; {new Date().getFullYear()} HagamosTech. Todos los derechos reservados.
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacidad" className="text-[13px] font-semibold text-[#FFE8D6]/70 hover:text-white transition-colors">Política de Privacidad</Link>

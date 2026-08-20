@@ -402,7 +402,7 @@ const PerfilPagina = () => {
             <PageHero
                 title="Mi cuenta"
                 highlight="personalizable"
-                description="Gestiona tus datos personales, informaciÃ³n de contacto y personaliza tu avatar institucional en Los Castores."
+                description="Gestiona tus datos personales, informaciÃ³n de contacto y personaliza tu avatar institucional en HagamosTech."
             />
 
             {/* MAIN LAYOUT GRID (THINNED LEFT COLUMN 340px) */}

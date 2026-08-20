@@ -7,7 +7,7 @@ const Ubicacion = () => {
         { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#FF4D00] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-orange-500/20", border: "border-[#FF4D00]" },
         { icon: "fa-clock", title: "Horario", value: "Lun - Sab: 8:00 - 13:00", theme: "bg-[#5D3A1F] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-[#5D3A1F]/20", border: "border-[#5D3A1F]" },
         { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#FF4D00] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-orange-500/20", border: "border-[#FF4D00]" },
-        { icon: "fa-envelope", title: "Email", value: "pedidos@loscastores.bo", theme: "bg-[#8B4513] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-[#8B4513]/20", border: "border-[#8B4513]" }
+        { icon: "fa-envelope", title: "Email", value: "pedidos@hagamostech.bo", theme: "bg-[#8B4513] text-white", iconBg: "bg-white/20 text-white", shadow: "shadow-[#8B4513]/20", border: "border-[#8B4513]" }
     ];
 
     return (
@@ -61,7 +61,7 @@ const Ubicacion = () => {
                             <div className="flex items-center gap-3">
                                 <div>
                                     <p className="text-[10px] font-black uppercase text-gray-500 tracking-wider text-right">Sede Central</p>
-                                    <p className="text-sm font-bold text-[#8B4513] text-right">Los Castores Salteñeria</p>
+                                    <p className="text-sm font-bold text-[#8B4513] text-right">HagamosTech Salteñeria</p>
                                 </div>
                                 <div className="w-10 h-10 bg-[#FF4D00] rounded-full flex items-center justify-center text-white shadow-md">
                                     <i className="fas fa-store"></i>

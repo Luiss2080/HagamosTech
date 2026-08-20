@@ -6,7 +6,7 @@ const BENEFICIOS = [
   { icon: 'fa-leaf', title: 'Ingredientes Frescos', desc: 'Seleccionamos cada insumo a diario para garantizar un sabor inigualable en cada bocado. Nada se recicla, todo se prepara en el día.' },
   { icon: 'fa-fire', title: 'Horneado del Día', desc: 'Nuestras salteñas salen del horno cada mañana. Nunca recalentadas, siempre crocantes y jugosas como recién hechas.' },
   { icon: 'fa-medal', title: 'Calidad Garantizada', desc: 'Más de 35 años de tradición nos respaldan. Cada salteña lleva nuestra promesa de excelencia y el cariño de siempre.' },
-  { icon: 'fa-hand-holding-heart', title: 'Atención Cercana', desc: 'Te recibimos con una sonrisa en cada sucursal. Sos parte de la familia Los Castores y así te hacemos sentir.' }
+  { icon: 'fa-hand-holding-heart', title: 'Atención Cercana', desc: 'Te recibimos con una sonrisa en cada sucursal. Sos parte de la familia HagamosTech y así te hacemos sentir.' }
 ];
 
 const BeneficiosSucursalesSCZ = () => {
@@ -22,7 +22,7 @@ const BeneficiosSucursalesSCZ = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-6 leading-tight">
                             ¿Por qué elegir{' '}
                             <span className="relative inline-block text-[#FF4D00]">
-                                Los Castores?
+                                HagamosTech?
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg>
                             </span>
                         </h2>

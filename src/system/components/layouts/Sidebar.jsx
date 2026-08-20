@@ -235,7 +235,7 @@ const Sidebar = ({ activeTab, setActiveTab, user, logout, counts = {}, isDark = 
           </div>
           <div className="transition-all duration-300 overflow-hidden whitespace-nowrap">
             <h4 className="text-xs font-black uppercase tracking-wider text-[#4A2E1B] dark:text-white leading-tight">
-              LOS CASTORES
+              HAGAMOSTECH
             </h4>
             <span className="text-[9px] font-bold text-[#E95A0C] block leading-snug">
               SalteÃ±erÃ­a Tradicional

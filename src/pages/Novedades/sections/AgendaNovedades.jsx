@@ -13,7 +13,7 @@ const EVENTOS_AGENDA = [
     { dia: 12, tipo: 'aniv', titulo: '35 Años de Aniversario', hora: '9:00 – 14:00', lugar: 'Sucursal Equipetrol', icon: 'fa-birthday-cake', desc: 'Degustación, música en vivo y regalos para los primeros 100 clientes.', extra: 'Sorteos sorpresa y torta gigante de celebración.' },
     { dia: 18, tipo: 'evento', titulo: 'Jazz Morning', hora: '9:00 – 12:00', lugar: 'Café Beni', icon: 'fa-music', desc: 'Trío de jazz en vivo para arrancar el finde con el mejor ambiente.', extra: 'Café de cortesía para los primeros 40 asistentes.' },
     { dia: 20, tipo: 'evento', titulo: 'Concurso La Mejor Salteña', hora: '10:00 – 13:00', lugar: 'Plaza Principal', icon: 'fa-trophy', desc: 'Nuestro maestro hornero competirá por el título regional.', extra: 'Votación popular en vivo con degustación gratuita.' },
-    { dia: 26, tipo: 'promo', titulo: 'Día del Cliente Frecuente', hora: 'Todo el día', lugar: 'Todas las sucursales', icon: 'fa-heart', desc: 'Puntos dobles y regalos sorpresa para nuestros castores fieles.', extra: 'Cada 8 compras acumuladas = 1 salteña gratis.' },
+    { dia: 26, tipo: 'promo', titulo: 'Día del Cliente Frecuente', hora: 'Todo el día', lugar: 'Todas las sucursales', icon: 'fa-heart', desc: 'Puntos dobles y regalos sorpresa para nuestros clientes fieles.', extra: 'Cada 8 compras acumuladas = 1 salteña gratis.' },
 ];
 
 const TIPO_INFO = {

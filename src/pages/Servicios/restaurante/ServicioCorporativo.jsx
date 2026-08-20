@@ -160,7 +160,7 @@ const ServicioCorporativo = () => {
                                     </div>
                                 </div>
 
-                                <a href="https://wa.me/59161320004?text=Hola%20Los%20Castores!%20Quiero%20cotizar%20el%20servicio%20corporativo%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF4D00] hover:bg-[#CC3D00] text-white rounded-full font-black text-[10px] uppercase tracking-[0.15em] shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
+                                <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20cotizar%20el%20servicio%20corporativo%20para%20mi%20empresa" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#FF4D00] hover:bg-[#CC3D00] text-white rounded-full font-black text-[10px] uppercase tracking-[0.15em] shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
                                     <i className="fab fa-whatsapp"></i> Cotizar mi empresa
                                 </a>
                             </div>
@@ -184,7 +184,7 @@ const ServicioCorporativo = () => {
             <CtaServicio
                 frase="Armá un plan a la medida de tu empresa y sorprendé a tu equipo con el mejor sabor de Santa Cruz."
                 gradiente="from-[#8B4513] via-[#5D3A1F] to-[#452A16]"
-                whatsappTexto="Hola Los Castores! Quiero información del servicio corporativo"
+                whatsappTexto="Hola HagamosTech! Quiero información del servicio corporativo"
                 badges={[
                     { icon: 'fa-building', label: 'Para empresas', color: 'bg-[#FF4D00]' },
                     { icon: 'fa-tag', label: 'Hasta 20% OFF', color: 'bg-[#5D3A1F]' },

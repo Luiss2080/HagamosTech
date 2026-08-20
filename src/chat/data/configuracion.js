@@ -3,7 +3,7 @@ export const URL_WHATSAPP = "https://api.whatsapp.com/send?phone=59161320004&tex
 export const config_CHAT = {
   botName: 'Niko',
   botRole: 'Asistente Virtual',
-  initialMessage: '¡Hola! 👋 Soy **Niko**, asistente de **LOS CASTORES**. Preguntame sobre nuestro **menú, sucursales o pedidos.** ¿En qué te ayudo hoy?',
+  initialMessage: '¡Hola! 👋 Soy **Niko**, asistente de **HAGAMOSTECH**. Preguntame sobre nuestro **menú, sucursales o pedidos.** ¿En qué te ayudo hoy?',
   followUpMessages: {
     afterQuestion: '¿Necesitas algo más?',
     afterUnknown: 'También puedes abrir el menú **(⋮)** para ver todos los temas.',

@@ -20,7 +20,7 @@ const imprimirTicket = (orden) => {
   doc.setTextColor(255, 255, 255);
   doc.setFont('helvetica', 'bold');
   doc.setFontSize(13);
-  doc.text('LOS CASTORES', ancho / 2, 6, { align: 'center' });
+  doc.text('HAGAMOSTECH', ancho / 2, 6, { align: 'center' });
   doc.setFontSize(7);
   doc.setTextColor(255, 230, 210);
   doc.text('SALTEÑERIA TRADICIONAL', ancho / 2, 10.5, { align: 'center' });
@@ -89,7 +89,7 @@ const imprimirTicket = (orden) => {
   y += 4;
   doc.text('Compra verificada y registrada en el sistema.', ancho / 2, y, { align: 'center' });
   y += 4;
-  doc.text('www.loscastores.bo', ancho / 2, y, { align: 'center' });
+  doc.text('www.hagamostech.bo', ancho / 2, y, { align: 'center' });
 
   doc.autoPrint();
   doc.output('dataurlnewwindow');

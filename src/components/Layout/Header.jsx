@@ -244,11 +244,11 @@ const Header = () => {
                                 closeMenu();
                             }}
                             className="h-full flex-shrink-0 flex items-center justify-center group relative z-10 animate-fade-in-up delay-100 xl:mr-2"
-                            aria-label="Ir al inicio de LOS CASTORES SCZ"
+                            aria-label="Ir al inicio de HAGAMOSTECH SCZ"
                         >
                             <img
                                 src="/img/02_Logos/LogoHeader.png"
-                                alt="Logo Los Castores SCZ"
+                                alt="Logo HagamosTech SCZ"
                                 className="h-[54px] lg:h-[64px] w-auto object-contain transition-all duration-300 group-hover:scale-[1.03] select-none"
                             />
                         </Link>

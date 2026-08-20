@@ -1,8 +1,8 @@
 -- =====================================================================
--- LosCastoresSCZ - Seeds (roles, permisos, matriz, usuarios, catálogo)
+-- Loshagamostech - Seeds (roles, permisos, matriz, usuarios, catálogo)
 -- =====================================================================
 
-USE `LosCastoresSCZ`;
+USE `Loshagamostech`;
 
 SET FOREIGN_KEY_CHECKS = 0;
 
@@ -13,7 +13,7 @@ INSERT INTO `roles` (`id`, `nombre`, `descripcion`) VALUES
 (3,  'Invitado',              'Rol por defecto al crear una cuenta'),
 (4,  'Cocina',                'Personal de producción de salteñas'),
 (5,  'Cajero',                'Atención en caja y pedidos'),
-(6,  'Personal Los Castores', 'Personal de la salteñería con permisos intermedios');
+(6,  'Personal HagamosTech', 'Personal de la salteñería con permisos intermedios');
 
 -- PERMISOS --------------------------------------------------------------
 INSERT INTO `permisos` (`id`, `nombre`, `descripcion`, `modulo`) VALUES
@@ -51,13 +51,13 @@ INSERT INTO `detalle_rol_permisos` (`fk_id_r`, `fk_id_p`) VALUES
 (4, 14),(4, 19),
 -- Cajero
 (5, 2),(5, 3),(5, 16),(5, 17),(5, 18),(5, 19),
--- Personal Los Castores
+-- Personal HagamosTech
 (6, 2),(6, 3),(6, 4),(6, 14),(6, 16),(6, 17),(6, 18),(6, 19);
 
 -- USUARIO ADMIN ----------------------------------------------------------
 -- Password: Admin123! (texto plano, compatible con AuthController.js de Node)
 INSERT INTO `usuarios` (`id`, `nombre`, `apellido`, `numci`, `numtel`, `email`, `password`, `rol_id`, `email_verificado`, `activo`, `usuario`, `two_factor_enabled`) VALUES
-(1, 'Administrador', 'Los Castores', NULL, '70000000', 'admin@loscatoresscz.com', 'Admin123!', 1, 1, 1, 'admin', 0);
+(1, 'Administrador', 'HagamosTech', NULL, '70000000', 'admin@loscatoresscz.com', 'Admin123!', 1, 1, 1, 'admin', 0);
 
 INSERT INTO `suscripciones` (`usuarioId`, `estado`, `fechaFinPrueba`) VALUES
 (1, 'suscrito', DATE_ADD(NOW(), INTERVAL 365 DAY));

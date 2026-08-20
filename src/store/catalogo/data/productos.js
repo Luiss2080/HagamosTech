@@ -1,4 +1,4 @@
-// Catálogo central de productos de Los Castores
+// Catálogo central de productos de HagamosTech
 // Organizado por categorías y tipos, con detalle para cada producto.
 
 const CATEGORIAS = [
@@ -62,7 +62,7 @@ const CATEGORIAS = [
       { id: 'ref-3', nombre: 'Limonada Recién Exprimida', tipo: 'Cítrico', subtitulo: 'Frescura Natural', precio: 8, precioAntes: 10, imagen: '/img/05_Productos/Refrescos/LicuadosConFrutas.png', descripcion: 'Recién exprimida. El clásico refrescante que nunca puede faltar en tu mesa.', incluye: ['Limón fresco', 'Agua', 'Azúcar', 'Hielo'], icono: 'fa-lemon' },
       { id: 'ref-4', nombre: 'Mocochinchi Oriental', tipo: 'Casero', subtitulo: 'Tradición Boliviana', precio: 8, precioAntes: 10, imagen: '/img/05_Productos/Refrescos/Mocochinchi.png', descripcion: 'Durazno deshidratado con canela. Dulce, aromático y bien oriental.', incluye: ['Durazno seco', 'Canela', 'Azúcar', 'Hielo'], icono: 'fa-wine-glass' },
       { id: 'ref-5', nombre: 'Agua Mineral 500ml', tipo: 'Sin Gas', subtitulo: 'Pureza en Botella', precio: 6, precioAntes: 8, imagen: '/img/05_Productos/Refrescos/Agua500ml.png', descripcion: 'Agua mineral bien fría. El acompañante más puro para cualquier salteña.', incluye: ['Agua mineral', '500ml'], icono: 'fa-bottle-water' },
-      { id: 'ref-6', nombre: 'Tostada de la Casa', tipo: 'Gasificada', subtitulo: 'Nuestro Refresco', precio: 7, precioAntes: 9, imagen: '/img/05_Productos/Refrescos/Tostada.png', descripcion: 'El refresco oficial de Los Castores. El maridaje perfecto para las picantes.', incluye: ['Refresco Tostada', 'Hielo'], icono: 'fa-beer-mug' },
+      { id: 'ref-6', nombre: 'Tostada de la Casa', tipo: 'Gasificada', subtitulo: 'Nuestro Refresco', precio: 7, precioAntes: 9, imagen: '/img/05_Productos/Refrescos/Tostada.png', descripcion: 'El refresco oficial de HagamosTech. El maridaje perfecto para las picantes.', incluye: ['Refresco Tostada', 'Hielo'], icono: 'fa-beer-mug' },
     ]
   },
   {

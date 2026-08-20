@@ -1,10 +1,10 @@
-# Los Castores
+# HagamosTech
 
-Plataforma web de Los Castores.
+Plataforma web de HagamosTech.
 
 ## Descripción
 
-Los Castores es una plataforma web de salteñería que ofrece:
+HagamosTech es una plataforma web de salteñería que ofrece:
 - **Pedidos online** de salteñas (pollo, carne, picante, vegetarianas)
 - **Delivery y retiro** en sucursales de Santa Cruz
 - **Pedidos al por mayor** para eventos y empresas
@@ -13,7 +13,7 @@ Los Castores es una plataforma web de salteñería que ofrece:
 ## Estructura del Proyecto
 
 ```
-LOS-CASTORES/
+LOS-HAGAMOSTECH/
 ├── src/                    # Frontend React + Vite
 │   ├── components/         # Componentes React
 │   ├── pages/              # Páginas de la app
@@ -30,8 +30,8 @@ LOS-CASTORES/
 │   ├── index.php           # Router principal
 │   └── *.php               # Endpoints de API (numerados)
 ├── database/               # Scripts maestros de base de datos
-│   ├── 01_esquema_LosCastoresSCZ.sql
-│   ├── 02_datos_LosCastoresSCZ.sql
+│   ├── 01_esquema_Loshagamostech.sql
+│   ├── 02_datos_Loshagamostech.sql
 │   └── runner.cjs          # Herramienta de migración/seed
 ├── scripts/                # Scripts de automatización
 │   ├── 01-dev.bat          # Iniciar desarrollo local
@@ -60,11 +60,11 @@ cd .. && npm run dev        # Frontend: http://localhost:4001
 ```
 
 **Base de datos local:**
-- Base: `LosCastoresSCZ`
+- Base: `Loshagamostech`
 - Usuario: `root` (sin password)
 - Host: `localhost:3306`
-- Esquema: `npm run db:migrate` (aplica `database/01_esquema_LosCastoresSCZ.sql`)
-- Datos: `npm run db:seed` (aplica `database/02_datos_LosCastoresSCZ.sql`)
+- Esquema: `npm run db:migrate` (aplica `database/01_esquema_Loshagamostech.sql`)
+- Datos: `npm run db:seed` (aplica `database/02_datos_Loshagamostech.sql`)
 
 ### 2. Producción
 
@@ -125,4 +125,4 @@ Vite automáticamente:
 
 ## Créditos
 
-Los Castores - 2026
+HagamosTech - 2026

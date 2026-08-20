@@ -67,7 +67,7 @@ index.php detecta "catalogo" → include 03_catalogo.php
 **Detecta automáticamente el entorno:**
 
 - **Local:** Si `HTTP_HOST` es `localhost`, `127.0.0.1`, o contiene `.test`/`.local`
-  - Usa: `root` / `localhost` / `LosCastoresSCZ` / sin password
+  - Usa: `root` / `localhost` / `Loshagamostech` / sin password
 - **Producción:** Cualquier otro host
   - Usa: Credenciales configuradas en `01_config.php` (debes cambiarlas)
 
@@ -80,12 +80,12 @@ if ($isLocal) {
     $host = '127.0.0.1';
     $user = 'root';
     $pass = '';
-    $db   = 'LosCastoresSCZ';
+    $db   = 'Loshagamostech';
 } else {
     $host = 'localhost'; // Cambiar según hosting
     $user = 'tu_usuario'; // Cambiar
     $pass = 'tu_password'; // Cambiar
-    $db   = 'LosCastoresSCZ';
+    $db   = 'Loshagamostech';
 }
 ```
 
@@ -114,4 +114,4 @@ if ($isLocal) {
 - Para debugging, `01_config.php` incluye info del entorno en respuestas de error
 
 ---
-*Los Castores - 2026*
+*HagamosTech - 2026*

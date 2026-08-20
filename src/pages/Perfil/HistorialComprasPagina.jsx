@@ -202,7 +202,7 @@ const HistorialComprasPagina = () => {
                         <div className="border border-slate-200 p-4 rounded-xl bg-[#fbfdff] text-slate-800 text-left text-xs font-semibold space-y-3 shadow-inner mb-4">
                             <div className="flex justify-between border-b border-slate-100 pb-3">
                                 <div>
-                                    <p className="font-black text-[#a41e22] text-sm">Los Castores Robotics</p>
+                                    <p className="font-black text-[#a41e22] text-sm">HagamosTech Robotics</p>
                                     <p className="text-[9px] text-slate-400 mt-0.5">Santa Cruz, Bolivia</p>
                                 </div>
                                 <div className="text-right">
