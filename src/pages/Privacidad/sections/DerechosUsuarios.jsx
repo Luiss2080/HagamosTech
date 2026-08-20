@@ -23,13 +23,13 @@ const DerechosUsuarios = () => {
                 <CircuitBackground />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#FF4D00]/20">
-                            <i className="fas fa-scale-balanced text-[#FF4D00] mr-1"></i> Tus Derechos
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
+                            <i className="fas fa-scale-balanced text-[#A3E635] mr-1"></i> Tus Derechos
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            Tenés el <span className="relative inline-block text-[#FF4D00]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
+                            Tenés el <span className="relative inline-block text-[#A3E635]">
                                 control
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -45,21 +45,21 @@ const DerechosUsuarios = () => {
                                     key={i}
                                     onClick={() => setActive(i)}
                                     className={`relative flex items-center gap-3 p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${
-                                        active === i ? 'bg-white text-[#111827] shadow-lg shadow-orange-950/10 ring-2 ring-[#FF4D00]/40 scale-[1.01]' : 'bg-white/60 text-[#111827] border border-orange-50 hover:bg-white hover:shadow-md'
+                                        active === i ? 'bg-white text-[#111827] shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-[#111827] border border-orange-50 hover:bg-white hover:shadow-md'
                                     }`}
                                 >
-                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#FF4D00] to-[#CC3D00] transition-opacity duration-300" style={{ opacity: active === i ? 1 : 0 }}></div>
-                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#FF4D00] text-white shadow-md shadow-orange-500/30' : 'bg-[#FFF6F6] text-[#FF4D00]'}`}>
+                                    <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#A3E635] to-[#84CC16] transition-opacity duration-300" style={{ opacity: active === i ? 1 : 0 }}></div>
+                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#A3E635] text-white shadow-md shadow-orange-500/30' : 'bg-[#FFFFFF] text-[#A3E635]'}`}>
                                         <i className={`fas ${d.icon}`}></i>
                                     </div>
                                     <div>
-                                        <p className={`font-black text-sm ${active === i ? 'text-[#FF4D00]' : 'text-[#111827]'}`}>{d.titulo}</p>
+                                        <p className={`font-black text-sm ${active === i ? 'text-[#A3E635]' : 'text-[#111827]'}`}>{d.titulo}</p>
                                         <p className={`text-[9px] font-black uppercase tracking-widest ${active === i ? 'text-slate-500' : 'text-gray-400'}`}>
-                                            <i className="fas fa-stopwatch text-[#FF4D00] mr-1"></i>{d.tiempo}
+                                            <i className="fas fa-stopwatch text-[#A3E635] mr-1"></i>{d.tiempo}
                                         </p>
                                     </div>
                                     {active === i && (
-                                        <i className="fas fa-chevron-right text-[#FF4D00] text-xs ml-auto"></i>
+                                        <i className="fas fa-chevron-right text-[#A3E635] text-xs ml-auto"></i>
                                     )}
                                 </button>
                             ))}
@@ -67,7 +67,7 @@ const DerechosUsuarios = () => {
 
                         {/* Detalle */}
                         <div className="lg:col-span-3 relative rounded-[2rem] overflow-hidden ring-4 ring-white shadow-2xl group border border-orange-50">
-                            <div className={`absolute inset-0 bg-gradient-to-br ${active % 2 === 0 ? 'from-[#FF4D00] to-[#CC3D00]' : 'from-[#5D3A1F] to-[#452A16]'} transition-colors duration-500`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-br ${active % 2 === 0 ? 'from-[#A3E635] to-[#84CC16]' : 'from-[#0A0A0A] to-[#171717]'} transition-colors duration-500`}></div>
                             <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/15 blur-3xl animate-float-slow pointer-events-none"></div>
                             <div className="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-black/15 blur-3xl animate-float-medium pointer-events-none"></div>
@@ -103,7 +103,7 @@ const DerechosUsuarios = () => {
                                 </div>
 
                                 <div className="mt-auto">
-                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#FF4D00] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
+                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#A3E635] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
                                         <i className="fab fa-whatsapp"></i> Ejercer este derecho
                                     </a>
                                 </div>

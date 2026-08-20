@@ -11,7 +11,7 @@ const FLUJO = [
         chips: ['Navegación', 'Aceptación', 'Local'],
         stat: 'Local',
         statIcon: 'fa-laptop',
-        color: 'bg-[#FF4D00]'
+        color: 'bg-[#A3E635]'
     },
     {
         icon: 'fa-globe',
@@ -22,7 +22,7 @@ const FLUJO = [
         chips: ['Identificación', 'Sesión', 'Segura'],
         stat: 'Cifrado',
         statIcon: 'fa-lock',
-        color: 'bg-[#5D3A1F]'
+        color: 'bg-[#0A0A0A]'
     },
     {
         icon: 'fa-database',
@@ -33,7 +33,7 @@ const FLUJO = [
         chips: ['Cifrado', 'Privacidad', 'Protegido'],
         stat: 'Seguro',
         statIcon: 'fa-shield-halved',
-        color: 'bg-[#8B4513]'
+        color: 'bg-[#171717]'
     },
     {
         icon: 'fa-chart-simple',
@@ -44,7 +44,7 @@ const FLUJO = [
         chips: ['Anónimo', 'Optimización', 'Mejora'],
         stat: 'Anónimo',
         statIcon: 'fa-user-secret',
-        color: 'bg-[#CC3D00]'
+        color: 'bg-[#84CC16]'
     },
 ];
 
@@ -58,13 +58,13 @@ const MapaFlujoCookies = () => {
                 <CircuitBackground />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#8B4513]/10 text-[#8B4513] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#8B4513]/20">
-                            <i className="fas fa-network-wired text-[#8B4513] mr-1"></i> Cómo Viajan los Datos
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#171717]/10 text-[#171717] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#171717]/20">
+                            <i className="fas fa-network-wired text-[#171717] mr-1"></i> Cómo Viajan los Datos
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            El <span className="relative inline-block text-[#FF4D00]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
+                            El <span className="relative inline-block text-[#A3E635]">
                                 recorrido
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -73,13 +73,13 @@ const MapaFlujoCookies = () => {
                     </div>
 
                     <div className="bg-white rounded-[2rem] ring-1 ring-orange-100 shadow-xl shadow-orange-950/5 relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#FF4D00] via-[#8B4513] to-[#FF4D00]"></div>
-                        <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#FF4D00]/10 blur-3xl animate-float-slow pointer-events-none"></div>
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#A3E635]"></div>
+                        <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#A3E635]/10 blur-3xl animate-float-slow pointer-events-none"></div>
 
                         <div className="relative z-10 p-5 sm:p-7">
                             {/* Nodos circulares clickeables */}
                             <div className="relative">
-                                <div className="absolute top-8 left-[8%] right-[8%] hidden md:block h-1 bg-gradient-to-r from-[#FF4D00] via-[#8B4513] to-[#CC3D00] opacity-30"></div>
+                                <div className="absolute top-8 left-[8%] right-[8%] hidden md:block h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#84CC16] opacity-30"></div>
 
                                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                                     {FLUJO.map((n, i) => {
@@ -90,11 +90,11 @@ const MapaFlujoCookies = () => {
                                                 onClick={() => setActivo(i)}
                                                 className="relative flex flex-col items-center gap-2 group"
                                             >
-                                                <div className={`relative z-10 w-16 h-16 rounded-full ${n.color} text-white flex items-center justify-center shadow-xl ring-4 ring-white transition-all duration-300 group-hover:scale-110 ${isActive ? 'scale-110 ring-[#FF4D00]/40 shadow-orange-500/30' : 'opacity-70 group-hover:opacity-100'}`}>
+                                                <div className={`relative z-10 w-16 h-16 rounded-full ${n.color} text-white flex items-center justify-center shadow-xl ring-4 ring-white transition-all duration-300 group-hover:scale-110 ${isActive ? 'scale-110 ring-[#A3E635]/40 shadow-orange-500/30' : 'opacity-70 group-hover:opacity-100'}`}>
                                                     <i className={`fas ${n.icon} text-xl`}></i>
                                                     <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">{i + 1}</span>
                                                 </div>
-                                                <span className={`text-[10px] font-black tracking-wide text-center leading-tight transition-colors ${isActive ? 'text-[#FF4D00]' : 'text-slate-500 group-hover:text-[#8B4513]'}`}>
+                                                <span className={`text-[10px] font-black tracking-wide text-center leading-tight transition-colors ${isActive ? 'text-[#A3E635]' : 'text-slate-500 group-hover:text-[#171717]'}`}>
                                                     {n.titulo}
                                                 </span>
                                             </button>
