@@ -54,14 +54,14 @@ const recursosData = [
         desc: "Desde una página web hasta la automatización de un proceso para tu negocio.",
         icon: "fa-bolt",
         theme: {
-            cardBg: "bg-white/[0.04]",
+            cardBg: "bg-[#171717]",
             accentLine: "bg-[#A3E635]",
-            iconBg: "bg-[#A3E635]/15",
-            iconColor: "text-[#A3E635]",
+            iconBg: "bg-white/20",
+            iconColor: "text-white",
             textColor: "text-white",
-            descColor: "text-white/70",
-            borderColor: "border-[#A3E635]/25",
-            shadow: "shadow-xl hover:shadow-2xl shadow-[#A3E635]/10",
+            descColor: "text-white/90",
+            borderColor: "border-[#171717]",
+            shadow: "shadow-xl hover:shadow-2xl shadow-black/20",
             buttonBg: "bg-[#A3E635]",
             buttonText: "text-[#0A0A0A]",
             buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
@@ -92,12 +92,9 @@ const Recursos = () => {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         {recursosData.map((item, i) => (
-                                <div key={i} className={`relative rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 group overflow-hidden border backdrop-blur-md ${item.theme.cardBg} ${item.theme.textColor} ${item.theme.shadow} ${item.theme.borderColor} hover:-translate-y-2 hover:border-[#A3E635]/50 hover:shadow-[#A3E635]/20 z-10`}>
+                                <div key={i} className={`relative rounded-[2.5rem] p-8 md:p-10 transition-all duration-500 group overflow-hidden border ${item.theme.cardBg} ${item.theme.textColor} ${item.theme.shadow} ${item.theme.borderColor} hover:-translate-y-2 z-10`}>
 
-                                {/* CircleParticles Background */}
-                                <CircleParticles count={16} colorScheme="dark" />
-
-                                {/* Top Accent Line */}
+                                    {/* Top Accent Line */}
                                 <div className={`absolute top-0 left-1/2 -translate-x-1/2 w-1/3 h-1.5 rounded-b-xl z-10 ${item.theme.accentLine}`}></div>
 
                                 <div className="relative z-10 flex flex-col h-full items-center text-center">
