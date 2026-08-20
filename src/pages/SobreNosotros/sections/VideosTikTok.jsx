@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 import useModalStore from '../../../store/useModalStore';
 
 const initialVideos = [

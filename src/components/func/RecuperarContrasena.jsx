@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate, useSearchParams, Link } from 'react-router-dom';
-import CircuitBackground from '../fondos/FondoSaltenas';
+import CircuitBackground from '../fondos/FondoTech';
 import CircleParticles from '../fondos/ParticulasCirculares';
 import Breadcrumb from './MigasPan';
 import useAuthStore from '../../store/useAutenticacionStore';

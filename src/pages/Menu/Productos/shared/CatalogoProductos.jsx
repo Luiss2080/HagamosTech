@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 import PageHero from '../../../../components/func/MigasPan';
 import useCarritoStore from '../../../../store/useCarritoStore';
 import CATEGORIAS from '../../../../store/catalogo/data/productos';

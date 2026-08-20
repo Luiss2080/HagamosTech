@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../../../../components/func/MigasPan';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const SUCURSALES = [
   { id: 'scz-1', slug: 'equipetrol', name: 'HagamosTech Equipetrol', badge: 'SCZ 01', address: 'Av. Cristóbal de Mendoza, esquina', phone: '3 3430197', schedule: 'Abierto hasta la 1:30 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'WiFi', 'Terraza', 'Jugos'], mapLink: 'https://maps.app.goo.gl/L6pWgHan11aPfE4p7', img: '/img/10_sucursales/SantaCruz/01_Sucursal.png', desc: 'Nuestra sucursal insignia en el corazón de Equipetrol. Ambiente exclusivo con la mejor atención personalizada y delivery express a toda la zona norte.' },

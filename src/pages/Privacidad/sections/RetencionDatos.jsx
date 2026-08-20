@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RETENCION = [
     { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Mientras tu cuenta esté activa', dias: 100, color: 'from-[#A3E635] to-[#84CC16]', nota: 'Se eliminan al cerrar tu cuenta.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },

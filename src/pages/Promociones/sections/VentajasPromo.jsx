@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const BENEFICIOS = [
     { icon: 'fa-truck-fast', title: 'Delivery Gratis', desc: 'En pedidos de 12+ salteñas dentro del 3er anillo. Llegan calentitas en menos de 30 minutos.', color: 'bg-[#FF4D00]' },

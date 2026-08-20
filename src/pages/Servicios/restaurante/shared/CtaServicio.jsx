@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const CtaServicio = ({ frase, gradiente = 'from-[#8B4513] via-[#5D3A1F] to-[#452A16]', whatsappTexto, badges = [] }) => {
     return (

@@ -1,6 +1,6 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import CircuitBackground from '../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
 import { useHistorialCompras } from '../../hooks/useComprasPerfil';
@@ -41,7 +41,7 @@ const HistorialComprasPagina = () => {
             <PageHero
                 title="Mis compras y"
                 highlight="pedidos"
-                description="Consulta el historial de tus adquisiciones de kits de robÃ³tica, tomos de libros impresos y descarga las facturas oficiales."
+                description="Consulta el historial de tus adquisiciones de kits de robótica, tomos de libros impresos y descarga las facturas oficiales."
             />
 
             {/* MAIN GRID LAYOUT (THINNED LEFT COLUMN 340px) */}
@@ -92,7 +92,7 @@ const HistorialComprasPagina = () => {
                                 </div>
                                 <div>
                                     <p className="text-lg font-black text-[#0d1b3e] leading-none">{resumen.cantidad} Pedidos</p>
-                                    <p className="text-[9px] font-black uppercase tracking-wider text-slate-400 mt-1">Registrados con Ã©xito</p>
+                                    <p className="text-[9px] font-black uppercase tracking-wider text-slate-400 mt-1">Registrados con éxito</p>
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
@@ -125,7 +125,7 @@ const HistorialComprasPagina = () => {
                                             <th className="py-3.5 pl-4">ID Pedido</th>
                                             <th className="py-3.5">Fecha</th>
                                             <th className="py-3.5">Detalle</th>
-                                            <th className="py-3.5">MÃ©todo</th>
+                                            <th className="py-3.5">Método</th>
                                             <th className="py-3.5">Monto</th>
                                             <th className="py-3.5">Estado</th>
                                             <th className="py-3.5 pr-4 text-right">Factura</th>
@@ -219,7 +219,7 @@ const HistorialComprasPagina = () => {
 
                             <div className="border-t border-b border-slate-100 py-2.5 space-y-2">
                                 <div className="flex justify-between font-black uppercase text-[9px] text-slate-400 tracking-wider">
-                                    <span>Concepto / AdquisiciÃ³n</span>
+                                    <span>Concepto / Adquisición</span>
                                     <span>Total</span>
                                 </div>
                                 <div className="flex justify-between text-slate-800">
@@ -230,7 +230,7 @@ const HistorialComprasPagina = () => {
 
                             <div className="flex justify-between items-center">
                                 <div>
-                                    <p className="text-[9px] font-black uppercase text-slate-400 tracking-wider">MÃ©todo de Pago:</p>
+                                    <p className="text-[9px] font-black uppercase text-slate-400 tracking-wider">Método de Pago:</p>
                                     <p className="font-bold mt-0.5">{selectedInvoice.payment}</p>
                                 </div>
                                 <div className="text-right">

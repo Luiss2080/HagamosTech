@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 import CircleParticles from '../../../../components/fondos/ParticulasCirculares';
 import PageHero from '../../../../components/func/MigasPan';
 

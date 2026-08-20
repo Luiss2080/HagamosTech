@@ -1,12 +1,12 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useAuthStore from '../../store/useAutenticacionStore';
-import CircuitBackground from '../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
 
 const GRADIENTS = [
-    { id: 'g-red', name: 'Rojo RobÃ³tico', from: '#a41e22', to: '#f56565' },
+    { id: 'g-red', name: 'Rojo Robótico', from: '#a41e22', to: '#f56565' },
     { id: 'g-gold', name: 'Dorado Tech', from: '#c5a059', to: '#ecc94b' },
     { id: 'g-blue', name: 'Azul Espacial', from: '#0f172a', to: '#2563eb' },
     { id: 'g-green', name: 'Verde Cyber', from: '#064e3b', to: '#10b981' },
@@ -305,14 +305,14 @@ const PerfilPagina = () => {
 
         const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/bmp', 'image/tiff'];
         if (!allowedTypes.includes(file.type)) {
-            setPhotoError('Formato de imagen no vÃ¡lido. Solo se aceptan JPG, PNG, WebP, GIF, BMP y TIFF.');
+            setPhotoError('Formato de imagen no válido. Solo se aceptan JPG, PNG, WebP, GIF, BMP y TIFF.');
             e.target.value = '';
             return;
         }
 
         const maxSize = 5 * 1024 * 1024;
         if (file.size > maxSize) {
-            setPhotoError('La imagen supera el peso mÃ¡ximo permitido de 5 MB. Comprime la imagen e intÃ©ntalo de nuevo.');
+            setPhotoError('La imagen supera el peso máximo permitido de 5 MB. Comprime la imagen e inténtalo de nuevo.');
             e.target.value = '';
             return;
         }
@@ -323,7 +323,7 @@ const PerfilPagina = () => {
             const result = await updateProfile({ fotoPerfil: reader.result });
             setIsSaving(false);
             if (result.success) {
-                setSuccessMessage('Â¡Foto de perfil actualizada con Ã©xito!');
+                setSuccessMessage('¡Foto de perfil actualizada con éxito!');
                 setShowSuccessModal(true);
             }
         };
@@ -339,7 +339,7 @@ const PerfilPagina = () => {
         const result = await updateProfile({ fotoPerfil: dataUri });
         setIsSaving(false);
         if (result.success) {
-            setSuccessMessage('Â¡Avatar preestablecido seleccionado!');
+            setSuccessMessage('¡Avatar preestablecido seleccionado!');
             setShowSuccessModal(true);
         }
     };
@@ -402,7 +402,7 @@ const PerfilPagina = () => {
             <PageHero
                 title="Mi cuenta"
                 highlight="personalizable"
-                description="Gestiona tus datos personales, informaciÃ³n de contacto y personaliza tu avatar institucional en HagamosTech."
+                description="Gestiona tus datos personales, información de contacto y personaliza tu avatar institucional en HagamosTech."
             />
 
             {/* MAIN LAYOUT GRID (THINNED LEFT COLUMN 340px) */}
@@ -461,7 +461,7 @@ const PerfilPagina = () => {
                             </div>
                             <p className="text-[10px] text-slate-400 font-bold uppercase mt-2.5 flex items-center gap-1.5">
                                 <i className="fas fa-sparkles text-amber-500"></i>
-                                {completion === 100 ? 'Â¡Tu perfil estÃ¡ completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
+                                {completion === 100 ? '¡Tu perfil está completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
                             </p>
                         </div>
 
@@ -496,7 +496,7 @@ const PerfilPagina = () => {
                                 <div className="flex-1 w-full text-center sm:text-left">
                                     <h4 className="text-base font-extrabold text-slate-850">Cambiar foto de perfil</h4>
                                     <p className="text-[11px] text-slate-500 mt-1 mb-4 leading-relaxed">
-                                        Sube tu foto o escoge uno de nuestros gradientes de alta fidelidad tecnolÃ³gica de abajo.
+                                        Sube tu foto o escoge uno de nuestros gradientes de alta fidelidad tecnológica de abajo.
                                     </p>
                                     {photoError && (
                                         <div className="mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-[11px] font-bold text-red-600 flex items-start gap-2.5">
@@ -536,7 +536,7 @@ const PerfilPagina = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Datos Personales</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">InformaciÃ³n personal y de contacto</p>
+                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Información personal y de contacto</p>
                                 </div>
                             </div>
 
@@ -546,7 +546,7 @@ const PerfilPagina = () => {
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
                                             Nombre
-                                            <Tooltip text="Tu nombre de pila. SerÃ¡ visible en tu perfil y diplomas de capacitaciÃ³n." />
+                                            <Tooltip text="Tu nombre de pila. Será visible en tu perfil y diplomas de capacitación." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-400"><i className="fas fa-user text-xs"></i></span>
@@ -584,8 +584,8 @@ const PerfilPagina = () => {
                                     {/* CI / Documento */}
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
-                                            CÃ©dula de Identidad (CI)
-                                            <Tooltip text="Tu documento de identificaciÃ³n oficial. Necesario para certificar cursos y facturaciones." />
+                                            Cédula de Identidad (CI)
+                                            <Tooltip text="Tu documento de identificación oficial. Necesario para certificar cursos y facturaciones." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-address-card text-xs"></i></span>
@@ -604,14 +604,14 @@ const PerfilPagina = () => {
                                     <CustomDatePicker 
                                         value={formData.fenac} 
                                         onChange={(date) => setFormData(prev => ({ ...prev, fenac: date }))}
-                                        tooltipText="Utilizado para la categorizaciÃ³n y niveles de cursos de robÃ³tica (primaria, secundaria, jÃ³venes)."
+                                        tooltipText="Utilizado para la categorización y niveles de cursos de robótica (primaria, secundaria, jóvenes)."
                                     />
 
-                                    {/* TelÃ©fono */}
+                                    {/* Teléfono */}
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
-                                            NÃºmero de TelÃ©fono
-                                            <Tooltip text="Tu nÃºmero celular. Usado para avisos de mensajerÃ­a de soporte y envÃ­os." />
+                                            Número de Teléfono
+                                            <Tooltip text="Tu número celular. Usado para avisos de mensajería de soporte y envíos." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-phone text-xs"></i></span>
@@ -626,11 +626,11 @@ const PerfilPagina = () => {
                                         </div>
                                     </div>
 
-                                    {/* Colegio/InstituciÃ³n */}
+                                    {/* Colegio/Institución */}
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
-                                            Colegio / InstituciÃ³n
-                                            <Tooltip text="Tu colegio, universidad o empresa. Nos ayuda a adaptar el nivel acadÃ©mico de tus cursos." />
+                                            Colegio / Institución
+                                            <Tooltip text="Tu colegio, universidad o empresa. Nos ayuda a adaptar el nivel académico de tus cursos." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-school text-xs"></i></span>
@@ -639,18 +639,18 @@ const PerfilPagina = () => {
                                                 name="nomcol"
                                                 value={formData.nomcol}
                                                 onChange={handleChange}
-                                                placeholder="Ej. Colegio AlemÃ¡n / UMSA"
+                                                placeholder="Ej. Colegio Alemán / UMSA"
                                                 className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
                                 </div>
 
-                                {/* BiografÃ­a / Frase Corta */}
+                                {/* Biografía / Frase Corta */}
                                 <div>
                                     <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
-                                        BiografÃ­a / Frase Corta
-                                        <Tooltip text="Frase corta que aparecerÃ¡ en tu barra lateral del perfil de usuario." />
+                                        Biografía / Frase Corta
+                                        <Tooltip text="Frase corta que aparecerá en tu barra lateral del perfil de usuario." />
                                     </label>
                                     <div className="relative">
                                         <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-quote-left text-xs"></i></span>
@@ -659,7 +659,7 @@ const PerfilPagina = () => {
                                             name="bio"
                                             value={formData.bio}
                                             onChange={handleChange}
-                                            placeholder="Ej. Estudiante apasionado por la robÃ³tica educativa y la inteligencia artificial"
+                                            placeholder="Ej. Estudiante apasionado por la robótica educativa y la inteligencia artificial"
                                             className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                     </div>
@@ -668,7 +668,7 @@ const PerfilPagina = () => {
                                 {/* Correo (No editable) */}
                                 <div>
                                     <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
-                                        Correo ElectrÃ³nico (No modificable)
+                                        Correo Electrónico (No modificable)
                                         <Tooltip text="El email de tu cuenta. No se puede modificar por motivos de integridad de usuario." />
                                     </label>
                                     <div className="relative opacity-60">
@@ -744,7 +744,7 @@ const PerfilPagina = () => {
                         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-green-500 text-2xl mb-4 shadow-sm">
                             <i className="fas fa-circle-check"></i>
                         </div>
-                        <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-2">Â¡Cambios Guardados!</h3>
+                        <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-2">¡Cambios Guardados!</h3>
                         <p className="text-xs text-slate-500 mb-6 leading-relaxed">
                             {successMessage}
                         </p>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useParams, Navigate } from 'react-router-dom';
 import PageHero from '../../../components/func/MigasPan';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 import { buscarProducto } from '../data/productos';
 import VisualizadorProducto from './sections/VisualizadorProducto';
 import InfoProducto from './sections/InfoProducto';

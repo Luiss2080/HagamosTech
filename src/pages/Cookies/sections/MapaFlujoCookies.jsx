@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const FLUJO = [
     {

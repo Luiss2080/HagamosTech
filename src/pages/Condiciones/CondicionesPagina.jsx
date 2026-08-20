@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import CircuitBackground from '../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../components/fondos/FondoTech';
 import Breadcrumb from '../../components/func/MigasPan';
 
 const TERMS_SECTIONS = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const CtaProducto = ({ frase, gradiente = 'from-[#8B4513] via-[#5D3A1F] to-[#452A16]', enlaceMenu = '/menu/saltenas' }) => {
     return (

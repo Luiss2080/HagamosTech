@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RESUMEN = [
     { icon: 'fa-shield-halved', titulo: 'Compromiso con tu privacidad', desc: 'Nunca vendemos tus datos personales a terceros. Tu información se usa solo para mejorar tu experiencia con nosotros.', color: 'bg-[#A3E635]' },

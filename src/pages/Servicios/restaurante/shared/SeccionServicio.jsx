@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 import SectionHeader from './SectionHeader';
 
 const SeccionServicio = ({ badge, badgeIcon, titulo, resaltado, descripcion, children, maxWidth = 'max-w-7xl' }) => {

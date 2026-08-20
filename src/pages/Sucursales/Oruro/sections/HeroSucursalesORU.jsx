@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../../../../components/func/MigasPan';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const SUCURSALES = [
   { id: 'oru-1', slug: 'franquicia-1', name: 'HagamosTech Franquicia 1', badge: 'ORU 01', address: 'Murguía 982', phone: '68929329', schedule: 'Hasta las 3:00 p.m.', services: ['Consumo', 'Llevar', 'Delivery', 'WiFi', 'Jugos', 'Familiar'], mapLink: 'https://maps.app.goo.gl/qEhwMp7xotXRgwum6', img: '/img/10_sucursales/Oruro/01_Sucursal.png', desc: 'Nuestra primera sucursal en Oruro. Llevamos el auténtico sabor tradicional a la tierra del folklore con la misma receta de siempre.' },

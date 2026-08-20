@@ -1,7 +1,7 @@
-﻿import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { QRCodeSVG } from 'qrcode.react';
-import CircuitBackground from '../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
 import useAuthStore from '../../store/useAutenticacionStore';
@@ -15,16 +15,16 @@ import {
 } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
-    { name: 'Rojo RobÃ³tico', value: '#a41e22', hover: '#801015', bg: 'bg-[#a41e22]', ring: 'ring-[#a41e22]' },
+    { name: 'Rojo Robótico', value: '#a41e22', hover: '#801015', bg: 'bg-[#a41e22]', ring: 'ring-[#a41e22]' },
     { name: 'Dorado Tech', value: '#c5a059', hover: '#a88544', bg: 'bg-[#c5a059]', ring: 'ring-[#c5a059]' },
     { name: 'Azul Espacial', value: '#1d4ed8', hover: '#1e40af', bg: 'bg-blue-700', ring: 'ring-blue-700' },
     { name: 'Verde Cyber', value: '#10b981', hover: '#059669', bg: 'bg-[#10b981]', ring: 'ring-[#10b981]' },
 ];
 
 const PRIVACY_LEVELS = [
-    { id: 'public', name: 'PÃºblico', desc: 'Tu perfil es visible en los rankings del club y otros alumnos pueden ver tus proyectos de robÃ³tica.', icon: 'fa-earth-americas', color: 'text-blue-500' },
-    { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio tÃ©cnico.', icon: 'fa-users', color: 'text-[#c5a059]' },
-    { id: 'private', name: 'Privado', desc: 'Nadie puede ver tu perfil. Tus avances acadÃ©micos y proyectos estÃ¡n completamente ocultos.', icon: 'fa-user-lock', color: 'text-red-500' }
+    { id: 'public', name: 'Público', desc: 'Tu perfil es visible en los rankings del club y otros alumnos pueden ver tus proyectos de robótica.', icon: 'fa-earth-americas', color: 'text-blue-500' },
+    { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio técnico.', icon: 'fa-users', color: 'text-[#c5a059]' },
+    { id: 'private', name: 'Privado', desc: 'Nadie puede ver tu perfil. Tus avances académicos y proyectos están completamente ocultos.', icon: 'fa-user-lock', color: 'text-red-500' }
 ];
 
 const Tooltip = ({ text }) => (
@@ -73,7 +73,7 @@ const ConfiguracionPagina = () => {
     const [secret2FA, setSecret2FA] = useState('');
     const [otpauthUrl2FA, setOtpauthUrl2FA] = useState('');
 
-    // --- Cambio de ContraseÃ±a ---
+    // --- Cambio de Contraseña ---
     const [passwords, setPasswords] = useState({
         current: '',
         new: '',
@@ -81,7 +81,7 @@ const ConfiguracionPagina = () => {
     });
     const [passError, setPassError] = useState('');
 
-    // --- Modal de ConfirmaciÃ³n Zona de Peligro ---
+    // --- Modal de Confirmación Zona de Peligro ---
     const [showDangerModal, setShowDangerModal] = useState(false);
 
     // --- Listar sesiones activas al cargar ---
@@ -95,7 +95,7 @@ const ConfiguracionPagina = () => {
 
     const handleAccentChange = (colorValue) => {
         setAccentColor(colorValue);
-        setSuccessMessage('Â¡Color de acento actualizado!');
+        setSuccessMessage('¡Color de acento actualizado!');
         setShowSuccessModal(true);
     };
 
@@ -112,7 +112,7 @@ const ConfiguracionPagina = () => {
     };
 
 
-    // --- Handlers de ContraseÃ±a ---
+    // --- Handlers de Contraseña ---
     const handlePasswordChange = (e) => {
         const { name, value } = e.target;
         setPasswords(prev => ({ ...prev, [name]: value }));
@@ -121,12 +121,12 @@ const ConfiguracionPagina = () => {
 
     const handlePasswordSubmit = async (e) => {
         e.preventDefault();
-        if (passwords.new.length < 6) { setPassError('La nueva contraseÃ±a debe tener al menos 6 caracteres.'); return; }
-        if (passwords.new !== passwords.confirm) { setPassError('La confirmaciÃ³n de la contraseÃ±a no coincide.'); return; }
+        if (passwords.new.length < 6) { setPassError('La nueva contraseña debe tener al menos 6 caracteres.'); return; }
+        if (passwords.new !== passwords.confirm) { setPassError('La confirmación de la contraseña no coincide.'); return; }
         const result = await cambiarPassword(passwords.current, passwords.new, passwords.confirm);
         if (result.success) {
             setPasswords({ current: '', new: '', confirm: '' });
-            setSuccessMessage('Tu contraseÃ±a ha sido cambiada con Ã©xito.');
+            setSuccessMessage('Tu contraseña ha sido cambiada con éxito.');
             setShowSuccessModal(true);
         } else {
             setPassError(result.message);
@@ -160,13 +160,13 @@ const ConfiguracionPagina = () => {
     const handleConfirm2FA = async (e) => {
         e.preventDefault();
         if (verificationCode.length !== 6 || isNaN(verificationCode)) {
-            setCodeError('CÃ³digo de 6 dÃ­gitos requerido.'); return;
+            setCodeError('Código de 6 dígitos requerido.'); return;
         }
         const result = await toggle2FA(true, verificationCode);
         if (result.success) {
             setShow2FAModal(false);
             setIs2FAEnabled(true);
-            setSuccessMessage('Â¡2FA activada!');
+            setSuccessMessage('¡2FA activada!');
             setShowSuccessModal(true);
         } else {
             setCodeError(result.message);
@@ -184,7 +184,7 @@ const ConfiguracionPagina = () => {
         setShowSuccessModal(true);
     };
 
-    // MenÃº de pestaÃ±as para mÃ³viles/tablets
+    // Menú de pestañas para móviles/tablets
     const navItemsMobile = [
         { path: '/perfil', label: 'Mi Perfil', icon: 'fa-user' },
         { path: '/perfil/compras', label: 'Compras', icon: 'fa-receipt' },
@@ -240,14 +240,14 @@ const ConfiguracionPagina = () => {
                             })}
                         </div>
 
-                        {/* PERSONALIZACIÃ“N VISUAL */}
+                        {/* PERSONALIZACIÓN VISUAL */}
                         <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
                                 <div className="w-7 h-7 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
                                     <i className="fas fa-palette"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">PersonalizaciÃ³n Visual</h3>
+                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Personalización Visual</h3>
                                     <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">APARIENCIA DEL PORTAL</p>
                                 </div>
                             </div>
@@ -320,21 +320,21 @@ const ConfiguracionPagina = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Seguridad</h3>
-                                    <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">PROTECCIÃ“N DE LA CUENTA</p>
+                                    <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">PROTECCIÓN DE LA CUENTA</p>
                                 </div>
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Change Password */}
                                 <div className="space-y-2 border-r-0 sm:border-r border-slate-100 sm:pr-4">
-                                    <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Cambiar ContraseÃ±a</h4>
+                                    <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Cambiar Contraseña</h4>
                                     <form onSubmit={handlePasswordSubmit} className="space-y-2">
                                         <input 
                                             type="password" 
                                             name="current"
                                             value={passwords.current}
                                             onChange={handlePasswordChange}
-                                            placeholder="ContraseÃ±a Actual"
+                                            placeholder="Contraseña Actual"
                                             required
                                             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
@@ -343,7 +343,7 @@ const ConfiguracionPagina = () => {
                                             name="new"
                                             value={passwords.new}
                                             onChange={handlePasswordChange}
-                                            placeholder="Nueva ContraseÃ±a"
+                                            placeholder="Nueva Contraseña"
                                             required
                                             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
@@ -352,7 +352,7 @@ const ConfiguracionPagina = () => {
                                             name="confirm"
                                             value={passwords.confirm}
                                             onChange={handlePasswordChange}
-                                            placeholder="Confirmar Nueva ContraseÃ±a"
+                                            placeholder="Confirmar Nueva Contraseña"
                                             required
                                             className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
@@ -364,7 +364,7 @@ const ConfiguracionPagina = () => {
                                             disabled={passLoading}
                                             className="w-full py-2 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-[10px] font-black uppercase tracking-wider shadow-sm shadow-red-500/30 transition-all cursor-pointer border-0 disabled:opacity-50"
                                         >
-                                            {passLoading ? 'Cambiando...' : 'Cambiar ContraseÃ±a'}
+                                            {passLoading ? 'Cambiando...' : 'Cambiar Contraseña'}
                                         </button>
                                     </form>
                                 </div>
@@ -387,7 +387,7 @@ const ConfiguracionPagina = () => {
                                         <div className="flex gap-2 items-center">
                                             <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center text-sm"><i className="fas fa-mobile-screen"></i></div>
                                             <div>
-                                                <p className="text-[10px] font-extrabold text-slate-800 leading-tight">CÃ³digo por AplicaciÃ³n</p>
+                                                <p className="text-[10px] font-extrabold text-slate-800 leading-tight">Código por Aplicación</p>
                                                 <p className="text-[8px] text-slate-450">Recomendado</p>
                                             </div>
                                         </div>
@@ -429,7 +429,7 @@ const ConfiguracionPagina = () => {
                                                     </div>
                                                     <div className="text-left">
                                                         <p className="text-[11px] font-black text-slate-850 leading-tight">{sess.device}</p>
-                                                        <p className="text-[8px] text-slate-550 truncate max-w-[120px]">{sess.location} â€¢ {sess.date}</p>
+                                                        <p className="text-[8px] text-slate-550 truncate max-w-[120px]">{sess.location} • {sess.date}</p>
                                                     </div>
                                                 </div>
                                                 {sess.date !== 'Conectado ahora' && (
@@ -456,13 +456,13 @@ const ConfiguracionPagina = () => {
                                         </div>
                                         <div>
                                             <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Acciones Avanzadas</h3>
-                                            <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">GESTIÃ“N DE DATOS</p>
+                                            <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">GESTIÓN DE DATOS</p>
                                         </div>
                                     </div>
                                     
                                     <div className="space-y-2">
                                         <div>
-                                            <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Exportar InformaciÃ³n</h4>
+                                            <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Exportar Información</h4>
                                             <p className="text-[9px] text-slate-500 leading-normal mt-1">
                                                 Copia de seguridad JSON de tus datos.
                                             </p>
@@ -513,7 +513,7 @@ const ConfiguracionPagina = () => {
                         </div>
                         <h3 className="text-lg font-black text-slate-850 mb-2">Configurar Doble Factor</h3>
                         <p className="text-xs text-slate-500 mb-6 leading-relaxed">
-                            Escanea este cÃ³digo QR con Google Authenticator, Duo o tu app preferida, luego ingresa el cÃ³digo de 6 dÃ­gitos que aparezca.
+                            Escanea este código QR con Google Authenticator, Duo o tu app preferida, luego ingresa el código de 6 dígitos que aparezca.
                         </p>
 
                         {/* Real QR Code */}
@@ -557,9 +557,9 @@ const ConfiguracionPagina = () => {
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-red-100 text-red-500 text-3xl mb-6 shadow-inner">
                             <i className="fas fa-triangle-exclamation animate-pulse"></i>
                         </div>
-                        <h3 className="text-xl font-black text-slate-800 mb-2">Â¿Desactivar tu Cuenta?</h3>
+                        <h3 className="text-xl font-black text-slate-800 mb-2">¿Desactivar tu Cuenta?</h3>
                         <p className="text-sm text-slate-500 mb-6 leading-relaxed">
-                            Al hacer esto, se suspenderÃ¡n temporalmente tus accesos a cursos y libros digitales. PodrÃ¡s reactivarla en cualquier momento comunicÃ¡ndote con el equipo de soporte.
+                            Al hacer esto, se suspenderán temporalmente tus accesos a cursos y libros digitales. Podrás reactivarla en cualquier momento comunicándote con el equipo de soporte.
                         </p>
                         <div className="flex flex-col gap-2.5">
                             <button 
@@ -575,7 +575,7 @@ const ConfiguracionPagina = () => {
                                 }}
                                 className="w-full py-3 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                             >
-                                Confirmar DesactivaciÃ³n
+                                Confirmar Desactivación
                             </button>
                             <button 
                                 onClick={() => setShowDangerModal(false)}
@@ -595,7 +595,7 @@ const ConfiguracionPagina = () => {
                         <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100 text-green-500 text-3xl mb-6 shadow-inner">
                             <i className="fas fa-circle-check"></i>
                         </div>
-                        <h3 className="text-xl font-black text-slate-800 mb-2">ConfiguraciÃ³n Guardada</h3>
+                        <h3 className="text-xl font-black text-slate-800 mb-2">Configuración Guardada</h3>
                         <p className="text-sm text-slate-500 mb-6 leading-relaxed">
                             {successMessage}
                         </p>

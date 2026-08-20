@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import PageHero from '../../../../components/func/MigasPan';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const SUCURSALES = [
   { id: 'cbb-1', slug: 'recoleta', name: 'HagamosTech Recoleta', badge: 'CBB 01', address: 'C. A. Padilla 541', phone: '4 4798010', schedule: 'Hasta las 3:00 p.m.', services: ['Consumo', 'Llevar', 'WiFi', 'Terraza', 'Jugos', 'Delivery'], mapLink: 'https://maps.app.goo.gl/wLX45LiJwESxNX6P8', img: '/img/10_sucursales/Cochabamba/01_Sucursal.png', desc: 'Ubicada en la zona más tradicional de Cochabamba. Ambiente acogedor con la receta original que conquistó la ciudad.' },

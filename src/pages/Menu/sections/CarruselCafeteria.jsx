@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 import CarruselProductos from '../../../components/carouseles/CarruselProductos';
 
 const PRODUCTOS_CAFETERIA = [

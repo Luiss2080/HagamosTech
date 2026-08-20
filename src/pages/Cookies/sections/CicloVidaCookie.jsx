@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const FASES = [
     { icon: 'fa-cookie-bite', titulo: 'Se crea', desc: 'Cuando visitás el sitio por primera vez, el navegador guarda una cookie pequeña.', duracion: 'Milisegundos', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' },

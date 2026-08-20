@@ -1,7 +1,6 @@
 import React from 'react';
-import HeroSaltenas from './sections/HeroSaltenas';
-import QueHacemos from './sections/QueHacemos';
-import FlujoTrabajo from './sections/FlujoTrabajo';
+import HeroHagamosTech from './sections/HeroHagamosTech';
+import { QueHacemos, FlujoTrabajo } from './sections/QueHacemos';
 import useModalStore from '../../store/useModalStore';
 
 const Inicio = () => {
@@ -9,7 +8,7 @@ const Inicio = () => {
 
     return (
         <div id="app" className="relative overflow-hidden">
-            <HeroSaltenas />
+            <HeroHagamosTech />
             <QueHacemos />
             <FlujoTrabajo />
 

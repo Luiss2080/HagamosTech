@@ -1,14 +1,14 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import axios from 'axios';
-import CircuitBackground from '../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../components/fondos/FondoTech';
 
 const PagoMovil = () => {
     const [searchParams] = useSearchParams();
     const [status, setStatus] = useState('pending'); // pending, success, error
     const [loading, setLoading] = useState(false);
 
-    // Debug: ver en consola del mÃ³vil si llega
+    // Debug: ver en consola del móvil si llega
     console.log("PagoMovil cargado. Params:", Object.fromEntries(searchParams));
 
     const orderId = searchParams.get('id'); // Este es el codigo ESP-XXXXXX
@@ -18,7 +18,7 @@ const PagoMovil = () => {
     const handleConfirmar = async () => {
         setLoading(true);
         try {
-            // La URL base debe ser la IP del servidor detectada en el mÃ³vil
+            // La URL base debe ser la IP del servidor detectada en el móvil
             const baseUrl = window.location.origin.replace(':5173', ':3000');
             await axios.post(`${baseUrl}/api/pagos/confirmar`, {
                 id: orderId,
@@ -54,7 +54,7 @@ const PagoMovil = () => {
                 {status === 'pending' && (
                     <>
                         <h1 className="text-3xl font-black mb-2">Confirmar Pago</h1>
-                        <p className="text-slate-400 text-sm mb-8 font-medium">EstÃ¡s a un paso de completar tu compra en HagamosTech</p>
+                        <p className="text-slate-400 text-sm mb-8 font-medium">Estás a un paso de completar tu compra en HagamosTech</p>
 
                         <div className="bg-white/5 rounded-2xl p-6 border border-white/10 mb-8">
                             <p className="text-[10px] font-black uppercase tracking-widest text-[#FFC107] mb-2 text-left">Monto a Pagar</p>
@@ -76,8 +76,8 @@ const PagoMovil = () => {
 
                 {status === 'success' && (
                     <div className="animate-fade-in">
-                        <h1 className="text-3xl font-black mb-2">Â¡Pago Exitoso!</h1>
-                        <p className="text-emerald-400 font-bold mb-8">Tu transacciÃ³n ha sido validada.</p>
+                        <h1 className="text-3xl font-black mb-2">¡Pago Exitoso!</h1>
+                        <p className="text-emerald-400 font-bold mb-8">Tu transacción ha sido validada.</p>
                         
                         <div className="bg-emerald-500/10 rounded-2xl p-6 border border-emerald-500/20 mb-8">
                             <p className="text-sm text-slate-300 font-medium">
@@ -94,7 +94,7 @@ const PagoMovil = () => {
                 {status === 'error' && (
                     <div className="animate-fade-in">
                         <h1 className="text-3xl font-black mb-2 text-red-400">Error de Pago</h1>
-                        <p className="text-red-300 font-medium mb-8">No pudimos procesar la confirmaciÃ³n.</p>
+                        <p className="text-red-300 font-medium mb-8">No pudimos procesar la confirmación.</p>
                         <button
                             onClick={() => setStatus('pending')}
                             className="w-full py-4 bg-white/10 text-white font-black text-sm uppercase tracking-widest rounded-2xl border border-white/20 hover:bg-white/20 transition-all"
@@ -109,7 +109,7 @@ const PagoMovil = () => {
                 <div className="inline-flex items-center justify-center rounded-full bg-white/10 p-1.5 ring-[0.5px] ring-white/40">
                     <img src="/img/01_Layout/01_Logo.png" alt="Logo" className="h-8 w-8 rounded-full object-contain" />
                 </div>
-                <span className="text-[10px] font-black uppercase tracking-widest">TecnologÃ­a de Vanguardia</span>
+                <span className="text-[10px] font-black uppercase tracking-widest">Tecnología de Vanguardia</span>
             </div>
         </div>
     );

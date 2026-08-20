@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const LOGROS = [
     { year: '2026', icon: 'fa-trophy', titulo: 'Mejor Salteñería 5 años seguidos', desc: 'Reconocidos por votación popular como la mejor salteñería de Santa Cruz por quinta vez consecutiva.', color: 'bg-[#FF4D00]', soft: 'bg-[#FF4D00]/10 text-[#FF4D00] border-[#FF4D00]/25', badge: 'bg-[#FF4D00]', feats: [{ icon: 'fa-award', label: '5 años seguidos', chip: 'bg-[#FF4D00]/10 text-[#FF4D00] border-[#FF4D00]/25' }, { icon: 'fa-users', label: 'Votación popular', chip: 'bg-orange-50 text-[#8B4513] border-orange-100' }] },

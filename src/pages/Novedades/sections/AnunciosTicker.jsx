@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
     { titulo: 'Cerramos por mantenimiento', desc: 'Domingo 14 de septiembre. Volvemos el lunes con todo fresco.', img: '/img/10_sucursales/SantaCruz/01_Sucursal.png', tag: 'AVISO' },

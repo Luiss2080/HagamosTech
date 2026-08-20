@@ -1,5 +1,5 @@
 import React from 'react';
-import CircuitBackground from '../../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../../components/fondos/FondoTech';
 
 const TimelineSeccion = ({ eventos, badge = 'Nuestra Historia', titulo, resaltado }) => {
     return (

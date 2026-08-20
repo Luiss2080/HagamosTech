@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const DERECHOS = [
     { icon: 'fa-eye', titulo: 'Acceso', desc: 'Pedí una copia de todos los datos personales que tenemos sobre vos. Te la entregamos en un formato simple y legible.', tiempo: '10 días hábiles' },

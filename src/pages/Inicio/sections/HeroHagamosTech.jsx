@@ -10,7 +10,7 @@ const HERO_CARDS = [
     { id: 'personalizado', icon: 'fa-lightbulb', title: 'Soluciones a medida', desc: '¿No sabés qué necesitás? Contanos el problema.' },
 ];
 
-const HeroSaltenas = () => {
+const HeroHagamosTech = () => {
     const navigate = useNavigate();
     const openModal = useModalStore((state) => state.openModal);
 
@@ -121,4 +121,4 @@ const HeroSaltenas = () => {
     );
 };
 
-export default HeroSaltenas;
+export default HeroHagamosTech;

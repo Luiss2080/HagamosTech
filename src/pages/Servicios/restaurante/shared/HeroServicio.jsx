@@ -1,6 +1,6 @@
 import React from 'react';
 import PageHero from '../../../../components/func/MigasPan';
-import CircuitBackground from '../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../components/fondos/FondoTech';
 
 const HeroServicio = ({ titulo, resaltado, descripcion }) => {
     return (

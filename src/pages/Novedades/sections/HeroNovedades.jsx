@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import PageHero from '../../../components/func/MigasPan';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 import AnunciosTicker from './AnunciosTicker';
 
 const NOTICIAS = [

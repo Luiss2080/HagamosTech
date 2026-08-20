@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import CircuitBackground from '../../../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../../../components/fondos/FondoTech';
 
 const GaleriaSeccion = ({ imagenes, badge = 'Nuestra Galería', titulo, resaltado, descripcion }) => {
     const [galleryIdx, setGalleryIdx] = useState(0);

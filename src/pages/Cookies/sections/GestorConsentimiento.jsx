@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoSaltenas';
+import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const TIPOS_COOKIES = [
     { id: 'esenciales', icon: 'fa-lock', titulo: 'Esenciales', desc: 'Necesarias para que el sitio funcione: carrito, sesión y seguridad.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', obligatoria: true },
