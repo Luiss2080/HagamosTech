@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 import { buscarProducto } from './catalogo/data/productos';
 
-const STORAGE_KEY = 'loscatores_carrito';
+const STORAGE_KEY = 'hagamostech_carrito';
 
 const leerStorage = () => {
   try {

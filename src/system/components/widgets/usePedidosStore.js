@@ -173,7 +173,7 @@ export const usePedidosStore = create(persist((set, get) => ({
   ingresosHoy: () => get().ordenes.filter(o => o.pagado).reduce((a, o) => a + (o.total || 0), 0),
   totalPorCobrar: () => get().ordenes.filter(o => o.estado === 'en_caja').reduce((a, o) => a + (o.total || 0), 0)
 }), {
-  name: 'loscatores_pedidos',
+  name: 'hagamostech_pedidos',
   partialize: (state) => ({ ordenes: state.ordenes, contadorCodigo: state.contadorCodigo })
 }));
 

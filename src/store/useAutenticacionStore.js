@@ -4,14 +4,14 @@ import apiClient from '../servicios/clienteApi';
 
 const SESSION_TIMEOUT_MS = 60 * 60 * 1000;
 
-const SS_TOKEN = 'loscatores_token';
-const SS_ACTIVITY = 'loscatores_last_activity';
-const SS_PROFILE = 'loscatores_user_profile';
+const SS_TOKEN = 'hagamostech_token';
+const SS_ACTIVITY = 'hagamostech_last_activity';
+const SS_PROFILE = 'hagamostech_user_profile';
 
 const getToken = () => sessionStorage.getItem(SS_TOKEN);
 const setToken = (t) => {
-  if (t) { sessionStorage.setItem(SS_TOKEN, t); Cookies.set('loscatores_token', t); }
-  else { sessionStorage.removeItem(SS_TOKEN); Cookies.remove('loscatores_token'); }
+  if (t) { sessionStorage.setItem(SS_TOKEN, t); Cookies.set('hagamostech_token', t); }
+  else { sessionStorage.removeItem(SS_TOKEN); Cookies.remove('hagamostech_token'); }
 };
 const getActivity = () => {
   const v = sessionStorage.getItem(SS_ACTIVITY);
@@ -19,8 +19,8 @@ const getActivity = () => {
 };
 const setActivity = () => sessionStorage.setItem(SS_ACTIVITY, Date.now().toString());
 
-const LS_FOTO_BASE = 'loscatores_foto_perfil';
-const LS_FOTO_LEGACY = 'loscatores_foto_perfil';
+const LS_FOTO_BASE = 'hagamostech_foto_perfil';
+const LS_FOTO_LEGACY = 'hagamostech_foto_perfil';
 const INVITADO_KEY = 'lc_invitado';
 const INVITADO_FIN_KEY = 'lc_invitado_fin';
 
@@ -59,7 +59,7 @@ const useAuthStore = create((set, get) => ({
 
     initSession: () => {
       const ssToken = getToken();
-      const cookieToken = Cookies.get('loscatores_token');
+      const cookieToken = Cookies.get('hagamostech_token');
       const token = ssToken || cookieToken;
       const lastActivity = getActivity();
 
@@ -77,7 +77,7 @@ const useAuthStore = create((set, get) => ({
       if (ssToken && lastActivity) {
         const elapsed = Date.now() - lastActivity;
         if (elapsed < SESSION_TIMEOUT_MS) {
-          Cookies.set('loscatores_token', token);
+          Cookies.set('hagamostech_token', token);
           setActivity();
           set({ user: restoreFoto(userFromCache), isAuthenticated: true });
           return true;
@@ -115,7 +115,7 @@ const useAuthStore = create((set, get) => ({
       sessionStorage.removeItem(SS_TOKEN);
       sessionStorage.removeItem(SS_ACTIVITY);
       sessionStorage.removeItem(SS_PROFILE);
-      Cookies.remove('loscatores_token');
+      Cookies.remove('hagamostech_token');
       set({ user: null, isAuthenticated: false });
     },
 
@@ -286,7 +286,7 @@ const useAuthStore = create((set, get) => ({
             localStorage.setItem(fotoKey(get().user.id), datos.fotoPerfil);
         }
         try {
-            const token = getToken() || Cookies.get('loscatores_token');
+            const token = getToken() || Cookies.get('hagamostech_token');
             const { data } = await apiClient.put('/perfil', datos, {
                 headers: { Authorization: `Bearer ${token}` }
             });
@@ -316,7 +316,7 @@ const useAuthStore = create((set, get) => ({
                 console.error('Error parsing cached profile:', e);
             }
         }
-        const token = getToken() || Cookies.get('loscatores_token');
+        const token = getToken() || Cookies.get('hagamostech_token');
         if (!token) {
             get()._destroySession();
             return;

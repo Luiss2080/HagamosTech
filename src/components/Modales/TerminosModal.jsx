@@ -36,7 +36,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '9. Contacto y soporte',
-        text: 'Para consultas sobre términos, pagos, soporte técnico o garantías, contáctanos al WhatsApp +591 61320004 o al correo contacto@loscatores.bo. Nuestro horario de atención es lunes a sábado de 9:00 a 19:00.',
+        text: 'Para consultas sobre términos, pagos, soporte técnico o garantías, contáctanos al WhatsApp +591 61320004 o al correo contacto@hagamostech.bo. Nuestro horario de atención es lunes a sábado de 9:00 a 19:00.',
     },
 ];
 

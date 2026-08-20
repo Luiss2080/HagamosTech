@@ -7,7 +7,7 @@ import ModalExito from './ModalExito';
 import ModalError from './ModalError';
 
 const INITIAL_FORM = {
-    correo: 'admin@loscatores.com',
+    correo: 'admin@hagamostech.com',
     contrasena: 'password123',
     rememberMe: true,
 };

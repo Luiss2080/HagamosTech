@@ -302,7 +302,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             onClick={async () => {
                                 setShowDiploma(false);
                                 try {
-                                    const token = sessionStorage.getItem('loscatores_token') || Cookies.get('loscatores_token');
+                                    const token = sessionStorage.getItem('hagamostech_token') || Cookies.get('hagamostech_token');
                                     const { data } = await apiClient.get('/perfil/certificado', {
                                         headers: { Authorization: `Bearer ${token}` },
                                         responseType: 'blob'
@@ -310,7 +310,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                                     const url = window.URL.createObjectURL(new Blob([data]));
                                     const a = document.createElement('a');
                                     a.href = url;
-                                    a.download = 'certificado_loscatores.pdf';
+                                    a.download = 'certificado_hagamostech.pdf';
                                     a.click();
                                     window.URL.revokeObjectURL(url);
                                 } catch {

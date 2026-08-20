@@ -83,9 +83,9 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                         <p className="text-[10px] font-bold text-white/80 uppercase tracking-widest mb-2.5">Seguinos en redes</p>
                                         <div className="grid grid-cols-2 gap-2">
                                             {[
-                                                { label: 'TikTok', icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
+                                                { label: 'TikTok', icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                                 { label: 'Facebook', icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH?locale=es_LA' },
-                                                { label: 'Instagram', icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
+                                                { label: 'Instagram', icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
                                                 { label: 'WhatsApp', icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                             ].map((item) => (
                                                 <a

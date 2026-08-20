@@ -136,11 +136,11 @@ const App = () => {
       openModal(resolvedModalName, orderData);
     };
 
-    window.addEventListener('loscatores-open-modal', handleOpenCustomModal);
+    window.addEventListener('hagamostech-open-modal', handleOpenCustomModal);
 
     return () => {
         delete window.openModal;
-        window.removeEventListener('loscatores-open-modal', handleOpenCustomModal);
+        window.removeEventListener('hagamostech-open-modal', handleOpenCustomModal);
     };
   }, [openModal]);
 

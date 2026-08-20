@@ -104,13 +104,13 @@ cd server && npx prisma studio
 | `DATABASE_URL` | `mysql://root:@localhost:3306/Loshagamostech` | Conexión a MySQL |
 | `PORT` | `3000` | Puerto del servidor |
 | `NODE_ENV` | `development` | Entorno |
-| `JWT_SECRET` | `loscatores_dev_secret_key_2026` | Secret para tokens |
+| `JWT_SECRET` | `hagamostech_dev_secret_key_2026` | Secret para tokens |
 | `FRONTEND_URL` | `http://localhost:4001` | URL del frontend (CORS) |
 
 ## Notas
 
 - El servidor usa `cors()` para permitir peticiones del frontend
-- La autenticación usa JWT almacenado en cookies (`loscatores_token`)
+- La autenticación usa JWT almacenado en cookies (`hagamostech_token`)
 - En producción se usa el backend PHP (`api/`) en lugar de este Node.js
 
 ---

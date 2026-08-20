@@ -6,8 +6,8 @@ const getUsuarioId = async (req) => {
     if (!usuario) {
         usuario = await prisma.clienteUsuario.create({
             data: {
-                correo: 'cliente@loscatoresscz.com',
-                contrasena: 'loscatoresscz123',
+                correo: 'cliente@hagamostech.bo',
+                contrasena: 'hagamostech123',
                 nombre: 'Cliente General',
                 fechaActualizacion: new Date()
             }

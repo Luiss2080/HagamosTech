@@ -50,7 +50,7 @@ const ConfiguracionPagina = () => {
 
     // --- Estados ---
     const [accentColor, setAccentColor] = useState(() => {
-        return localStorage.getItem('loscatores_accent_color') || '#a41e22';
+        return localStorage.getItem('hagamostech_accent_color') || '#a41e22';
     });
 
     const [privacy, setPrivacy] = useState('members');
@@ -90,7 +90,7 @@ const ConfiguracionPagina = () => {
     // --- Aplicar Acento al Cargar ---
     useEffect(() => {
         document.documentElement.style.setProperty('--color-primary', accentColor);
-        localStorage.setItem('loscatores_accent_color', accentColor);
+        localStorage.setItem('hagamostech_accent_color', accentColor);
     }, [accentColor]);
 
     const handleAccentChange = (colorValue) => {

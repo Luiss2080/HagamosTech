@@ -3,7 +3,7 @@ import apiClient from '../servicios/clienteApi';
 import Cookies from 'js-cookie';
 import useAuthStore from '../store/useAutenticacionStore';
 
-const getToken = () => sessionStorage.getItem('loscatores_token') || Cookies.get('loscatores_token');
+const getToken = () => sessionStorage.getItem('hagamostech_token') || Cookies.get('hagamostech_token');
 
 export function useCambioPassword() {
   const [loading, setLoading] = useState(false);
@@ -152,7 +152,7 @@ export function useExportarDatos() {
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = `loscatores_backup_${Date.now()}.json`;
+      a.download = `hagamostech_backup_${Date.now()}.json`;
       a.click();
       URL.revokeObjectURL(url);
       return { success: true };

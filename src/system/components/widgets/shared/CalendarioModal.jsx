@@ -8,14 +8,14 @@ const CalendarioModal = ({ isOpen, onClose, userId }) => {
 
   useEffect(() => {
     if (isOpen && userId) {
-      const data = localStorage.getItem(`loscatores_agenda_${userId}`);
+      const data = localStorage.getItem(`hagamostech_agenda_${userId}`);
       if (data) setEventos(JSON.parse(data));
     }
   }, [isOpen, userId]);
 
   useEffect(() => {
     if (userId) {
-      localStorage.setItem(`loscatores_agenda_${userId}`, JSON.stringify(eventos));
+      localStorage.setItem(`hagamostech_agenda_${userId}`, JSON.stringify(eventos));
     }
   }, [eventos, userId]);
 

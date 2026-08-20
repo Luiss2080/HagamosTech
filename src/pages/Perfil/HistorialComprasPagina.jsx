@@ -24,7 +24,7 @@ const HistorialComprasPagina = () => {
         { path: '/configuracion', label: 'Config', icon: 'fa-gear' },
     ];
 
-    const cachedUser = localStorage.getItem('loscatores_user_profile');
+    const cachedUser = localStorage.getItem('hagamostech_user_profile');
     const userData = cachedUser ? JSON.parse(cachedUser) : {
         nombre: 'Luis',
         apellido: 'Sanders',

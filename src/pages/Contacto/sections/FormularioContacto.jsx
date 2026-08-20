@@ -107,8 +107,8 @@ const FormularioContacto = () => {
                                     <div className="flex justify-center gap-3">
                                         {[
                                             { icon: 'fa-facebook-f', link: 'https://www.facebook.com/LOSHAGAMOSTECH?locale=es_LA' },
-                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/loscatoresbolivia/' },
-                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@loscatores' },
+                                            { icon: 'fa-instagram', link: 'https://www.instagram.com/hagamostech/' },
+                                            { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
                                             <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">

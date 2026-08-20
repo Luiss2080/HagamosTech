@@ -2,7 +2,7 @@ import { useState, useCallback } from 'react';
 import apiClient from '../servicios/clienteApi';
 import Cookies from 'js-cookie';
 
-const getToken = () => sessionStorage.getItem('loscatores_token') || Cookies.get('loscatores_token');
+const getToken = () => sessionStorage.getItem('hagamostech_token') || Cookies.get('hagamostech_token');
 
 export function useHistorialCompras() {
   const [compras, setCompras] = useState([]);
