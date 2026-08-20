@@ -4,35 +4,27 @@ Plataforma web de HagamosTech.
 
 ## Descripción
 
-HagamosTech es una plataforma web de salteñería que ofrece:
+HagamosTech es una plataforma web que ofrece:
 - **Pedidos online** de salteñas (pollo, carne, picante, vegetarianas)
-- **Delivery y retiro** en sucursales de Santa Cruz
+- **Delivery y retiro** en sucursales
 - **Pedidos al por mayor** para eventos y empresas
 - **Gestión de clientes** y panel administrativo completo
 
 ## Estructura del Proyecto
 
 ```
-LOS-HAGAMOSTECH/
+HAGAMOSTECH/
 ├── src/                    # Frontend React + Vite
 │   ├── components/         # Componentes React
 │   ├── pages/              # Páginas de la app
 │   ├── servicios/          # Servicios API (axios)
 │   ├── store/              # Estado global (Zustand)
 │   └── styles/             # Estilos CSS
-├── server/                 # Backend Node.js + Prisma (solo desarrollo)
+├── server/                 # Backend Node.js + Prisma
 │   ├── store/              # API pública (tienda): controllers + routes
 │   ├── system/             # API del panel: controllers + routes + utils
-│   ├── prisma/             # Esquema y seeds de Prisma
+│   ├── prisma/             # Esquema y seed de Prisma
 │   └── servidor.js         # Punto de entrada
-├── api/                    # Backend PHP (producción en hosting compartido)
-│   ├── 01_config.php       # Configuración de BD (dual: local/prod)
-│   ├── index.php           # Router principal
-│   └── *.php               # Endpoints de API (numerados)
-├── database/               # Scripts maestros de base de datos
-│   ├── 01_esquema_Loshagamostech.sql
-│   ├── 02_datos_Loshagamostech.sql
-│   └── runner.cjs          # Herramienta de migración/seed
 ├── scripts/                # Scripts de automatización
 │   ├── 01-dev.bat          # Iniciar desarrollo local
 │   └── 02-build.bat        # Build para producción
@@ -48,7 +40,7 @@ LOS-HAGAMOSTECH/
 **Requisitos:**
 - Node.js 18+
 - MySQL 8.0+ (Laragon o XAMPP)
-- Puerto 3000 (backend) y 4001 (frontend) libres
+- Puerto 3000 (backend) y 4000 (frontend) libres
 
 **Iniciar:**
 ```bash
@@ -56,15 +48,15 @@ LOS-HAGAMOSTECH/
 # Opción 2: Manualmente
 
 cd server && npm run dev    # Backend: http://localhost:3000
-cd .. && npm run dev        # Frontend: http://localhost:4001
+cd .. && npm run dev        # Frontend: http://localhost:4000
 ```
 
 **Base de datos local:**
-- Base: `Loshagamostech`
+- Base: `HagamosTech`
 - Usuario: `root` (sin password)
 - Host: `localhost:3306`
-- Esquema: `npm run db:migrate` (aplica `database/01_esquema_Loshagamostech.sql`)
-- Datos: `npm run db:seed` (aplica `database/02_datos_Loshagamostech.sql`)
+- Esquema: `cd server && npx prisma db push`
+- Datos semilla: `cd server && npm run db:seed`
 
 ### 2. Producción
 
@@ -75,14 +67,9 @@ cd .. && npm run dev        # Frontend: http://localhost:4001
 npm run build   # Usa automáticamente .env.production
 ```
 
-**Deploy:**
-```bash
-# O manualmente con cualquier cliente FTP
-```
-
 **URLs:**
-- Frontend: https://tudominio.com
-- API: https://tudominio.com/api
+- Frontend: https://hagamostech.bo
+- API: https://hagamostech.bo/api
 
 ## Configuración de Entornos
 
@@ -95,15 +82,10 @@ Vite automáticamente:
 - `npm run dev` → usa `.env`
 - `npm run build` → usa `.env.production`
 
-### Backend
+### Backend (Node.js + Prisma)
 
-**Node.js (desarrollo):**
 - `server/.env` → MySQL local, puerto 3000
-
-**PHP (producción):**
-- `api/01_config.php` → Detecta automáticamente el entorno
-  - Local: localhost/root/sin password
-  - Producción: credenciales del servidor
+- `server/.env.production` → MySQL de producción
 
 ## Comandos Útiles
 
@@ -111,15 +93,15 @@ Vite automáticamente:
 |---------|-------------|
 | `scripts/01-dev.bat` | Inicia frontend + backend en local |
 | `scripts/02-build.bat` | Genera build para producción |
-| `cd server && npx prisma db seed` | Llena la BD con datos de prueba |
+| `cd server && npx prisma db push` | Sincroniza el esquema con la BD |
+| `cd server && npm run db:seed` | Llena la BD con datos de prueba (auth) |
 | `cd server && npx prisma generate` | Regenera el cliente Prisma |
 | `npm run build` | Build del frontend (usa .env.production) |
 
 ## Tecnologías
 
 - **Frontend:** React 19, Vite 8, Tailwind CSS v4, Framer Motion
-- **Backend Local:** Node.js, Express, Prisma ORM
-- **Backend Producción:** PHP 8+, MySQL
+- **Backend:** Node.js, Express, Prisma ORM
 - **Base de Datos:** MySQL 8.0
 - **Deploy:** FTP manual
 
