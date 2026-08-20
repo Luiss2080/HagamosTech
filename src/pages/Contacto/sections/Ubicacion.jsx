@@ -4,10 +4,10 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const Ubicacion = () => {
     const infoCards = [
-        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
-        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" },
-        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
-        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" }
+        { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
+        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
+        { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" },
+        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-white/[0.04] text-white", iconBg: "bg-[#A3E635]/15 text-[#A3E635]", shadow: "shadow-[#A3E635]/10", border: "border-[#A3E635]/25" }
     ];
 
     return (
@@ -36,17 +36,17 @@ const Ubicacion = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
                             {infoCards.map((item, i) => (
-                                <div key={i} className={`relative p-5 rounded-3xl ${item.theme} border-2 ${item.border} shadow-lg ${item.shadow} hover:scale-105 transition-all duration-300 group overflow-hidden flex flex-col items-center justify-center text-center`}>
+                                <div key={i} className={`relative p-5 rounded-3xl ${item.theme} border ${item.border} shadow-lg ${item.shadow} hover:scale-105 hover:border-[#A3E635]/50 backdrop-blur-md transition-all duration-300 group overflow-hidden flex flex-col items-center justify-center text-center`}>
 
                                     {/* CircleParticles Background */}
                                     <CircleParticles count={12} colorScheme="dark" />
 
                                     <div className="relative z-10 w-full flex flex-col items-center">
-                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.iconBg} shadow-sm mb-3 text-2xl group-hover:rotate-6 transition-transform duration-300`}>
+                                        <div className={`w-12 h-12 rounded-xl flex items-center justify-center ${item.iconBg} shadow-sm mb-3 text-2xl group-hover:rotate-6 group-hover:scale-110 transition-transform duration-300`}>
                                             <i className={`fas ${item.icon}`}></i>
                                         </div>
-                                        <h4 className="font-black uppercase tracking-[0.2em] text-[9px] mb-1 opacity-90">{item.title}</h4>
-                                        <p className="text-sm font-black leading-tight tracking-wide">{item.value}</p>
+                                        <h4 className="font-black uppercase tracking-[0.2em] text-[9px] mb-1 text-[#A3E635]">{item.title}</h4>
+                                        <p className="text-sm font-black leading-tight tracking-wide text-white">{item.value}</p>
                                     </div>
                                 </div>
                             ))}
@@ -97,9 +97,9 @@ const Ubicacion = () => {
             </div>
 
             {/* Ola de cierre (estilo FondoTech) */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180 opacity-30 z-0">
+            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] rotate-180 opacity-60 z-0">
                 <svg viewBox="0 0 1200 120" preserveAspectRatio="none" className="w-[calc(100%+1.3px)] h-[80px] block">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#0A0A0A]"></path>
+                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-[#A3E635]"></path>
                 </svg>
             </div>
         </section>
