@@ -54,7 +54,7 @@ const NAV_ITEMS = [
             { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
             { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
             { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/sobre-nosotros#publico', icon: 'fa-users' },
+            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/#que-hacemos', icon: 'fa-users' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
