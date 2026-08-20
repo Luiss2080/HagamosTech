@@ -1,9 +1,10 @@
 import React from 'react';
 import HeroHagamosTech from './sections/HeroHagamosTech';
 import { QueHacemos, FlujoTrabajo } from './sections/QueHacemos';
-import ServiciosInicio from './sections/ServiciosInicio';
-import NovedadesInicio from './sections/NovedadesInicio';
-import ClientesConfian from '../../components/carouseles/ClientesConfian';
+import InstitucionesCarrusel from './sections/InstitucionesCarrusel';
+import ServiciosGrid from './sections/ServiciosGrid';
+import VentajasCarrusel from './sections/VentajasCarrusel';
+import NovedadesCarrusel from './sections/NovedadesCarrusel';
 import useModalStore from '../../store/useModalStore';
 
 const Inicio = () => {
@@ -14,10 +15,16 @@ const Inicio = () => {
             <HeroHagamosTech />
             <QueHacemos />
             <FlujoTrabajo />
-            <ServiciosInicio />
-            <ClientesConfian />
-            <NovedadesInicio />
-            <FlujoTrabajo />
+
+            <InstitucionesCarrusel />
+
+            <ServiciosGrid />
+
+            {/* --- VENTAJAS DE TRABAJAR CON TECH HOME --- */}
+            <VentajasCarrusel />
+
+            {/* --- NOTICIAS Y NOVEDADES --- */}
+            <NovedadesCarrusel />
 
             {/* CTA final */}
             <section className="relative bg-white py-20 lg:py-28">

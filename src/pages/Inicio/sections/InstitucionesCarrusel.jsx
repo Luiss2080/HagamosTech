@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import ModalColegio from './modalesColegios/ModalColegio';
 
 export const INSTITUTIONS = [
@@ -356,7 +356,7 @@ const InstitucionesCarrusel = () => {
     const renderCard = (inst, index, globalIndex) => (
         <article
             key={`${inst.id}-${globalIndex}`}
-            className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3.5 flex items-center gap-3 sm:gap-4 border-b-[5px] border-[#a41e22] w-[min(290px,86vw)] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
+            className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3.5 flex items-center gap-3 sm:gap-4 border-b-[5px] border-[#A3E635] w-[min(290px,86vw)] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
         >
             {/* Logo */}
             <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-gray-50/50 rounded-[14px] p-2 shrink-0 border border-gray-100">
@@ -364,20 +364,20 @@ const InstitucionesCarrusel = () => {
             </div>
 
             {/* Red Divider */}
-            <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#a41e22]/30 to-transparent"></div>
+            <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent"></div>
 
             {/* Content */}
             <div className="flex flex-col flex-1 justify-between py-1">
                 <div className="mb-2">
                     <div className="flex items-center gap-1.5 mb-1">
-                        <span className="text-[#a41e22] font-black text-[11px] sm:text-xs">0{index + 1}</span>
+                        <span className="text-[#A3E635] font-black text-[11px] sm:text-xs">0{index + 1}</span>
                         <h3 className="font-extrabold text-gray-800 text-[11px] sm:text-xs leading-tight truncate uppercase w-32" title={inst.name}>
                             {inst.name}
                         </h3>
                     </div>
                     
                     <div className="flex items-center gap-1.5 mb-1.5">
-                        <i className="fa-solid fa-graduation-cap text-[#c5a059] text-[9px] sm:text-[10px]"></i>
+                        <i className="fa-solid fa-graduation-cap text-[#84CC16] text-[9px] sm:text-[10px]"></i>
                         <span className="text-gray-500 font-bold text-[8px] sm:text-[9px] tracking-widest uppercase truncate">{inst.tag}</span>
                     </div>
 
@@ -397,7 +397,7 @@ const InstitucionesCarrusel = () => {
 
                 <button 
                     onClick={() => setSelectedInst(inst)}
-                    className="w-full bg-[#a41e22] hover:bg-[#8e1b1b] text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto"
+                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto"
                 >
                     VER DETALLES
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
@@ -407,15 +407,15 @@ const InstitucionesCarrusel = () => {
     );
 
     return (
-        <section id="instituciones" className="w-full bg-gradient-to-br from-[#8e1b1b] via-[#a41e22] to-[#7a1315] py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
+        <section id="instituciones" className="w-full bg-gradient-to-br from-[#0a0a0a] via-[#A3E635] to-[#0a0a0a] py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.06),transparent_70%)] pointer-events-none"></div>
 
             {/* Edge Fades */}
-            <div className="absolute top-0 left-0 h-full w-16 sm:w-32 bg-gradient-to-r from-[#8e1b1b] to-transparent z-20 pointer-events-none"></div>
-            <div className="absolute top-0 right-0 h-full w-16 sm:w-32 bg-gradient-to-l from-[#7a1315] to-transparent z-20 pointer-events-none"></div>
+            <div className="absolute top-0 left-0 h-full w-16 sm:w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-20 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 h-full w-16 sm:w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-20 pointer-events-none"></div>
 
             <style>{`
                 .marquee-row-1 {
@@ -436,7 +436,7 @@ const InstitucionesCarrusel = () => {
                     type="button"
                     aria-label="Mostrar colegio anterior"
                     onClick={() => moveByCard(-1)}
-                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#a41e22] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
+                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                     <i className="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
                 </button>
@@ -444,7 +444,7 @@ const InstitucionesCarrusel = () => {
                     type="button"
                     aria-label="Mostrar siguiente colegio"
                     onClick={() => moveByCard(1)}
-                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#a41e22] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
+                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
                 >
                     <i className="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
                 </button>

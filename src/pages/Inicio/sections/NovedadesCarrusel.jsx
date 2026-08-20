@@ -1,4 +1,4 @@
-﻿import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 
 const WHATSAPP_URL = 'https://wa.me/59161320004';
@@ -120,14 +120,14 @@ const noticias = [
 const NewsCard = ({ noticia, icon }) => {
   return (
     <div
-      className="group relative bg-white dark:bg-[#0a0a0a] rounded-[2rem] shadow-lg shadow-gray-200/50 dark:shadow-black/50 hover:shadow-2xl hover:shadow-red-950/15 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full border-2 border-[#fecaca] dark:border-[#a41e22]/20 hover:border-[#c5a059] dark:hover:border-red-500 ring-0 hover:ring-4 hover:ring-[#a41e22]/10"
+      className="group relative bg-white dark:bg-[#0a0a0a] rounded-[2rem] shadow-lg shadow-gray-200/50 dark:shadow-black/50 hover:shadow-2xl hover:shadow-lime-950/15 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full border-2 border-[#bef264] dark:border-[#A3E635]/20 hover:border-[#84CC16] dark:hover:border-lime-500 ring-0 hover:ring-4 hover:ring-[#A3E635]/10"
     >
       {/* Línea decorativa superior reactiva al hover */}
-      <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#a41e22] via-[#c5a059] to-[#a41e22] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-50"></div>
+      <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-50"></div>
 
       {/* Badges flotantes sobre la cabecera */}
       <div className="absolute top-3 left-3 z-20">
-        <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-[#a41e22] text-white text-[9px] font-black uppercase tracking-widest shadow-md leading-none">
+        <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-[#A3E635] text-white text-[9px] font-black uppercase tracking-widest shadow-md leading-none">
           {noticia.category}
         </span>
       </div>
@@ -140,7 +140,7 @@ const NewsCard = ({ noticia, icon }) => {
       </div>
 
       {/* Cabecera con imagen a tamaño completo (Full Bleed) */}
-      <div className="relative h-48 sm:h-56 w-full overflow-hidden rounded-t-[2rem] border-b border-[#fecaca] dark:border-[#a41e22]/15">
+      <div className="relative h-48 sm:h-56 w-full overflow-hidden rounded-t-[2rem] border-b border-[#bef264] dark:border-[#A3E635]/15">
         <img
           src={noticia.img}
           alt={noticia.title}
@@ -158,38 +158,38 @@ const NewsCard = ({ noticia, icon }) => {
         
         {/* Cuadrícula de fondo */}
         <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none" style={{
-          backgroundImage: 'radial-gradient(#a41e22 1px, transparent 1px)',
+          backgroundImage: 'radial-gradient(#A3E635 1px, transparent 1px)',
           backgroundSize: '20px 20px'
         }}></div>
 
         {/* Icono flotante */}
-        <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#c5a059] dark:bg-[#a41e22] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#c5a059]/40 dark:ring-[#a41e22]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+        <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#84CC16] dark:bg-[#A3E635] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#84CC16]/40 dark:ring-[#A3E635]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
           <i className={`fa-solid ${noticia.icon || icon} text-base text-[#111827] dark:text-white drop-shadow-sm`}></i>
         </div>
 
         {/* Punto parpadeante de estatus */}
         <div className="absolute top-3 right-4 flex items-center gap-1">
           <span className="flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#c5a059] dark:bg-red-500 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#c5a059] dark:bg-red-500"></span>
+            <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#84CC16] dark:bg-lime-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#84CC16] dark:bg-lime-500"></span>
           </span>
         </div>
 
         {/* Chip de Fecha */}
         <div className="mb-1 flex justify-center">
-          <span className="inline-flex items-center px-3 py-1 rounded-full border border-[#c5a059]/30 bg-amber-50/20 dark:bg-amber-950/10 text-[9px] font-black uppercase tracking-widest text-[#854d0e] dark:text-yellow-400 shadow-sm leading-none">
+          <span className="inline-flex items-center px-3 py-1 rounded-full border border-[#84CC16]/30 bg-lime-50/20 dark:bg-lime-950/10 text-[9px] font-black uppercase tracking-widest text-[#3f6212] dark:text-lime-400 shadow-sm leading-none">
             • {noticia.date} •
           </span>
         </div>
 
         {/* Título de Noticia */}
         <div className="relative flex flex-col items-center mb-0.5">
-          <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#a41e22] dark:group-hover:text-red-400 transition-colors leading-tight text-center px-2 min-h-[1.75rem] flex items-center">
+          <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#A3E635] dark:group-hover:text-lime-400 transition-colors leading-tight text-center px-2 min-h-[1.75rem] flex items-center">
             {noticia.title}
           </h3>
           {/* Línea decorativa roja y diamante dorado */}
-          <div className="w-20 h-[2px] bg-[#a41e22]/70 dark:bg-red-500/70 rounded-full relative mt-1 mb-0.5">
-            <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#c5a059] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
+          <div className="w-20 h-[2px] bg-[#A3E635]/70 dark:bg-lime-500/70 rounded-full relative mt-1 mb-0.5">
+            <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#84CC16] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
           </div>
         </div>
 
@@ -199,7 +199,7 @@ const NewsCard = ({ noticia, icon }) => {
         </p>
 
         {/* Ficha técnica con 3 características (Con recuadro/bordes) */}
-        <div className="grid grid-cols-3 gap-1 py-1 border-y border-red-100 dark:border-[#a41e22]/15 my-1 text-center bg-red-50/20 dark:bg-neutral-900/10 rounded-xl relative z-10">
+        <div className="grid grid-cols-3 gap-1 py-1 border-y border-lime-100 dark:border-[#A3E635]/15 my-1 text-center bg-lime-50/20 dark:bg-neutral-900/10 rounded-xl relative z-10">
           <div className="flex flex-col items-center justify-center">
             <div className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/20 dark:text-blue-400 flex items-center justify-center mb-1 shadow-inner border border-blue-100 dark:border-blue-900/20">
               <i className={`fa-solid ${noticia.specs.col1.icon} text-[11px]`}></i>
@@ -207,15 +207,15 @@ const NewsCard = ({ noticia, icon }) => {
             <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col1.label}</span>
             <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col1.value}</span>
           </div>
-          <div className="border-x border-red-100 dark:border-[#a41e22]/15 flex flex-col items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-amber-50 text-amber-600 dark:bg-amber-950/20 dark:text-yellow-400 flex items-center justify-center mb-1 shadow-inner border border-amber-100 dark:border-amber-900/20">
+          <div className="border-x border-lime-100 dark:border-[#A3E635]/15 flex flex-col items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-lime-50 text-amber-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-amber-100 dark:border-amber-900/20">
               <i className={`fa-solid ${noticia.specs.col2.icon} text-[11px]`}></i>
             </div>
             <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col2.label}</span>
             <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col2.value}</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-red-50 text-red-600 dark:bg-red-950/20 dark:text-red-400 flex items-center justify-center mb-1 shadow-inner border border-red-100 dark:border-red-900/20">
+            <div className="w-6 h-6 rounded-full bg-lime-50 text-red-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-lime-100 dark:border-lime-900/20">
               <i className={`fa-solid ${noticia.specs.col3.icon} text-[11px]`}></i>
             </div>
             <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col3.label}</span>
@@ -231,7 +231,7 @@ const NewsCard = ({ noticia, icon }) => {
                 key={i}
                 className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-neutral-200 dark:bg-neutral-800 text-[9px] font-bold text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700"
               >
-                <i className="fa-solid fa-check text-[#a41e22] text-[8px]"></i>
+                <i className="fa-solid fa-check text-[#A3E635] text-[8px]"></i>
                 <i className={`fa-solid ${getIconForInclude(inc)} text-[#111827] dark:text-white text-[9px]`}></i>
                 {inc}
               </span>
@@ -245,7 +245,7 @@ const NewsCard = ({ noticia, icon }) => {
             href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hola, quiero saber más sobre: ${noticia.title}`)}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#c5a059] group-hover:bg-[#a41e22] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-red-900/10"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#84CC16] group-hover:bg-[#A3E635] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-lime-900/10"
           >
             <i className="fab fa-whatsapp text-base leading-none"></i>
             Saber más
@@ -355,7 +355,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   return (
     <section id="noticias" className="py-8 relative overflow-visible bg-slate-50/50 dark:bg-black/10">
       <div className="pointer-events-none absolute top-0 left-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-3xl -translate-y-1/3 -translate-x-1/4"></div>
-      <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[400px] bg-red-100/30 rounded-full blur-3xl translate-y-1/3 translate-x-1/4"></div>
+      <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[400px] bg-lime-100/30 rounded-full blur-3xl translate-y-1/3 translate-x-1/4"></div>
 
       <CircuitBackground />
 
@@ -364,9 +364,9 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-black text-[#111827] dark:text-white mb-6 leading-tight">
             Últimas{' '}
-            <span className="relative inline-block px-2 text-[#a41e22] dark:text-red-400">
+            <span className="relative inline-block px-2 text-[#A3E635] dark:text-lime-400">
               novedades y noticias
-              <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#c5a059] dark:text-[#a41e22]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#84CC16] dark:text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
@@ -414,14 +414,14 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#a88544] hover:text-white dark:hover:bg-[#a88544] hover:border-transparent"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#84CC16] hover:text-white dark:hover:bg-[#84CC16] hover:border-transparent"
                   aria-label="Anterior"
                 >
                   <i className="fa-solid fa-chevron-left text-xs"></i>
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#a88544] hover:text-white dark:hover:bg-[#a88544] hover:border-transparent"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#84CC16] hover:text-white dark:hover:bg-[#84CC16] hover:border-transparent"
                   aria-label="Siguiente"
                 >
                   <i className="fa-solid fa-chevron-right text-xs"></i>
@@ -444,7 +444,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
                     }}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       activeIdx === idx
-                        ? 'w-7 bg-[#a88544] shadow-sm shadow-amber-950/20'
+                        ? 'w-7 bg-[#84CC16] shadow-sm shadow-lime-950/20'
                         : 'w-2 bg-neutral-350 dark:bg-neutral-800 hover:bg-neutral-450 dark:hover:bg-neutral-700'
                     }`}
                     aria-label={`Ir al slide ${idx + 1}`}

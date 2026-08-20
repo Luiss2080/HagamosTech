@@ -168,7 +168,7 @@ const ServiciosGrid = () => {
 
     return (
         <section id="serviciosit" className="py-8 relative overflow-visible">
-            <div className="pointer-events-none absolute top-0 right-0 w-[600px] h-[600px] bg-red-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
+            <div className="pointer-events-none absolute top-0 right-0 w-[600px] h-[600px] bg-lime-100/40 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
             <div className="pointer-events-none absolute bottom-10 left-0 w-[320px] h-[320px] bg-gray-100/40 rounded-full blur-3xl -translate-x-1/4"></div>
 
             <CircuitBackground />
@@ -177,9 +177,9 @@ const ServiciosGrid = () => {
                 <div className="text-center mb-4 max-w-3xl mx-auto">
                     <h2 className="text-3xl lg:text-4xl font-black text-[#111827] dark:text-white mb-6 leading-tight">
                         Soluciones que{' '}
-                        <span className="relative inline-block px-2 text-[#a41e22] dark:text-red-400">
+                        <span className="relative inline-block px-2 text-[#A3E635] dark:text-lime-400">
                             impulsan tu futuro
-                            <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#c5a059] dark:text-[#a41e22]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#84CC16] dark:text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
@@ -194,13 +194,13 @@ const ServiciosGrid = () => {
                         <Link
                             to={module.ctaLink}
                             key={module.id}
-                            className="group relative bg-white dark:bg-[#0a0a0a] rounded-[2rem] shadow-lg shadow-gray-200/50 dark:shadow-black/50 hover:shadow-2xl hover:shadow-red-950/15 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full border-2 border-[#fecaca] dark:border-[#a41e22]/20 hover:border-[#c5a059] dark:hover:border-red-500 ring-0 hover:ring-4 hover:ring-[#a41e22]/10"
+                            className="group relative bg-white dark:bg-[#0a0a0a] rounded-[2rem] shadow-lg shadow-gray-200/50 dark:shadow-black/50 hover:shadow-2xl hover:shadow-lime-950/15 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full border-2 border-[#bef264] dark:border-[#A3E635]/20 hover:border-[#84CC16] dark:hover:border-lime-500 ring-0 hover:ring-4 hover:ring-[#A3E635]/10"
                         >
                             {/* Línea decorativa superior */}
-                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#a41e22] via-[#c5a059] to-[#a41e22] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-50"></div>
+                            <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-50"></div>
 
                             {/* Header con imagen */}
-                            <div className="relative h-48 sm:h-56 overflow-hidden bg-slate-950 rounded-t-[2rem] border-b border-[#fecaca] dark:border-[#a41e22]/15">
+                            <div className="relative h-48 sm:h-56 overflow-hidden bg-slate-950 rounded-t-[2rem] border-b border-[#bef264] dark:border-[#A3E635]/15">
                                 <img
                                     src={module.img}
                                     alt={module.name}
@@ -212,7 +212,7 @@ const ServiciosGrid = () => {
 
                                 {/* Badge categoría */}
                                 <div className="absolute top-3 left-3 z-20">
-                                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#a41e22] text-white text-[9px] font-black uppercase tracking-widest shadow-md">
+                                    <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#A3E635] text-white text-[9px] font-black uppercase tracking-widest shadow-md">
                                         {module.category}
                                     </span>
                                 </div>
@@ -230,33 +230,33 @@ const ServiciosGrid = () => {
                             <div className="p-4 pt-4 flex-1 flex flex-col relative bg-gradient-to-b from-white dark:from-[#0a0a0a] via-[#fff5f5]/30 dark:via-[#0a0a0a] to-[#fef2f2]/40 dark:to-[#0a0a0a] rounded-b-[2rem]">
 
                                 {/* Icono flotante */}
-                                <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#c5a059] dark:bg-[#a41e22] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#c5a059]/40 dark:ring-[#a41e22]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+                                <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#84CC16] dark:bg-[#A3E635] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#84CC16]/40 dark:ring-[#A3E635]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
                                     <i className={`fa-solid ${module.icon} text-base text-[#111827] dark:text-white drop-shadow-sm`}></i>
                                 </div>
 
                                 {/* Punto parpadeante */}
                                 <div className="absolute top-3 right-4 flex items-center gap-1">
                                     <span className="flex h-2 w-2">
-                                        <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#c5a059] dark:bg-red-500 opacity-75"></span>
-                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#c5a059] dark:bg-red-500"></span>
+                                        <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#84CC16] dark:bg-lime-500 opacity-75"></span>
+                                        <span className="relative inline-flex rounded-full h-2 w-2 bg-[#84CC16] dark:bg-lime-500"></span>
                                     </span>
                                 </div>
 
                                 {/* Tech Home */}
                                 <div className="mb-1 flex justify-center">
-                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#a41e22] text-white border border-white dark:border-white/10 shadow-sm text-[9px] font-black uppercase tracking-[0.14em]">
-                                        <span className="w-1.5 h-1.5 rounded-full bg-[#c5a059] dark:bg-yellow-400"></span>
+                                    <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-[#A3E635] text-white border border-white dark:border-white/10 shadow-sm text-[9px] font-black uppercase tracking-[0.14em]">
+                                        <span className="w-1.5 h-1.5 rounded-full bg-[#84CC16] dark:bg-lime-400"></span>
                                         Tech Home
                                     </span>
                                 </div>
 
                                 {/* Título con decoración */}
                                 <div className="relative flex flex-col items-center mb-0.5">
-                                    <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#a41e22] dark:group-hover:text-red-400 transition-colors leading-tight text-center px-1">
+                                    <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#A3E635] dark:group-hover:text-lime-400 transition-colors leading-tight text-center px-1">
                                         {module.name}
                                     </h3>
-                                    <div className="w-16 h-[2px] bg-[#a41e22]/70 dark:bg-red-500/70 rounded-full relative mt-1 mb-0.5">
-                                        <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#c5a059] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
+                                    <div className="w-16 h-[2px] bg-[#A3E635]/70 dark:bg-lime-500/70 rounded-full relative mt-1 mb-0.5">
+                                        <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#84CC16] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
                                     </div>
                                 </div>
 
@@ -266,10 +266,10 @@ const ServiciosGrid = () => {
                                 </p>
 
                                 {/* Ficha técnica */}
-                                <div className="grid grid-cols-3 gap-1 py-1 border-y border-red-100 dark:border-[#a41e22]/15 mb-1.5 text-center bg-red-50/20 dark:bg-neutral-900/10 rounded-xl">
+                                <div className="grid grid-cols-3 gap-1 py-1 border-y border-lime-100 dark:border-[#A3E635]/15 mb-1.5 text-center bg-lime-50/20 dark:bg-neutral-900/10 rounded-xl">
                                     {module.stats.map((stat, idx) => (
-                                        <div key={idx} className={`flex flex-col items-center gap-1 ${idx === 1 ? 'border-x border-red-100 dark:border-[#a41e22]/15' : ''}`}>
-                                            <div className="w-6 h-6 rounded-full bg-[#a41e22]/10 text-[#a41e22] dark:bg-red-500/15 dark:text-red-400 flex items-center justify-center text-[10px]">
+                                        <div key={idx} className={`flex flex-col items-center gap-1 ${idx === 1 ? 'border-x border-lime-100 dark:border-[#A3E635]/15' : ''}`}>
+                                            <div className="w-6 h-6 rounded-full bg-[#A3E635]/10 text-[#A3E635] dark:bg-lime-500/15 dark:text-lime-400 flex items-center justify-center text-[10px]">
                                                 <i className={`fa-solid ${stat.icon}`}></i>
                                             </div>
                                             <div className="text-[7px] text-slate-400 font-black uppercase tracking-wider leading-tight">{stat.label}</div>
@@ -284,7 +284,7 @@ const ServiciosGrid = () => {
                                     <div className="flex items-center justify-center gap-1.5 flex-wrap">
                                         {module.includes.map((item, idx) => (
                                             <span key={idx} className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-neutral-200 dark:bg-neutral-800 text-[9px] font-bold text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700">
-                                                <i className="fa-solid fa-check text-[#a41e22] text-[8px]"></i>
+                                                <i className="fa-solid fa-check text-[#A3E635] text-[8px]"></i>
                                                 <i className={`fa-solid ${item.icon} text-[#111827] dark:text-white text-[9px]`}></i>
                                                 {item.label}
                                             </span>
@@ -294,7 +294,7 @@ const ServiciosGrid = () => {
 
                                 {/* CTA */}
                                 <div className="mt-auto pt-4 pb-2 px-1">
-                                    <span className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#c5a059] group-hover:bg-[#a41e22] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-red-900/10">
+                                    <span className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#84CC16] group-hover:bg-[#A3E635] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-lime-900/10">
                                         <i className={`fa-solid ${module.icon}`}></i>
                                         {module.cta}
                                         <i className="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-0.5 transition-transform"></i>
