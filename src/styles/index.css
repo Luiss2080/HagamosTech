@@ -152,6 +152,38 @@ select option {
   100% { transform: translateX(-50%); }
 }
 
+/* Tech background animations */
+@keyframes grid-pan {
+  0% { background-position: 0 0; }
+  100% { background-position: 48px 48px; }
+}
+@keyframes grid-pan-slow {
+  0% { background-position: 0 0; }
+  100% { background-position: 96px 96px; }
+}
+@keyframes dash-flow {
+  0% { stroke-dashoffset: 200; }
+  100% { stroke-dashoffset: 0; }
+}
+@keyframes scan-sweep {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes node-blink {
+  0%, 100% { opacity: 0.15; transform: scale(0.85); }
+  50% { opacity: 0.9; transform: scale(1.25); }
+}
+@keyframes floor-scroll {
+  0% { background-position: 0 0; }
+  100% { background-position: 0 48px; }
+}
+.animate-grid-pan { animation: grid-pan 6s linear infinite; }
+.animate-grid-pan-slow { animation: grid-pan-slow 14s linear infinite; }
+.animate-dash-flow { animation: dash-flow 4s linear infinite; }
+.animate-scan-sweep { animation: scan-sweep 18s linear infinite; }
+.animate-node-blink { animation: node-blink 3s ease-in-out infinite; }
+.animate-floor-scroll { animation: floor-scroll 5s linear infinite; }
+
 @keyframes slide-down {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }

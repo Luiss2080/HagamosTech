@@ -33,7 +33,7 @@ const HeroHagamosTech = () => {
 
                         <h1
                             className="uppercase text-[2.4rem] leading-[1.02] sm:text-5xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-black font-heading text-white tracking-normal"
-                            style={{ transform: 'scaleX(1.08)', transformOrigin: 'left center' }}
+                            style={{ transform: 'scaleX(1.06)', transformOrigin: 'left center', WebkitTextStrokeWidth: '1.4px', WebkitTextStrokeColor: 'currentColor' }}
                         >
                             <span className="block">¿Idea, problema</span>
                             <span className="block">o necesidad?</span>
