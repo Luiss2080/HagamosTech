@@ -14,8 +14,8 @@ const Footer = () => {
   ];
 
   const nosotrosLinks = [
-    { name: "Sobre Nosotros", path: "/sobre-nosotros", icon: "fa-users" },
     { name: "Cómo trabajamos", path: "/#flujo", icon: "fa-diagram-project" },
+    { name: "Nuestras soluciones", path: "/#que-hacemos", icon: "fa-layer-group" },
     { name: "Contanos tu idea", path: "/contactanos", icon: "fa-comment-dots" },
     { name: "Apoyo y soporte", path: "/contactanos", icon: "fa-headset" },
     { name: "Trabajá con nosotros", path: "/contactanos", icon: "fa-briefcase" },

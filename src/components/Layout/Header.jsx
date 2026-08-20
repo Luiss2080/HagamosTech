@@ -18,7 +18,6 @@ const NAV_ITEMS = [
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'scroll', target: 'flujo' },
-    { id: 'sobre-nosotros', label: 'Sobre Nosotros', icon: 'fa-users', type: 'route', target: '/sobre-nosotros' },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
 ];
 
