@@ -3,7 +3,7 @@ import FondoTech from '../../../components/fondos/FondoTech';
 
 const WHATSAPP_URL = 'https://wa.me/59161320004';
 
-// Mapeador de iconos dinámicos para las características del includes de cada tarjeta
+// Mapeador de iconos dinámicos para las características
 const getIconForInclude = (text) => {
   const t = text.toLowerCase().trim();
   if (t.includes('pdf') || t.includes('guía') || t.includes('digital') || t.includes('diapositiva') || t.includes('documento')) return 'fa-file-pdf';
@@ -12,245 +12,223 @@ const getIconForInclude = (text) => {
   if (t.includes('código') || t.includes('software') || t.includes('algoritmo') || t.includes('programación')) return 'fa-code';
   if (t.includes('soporte') || t.includes('mentoría')) return 'fa-headset';
   if (t.includes('simulación')) return 'fa-vr-cardboard';
-  if (t.includes('ejercicio') || t.includes('pista')) return 'fa-gamepad';
-  if (t.includes('diseño') || t.includes('modelo') || t.includes('cad')) return 'fa-bezier-curve';
-  if (t.includes('certificado') || t.includes('certificación') || t.includes('trofeo') || t.includes('beca')) return 'fa-certificate';
-  if (t.includes('kit')) return 'fa-box-open';
-  if (t.includes('material') || t.includes('herramienta') || t.includes('cautín') || t.includes('estaño') || t.includes('placa') || t.includes('pcb') || t.includes('filamento')) return 'fa-screwdriver-wrench';
-  if (t.includes('sensor')) return 'fa-microchip';
-  if (t.includes('servo') || t.includes('motor')) return 'fa-gear';
-  if (t.includes('robótica') || t.includes('robot') || t.includes('eco')) return 'fa-robot';
-  if (t.includes('electrónica') || t.includes('componente') || t.includes('placa') || t.includes('solar') || t.includes('litio') || t.includes('batería') || t.includes('regulador') || t.includes('esp32') || t.includes('circuito')) return 'fa-bolt';
-  if (t.includes('impresión')) return 'fa-print';
-  if (t.includes('drone')) return 'fa-plane';
-  if (t.includes('capacitación') || t.includes('aula') || t.includes('escuela')) return 'fa-chalkboard-user';
+  if (t.includes('ejercicio')) return 'fa-gamepad';
+  if (t.includes('diseño') || t.includes('modelo')) return 'fa-bezier-curve';
+  if (t.includes('certificado') || t.includes('certificación') || t.includes('trofeo')) return 'fa-certificate';
+  if (t.includes('kit') || t.includes('guías')) return 'fa-box-open';
+  if (t.includes('material') || t.includes('herramienta') || t.includes('circuito')) return 'fa-screwdriver-wrench';
   return 'fa-circle-check';
 };
 
-// Datos de Novedades / Noticias de Tech Home Bolivia
+// Datos de Novedades libres de robótica y alineados al contexto
 const noticias = [
   {
     id: 'n1',
-    title: 'Nueva Sucursal en Santa Cruz',
-    desc: 'Inauguramos una moderna sede equipada con laboratorios de robótica y tecnología de última generación para todas las edades.',
-    category: 'Sucursal',
-    status: 'Nuevo',
+    title: 'Plataforma de Mentorías',
+    desc: 'Lanzamos un nuevo entorno web interactivo para agendar sesiones uno a uno en Frontend y Backend.',
+    category: 'Lanzamiento',
+    status: 'Activo',
     date: '25 de Junio, 2026',
-    img: '/img/13_Noticias/06_noticia-archivo1.jpg',
-    icon: 'fa-building-circle-check',
+    img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60',
+    icon: 'fa-globe',
     specs: {
-      col1: { label: 'Sede', value: 'Equipamiento Pro', icon: 'fa-map-location-dot' },
-      col2: { label: 'Capacidad', value: '50+ alumnos', icon: 'fa-users' },
-      col3: { label: 'Tecnología', value: 'Impresión 3D', icon: 'fa-microchip' }
+      col1: { label: 'Soporte', value: '1 a 1', icon: 'fa-user-tie' },
+      col2: { label: 'Temas', value: 'JS / Python', icon: 'fa-code' },
+      col3: { label: 'Acceso', value: '24/7 Portal', icon: 'fa-server' }
     },
-    includes: ['Robótica', 'Electrónica', 'Programación'],
+    includes: ['Mentoría', 'Código', 'Soporte'],
     link: '/contactanos'
   },
   {
     id: 'n2',
-    title: 'Kit de Robótica STEAM 2026',
-    desc: 'Presentamos nuestro kit educativo oficial diseñado para competiciones de robótica, proyectos inteligentes y aprendizaje de IA.',
-    category: 'Lanzamiento',
-    status: 'Oficial',
+    title: 'Taller Intensivo de IA',
+    desc: 'Abrimos inscripciones para nuestro webinar práctico sobre APIs de OpenAI, Gemini y creación de Chatbots.',
+    category: 'Taller',
+    status: 'Inscripción',
     date: '20 de Junio, 2026',
-    img: '/img/13_Noticias/07_noticia-archivo2.jpg',
-    icon: 'fa-box-open',
+    img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60',
+    icon: 'fa-brain',
     specs: {
-      col1: { label: 'Componentes', value: '350+ piezas', icon: 'fa-puzzle-piece' },
-      col2: { label: 'Conexión', value: 'Bluetooth & App', icon: 'fa-mobile-screen' },
-      col3: { label: 'Edades', value: '+8 años', icon: 'fa-graduation-cap' }
+      col1: { label: 'Duración', value: '4 Sesiones', icon: 'fa-clock' },
+      col2: { label: 'Stack', value: 'Gemini API', icon: 'fa-robot' },
+      col3: { label: 'Modalidad', value: 'Online', icon: 'fa-laptop' }
     },
-    includes: ['Sensores', 'Servomotores', 'Guía Digital'],
-    link: '/libros-thb'
+    includes: ['Código', 'Video', 'Certificado'],
+    link: '/contactanos'
   },
   {
     id: 'n3',
-    title: 'Convenio con 15 Colegios',
-    desc: 'Firmamos alianzas estratégicas para implementar aulas virtuales personalizadas bajo plataforma LMS Moodle 4.5.',
+    title: 'Convenio de Digitalización',
+    desc: 'Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.',
     category: 'Alianza',
     status: 'Éxito',
     date: '15 de Junio, 2026',
-    img: '/img/13_Noticias/08_noticia-archivo3.jpg',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-handshake',
     specs: {
-      col1: { label: 'Convenios', value: '15+ Colegios', icon: 'fa-school' },
-      col2: { label: 'Aulas', value: 'LMS Moodle', icon: 'fa-server' },
-      col3: { label: 'Alumnos', value: '+5000 activos', icon: 'fa-users-line' }
+      col1: { label: 'Negocios', value: '20+ PYMES', icon: 'fa-briefcase' },
+      col2: { label: 'Solución', value: 'Catálogos', icon: 'fa-list-check' },
+      col3: { label: 'Línea', value: 'WhatsApp', icon: 'fa-message' }
     },
-    includes: ['Capacitación', 'Soporte 24/7', 'Certificación'],
+    includes: ['Proyecto', 'Diseño', 'Soporte'],
     link: '/contactanos'
   },
   {
     id: 'n4',
-    title: 'Campeones Nacionales STEAM',
-    desc: 'Estudiantes de nuestro Club de Innovación obtienen medalla de oro en la competencia nacional de robótica ecológica.',
-    category: 'Logro',
-    status: 'Victoria',
+    title: 'Guías de Lógica y Código',
+    desc: 'Presentamos oficialmente nuestros cuadernos de trabajo interactivos y diapositivas de lógica para colegios.',
+    category: 'Recursos',
+    status: 'Nuevo',
     date: '10 de Junio, 2026',
-    img: '/img/13_Noticias/09_noticia-archivo4.jpg',
-    icon: 'fa-trophy',
+    img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60',
+    icon: 'fa-book',
     specs: {
-      col1: { label: 'Torneo', value: 'STEAM 2026', icon: 'fa-award' },
-      col2: { label: 'Proyecto', value: 'EcoBot 2.0', icon: 'fa-robot' },
-      col3: { label: 'Premio', value: 'Medalla de Oro', icon: 'fa-medal' }
+      col1: { label: 'Formato', value: 'PDF / Slides', icon: 'fa-file-pdf' },
+      col2: { label: 'Temario', value: 'Algoritmos', icon: 'fa-diagram-project' },
+      col3: { label: 'Nivel', value: 'Primaria/Sec', icon: 'fa-graduation-cap' }
     },
-    includes: ['Trofeo Nacional', 'Beca de Innovación', 'Kits Avanzados'],
+    includes: ['Guías', 'PDF', 'Material'],
     link: '/contactanos'
   },
   {
     id: 'n5',
-    title: 'Talleres Vacacionales de IA',
-    desc: 'Ciclo vacacional práctico en Machine Learning, programación en Python, y creación de Chatbots con Inteligencia Artificial.',
-    category: 'Talleres',
-    status: 'Inscripción',
+    title: 'Webinars de Automatización',
+    desc: 'Ciclo de charlas gratuitas sobre cómo automatizar tareas repetitivas de oficina y bases de datos usando Python.',
+    category: 'Webinar',
+    status: 'Libre',
     date: '05 de Junio, 2026',
-    img: '/img/13_Noticias/10_noticia-archivo5.jpeg',
-    icon: 'fa-laptop-code',
+    img: 'https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=600&auto=format&fit=crop&q=60',
+    icon: 'fa-gears',
     specs: {
-      col1: { label: 'Duración', value: '4 Semanas', icon: 'fa-clock' },
-      col2: { label: 'Contenido', value: 'Python & IA', icon: 'fa-code' },
-      col3: { label: 'Proyecto', value: 'Agente Inteligente', icon: 'fa-brain' }
+      col1: { label: 'Acceso', value: 'Libre', icon: 'fa-circle-play' },
+      col2: { label: 'Tema', value: 'Python Scripts', icon: 'fa-code' },
+      col3: { label: 'Grabación', value: 'Incluida', icon: 'fa-video' }
     },
-    includes: ['Código Fuente', 'Certificado Oficial', 'Licencias Pro'],
-    link: '/cursos-thb'
+    includes: ['Código', 'Video', 'Documento'],
+    link: '/contactanos'
   }
 ];
 
-// Componente Tarjeta de Noticia Individual
+// Componente Tarjeta de Noticia (Mismo diseño exacto que Servicios)
 const NewsCard = ({ noticia, icon }) => {
   return (
-    <div
-      className="group relative bg-white dark:bg-[#0a0a0a] rounded-[2rem] shadow-lg shadow-gray-200/50 dark:shadow-black/50 hover:shadow-2xl hover:shadow-lime-950/15 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full border-2 border-[#bef264] dark:border-[#A3E635]/20 hover:border-[#84CC16] dark:hover:border-lime-500 ring-0 hover:ring-4 hover:ring-[#A3E635]/10"
-    >
-      {/* Línea decorativa superior reactiva al hover */}
+    <div className="group relative bg-[#111111] border border-white/10 rounded-[2.2rem] shadow-2xl hover:shadow-[0_15px_40px_rgba(163,230,53,0.12)] hover:border-[#A3E635]/40 transition-all duration-500 transform hover:-translate-y-2 overflow-hidden flex flex-col h-full ring-0 hover:ring-4 hover:ring-[#A3E635]/10">
+      
+      {/* Línea decorativa superior */}
       <div className="absolute top-0 left-0 w-full h-1.5 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 z-50"></div>
 
-      {/* Badges flotantes sobre la cabecera */}
-      <div className="absolute top-3 left-3 z-20">
-        <span className="inline-flex items-center justify-center px-2.5 py-0.5 rounded-full bg-[#A3E635] text-white text-[9px] font-black uppercase tracking-widest shadow-md leading-none">
-          {noticia.category}
-        </span>
-      </div>
-
-      <div className="absolute top-3 right-3 z-20">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-[9px] font-black uppercase tracking-widest text-white shadow-sm leading-none">
-          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
-          {noticia.status}
-        </span>
-      </div>
-
-      {/* Cabecera con imagen a tamaño completo (Full Bleed) */}
-      <div className="relative h-48 sm:h-56 w-full overflow-hidden rounded-t-[2rem] border-b border-[#bef264] dark:border-[#A3E635]/15">
+      {/* Cabecera con Imagen */}
+      <div className="relative h-48 sm:h-52 w-full overflow-hidden rounded-t-[2.2rem] border-b border-white/5 bg-[#050505]">
         <img
           src={noticia.img}
           alt={noticia.title}
-          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
           onError={(e) => {
-            e.target.src = '/img/04_Banners/01_banner-hero.jpeg'; // fallback
+            e.target.src = 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&auto=format&fit=crop&q=60';
           }}
         />
-        {/* Degradado sutil en la parte inferior para integrar con el cuerpo */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 via-transparent to-transparent opacity-60"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"></div>
+
+        {/* Badge Categoría */}
+        <div className="absolute top-4 left-4 z-20">
+          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-[#A3E635] text-[#0A0A0A] text-[9px] font-black uppercase tracking-widest shadow-md">
+            {noticia.category}
+          </span>
+        </div>
+
+        {/* Badge Estado */}
+        <div className="absolute top-4 right-4 z-20">
+          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-[9px] font-black uppercase tracking-widest text-white shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+            {noticia.status}
+          </span>
+        </div>
       </div>
 
-      {/* Cuerpo de la tarjeta */}
-      <div className="p-4 pt-4 flex-1 flex flex-col relative bg-gradient-to-b from-white dark:from-[#0a0a0a] via-[#fff5f5]/30 dark:via-[#0a0a0a] to-[#fef2f2]/40 dark:to-[#0a0a0a] rounded-b-[2rem]">
+      {/* Cuerpo - Centrado */}
+      <div className="p-6 pt-8 flex-1 flex flex-col items-center text-center relative bg-[#111111]">
         
-        {/* Cuadrícula de fondo */}
-        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none" style={{
-          backgroundImage: 'radial-gradient(#A3E635 1px, transparent 1px)',
-          backgroundSize: '20px 20px'
-        }}></div>
-
-        {/* Icono flotante */}
-        <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#84CC16] dark:bg-[#A3E635] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#84CC16]/40 dark:ring-[#A3E635]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
-          <i className={`fa-solid ${noticia.icon || icon} text-base text-[#111827] dark:text-white drop-shadow-sm`}></i>
+        {/* Icono flotante - Centrado */}
+        <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-2xl bg-[#A3E635] border-[#111111] ring-2 ring-[#A3E635]/45 shadow-xl flex items-center justify-center border-4 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+          <i className={`fa-solid ${noticia.icon || icon} text-lg text-[#0A0A0A] drop-shadow-sm`}></i>
         </div>
 
-        {/* Punto parpadeante de estatus */}
-        <div className="absolute top-3 right-4 flex items-center gap-1">
-          <span className="flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#84CC16] dark:bg-lime-500 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#84CC16] dark:bg-lime-500"></span>
+        {/* Pill de Info - Centrado */}
+        <div className="mb-3 flex justify-center w-full">
+          <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-[9px] font-black uppercase tracking-[0.14em] bg-[#A3E635]/10 text-[#A3E635] border border-[#A3E635]/20">
+            NOVEDAD
           </span>
         </div>
 
-        {/* Chip de Fecha */}
-        <div className="mb-1 flex justify-center">
-          <span className="inline-flex items-center px-3 py-1 rounded-full border border-[#84CC16]/30 bg-lime-50/20 dark:bg-lime-950/10 text-[9px] font-black uppercase tracking-widest text-[#3f6212] dark:text-lime-400 shadow-sm leading-none">
-            • {noticia.date} •
-          </span>
-        </div>
-
-        {/* Título de Noticia */}
-        <div className="relative flex flex-col items-center mb-0.5">
-          <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#A3E635] dark:group-hover:text-lime-400 transition-colors leading-tight text-center px-2 min-h-[1.75rem] flex items-center">
+        {/* Título de Noticia - Centrado */}
+        <div className="mb-3 flex flex-col items-center">
+          <h3 className="text-xl font-black text-white group-hover:text-[#A3E635] transition-colors leading-tight">
             {noticia.title}
           </h3>
-          {/* Línea decorativa roja y diamante dorado */}
-          <div className="w-20 h-[2px] bg-[#A3E635]/70 dark:bg-lime-500/70 rounded-full relative mt-1 mb-0.5">
-            <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#84CC16] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
-          </div>
+          <div className="w-10 h-[2.5px] bg-[#A3E635] rounded-full mt-2 group-hover:w-16 transition-all duration-300"></div>
         </div>
 
-        {/* Descripción didáctica */}
-        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-1.5 text-center px-4 min-h-[1.5rem] font-medium">
+        {/* Descripción corta - Centrado */}
+        <p className="text-xs text-slate-400 leading-relaxed mb-4 min-h-[3rem] font-medium">
           {noticia.desc}
         </p>
 
-        {/* Ficha técnica con 3 características (Con recuadro/bordes) */}
-        <div className="grid grid-cols-3 gap-1 py-1 border-y border-lime-100 dark:border-[#A3E635]/15 my-1 text-center bg-lime-50/20 dark:bg-neutral-900/10 rounded-xl relative z-10">
+        {/* Ficha técnica con 3 características - Centrado */}
+        <div className="grid grid-cols-3 gap-1 py-2.5 border-y border-white/5 mb-5 w-full rounded-2xl bg-white/[0.02]">
           <div className="flex flex-col items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/20 dark:text-blue-400 flex items-center justify-center mb-1 shadow-inner border border-blue-100 dark:border-blue-900/20">
-              <i className={`fa-solid ${noticia.specs.col1.icon} text-[11px]`}></i>
+            <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
+              <i className={`fa-solid ${noticia.specs.col1.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col1.label}</span>
-            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col1.value}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col1.label}</span>
+            <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col1.value}</span>
           </div>
-          <div className="border-x border-lime-100 dark:border-[#A3E635]/15 flex flex-col items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-lime-50 text-amber-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-amber-100 dark:border-amber-900/20">
-              <i className={`fa-solid ${noticia.specs.col2.icon} text-[11px]`}></i>
+          <div className="border-x border-white/10 flex flex-col items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
+              <i className={`fa-solid ${noticia.specs.col2.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col2.label}</span>
-            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col2.value}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col2.label}</span>
+            <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col2.value}</span>
           </div>
           <div className="flex flex-col items-center justify-center">
-            <div className="w-6 h-6 rounded-full bg-lime-50 text-red-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-lime-100 dark:border-lime-900/20">
-              <i className={`fa-solid ${noticia.specs.col3.icon} text-[11px]`}></i>
+            <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
+              <i className={`fa-solid ${noticia.specs.col3.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col3.label}</span>
-            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col3.value}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col3.label}</span>
+            <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col3.value}</span>
           </div>
         </div>
 
-        {/* Incluye (mismo estilo de pills que ServiciosGrid) */}
-        <div className="mb-1.5 px-1">
+        {/* Incluye (Badges/Pills) - Centrado */}
+        <div className="mb-5 w-full flex justify-center">
           <div className="flex items-center justify-center gap-1.5 flex-wrap">
             {noticia.includes.map((inc, i) => (
-              <span
-                key={i}
-                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-neutral-200 dark:bg-neutral-800 text-[9px] font-bold text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700"
-              >
-                <i className="fa-solid fa-check text-[#A3E635] text-[8px]"></i>
-                <i className={`fa-solid ${getIconForInclude(inc)} text-[#111827] dark:text-white text-[9px]`}></i>
+              <span key={i} className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-[9px] font-bold border bg-[#151515] border-white/5 text-slate-350">
+                <i className="fa-solid fa-check text-[#84CC16] text-[8px]"></i>
+                <i className={`fa-solid ${getIconForInclude(inc)} text-[9px]`}></i>
                 {inc}
               </span>
             ))}
           </div>
         </div>
 
-        {/* CTA (mismo estilo y proporción que ServiciosGrid) */}
-        <div className="mt-auto pt-4 pb-2 px-1">
-          <a
-            href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hola, quiero saber más sobre: ${noticia.title}`)}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#84CC16] group-hover:bg-[#A3E635] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-lime-900/10"
-          >
-            <i className="fab fa-whatsapp text-base leading-none"></i>
-            Saber más
-            <i className="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-0.5 transition-transform"></i>
-          </a>
+        {/* Fila inferior de Fecha & CTAs */}
+        <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-3 w-full">
+          <div className="flex flex-col items-start">
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-widest leading-none">FECHA</span>
+            <span className="text-[10px] font-black mt-1 leading-none text-white">{noticia.date}</span>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <a
+              href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hola, quiero saber más sobre: ${noticia.title}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all duration-300 cursor-pointer shadow-md bg-[#25D366] hover:bg-[#22C55E] text-white"
+            >
+              <i className="fab fa-whatsapp text-[12px]"></i>
+              Saber más
+            </a>
+          </div>
         </div>
 
       </div>
@@ -258,10 +236,9 @@ const NewsCard = ({ noticia, icon }) => {
   );
 };
 
-
-// Componente Principal Carrusel de Noticias con Desplazamiento Infinito Fiel sin Saltos Temporales
+// Componente Principal
 const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
-  const [currentIndex, setCurrentIndex] = useState(noticias.length); // Iniciar en el grupo central
+  const [currentIndex, setCurrentIndex] = useState(noticias.length);
   const [visibleCards, setVisibleCards] = useState(4);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
@@ -285,10 +262,8 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   }, []);
 
   const N = noticias.length;
-  // Triplicamos las noticias para la cinta de desplazamiento infinito
   const tripledNoticias = [...noticias, ...noticias, ...noticias];
 
-  // Auto-play: avanza 1 card cada 4 segundos
   useEffect(() => {
     if (isPaused || N <= visibleCards) return;
     const interval = setInterval(() => {
@@ -298,7 +273,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
     return () => clearInterval(interval);
   }, [isPaused, N, visibleCards]);
 
-  // Handler del final de animación para el reset instantáneo
   const handleTransitionEnd = () => {
     if (currentIndex >= N * 2) {
       setTransitionEnabled(false);
@@ -309,7 +283,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
     }
   };
 
-  // Reactivar transiciones después del salto instantáneo
   useEffect(() => {
     if (!transitionEnabled) {
       const timer = setTimeout(() => {
@@ -329,7 +302,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
     setCurrentIndex((prev) => prev + 1);
   };
 
-  // Gestos táctiles
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
@@ -348,8 +320,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   };
 
   const canNavigate = N > visibleCards;
-
-  // Medidas dinámicas para translateX
   const cardPercent = 100 / tripledNoticias.length;
   const trackWidthPercent = (tripledNoticias.length * 100) / visibleCards;
 
@@ -358,7 +328,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
       <FondoTech hideWaves={true} />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10 text-white">
-        {/* Título de la Sección de Noticias */}
+        
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
             Últimas{' '}
@@ -374,7 +344,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
           </p>
         </div>
 
-        {/* Carrusel de Noticias */}
         <div 
           className="relative w-full overflow-hidden py-4 px-1 sm:px-4"
           onMouseEnter={() => setIsPaused(true)}
@@ -407,19 +376,18 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
               </div>
             </div>
 
-            {/* Controles de Flechas */}
             {canNavigate && (
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#84CC16] hover:text-white dark:hover:bg-[#84CC16] hover:border-transparent"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
                   aria-label="Anterior"
                 >
                   <i className="fa-solid fa-chevron-left text-xs"></i>
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#84CC16] hover:text-white dark:hover:bg-[#84CC16] hover:border-transparent"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
                   aria-label="Siguiente"
                 >
                   <i className="fa-solid fa-chevron-right text-xs"></i>
@@ -428,7 +396,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
             )}
           </div>
 
-          {/* Indicadores de Paginación */}
           {canNavigate && (
             <div className="flex justify-center items-center gap-2 mt-6">
               {Array.from({ length: N }).map((_, idx) => {
@@ -442,8 +409,8 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
                     }}
                     className={`h-2 rounded-full transition-all duration-300 ${
                       activeIdx === idx
-                        ? 'w-7 bg-[#84CC16] shadow-sm shadow-lime-950/20'
-                        : 'w-2 bg-neutral-350 dark:bg-neutral-800 hover:bg-neutral-450 dark:hover:bg-neutral-700'
+                        ? 'w-7 bg-[#A3E635]'
+                        : 'w-2 bg-neutral-800 hover:bg-neutral-700'
                     }`}
                     aria-label={`Ir al slide ${idx + 1}`}
                   />

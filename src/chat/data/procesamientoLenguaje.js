@@ -15,12 +15,12 @@ const BANCO_CONOCIMIENTO = [
   {
     id: "saludos",
     keywords: ["hola", "buenos dias", "buenas tardes", "buenas noches", "saludos", "estimado", "niko", "comunicacion", "contacto"],
-    answer: "¡Hola! Bienvenido a HagamosTech. Soy Niko, tu asistente virtual. Estoy aquí para ayudarte con información sobre nuestro menú de salteñas, horarios, sucursales y envíos. ¿En qué te puedo ayudar hoy?"
+    answer: "¡Hola! Bienvenido a HagamosTech. Soy Niko, tu asistente virtual. Estoy aquí para ayudarte con información sobre nuestras soluciones tecnológicas, apoyo en proyectos académicos, digitalización de negocios y asesoría personalizada. ¿En qué te puedo ayudar hoy?"
   },
   {
     id: "despedida",
     keywords: ["adios", "chao", "nos vemos", "hasta luego", "bye", "cuidate", "feliz dia", "terminar", "cerrar", "finalizar"],
-    answer: "¡Gracias por comunicarte con HagamosTech! Esperamos verte pronto disfrutando de las mejores salteñas. ¡Que tengas un excelente día!"
+    answer: "¡Gracias por comunicarte con HagamosTech! Recuerda: ¿Tenés una necesidad? Hagámosla realidad. ¡Que tengas un excelente día!"
   },
   {
     id: "agradecimiento",
@@ -28,39 +28,39 @@ const BANCO_CONOCIMIENTO = [
     answer: "¡Es un placer atenderte! En HagamosTech trabajamos para ofrecerte siempre lo mejor. Si tienes otra consulta, no dudes en preguntar."
   },
   {
-    id: "menu_saltenas",
-    keywords: ["menu", "salteña", "salteñas", "sabor", "sabores", "pollo", "carne", "fricase", "hoja", "especial", "normal", "picante", "dulce", "precios", "carta"],
-    answer: "Nuestro menú destaca por el verdadero sabor tradicional:\n\n• **Salteñas de Pollo y Carne:** (Normales, Picantes y Dulces).\n• **Salteñas Especiales:** (Fricasé, Santa Cruz, etc.).\n• **Bebidas:** Refrescos de fruta natural (mocochinchi, maracuyá) y cafetería.\n\nTodos nuestros productos son horneados diariamente con los mejores ingredientes."
+    id: "soluciones_tech",
+    keywords: ["tecnologia", "desarrollo", "sistema", "sistemas", "software", "aplicacion", "aplicaciones", "app", "ia", "inteligencia artificial", "automatizacion", "procesos", "base de datos", "bases de datos", "formularios", "gestion"],
+    answer: "Ofrecemos soluciones tecnológicas a medida para personas y empresas:\n\n• **Desarrollo Web & Sistemas:** Portales, landing pages, catálogos en línea y sistemas de gestión.\n• **Automatización de Procesos:** Integración de APIs, chatbots inteligentes y automatización con IA.\n• **Soporte & Cloud:** Configuración de bases de datos y despliegue en la nube."
   },
   {
-    id: "ubicacion_tienda",
-    keywords: ["ubicacion", "donde", "direccion", "tienda", "sucursal", "llegar", "maps", "local", "santa cruz", "bolivia", "calle", "ciudad", "quedan", "estan"],
-    answer: "Tenemos varias sucursales en Santa Cruz de la Sierra para que siempre tengas una cerca de ti. Nuestra **Sede Central** está ubicada en:\n\n📍 Av. San Martín y 2do Anillo, Equipetrol.\n\nPuedes ver la ubicación exacta de todas nuestras sucursales en la sección de 'Sucursales' de la web."
+    id: "soluciones_academia",
+    keywords: ["academia", "estudiante", "estudiantes", "universidad", "colegio", "proyecto", "proyectos", "tesis", "grado", "simulador", "simuladores", "programacion", "recursos", "documentacion", "guia"],
+    answer: "Ayudamos a estudiantes, docentes e instituciones educativas:\n\n• **Proyectos Académicos:** Estructuración, codificación y lógica de sistemas.\n• **Simuladores Educativos:** Desarrollo de entornos interactivos en web.\n• **Guías y Recursos:** Diapositivas dinámicas, documentación técnica y material digital de estudio."
   },
   {
-    id: "horario_atencion",
-    keywords: ["horario", "hora", "abierto", "cierran", "abren", "atencion", "fines de semana", "domingo", "sabado", "feriado", "cuando"],
-    answer: "Te esperamos para disfrutar de tus salteñas favoritas en los siguientes horarios:\n\n• **Lunes a Domingo:** De 07:00 a 22:00 hrs.\n\n*Nota: Los horarios pueden variar ligeramente según la sucursal o en días feriados.*"
+    id: "soluciones_negocios",
+    keywords: ["negocio", "negocios", "emprendimiento", "emprendedores", "digitalizacion", "paginas", "catalogo", "catalogos", "pedidos", "presencia", "identidad", "clientes"],
+    answer: "Impulsamos la presencia digital de pequeños y medianos negocios:\n\n• **Digitalización:** Catálogos digitales integrados, landing pages y sistemas de pedidos.\n• **Gestión:** Formularios de contacto y herramientas internas para organizar tus clientes.\n• **Identidad Visual:** Presencia web profesional con enlaces directos a WhatsApp."
   },
   {
-    id: "envios_pedidos",
-    keywords: ["envio", "pedir", "delivery", "llegar", "tiempo", "domicilio", "llega", "moto", "repartidor", "pedido", "casa", "oficina"],
-    answer: "¡Claro que sí! Contamos con servicio de **Delivery Express** para que disfrutes de nuestras salteñas calientitas sin salir de casa u oficina.\n\nPuedes realizar tu pedido comunicándote directamente a nuestro WhatsApp o teléfono fijo. Hacemos envíos rápidos en toda la zona metropolitana de Santa Cruz."
+    id: "como_trabajamos",
+    keywords: ["como trabajan", "proceso", "metodologia", "flujo", "pasos", "hacer", "desarrollo", "entrega", "analisis", "propuesta", "modelo"],
+    answer: "Trabajamos bajo un modelo transparente de 5 pasos:\n\n1. **Contanos:** Nos explicas tu idea o problema.\n2. **Analizamos:** Estudiamos las mejores tecnologías aplicables.\n3. **Proponemos:** Planteamos la solución y el presupuesto.\n4. **Hacemos:** Desarrollamos y construimos la herramienta.\n5. **Entregamos:** Recibes el resultado listo para usar."
   },
   {
     id: "metodos_pago",
     keywords: ["pago", "pagar", "tarjeta", "qr", "efectivo", "transferencia", "factura", "nit", "banco", "comprobante"],
-    answer: "Aceptamos múltiples métodos de pago para tu comodidad:\n\n• **Efectivo** (en todas nuestras sucursales y delivery).\n• **Pago rápido por QR Simple**.\n• **Tarjetas de Débito/Crédito**.\n\nAdemás, emitimos factura por todas tus compras. Solo indícanos tus datos de facturación al realizar tu pedido."
+    answer: "Aceptamos múltiples métodos de pago para tu comodidad:\n\n• **Transferencias Bancarias** (a nuestras cuentas oficiales).\n• **Pago rápido por QR Simple**.\n• **Efectivo** (para entregas locales).\n\nEmitimos factura por todas tus soluciones. Solo indícanos tus datos de facturación."
   },
   {
     id: "contacto_humano",
     keywords: ["hablar", "whatsapp", "vendedor", "telefono", "celular", "llamar", "atencion directa", "soporte humano", "asesor directo", "persona", "humano"],
-    answer: "Si deseas realizar un pedido grande o necesitas atención personalizada, puedes comunicarte directamente con nuestro equipo de atención al cliente:\n\n💬 **WhatsApp / Pedidos:** [+591 61320004](https://api.whatsapp.com/send?phone=59161320004)\n📧 **Email:** contacto@hagamostech.bo"
+    answer: "Si deseas realizar un pedido o necesitas atención personalizada, puedes comunicarte directamente con nuestro equipo de atención al cliente:\n\n💬 **WhatsApp:** [+591 61320004](https://api.whatsapp.com/send?phone=59161320004)\n📧 **Email:** contacto@hagamostech.bo"
   },
   {
-    id: "eventos_catering",
-    keywords: ["evento", "catering", "fiesta", "cumpleaños", "reunion", "oficina", "cantidad", "por mayor", "pedido grande", "reserva"],
-    answer: "¡Por supuesto! En HagamosTech ofrecemos servicio de **Eventos y Catering**.\n\nAtendemos pedidos por mayor para cumpleaños, reuniones de oficina, desayunos de trabajo y celebraciones. Te recomendamos hacer tu reserva con al menos 24 horas de anticipación para asegurar disponibilidad y entrega puntual."
+    id: "soluciones_personalizadas",
+    keywords: ["personalizada", "personalizado", "diferente", "idea", "problema", "caso", "analizar", "hacer", "crear", "medida"],
+    answer: "¡Por supuesto! Si tu necesidad no encaja en una categoría común, contanos el problema y nosotros nos encargamos de diseñar y construir la solución desde cero para ti."
   }
 ];
 
@@ -79,7 +79,7 @@ export const analizarMensajeUsuario = (text) => {
   const tokensUsuario = tokenizarYLimpiar(text);
   
   if (tokensUsuario.length === 0) {
-    return 'Por favor, escríbeme tu consulta. Puedo ayudarte con información sobre nuestro menú, horarios, sucursales y pedidos a domicilio.';
+    return 'Por favor, escríbeme tu consulta. Puedo ayudarte con información sobre nuestras soluciones tecnológicas, académicas y para negocios.';
   }
 
   let mejorIntento = null;
@@ -122,5 +122,5 @@ export const analizarMensajeUsuario = (text) => {
   }
 
   console.log(`NLP | No match. Max Score: ${puntuacionMaxima.toFixed(2)}`);
-  return 'No estoy seguro de entender tu consulta.\n\nPuedo ayudarte con información sobre:\n\n• **🥟 Nuestro Menú y Sabores.**\n• **📍 Sucursales y Horarios.**\n• **🛵 Pedidos por Delivery.**\n• **🎉 Catering para Eventos.**\n\nSi deseas hacer un pedido ahora mismo, puedes escribir la palabra **"whatsapp"** o **"asesor"** para hablar directamente con nosotros.';
+  return 'No estoy seguro de entender tu consulta.\n\nPuedo ayudarte con información sobre:\n\n• **💻 Soluciones Tecnológicas (Web, Apps).**\n• **🎓 Apoyo Académico (Proyectos, Tesis).**\n• **🏪 Digitalización de Negocios y Emprendedores.**\n• **🧩 Nuestro Flujo de Trabajo (Cómo trabajamos).**\n\nSi deseas hablar directamente con un asesor, escribe la palabra **"whatsapp"** o **"asesor"** para redirigirte.';
 };
