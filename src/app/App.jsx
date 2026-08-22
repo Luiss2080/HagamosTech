@@ -151,11 +151,11 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Inicio />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
-                <Route path="/servicios/delivery" element={<DeliveryExpress />} />
-              <Route path="/servicios/mayor" element={<PedidosPorMayor />} />
-              <Route path="/servicios/eventos" element={<EventosCatering />} />
-              <Route path="/servicios/corporativo" element={<ServicioCorporativo />} />
-              <Route path="/servicios/congeladas" element={<SaltenasCongeladas />} />
+                <Route path="/servicios/delivery" element={<EnvioKits />} />
+              <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
+              <Route path="/servicios/eventos" element={<TalleresCorporativos />} />
+              <Route path="/servicios/corporativo" element={<DesarrolloEmpresarial />} />
+              <Route path="/servicios/congeladas" element={<KitsSuscripcion />} />
               <Route path="/condiciones" element={<Condiciones />} />
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
