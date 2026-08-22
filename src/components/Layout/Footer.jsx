@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <footer 
       className="relative bg-[#0A0A0A] text-white/80 pt-16 pb-8 z-10 overflow-hidden shadow-[0_-10px_30px_rgba(0,0,0,0.4)]"
-      style={{ borderTop: '5px solid transparent', borderImage: 'linear-gradient(to right, #A3E635, #FF4D00) 1' }}
+      style={{ borderTop: '5px solid transparent', borderImage: 'linear-gradient(to right, #A3E635, #FFFFFF) 1' }}
     >
 
       {/* Fondo de Partículas */}
@@ -40,9 +40,9 @@ const Footer = () => {
           <div className="lg:col-span-4 flex flex-col items-center text-center px-4 lg:pr-10 space-y-6">
             <Link to="/" className="group inline-block">
               <img
-                src="/img/02_Logos/LogoFooter.png"
+                src="/img/02_Logos/LogoHeader.png"
                 alt="Logo HagamosTech"
-                className="h-32 w-auto object-contain transition-transform duration-500 group-hover:scale-110 drop-shadow-xl"
+                className="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xl select-none"
               />
             </Link>
             <p className="text-white/70 text-[14px] leading-relaxed max-w-sm font-medium">
@@ -70,14 +70,14 @@ const Footer = () => {
 
           {/* COLUMNA 2: SOLUCIONES (3 cols) */}
           <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-12">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full">
+            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
               <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
               SOLUCIONES
             </h3>
             <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
               {menuLinks.map((link, i) => (
-                <li key={i} className="w-full max-w-[200px] lg:max-w-none">
-                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full hover:-translate-y-1">
+                <li key={i} className="w-full max-w-[200px] lg:max-w-none transition-transform duration-300 hover:scale-[1.03] hover:translate-x-1.5">
+                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full">
                     <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner shrink-0">
                       <i className={`fas ${link.icon} text-[13px] text-[#A3E635] group-hover:text-[#0A0A0A] transition-colors`}></i>
                     </div>
@@ -90,16 +90,16 @@ const Footer = () => {
 
           {/* COLUMNA 3: NOSOTROS (2 cols) */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-10">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_rgba(255,77,0,1)]"></span>
+            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
+              <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]"></span>
               NOSOTROS
             </h3>
             <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
               {nosotrosLinks.map((link, i) => (
-                <li key={i} className="w-full max-w-[200px] lg:max-w-none">
-                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full hover:-translate-y-1">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner shrink-0">
-                      <i className={`fas ${link.icon} text-[13px] text-[#FF4D00] group-hover:text-[#0A0A0A] transition-colors`}></i>
+                <li key={i} className="w-full max-w-[200px] lg:max-w-none transition-transform duration-300 hover:scale-[1.03] hover:translate-x-1.5">
+                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full">
+                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white transition-colors duration-300 shadow-inner shrink-0">
+                      <i className={`fas ${link.icon} text-[13px] text-white group-hover:text-[#0A0A0A] transition-colors`}></i>
                     </div>
                     <span className="text-[14px] font-semibold">{link.name}</span>
                   </Link>
@@ -110,12 +110,12 @@ const Footer = () => {
 
           {/* COLUMNA 4: CONTACTO (3 cols) */}
           <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-12">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_rgba(255,77,0,1)]"></span>
+            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
+              <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
               CONTACTO
             </h3>
             <ul className="space-y-6 w-full flex flex-col items-center lg:items-start">
-              <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
+              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
                   <i className="fas fa-location-dot text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
@@ -124,16 +124,16 @@ const Footer = () => {
                   <span className="text-[14px] text-white/80 font-medium leading-snug group-hover:text-white transition-colors">Av. San Martín y 2do Anillo<br />Equipetrol, Santa Cruz</span>
                 </div>
               </li>
-              <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-envelope text-[#FF4D00] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
+              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
+                  <i className="fas fa-envelope text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Email</span>
                   <a href="mailto:contacto@hagamostech.bo" className="text-[14px] text-white/80 font-medium hover:text-white transition-colors">contacto@hagamostech.bo</a>
                 </div>
               </li>
-              <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
+              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
                   <i className="fas fa-phone text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
@@ -142,9 +142,9 @@ const Footer = () => {
                   <a href="tel:+59161320004" className="text-[14px] text-white/80 font-medium hover:text-white transition-colors">+591 61320004</a>
                 </div>
               </li>
-              <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-clock text-[#FF4D00] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
+              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
+                  <i className="fas fa-clock text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Horarios</span>
@@ -162,11 +162,12 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacidad" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Política de Privacidad</Link>
-            <Link to="/terminos" className="text-[13px] font-semibold text-white/60 hover:text-[#FF4D00] transition-colors">Términos de Servicio</Link>
+            <Link to="/terminos" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Términos de Servicio</Link>
             <Link to="/cookies" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Cookies</Link>
           </div>
         </div>
       </div>
+    </footer>
     </footer>
   );
 };
