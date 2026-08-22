@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoParticulas';
+import FondoTech from '../../../components/fondos/FondoTech';
 
 const WHATSAPP_URL = 'https://wa.me/59161320004';
 

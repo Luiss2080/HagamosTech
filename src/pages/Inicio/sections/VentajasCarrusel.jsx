@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect, useCallback, useMemo } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoParticulas';
+import FondoTech from '../../../components/fondos/FondoTech';
 
 const originalHighlights = [
     {
@@ -64,11 +64,11 @@ const originalHighlights = [
         desc: 'Tanto en nuestra educación como en nuestro software, ofrecemos los más altos estándares de calidad y soporte.',
         icon: 'fa-shield-halved',
         badge: 'Soporte Técnico 24/7',
-        color: "bg-white",
-        textColor: "text-[#111827]",
-        iconColor: "text-[#A3E635] bg-[#111827]",
-        badgeColor: "bg-lime-50 text-[#A3E635] border-[#A3E635]/20",
-        borderColor: "border-[#84CC16]/30",
+        color: "bg-[#111827]",
+        textColor: "text-white",
+        iconColor: "text-[#111827] bg-[#84CC16]",
+        badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
+        borderColor: "border-[#A3E635]/20",
         features: [
             { icon: 'fa-bolt', text: 'Atención Prioritaria' },
             { icon: 'fa-shield-halved', text: 'Garantía de Software' },
@@ -216,15 +216,8 @@ const VentajasCarrusel = () => {
 
 
     return (
-        <section id="promociones" className="py-8 relative overflow-hidden">
-            {/* --- Background Decor --- */}
-            <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-                 <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-lime-100/20 rounded-full blur-[100px] animate-pulse-slow"></div>
-                 <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#84CC16]/10 rounded-full blur-[100px] animate-pulse-slow delay-1000"></div>
-            </div>
-
-            {/* --- 15 Floating Circles --- */}
-            <CircuitBackground />
+        <section id="promociones" className="py-16 relative overflow-hidden bg-[#050505]">
+            <FondoTech hideWaves={true} />
 
             <style>{`
                 .perspective-card { perspective: 1200px; }
@@ -235,20 +228,18 @@ const VentajasCarrusel = () => {
                 
                 {/* --- Header --- */}
                 <div className="container mx-auto px-4 sm:px-6 text-center max-w-5xl mb-4">
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#111827] dark:text-white leading-tight mb-5 sm:mb-6 tracking-tighter">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5 sm:mb-6 tracking-tighter">
                         Ventajas de trabajar con <br />
                         <span className="relative inline-block px-2">
-                            <span className="relative z-10 text-[#A3E635] dark:text-lime-400">Tech Home</span>
-                            <svg className="absolute w-full h-4 -bottom-2 left-0 z-0 text-[#84CC16]" viewBox="0 0 200 9" fill="none">
+                            <span className="relative z-10 text-[#A3E635]">Tech Home</span>
+                            <svg className="absolute w-full h-4 -bottom-2 left-0 z-0 text-[#A3E635]/60" viewBox="0 0 200 9" fill="none">
                                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
                     </h2>
-                    <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 font-semibold leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-base sm:text-lg text-slate-400 font-semibold leading-relaxed max-w-3xl mx-auto">
                         Desarrolla tus habilidades tecnológicas y transforma tus ideas en resultados con una experiencia educativa, comercial y de software más clara, moderna y efectiva.
                     </p>
-
-
                 </div>
 
                 {/* --- Carousel Track (FULL IMMERSIVE) --- */}
