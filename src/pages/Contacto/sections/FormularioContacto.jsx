@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
+import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
 const WHATSAPP_NUMBER = '59161320004';
 
