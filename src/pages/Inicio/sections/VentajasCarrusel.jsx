@@ -3,53 +3,17 @@ import FondoTech from '../../../components/fondos/FondoTech';
 
 const originalHighlights = [
     {
-        id: 'cursos',
-        title: 'Robótica',
-        highlight: 'Creativa',
-        desc: 'Aprende programando robots reales desde el primer día, desarrollando habilidades del siglo XXI y el pensamiento lógico.',
-        icon: 'fa-graduation-cap',
-        badge: 'Cursos Prácticos',
-        color: "bg-[#A3E635]",
-        textColor: "text-white",
-        iconColor: "text-[#A3E635] bg-white",
-        badgeColor: "bg-white/20 text-white border-white/10",
-        features: [
-            { icon: 'fa-box-open', text: 'Kits Incluidos' },
-            { icon: 'fa-users', text: 'Mentorías en Vivo' },
-            { icon: 'fa-robot', text: 'Proyectos Reales' },
-            { icon: 'fa-certificate', text: 'Certificación Oficial' }
-        ]
-    },
-    {
-        id: 'libros',
-        title: 'Libros',
-        highlight: 'Escolares',
-        desc: 'Comercializamos libros educativos para nivel primario y secundario que cubren todas las áreas curriculares.',
-        icon: 'fa-book-open',
-        badge: 'Material Didáctico',
+        id: 'tecnologia',
+        title: 'Soluciones',
+        highlight: 'Tecnológicas',
+        desc: 'Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.',
+        icon: 'fa-laptop-code',
+        badge: 'Desarrollo Profesional',
         color: "bg-[#111827]",
         textColor: "text-white",
         iconColor: "text-[#111827] bg-[#84CC16]",
         badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
         borderColor: "border-[#A3E635]/20",
-        features: [
-            { icon: 'fa-school', text: 'Primaria y Secundaria' },
-            { icon: 'fa-layer-group', text: 'Todas las Materias' },
-            { icon: 'fa-book', text: 'Guías Pedagógicas' },
-            { icon: 'fa-check-double', text: 'Alineado a la Currícula' }
-        ]
-    },
-    {
-        id: 'software',
-        title: 'Software',
-        highlight: 'a Medida',
-        desc: 'Diseñamos y desarrollamos aplicaciones móviles y plataformas web adaptadas a tus necesidades comerciales.',
-        icon: 'fa-laptop-code',
-        badge: 'Desarrollo Profesional',
-        color: "bg-[#A3E635]",
-        textColor: "text-white",
-        iconColor: "text-[#A3E635] bg-white",
-        badgeColor: "bg-white/20 text-white border-white/10",
         features: [
             { icon: 'fa-code', text: 'Código Limpio' },
             { icon: 'fa-screwdriver-wrench', text: 'Soporte Continuo' },
@@ -58,41 +22,58 @@ const originalHighlights = [
         ]
     },
     {
-        id: 'calidad',
-        title: 'Calidad',
-        highlight: 'Garantizada',
-        desc: 'Tanto en nuestra educación como en nuestro software, ofrecemos los más altos estándares de calidad y soporte.',
-        icon: 'fa-shield-halved',
-        badge: 'Soporte Técnico 24/7',
-        color: "bg-[#111827]",
-        textColor: "text-white",
-        iconColor: "text-[#111827] bg-[#84CC16]",
-        badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
-        borderColor: "border-[#A3E635]/20",
+        id: 'academia',
+        title: 'Apoyo',
+        highlight: 'Académico',
+        desc: 'Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.',
+        icon: 'fa-graduation-cap',
+        badge: 'Apoyo Estudiantil',
+        color: "bg-[#A3E635]",
+        textColor: "text-[#0A0A0A]",
+        iconColor: "text-[#A3E635] bg-white",
+        badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-bolt', text: 'Atención Prioritaria' },
-            { icon: 'fa-shield-halved', text: 'Garantía de Software' },
-            { icon: 'fa-user-graduate', text: 'Asesoría Experta' },
-            { icon: 'fa-chart-line', text: 'Seguimiento Continuo' }
+            { icon: 'fa-user-graduate', text: 'Asesoría Técnica' },
+            { icon: 'fa-diagram-project', text: 'Modelado y Lógica' },
+            { icon: 'fa-file-lines', text: 'Guías de Defensa' },
+            { icon: 'fa-chalkboard-user', text: 'Aprendizaje Guiado' }
         ]
     },
     {
-        id: 'mentorias',
-        title: 'Mentoría',
-        highlight: 'Personalizada',
-        desc: 'Te guiamos paso a paso en tu camino de aprendizaje de robótica y desarrollo de software con tutores expertos.',
-        icon: 'fa-user-tie',
-        badge: 'Guía Experta',
+        id: 'negocios',
+        title: 'Impulso a',
+        highlight: 'Negocios',
+        desc: 'Llevamos tu negocio al mundo digital con catálogos en línea, landing pages y formularios de contacto directos.',
+        icon: 'fa-briefcase',
+        badge: 'Digitalización',
         color: "bg-[#111827]",
         textColor: "text-white",
         iconColor: "text-[#111827] bg-[#84CC16]",
         badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
-            { icon: 'fa-user', text: 'Clases 1 a 1' },
-            { icon: 'fa-compass', text: 'Orientación Vocacional' },
-            { icon: 'fa-flask', text: 'Proyectos de Ciencias' },
-            { icon: 'fa-infinity', text: 'Acceso de por vida' }
+            { icon: 'fa-list-check', text: 'Catálogos Digitales' },
+            { icon: 'fa-message', text: 'Contacto WhatsApp' },
+            { icon: 'fa-chart-line', text: 'Mayor Visibilidad' },
+            { icon: 'fa-gears', text: 'Fácil Gestión' }
+        ]
+    },
+    {
+        id: 'personalizadas',
+        title: 'Soluciones',
+        highlight: 'Personalizadas',
+        desc: 'Trabajamos bajo el flujo: Contanos → Analizamos → Proponemos → Hacemos → Entregamos.',
+        icon: 'fa-gears',
+        badge: 'Metodología Ágil',
+        color: "bg-[#A3E635]",
+        textColor: "text-[#0A0A0A]",
+        iconColor: "text-[#A3E635] bg-white",
+        badgeColor: "bg-white/20 text-white border-white/10",
+        features: [
+            { icon: 'fa-comments', text: 'Análisis Sin Costo' },
+            { icon: 'fa-file-signature', text: 'Propuesta Clara' },
+            { icon: 'fa-code-branch', text: 'Desarrollo Rápido' },
+            { icon: 'fa-circle-check', text: 'Entrega Llave en Mano' }
         ]
     }
 ];
@@ -231,14 +212,14 @@ const VentajasCarrusel = () => {
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5 sm:mb-6 tracking-tighter">
                         Ventajas de trabajar con <br />
                         <span className="relative inline-block px-2">
-                            <span className="relative z-10 text-[#A3E635]">Tech Home</span>
+                            <span className="relative z-10 text-[#A3E635]">HagamosTech</span>
                             <svg className="absolute w-full h-4 -bottom-2 left-0 z-0 text-[#A3E635]/60" viewBox="0 0 200 9" fill="none">
                                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-semibold leading-relaxed max-w-3xl mx-auto">
-                        Desarrolla tus habilidades tecnológicas y transforma tus ideas en resultados con una experiencia educativa, comercial y de software más clara, moderna y efectiva.
+                        Transformamos tus problemas, necesidades e ideas en soluciones reales con tecnología, creatividad y un proceso cercano.
                     </p>
                 </div>
 
