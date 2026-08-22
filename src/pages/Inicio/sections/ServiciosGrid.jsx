@@ -1,24 +1,24 @@
 import React, { useState } from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
-import ServiciosEducacion from './ServiciosEducacion';
+import ServiciosAcademia from './ServiciosAcademia';
 import ServiciosDesarrollo from './ServiciosDesarrollo';
 import ServiciosMentorias from './ServiciosMentorias';
 import ServiciosEditorial from './ServiciosEditorial';
 
 const CATEGORIES = [
-    { id: 'educacion', label: 'EDUCACIÓN Y ROBÓTICA' },
+    { id: 'academia', label: 'SOLUCIONES ACADÉMICAS' },
     { id: 'desarrollo', label: 'DESARROLLO DE SOFTWARE' },
     { id: 'mentorias', label: 'MENTORÍAS TECNOLÓGICAS' },
-    { id: 'editorial', label: 'EDITORIAL Y TEXTOS' }
+    { id: 'editorial', label: 'EDITORIAL Y RECURSOS' }
 ];
 
 const ServiciosGrid = () => {
-    const [activeCategory, setActiveCategory] = useState('educacion');
+    const [activeCategory, setActiveCategory] = useState('academia');
 
     const renderActiveCarousel = () => {
         switch (activeCategory) {
-            case 'educacion':
-                return <ServiciosEducacion />;
+            case 'academia':
+                return <ServiciosAcademia />;
             case 'desarrollo':
                 return <ServiciosDesarrollo />;
             case 'mentorias':
@@ -26,7 +26,7 @@ const ServiciosGrid = () => {
             case 'editorial':
                 return <ServiciosEditorial />;
             default:
-                return <ServiciosEducacion />;
+                return <ServiciosAcademia />;
         }
     };
 
