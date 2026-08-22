@@ -332,29 +332,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
-
-  const handleTouchMove = (e) => {
-    touchEndX.current = e.touches[0].clientX;
-  };
-
-  const handleTouchEnd = () => {
-    const diff = touchStartX.current - touchEndX.current;
-    if (diff > 50) {
-      handleNext();
-    } else if (diff < -50) {
-      handlePrev();
-    }
-  };
-          onMouseEnter={() => setIsPaused(true)}
-          onMouseLeave={() => setIsPaused(false)}
-        >
-          <div 
-            className="w-full relative px-2 sm:px-8"
-            onTouchStart={handleTouchStart}
-            onTouchMove={handleTouchMove}
-            onTouchEnd={handleTouchEnd}
-          >
-            <div className="overflow-hidden py-4">
               <div
                 className={`flex items-stretch ${transitionEnabled ? 'transition-transform duration-500 ease-in-out' : ''}`}
                 onTransitionEnd={handleTransitionEnd}
