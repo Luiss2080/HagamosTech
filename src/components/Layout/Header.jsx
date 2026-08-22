@@ -44,7 +44,7 @@ const NAV_ITEMS = [
             { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/#personalizado', icon: 'fa-user' },
         ]
     },
-    { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'scroll', target: 'flujo' },
+    { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'route', target: '/como-trabajamos' },
     {
         id: 'sobre-nosotros',
         label: 'Sobre Nosotros',
