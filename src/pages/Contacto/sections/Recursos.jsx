@@ -30,17 +30,17 @@ const recursosData = [
         desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
         icon: "fa-headset",
         theme: {
-            cardBg: "bg-[#0A0A0A]",
+            cardBg: "bg-white",
             accentLine: "bg-[#A3E635]",
-            iconBg: "bg-white/10",
-            iconColor: "text-[#A3E635]",
-            textColor: "text-white",
-            descColor: "text-gray-300",
-            borderColor: "border-[#0A0A0A]",
-            shadow: "shadow-xl hover:shadow-2xl shadow-black/20",
-            buttonBg: "bg-[#A3E635]",
-            buttonText: "text-[#0A0A0A]",
-            buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
+            iconBg: "bg-neutral-150",
+            iconColor: "text-[#0A0A0A]",
+            textColor: "text-[#0A0A0A]",
+            descColor: "text-slate-650",
+            borderColor: "border-neutral-200",
+            shadow: "shadow-2xl shadow-neutral-200/50 hover:shadow-[0_15px_40px_rgba(163,230,53,0.15)]",
+            buttonBg: "bg-[#0A0A0A]",
+            buttonText: "text-white",
+            buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
             { label: "Tecnología", icon: "fa-microchip" },
