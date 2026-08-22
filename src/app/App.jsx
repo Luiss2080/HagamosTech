@@ -39,13 +39,6 @@ import EventosCatering from '../pages/Servicios/restaurante/EventosCatering';
 import ServicioCorporativo from '../pages/Servicios/restaurante/ServicioCorporativo';
 import SaltenasCongeladas from '../pages/Servicios/restaurante/SaltenasCongeladas';
 import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
-import SantaCruzSucursales from '../pages/Sucursales/SantaCruz/SantaCruzSucursales';
-import CochabambaSucursales from '../pages/Sucursales/Cochabamba/CochabambaSucursales';
-import OruroSucursales from '../pages/Sucursales/Oruro/OruroSucursales';
-import { DetailEquipetrol } from '../pages/Sucursales/SantaCruz/detalle/EquipetrolDetalle';
-import { Detail2doAnillo } from '../pages/Sucursales/SantaCruz/detalle/2doAnilloDetalle';
-import { DetailAvPirai } from '../pages/Sucursales/SantaCruz/detalle/AvPiraiDetalle';
-import { DetailCafeBeni } from '../pages/Sucursales/SantaCruz/detalle/CafeBeniDetalle';
 import ContactoPagina from '../pages/Contacto/Contacto';
 import HeroContacto from '../pages/Contacto/sections/HeroContacto';
 import FormularioContacto from '../pages/Contacto/sections/FormularioContacto';
@@ -185,14 +178,6 @@ const App = () => {
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
               <Route path="/contacto/recursos" element={<Recursos />} />
               <Route path="/contacto/ubicacion" element={<Ubicacion />} />
-              <Route path="/sucursales" element={<Navigate to="/sucursales/santa-cruz" replace />} />
-              <Route path="/sucursales/santa-cruz" element={<SantaCruzSucursales />} />
-              <Route path="/sucursales/santa-cruz/equipetrol" element={<DetailEquipetrol />} />
-              <Route path="/sucursales/santa-cruz/2do-anillo" element={<Detail2doAnillo />} />
-              <Route path="/sucursales/santa-cruz/av-pirai" element={<DetailAvPirai />} />
-              <Route path="/sucursales/santa-cruz/cafe-beni" element={<DetailCafeBeni />} />
-              <Route path="/sucursales/cochabamba" element={<CochabambaSucursales />} />
-              <Route path="/sucursales/oruro" element={<OruroSucursales />} />
               <Route path="/pago-movil" element={<PagoMovil />} />
               <Route path="/catalogo" element={<CatalogoPagina />} />
               <Route path="/catalogo/:id" element={<DetalleProducto />} />
