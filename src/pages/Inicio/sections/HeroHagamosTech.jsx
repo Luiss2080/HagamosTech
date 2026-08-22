@@ -65,9 +65,9 @@ const HeroHagamosTech = () => {
                                     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                     else { navigate('/'); setTimeout(() => document.getElementById('flujo')?.scrollIntoView({ behavior: 'smooth' }), 120); }
                                 }}
-                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-[#FF4D00] hover:bg-[#D93D00] text-white font-black text-[11px] uppercase tracking-[0.14em] rounded-full shadow-lg shadow-[#FF4D00]/25 hover:shadow-[#FF4D00]/40 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
+                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-white hover:bg-white/90 text-[#0A0A0A] font-black text-[11px] uppercase tracking-[0.14em] rounded-full shadow-lg shadow-white/10 hover:shadow-white/20 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
                             >
-                                <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-white"></i>
+                                <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-[#0A0A0A]"></i>
                                 <span>Cómo trabajamos</span>
                             </button>
                         </div>
@@ -77,7 +77,7 @@ const HeroHagamosTech = () => {
                                 <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
                                     <i className="fas fa-star"></i>
                                 </div>
-                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#FF4D00]/40 flex items-center justify-center text-[9px] text-[#FF4D00] shadow-sm">
+                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-white/40 flex items-center justify-center text-[9px] text-white shadow-sm">
                                     <i className="fas fa-lightbulb"></i>
                                 </div>
                                 <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">

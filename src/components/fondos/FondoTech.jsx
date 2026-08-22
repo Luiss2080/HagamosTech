@@ -1,33 +1,70 @@
 import React from 'react';
 
 const DOTS = [
-    { top: '10%', left: '10%', size: 9, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0s' },
-    { top: '16%', left: '28%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.5s' },
-    { top: '22%', left: '44%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
-    { top: '14%', right: '24%', size: 8, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '2s' },
-    { top: '30%', right: '10%', size: 9, type: 'plus', color: '#84CC16', anim: 'animate-spin-slow', delay: '0.8s' },
-    { top: '38%', left: '14%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.4s' },
-    { top: '44%', left: '60%', size: 9, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '0.3s' },
-    { top: '52%', right: '18%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.6s' },
-    { top: '58%', left: '24%', size: 8, type: 'square', color: '#84CC16', anim: 'animate-twinkle', delay: '1.7s' },
-    { top: '64%', left: '46%', size: 7, type: 'diamond', color: '#A3E635', anim: 'animate-drift', delay: '0.9s' },
-    { top: '70%', right: '30%', size: 9, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '2.2s' },
-    { top: '76%', left: '16%', size: 11, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '1.1s' },
-    { top: '82%', right: '14%', size: 7, type: 'dot', color: '#84CC16', anim: 'animate-twinkle', delay: '0.6s' },
-    { bottom: '12%', left: '38%', size: 9, type: 'ring', color: '#A3E635', anim: 'animate-ring-ping', delay: '1.9s' },
-    { bottom: '20%', right: '40%', size: 11, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '0.2s' },
-    { bottom: '28%', left: '58%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '2.4s' },
-    { bottom: '10%', left: '12%', size: 8, type: 'diamond', color: '#84CC16', anim: 'animate-twinkle', delay: '1.5s' },
-    { top: '26%', left: '72%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.7s' },
-    { top: '48%', right: '46%', size: 9, type: 'plus', color: '#A3E635', anim: 'animate-spin-slow', delay: '2.8s' },
-    { top: '60%', right: '58%', size: 9, type: 'ring', color: '#84CC16', anim: 'animate-ring-ping', delay: '1.3s' },
-    { top: '34%', left: '82%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-twinkle', delay: '1s' },
-    { top: '88%', left: '60%', size: 7, type: 'square', color: '#A3E635', anim: 'animate-drift', delay: '0.4s' },
-    { top: '6%', right: '55%', size: 8, type: 'diamond', color: '#A3E635', anim: 'animate-twinkle', delay: '2.1s' },
+    // Top-left area
+    { top: '5%', left: '8%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0s', duration: '14s' },
+    { top: '12%', left: '15%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1s', duration: '18s' },
+    { top: '8%', left: '22%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '3s', duration: '16s' },
+    { top: '20%', left: '10%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2s', duration: '12s' },
+    { top: '15%', left: '28%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.5s', duration: '20s' },
+    
+    // Top-right area
+    { top: '6%', right: '12%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.5s', duration: '15s' },
+    { top: '14%', right: '20%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '0.2s', duration: '13s' },
+    { top: '9%', right: '28%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.5s', duration: '17s' },
+    { top: '22%', right: '15%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '4s', duration: '19s' },
+    { top: '18%', right: '32%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1s', duration: '14s' },
+
+    // Middle area
+    { top: '30%', left: '18%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.8s', duration: '16s' },
+    { top: '35%', left: '32%', size: 7, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '2.1s', duration: '15s' },
+    { top: '28%', right: '25%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '3.2s', duration: '18s' },
+    { top: '38%', right: '14%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.4s', duration: '13s' },
+    { top: '42%', left: '5%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.3s', duration: '21s' },
+    { top: '45%', right: '8%', size: 7, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '2.7s', duration: '16s' },
+
+    // Center area
+    { top: '48%', left: '48%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.2s', duration: '17s' },
+    { top: '40%', left: '58%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '3.5s', duration: '19s' },
+    { top: '52%', left: '38%', size: 7, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '0.6s', duration: '14s' },
+    { top: '55%', right: '42%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.4s', duration: '15s' },
+
+    // Bottom-left area
+    { bottom: '8%', left: '10%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.9s', duration: '18s' },
+    { bottom: '15%', left: '18%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '3.1s', duration: '13s' },
+    { bottom: '22%', left: '26%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.8s', duration: '16s' },
+    { bottom: '12%', left: '32%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.2s', duration: '15s' },
+    { bottom: '28%', left: '14%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.4s', duration: '19s' },
+
+    // Bottom-right area
+    { bottom: '10%', right: '12%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '1.7s', duration: '14s' },
+    { bottom: '18%', right: '22%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '3.4s', duration: '16s' },
+    { bottom: '6%', right: '28%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.8s', duration: '20s' },
+    { bottom: '25%', right: '16%', size: 8, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.9s', duration: '17s' },
+    { bottom: '20%', right: '30%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '1.1s', duration: '15s' },
+
+    // Extra fill dots for higher density and movement
+    { top: '15%', left: '50%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2s', duration: '18s' },
+    { top: '25%', left: '65%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.5s', duration: '14s' },
+    { top: '35%', right: '50%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '3s', duration: '16s' },
+    { top: '65%', left: '12%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.5s', duration: '15s' },
+    { top: '72%', left: '28%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.8s', duration: '17s' },
+    { top: '80%', right: '25%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '0.6s', duration: '13s' },
+    { top: '85%', right: '48%', size: 7, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '2.3s', duration: '19s' },
+    { top: '75%', left: '55%', size: 5, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '1.3s', duration: '21s' },
+    { bottom: '30%', right: '50%', size: 6, type: 'dot', color: '#84CC16', anim: 'animate-drift', delay: '3.7s', duration: '15s' },
+    { bottom: '35%', left: '42%', size: 6, type: 'dot', color: '#A3E635', anim: 'animate-drift', delay: '0.1s', duration: '14s' }
 ];
 
 const Dot = ({ d }) => {
-    const pos = { top: d.top, left: d.left, right: d.right, bottom: d.bottom, animationDelay: d.delay };
+    const pos = { 
+        top: d.top, 
+        left: d.left, 
+        right: d.right, 
+        bottom: d.bottom, 
+        animationDelay: d.delay, 
+        animationDuration: d.duration || '12s' 
+    };
     const glow = { filter: `drop-shadow(0 0 6px ${d.color})` };
 
     if (d.type === 'ring') {

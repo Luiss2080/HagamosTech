@@ -231,14 +231,14 @@ const Header = () => {
             <header
                 className={`fixed top-0 left-0 w-full z-[80] transition-all duration-500 animate-slide-down ${
                     isScrolled
-                        ? 'bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#FF4D00]/20 shadow-lg shadow-black/30 py-2 sm:py-3'
+                        ? 'bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#A3E635]/15 shadow-lg shadow-black/30 py-2 sm:py-3'
                         : 'bg-[#0A0A0A]/85 backdrop-blur-lg border-b border-transparent py-3 sm:py-4'
                 }`}
                 id="main-header"
             >
                 {/* Header Background Effects */}
                 <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FF4D00]/10 rounded-full blur-[80px] -translate-y-1/2"></div>
+                    <div className="absolute top-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-[80px] -translate-y-1/2"></div>
                     <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#A3E635]/5 rounded-full blur-[60px] -translate-y-1/2"></div>
                 </div>
 
@@ -495,14 +495,14 @@ const Header = () => {
 
                                     <button
                                         onClick={() => openModal('registerModal')}
-                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-[#FF4D00] bg-transparent border border-[#FF4D00]/50 hover:bg-[#FF4D00]/10 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-md hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap"
+                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-white bg-transparent border border-white/50 hover:bg-white/10 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-md hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap"
                                     >
                                         <span className="relative z-10 flex items-center gap-2">
                                             <i className="fas fa-user-plus text-[9px] group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[8deg] transition-transform"></i>
                                             Crear Cuenta
                                             <i className="fas fa-arrow-right text-[9px] group-hover:translate-x-0.5 transition-transform"></i>
                                         </span>
-                                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-[#FF4D00]/20 to-transparent transition-transform duration-700 ease-in-out"></div>
+                                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out"></div>
                                     </button>
                                 </>
                             )}
@@ -658,7 +658,7 @@ const Header = () => {
                                     closeMenu();
                                     openModal('registerModal');
                                 }}
-                                className="w-full py-3 bg-[#FF4D00] hover:bg-[#D93D00] text-white font-black text-[15px] uppercase tracking-[0.16em] rounded-2xl shadow-xl shadow-[#FF4D00]/30 active:scale-95 transition-all relative overflow-hidden group flex items-center justify-center gap-2"
+                                className="w-full py-3 bg-white hover:bg-white/90 text-[#0A0A0A] font-black text-[15px] uppercase tracking-[0.16em] rounded-2xl shadow-xl shadow-white/5 active:scale-95 transition-all relative overflow-hidden group flex items-center justify-center gap-2"
                             >
                                 <span className="relative z-10 inline-flex items-center gap-2">
                                     <i className="fas fa-user-plus text-[13px]"></i>
