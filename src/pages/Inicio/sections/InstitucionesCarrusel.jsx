@@ -83,16 +83,12 @@ const InstitucionesCarrusel = () => {
     const normalizeOffset = (offset) => {
         const halfWidth = halfWidthRef.current;
         if (!halfWidth) return offset;
-        // Soporta cualquier magnitud (varias vueltas) usando módulo.
         let normalized = offset % halfWidth;
         if (normalized > 0) normalized -= halfWidth;
         return normalized;
     };
 
-    // Se muestran todas las instituciones aliadas
     const base = INSTITUTIONS;
-
-    // Duplicate list for smooth infinite loop
     const row1 = [...base, ...base];
 
     useEffect(() => {
@@ -140,7 +136,6 @@ const InstitucionesCarrusel = () => {
                     applyOffset(nextOffset);
                 }
             } else if (!isPausedRef.current && halfWidth) {
-                // 40 seconds per complete copy, matching the previous CSS marquee speed.
                 applyOffset(normalizeOffset(offsetRef.current - (elapsed * halfWidth) / 40000));
             }
 
@@ -197,7 +192,7 @@ const InstitucionesCarrusel = () => {
                 <img src={inst.logo} alt={inst.name} loading="lazy" decoding="async" className="max-w-full max-h-full object-contain" />
             </div>
 
-            {/* Red Divider */}
+            {/* Divider */}
             <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent"></div>
 
             {/* Content */}
@@ -211,7 +206,7 @@ const InstitucionesCarrusel = () => {
                     </div>
                     
                     <div className="flex items-center gap-1.5 mb-1.5">
-                        <i className="fa-solid fa-graduation-cap text-[#84CC16] text-[9px] sm:text-[10px]"></i>
+                        <i className="fa-solid fa-code text-[#84CC16] text-[9px] sm:text-[10px]"></i>
                         <span className="text-gray-500 font-bold text-[8px] sm:text-[9px] tracking-widest uppercase truncate">{inst.tag}</span>
                     </div>
 
@@ -224,14 +219,14 @@ const InstitucionesCarrusel = () => {
                             <i className="fa-solid fa-star"></i>
                         </div>
                         <span className="text-gray-400 font-bold text-[8px] uppercase tracking-wider">
-                            ALIANZA: 100%
+                            EFICACIA: 100%
                         </span>
                     </div>
                 </div>
 
                 <button 
                     onClick={() => setSelectedInst(inst)}
-                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto"
+                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
                 >
                     VER DETALLES
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
@@ -241,7 +236,7 @@ const InstitucionesCarrusel = () => {
     );
 
     return (
-        <section id="instituciones" className="w-full bg-gradient-to-br from-[#0a0a0a] via-[#A3E635] to-[#0a0a0a] py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
+        <section id="instituciones" className="w-full bg-gradient-to-r from-[#0A0A0A] via-[#111111] to-[#0A0A0A] border-y border-[#A3E635]/15 py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
             {/* Background elements */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
             <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
@@ -268,17 +263,17 @@ const InstitucionesCarrusel = () => {
             <div className="relative z-10 w-full flex flex-col">
                 <button
                     type="button"
-                    aria-label="Mostrar colegio anterior"
+                    aria-label="Mostrar elemento anterior"
                     onClick={() => moveByCard(-1)}
-                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
+                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                     <i className="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
                 </button>
                 <button
                     type="button"
-                    aria-label="Mostrar siguiente colegio"
+                    aria-label="Mostrar siguiente elemento"
                     onClick={() => moveByCard(1)}
-                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
+                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                     <i className="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
                 </button>
