@@ -4,9 +4,9 @@ import FondoTech from '../../../components/fondos/FondoTech';
 const Ubicacion = () => {
     const infoCards = [
         { icon: "fa-map-pin", title: "Dirección", value: "Santa Cruz, Bolivia", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
-        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" },
+        { icon: "fa-clock", title: "Horario", value: "Lun - Vie: 9:00 - 18:00", theme: "bg-white text-[#0A0A0A]", iconBg: "bg-neutral-100 text-[#0A0A0A]", shadow: "shadow-neutral-200/50", border: "border-neutral-200" },
         { icon: "fa-phone", title: "Contacto", value: "+591 61320004", theme: "bg-[#A3E635] text-[#0A0A0A]", iconBg: "bg-white/20 text-[#0A0A0A]", shadow: "shadow-[#A3E635]/20", border: "border-[#A3E635]" },
-        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-[#0A0A0A] text-white", iconBg: "bg-white/10 text-white", shadow: "shadow-black/20", border: "border-[#0A0A0A]" }
+        { icon: "fa-envelope", title: "Email", value: "contacto@hagamostech.bo", theme: "bg-white text-[#0A0A0A]", iconBg: "bg-neutral-100 text-[#0A0A0A]", shadow: "shadow-neutral-200/50", border: "border-neutral-200" }
     ];
 
     return (
