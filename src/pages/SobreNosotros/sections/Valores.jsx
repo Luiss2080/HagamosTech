@@ -60,18 +60,18 @@ const Valores = () => {
 
     return (
         <div id="valores" className="relative scroll-mt-24">
-            <section className="relative z-10 py-4 reveal">
-                <FondoTech />
+            <section className="relative z-10 py-16 reveal bg-[#050505] text-white border-t border-white/5">
+                <FondoTech hideWaves={true} />
                 <div className="container mx-auto px-6 max-w-screen-2xl relative z-20">
                     <div className="text-center mb-4">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-6 leading-tight">
                             Personalidad y <br/>
                             <span className="text-[#84CC16] relative">
                                 valores.
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg>
                             </span>
                         </h2>
-                        <p className="text-slate-600 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                        <p className="text-slate-400 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                             HagamosTech se comunica de forma sencilla y humana. Estos son los principios que nos definen y nos impulsan a resolver lo que sea necesario.
                         </p>
                     </div>
