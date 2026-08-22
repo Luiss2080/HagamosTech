@@ -9,10 +9,16 @@ const HeroHagamosTech = () => {
 
     return (
         <section
-            className="relative overflow-hidden pt-28 sm:pt-32 pb-16 lg:pb-24 bg-[#0A0A0A] border-b border-[#A3E635]/15"
+            className="relative overflow-hidden pt-28 sm:pt-32 pb-16 lg:pb-24 bg-[#0A0A0A] border-b border-[#A3E635]/10"
             id="home"
         >
             <FondoTech />
+
+            {/* Ambient Background Glows */}
+            <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                <div className="absolute top-1/4 left-0 w-80 h-80 bg-[#A3E635]/5 rounded-full blur-[100px]"></div>
+                <div className="absolute top-1/3 right-0 w-96 h-96 bg-[#FF4D00]/5 rounded-full blur-[120px]"></div>
+            </div>
 
             <div className="container mx-auto px-6 lg:px-12 xl:px-16 relative z-10 max-w-[1440px] w-full">
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -20,7 +26,7 @@ const HeroHagamosTech = () => {
                     {/* Left Column - Message */}
                     <div className="lg:col-span-6 flex flex-col gap-7 text-center lg:text-left items-center lg:items-start justify-center animate-fade-in-up">
 
-                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em]">
+                        <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em] shadow-[0_0_15px_rgba(163,230,53,0.15)]">
                             <i className="fas fa-bolt"></i> Soluciones digitales y tecnológicas
                         </span>
 
@@ -65,9 +71,9 @@ const HeroHagamosTech = () => {
                                     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                     else { navigate('/'); setTimeout(() => document.getElementById('flujo')?.scrollIntoView({ behavior: 'smooth' }), 120); }
                                 }}
-                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-transparent hover:bg-white/5 text-white font-black text-[11px] uppercase tracking-[0.14em] rounded-full border border-white/20 hover:border-[#A3E635]/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
+                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-transparent hover:bg-[#FF4D00]/10 text-white font-black text-[11px] uppercase tracking-[0.14em] rounded-full border border-white/20 hover:border-[#FF4D00]/50 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
                             >
-                                <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-[#A3E635]"></i>
+                                <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-[#FF4D00]"></i>
                                 <span>Cómo trabajamos</span>
                             </button>
                         </div>
@@ -77,7 +83,7 @@ const HeroHagamosTech = () => {
                                 <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
                                     <i className="fas fa-star"></i>
                                 </div>
-                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
+                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#FF4D00]/40 flex items-center justify-center text-[9px] text-[#FF4D00] shadow-sm">
                                     <i className="fas fa-lightbulb"></i>
                                 </div>
                                 <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
@@ -90,14 +96,19 @@ const HeroHagamosTech = () => {
                         </div>
                     </div>
 
-                    {/* Right Column - Static representative image */}
+                    {/* Right Column - Modernized Image Showcase */}
                     <div className="lg:col-span-6 relative w-full flex items-center justify-center mt-8 lg:mt-0">
-                        <div className="relative w-full max-w-md">
-                            <div className="absolute inset-0 bg-[#A3E635]/10 blur-3xl rounded-[2rem]"></div>
+                        <div className="relative w-full max-w-lg group/img">
+                            {/* Dual tone glowing backdrops */}
+                            <div className="absolute inset-0 bg-gradient-to-tr from-[#A3E635]/15 to-[#FF4D00]/15 blur-3xl rounded-[2.5rem] transition-all duration-500 group-hover/img:scale-105"></div>
+                            
+                            {/* Decorative Tech Borders */}
+                            <div className="absolute -inset-1.5 bg-gradient-to-tr from-[#A3E635]/30 to-[#FF4D00]/30 rounded-[2.5rem] opacity-75 blur-xs group-hover/img:opacity-100 transition-all duration-300"></div>
+                            
                             <img
-                                src="/img/03_Banners/hero-tech.jpg"
+                                src="/img/03_Banners/Hero.png"
                                 alt="Soluciones tecnológicas HagamosTech"
-                                className="relative w-full h-auto rounded-[2rem] object-cover shadow-[0_0_50px_rgba(163,230,53,0.20)] border border-[#A3E635]/20"
+                                className="relative w-full h-auto rounded-[2.5rem] object-cover shadow-[0_0_60px_rgba(0,0,0,0.8)] border border-white/10 group-hover/img:scale-[1.01] transition-all duration-500"
                             />
                         </div>
                     </div>
