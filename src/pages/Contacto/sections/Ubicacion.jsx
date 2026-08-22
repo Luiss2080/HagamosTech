@@ -56,7 +56,7 @@ const Ubicacion = () => {
                         <div className="absolute top-6 right-6 z-30 bg-white/90 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-white/50 animate-fade-in-up">
                             <div className="flex items-center gap-3">
                                 <div>
-                                    <p className="text-[10px] font-black uppercase text-white/50 tracking-wider text-right">Oficina principal</p>
+                                    <p className="text-[10px] font-black uppercase text-[#0A0A0A]/50 tracking-wider text-right">Oficina principal</p>
                                     <p className="text-sm font-bold text-[#0A0A0A] text-right">HagamosTech</p>
                                 </div>
                                 <div className="w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-[#0A0A0A] shadow-md">

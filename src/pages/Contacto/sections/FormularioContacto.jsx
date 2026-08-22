@@ -130,13 +130,13 @@ const FormularioContacto = () => {
                             </div>
 
                             <div className="relative z-10 w-full max-w-[540px] mx-auto">
-                                <div className="mb-3.5 text-center bg-white p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
+                                <div className="mb-3.5 text-center bg-white/[0.03] p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635]"></div>
                                     <div className="inline-flex items-center gap-2 mb-1.5">
-                                        <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
+                                        <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center">
                                             <i className="fas fa-comment-dots text-sm"></i>
                                         </span>
-                                        <h3 className="text-2xl font-black font-heading text-[#0A0A0A] tracking-tight">Escríbenos</h3>
+                                        <h3 className="text-2xl font-black font-heading text-white tracking-tight">Escríbenos</h3>
                                     </div>
                                     <p className="text-xs text-white/50 font-bold uppercase tracking-wide">Contáctate con el equipo HagamosTech</p>
                                 </div>

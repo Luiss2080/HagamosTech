@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ModalColegio from './modalesColegios/ModalColegio';
+import FondoTech from '../../../components/fondos/FondoTech';
 
 export const INSTITUTIONS = [
     {
@@ -236,11 +237,8 @@ const InstitucionesCarrusel = () => {
     );
 
     return (
-        <section id="instituciones" className="w-full bg-gradient-to-r from-[#0A0A0A] via-[#111111] to-[#0A0A0A] border-y border-[#A3E635]/15 py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
-            {/* Background elements */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-white/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/10 rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3 pointer-events-none"></div>
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,255,255,0.06),transparent_70%)] pointer-events-none"></div>
+        <section id="instituciones" className="w-full bg-[#050505] py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
+            <FondoTech hideWaves={true} />
 
             {/* Edge Fades */}
             <div className="absolute top-0 left-0 h-full w-16 sm:w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-20 pointer-events-none"></div>
