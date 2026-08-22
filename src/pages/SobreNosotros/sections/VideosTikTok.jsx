@@ -84,28 +84,22 @@ const VideosTikTok = () => {
 
     return (
         <div className="relative">
-            <section className="relative z-10 py-4 overflow-hidden">
-                <CircuitBackground />
+            <section className="relative z-10 py-16 overflow-hidden bg-[#050505] text-white border-t border-white/5">
+                <CircuitBackground hideWaves={true} />
                 <style dangerouslySetInnerHTML={{__html: `
                     @keyframes spinLeftToRight {
-                        0% { transform: rotateY(-180deg); }
-                        100% { transform: rotateY(0deg); }
+                        0%   { transform: rotateY(0deg); }
+                        100% { transform: rotateY(360deg); }
                     }
                     .animate-spin-lr {
-                        animation: spinLeftToRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
-                    }
-                    @keyframes fadeIn {
-                        from { opacity: 0; }
-                        to { opacity: 1; }
-                    }
-                    .animate-fade-in {
-                        animation: fadeIn 0.25s ease-out forwards;
+                        animation: spinLeftToRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
                     }
                 `}} />
+                
                 <div className="w-full px-4 md:px-8 relative z-20">
                     {/* --- SECTION TITLE AND DESCRIPTION --- */}
                     <div className="text-center mb-4">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#0A0A0A] mb-6 leading-tight">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-6 leading-tight">
                             Nuestra esencia <br/>
                             <span className="text-[#84CC16] relative inline-block">
                                 en Video.
@@ -113,7 +107,7 @@ const VideosTikTok = () => {
                                 </svg>
                             </span>
                         </h2>
-                        <p className="text-slate-600 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                        <p className="text-slate-400 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                             Conoce más sobre HagamosTech: nuestra forma de trabajar, ejemplos de soluciones y el trabajo diario para llevar tu idea a la realidad.
                         </p>
                     </div>
