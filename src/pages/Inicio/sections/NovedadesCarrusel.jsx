@@ -323,6 +323,201 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
     setCurrentIndex((prev) => prev - 1);
   };
 
+          {noticia.category}
+        </span>
+      </div>
+
+      <div className="absolute top-3 right-3 z-20">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-[9px] font-black uppercase tracking-widest text-white shadow-sm leading-none">
+          <span className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span>
+          {noticia.status}
+        </span>
+      </div>
+
+      {/* Cabecera con imagen a tamaño completo (Full Bleed) */}
+      <div className="relative h-48 sm:h-56 w-full overflow-hidden rounded-t-[2rem] border-b border-[#bef264] dark:border-[#A3E635]/15">
+        <img
+          src={noticia.img}
+          alt={noticia.title}
+          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+          onError={(e) => {
+            e.target.src = '/img/04_Banners/01_banner-hero.jpeg'; // fallback
+          }}
+        />
+        {/* Degradado sutil en la parte inferior para integrar con el cuerpo */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/50 via-transparent to-transparent opacity-60"></div>
+      </div>
+
+      {/* Cuerpo de la tarjeta */}
+      <div className="p-4 pt-4 flex-1 flex flex-col relative bg-gradient-to-b from-white dark:from-[#0a0a0a] via-[#fff5f5]/30 dark:via-[#0a0a0a] to-[#fef2f2]/40 dark:to-[#0a0a0a] rounded-b-[2rem]">
+        
+        {/* Cuadrícula de fondo */}
+        <div className="absolute inset-0 opacity-[0.02] dark:opacity-[0.04] pointer-events-none" style={{
+          backgroundImage: 'radial-gradient(#A3E635 1px, transparent 1px)',
+          backgroundSize: '20px 20px'
+        }}></div>
+
+        {/* Icono flotante */}
+        <div className="absolute -top-5 left-5 w-10 h-10 rounded-2xl bg-[#84CC16] dark:bg-[#A3E635] shadow-xl shadow-gray-900/20 flex items-center justify-center border-4 border-white dark:border-[#0a0a0a] ring-2 ring-[#84CC16]/40 dark:ring-[#A3E635]/40 z-30 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500">
+          <i className={`fa-solid ${noticia.icon || icon} text-base text-[#111827] dark:text-white drop-shadow-sm`}></i>
+        </div>
+
+        {/* Punto parpadeante de estatus */}
+        <div className="absolute top-3 right-4 flex items-center gap-1">
+          <span className="flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-2 w-2 rounded-full bg-[#84CC16] dark:bg-lime-500 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-[#84CC16] dark:bg-lime-500"></span>
+          </span>
+        </div>
+
+        {/* Chip de Fecha */}
+        <div className="mb-1 flex justify-center">
+          <span className="inline-flex items-center px-3 py-1 rounded-full border border-[#84CC16]/30 bg-lime-50/20 dark:bg-lime-950/10 text-[9px] font-black uppercase tracking-widest text-[#3f6212] dark:text-lime-400 shadow-sm leading-none">
+            • {noticia.date} •
+          </span>
+        </div>
+
+        {/* Título de Noticia */}
+        <div className="relative flex flex-col items-center mb-0.5">
+          <h3 className="text-sm sm:text-base font-black text-[#111827] dark:text-white group-hover:text-[#A3E635] dark:group-hover:text-lime-400 transition-colors leading-tight text-center px-2 min-h-[1.75rem] flex items-center">
+            {noticia.title}
+          </h3>
+          {/* Línea decorativa roja y diamante dorado */}
+          <div className="w-20 h-[2px] bg-[#A3E635]/70 dark:bg-lime-500/70 rounded-full relative mt-1 mb-0.5">
+            <div className="absolute -top-[3px] left-1/2 -translate-x-1/2 w-2.5 h-2.5 bg-[#84CC16] rotate-45 border border-white dark:border-[#0a0a0a]"></div>
+          </div>
+        </div>
+
+        {/* Descripción didáctica */}
+        <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mb-1.5 text-center px-4 min-h-[1.5rem] font-medium">
+          {noticia.desc}
+        </p>
+
+        {/* Ficha técnica con 3 características (Con recuadro/bordes) */}
+        <div className="grid grid-cols-3 gap-1 py-1 border-y border-lime-100 dark:border-[#A3E635]/15 my-1 text-center bg-lime-50/20 dark:bg-neutral-900/10 rounded-xl relative z-10">
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-blue-50 text-blue-600 dark:bg-blue-950/20 dark:text-blue-400 flex items-center justify-center mb-1 shadow-inner border border-blue-100 dark:border-blue-900/20">
+              <i className={`fa-solid ${noticia.specs.col1.icon} text-[11px]`}></i>
+            </div>
+            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col1.label}</span>
+            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col1.value}</span>
+          </div>
+          <div className="border-x border-lime-100 dark:border-[#A3E635]/15 flex flex-col items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-lime-50 text-amber-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-amber-100 dark:border-amber-900/20">
+              <i className={`fa-solid ${noticia.specs.col2.icon} text-[11px]`}></i>
+            </div>
+            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col2.label}</span>
+            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col2.value}</span>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <div className="w-6 h-6 rounded-full bg-lime-50 text-red-600 dark:bg-lime-950/20 dark:text-lime-400 flex items-center justify-center mb-1 shadow-inner border border-lime-100 dark:border-lime-900/20">
+              <i className={`fa-solid ${noticia.specs.col3.icon} text-[11px]`}></i>
+            </div>
+            <span className="text-[8px] text-slate-400 font-black uppercase tracking-wider">{noticia.specs.col3.label}</span>
+            <span className="text-[11px] font-black text-neutral-800 dark:text-neutral-200 mt-0.5 leading-tight">{noticia.specs.col3.value}</span>
+          </div>
+        </div>
+
+        {/* Incluye (mismo estilo de pills que ServiciosGrid) */}
+        <div className="mb-1.5 px-1">
+          <div className="flex items-center justify-center gap-1.5 flex-wrap">
+            {noticia.includes.map((inc, i) => (
+              <span
+                key={i}
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg bg-neutral-200 dark:bg-neutral-800 text-[9px] font-bold text-neutral-800 dark:text-neutral-200 border border-neutral-300 dark:border-neutral-700"
+              >
+                <i className="fa-solid fa-check text-[#A3E635] text-[8px]"></i>
+                <i className={`fa-solid ${getIconForInclude(inc)} text-[#111827] dark:text-white text-[9px]`}></i>
+                {inc}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* CTA (mismo estilo y proporción que ServiciosGrid) */}
+        <div className="mt-auto pt-4 pb-2 px-1">
+          <a
+            href={`${WHATSAPP_URL}?text=${encodeURIComponent(`Hola, quiero saber más sobre: ${noticia.title}`)}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#84CC16] group-hover:bg-[#A3E635] text-[#111827] group-hover:text-white rounded-xl text-xs sm:text-sm font-black uppercase tracking-wider transition-all shadow-md shadow-lime-900/10"
+          >
+            <i className="fab fa-whatsapp text-base leading-none"></i>
+            Saber más
+            <i className="fa-solid fa-arrow-right text-[11px] group-hover:translate-x-0.5 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+// Componente Principal Carrusel de Noticias con Desplazamiento Infinito Fiel sin Saltos Temporales
+const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
+  const [currentIndex, setCurrentIndex] = useState(noticias.length); // Iniciar en el grupo central
+  const [visibleCards, setVisibleCards] = useState(4);
+  const [transitionEnabled, setTransitionEnabled] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width < 640) {
+        setVisibleCards(1);
+      } else if (width < 1024) {
+        setVisibleCards(2);
+      } else {
+        setVisibleCards(4);
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const N = noticias.length;
+  // Triplicamos las noticias para la cinta de desplazamiento infinito
+  const tripledNoticias = [...noticias, ...noticias, ...noticias];
+
+  // Auto-play: avanza 1 card cada 4 segundos
+  useEffect(() => {
+    if (isPaused || N <= visibleCards) return;
+    const interval = setInterval(() => {
+      setTransitionEnabled(true);
+      setCurrentIndex((prev) => prev + 1);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [isPaused, N, visibleCards]);
+
+  // Handler del final de animación para el reset instantáneo
+  const handleTransitionEnd = () => {
+    if (currentIndex >= N * 2) {
+      setTransitionEnabled(false);
+      setCurrentIndex(currentIndex - N);
+    } else if (currentIndex < N) {
+      setTransitionEnabled(false);
+      setCurrentIndex(currentIndex + N);
+    }
+  };
+
+  // Reactivar transiciones después del salto instantáneo
+  useEffect(() => {
+    if (!transitionEnabled) {
+      const timer = setTimeout(() => {
+        setTransitionEnabled(true);
+      }, 50);
+      return () => clearTimeout(timer);
+    }
+  }, [transitionEnabled]);
+
+  const handlePrev = () => {
+    setTransitionEnabled(true);
+    setCurrentIndex((prev) => prev - 1);
+  };
+
   const handleNext = () => {
     setTransitionEnabled(true);
     setCurrentIndex((prev) => prev + 1);
@@ -332,6 +527,60 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   const handleTouchStart = (e) => {
     touchStartX.current = e.touches[0].clientX;
   };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    if (diff > 50) {
+      handleNext();
+    } else if (diff < -50) {
+      handlePrev();
+    }
+  };
+
+  const canNavigate = N > visibleCards;
+
+  // Medidas dinámicas para translateX
+  const cardPercent = 100 / tripledNoticias.length;
+  const trackWidthPercent = (tripledNoticias.length * 100) / visibleCards;
+
+  return (
+    <section id="noticias" className="py-16 relative overflow-hidden bg-[#050505] border-t border-white/5">
+      <FondoTech hideWaves={true} />
+
+      <div className="container mx-auto px-4 lg:px-6 relative z-10 text-white">
+        {/* Título de la Sección de Noticias */}
+        <div className="text-center mb-4 max-w-3xl mx-auto">
+          <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
+            Últimas{' '}
+            <span className="relative inline-block px-2 text-[#A3E635]">
+              novedades y noticias
+              <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
+            </span>
+          </h2>
+          <p className="text-lg text-slate-400 font-medium leading-relaxed">
+            Mantente al tanto de nuestros eventos, lanzamientos de productos, convenios educativos y los logros más recientes de nuestra comunidad.
+          </p>
+        </div>
+
+        {/* Carrusel de Noticias */}
+        <div 
+          className="relative w-full overflow-hidden py-4 px-1 sm:px-4"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div 
+            className="w-full relative px-2 sm:px-8"
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
+          >
+            <div className="overflow-hidden py-4">
               <div
                 className={`flex items-stretch ${transitionEnabled ? 'transition-transform duration-500 ease-in-out' : ''}`}
                 onTransitionEnd={handleTransitionEnd}
@@ -345,7 +594,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
                     key={`${noticia.id}-${idx}`}
                     style={{ width: `${cardPercent}%` }}
                     className="px-3 sm:px-4 h-full"
-                  >
                     <NewsCard noticia={noticia} icon={icon} />
                   </div>
                 ))}
