@@ -22,7 +22,10 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="relative bg-[#0A0A0A] text-white/80 pt-16 pb-8 border-t-[5px] border-[#A3E635] z-10 overflow-hidden shadow-[0_-10px_30px_rgba(0,0,0,0.4)]">
+    <footer 
+      className="relative bg-[#0A0A0A] text-white/80 pt-16 pb-8 z-10 overflow-hidden shadow-[0_-10px_30px_rgba(0,0,0,0.4)]"
+      style={{ borderTop: '5px solid transparent', borderImage: 'linear-gradient(to right, #A3E635, #FF4D00) 1' }}
+    >
 
       {/* Fondo de Partículas */}
       <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen">
@@ -88,15 +91,15 @@ const Footer = () => {
           {/* COLUMNA 3: NOSOTROS (2 cols) */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-10">
             <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_rgba(255,77,0,1)]"></span>
               NOSOTROS
             </h3>
             <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
               {nosotrosLinks.map((link, i) => (
                 <li key={i} className="w-full max-w-[200px] lg:max-w-none">
                   <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full hover:-translate-y-1">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner shrink-0">
-                      <i className={`fas ${link.icon} text-[13px] text-[#A3E635] group-hover:text-[#0A0A0A] transition-colors`}></i>
+                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner shrink-0">
+                      <i className={`fas ${link.icon} text-[13px] text-[#FF4D00] group-hover:text-[#0A0A0A] transition-colors`}></i>
                     </div>
                     <span className="text-[14px] font-semibold">{link.name}</span>
                   </Link>
@@ -108,7 +111,7 @@ const Footer = () => {
           {/* COLUMNA 4: CONTACTO (3 cols) */}
           <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-12">
             <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-[#FF4D00] shadow-[0_0_10px_rgba(255,77,0,1)]"></span>
               CONTACTO
             </h3>
             <ul className="space-y-6 w-full flex flex-col items-center lg:items-start">
@@ -122,8 +125,8 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-envelope text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner">
+                  <i className="fas fa-envelope text-[#FF4D00] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Email</span>
@@ -140,8 +143,8 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center justify-start gap-4 group hover:-translate-y-1 transition-transform w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-clock text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#FF4D00] transition-colors duration-300 shadow-inner">
+                  <i className="fas fa-clock text-[#FF4D00] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Horarios</span>
@@ -159,7 +162,7 @@ const Footer = () => {
           </p>
           <div className="flex items-center gap-6">
             <Link to="/privacidad" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Política de Privacidad</Link>
-            <Link to="/terminos" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Términos de Servicio</Link>
+            <Link to="/terminos" className="text-[13px] font-semibold text-white/60 hover:text-[#FF4D00] transition-colors">Términos de Servicio</Link>
             <Link to="/cookies" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Cookies</Link>
           </div>
         </div>
