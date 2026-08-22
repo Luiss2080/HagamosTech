@@ -166,12 +166,12 @@ const App = () => {
               <Route path="/sobre-nosotros/valores" element={<Valores />} />
               <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
-              <Route path="/menu/saltenas" element={<SaltenasPagina />} />
-              <Route path="/menu/cafe" element={<CafePagina />} />
-              <Route path="/menu/frapuccinos" element={<FrapuccinosPagina />} />
-              <Route path="/menu/refrescos" element={<RefrescosPagina />} />
-              <Route path="/menu/postres" element={<PostresPagina />} />
-              <Route path="/menu/combos" element={<CombosPagina />} />
+              <Route path="/menu/saltenas" element={<KitsRobotica />} />
+              <Route path="/menu/cafe" element={<CursosSTEAM />} />
+              <Route path="/menu/frapuccinos" element={<LicenciasSoftware />} />
+              <Route path="/menu/refrescos" element={<GuiasDocentes />} />
+              <Route path="/menu/postres" element={<HerramientasHardware />} />
+              <Route path="/menu/combos" element={<CombosEducativos />} />
               <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
