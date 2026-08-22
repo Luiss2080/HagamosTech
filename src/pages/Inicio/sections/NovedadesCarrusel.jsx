@@ -594,6 +594,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
                     key={`${noticia.id}-${idx}`}
                     style={{ width: `${cardPercent}%` }}
                     className="px-3 sm:px-4 h-full"
+                  >
                     <NewsCard noticia={noticia} icon={icon} />
                   </div>
                 ))}
