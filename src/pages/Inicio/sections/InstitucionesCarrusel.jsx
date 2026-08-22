@@ -3,226 +3,60 @@ import ModalColegio from './modalesColegios/ModalColegio';
 
 export const INSTITUTIONS = [
     {
-        id: 'sanmarcos',
-        name: 'Colegio Internacional San Marcos',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/01_SanMarcos.png',
-        contextPath: '/img/11_Escudos/context/SanMarcos.md',
-        images: Array.from({length: 7}, (_, i) => `/img/10_Colegios/SanMarcos/SanMarcos${i+1}.png`),
-        redColumn: {
-            title1: "Conoce nuestra",
-            title2: "institución aliada",
-            desc: "Descubre la infraestructura, propuesta educativa y metodología del Colegio Internacional San Marcos.",
-            grid: [
-                { label: "Ubicación", text: "Zona Norte, El Remanso", icon: "fa-location-dot" },
-                { label: "Niveles", text: "Primaria y Secundaria", icon: "fa-layer-group" },
-                { label: "Educación", text: "Bilingüe (Esp-Ing)", icon: "fa-language" },
-                { label: "Alianza", text: "Activa 100%", icon: "fa-handshake" }
-            ],
-            contact: {
-                phone: "76350019",
-                email: "informacion@colegiosanmarcos.edu.bo",
-                web: "https://www.colegiosanmarcos.edu.bo",
-                facebook: "https://www.facebook.com/internacionalsanmarcos",
-                instagram: "https://www.instagram.com/colegio_internacionalsanmarcos",
-                tiktok: "https://www.tiktok.com/@colegiointernacio8"
-            }
-        },
-        highlights: [
-            {
-                title: "Doble Bachillerato",
-                icon: "fa-graduation-cap",
-                text: "Ofrecemos a nuestros estudiantes la posibilidad de obtener el Bachiller de Bolivia y el American High School Diploma de EE.UU."
-            },
-            {
-                title: "Formación Integral",
-                icon: "fa-users-viewfinder",
-                text: "Nuestro currículo combina conocimientos académicos, arte y deporte mediante metodologías innovadoras y evaluación continua."
-            }
-        ]
+        id: 'react',
+        name: 'React',
+        tag: 'Frontend UI',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg',
+        desc: 'Biblioteca JavaScript para construir interfaces de usuario rápidas, reactivas y modernas en la web.'
     },
     {
-        id: 'lasalle',
-        name: 'Colegio La Salle',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/02_LaSalle.png',
-        contextPath: '/img/11_Escudos/context/LaSalleSantaCruz.md',
-        images: Array.from({length: 8}, (_, i) => `/img/10_Colegios/LaSalle/LaSalle${i+1}.${i === 7 ? 'jpeg' : 'jpg'}`),
-        redColumn: {
-            title1: "Educación",
-            title2: "Lasallista",
-            desc: "Promovemos una formación académica y humano-cristiana de altísima calidad en Santa Cruz.",
-            grid: [
-                { label: "Ubicación", text: "2do Anillo, Av. Ovidio", icon: "fa-location-dot" },
-                { label: "Modelo", text: "Académico y Cristiano", icon: "fa-book-bible" },
-                { label: "Competencias", text: "Digitales e Innovación", icon: "fa-laptop-code" },
-                { label: "Alianza", text: "Activa 100%", icon: "fa-handshake" }
-            ],
-            contact: {
-                phone: "33324237",
-                email: "recepcion@lasallescz.edu.bo",
-                web: "https://www.lasallescz.edu.bo/",
-                facebook: "#",
-                instagram: "#"
-            }
-        },
-        highlights: [
-            {
-                title: "Valores Lasallistas",
-                icon: "fa-heart",
-                text: "Inculcamos honestidad, responsabilidad, justicia social y fe para formar bachilleres íntegros y solidarios."
-            },
-            {
-                title: "Propuesta Educativa",
-                icon: "fa-lightbulb",
-                text: "Impulsamos el pensamiento crítico, el liderazgo, el trabajo colaborativo y la excelencia académica para los desafíos actuales."
-            }
-        ]
+        id: 'tailwindcss',
+        name: 'Tailwind CSS',
+        tag: 'Diseño y Estilo',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg',
+        desc: 'Framework de CSS enfocado en utilidades para diseñar páginas web responsivas y estilizadas de manera ágil.'
     },
     {
-        id: 'sanagustin',
-        name: 'Colegio San Agustín',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/03_SanAgustin.png',
-        contextPath: '/img/11_Escudos/context/SanAgustin.md',
-        images: Array.from({length: 4}, (_, i) => `/img/10_Colegios/SanAgustin/SanAgustin${i+1}.jpg`),
-        redColumn: {
-            title1: "Ciencia y",
-            title2: "Verdad",
-            desc: "Más de 35 años formando integralmente a niños y jóvenes con valores éticos y excelencia.",
-            grid: [
-                { label: "Ubicación", text: "Av. Noel Kempff M.", icon: "fa-location-dot" },
-                { label: "Estudiantes", text: "+1.300", icon: "fa-users" },
-                { label: "Infraestructura", text: "22.570 m²", icon: "fa-building" },
-                { label: "Alianza", text: "Activa 100%", icon: "fa-handshake" }
-            ],
-            contact: {
-                phone: "33424843",
-                email: "csa@colegiosanagustin.edu.bo",
-                web: "http://www.colegiosanagustin.edu.bo/",
-                facebook: "#"
-            }
-        },
-        highlights: [
-            {
-                title: "Filosofía Agustiniana",
-                icon: "fa-book-open-reader",
-                text: "Integramos la excelencia académica con la formación humana y espiritual, inspirados en el pensamiento de San Agustín."
-            },
-            {
-                title: "Formación de Liderazgo",
-                icon: "fa-ranking-star",
-                text: "Fomentamos la autonomía, el pensamiento crítico y el compromiso social, preparando a los jóvenes para la educación superior."
-            }
-        ]
+        id: 'javascript',
+        name: 'JavaScript',
+        tag: 'Lógica Web',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg',
+        desc: 'Lenguaje de programación estándar para la interactividad y la lógica dinámica en el navegador y servidor.'
     },
     {
-        id: 'lasalleoruro',
-        name: 'Colegio La Salle Oruro',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/04_LaSalleOruro.png',
-        contextPath: '/img/11_Escudos/context/LaSalleOruro.md',
-        images: Array.from({length: 6}, (_, i) => `/img/10_Colegios/LaSalleOruro/LaSalleOruro${i+1}.png`),
-        redColumn: {
-            title1: "Tradición y",
-            title2: "Excelencia",
-            desc: "Educación de primer nivel en Oruro con sólidos principios morales y académicos.",
-            grid: [
-                { label: "Ubicación", text: "Ciudad de Oruro", icon: "fa-location-dot" },
-                { label: "Formación", text: "Humano-Cristiana", icon: "fa-church" },
-                { label: "Niveles", text: "Inicial a Secundaria", icon: "fa-layer-group" },
-                { label: "Alianza", text: "Oficial", icon: "fa-handshake" }
-            ],
-            contact: { phone: "5251234", email: "info@lasalleoruro.edu.bo" }
-        },
-        highlights: [
-            {
-                title: "Calidad Académica",
-                icon: "fa-medal",
-                text: "Enseñanza integral con metodologías participativas y un plantel docente altamente capacitado."
-            }
-        ]
+        id: 'typescript',
+        name: 'TypeScript',
+        tag: 'Lógica Tipada',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg',
+        desc: 'Superconjunto tipado de JavaScript que aporta robustez, escalabilidad y autocompletado inteligente al código.'
     },
     {
-        id: 'vidanueva',
-        name: 'Colegio Vida Nueva',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/05_VidaNueva.png',
-        contextPath: '/img/11_Escudos/context/VidaNueva.md',
-        images: Array.from({length: 7}, (_, i) => `/img/10_Colegios/VidaNueva/VidaNueva${i+1}.png`),
-        redColumn: {
-            title1: "Formando",
-            title2: "el Futuro",
-            desc: "Una unidad educativa comprometida con la innovación y el desarrollo integral en Santa Cruz.",
-            grid: [
-                { label: "Ubicación", text: "Santa Cruz", icon: "fa-location-dot" },
-                { label: "Tecnología", text: "Aulas Equipadas", icon: "fa-computer" },
-                { label: "Enfoque", text: "Práctico y Moderno", icon: "fa-flask" },
-                { label: "Alianza", text: "Oficial", icon: "fa-handshake" }
-            ],
-            contact: { phone: "70012345", email: "contacto@vidanueva.edu.bo" }
-        },
-        highlights: [
-            {
-                title: "Innovación y Robótica",
-                icon: "fa-robot",
-                text: "Preparamos a nuestros estudiantes para el mañana con programas especializados en tecnología, robótica y desarrollo de software."
-            }
-        ]
+        id: 'nodejs',
+        name: 'Node.js',
+        tag: 'Backend API',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
+        desc: 'Entorno de ejecución de JavaScript para construir servidores rápidos, eficientes y altamente escalables.'
     },
     {
-        id: 'santateresa',
-        name: 'Colegio Hallein Santa Teresa',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/06_SantaTeresa.png',
-        contextPath: '/img/11_Escudos/context/SantaTeresa.md',
-        images: Array.from({length: 6}, (_, i) => `/img/10_Colegios/SantaTeresa/SantaTeresa${i+1}.png`),
-        redColumn: {
-            title1: "Excelencia",
-            title2: "y Valores",
-            desc: "Prestigiosa institución en Potosí enfocada en la calidad humana y educativa.",
-            grid: [
-                { label: "Ubicación", text: "Potosí", icon: "fa-location-dot" },
-                { label: "Trayectoria", text: "Reconocida", icon: "fa-award" },
-                { label: "Comunidad", text: "Inclusiva", icon: "fa-users" },
-                { label: "Alianza", text: "Oficial", icon: "fa-handshake" }
-            ],
-            contact: { phone: "6221234", email: "info@santateresa.edu.bo" }
-        },
-        highlights: [
-            {
-                title: "Metodología Dinámica",
-                icon: "fa-chalkboard-user",
-                text: "Fomentamos el aprendizaje activo y participativo, asegurando que cada estudiante alcance su máximo potencial."
-            }
-        ]
+        id: 'postgresql',
+        name: 'PostgreSQL',
+        tag: 'Base de Datos',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg',
+        desc: 'Sistema de base de datos relacional de código abierto más avanzado, potente y seguro del mundo.'
     },
     {
-        id: 'delasierra',
-        name: 'Colegio Internacional La Sierra',
-        tag: 'Santa Cruz',
-        logo: '/img/11_Escudos/07_DeLaSierra.png',
-        contextPath: '/img/11_Escudos/context/DeLaSierra.md',
-        images: Array.from({length: 7}, (_, i) => `/img/10_Colegios/DeLaSierra/DeLaSierra${i+1}.png`),
-        redColumn: {
-            title1: "Creciendo",
-            title2: "Juntos",
-            desc: "Educación de vanguardia con un fuerte enfoque en liderazgo y valores familiares.",
-            grid: [
-                { label: "Ubicación", text: "Santa Cruz", icon: "fa-location-dot" },
-                { label: "Deporte", text: "Alto Rendimiento", icon: "fa-volleyball" },
-                { label: "Arte", text: "Desarrollo Creativo", icon: "fa-palette" },
-                { label: "Alianza", text: "Oficial", icon: "fa-handshake" }
-            ],
-            contact: { phone: "70098765", web: "https://www.delasierra.edu.bo" }
-        },
-        highlights: [
-            {
-                title: "Desarrollo Integral",
-                icon: "fa-puzzle-piece",
-                text: "Nuestros estudiantes desarrollan habilidades blandas, deportivas y académicas en un entorno seguro y estimulante."
-            }
-        ]
+        id: 'git',
+        name: 'Git',
+        tag: 'Version Control',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg',
+        desc: 'Sistema de control de versiones distribuido para rastrear cambios en el código y facilitar el trabajo colaborativo.'
+    },
+    {
+        id: 'vite',
+        name: 'Vite',
+        tag: 'Build Tool',
+        logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg',
+        desc: 'Herramienta de compilación ultrarrápida de última generación para proyectos de frontend modernos.'
     }
 ];
 
