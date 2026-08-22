@@ -345,40 +345,6 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
       handlePrev();
     }
   };
-
-  const canNavigate = N > visibleCards;
-
-  // Medidas dinámicas para translateX
-  const cardPercent = 100 / tripledNoticias.length;
-  const trackWidthPercent = (tripledNoticias.length * 100) / visibleCards;
-
-  return (
-    <section id="noticias" className="py-8 relative overflow-visible bg-slate-50/50 dark:bg-black/10">
-      <div className="pointer-events-none absolute top-0 left-0 w-[500px] h-[500px] bg-amber-100/30 rounded-full blur-3xl -translate-y-1/3 -translate-x-1/4"></div>
-      <div className="pointer-events-none absolute bottom-0 right-0 w-[400px] h-[400px] bg-lime-100/30 rounded-full blur-3xl translate-y-1/3 translate-x-1/4"></div>
-
-      <CircuitBackground />
-
-      <div className="container mx-auto px-4 lg:px-6 relative z-10">
-        {/* Título de la Sección de Noticias */}
-        <div className="text-center mb-4 max-w-3xl mx-auto">
-          <h2 className="text-4xl lg:text-5xl font-black text-[#111827] dark:text-white mb-6 leading-tight">
-            Últimas{' '}
-            <span className="relative inline-block px-2 text-[#A3E635] dark:text-lime-400">
-              novedades y noticias
-              <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#84CC16] dark:text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
-              </svg>
-            </span>
-          </h2>
-          <p className="text-lg text-gray-500 dark:text-slate-400 font-medium leading-relaxed">
-            Mantente al tanto de nuestros eventos, lanzamientos de productos, convenios educativos y los logros más recientes de nuestra comunidad.
-          </p>
-        </div>
-
-        {/* Carrusel de Noticias */}
-        <div 
-          className="relative w-full overflow-hidden py-4 px-1 sm:px-4"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >
