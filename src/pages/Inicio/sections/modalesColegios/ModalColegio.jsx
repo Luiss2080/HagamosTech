@@ -16,7 +16,7 @@ const ModalColegio = ({ institution, onClose }) => {
                     <i className="fas fa-xmark"></i>
                 </button>
                 <div className="w-16 h-16 mx-auto rounded-2xl bg-[#A3E635]/10 border border-[#A3E635]/30 flex items-center justify-center text-[#A3E635] text-2xl mb-4">
-                    <i className="fas fa-graduation-cap"></i>
+                    <i className="fas fa-laptop-code"></i>
                 </div>
                 <h3 className="text-white font-black text-xl mb-2">{institution.name || 'Institución'}</h3>
                 <p className="text-white/60 text-sm font-medium mb-6">

@@ -495,14 +495,14 @@ const Header = () => {
 
                                     <button
                                         onClick={() => openModal('registerModal')}
-                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-white bg-transparent border border-white/50 hover:bg-white/10 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-md hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap"
+                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-[#0A0A0A] bg-white hover:bg-white/90 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-[0_4px_15px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap cursor-pointer"
                                     >
                                         <span className="relative z-10 flex items-center gap-2">
                                             <i className="fas fa-user-plus text-[9px] group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[8deg] transition-transform"></i>
                                             Crear Cuenta
                                             <i className="fas fa-arrow-right text-[9px] group-hover:translate-x-0.5 transition-transform"></i>
                                         </span>
-                                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/20 to-transparent transition-transform duration-700 ease-in-out"></div>
+                                        <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/10 to-transparent transition-transform duration-700 ease-in-out"></div>
                                     </button>
                                 </>
                             )}
