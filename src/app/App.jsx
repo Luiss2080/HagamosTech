@@ -18,6 +18,7 @@ import CarritoModal from '../store/carrito/CarritoModal';
 import ToastCarrito from '../store/carrito/ToastCarrito';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
 import GuestModalsManager from '../components/Modales/GuestModalsManager';
+import ComoTrabajamos from '../pages/ComoTrabajamos/ComoTrabajamos';
 
 import ChatWhatsApp from '../components/Widgets/ChatWhatsApp';
 import ChatAssistant from '../chat/AsistenteChat';
