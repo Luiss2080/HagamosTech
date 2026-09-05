@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import CircleParticles from '../fondos/ParticulasCirculares';
 
 const VideoPlayerModal = ({ isOpen, onClose, video }) => {
@@ -71,7 +71,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                     <div className="grid grid-cols-2 gap-2.5 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Robotica</p>
-                                            <p className="text-sm font-bold text-white">Cursos y Kits</p>
+                                            <p className="text-sm font-bold text-white">Servicios y Soluciones</p>
                                         </div>
                                         <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Software</p>
