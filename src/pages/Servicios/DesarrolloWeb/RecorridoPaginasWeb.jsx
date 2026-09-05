@@ -226,7 +226,7 @@ const RecorridoPaginasWeb = () => {
                   {/* Tech tools grid */}
                   <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
                     {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-neutral-900/40', border: 'border-slate-100' };
+                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-[#A3E635]', bg: 'bg-[#A3E635]/10', border: 'border-[#A3E635]/20' };
                       return (
                         <span
                           key={tag}

@@ -17,7 +17,7 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Paso 1: Contanos tu problema', desc: 'Levantamiento de requerimientos profundo para entender la lógica de tu negocio y evaluar la viabilidad técnica del sistema o app.', tags: ['Requerimientos', 'Lógica de Negocio', 'Viabilidad'], icon: 'fa-clipboard-list', images: ['https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'] },
+  { num: '01', title: 'Paso 1: Contanos tu problema', desc: 'Levantamiento de requerimientos profundo para entender la lógica de tu negocio y evaluar la viabilidad técnica del sistema o app.', tags: ['Requerimientos', 'Lógica de Negocio', 'Viabilidad'], icon: 'fa-clipboard-list', images: ['https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1523314591509-14a04d3e582d?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'] },
   { num: '02', title: 'Paso 2: Analizamos la Arquitectura', desc: 'Diseñamos la infraestructura tecnológica, normalizamos las bases de datos relacionales y estructuramos las APIs necesarias.', tags: ['SQL Server', 'APIs', 'Arquitectura'], icon: 'fa-server', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
   { num: '03', title: 'Paso 3: Proponemos la Solución', desc: 'Te entregamos un plan de acción detallado, tiempos de entrega y definimos la metodología ágil para el desarrollo del software.', tags: ['Plan de Acción', 'Metodología Ágil', 'Roadmap'], icon: 'fa-map-signs', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
   { num: '04', title: 'Paso 4: Hacemos el Software', desc: 'Desarrollamos el código backend y frontend a medida (Laravel, React, Node.js), creando herramientas robustas de nivel empresarial.', tags: ['Laravel', 'React', 'Desarrollo'], icon: 'fa-code', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
@@ -167,7 +167,7 @@ const RecorridoSistemasApps = () => {
                   {/* Tech tools grid */}
                   <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
                     {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-neutral-900/40', border: 'border-slate-100' };
+                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-[#A3E635]', bg: 'bg-[#A3E635]/10', border: 'border-[#A3E635]/20' };
                       return (
                         <span
                           key={tag}

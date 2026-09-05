@@ -17,7 +17,7 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Paso 1: Contanos de tu emprendimiento', desc: 'Entendemos tu idea de negocio, tu público objetivo y los valores que quieres transmitir para establecer las bases de tu identidad digital.', tags: ['Emprendimiento', 'Público Objetivo', 'Identidad'], icon: 'fa-store', images: ['https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'] },
+  { num: '01', title: 'Paso 1: Contanos de tu emprendimiento', desc: 'Entendemos tu idea de negocio, tu público objetivo y los valores que quieres transmitir para establecer las bases de tu identidad digital.', tags: ['Emprendimiento', 'Público Objetivo', 'Identidad'], icon: 'fa-store', images: ['https://images.unsplash.com/photo-1542744094-11ac94541dc5?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1556761175-5973dc0f32b7?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80'] },
   { num: '02', title: 'Paso 2: Analizamos tu Identidad', desc: 'Creamos tu Manual de Identidad Visual: definimos paletas de color, tipografías y construimos isologotipos de alto impacto.', tags: ['Branding', 'Manual de Marca', 'Diseño'], icon: 'fa-palette', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
   { num: '03', title: 'Paso 3: Proponemos Materiales', desc: 'Te presentamos opciones gráficas y herramientas comerciales: menús QR, flyers para redes sociales o tarjetas de presentación.', tags: ['Material Gráfico', 'Menús QR', 'Publicidad'], icon: 'fa-bullhorn', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
   { num: '04', title: 'Paso 4: Hacemos el Diseño y Configuración', desc: 'Maquetamos catálogos digitales, optimizamos tus redes sociales y configuramos WhatsApp Business para una gestión de clientes profesional.', tags: ['Catálogos', 'WhatsApp Business', 'Redes Sociales'], icon: 'fa-mobile-alt', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
@@ -167,7 +167,7 @@ const RecorridoNegocio = () => {
                   {/* Tech tools grid */}
                   <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
                     {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-neutral-900/40', border: 'border-slate-100' };
+                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-[#A3E635]', bg: 'bg-[#A3E635]/10', border: 'border-[#A3E635]/20' };
                       return (
                         <span
                           key={tag}

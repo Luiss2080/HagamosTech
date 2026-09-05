@@ -17,7 +17,7 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Paso 1: Contanos tu visión', desc: 'Descubrimos juntos las oportunidades de aplicar Inteligencia Artificial en tu negocio, evaluando qué datos útiles tienes disponibles.', tags: ['Visión', 'Datos', 'Oportunidades'], icon: 'fa-eye', images: ['https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'] },
+  { num: '01', title: 'Paso 1: Contanos tu visión', desc: 'Descubrimos juntos las oportunidades de aplicar Inteligencia Artificial en tu negocio, evaluando qué datos útiles tienes disponibles.', tags: ['Visión', 'Datos', 'Oportunidades'], icon: 'fa-eye', images: ['https://images.unsplash.com/photo-1515503240222-14c115c56f54?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'] },
   { num: '02', title: 'Paso 2: Analizamos la Viabilidad', desc: 'Estudiamos qué tecnologías de Machine Learning o Modelos de Lenguaje (LLMs) se adaptan mejor a tu necesidad específica.', tags: ['Machine Learning', 'LLMs', 'Viabilidad'], icon: 'fa-brain', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
   { num: '03', title: 'Paso 3: Proponemos Modelos', desc: 'Te presentamos una estrategia de IA: desde repositorios de prompts corporativos hasta la creación de asistentes virtuales entrenados con tus datos.', tags: ['Estrategia', 'Prompts', 'Asistentes'], icon: 'fa-lightbulb', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
   { num: '04', title: 'Paso 4: Hacemos el Desarrollo', desc: 'Integramos APIs de IA avanzadas, entrenamos modelos predictivos y conectamos las inteligencias a tus sistemas actuales.', tags: ['Integración IA', 'Modelos Predictivos', 'APIs'], icon: 'fa-microchip', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
@@ -167,7 +167,7 @@ const RecorridoIA = () => {
                   {/* Tech tools grid */}
                   <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
                     {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-neutral-900/40', border: 'border-slate-100' };
+                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-[#A3E635]', bg: 'bg-[#A3E635]/10', border: 'border-[#A3E635]/20' };
                       return (
                         <span
                           key={tag}
