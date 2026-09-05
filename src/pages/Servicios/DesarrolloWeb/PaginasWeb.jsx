@@ -104,7 +104,7 @@ const PaginasWeb = () => {
   
 
   return (
-    <div className="relative overflow-hidden min-h-screen bg-[#050505] font-montserrat">
+    <div className="dark relative overflow-hidden min-h-screen bg-[#050505] font-montserrat">
       <CircuitBackground />
       <CircleParticles colorScheme="dark" />
 
