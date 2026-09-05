@@ -128,7 +128,7 @@ const Tecnologia = () => {
           <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Tecnológico y Herramientas</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
             {TECH_STACK.map((tech, i) => (
-              <div key={i} className={\`flex items-center gap-2 text-xl md:text-2xl font-bold \${tech.color} grayscale hover:grayscale-0 transition-all cursor-default\`}>
+              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
                 <i className={tech.icon}></i>
                 <span className="text-sm tracking-wider">{tech.name}</span>
               </div>
