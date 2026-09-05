@@ -318,7 +318,7 @@ const SistemasApps = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿Qué es este <span className="text-[#A3E635] relative inline-block px-1">Servicio Premium<svg className="absolute w-full h-2.5 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 100 9" fill="none"><path d="M2 6.5C15 4.5 45 2 98 4" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/></svg></span> y cómo ayuda a tu empresa?
+                ¿QUÉ ES SISTEMAS Y APLICACIONES Y CÓMO AYUDA A TU EMPRESA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
