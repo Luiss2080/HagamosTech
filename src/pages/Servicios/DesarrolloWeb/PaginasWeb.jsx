@@ -125,18 +125,15 @@ const PaginasWeb = () => {
       
 
       {/* SECCIÓN 1: HERO */}
-      <section className="relative overflow-hidden pt-20 pb-12" id="home">
+      <section className="relative overflow-hidden pt-28 sm:pt-32 pb-12" id="home">
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center">
           
-          <Breadcrumb
-            paths={[
-              { label: 'Soluciones' },
-              { label: 'Páginas Web' }
-            ]}
-            badgeText="Páginas Web Profesionales — TECH HOME"
-            icon="fa-laptop-code"
-            align="center"
-          />
+          {/* ---- Migas de pan en estilo tech (discreto) ---- */}
+          <div className="flex items-center gap-2 mb-5">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Páginas Web Profesionales — TECH HOME
+              </span>
+          </div>
 
           <div className="flex flex-col xl:flex-row items-center xl:items-stretch gap-4 xl:-gap-8 justify-between w-full">
             
