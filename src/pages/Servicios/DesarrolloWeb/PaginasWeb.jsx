@@ -26,7 +26,11 @@ const PROCESO = [
   { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
 ];
 
-import { TESTIMONIOS_SOFTWARE as TESTIMONIOS } from '../../../data/testimonios';
+const TESTIMONIOS = [
+  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
+  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
+  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
