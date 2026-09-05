@@ -559,7 +559,7 @@ const ConfiguracionPagina = () => {
                         </div>
                         <h3 className="text-xl font-black text-slate-800 mb-2">¿Desactivar tu Cuenta?</h3>
                         <p className="text-sm text-slate-500 mb-6 leading-relaxed">
-                            Al hacer esto, se suspenderán temporalmente tus accesos a cursos y libros digitales. Podrás reactivarla en cualquier momento comunicándote con el equipo de soporte.
+                            Al hacer esto, se suspenderán temporalmente tus accesos a servicios y libros digitales. Podrás reactivarla en cualquier momento comunicándote con el equipo de soporte.
                         </p>
                         <div className="flex flex-col gap-2.5">
                             <button 
