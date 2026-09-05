@@ -585,7 +585,7 @@ const PerfilPagina = () => {
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
                                             Cédula de Identidad (CI)
-                                            <Tooltip text="Tu documento de identificación oficial. Necesario para certificar cursos y facturaciones." />
+                                            <Tooltip text="Tu documento de identificación oficial. Necesario para certificar servicios y facturaciones." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-address-card text-xs"></i></span>
