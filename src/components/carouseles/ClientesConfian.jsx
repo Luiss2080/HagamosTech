@@ -16,21 +16,21 @@ import {
 } from './LogosClientes';
 
 const ROW1 = [
-  { name: 'Shougang', logoComponent: ShougangLogo, industry: 'Log+�-�stica y Transporte', icon: 'fa-truck-fast', metric: 'Eficiencia: +94%' },
-  { name: 'Arca Continental', logoComponent: ArcaContinentalLogo, industry: 'Manufactura y Distribuci+�-�n', icon: 'fa-warehouse', metric: 'Despliegue: 100%' },
-  { name: 'Urbano', logoComponent: UrbanoLogo, industry: 'Tecnolog+�-�a / Movilidad', icon: 'fa-dolly', metric: 'Env+�-�os: +98%' },
+  { name: 'Shougang', logoComponent: ShougangLogo, industry: 'Logística y Transporte', icon: 'fa-truck-fast', metric: 'Eficiencia: +94%' },
+  { name: 'Arca Continental', logoComponent: ArcaContinentalLogo, industry: 'Manufactura y Distribuciín', icon: 'fa-warehouse', metric: 'Despliegue: 100%' },
+  { name: 'Urbano', logoComponent: UrbanoLogo, industry: 'Tecnología / Movilidad', icon: 'fa-dolly', metric: 'Envíos: +98%' },
   { name: 'Texfina', logoComponent: TexfinaLogo, industry: 'Corporativo', icon: 'fa-building', metric: 'Procesos: +95%' },
   { name: 'Tai Loy', logoComponent: TaiLoyLogo, industry: 'E-commerce', icon: 'fa-store', metric: 'Ventas: +120%' },
   { name: 'Rintisa', logoComponent: RintisaLogo, industry: 'Fintech', icon: 'fa-wallet', metric: 'Seguridad: 100%' }
 ];
 
 const ROW2 = [
-  { name: 'Auna', logoComponent: AunaLogo, industry: 'Salud', icon: 'fa-heart-pulse', metric: 'Atenci+�-�n: +99%' },
+  { name: 'Auna', logoComponent: AunaLogo, industry: 'Salud', icon: 'fa-heart-pulse', metric: 'Atenciín: +99%' },
   { name: 'BSF Almacenes', logoComponent: BsfLogo, industry: 'Corporativo', icon: 'fa-boxes-stacked', metric: 'Capacidad: +96%' },
-  { name: 'Daryza', logoComponent: DaryzaLogo, industry: 'Consultor+�-�a', icon: 'fa-user-tie', metric: 'Retorno: +93%' },
-  { name: 'Grupo Efe', logoComponent: GrupoEfeLogo, industry: 'Tecnolog+�-�a', icon: 'fa-laptop-code', metric: 'Sistemas: +97%' },
-  { name: 'Nexa', logoComponent: NexaLogo, industry: 'TI y Consultor+�-�a', icon: 'fa-network-wired', metric: 'Uptime: 99.9%' },
-  { name: 'Colso', logoComponent: ColsoLogo, industry: 'Log+�-�stica', icon: 'fa-truck-ramp-box', metric: 'Tiempos: -24%' }
+  { name: 'Daryza', logoComponent: DaryzaLogo, industry: 'Consultoría', icon: 'fa-user-tie', metric: 'Retorno: +93%' },
+  { name: 'Grupo Efe', logoComponent: GrupoEfeLogo, industry: 'Tecnología', icon: 'fa-laptop-code', metric: 'Sistemas: +97%' },
+  { name: 'Nexa', logoComponent: NexaLogo, industry: 'TI y Consultoría', icon: 'fa-network-wired', metric: 'Uptime: 99.9%' },
+  { name: 'Colso', logoComponent: ColsoLogo, industry: 'Logística', icon: 'fa-truck-ramp-box', metric: 'Tiempos: -24%' }
 ];
 
 const TrustedClients = () => {
