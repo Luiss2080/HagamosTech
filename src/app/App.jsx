@@ -161,6 +161,7 @@ const App = () => {
           {/* Rutas Principales */}
           <Route path="/" element={<Inicio />} />
           <Route path="/que-hacemos/tecnologia" element={<Tecnologia />} />
+          <Route path="/que-hacemos/academia" element={<Academia />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
                 <Route path="/servicios/delivery" element={<EnvioKits />} />
               <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
