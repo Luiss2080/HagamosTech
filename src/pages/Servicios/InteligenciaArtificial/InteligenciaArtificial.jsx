@@ -27,9 +27,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
-  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
-  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+  { name: 'Diego Ríos', role: 'Analista de Datos, FinCorp', text: 'Implementar modelos predictivos nos permitió adelantarnos a las tendencias del mercado. La precisión de la IA es asombrosa.' },
+  { name: 'Valeria Cruz', role: 'Soporte al Cliente, TechSolutions', text: 'El asistente virtual impulsado por IA redujo nuestras consultas de soporte en un 60%. Aprende de nuestra documentación y responde como un humano.' },
+  { name: 'Héctor Muñoz', role: 'Fundador, Creativa Agencia', text: 'El repositorio de prompts personalizados aceleró nuestra generación de contenido de forma brutal. Entendieron exactamente lo que necesitábamos.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -323,11 +323,11 @@ const InteligenciaArtificial = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  Implementamos soluciones avanzadas de IA, desde repositorios de prompts y asistentes virtuales hasta modelos predictivos que potencian tus decisiones.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
+                  Asistentes Virtuales (Chatbots IA), Modelos Predictivos, Repositorios de Prompts Personalizados, Machine Learning, Integración de LLMs y Automatización Cognitiva.
                 </p>
               </div>
             </div>

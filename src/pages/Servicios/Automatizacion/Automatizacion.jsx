@@ -27,9 +27,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
-  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
-  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+  { name: 'Sofía Valdés', role: 'Directora de Ventas, InmoTech', text: 'Automatizamos la gestión de leads y correos. Lo que antes nos tomaba 10 horas semanales, ahora se hace solo en segundos. Increíble.' },
+  { name: 'Martín Vargas', role: 'Propietario, Tienda Market', text: 'La conexión de nuestro CRM con el sistema de facturación nos salvó de innumerables errores humanos. Una inversión que se pagó sola.' },
+  { name: 'Lucía Fernández', role: 'Coordinadora de RRHH', text: 'Los flujos de trabajo automatizados para la incorporación de personal nos han quitado un peso enorme de encima. Todo es mucho más ordenado.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -323,11 +323,11 @@ const Automatizacion = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  Conectamos tus herramientas y automatizamos flujos de trabajo repetitivos para reducir errores humanos, ahorrar tiempo y escalar tu negocio sin esfuerzo.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
+                  Integraciones API, CRMs, Automatización de Correos, Sistemas de Facturación, Webhooks, Optimización de Tareas Repetitivas y Bots de Respuesta.
                 </p>
               </div>
             </div>

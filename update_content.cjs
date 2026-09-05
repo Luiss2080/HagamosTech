@@ -151,7 +151,7 @@ for (const [dir, data] of Object.entries(categories)) {
         // Also replace the title and paragraph
         // The title is inside: className="text-4xl..."><span className="...">SERVICE</span>
         // Let's use string replace for the generic texts
-        mainContent = mainContent.replace(/¿QUÉ ES ESTE.*?CÓMO AYUDA A TU EMPRESA\?/s, \`¿QUÉ ES \${data.title} Y CÓMO AYUDA A TU EMPRESA?\`);
+        mainContent = mainContent.replace(/¿QUÉ ES ESTE.*?CÓMO AYUDA A TU EMPRESA\\?/s, '¿QUÉ ES ' + data.title + ' Y CÓMO AYUDA A TU EMPRESA?');
         mainContent = mainContent.replace(/Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos./g, data.desc);
         mainContent = mainContent.replace(/Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas./g, data.incluye);
         

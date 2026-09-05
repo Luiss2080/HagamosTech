@@ -27,9 +27,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
-  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
-  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+  { name: 'Roberto Castro', role: 'CEO, Logística Express', text: 'El sistema web a medida que construyeron optimizó toda nuestra cadena de suministros. Ya no perdemos datos y todo está sincronizado en la nube.' },
+  { name: 'Elena Montes', role: 'Gerente, FitCenter', text: 'Nuestra app móvil y el sistema de gestión de gimnasio nos permite controlar membresías y rutinas sin esfuerzo. Es robusto y nunca se cae.' },
+  { name: 'Javier Domínguez', role: 'CTO, EcoPlast Industrial', text: 'El soporte continuo y la arquitectura de base de datos que montaron en SQL Server revolucionaron nuestra forma de trabajar. 100% recomendados.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -323,11 +323,11 @@ const SistemasApps = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  Desarrollamos soluciones de software a medida, aplicaciones móviles y sistemas web robustos que optimizan y escalan las operaciones de tu empresa.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
+                  Sistemas Web, Aplicaciones Móviles, APIs, Bases de Datos SQL, Dashboards Corporativos, Software a Medida, Arquitecturas Escalables y Mantenimiento de Servidores.
                 </p>
               </div>
             </div>

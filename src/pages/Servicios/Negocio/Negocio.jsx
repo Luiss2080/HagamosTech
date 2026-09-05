@@ -27,9 +27,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
-  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
-  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+  { name: 'Camila Ortiz', role: 'Fundadora, EcoSnacks', text: 'Desde el logo hasta el menú QR, HagamosTech nos dio una identidad visual brutal que hizo destacar nuestro negocio desde el primer día.' },
+  { name: 'Tomás Aguilar', role: 'Dueño, RestoBar El Faro', text: 'Las campañas de publicidad y el branding que diseñaron para nuestra inauguración llenaron el local. Su trabajo gráfico es de otro nivel.' },
+  { name: 'Mariana López', role: 'Emprendedora Local', text: 'Me organizaron el WhatsApp Business y armaron un catálogo digital espectacular. Ahora atiendo a mis clientes mucho más rápido.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -323,11 +323,11 @@ const Negocio = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  Construimos la identidad visual de tu marca y te brindamos herramientas digitales para destacar en el mercado local y potenciar tus ventas.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
+                  Creación de Marca (Branding), Manual de Identidad Visual, Menús QR, Catálogos Digitales, Flyers Publicitarios, Configuración de WhatsApp Business y Estrategias Comerciales.
                 </p>
               </div>
             </div>
