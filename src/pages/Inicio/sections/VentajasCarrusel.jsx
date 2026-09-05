@@ -311,7 +311,7 @@ const VentajasCarrusel = () => {
                                                     backgroundSize: item.color === 'bg-white' ? '26px 26px' : '30px 30px'
                                                 }}
                                             ></div>
-                                            {(item.id === 'software' || item.id === 'cursos' || item.id === 'libros') && (
+                                            {(item.id === 'software' || item.id === 'libros') && (
                                                 <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
                                             )}
                                             <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>
