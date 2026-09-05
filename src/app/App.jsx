@@ -44,6 +44,11 @@ import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
 import InteligenciaArtificial from '../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial';
 import Negocio from '../pages/Servicios/Negocio/Negocio';
 import Academico from '../pages/Servicios/Academico/Academico';
+import SistemasApps from '../pages/Servicios/SistemasApps/SistemasApps';
+import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
+import InteligenciaArtificial from '../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial';
+import Negocio from '../pages/Servicios/Negocio/Negocio';
+import Academico from '../pages/Servicios/Academico/Academico';
 import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
 import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
 import ContactoPagina from '../pages/Contacto/Contacto';
@@ -60,23 +65,30 @@ import Error403 from '../pages/Errores/Error403';
 import Error404 from '../pages/Errores/Error404';
 import Error419 from '../pages/Errores/Error419';
 import Error500 from '../pages/Errores/Error500';
+
 // Importaciones de Perfil de Usuario
 import PerfilPagina from '../pages/Perfil/PerfilPagina';
 import ConfiguracionPagina from '../pages/Perfil/ConfiguracionPagina';
 import HistorialComprasPagina from '../pages/Perfil/HistorialComprasPagina';
+
 // Zustand Store de Modales
 import useModalStore from '../store/useModalStore';
+
 const LOGIN_MODAL_KEYS = new Set(['modal_login', 'loginModal']);
 const REGISTER_MODAL_KEYS = new Set(['modal_register', 'startTrialModal', 'registerModal']);
 const CONTACT_MODAL_KEYS = new Set(['modal_contact', 'contactModal', 'contactarModal', 'contactoModal']);
+
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
   const [openWidget, setOpenWidget] = useState(null);
+
   const initSession = useAuthStore((s) => s.initSession);
+
   useEffect(() => {
     initSession();
   }, [initSession]);
+
   const {
     isLoginOpen,
     isRegisterOpen,
@@ -87,10 +99,13 @@ const App = () => {
     openModal,
     closeModal
   } = useModalStore();
+
   const handleLoadComplete = useCallback(() => {
     setIsLoading(false);
     setTimeout(() => setContentVisible(true), 50);
   }, []);
+
+  useEffect(() => {
     window.openModal = (modalName) => {
         if (LOGIN_MODAL_KEYS.has(modalName)) {
           openModal('loginModal');
@@ -98,10 +113,15 @@ const App = () => {
         }
         if (REGISTER_MODAL_KEYS.has(modalName)) {
           openModal('registerModal');
+          return;
+        }
         if (CONTACT_MODAL_KEYS.has(modalName)) {
           openModal('contactModal');
+          return;
+        }
         openModal(modalName);
     };
+
     // Registrar evento personalizado para abrir modales con orden (ej. desde PagoModal)
     const handleOpenCustomModal = (e) => {
       const detail = e.detail;
@@ -109,21 +129,31 @@ const App = () => {
       const orderData = typeof detail === 'object' ? detail : null;
       
       console.log("App | Evento personalizado recibido para abrir modal:", modalName, orderData);
+      
       // Traducir nombre del modal según useModalStore.js
       let resolvedModalName = modalName;
       if (modalName === 'cardModal') resolvedModalName = 'cardModal'; // mapea a cardModal
+      
       openModal(resolvedModalName, orderData);
+    };
+
     window.addEventListener('hagamostech-open-modal', handleOpenCustomModal);
+
     return () => {
         delete window.openModal;
         window.removeEventListener('hagamostech-open-modal', handleOpenCustomModal);
+    };
   }, [openModal]);
+
+  useEffect(() => {
     const shouldOpen = localStorage.getItem('open_start_trial') === '1' || localStorage.getItem('open_login_modal') === '1';
     if (shouldOpen) {
       localStorage.removeItem('open_start_trial');
       localStorage.removeItem('open_login_modal');
       openModal('registerModal');
     }
+  }, [openModal]);
+
   return (
     <Router>
       <ScrollToTop />
@@ -138,6 +168,11 @@ const App = () => {
               <Route path="/servicios/eventos" element={<TalleresCorporativos />} />
               <Route path="/servicios/corporativo" element={<DesarrolloEmpresarial />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
+              <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
+              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
+              <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
+              <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
+              <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
               <Route path="/servicios/automatizacion" element={<Automatizacion />} />
               <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
@@ -171,40 +206,55 @@ const App = () => {
               <Route path="/catalogo" element={<CatalogoPagina />} />
               <Route path="/catalogo/:id" element={<DetalleProducto />} />
               <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
+
               {/* Rutas del Perfil de Usuario */}
               <Route path="/perfil" element={<PerfilPagina />} />
               <Route path="/configuracion" element={<ConfiguracionPagina />} />
               <Route path="/perfil/compras" element={<HistorialComprasPagina />} />
+
               {/* Error Pages Routing */}
               <Route path="/errors/401" element={<Error401 />} />
               <Route path="/errors/403" element={<Error403 />} />
               <Route path="/errors/404" element={<Error404 />} />
               <Route path="/errors/419" element={<Error419 />} />
               <Route path="/errors/500" element={<Error500 />} />
+
               {/* Fallback Route */}
               <Route path="*" element={<Error404 />} />
             </Routes>
+
           </AppLayout>
+
           {/* Renderizado Centralizado de Modales - fuera del AppLayout para estar por encima del Header */}
           <InicioSesionModal
             isOpen={isLoginOpen}
             onClose={() => closeModal('isLoginOpen')}
           />
+
           <TerminosModal
             isOpen={isTermsOpen}
             onClose={() => closeModal('isTermsOpen')}
+          />
+
           <RegistroModal
             isOpen={isRegisterOpen}
             onClose={() => closeModal('isRegisterOpen')}
+          />
+
           <ContactoModal
             isOpen={isContactOpen}
             onClose={() => closeModal('isContactOpen')}
+          />
+
           <CarritoModal />
+
           <ToastCarrito />
+
           <VideoPlayerModal
             isOpen={isVideoOpen}
             onClose={() => closeModal('isVideoOpen')}
             video={videoData}
+          />
           <GuestModalsManager />
           <RastreadorActividad />
       </div>
@@ -212,8 +262,11 @@ const App = () => {
   )
 }
 export default App;
+
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
+
+  useEffect(() => {
     if (hash) {
       const targetId = hash.replace('#', '');
       const element = document.getElementById(targetId);
@@ -221,8 +274,11 @@ const ScrollToTop = () => {
         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
         return;
       }
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [pathname, hash]);
+
+  useEffect(() => {
     let observer;
     
     const setupReveal = () => {
@@ -242,8 +298,11 @@ const ScrollToTop = () => {
           el.closest('.carrusel') ||
           el.closest('.carousel')
         ) {
+          return;
+        }
         el.classList.add('reveal');
       });
+
       observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -252,8 +311,12 @@ const ScrollToTop = () => {
           }
         });
       }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+
       document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    };
+
     const timer = setTimeout(setupReveal, 300);
+
     // Robust fallback to catch React re-renders wiping out the class or minimizing window
     const fallbackInterval = setInterval(() => {
       const reveals = document.querySelectorAll('.reveal');
@@ -261,21 +324,32 @@ const ScrollToTop = () => {
         // If it was already revealed but lost the active class due to a re-render attribute reset
         if (el.dataset.revealed === "true" && !el.classList.contains('active')) {
           el.classList.add('active');
+        }
         // If it's a new element or missed by the observer, ensure it is being observed
         if (observer && !el.classList.contains('active')) {
           observer.observe(el);
+        }
+      });
     }, 1000);
+
     const handleVisibility = () => {
       if (document.visibilityState === 'visible' && observer) {
         // Force a re-check of all un-activated elements when window is restored
         document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
+      }
+    };
+    
     document.addEventListener('visibilitychange', handleVisibility);
     window.addEventListener('resize', handleVisibility);
+
+    return () => {
       clearTimeout(timer);
       clearInterval(fallbackInterval);
       if (observer) observer.disconnect();
       document.removeEventListener('visibilitychange', handleVisibility);
       window.removeEventListener('resize', handleVisibility);
+    };
   }, [pathname]);
+
   return null;
 };
