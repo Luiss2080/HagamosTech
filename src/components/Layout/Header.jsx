@@ -12,7 +12,7 @@ const NAV_ITEMS = [
         type: 'dropdown',
         subItems: [
             { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
-            { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/#academia', icon: 'fa-graduation-cap' },
+            { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
             { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/#negocios', icon: 'fa-store' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/#personalizado', icon: 'fa-lightbulb' },
         ]
@@ -37,7 +37,7 @@ const NAV_ITEMS = [
         icon: 'fa-users',
         type: 'dropdown',
         subItems: [
-            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/#academia', icon: 'fa-user-graduate' },
+            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
             { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/#negocios', icon: 'fa-rocket' },
             { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/#negocios', icon: 'fa-shop' },
             { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/#tecnologia', icon: 'fa-building' },

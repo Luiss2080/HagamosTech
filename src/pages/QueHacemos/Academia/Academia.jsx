@@ -143,7 +143,7 @@ const Academia = () => {
             {ACADEMIC_SERVICES.map((srv, idx) => {
               const isEven = idx % 2 === 0;
               return (
-                <div key={idx} className={\`flex flex-col \${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-16\`}>
+                <div key={idx} className={`flex flex-col ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-10 md:gap-16`}>
                   
                   {/* Image side */}
                   <div className="w-full md:w-1/2 relative group">
