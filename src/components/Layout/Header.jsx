@@ -23,7 +23,7 @@ const NAV_ITEMS = [
         icon: 'fa-screwdriver-wrench',
         type: 'dropdown',
         subItems: [
-            { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/#tecnologia', icon: 'fa-globe' },
+            { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
             { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/#tecnologia', icon: 'fa-mobile-screen-button' },
             { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/#tecnologia', icon: 'fa-gear' },
             { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/#tecnologia', icon: 'fa-robot' },
