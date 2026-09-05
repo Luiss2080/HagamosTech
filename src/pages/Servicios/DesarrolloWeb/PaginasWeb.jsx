@@ -100,15 +100,14 @@ const PaginasWeb = () => {
   
 
   return (
-    <div className="relative overflow-hidden min-h-screen bg-white dark:bg-[#0a0a0a] font-montserrat">
+    <div className="relative overflow-hidden min-h-screen bg-[#050505] font-montserrat">
       <CircuitBackground />
-      <CircleParticles colorScheme="light" />
+      <CircleParticles colorScheme="dark" />
 
-      {/* Red/Pink Square Grid Overlay */}
-      <div className="absolute inset-0 opacity-[0.03] dark:opacity-[0.06] pointer-events-none z-0" style={{
-        backgroundImage: 'linear-gradient(to right, #A3E635 1px, transparent 1px), linear-gradient(to bottom, #A3E635 1px, transparent 1px)',
-        backgroundSize: '24px 24px'
-      }}></div>
+      {/* Organic Soft Blobs Background (tech) */}
+      <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-[#A3E635]/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#84CC16]/10 rounded-full blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-[40%] left-[20%] w-[40%] h-[40%] bg-[#A3E635]/5 rounded-full blur-[140px] pointer-events-none"></div>
 
       {/* Decorative Orbits */}
       <div className="absolute top-[12%] left-[-5%] w-80 h-80 rounded-full border border-[#A3E635]/10 pointer-events-none flex items-center justify-center z-0">
