@@ -6,6 +6,7 @@ import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
 import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
+import Academia from '../pages/QueHacemos/Academia/Academia';
 import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
