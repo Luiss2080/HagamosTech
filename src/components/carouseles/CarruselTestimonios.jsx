@@ -120,7 +120,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                   style={{ width: `${cardPercent}%` }}
                   className="px-3"
                 >
-                  <div className="bg-white p-6 sm:p-7 rounded-[2rem] shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-slate-100/80 flex flex-col justify-between h-full min-h-[300px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.12)] hover:-translate-y-1.5 hover:border-[#84CC16]/30 dark:hover:border-[#84CC16]/30 transition-all duration-500 relative group">
+                  <div className="bg-white dark:bg-[#0A0A0A] p-6 sm:p-7 rounded-[2rem] shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-slate-100/80 dark:border-neutral-800 flex flex-col justify-between h-full min-h-[300px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.12)] hover:-translate-y-1.5 hover:border-[#84CC16]/30 dark:hover:border-[#84CC16]/30 transition-all duration-500 relative group">
                     
                     {/* Glowing Accent Border on Hover */}
                     <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[#A3E635] to-[#84CC16] rounded-b-[2rem] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
@@ -138,7 +138,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                     </div>
 
                     {/* Review text */}
-                    <p className="text-slate-655 text-xs sm:text-[13px] font-bold leading-relaxed mb-6 flex-grow text-left italic">
+                    <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-[13px] font-bold leading-relaxed mb-6 flex-grow text-left italic">
                       "{t.text}"
                     </p>
 
@@ -155,10 +155,10 @@ const TestimonialCarousel = ({ testimonials }) => {
                         </div>
                       </div>
                       <div className="text-left leading-tight">
-                        <h4 className="text-[12px] font-black uppercase tracking-wider text-slate-800 mb-0.5">
+                        <h4 className="text-[12px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
                           {t.name}
                         </h4>
-                        <p className="text-[9px] font-bold text-gray-500">
+                        <p className="text-[9px] font-bold text-gray-500 dark:text-neutral-400">
                           {t.role}
                         </p>
                       </div>
@@ -175,14 +175,14 @@ const TestimonialCarousel = ({ testimonials }) => {
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 border border-neutral-200/60 shadow-xl flex items-center justify-center text-[#111827] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Anterior"
             >
               <i className="fa-solid fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 border border-neutral-200/60 shadow-xl flex items-center justify-center text-[#111827] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Siguiente"
             >
               <i className="fa-solid fa-chevron-right text-xs"></i>
