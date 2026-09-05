@@ -139,12 +139,12 @@ const PaginasWeb = () => {
             {/* Left Column */}
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
-              <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-[#111827] dark:text-white leading-[1.1] tracking-tight uppercase">
+              <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
                 <span className="block">Páginas Web</span>
                 <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
-              <p className="text-base sm:text-lg font-bold text-[#5c6f8f] dark:text-slate-300 leading-relaxed max-w-xl text-center">
+              <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
                 Diseño y desarrollo profesional de sitios web para cualquier tipo de cliente y necesidad. Landing pages, tiendas virtuales, catálogos, blogs y mucho más, listos para posicionar tu marca.
               </p>
 
@@ -181,7 +181,7 @@ const PaginasWeb = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-gray-500 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en Tech Home</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en Tech Home</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#7f1d1d] text-white border border-[#84CC16]/40 shadow-md">
@@ -242,7 +242,7 @@ const PaginasWeb = () => {
                       </div>
                       <div className="leading-tight flex-1 text-left">
                         <p className="text-[8px] font-bold uppercase text-slate-600 dark:text-slate-450">{card.subtitle}</p>
-                        <p className="text-xs font-black text-gray-800 dark:text-white">{card.title}</p>
+                        <p className="text-xs font-black text-white dark:text-white">{card.title}</p>
                       </div>
                     </div>
                   </div>
@@ -263,14 +263,14 @@ const PaginasWeb = () => {
           
           
           <div className="text-center max-w-2xl mx-auto mb-10">
-            <h2 className="text-4xl md:text-6xl font-black text-[#111827] dark:text-white mb-6">
+            <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
               Nuestro proceso, <br />
               <span className="text-[#A3E635] relative inline-block">
                 desarrollo ágil.
                 <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </h2>
-            <p className="text-xs sm:text-sm text-slate-800 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
+            <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
               Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
             </p>
           </div>
@@ -282,8 +282,8 @@ const PaginasWeb = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 max-w-6xl mx-auto">
               {PROCESO.map((step, idx) => {
                 const stepIcons = ['fa-magnifying-glass', 'fa-palette', 'fa-code', 'fa-rocket'];
-                const stepColors = ['text-[#A3E635]', 'text-[#0d1b3e]', 'text-[#A3E635]', 'text-[#A3E635]'];
-                const stepBgs = ['bg-[#A3E635]/10', 'bg-slate-50', 'bg-[#A3E635]/10', 'bg-[#A3E635]/10'];
+                const stepColors = ['text-[#A3E635]', 'text-white', 'text-[#A3E635]', 'text-[#A3E635]'];
+                const stepBgs = ['bg-[#A3E635]/10', 'bg-neutral-900/40', 'bg-[#A3E635]/10', 'bg-[#A3E635]/10'];
                 return (
                   <div key={idx} className="flex flex-col items-center text-center group">
                     {/* Bubble containing step number and icon */}
@@ -297,10 +297,10 @@ const PaginasWeb = () => {
                     </div>
                     
                     {/* Text */}
-                    <h3 className="text-base font-black text-[#111827] dark:text-white mb-2 group-hover:text-[#A3E635] dark:group-hover:text-[#A3E635] transition-colors uppercase tracking-tight">
+                    <h3 className="text-base font-black text-white dark:text-white mb-2 group-hover:text-[#A3E635] dark:group-hover:text-[#A3E635] transition-colors uppercase tracking-tight">
                       {step.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-gray-500 dark:text-slate-400 font-bold leading-relaxed max-w-xs">
+                    <p className="text-xs sm:text-sm text-slate-400 dark:text-slate-400 font-bold leading-relaxed max-w-xs">
                       {step.desc}
                     </p>
                   </div>
@@ -316,11 +316,11 @@ const PaginasWeb = () => {
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-[#0d1b3e] dark:text-white uppercase leading-tight mb-6 tracking-tighter">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
                 ¿Qué es este <span className="text-[#A3E635] relative inline-block px-1">Servicio Premium<svg className="absolute w-full h-2.5 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 100 9" fill="none"><path d="M2 6.5C15 4.5 45 2 98 4" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/></svg></span> y cómo ayuda a tu empresa?
               </h2>
 
-              <div className="space-y-5 text-[#5c6f8f] dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
+              <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
                   Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
                 </p>
@@ -360,7 +360,7 @@ const PaginasWeb = () => {
                 </div>
 
                 <div className="absolute top-1/2 -right-4 translate-y-[-50%] flex flex-col gap-3 z-20">
-                  <div className="w-12 h-12 bg-white dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800 rounded-2xl flex items-center justify-center text-[#A3E635] shadow-lg"><Code size={18} /></div>
+                  <div className="w-12 h-12 bg-neutral-900/50 dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800 rounded-2xl flex items-center justify-center text-[#A3E635] shadow-lg"><Code size={18} /></div>
                   <div className="w-12 h-12 bg-[#A3E635] rounded-2xl flex items-center justify-center text-white shadow-lg"><Award size={18} className="text-[#84CC16]" /></div>
                 </div>
               </div>
@@ -376,14 +376,14 @@ const PaginasWeb = () => {
       <section className="py-12 relative overflow-hidden reveal">
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
-          <h2 className="text-4xl md:text-6xl font-black text-[#111827] dark:text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
               resultados comprobados.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
-          <p className="text-xs sm:text-sm text-slate-800 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
+          <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
             Opiniones y valoraciones de las empresas y líderes de marca que han transformado su operación digital gracias a nuestras soluciones de software.
           </p>
         </div>

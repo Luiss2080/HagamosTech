@@ -11,7 +11,7 @@ const TECH_DETAILS = {
   'React': { icon: 'fa-brands fa-react', color: 'text-cyan-500 dark:text-cyan-450', bg: 'bg-cyan-50 dark:bg-cyan-950/20', border: 'border-cyan-100 dark:border-cyan-900/30' },
   'Node.js': { icon: 'fa-brands fa-node-js', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-950/20', border: 'border-green-100 dark:border-green-900/30' },
   'Tailwind CSS': { icon: 'fa-solid fa-wind', color: 'text-teal-500 dark:text-teal-400', bg: 'bg-teal-50 dark:bg-teal-950/20', border: 'border-teal-100 dark:border-teal-900/30' },
-  'Next.js': { icon: 'fa-solid fa-n', color: 'text-gray-800 dark:text-gray-200', bg: 'bg-gray-100 dark:bg-gray-800/40', border: 'border-gray-300 dark:border-gray-700/50' },
+  'Next.js': { icon: 'fa-solid fa-n', color: 'text-white dark:text-gray-200', bg: 'bg-gray-100 dark:bg-gray-800/40', border: 'border-gray-300 dark:border-gray-700/50' },
   'Stripe': { icon: 'fa-brands fa-stripe', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950/20', border: 'border-indigo-200 dark:border-indigo-900/30' },
   'Figma': { icon: 'fa-brands fa-figma', color: 'text-pink-500 dark:text-pink-400', bg: 'bg-pink-50 dark:bg-pink-950/20', border: 'border-pink-200 dark:border-pink-900/30' }
 };
@@ -115,13 +115,13 @@ const ProjectCarousel = ({ images }) => {
       {/* Controls: Styled as White Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronLeft size={16} />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronRight size={16} />
       </button>
@@ -149,7 +149,7 @@ const RecorridoPaginasWeb = () => {
         
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-black text-[#111827] dark:text-white mb-6 leading-none">
+          <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
               Páginas Web.
@@ -182,7 +182,7 @@ const RecorridoPaginasWeb = () => {
                       <span className="text-3xl sm:text-4xl font-black text-[#A3E635] dark:text-[#A3E635] select-none leading-none">
                         {p.num}
                       </span>
-                      <div className="w-12 h-12 rounded-2xl bg-[#84CC16] border border-[#84CC16]/20 flex items-center justify-center text-lg text-[#111827] shadow-md shadow-[#84CC16]/10">
+                      <div className="w-12 h-12 rounded-2xl bg-[#84CC16] border border-[#84CC16]/20 flex items-center justify-center text-lg text-white shadow-md shadow-[#84CC16]/10">
                         <i className={`fa-solid ${p.icon}`}></i>
                       </div>
                     </div>
@@ -211,7 +211,7 @@ const RecorridoPaginasWeb = () => {
                   </div>
 
                   {/* Split Title with signature combination: Dark, Red, and Gold underline */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-[#111827] dark:text-white leading-tight uppercase tracking-tight text-center w-full">
+                  <h3 className="text-2xl sm:text-3xl font-black text-white dark:text-white leading-tight uppercase tracking-tight text-center w-full">
                     {p.firstPart} <br />
                     <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
                       {p.highlightPart}
@@ -226,7 +226,7 @@ const RecorridoPaginasWeb = () => {
                   {/* Tech tools grid */}
                   <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
                     {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-slate-50', border: 'border-slate-100' };
+                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-slate-650', bg: 'bg-neutral-900/40', border: 'border-slate-100' };
                       return (
                         <span
                           key={tag}
