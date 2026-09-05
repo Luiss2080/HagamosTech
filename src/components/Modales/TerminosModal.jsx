@@ -24,7 +24,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '6. Política de reembolsos y cambios',
-        text: 'Los cursos presenciales tienen un período de retractación de 3 días hábiles después de la inscripción. Los libros físicos pueden cambiarse dentro de los 7 días si presentan defectos de fabricación. El software a medida no tiene reembolso una vez iniciado el desarrollo.',
+        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. Los libros físicos pueden cambiarse dentro de los 7 días si presentan defectos de fabricación. El software a medida no tiene reembolso una vez iniciado el desarrollo.',
     },
     {
         title: '7. Modo invitado y acceso temporal',
