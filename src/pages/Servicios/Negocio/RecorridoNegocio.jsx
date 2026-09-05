@@ -132,7 +132,7 @@ const RecorridoNegocio = () => {
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between flex-1 gap-3 sm:gap-6 pl-4 border-l border-slate-150 dark:border-neutral-800 text-left">
                       <div className="flex flex-col">
                         <span className="text-xs sm:text-sm font-black text-[#84CC16] uppercase tracking-widest leading-none">
-                          {p.category}
+                          {p.category || (p.title ? p.title.split(":")[0] : "")}
                         </span>
                         <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-wider">
                           {p.tags.length} Tecnologías Implementadas
@@ -153,9 +153,9 @@ const RecorridoNegocio = () => {
 
                   {/* Split Title with signature combination: Dark, Red, and Gold underline */}
                   <h3 className="text-2xl sm:text-3xl font-black text-white dark:text-white leading-tight uppercase tracking-tight text-center w-full">
-                    {p.firstPart} <br />
+                    {p.firstPart || (p.title ? p.title.split(":")[0] + ":" : "")} <br />
                     <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-                      {p.highlightPart}
+                      {p.highlightPart || (p.title ? p.title.split(":")[1] : "")}
                       <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                     </span>
                   </h3>
