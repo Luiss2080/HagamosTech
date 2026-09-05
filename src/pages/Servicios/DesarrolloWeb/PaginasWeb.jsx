@@ -177,7 +177,7 @@ const PaginasWeb = () => {
 
               {/* Trust badges */}
               <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 pt-4">
-                <div className="flex gap-0.5 text-amber-500">
+                <div className="flex gap-0.5 text-[#A3E635]">
                   {[...Array(5)].map((_, i) => (
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
@@ -283,8 +283,8 @@ const PaginasWeb = () => {
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 max-w-6xl mx-auto">
               {PROCESO.map((step, idx) => {
                 const stepIcons = ['fa-magnifying-glass', 'fa-palette', 'fa-code', 'fa-rocket'];
-                const stepColors = ['text-[#A3E635]', 'text-[#0d1b3e]', 'text-amber-500', 'text-[#A3E635]'];
-                const stepBgs = ['bg-red-50', 'bg-slate-50', 'bg-amber-50', 'bg-red-50'];
+                const stepColors = ['text-[#A3E635]', 'text-[#0d1b3e]', 'text-[#A3E635]', 'text-[#A3E635]'];
+                const stepBgs = ['bg-[#A3E635]/10', 'bg-slate-50', 'bg-[#A3E635]/10', 'bg-[#A3E635]/10'];
                 return (
                   <div key={idx} className="flex flex-col items-center text-center group">
                     {/* Bubble containing step number and icon */}
@@ -298,7 +298,7 @@ const PaginasWeb = () => {
                     </div>
                     
                     {/* Text */}
-                    <h3 className="text-base font-black text-[#111827] dark:text-white mb-2 group-hover:text-[#A3E635] dark:group-hover:text-red-400 transition-colors uppercase tracking-tight">
+                    <h3 className="text-base font-black text-[#111827] dark:text-white mb-2 group-hover:text-[#A3E635] dark:group-hover:text-[#A3E635] transition-colors uppercase tracking-tight">
                       {step.title}
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-500 dark:text-slate-400 font-bold leading-relaxed max-w-xs">
@@ -326,7 +326,7 @@ const PaginasWeb = () => {
                   Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-red-400">Incluye: </span>
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
                   Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
                 </p>
               </div>
@@ -338,7 +338,7 @@ const PaginasWeb = () => {
                 
                 <div className="bg-[#252526] p-3 flex items-center justify-between border-b border-neutral-900">
                   <div className="flex items-center gap-1.5">
-                    <span className="w-3 h-3 rounded-full bg-red-500"></span>
+                    <span className="w-3 h-3 rounded-full bg-[#A3E635]/100"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
                     <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">App.js</span>
