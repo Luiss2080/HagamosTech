@@ -670,7 +670,7 @@ export const SERVICIOS_DATA = {
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-server', label: 'Rendimiento', value: 'Óptimo' }
+                { icon: 'fa-server', label: 'Rendimiento', value: 'Óóptimo' }
             ],
             includes: [
                 { icon: 'fa-table', label: 'Tablas' },

@@ -190,7 +190,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
         setVerifError('');
     };
 
-    const openTerms = () => {
+    const openTermás = () => {
         window.openModal?.('termsModal');
     };
 

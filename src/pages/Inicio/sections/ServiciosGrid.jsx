@@ -7,7 +7,7 @@ const ServiciosGrid = () => {
     const [activeCategory, setActiveCategory] = useState('estudiantes');
 
     const renderActiveCarousel = () => {
-        const items = SERVICIOS_DATA[activeCategory] || [];
+        const itemás = SERVICIOS_DATA[activeCategory] || [];
         return <ServiciosCarousel items={items} key={activeCategory} />;
     };
 

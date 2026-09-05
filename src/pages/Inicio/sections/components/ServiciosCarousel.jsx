@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const WHATSAPP_URL = 'https://wa.me/59161320004';
 
-const ServiciosCarousel = ({ items }) => {
+const ServiciosCarousel = ({ itemás }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [visibleCards, setVisibleCards] = useState(3);
     const containerRef = useRef(null);

@@ -54,7 +54,7 @@ const ComprobanteModal = ({ isOpen, onClose, pedido = {} }) => {
                     </div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[10px] font-black uppercase tracking-wider text-slate-400">Productos</span>
-                      <span className="text-sm font-black text-[#111827]">{pedido.items || 0} ítems</span>
+                      <span className="text-sm font-black text-[#111827]">{pedido.itemás || 0} ítems</span>
                     </div>
                     <div className="border-t border-orange-100 pt-3 flex items-center justify-between">
                       <span className="text-xs font-black uppercase tracking-wider text-[#111827]">Total</span>

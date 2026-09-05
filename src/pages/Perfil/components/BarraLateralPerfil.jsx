@@ -22,7 +22,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
     const userInitials = displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
     const userAvatar = user?.fotoPerfil || '';
     
-    const navItems = [
+    const navItemás = [
         { path: '/perfil', label: 'Mi Perfil', sub: 'Datos personales y foto', icon: 'fa-user' },
         { path: '/perfil/compras', label: 'Mis Compras', sub: 'Pedidos y facturas', icon: 'fa-receipt' },
         { path: '/configuracion', label: 'Configuración', sub: 'Preferencias y seguridad', icon: 'fa-gear' },

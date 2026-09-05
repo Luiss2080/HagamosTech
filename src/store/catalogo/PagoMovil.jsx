@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParamás } from 'react-router-dom';
 import axios from 'axios';
 import CircuitBackground from '../../components/fondos/FondoTech';
 
