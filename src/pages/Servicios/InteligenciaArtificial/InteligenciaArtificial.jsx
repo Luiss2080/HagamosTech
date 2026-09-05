@@ -1,4 +1,4 @@
-import RecorridoInteligenciaArtificial from './RecorridoInteligenciaArtificial';
+import RecorridoIA from './RecorridoIA';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -371,7 +371,7 @@ const InteligenciaArtificial = () => {
       </section>
 
       {/* SECCIÓN ADICIONAL: DEMOSTRACIÓN DE SOFTWARE */}
-      <RecorridoInteligenciaArtificial />
+      <RecorridoIA />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">

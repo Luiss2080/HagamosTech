@@ -84,15 +84,15 @@ PAGES.forEach(page => {
         .replace(/Páginas Web Profesionales — TECH HOME/g, page.pill)
         .replace(/App\.js/g, page.fileIcon)
         .replace(/\/img\/07_Servicios\/soluciones\/PaginaWeb\.png/g, page.image)
-        .replace(/PaginasWeb/g, page.componentName)
-        .replace(/RecorridoPaginasWeb/g, page.recorridoName);
+        
+        .replace(/RecorridoPaginasWeb/g, page.recorridoName).replace(/PaginasWeb/g, page.componentName);
     
     fs.writeFileSync(path.join(dirPath, `${page.componentName}.jsx`), newMain);
 
     // Generate Recorrido
     let newRecorrido = templateRecorrido
         .replace(/Páginas Web/g, page.title)
-        .replace(/RecorridoPaginasWeb/g, page.recorridoName);
+        .replace(/RecorridoPaginasWeb/g, page.recorridoName).replace(/PaginasWeb/g, page.componentName);
     
     fs.writeFileSync(path.join(dirPath, `${page.recorridoName}.jsx`), newRecorrido);
 });
