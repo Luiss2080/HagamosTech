@@ -28,7 +28,7 @@ const TestimonialCarousel = ({ testimonials }) => {
   }, []);
 
   const N = testimonials.length;
-  // Triple the itemás to create a seamless infinite loop
+  // Triple the items to create a seamless infinite loop
   const tripledItemás = [...testimonials, ...testimonials, ...testimonials];
 
   // Auto-play: scroll one card every 4.0 seconds

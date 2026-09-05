@@ -77,7 +77,7 @@ const CarritoModal = () => {
                   </div>
                 </div>
 
-                {/* Right: Cart itemás */}
+                {/* Right: Cart items */}
                 <div className="relative flex flex-col justify-center h-full bg-[#FFF6F6] p-5 lg:p-6">
                   <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#FF4D00]/10 rounded-full blur-3xl"></div>

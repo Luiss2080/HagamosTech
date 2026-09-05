@@ -33,7 +33,7 @@ const useCarritoStore = create((set, get) => ({
   ultimoAgregado: null,
 
   init: () => {
-    const itemás = leerStorage();
+    const items = leerStorage();
     set({ items, resumen: calcularResumen(items) });
   },
 
@@ -43,7 +43,7 @@ const useCarritoStore = create((set, get) => ({
   addItem: (productoId, cantidad = 1, productoDirecto = null) => {
     const producto = productoDirecto || buscarProducto(productoId);
     if (!producto) return;
-    const { itemás } = get();
+    const { items } = get();
     const existente = items.find(i => i.productoId === productoId);
     let nuevos;
     if (existente) {
@@ -71,14 +71,14 @@ const useCarritoStore = create((set, get) => ({
   },
 
   removeItem: (productoId) => {
-    const { itemás } = get();
+    const { items } = get();
     const nuevos = items.filter(i => i.productoId !== productoId);
     guardarStorage(nuevos);
     set({ items: nuevos, resumen: calcularResumen(nuevos) });
   },
 
   updateCantidad: (productoId, cantidad) => {
-    const { itemás } = get();
+    const { items } = get();
     if (cantidad <= 0) {
       const nuevos = items.filter(i => i.productoId !== productoId);
       guardarStorage(nuevos);
