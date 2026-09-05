@@ -1,4 +1,4 @@
-import RecorridoPaginasWeb from './RecorridoPaginasWeb';
+import RecorridoTecnologia from './RecorridoTecnologia';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -93,7 +93,7 @@ const VALUE_POINTS = [
   { icon: 'fa-shield', label: 'Certificado SSL Incluido' }
 ];
 
-const PaginasWeb = () => {
+const Tecnologia = () => {
   
   
   // Auto-play de testimonios
@@ -323,7 +323,7 @@ const PaginasWeb = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  En HagamosTech, integramos desarrollo a medida, sistemas robustos, automatización y soluciones de IA para transformar tu negocio. Llevamos tus ideas al mundo digital con arquitecturas de alto rendimiento.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
@@ -349,7 +349,7 @@ const PaginasWeb = () => {
                 <div className="p-5 font-mono text-[10.5px] sm:text-[11.5px] leading-relaxed text-slate-300 overflow-x-auto select-none space-y-1">
                   <div>import React from "react";</div>
                   <div>import &#123; MetaTags &#125; from "./seo";</div>
-                  <div className="mt-2">export const PaginasWeb = () =&gt; &#123;</div>
+                  <div className="mt-2">export const Tecnologia = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
                   <div className="pl-12">&lt;MetaTags title="TECH HOME — Páginas Web" /&gt;</div>
@@ -371,7 +371,7 @@ const PaginasWeb = () => {
       </section>
 
       {/* SECCIÓN ADICIONAL: DEMOSTRACIÓN DE SOFTWARE */}
-      <RecorridoPaginasWeb />
+      <RecorridoTecnologia />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -404,4 +404,4 @@ const PaginasWeb = () => {
   );
 };
 
-export default PaginasWeb;
+export default Tecnologia;

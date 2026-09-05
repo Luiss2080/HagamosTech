@@ -17,70 +17,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {
-    num: '01',
-    category: 'E-COMMERCE',
-    firstPart: 'Tienda Virtual',
-    highlightPart: 'de Alta Conversión',
-    desc: 'Plataforma de comercio electrónico diseñada para ventas masivas. Incluye pasarelas de pago (Stripe/PayPal), carrito dinámico, catálogo filtrable y panel de administración.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe', 'Node.js', 'AWS', 'MySQL', 'Git'],
-    icon: 'fa-cart-shopping',
-    images: [
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '02',
-    category: 'LANDING PAGE',
-    firstPart: 'Página Web',
-    highlightPart: 'Corporativa',
-    desc: 'Sitio web moderno tipo One-Page enfocado en la presentación de servicios B2B. Optimizado para captación de leads, SEO técnico y velocidad de carga ultrarrápida.',
-    tags: ['React', 'Tailwind CSS', 'Figma', 'Docker', 'AWS', 'Git'],
-    icon: 'fa-building',
-    images: [
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '03',
-    category: 'PORTFOLIO',
-    firstPart: 'Catálogo de',
-    highlightPart: 'Servicios',
-    desc: 'Portal interactivo con galerías de imágenes y videos de alto rendimiento. Ideal para estudios de diseño, arquitectos o agencias creativas que necesitan exhibir su trabajo.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'AWS', 'Git'],
-    icon: 'fa-images',
-    images: [
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '04',
-    category: 'REAL ESTATE',
-    firstPart: 'Portal',
-    highlightPart: 'Inmobiliario',
-    desc: 'Plataforma web dinámica para listar propiedades con filtros avanzados de búsqueda, mapas interactivos y sistema de reservas online. Diseño optimizado para retener leads y aumentar ventas de inmuebles.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'AWS', 'MySQL', 'Git'],
-    icon: 'fa-house-building',
-    images: [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80'
-    ]
-  }
+  { num: '01', title: 'Paso 1: Desarrollo Web y E-Commerce', desc: 'Construimos tiendas virtuales, landing pages corporativas y portafolios interactivos optimizados para máxima velocidad y captación de leads.', tags: ['React', 'Next.js', 'Tailwind CSS'], icon: 'fa-globe', images: ['https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555099962-4199c345e5dd?auto=format&fit=crop&w=800&q=80'] },
+  { num: '02', title: 'Paso 2: Sistemas y Aplicaciones', desc: 'Desarrollamos soluciones de software a medida y plataformas móviles que automatizan y escalan las operaciones de tu empresa sin límites.', tags: ['Sistemas', 'APIs', 'AWS'], icon: 'fa-server', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] },
+  { num: '03', title: 'Paso 3: Automatización de Procesos', desc: 'Conectamos tus herramientas, CRMs y sistemas de facturación para eliminar tareas repetitivas y reducir el margen de error humano a cero.', tags: ['Automatización', 'Integración', 'Webhooks'], icon: 'fa-gears', images: ['https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1580894908361-9671951555ca?auto=format&fit=crop&w=800&q=80'] },
+  { num: '04', title: 'Paso 4: Inteligencia Artificial', desc: 'Implementamos asistentes virtuales, modelos predictivos y repositorios de prompts personalizados que potencian la toma de decisiones en tu equipo.', tags: ['Machine Learning', 'Prompts', 'Chatbots'], icon: 'fa-brain', images: ['https://images.unsplash.com/photo-1515503240222-14c115c56f54?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'] }
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -142,7 +82,7 @@ const ProjectCarousel = ({ images }) => {
   );
 };
 
-const RecorridoPaginasWeb = () => {
+const RecorridoTecnologia = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent reveal">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -150,9 +90,9 @@ const RecorridoPaginasWeb = () => {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
-            Nuestro recorrido en <br />
+            Nuestro enfoque en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Páginas Web.
+              Tecnología.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
@@ -254,4 +194,4 @@ const RecorridoPaginasWeb = () => {
   );
 };
 
-export default RecorridoPaginasWeb;
+export default RecorridoTecnologia;
