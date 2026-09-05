@@ -5,6 +5,7 @@ import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
+import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
 import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
