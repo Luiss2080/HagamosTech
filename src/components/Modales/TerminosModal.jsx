@@ -4,11 +4,11 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 const TERMS_SECTIONS = [
     {
         title: '1. Servicios educativos y de software',
-        text: 'HAGAMOSTECH ofrece cursos de robótica educativa, libros escolares de primaria y secundaria, desarrollo de software a medida, páginas web y soluciones tecnológicas empresariales. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
+        text: 'HAGAMOSTECH ofrece servicios de tecnología, automatización, diseño, desarrollo web, y consultoría, así como libros escolares de primaria y secundaria, desarrollo de software a medida, y soluciones tecnológicas empresariales. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
     },
     {
-        title: '2. Inscripción y acceso a cursos',
-        text: 'La inscripción a cursos presenciales u online se confirma una vez realizado el pago completo o la primera cuota. El acceso a la plataforma virtual y materiales se habilita en un plazo máximo de 24 horas hábiles. Los cupos son limitados y se asignan por orden de pago.',
+        title: '2. Contratación y acceso a servicios',
+        text: 'La contratación de servicios se confirma una vez realizado el pago acordado o la primera cuota. El acceso a la plataforma o inicio de desarrollo se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
     },
     {
         title: '3. Libros y materiales educativos',

@@ -98,7 +98,7 @@ const RecuperarContrasena = () => {
                                 </span>
                             </h2>
                             <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
-                                Crea una contraseña nueva y segura para volver a disfrutar de tus cursos, libros digitales y soluciones de software.
+                                Crea una contraseña nueva y segura para volver a disfrutar de tus servicios, libros digitales y soluciones de software.
                             </p>
 
                             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg">

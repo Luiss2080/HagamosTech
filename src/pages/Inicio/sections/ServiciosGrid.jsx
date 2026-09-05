@@ -1,33 +1,14 @@
 import React, { useState } from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
-import ServiciosAcademia from './ServiciosAcademia';
-import ServiciosDesarrollo from './ServiciosDesarrollo';
-import ServiciosMentorias from './ServiciosMentorias';
-import ServiciosEditorial from './ServiciosEditorial';
-
-const CATEGORIES = [
-    { id: 'academia', label: 'SOLUCIONES ACADÉMICAS' },
-    { id: 'desarrollo', label: 'DESARROLLO DE SOFTWARE' },
-    { id: 'mentorias', label: 'MENTORÍAS TECNOLÓGICAS' },
-    { id: 'editorial', label: 'EDITORIAL Y RECURSOS' }
-];
+import ServiciosCarousel from './components/ServiciosCarousel';
+import { CATEGORIES, SERVICIOS_DATA } from '../../../data/serviciosData';
 
 const ServiciosGrid = () => {
-    const [activeCategory, setActiveCategory] = useState('academia');
+    const [activeCategory, setActiveCategory] = useState('estudiantes');
 
     const renderActiveCarousel = () => {
-        switch (activeCategory) {
-            case 'academia':
-                return <ServiciosAcademia />;
-            case 'desarrollo':
-                return <ServiciosDesarrollo />;
-            case 'mentorias':
-                return <ServiciosMentorias />;
-            case 'editorial':
-                return <ServiciosEditorial />;
-            default:
-                return <ServiciosAcademia />;
-        }
+        const items = SERVICIOS_DATA[activeCategory] || [];
+        return <ServiciosCarousel items={items} key={activeCategory} />;
     };
 
     return (
@@ -55,7 +36,7 @@ const ServiciosGrid = () => {
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-                        Formamos líderes en tecnología mediante programas educativos de alto nivel y servicios profesionales de desarrollo de software para empresas y emprendedores.
+                        Ofrecemos soluciones digitales integrales, desarrollo de software a medida y soporte especializado 24/7 para empresas, emprendedores, estudiantes y profesionales.
                     </p>
                 </div>
 

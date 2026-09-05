@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CircleParticles from '../fondos/ParticulasCirculares';
 import ApiService from '../../servicios/servicioContacto';
 import ModalExito from './ModalExito';
@@ -137,7 +137,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
                                                 <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Cursos</p>
+                                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Servicios</p>
                                                     <p className="text-sm font-bold text-white">RobÃ³tica & LMS</p>
                                                 </div>
                                                 <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
@@ -202,7 +202,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                     <i className="fas fa-graduation-cap text-[11px]"></i>
                                                 </div>
                                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">LÃ­nea</p>
-                                                <p className="text-[13px] font-extrabold text-[#111827]">Cursos</p>
+                                                <p className="text-[13px] font-extrabold text-[#111827]">Servicios</p>
                                             </div>
                                             <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
                                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-red-50 border border-red-200 text-[#a41e22] flex items-center justify-center">
