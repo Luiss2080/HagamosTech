@@ -38,6 +38,7 @@ import EnvioKits from '../pages/Servicios/restaurante/EnvioKits';
 import PedidosInstitucionales from '../pages/Servicios/restaurante/PedidosInstitucionales';
 import TalleresCorporativos from '../pages/Servicios/restaurante/TalleresCorporativos';
 import DesarrolloEmpresarial from '../pages/Servicios/restaurante/DesarrolloEmpresarial';
+import PaginasWeb from '../pages/Servicios/DesarrolloWeb/PaginasWeb';
 import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
 import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
 import ContactoPagina from '../pages/Contacto/Contacto';
@@ -156,6 +157,7 @@ const App = () => {
               <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
               <Route path="/servicios/eventos" element={<TalleresCorporativos />} />
               <Route path="/servicios/corporativo" element={<DesarrolloEmpresarial />} />
+              <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
               <Route path="/servicios/congeladas" element={<KitsSuscripcion />} />
               <Route path="/condiciones" element={<Condiciones />} />
               <Route path="/privacidad" element={<PrivacidadPagina />} />
