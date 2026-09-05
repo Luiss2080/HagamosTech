@@ -157,7 +157,9 @@ const App = () => {
       <div className={`transition-opacity duration-700 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
           <AppLayout>
             <Routes>
-                <Route path="/" element={<Inicio />} />
+          {/* Rutas Principales */}
+          <Route path="/" element={<Inicio />} />
+          <Route path="/que-hacemos/tecnologia" element={<Tecnologia />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
                 <Route path="/servicios/delivery" element={<EnvioKits />} />
               <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
