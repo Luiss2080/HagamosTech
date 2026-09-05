@@ -68,7 +68,7 @@ const EventosCatering = () => {
                                         ))}
                                     </div>
 
-                                    {/* Itemás */}
+                                    {/* Items */}
                                     <div className="space-y-1.5 pt-3 border-t border-dashed" style={{ borderColor: isActive ? 'rgba(255,255,255,0.3)' : 'rgba(255,77,0,0.15)' }}>
                                         {p.items.map((item, j) => (
                                             <p key={j} className={`text-[11px] font-semibold flex items-center justify-center gap-1.5 ${isActive ? 'text-white/85' : 'text-slate-500'}`}>
