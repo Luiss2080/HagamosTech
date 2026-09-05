@@ -11,7 +11,7 @@ const NAV_ITEMS = [
         icon: 'fa-layer-group',
         type: 'dropdown',
         subItems: [
-            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/#tecnologia', icon: 'fa-microchip' },
+            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
             { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/#academia', icon: 'fa-graduation-cap' },
             { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/#negocios', icon: 'fa-store' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/#personalizado', icon: 'fa-lightbulb' },
