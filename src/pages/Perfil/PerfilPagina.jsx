@@ -630,7 +630,7 @@ const PerfilPagina = () => {
                                     <div>
                                         <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
                                             Colegio / Institución
-                                            <Tooltip text="Tu colegio, universidad o empresa. Nos ayuda a adaptar el nivel académico de tus cursos." />
+                                            <Tooltip text="Tu colegio, universidad o empresa. Nos ayuda a adaptar el nivel académico de tus servicios." />
                                         </label>
                                         <div className="relative">
                                             <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-school text-xs"></i></span>
