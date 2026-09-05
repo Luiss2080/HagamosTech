@@ -24,11 +24,11 @@ const NAV_ITEMS = [
         type: 'dropdown',
         subItems: [
             { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
-            { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/#tecnologia', icon: 'fa-mobile-screen-button' },
-            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/#tecnologia', icon: 'fa-gear' },
-            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/#tecnologia', icon: 'fa-robot' },
-            { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/#negocios', icon: 'fa-store' },
-            { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/#academia', icon: 'fa-graduation-cap' },
+            { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
+            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/servicios/automatizacion', icon: 'fa-gear' },
+            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/servicios/inteligencia-artificial', icon: 'fa-robot' },
+            { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
+            { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
         ]
     },
     {
