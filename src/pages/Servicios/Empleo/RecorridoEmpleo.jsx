@@ -1,3 +1,4 @@
+import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -20,9 +21,9 @@ const PROJECTS = [
   {
     num: '01',
     category: 'CV & ATS',
-    firstPart: 'CurrÌculum',
+    firstPart: 'CurrÔøΩculum',
     highlightPart: 'Optimizado ATS',
-    desc: 'EstructuraciÛn de perfiles tÈcnicos destacando certificaciones DevOps, Scrum o experiencia mÈdica/administrativa para superar filtros automatizados.',
+    desc: 'EstructuraciÔøΩn de perfiles tÔøΩcnicos destacando certificaciones DevOps, Scrum o experiencia mÔøΩdica/administrativa para superar filtros automatizados.',
     tags: ['CV', 'ATS', 'Reclutamiento'],
     icon: 'fa-file-lines',
     images: [
@@ -36,7 +37,7 @@ const PROJECTS = [
     category: 'LINKEDIN',
     firstPart: 'Perfil de',
     highlightPart: 'LinkedIn',
-    desc: 'ConfiguraciÛn de titulares, extractos con palabras clave y networking estratÈgico para atraer a reclutadores IT y corporativos.',
+    desc: 'ConfiguraciÔøΩn de titulares, extractos con palabras clave y networking estratÔøΩgico para atraer a reclutadores IT y corporativos.',
     tags: ['LinkedIn', 'Networking', 'Marca Personal'],
     icon: 'fa-brands fa-linkedin-in',
     images: [
@@ -47,11 +48,11 @@ const PROJECTS = [
   },
   {
     num: '03',
-    category: 'REDACCI”N',
+    category: 'REDACCIÔøΩN',
     firstPart: 'Cartas y',
-    highlightPart: 'TraducciÛn',
-    desc: 'RedacciÛn persuasiva de Cover Letters adaptadas a vacantes especÌficas y traducciÛn tÈcnica al inglÈs de todo tu perfil.',
-    tags: ['Cover Letter', 'TraducciÛn', 'InglÈs'],
+    highlightPart: 'TraducciÔøΩn',
+    desc: 'RedacciÔøΩn persuasiva de Cover Letters adaptadas a vacantes especÔøΩficas y traducciÔøΩn tÔøΩcnica al inglÔøΩs de todo tu perfil.',
+    tags: ['Cover Letter', 'TraducciÔøΩn', 'InglÔøΩs'],
     icon: 'fa-language',
     images: [
       'https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80',
@@ -64,7 +65,7 @@ const PROJECTS = [
     category: 'PORTAFOLIO',
     firstPart: 'Portafolios',
     highlightPart: 'Digitales',
-    desc: 'CompilaciÛn visual de proyectos de cÛdigo (GitHub), diseÒos (Figma) o investigaciones acadÈmicas en una p·gina web propia.',
+    desc: 'CompilaciÔøΩn visual de proyectos de cÔøΩdigo (GitHub), diseÔøΩos (Figma) o investigaciones acadÔøΩmicas en una pÔøΩgina web propia.',
     tags: ['Portafolio', 'GitHub', 'Proyectos'],
     icon: 'fa-laptop-code',
     images: [
@@ -77,8 +78,8 @@ const PROJECTS = [
     num: '05',
     category: 'ENTREVISTAS',
     firstPart: 'Simulaciones y',
-    highlightPart: 'AsesorÌa',
-    desc: 'PreparaciÛn y simulaciones de entrevistas con enfoque en recursos humanos, preguntas tÈcnicas, mÈtricas y seguridad personal.',
+    highlightPart: 'AsesorÔøΩa',
+    desc: 'PreparaciÔøΩn y simulaciones de entrevistas con enfoque en recursos humanos, preguntas tÔøΩcnicas, mÔøΩtricas y seguridad personal.',
     tags: ['Entrevistas', 'Soft Skills', 'RRHH'],
     icon: 'fa-user-tie',
     images: [
@@ -89,10 +90,10 @@ const PROJECTS = [
   },
   {
     num: '06',
-    category: 'VALIDACI”N',
+    category: 'VALIDACIÔøΩN',
     firstPart: 'Certificados',
     highlightPart: 'Digitales',
-    desc: 'DiseÒo y validaciÛn visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
+    desc: 'DiseÔøΩo y validaciÔøΩn visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
     tags: ['Certificados', 'Diplomas', 'Cursos'],
     icon: 'fa-certificate',
     images: [
@@ -181,96 +182,10 @@ const RecorridoEmpleo = () => {
           </p>
         </div>
 
-        {/* Vertical interleaved list */}
-        <div className="space-y-24 max-w-6xl mx-auto mt-16">
-          {PROJECTS.map((p, idx) => {
-            const isEven = idx % 2 === 0;
-            return (
-              <div
-                key={p.num}
-                className={`flex flex-col lg:flex-row items-center gap-10 lg:gap-16 ${
-                  isEven ? 'lg:flex-row' : 'lg:flex-row-reverse'
-                }`}
-              >
-                {/* Text column */}
-                <div className="w-full lg:w-1/2 text-center flex flex-col items-center justify-center gap-5">
-                  
-                  {/* Number, Icon, category tag, and Ver detalles row (Doble columna moderna) */}
-                  <div className="flex items-center justify-between gap-5 w-full pb-4.5 border-b border-slate-100 dark:border-neutral-800 text-left">
-                    {/* Columna Izquierda: N√∫mero & Icono */}
-                    <div className="flex items-center gap-3.5">
-                      <span className="text-3xl sm:text-4xl font-black text-[#A3E635] dark:text-[#A3E635] select-none leading-none">
-                        {p.num}
-                      </span>
-                      <div className="w-12 h-12 rounded-2xl bg-[#84CC16] border border-[#84CC16]/20 flex items-center justify-center text-lg text-white shadow-md shadow-[#84CC16]/10">
-                        <i className={`fa-solid ${p.icon}`}></i>
-                      </div>
-                    </div>
-
-                    {/* Columna Derecha: T√≠tulo, Datos y Bot√≥n Ver Detalles */}
-                    <div className="flex flex-col sm:flex-row sm:items-center justify-between flex-1 gap-3 sm:gap-6 pl-4 border-l border-slate-150 dark:border-neutral-800 text-left">
-                      <div className="flex flex-col">
-                        <span className="text-xs sm:text-sm font-black text-[#84CC16] uppercase tracking-widest leading-none">
-                          {p.category || (p.title ? p.title.split(":")[0] : "")}
-                        </span>
-                        <span className="text-[10px] font-bold text-slate-400 dark:text-slate-500 mt-1 uppercase tracking-wider">
-                          {p.tags.length} Tecnolog√≠as Implementadas
-                        </span>
-                      </div>
-                      
-                      <a
-                        href={`https://wa.me/59161320004?text=Hola,%20quisiera%20m√°s%20detalles%20sobre%20el%20desarrollo%20de%20un%20proyecto%20tipo%20${encodeURIComponent(p.category)}`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="px-5 py-2.5 rounded-xl bg-[#A3E635] text-white hover:bg-[#84CC16] border border-transparent text-[10px] font-black uppercase tracking-wider transition-all duration-300 flex items-center gap-2 group cursor-pointer shadow-md shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 active:scale-95"
-                      >
-                        <span>Ver detalles</span>
-                        <i className="fa-solid fa-arrow-up-right-from-square text-[9px] group-hover:translate-y-[-1px] group-hover:translate-x-[1px] transition-transform"></i>
-                      </a>
-                    </div>
-                  </div>
-
-                  {/* Split Title with signature combination: Dark, Red, and Gold underline */}
-                  <h3 className="text-2xl sm:text-3xl font-black text-white dark:text-white leading-tight uppercase tracking-tight text-center w-full">
-                    {p.firstPart || (p.title ? p.title.split(":")[0] + ":" : "")} <br />
-                    <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-                      {p.highlightPart || (p.title ? p.title.split(":")[1] : "")}
-                      <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
-                    </span>
-                  </h3>
-
-                  <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-bold leading-relaxed text-center max-w-md mx-auto">
-                    {p.desc}
-                  </p>
-
-                  {/* Tech tools grid */}
-                  <div className="flex flex-wrap justify-center gap-2 mt-2 w-full">
-                    {p.tags.map((tag) => {
-                      const t = TECH_DETAILS[tag] || { icon: 'fa-solid fa-code', color: 'text-[#A3E635]', bg: 'bg-[#A3E635]/10', border: 'border-[#A3E635]/20' };
-                      return (
-                        <span
-                          key={tag}
-                          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-[10px] font-black uppercase shadow-sm transition-all duration-300 hover:-translate-y-0.5 ${t.color} ${t.bg} ${t.border}`}
-                        >
-                          <i className={`${t.icon}`}></i>
-                          {tag}
-                        </span>
-                      );
-                    })}
-                  </div>
-                </div>
-
-                {/* Media/Carousel column */}
-                <div className="w-full lg:w-1/2">
-                  <ProjectCarousel images={p.images} />
-                </div>
-              </div>
-            );
-          })}
+        <div className="mt-16">
+          <ModernServiceGrid projects={PROJECTS} />
         </div>
-
-      </div>
-    </section>
+      </section>
   );
 };
 
