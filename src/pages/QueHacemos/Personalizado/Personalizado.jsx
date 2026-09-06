@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
@@ -122,84 +123,62 @@ const ProcessTimeline = () => {
   );
 };
 
-const BentoGrid = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 auto-rows-[300px]">
-      
-      {/* Bento Item 1: Large Span */}
-      <div className="md:col-span-2 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:border-[#A3E635]/40 transition-colors group overflow-hidden relative flex flex-col md:flex-row items-center">
-        <div className="p-8 relative z-10 flex flex-col justify-between h-full w-full md:w-1/2">
-          <div className="flex justify-between items-start mb-6">
-            <div className="w-14 h-14 rounded-2xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] shadow-lg group-hover:scale-110 transition-transform">
-              <Puzzle size={24} />
-            </div>
-            <span className="px-3 py-1 bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black uppercase tracking-wider rounded-lg border border-[#A3E635]/20">Modulares</span>
-          </div>
-          <div>
-            <h3 className="text-2xl font-black text-white mb-3">Proyectos Especiales</h3>
-            <p className="text-slate-400 font-medium leading-relaxed max-w-sm">Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, diseñamos y programamos exactamente lo que necesitas, conectándolo a la perfección.</p>
-          </div>
-        </div>
-        <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/40 via-transparent to-transparent z-10 hidden md:block"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent z-10 md:hidden"></div>
-          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80" alt="Proyectos Modulares" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" />
-        </div>
-      </div>
-
-      {/* Bento Item 2: Vertical Span */}
-      <div className="md:col-span-1 md:row-span-2 rounded-[2rem] bg-gradient-to-b from-[#A3E635] to-[#84CC16] text-black hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative flex flex-col shadow-[0_0_30px_rgba(163,230,53,0.15)] cursor-pointer">
-        <div className="h-2/5 w-full relative overflow-hidden">
-           <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Auditoría y Consultoría" className="w-full h-full object-cover mix-blend-multiply opacity-80" />
-           <div className="absolute inset-0 bg-gradient-to-t from-[#A3E635] via-transparent to-transparent"></div>
-        </div>
-        <div className="p-8 relative z-10 flex-grow flex flex-col justify-end">
-          <div className="w-14 h-14 rounded-2xl bg-black/10 backdrop-blur-md flex items-center justify-center text-black mb-4 border border-black/10">
-            <Lightbulb size={24} />
-          </div>
-          <h3 className="text-3xl font-black mb-3 uppercase tracking-tight">Auditoría & Mentoría</h3>
-          <p className="font-bold opacity-80 leading-relaxed text-sm mb-6">Ofrecemos mentorías 1 a 1, asesoría técnica personalizada y auditorías completas para modernizar y optimizar la tecnología de tu empresa.</p>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Consultoría Tecnológica</div>
-            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Asesoría Personalizada</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bento Item 3 */}
-      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
-        <div className="h-1/2 w-full overflow-hidden relative">
-           <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="Headhunting Tech" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
-        </div>
-        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform shadow-lg relative z-20">
-            <Wrench size={20} />
-          </div>
-          <h3 className="text-xl font-black text-white mb-2">Talento Tech</h3>
-          <p className="text-slate-400 text-sm font-medium">Headhunting especializado para encontrar a los mejores programadores e ingenieros para tu equipo.</p>
-        </div>
-      </div>
-
-      {/* Bento Item 4 */}
-      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
-        <div className="h-1/2 w-full overflow-hidden relative">
-           <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Mantenimiento" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
-        </div>
-        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:rotate-12 transition-transform shadow-lg relative z-20">
-            <Server size={20} />
-          </div>
-          <h3 className="text-xl font-black text-white mb-2">Mantenimiento</h3>
-          <p className="text-slate-400 text-sm font-medium">Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas nunca fallen.</p>
-        </div>
-      </div>
-
-    </div>
-  );
-};
-
+const PROJECTS = [
+  {
+    num: '01',
+    category: 'MODULARES',
+    firstPart: 'Proyectos',
+    highlightPart: 'Especiales',
+    desc: 'Si tienes una idea at�pica o un m�dulo espec�fico que agregar a tu sistema actual, dise�amos exactamente lo que necesitas.',
+    icon: 'fa-puzzle-piece',
+    images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80']
+  },
+  {
+    num: '02',
+    category: 'MENTOR�A',
+    firstPart: 'Auditor�a &',
+    highlightPart: 'Mentor�a',
+    desc: 'Mentor�as 1 a 1 y auditor�as completas para modernizar tu tecnolog�a y guiar a tu equipo in-house.',
+    icon: 'fa-lightbulb',
+    images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
+  },
+  {
+    num: '03',
+    category: 'TALENTO',
+    firstPart: 'Talento',
+    highlightPart: 'Tech',
+    desc: 'Headhunting especializado para encontrar a los mejores programadores e ingenieros para que formen parte de tu empresa.',
+    icon: 'fa-users-gear',
+    images: ['https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80']
+  },
+  {
+    num: '04',
+    category: 'SOPORTE',
+    firstPart: 'Mantenimiento',
+    highlightPart: 'Continuo',
+    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y est�n actualizados.',
+    icon: 'fa-server',
+    images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
+  },
+  {
+    num: '05',
+    category: 'INFRAESTRUCTURA',
+    firstPart: 'Migraci�n',
+    highlightPart: 'Cloud',
+    desc: 'Llevamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar m�xima disponibilidad y escalabilidad infinita.',
+    icon: 'fa-cloud',
+    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
+  },
+  {
+    num: '06',
+    category: 'RESCATE',
+    firstPart: 'Rescate de',
+    highlightPart: 'Proyectos',
+    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el c�digo y llevarlos a producci�n con �xito.',
+    icon: 'fa-life-ring',
+    images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
+  }
+];
 const Personalizado = () => {
   return (
     <div className="dark relative overflow-hidden min-h-screen bg-[#050505] font-montserrat">
@@ -263,7 +242,7 @@ const Personalizado = () => {
             </p>
           </div>
 
-          <BentoGrid />
+          <ModernServiceGrid projects={PROJECTS} />
         </div>
       </section>
       
