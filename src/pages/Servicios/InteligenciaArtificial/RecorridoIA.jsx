@@ -17,11 +17,76 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Paso 1: Contanos tu visión', desc: 'Descubrimos juntos las oportunidades de aplicar Inteligencia Artificial en tu negocio, evaluando qué datos útiles tienes disponibles.', tags: ['Visión', 'Datos', 'Oportunidades'], icon: 'fa-eye', images: ['https://images.unsplash.com/photo-1515503240222-14c115c56f54?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'] },
-  { num: '02', title: 'Paso 2: Analizamos la Viabilidad', desc: 'Estudiamos qué tecnologías de Machine Learning o Modelos de Lenguaje (LLMs) se adaptan mejor a tu necesidad específica.', tags: ['Machine Learning', 'LLMs', 'Viabilidad'], icon: 'fa-brain', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
-  { num: '03', title: 'Paso 3: Proponemos Modelos', desc: 'Te presentamos una estrategia de IA: desde repositorios de prompts corporativos hasta la creación de asistentes virtuales entrenados con tus datos.', tags: ['Estrategia', 'Prompts', 'Asistentes'], icon: 'fa-lightbulb', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
-  { num: '04', title: 'Paso 4: Hacemos el Desarrollo', desc: 'Integramos APIs de IA avanzadas, entrenamos modelos predictivos y conectamos las inteligencias a tus sistemas actuales.', tags: ['Integración IA', 'Modelos Predictivos', 'APIs'], icon: 'fa-microchip', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
-  { num: '05', title: 'Paso 5: Entregamos Resultados', desc: 'Desplegamos la solución inteligente, midiendo métricas de mejora reales y asegurando la escalabilidad del modelo en el tiempo.', tags: ['Despliegue', 'Métricas', 'Escalabilidad'], icon: 'fa-chart-pie', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] }
+  {
+    num: '01',
+    category: 'BOTS',
+    firstPart: 'Bots para',
+    highlightPart: 'Redes Sociales',
+    desc: 'Atención al cliente 24/7 en Facebook, Instagram y WhatsApp con respuestas automáticas y flujos de ventas pre-programados.',
+    tags: ['WhatsApp', 'Instagram', 'Facebook'],
+    icon: 'fa-robot',
+    images: [
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1593642532744-d377ab507dc8?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '02',
+    category: 'FLUJOS',
+    firstPart: 'Automatización de',
+    highlightPart: 'Tareas',
+    desc: 'Uso de Zapier, Make o n8n para conectar tus aplicaciones y eliminar el trabajo manual repetitivo en tu empresa.',
+    tags: ['Zapier', 'Make', 'n8n'],
+    icon: 'fa-gears',
+    images: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '03',
+    category: 'CONEXIÓN',
+    firstPart: 'Integración',
+    highlightPart: 'de APIs',
+    desc: 'Conectamos diferentes plataformas de software para que compartan datos en tiempo real de forma segura y eficiente.',
+    tags: ['APIs', 'Webhooks', 'Node.js'],
+    icon: 'fa-network-wired',
+    images: [
+      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '04',
+    category: 'CHATBOTS IA',
+    firstPart: 'Asistentes',
+    highlightPart: 'Virtuales IA',
+    desc: 'Chatbots impulsados por inteligencia artificial (ChatGPT) capaces de mantener conversaciones naturales y resolver dudas complejas.',
+    tags: ['ChatGPT', 'OpenAI', 'IA'],
+    icon: 'fa-brain',
+    images: [
+      'https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1682687220199-d0124f48f95b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1676299081847-824916de030a?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '05',
+    category: 'CONTENIDO',
+    firstPart: 'Generación',
+    highlightPart: 'con IA',
+    desc: 'Automatización en la creación de textos, imágenes, videos y reportes analíticos utilizando herramientas de inteligencia artificial generativa.',
+    tags: ['Midjourney', 'DALL-E', 'Reportes'],
+    icon: 'fa-wand-magic-sparkles',
+    images: [
+      'https://images.unsplash.com/photo-1682687982501-1e58b8147144?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1683009427666-340595e57e43?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1682687982185-531d09ec56fc?auto=format&fit=crop&w=800&q=80'
+    ]
+  }
 ];
 
 const ProjectCarousel = ({ images }) => {
