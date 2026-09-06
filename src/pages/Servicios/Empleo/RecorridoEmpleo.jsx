@@ -17,12 +17,90 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Servicio: Presentaciones Interactivas', desc: 'Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología. Diseños en PowerPoint e interactivos con alto impacto.', tags: ['PowerPoint', 'Interactivo', 'Defensas'], icon: 'fa-person-chalkboard', images: ['https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80'] },
-  { num: '02', title: 'Servicio: Formato APA 7', desc: 'Estructuración de monografías, documentación técnica, corrección de estilo y referencias bibliográficas exactas bajo normas APA.', tags: ['APA 7', 'Redacción', 'Metodología'], icon: 'fa-book', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
-  { num: '03', title: 'Servicio: Infografías y Diagramas', desc: 'Esquemas anatómicos, flujos de bases de datos, diagramas de procesos y líneas de tiempo visualmente estructuradas.', tags: ['Infografías', 'Diagramas', 'Procesos'], icon: 'fa-chart-pie', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
-  { num: '04', title: 'Servicio: Mapas Conceptuales', desc: 'Síntesis de marcos teóricos complejos y diseño formal de portadas académicas (carátulas) para la entrega impecable de proyectos.', tags: ['Mapas Conceptuales', 'Portadas', 'Síntesis'], icon: 'fa-sitemap', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
-  { num: '05', title: 'Servicio: Simuladores Educativos', desc: 'Entornos virtuales y simuladores para pruebas de redes, robótica educativa o simulación de sistemas informáticos.', tags: ['Simuladores', 'Redes', 'Robótica'], icon: 'fa-network-wired', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] },
-  { num: '06', title: 'Servicio: Apoyo en Programación', desc: 'Asesoría en desarrollo de proyectos de código estructurado, diseño de algoritmos y fortalecimiento de lógica computacional.', tags: ['Código', 'Algoritmos', 'Lógica'], icon: 'fa-code', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] }
+  {
+    num: '01',
+    category: 'CV & ATS',
+    firstPart: 'Curr�culum',
+    highlightPart: 'Optimizado ATS',
+    desc: 'Estructuraci�n de perfiles t�cnicos destacando certificaciones DevOps, Scrum o experiencia m�dica/administrativa para superar filtros automatizados.',
+    tags: ['CV', 'ATS', 'Reclutamiento'],
+    icon: 'fa-file-lines',
+    images: [
+      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '02',
+    category: 'LINKEDIN',
+    firstPart: 'Perfil de',
+    highlightPart: 'LinkedIn',
+    desc: 'Configuraci�n de titulares, extractos con palabras clave y networking estrat�gico para atraer a reclutadores IT y corporativos.',
+    tags: ['LinkedIn', 'Networking', 'Marca Personal'],
+    icon: 'fa-brands fa-linkedin-in',
+    images: [
+      'https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '03',
+    category: 'REDACCI�N',
+    firstPart: 'Cartas y',
+    highlightPart: 'Traducci�n',
+    desc: 'Redacci�n persuasiva de Cover Letters adaptadas a vacantes espec�ficas y traducci�n t�cnica al ingl�s de todo tu perfil.',
+    tags: ['Cover Letter', 'Traducci�n', 'Ingl�s'],
+    icon: 'fa-language',
+    images: [
+      'https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '04',
+    category: 'PORTAFOLIO',
+    firstPart: 'Portafolios',
+    highlightPart: 'Digitales',
+    desc: 'Compilaci�n visual de proyectos de c�digo (GitHub), dise�os (Figma) o investigaciones acad�micas en una p�gina web propia.',
+    tags: ['Portafolio', 'GitHub', 'Proyectos'],
+    icon: 'fa-laptop-code',
+    images: [
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '05',
+    category: 'ENTREVISTAS',
+    firstPart: 'Simulaciones y',
+    highlightPart: 'Asesor�a',
+    desc: 'Preparaci�n y simulaciones de entrevistas con enfoque en recursos humanos, preguntas t�cnicas, m�tricas y seguridad personal.',
+    tags: ['Entrevistas', 'Soft Skills', 'RRHH'],
+    icon: 'fa-user-tie',
+    images: [
+      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '06',
+    category: 'VALIDACI�N',
+    firstPart: 'Certificados',
+    highlightPart: 'Digitales',
+    desc: 'Dise�o y validaci�n visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
+    tags: ['Certificados', 'Diplomas', 'Cursos'],
+    icon: 'fa-certificate',
+    images: [
+      'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80'
+    ]
+  }
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -84,7 +162,7 @@ const ProjectCarousel = ({ images }) => {
   );
 };
 
-const RecorridoAcademico = () => {
+const RecorridoEmpleo = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent reveal">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -196,4 +274,4 @@ const RecorridoAcademico = () => {
   );
 };
 
-export default RecorridoAcademico;
+export default RecorridoEmpleo;
