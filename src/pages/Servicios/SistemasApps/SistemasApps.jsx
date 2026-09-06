@@ -20,10 +20,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
-  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
-  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
-  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
+  { title: 'Relevamiento', desc: 'Entendemos tu proceso de negocio y definimos la arquitectura del sistema.' },
+  { title: 'Diseño e Interfaces', desc: 'Creamos prototipos interactivos y diseñamos la base de datos de manera óptima.' },
+  { title: 'Desarrollo Core', desc: 'Programamos la lógica del negocio y la interfaz de usuario con código limpio y seguro.' },
+  { title: 'Testing y Despliegue', desc: 'Realizamos pruebas exhaustivas antes de poner el sistema en producción.' }
 ];
 
 const TESTIMONIOS = [
@@ -152,7 +152,7 @@ const SistemasApps = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20sistema%20o%20aplicación"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const SistemasApps = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20sistemas%20o%20hardware"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"

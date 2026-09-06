@@ -20,10 +20,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
-  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
-  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
-  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
+  { title: 'Análisis de Requisitos', desc: 'Estudiamos a fondo la rúbrica, formato y exigencias académicas de tu proyecto o investigación.' },
+  { title: 'Estructuración', desc: 'Diseñamos la base del proyecto (simulaciones, prototipos o marcos teóricos) garantizando el rigor académico.' },
+  { title: 'Desarrollo y Pruebas', desc: 'Implementamos las soluciones (software, hardware o maquetas) y probamos exhaustivamente su funcionamiento.' },
+  { title: 'Entrega y Defensa', desc: 'Te preparamos con presentaciones interactivas y documentación (APA, IEEE) para tu defensa.' }
 ];
 
 const TESTIMONIOS = [
@@ -152,7 +152,7 @@ const Academico = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20académico"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const Academico = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20un%20proyecto%20académico"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -318,16 +318,16 @@ const Academico = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿A QUIÉN ESTÁ DIRIGIDO Y QUÉ INCLUYE?
+                ¿QUÉ SON LAS SOLUCIONES ACADÉMICAS Y CÓMO POTENCIAN TUS PROYECTOS?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Soluciones orientadas a estudiantes, docentes e instituciones que requieren estructurar, simular y presentar proyectos académicos rigurosos (medicina, sistemas, RRHH).
+                  Te ayudamos a estructurar, desarrollar y presentar proyectos con el más alto rigor académico. Desde tesis y monografías hasta simulaciones y prototipos complejos de ingeniería.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-                  Presentaciones Interactivas, Formato APA 7, Infografías y Diagramas, Mapas Conceptuales, Simuladores Educativos y Apoyo en Programación.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
+                  Presentaciones Interactivas, Formato APA/IEEE, Simulación Computacional, Desarrollo de Software Académico y Soporte para Defensa de Proyectos.
                 </p>
               </div>
             </div>

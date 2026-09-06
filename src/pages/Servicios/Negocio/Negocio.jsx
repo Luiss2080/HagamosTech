@@ -20,10 +20,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
-  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
-  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
-  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
+  { title: 'Descubrimiento', desc: 'Analizamos tu modelo de negocio, público objetivo y las necesidades tecnológicas para tu emprendimiento.' },
+  { title: 'Estrategia Digital', desc: 'Definimos la presencia online (branding, MVP) y las herramientas necesarias para lanzar.' },
+  { title: 'Desarrollo MVP', desc: 'Construimos el Producto Mínimo Viable (web, app o sistema) de manera ágil y funcional.' },
+  { title: 'Escalamiento', desc: 'Desplegamos tu solución y te acompañamos con métricas para escalar tu negocio de forma segura.' }
 ];
 
 const TESTIMONIOS = [
@@ -152,7 +152,7 @@ const Negocio = () => {
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20servicio%20para%20mi%20negocio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const Negocio = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20tecnología%20para%20mi%20negocio"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -318,16 +318,16 @@ const Negocio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ OFRECEMOS PARA NUEVOS NEGOCIOS?
+                ¿CÓMO IMPULSAMOS TU EMPRENDIMIENTO DESDE CERO?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Herramientas para quienes inician proyectos comerciales, dándoles estructura, identidad y herramientas de venta inmediata, desde mercados locales hasta modelos de economía circular.
+                  Te brindamos el ecosistema tecnológico completo para transformar tu idea en un negocio rentable, escalable y competitivo en el mercado digital.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-                  Creación de Marca (Branding), Manual de Identidad Visual, Menús QR y Catálogos de Productos, Publicidad para Promociones, Publicidad Temática y Gestión de Clientes (WhatsApp Business).
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
+                  Consultoría Tecnológica, Desarrollo de MVP (Producto Mínimo Viable), Sistemas de Gestión (ERPs/CRMs), Branding e Identidad Visual, y Automatización de Procesos Comerciales.
                 </p>
               </div>
             </div>
