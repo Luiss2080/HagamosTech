@@ -141,12 +141,12 @@ const PaginasWeb = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Páginas Web</span>
-                <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Desarrollo Web</span>
+                <span className="block whitespace-nowrap">y E-commerce <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Diseño y desarrollo profesional de sitios web para cualquier tipo de cliente y necesidad. Landing pages, tiendas virtuales, catálogos, blogs y mucho más, listos para posicionar tu marca.
+                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
               </p>
 
               {/* Action Buttons */}
@@ -318,16 +318,16 @@ const PaginasWeb = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿Qué es este <span className="text-[#A3E635] relative inline-block px-1">Servicio Premium<svg className="absolute w-full h-2.5 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 100 9" fill="none"><path d="M2 6.5C15 4.5 45 2 98 4" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/></svg></span> y cómo ayuda a tu empresa?
+                ¿QUÉ ES DESARROLLO WEB Y CÓMO AYUDA A TU EMPRESA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Diseñamos y desarrollamos sitios web profesionales que actúan como la carta de presentación digital de tu negocio: modernos, rápidos y fáciles de navegar, para dar a conocer tu marca ante todos.
+                  Digitalizamos tu presencia comercial creando sitios rápidos, atractivos y diseñados para generar conversiones, garantizando una excelente experiencia de usuario (UX/UI) y compatibilidad total con dispositivos móviles.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Landing Pages, Sitios Corporativos, Tiendas Online, Catálogos, Blogs, Portafolios, Reservas, Restaurantes, Plataformas Educativas, Portales, Cursos, Directorios, Aplicaciones Web y Soluciones Personalizadas.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Páginas Web Empresariales, Landing Pages y Portafolios, Tiendas Online y Sistemas de Pedidos, Catálogos Digitales y Blogs, y Diseño UI/UX con Web Responsive.
                 </p>
               </div>
             </div>

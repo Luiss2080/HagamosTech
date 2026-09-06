@@ -141,12 +141,12 @@ const Negocio = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Para tu Negocio</span>
-                <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Nuevos Negocios</span>
+                <span className="block whitespace-nowrap">y Emprendedores <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Digitalización completa, e-commerce, y presencia online integral para multiplicar tus ventas y alcance.
+                Herramientas para quienes inician proyectos comerciales, dándoles estructura, identidad y herramientas de venta inmediata.
               </p>
 
               {/* Action Buttons */}
@@ -318,16 +318,16 @@ const Negocio = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES PARA TU NEGOCIO Y CÓMO AYUDA A TU EMPRESA?
+                ¿QUÉ OFRECEMOS PARA NUEVOS NEGOCIOS?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Construimos la identidad visual de tu marca y te brindamos herramientas digitales para destacar en el mercado local y potenciar tus ventas.
+                  Herramientas para quienes inician proyectos comerciales, dándoles estructura, identidad y herramientas de venta inmediata, desde mercados locales hasta modelos de economía circular.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Creación de Marca (Branding), Manual de Identidad Visual, Menús QR, Catálogos Digitales, Flyers Publicitarios, Configuración de WhatsApp Business y Estrategias Comerciales.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Creación de Marca (Branding), Manual de Identidad Visual, Menús QR y Catálogos de Productos, Publicidad para Promociones, Publicidad Temática y Gestión de Clientes (WhatsApp Business).
                 </p>
               </div>
             </div>
