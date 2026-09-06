@@ -7,6 +7,7 @@ import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
 import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
 import Academia from '../pages/QueHacemos/Academia/Academia';
+import NegociosQueHacemos from '../pages/QueHacemos/Negocios/Negocios';
 import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
@@ -162,6 +163,7 @@ const App = () => {
           <Route path="/" element={<Inicio />} />
           <Route path="/que-hacemos/tecnologia" element={<Tecnologia />} />
           <Route path="/que-hacemos/academia" element={<Academia />} />
+          <Route path="/que-hacemos/negocios" element={<NegociosQueHacemos />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
                 <Route path="/servicios/delivery" element={<EnvioKits />} />
               <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
