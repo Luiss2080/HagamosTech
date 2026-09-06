@@ -14,7 +14,7 @@ const NAV_ITEMS = [
             { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
             { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
             { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-store' },
-            { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/#personalizado', icon: 'fa-lightbulb' },
+            { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
     },
     {
@@ -41,7 +41,7 @@ const NAV_ITEMS = [
             { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
             { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
             { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
-            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/#personalizado', icon: 'fa-user' },
+            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'route', target: '/como-trabajamos' },
