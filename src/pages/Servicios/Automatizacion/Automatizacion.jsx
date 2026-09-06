@@ -20,16 +20,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Diagnóstico', desc: 'Evaluamos tus tareas manuales y detectamos cuellos de botella para automatizar.' },
-  { title: 'Diseño de Flujos', desc: 'Mapeamos la lógica de automatización y las integraciones necesarias.' },
-  { title: 'Desarrollo y Conexión', desc: 'Construimos los bots y conectamos las APIs asegurando que todo fluya.' },
-  { title: 'Pruebas y Lanzamiento', desc: 'Monitoreamos los flujos en tiempo real para asegurar cero errores.' }
+  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
+  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
+  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
+  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
 ];
 
 const TESTIMONIOS = [
-  { name: 'Sofía Valdés', role: 'Directora de Ventas, InmoTech', text: 'Automatizamos la gestión de leads y correos. Lo que antes nos tomaba 10 horas semanales, ahora se hace solo en segundos. Increíble.' },
-  { name: 'Martín Vargas', role: 'Propietario, Tienda Market', text: 'La conexión de nuestro CRM con el sistema de facturación nos salvó de innumerables errores humanos. Una inversión que se pagó sola.' },
-  { name: 'Lucía Fernández', role: 'Coordinadora de RRHH', text: 'Los flujos de trabajo automatizados para la incorporación de personal nos han quitado un peso enorme de encima. Todo es mucho más ordenado.' }
+  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
+  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
+  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -141,18 +141,18 @@ const Automatizacion = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Automatización</span>
-                <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Desarrollo Web</span>
+                <span className="block whitespace-nowrap">y E-commerce <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Optimizamos procesos empresariales y tareas repetitivas mediante automatización de flujos de trabajo.
+                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20servicios%20de%20automatización"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const Automatizacion = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20automatización"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -211,8 +211,8 @@ const Automatizacion = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/automatizacion.jpg"
-                    alt="Automatización"
+                    src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
+                    alt="Web Corporativa"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -318,16 +318,16 @@ const Automatizacion = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES AUTOMATIZACIÓN DE PROCESOS Y CÓMO AYUDA A TU EMPRESA?
+                ¿QUÉ ES DESARROLLO WEB Y CÓMO AYUDA A TU EMPRESA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Conectamos tus herramientas y automatizamos flujos de trabajo repetitivos para reducir errores humanos, ahorrar tiempo y escalar tu negocio sin esfuerzo.
+                  Digitalizamos tu presencia comercial creando sitios rápidos, atractivos y diseñados para generar conversiones, garantizando una excelente experiencia de usuario (UX/UI) y compatibilidad total con dispositivos móviles.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Integraciones API, CRMs, Automatización de Correos, Sistemas de Facturación, Webhooks, Optimización de Tareas Repetitivas y Bots de Respuesta.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Automatización Empresariales, Landing Pages y Portafolios, Tiendas Online y Sistemas de Pedidos, Catálogos Digitales y Blogs, y Diseño UI/UX con Web Responsive.
                 </p>
               </div>
             </div>

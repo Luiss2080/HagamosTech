@@ -19,72 +19,82 @@ const TECH_DETAILS = {
 const PROJECTS = [
   {
     num: '01',
-    category: 'SOFTWARE',
-    firstPart: 'Desarrollo',
-    highlightPart: 'a Medida',
-    desc: 'Aplicaciones web, móviles y sistemas de escritorio personalizados para automatizar procesos complejos, inventarios y ventas.',
-    tags: ['React', 'Node.js', 'MySQL', 'AWS', 'Docker'],
-    icon: 'fa-laptop-code',
+    category: 'EMPRESARIALES',
+    firstPart: 'Sistemas y Apps',
+    highlightPart: 'Empresariales',
+    desc: 'Sitios corporativos completos para clínicas, empresas de tecnología o cualquier rubro, transmitiendo confianza y autoridad.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'AWS', 'Git'],
+    icon: 'fa-building',
     images: [
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1523314591509-14a04d3e582d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
     num: '02',
-    category: 'EQUIPOS',
-    firstPart: 'Venta de',
-    highlightPart: 'Computadoras',
-    desc: 'Equipos de oficina, laptops para estudiantes y workstations pre-ensambladas con garantía y soporte técnico local.',
-    tags: ['Laptops', 'Oficina', 'Hardware'],
-    icon: 'fa-desktop',
+    category: 'LANDING PAGE',
+    firstPart: 'Landing Pages',
+    highlightPart: 'y Portafolios',
+    desc: 'Páginas de aterrizaje de alta conversión para captar leads o mostrar trabajos freelance con diseños de alto impacto visual.',
+    tags: ['React', 'Tailwind CSS', 'Figma', 'Docker', 'AWS', 'Git'],
+    icon: 'fa-rocket',
     images: [
       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
     num: '03',
-    category: 'GAMING/PRO',
-    firstPart: 'Ensamblaje',
-    highlightPart: 'Gamer/Pro',
-    desc: 'Armado a medida de PCs de alto rendimiento para gaming, renderizado 3D y edición de video con componentes premium.',
-    tags: ['Gaming', 'Render 3D', 'Alto Rendimiento'],
-    icon: 'fa-gamepad',
+    category: 'E-COMMERCE',
+    firstPart: 'Tiendas Online',
+    highlightPart: 'y Pedidos',
+    desc: 'E-commerce autogestionables con carritos de compra e integración de pagos locales y sistemas de pedidos directos.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe', 'MySQL', 'Git'],
+    icon: 'fa-cart-shopping',
     images: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
     num: '04',
-    category: 'SOPORTE',
-    firstPart: 'Mantenimiento',
-    highlightPart: 'Técnico',
-    desc: 'Mantenimiento preventivo, corrección de fallas térmicas, formateo seguro y optimización de sistemas operativos.',
-    tags: ['Mantenimiento', 'Soporte', 'Optimización'],
-    icon: 'fa-screwdriver-wrench',
+    category: 'CONTENIDO',
+    firstPart: 'Catálogos Digitales',
+    highlightPart: 'y Blogs',
+    desc: 'Muestrarios de productos dinámicos y blogs optimizados para posicionamiento orgánico (SEO) y retención de usuarios.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'AWS', 'Git'],
+    icon: 'fa-book-open',
     images: [
       'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80'
     ]
   },
   {
     num: '05',
-    category: 'PARTES',
-    firstPart: 'Repuestos',
-    highlightPart: 'y Accesorios',
-    desc: 'Tarjetas gráficas, memoria RAM, SSDs ultrarrápidos y periféricos para potenciar tu configuración actual.',
-    tags: ['Componentes', 'Hardware', 'Periféricos'],
-    icon: 'fa-microchip',
+    category: 'UI/UX DESIGN',
+    firstPart: 'Diseño UI/UX',
+    highlightPart: 'y Responsive',
+    desc: 'Prototipado interactivo, encuestas digitales complejas y adaptación perfecta a todas las pantallas móviles (Web Responsive).',
+    tags: ['Figma', 'React', 'Tailwind CSS', 'Mobile First'],
+    icon: 'fa-mobile-screen-button',
     images: [
       'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'
+      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
     ]
   }
 ];

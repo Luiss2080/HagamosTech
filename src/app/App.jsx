@@ -46,6 +46,11 @@ import PaginasWeb from '../pages/Servicios/DesarrolloWeb/PaginasWeb';
 import SistemasApps from '../pages/Servicios/SistemasApps/SistemasApps';
 import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
 import InteligenciaArtificial from '../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial';
+import Negocio from '../pages/Servicios/Negocio/Negocio';
+import Academico from '../pages/Servicios/Academico/Academico';
+import SistemasApps from '../pages/Servicios/SistemasApps/SistemasApps';
+import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
+import InteligenciaArtificial from '../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial';
 import Empleo from '../pages/Servicios/Empleo/Empleo';
 import DisenoGrafico from '../pages/Servicios/DisenoGrafico/DisenoGrafico';
 import Negocio from '../pages/Servicios/Negocio/Negocio';
@@ -174,6 +179,11 @@ const App = () => {
               <Route path="/servicios/eventos" element={<TalleresCorporativos />} />
               <Route path="/servicios/corporativo" element={<DesarrolloEmpresarial />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
+              <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
+              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
+              <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
+              <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
+              <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
               <Route path="/servicios/automatizacion" element={<Automatizacion />} />
               <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />

@@ -20,16 +20,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Análisis de Requisitos', desc: 'Estudiamos a fondo la rúbrica, formato y exigencias académicas de tu proyecto o investigación.' },
-  { title: 'Estructuración', desc: 'Diseñamos la base del proyecto (simulaciones, prototipos o marcos teóricos) garantizando el rigor académico.' },
-  { title: 'Desarrollo y Pruebas', desc: 'Implementamos las soluciones (software, hardware o maquetas) y probamos exhaustivamente su funcionamiento.' },
-  { title: 'Entrega y Defensa', desc: 'Te preparamos con presentaciones interactivas y documentación (APA, IEEE) para tu defensa.' }
+  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
+  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
+  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
+  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
 ];
 
 const TESTIMONIOS = [
-  { name: 'Esteban Ramírez', role: 'Estudiante de Medicina', text: 'La presentación interactiva y los esquemas anatómicos que me diseñaron fueron la clave para sacar la máxima nota en mi defensa de tesis.' },
-  { name: 'Prof. Ana Torres', role: 'Docente Universitaria', text: 'Los simuladores educativos y entornos virtuales han mejorado muchísimo la comprensión de mis alumnos en sistemas informáticos.' },
-  { name: 'Felipe Guzmán', role: 'Tesista de Ingeniería', text: 'Su asesoría en formato APA 7 y lógica de programación estructurada me salvó el proyecto de grado. Muy rigurosos y profesionales.' }
+  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
+  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
+  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -141,18 +141,18 @@ const Academico = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Sector Académico</span>
-                <span className="block whitespace-nowrap">de alto rigor <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Desarrollo Web</span>
+                <span className="block whitespace-nowrap">y E-commerce <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Orientado a estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y presentar proyectos con alto rigor académico en áreas complejas.
+                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const Academico = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -211,8 +211,8 @@ const Academico = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/academico.jpg"
-                    alt="EdTech y Académico"
+                    src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
+                    alt="Web Corporativa"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -318,16 +318,16 @@ const Academico = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ SON LAS SOLUCIONES ACADÉMICAS Y CÓMO POTENCIAN TUS PROYECTOS?
+                ¿QUÉ ES DESARROLLO WEB Y CÓMO AYUDA A TU EMPRESA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Te ayudamos a estructurar, desarrollar y presentar proyectos con el más alto rigor académico. Desde tesis y monografías hasta simulaciones y prototipos complejos de ingeniería.
+                  Digitalizamos tu presencia comercial creando sitios rápidos, atractivos y diseñados para generar conversiones, garantizando una excelente experiencia de usuario (UX/UI) y compatibilidad total con dispositivos móviles.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Presentaciones Interactivas, Formato APA/IEEE, Simulación Computacional, Desarrollo de Software Académico y Soporte para Defensa de Proyectos.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Apoyo Académico Empresariales, Landing Pages y Portafolios, Tiendas Online y Sistemas de Pedidos, Catálogos Digitales y Blogs, y Diseño UI/UX con Web Responsive.
                 </p>
               </div>
             </div>
