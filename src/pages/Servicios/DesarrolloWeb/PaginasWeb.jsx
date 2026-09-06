@@ -131,7 +131,7 @@ const PaginasWeb = () => {
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Páginas Web Profesionales — TECH HOME
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Páginas Web Profesionales — HagamosTech
               </span>
           </div>
 
@@ -182,7 +182,7 @@ const PaginasWeb = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en Tech Home</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#7f1d1d] text-white border border-[#84CC16]/40 shadow-md">
@@ -352,7 +352,7 @@ const PaginasWeb = () => {
                   <div className="mt-2">export const PaginasWeb = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
-                  <div className="pl-12">&lt;MetaTags title="TECH HOME — Páginas Web" /&gt;</div>
+                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Páginas Web" /&gt;</div>
                   <div className="pl-12">&lt;HeroSection theme="premium" /&gt;</div>
                   <div className="pl-12">&lt;ServicesGrid items=&#123;10&#125; /&gt;</div>
                   <div className="pl-8">&lt;/div&gt;</div>

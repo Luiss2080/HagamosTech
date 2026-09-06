@@ -14,7 +14,7 @@ const Inicio = () => {
 
             <ServiciosGrid />
 
-            {/* --- VENTAJAS DE TRABAJAR CON TECH HOME --- */}
+            {/* --- VENTAJAS DE TRABAJAR CON HagamosTech --- */}
             <VentajasCarrusel />
 
             {/* --- NOTICIAS Y NOVEDADES --- */}
