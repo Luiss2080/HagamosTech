@@ -5,10 +5,10 @@ import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
-import Tecnologia from '../pages/Â¿QuÃ©eHacemos/Tecnologia/Tecnologia';
-import Academia from '../pages/Â¿QuÃ©eHacemos/Academia/Academia';
-import NegociosÂ¿QuÃ©eHacemos from '../pages/Â¿QuÃ©eHacemos/Negocios/Negocios';
-import Personalizado from '../pages/Â¿QuÃ©eHacemos/Personalizado/Personalizado';
+import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
+import Academia from '../pages/QueHacemos/Academia/Academia';
+import NegociosQueHacemos/Negocios/Negocios';
+import Personalizado from '../pages/QueHacemos/Personalizado/Personalizado';
 import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
@@ -166,7 +166,7 @@ const App = () => {
           <Route path="/" element={<Inicio />} />
           <Route path="/que-hacemos/tecnologia" element={<Tecnologia />} />
           <Route path="/que-hacemos/academia" element={<Academia />} />
-          <Route path="/que-hacemos/negocios" element={<NegociosÂ¿QuÃ©eHacemos />} />
+          <Route path="/que-hacemos/negocios" element={<NegociosQueHacemos />} />
           <Route path="/que-hacemos/personalizado" element={<Personalizado />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
                 <Route path="/servicios/delivery" element={<EnvioKits />} />
