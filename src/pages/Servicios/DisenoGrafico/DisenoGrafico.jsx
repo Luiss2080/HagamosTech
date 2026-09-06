@@ -1,4 +1,4 @@
-import RecorridoAcademico from './RecorridoAcademico';
+import RecorridoDiseno from './RecorridoDiseno';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -20,10 +20,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  { title: 'Análisis de Requisitos', desc: 'Estudiamos a fondo la rúbrica, formato y exigencias académicas de tu proyecto o investigación.' },
-  { title: 'Estructuración', desc: 'Diseñamos la base del proyecto (simulaciones, prototipos o marcos teóricos) garantizando el rigor académico.' },
-  { title: 'Desarrollo y Pruebas', desc: 'Implementamos las soluciones (software, hardware o maquetas) y probamos exhaustivamente su funcionamiento.' },
-  { title: 'Entrega y Defensa', desc: 'Te preparamos con presentaciones interactivas y documentación (APA, IEEE) para tu defensa.' }
+  { title: 'Identidad y Brief', desc: 'Estudiamos los valores de tu marca, colores corporativos y a qui�n te diriges.' },
+  { title: 'Bocetaje Visual', desc: 'Creamos propuestas conceptuales y esquemas iniciales para alinear ideas.' },
+  { title: 'Dise�o Final', desc: 'Digitalizamos la idea en alta resoluci�n garantizando nitidez en cualquier tama�o.' },
+  { title: 'Archivos Finales', desc: 'Te entregamos los vectores originales y formatos listos para web e imprenta.' }
 ];
 
 const TESTIMONIOS = [
@@ -93,7 +93,7 @@ const VALUE_POINTS = [
   { icon: 'fa-shield', label: 'Certificado SSL Incluido' }
 ];
 
-const Academico = () => {
+const DisenoGrafico = () => {
   
   
   // Auto-play de testimonios
@@ -142,7 +142,7 @@ const Academico = () => {
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
                 <span className="block">Sector Académico</span>
-                <span className="block whitespace-nowrap">de alto rigor <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block whitespace-nowrap">visual integral <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
@@ -211,7 +211,7 @@ const Academico = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/academico.jpg"
+                    src="/img/07_Servicios/soluciones/DisenoGrafico.jpg"
                     alt="EdTech y Académico"
                     loading="eager"
                     fetchPriority="high"
@@ -349,7 +349,7 @@ const Academico = () => {
                 <div className="p-5 font-mono text-[10.5px] sm:text-[11.5px] leading-relaxed text-slate-300 overflow-x-auto select-none space-y-1">
                   <div>import React from "react";</div>
                   <div>import &#123; MetaTags &#125; from "./seo";</div>
-                  <div className="mt-2">export const Academico = () =&gt; &#123;</div>
+                  <div className="mt-2">export const DisenoGrafico = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
                   <div className="pl-12">&lt;MetaTags title="HagamosTech — Apoyo Académico" /&gt;</div>
@@ -371,7 +371,7 @@ const Academico = () => {
       </section>
 
       {/* SECCIÓN ADICIONAL: DEMOSTRACIÓN DE SOFTWARE */}
-      <RecorridoAcademico />
+      <RecorridoDiseno />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -404,4 +404,4 @@ const Academico = () => {
   );
 };
 
-export default Academico;
+export default DisenoGrafico;

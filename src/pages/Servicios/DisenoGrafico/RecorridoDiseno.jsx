@@ -17,12 +17,76 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  { num: '01', title: 'Servicio: Presentaciones Interactivas', desc: 'Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología. Diseños en PowerPoint e interactivos con alto impacto.', tags: ['PowerPoint', 'Interactivo', 'Defensas'], icon: 'fa-person-chalkboard', images: ['https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=800&q=80'] },
-  { num: '02', title: 'Servicio: Formato APA 7', desc: 'Estructuración de monografías, documentación técnica, corrección de estilo y referencias bibliográficas exactas bajo normas APA.', tags: ['APA 7', 'Redacción', 'Metodología'], icon: 'fa-book', images: ['https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80'] },
-  { num: '03', title: 'Servicio: Infografías y Diagramas', desc: 'Esquemas anatómicos, flujos de bases de datos, diagramas de procesos y líneas de tiempo visualmente estructuradas.', tags: ['Infografías', 'Diagramas', 'Procesos'], icon: 'fa-chart-pie', images: ['https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80'] },
-  { num: '04', title: 'Servicio: Mapas Conceptuales', desc: 'Síntesis de marcos teóricos complejos y diseño formal de portadas académicas (carátulas) para la entrega impecable de proyectos.', tags: ['Mapas Conceptuales', 'Portadas', 'Síntesis'], icon: 'fa-sitemap', images: ['https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80'] },
-  { num: '05', title: 'Servicio: Simuladores Educativos', desc: 'Entornos virtuales y simuladores para pruebas de redes, robótica educativa o simulación de sistemas informáticos.', tags: ['Simuladores', 'Redes', 'Robótica'], icon: 'fa-network-wired', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] },
-  { num: '06', title: 'Servicio: Apoyo en Programación', desc: 'Asesoría en desarrollo de proyectos de código estructurado, diseño de algoritmos y fortalecimiento de lógica computacional.', tags: ['Código', 'Algoritmos', 'Lógica'], icon: 'fa-code', images: ['https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80', 'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80'] }
+  {
+    num: '01',
+    category: 'BRANDING',
+    firstPart: 'Logos e',
+    highlightPart: 'Identidad Visual',
+    desc: 'Creaci�n de marcas memorables, desde isologotipos hasta manuales de marca para servicios t�cnicos, restaurantes o corporaciones.',
+    tags: ['Logos', 'Branding', 'Identidad'],
+    icon: 'fa-pen-nib',
+    images: [
+      'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '02',
+    category: 'PUBLICIDAD',
+    firstPart: 'Flyers y',
+    highlightPart: 'Redes Sociales',
+    desc: 'Gr�ficos publicitarios de alto impacto en formato cuadrado (4x4) y gran formato para exposiciones, pancartas o Instagram.',
+    tags: ['Redes Sociales', 'Banners', 'Marketing'],
+    icon: 'fa-bullhorn',
+    images: [
+      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '03',
+    category: 'PRODUCTO',
+    firstPart: 'Packaging y',
+    highlightPart: 'Cat�logos',
+    desc: 'Dise�o de empaques sostenibles, etiquetas atractivas y maquetaci�n de cat�logos impresos para destacar tus productos f�sicos.',
+    tags: ['Packaging', 'Cat�logos', 'Impresi�n'],
+    icon: 'fa-box-open',
+    images: [
+      'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '04',
+    category: 'CORPORATIVO',
+    firstPart: 'Tarjetas e',
+    highlightPart: 'Invitaciones',
+    desc: 'Tarjetas de presentaci�n corporativas elegantes (opci�n con c�digo QR integrado) e invitaciones digitales/impresas para eventos.',
+    tags: ['Tarjetas', 'QR', 'Eventos'],
+    icon: 'fa-id-card',
+    images: [
+      'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1558227691-41ea78d1f631?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '05',
+    category: 'POST-PRODUCCI�N',
+    firstPart: 'Edici�n',
+    highlightPart: 'Fotogr�fica',
+    desc: 'Mejora de calidad de imagen, correcci�n de color profesional y eliminaci�n de fondos para cat�logos de comercio electr�nico.',
+    tags: ['Retoque', 'Fotograf�a', 'Photoshop'],
+    icon: 'fa-wand-magic-sparkles',
+    images: [
+      'https://images.unsplash.com/photo-1626785774625-0c5cc6a74ef4?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1579389083395-4507e98b5e67?auto=format&fit=crop&w=800&q=80'
+    ]
+  }
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -84,7 +148,7 @@ const ProjectCarousel = ({ images }) => {
   );
 };
 
-const RecorridoAcademico = () => {
+const RecorridoDiseno = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent reveal">
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
@@ -196,4 +260,4 @@ const RecorridoAcademico = () => {
   );
 };
 
-export default RecorridoAcademico;
+export default RecorridoDiseno;
