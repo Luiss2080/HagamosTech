@@ -141,12 +141,12 @@ const Academico = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Apoyo Académico</span>
-                <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Sector Académico</span>
+                <span className="block whitespace-nowrap">de alto rigor <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Proyectos universitarios, simuladores educativos y recursos académicos de alto nivel para estudiantes e instituciones.
+                Orientado a estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y presentar proyectos con alto rigor académico en áreas complejas.
               </p>
 
               {/* Action Buttons */}
@@ -318,16 +318,16 @@ const Academico = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES APOYO ACADÉMICO Y CÓMO AYUDA A TU EMPRESA?
+                ¿A QUIÉN ESTÁ DIRIGIDO Y QUÉ INCLUYE?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Asesoramos y estructuramos proyectos universitarios, presentaciones interactivas y simuladores virtuales para garantizar la máxima calificación.
+                  Soluciones orientadas a estudiantes, docentes e instituciones que requieren estructurar, simular y presentar proyectos académicos rigurosos (medicina, sistemas, RRHH).
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Presentaciones Interactivas, Estructuración en Formato APA 7, Simuladores Educativos, Mapas Conceptuales, Asesoría en Código (Programación) y Corrección de Estilo.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Presentaciones Interactivas, Formato APA 7, Infografías y Diagramas, Mapas Conceptuales, Simuladores Educativos y Apoyo en Programación.
                 </p>
               </div>
             </div>
