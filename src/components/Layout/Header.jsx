@@ -29,6 +29,8 @@ const NAV_ITEMS = [
             { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/servicios/inteligencia-artificial', icon: 'fa-robot' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
             { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
+            { id: 'srv-empleo', label: 'Empleo', desc: 'CVs y preparación profesional.', target: '/servicios/empleo', icon: 'fa-user-tie' },
+            { id: 'srv-diseno', label: 'Diseño Gráfico', desc: 'Identidad visual y branding.', target: '/servicios/diseno-grafico', icon: 'fa-pen-nib' },
         ]
     },
     {
