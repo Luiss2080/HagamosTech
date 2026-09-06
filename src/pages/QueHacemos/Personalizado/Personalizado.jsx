@@ -31,18 +31,22 @@ const ChatAssistantWindow = () => {
   ];
 
   useEffect(() => {
+    let timeoutId;
     let currentIndex = 0;
     
     const showNextMessage = () => {
       if (currentIndex < fullConversation.length) {
-        setMessages(prev => [...prev, fullConversation[currentIndex]]);
+        setMessages(prev => {
+          if (prev.length > currentIndex) return prev;
+          return [...prev, fullConversation[currentIndex]];
+        });
         currentIndex++;
-        setTimeout(showNextMessage, 1500 + Math.random() * 1000); // Random delay between messages
+        timeoutId = setTimeout(showNextMessage, 1500 + Math.random() * 1000);
       }
     };
 
-    const timer = setTimeout(showNextMessage, 500);
-    return () => clearTimeout(timer);
+    timeoutId = setTimeout(showNextMessage, 500);
+    return () => clearTimeout(timeoutId);
   }, []);
 
   return (
@@ -59,15 +63,18 @@ const ChatAssistantWindow = () => {
       </div>
       
       <div className="p-6 flex-grow overflow-y-auto flex flex-col gap-4">
-        {messages.map((msg, idx) => (
-          <div key={idx} className={`max-w-[85%] p-3 rounded-2xl text-sm ${
-            msg.role === 'user' 
-              ? 'bg-neutral-800 text-white self-end rounded-tr-sm border border-neutral-700' 
-              : 'bg-[#A3E635]/10 text-[#A3E635] self-start rounded-tl-sm border border-[#A3E635]/20'
-          } animate-fade-in-up`} style={{ animationDuration: '0.3s' }}>
-            {msg.text}
-          </div>
-        ))}
+        {messages.map((msg, idx) => {
+          if (!msg) return null;
+          return (
+            <div key={idx} className={`max-w-[85%] p-3 rounded-2xl text-sm ${
+              msg.role === 'user' 
+                ? 'bg-neutral-800 text-white self-end rounded-tr-sm border border-neutral-700' 
+                : 'bg-[#A3E635]/10 text-[#A3E635] self-start rounded-tl-sm border border-[#A3E635]/20'
+            } animate-fade-in-up`} style={{ animationDuration: '0.3s' }}>
+              {msg.text}
+            </div>
+          );
+        })}
         {messages.length < fullConversation.length && messages.length > 0 && (
           <div className="self-start text-neutral-500 flex gap-1 p-2">
             <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
