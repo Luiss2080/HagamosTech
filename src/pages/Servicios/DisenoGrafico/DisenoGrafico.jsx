@@ -1,4 +1,4 @@
-import RecorridoDiseno from './RecorridoDiseno';
+﻿import RecorridoDiseno from './RecorridoDiseno';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -11,25 +11,25 @@ const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza'
 
 const BRANDS = [
   { name: 'Libros Escolares', tag: 'Primaria y Secundaria', icon: 'fa-book-open' },
-  { name: 'Colegios Aliados', tag: 'Alianzas Estratégicas', icon: 'fa-school' },
+  { name: 'Colegios Aliados', tag: 'Alianzas EstratÃ©gicas', icon: 'fa-school' },
   { name: 'React / Web', tag: 'Desarrollo de Software', icon: 'fa-laptop-code' },
   { name: 'iOS & Android', tag: 'Desarrollo de Software', icon: 'fa-mobile-screen-button' },
-  { name: 'Scratch', tag: 'Cursos de Robótica', icon: 'fa-shapes' },
-  { name: 'LEGO Education', tag: 'Cursos de Robótica', icon: 'fa-puzzle-piece' },
-  { name: 'Python', tag: 'Cursos de Robótica', icon: 'fa-code' }
+  { name: 'Scratch', tag: 'Cursos de RobÃ³tica', icon: 'fa-shapes' },
+  { name: 'LEGO Education', tag: 'Cursos de RobÃ³tica', icon: 'fa-puzzle-piece' },
+  { name: 'Python', tag: 'Cursos de RobÃ³tica', icon: 'fa-code' }
 ];
 
 const PROCESO = [
-  { title: 'Identidad y Brief', desc: 'Estudiamos los valores de tu marca, colores corporativos y a qui�n te diriges.' },
+  { title: 'Identidad y Brief', desc: 'Estudiamos los valores de tu marca, colores corporativos y a quién te diriges.' },
   { title: 'Bocetaje Visual', desc: 'Creamos propuestas conceptuales y esquemas iniciales para alinear ideas.' },
-  { title: 'Dise�o Final', desc: 'Digitalizamos la idea en alta resoluci�n garantizando nitidez en cualquier tama�o.' },
+  { title: 'Diseño Final', desc: 'Digitalizamos la idea en alta resolución garantizando nitidez en cualquier tamaño.' },
   { title: 'Archivos Finales', desc: 'Te entregamos los vectores originales y formatos listos para web e imprenta.' }
 ];
 
 const TESTIMONIOS = [
-  { name: 'Esteban Ramírez', role: 'Estudiante de Medicina', text: 'La presentación interactiva y los esquemas anatómicos que me diseñaron fueron la clave para sacar la máxima nota en mi defensa de tesis.' },
-  { name: 'Prof. Ana Torres', role: 'Docente Universitaria', text: 'Los simuladores educativos y entornos virtuales han mejorado muchísimo la comprensión de mis alumnos en sistemas informáticos.' },
-  { name: 'Felipe Guzmán', role: 'Tesista de Ingeniería', text: 'Su asesoría en formato APA 7 y lógica de programación estructurada me salvó el proyecto de grado. Muy rigurosos y profesionales.' }
+  { name: 'Esteban RamÃ­rez', role: 'Estudiante de Medicina', text: 'La presentaciÃ³n interactiva y los esquemas anatÃ³micos que me diseÃ±aron fueron la clave para sacar la mÃ¡xima nota en mi defensa de tesis.' },
+  { name: 'Prof. Ana Torres', role: 'Docente Universitaria', text: 'Los simuladores educativos y entornos virtuales han mejorado muchÃ­simo la comprensiÃ³n de mis alumnos en sistemas informÃ¡ticos.' },
+  { name: 'Felipe GuzmÃ¡n', role: 'Tesista de IngenierÃ­a', text: 'Su asesorÃ­a en formato APA 7 y lÃ³gica de programaciÃ³n estructurada me salvÃ³ el proyecto de grado. Muy rigurosos y profesionales.' }
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -87,7 +87,7 @@ const FLOATING_CARDS = [
 ];
 
 const VALUE_POINTS = [
-  { icon: 'fa-globe', label: 'Páginas Modernas' },
+  { icon: 'fa-globe', label: 'PÃ¡ginas Modernas' },
   { icon: 'fa-gauge-high', label: 'Velocidad de Carga <1s' },
   { icon: 'fa-magnifying-glass', label: 'SEO Google Ready' },
   { icon: 'fa-shield', label: 'Certificado SSL Incluido' }
@@ -124,14 +124,14 @@ const DisenoGrafico = () => {
 
       
 
-      {/* SECCIÓN 1: HERO */}
+      {/* SECCIÃ“N 1: HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-32 pb-12" id="home">
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center">
           
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Apoyo Académico Profesionales — HagamosTech
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Apoyo AcadÃ©mico Profesionales â€” HagamosTech
               </span>
           </div>
 
@@ -141,18 +141,18 @@ const DisenoGrafico = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Sector Académico</span>
+                <span className="block">Sector AcadÃ©mico</span>
                 <span className="block whitespace-nowrap">visual integral <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Orientado a estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y presentar proyectos con alto rigor académico en áreas complejas.
+                Orientado a estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y presentar proyectos con alto rigor acadÃ©mico en Ã¡reas complejas.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20acadÃ©mico"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +163,7 @@ const DisenoGrafico = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesorÃ­a%20sobre%20un%20proyecto%20acadÃ©mico"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -182,12 +182,12 @@ const DisenoGrafico = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confÃ­an en HagamosTech</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#7f1d1d] text-white border border-[#84CC16]/40 shadow-md">
                 <i className="fas fa-tag text-[#84CC16]"></i>
-                <span className="text-[9px] font-black uppercase tracking-wider">Pago único o por fases + Mantenimiento mensual</span>
+                <span className="text-[9px] font-black uppercase tracking-wider">Pago Ãºnico o por fases + Mantenimiento mensual</span>
               </div>
             </div>
 
@@ -212,7 +212,7 @@ const DisenoGrafico = () => {
                 >
                   <img
                     src="/img/07_Servicios/soluciones/DisenoGrafico.jpg"
-                    alt="EdTech y Académico"
+                    alt="EdTech y AcadÃ©mico"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -255,10 +255,10 @@ const DisenoGrafico = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
+      {/* SECCIÃ“N 2: CLIENTES */}
       <TrustedClients />
 
-      {/* SECCIÓN 3: PROCESO */}
+      {/* SECCIÃ“N 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-left">
           
@@ -267,12 +267,12 @@ const DisenoGrafico = () => {
             <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
               Nuestro proceso, <br />
               <span className="text-[#A3E635] relative inline-block">
-                desarrollo ágil.
+                desarrollo Ã¡gil.
                 <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Construimos y optimizamos tu plataforma digital a travÃ©s de etapas Ã¡giles y orientadas a resultados de alto nivel.
             </p>
           </div>
 
@@ -312,22 +312,22 @@ const DisenoGrafico = () => {
         </div>
       </section>
 
-      {/* SECCIÓN 4: EXPLICACIÓN Y MOCKUP */}
+      {/* SECCIÃ“N 4: EXPLICACIÃ“N Y MOCKUP */}
       <section className="py-12 relative overflow-hidden reveal overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ SON LAS SOLUCIONES ACADÉMICAS Y CÓMO POTENCIAN TUS PROYECTOS?
+                Â¿QUÃ‰ SON LAS SOLUCIONES ACADÃ‰MICAS Y CÃ“MO POTENCIAN TUS PROYECTOS?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Te ayudamos a estructurar, desarrollar y presentar proyectos con el más alto rigor académico. Desde tesis y monografías hasta simulaciones y prototipos complejos de ingeniería.
+                  Te ayudamos a estructurar, desarrollar y presentar proyectos con el mÃ¡s alto rigor acadÃ©mico. Desde tesis y monografÃ­as hasta simulaciones y prototipos complejos de ingenierÃ­a.
                 </p>
                 <p>
                   <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Presentaciones Interactivas, Formato APA/IEEE, Simulación Computacional, Desarrollo de Software Académico y Soporte para Defensa de Proyectos.
+                  Presentaciones Interactivas, Formato APA/IEEE, SimulaciÃ³n Computacional, Desarrollo de Software AcadÃ©mico y Soporte para Defensa de Proyectos.
                 </p>
               </div>
             </div>
@@ -352,7 +352,7 @@ const DisenoGrafico = () => {
                   <div className="mt-2">export const DisenoGrafico = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
-                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Apoyo Académico" /&gt;</div>
+                  <div className="pl-12">&lt;MetaTags title="HagamosTech â€” Apoyo AcadÃ©mico" /&gt;</div>
                   <div className="pl-12">&lt;HeroSection theme="premium" /&gt;</div>
                   <div className="pl-12">&lt;ServicesGrid items=&#123;10&#125; /&gt;</div>
                   <div className="pl-8">&lt;/div&gt;</div>
@@ -370,10 +370,10 @@ const DisenoGrafico = () => {
         </div>
       </section>
 
-      {/* SECCIÓN ADICIONAL: DEMOSTRACIÓN DE SOFTWARE */}
+      {/* SECCIÃ“N ADICIONAL: DEMOSTRACIÃ“N DE SOFTWARE */}
       <RecorridoDiseno />
 
-      {/* SECCIÓN 5: TESTIMONIOS */}
+      {/* SECCIÃ“N 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
@@ -385,7 +385,7 @@ const DisenoGrafico = () => {
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones de las empresas y líderes de marca que han transformado su operación digital gracias a nuestras soluciones de software.
+            Opiniones y valoraciones de las empresas y lÃ­deres de marca que han transformado su operaciÃ³n digital gracias a nuestras soluciones de software.
           </p>
         </div>
 

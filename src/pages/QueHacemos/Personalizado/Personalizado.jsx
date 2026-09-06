@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
@@ -17,18 +17,18 @@ const TECH_STACK = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Roberto S.', role: 'Emprendedor', text: 'Tenía una idea muy específica para mi logística que ningún software comercial resolvía. HagamosTech entendió mi problema en 15 minutos y creó algo perfecto.' },
-  { name: 'Lucía P.', role: 'Directora de RRHH', text: 'Necesitábamos un sistema interno para medir el clima laboral de forma anónima y gamificada. Fue un desarrollo a medida increíble que los empleados aman usar.' },
-  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se conecta con nuestras máquinas por IoT. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
+  { name: 'Roberto S.', role: 'Emprendedor', text: 'TenÃ­a una idea muy especÃ­fica para mi logÃ­stica que ningÃºn software comercial resolvÃ­a. HagamosTech entendiÃ³ mi problema en 15 minutos y creÃ³ algo perfecto.' },
+  { name: 'LucÃ­a P.', role: 'Directora de RRHH', text: 'NecesitÃ¡bamos un sistema interno para medir el clima laboral de forma anÃ³nima y gamificada. Fue un desarrollo a medida increÃ­ble que los empleados aman usar.' },
+  { name: 'Miguel T.', role: 'DueÃ±o de FÃ¡brica', text: 'Desarrollaron un panel a medida que se conecta con nuestras mÃ¡quinas por IoT. Algo que parecÃ­a imposible o costosÃ­simo, lo hicieron viable.' }
 ];
 
 const ChatAssistantWindow = () => {
   const [messages, setMessages] = useState([]);
   const fullConversation = [
-    { role: 'user', text: 'Hola, tengo un proceso manual que nos toma 5 horas diarias. Ningún sistema de mercado hace exactamente lo que necesito.' },
-    { role: 'assistant', text: 'Entendido. ¿El proceso involucra varias plataformas o documentos físicos?' },
-    { role: 'user', text: 'Sí, cruza datos de Excel con un ERP antiguo.' },
-    { role: 'assistant', text: 'Perfecto. Vamos a diseñar un microservicio a medida que lea los Excels, se conecte a la API de tu ERP y automatice ese cruce en 5 segundos. ¿Empezamos?' }
+    { role: 'user', text: 'Hola, tengo un proceso manual que nos toma 5 horas diarias. NingÃºn sistema de mercado hace exactamente lo que necesito.' },
+    { role: 'assistant', text: 'Entendido. Â¿El proceso involucra varias plataformas o documentos fÃ­sicos?' },
+    { role: 'user', text: 'SÃ­, cruza datos de Excel con un ERP antiguo.' },
+    { role: 'assistant', text: 'Perfecto. Vamos a diseÃ±ar un microservicio a medida que lea los Excels, se conecte a la API de tu ERP y automatice ese cruce en 5 segundos. Â¿Empezamos?' }
   ];
 
   useEffect(() => {
@@ -97,10 +97,10 @@ const ChatAssistantWindow = () => {
 
 const ProcessTimeline = () => {
   const steps = [
-    { title: 'Diagnóstico Cero', desc: 'Nos reunimos para entender tu dolor. No asumimos nada, mapeamos tu proceso manual actual paso a paso.', icon: <Search size={20} /> },
-    { title: 'Arquitectura a Medida', desc: 'Diseñamos los planos del software. Elegimos la tecnología exacta (ni más ni menos de lo que necesitas).', icon: <Puzzle size={20} /> },
-    { title: 'Desarrollo Core', desc: 'Programamos la solución desde cero. Interfaces limpias y bases de datos preparadas para escalar.', icon: <Code size={20} /> },
-    { title: 'Implementación & Soporte', desc: 'Lanzamos el sistema en tu entorno y monitoreamos. Tu problema queda resuelto definitivamente.', icon: <Server size={20} /> },
+    { title: 'DiagnÃ³stico Cero', desc: 'Nos reunimos para entender tu dolor. No asumimos nada, mapeamos tu proceso manual actual paso a paso.', icon: <Search size={20} /> },
+    { title: 'Arquitectura a Medida', desc: 'DiseÃ±amos los planos del software. Elegimos la tecnologÃ­a exacta (ni mÃ¡s ni menos de lo que necesitas).', icon: <Puzzle size={20} /> },
+    { title: 'Desarrollo Core', desc: 'Programamos la soluciÃ³n desde cero. Interfaces limpias y bases de datos preparadas para escalar.', icon: <Code size={20} /> },
+    { title: 'ImplementaciÃ³n & Soporte', desc: 'Lanzamos el sistema en tu entorno y monitoreamos. Tu problema queda resuelto definitivamente.', icon: <Server size={20} /> },
   ];
 
   return (
@@ -129,16 +129,16 @@ const PROJECTS = [
     category: 'MODULARES',
     firstPart: 'Proyectos',
     highlightPart: 'Especiales',
-    desc: 'Si tienes una idea at�pica o un m�dulo espec�fico que agregar a tu sistema actual, dise�amos exactamente lo que necesitas.',
+    desc: 'Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, diseñamos exactamente lo que necesitas.',
     icon: 'fa-puzzle-piece',
     images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '02',
-    category: 'MENTOR�A',
-    firstPart: 'Auditor�a &',
-    highlightPart: 'Mentor�a',
-    desc: 'Mentor�as 1 a 1 y auditor�as completas para modernizar tu tecnolog�a y guiar a tu equipo in-house.',
+    category: 'MENTORÍA',
+    firstPart: 'Auditoría &',
+    highlightPart: 'Mentoría',
+    desc: 'Mentorías 1 a 1 y auditorías completas para modernizar tu tecnología y guiar a tu equipo in-house.',
     icon: 'fa-lightbulb',
     images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
   },
@@ -156,16 +156,16 @@ const PROJECTS = [
     category: 'SOPORTE',
     firstPart: 'Mantenimiento',
     highlightPart: 'Continuo',
-    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y est�n actualizados.',
+    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y estén actualizados.',
     icon: 'fa-server',
     images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '05',
     category: 'INFRAESTRUCTURA',
-    firstPart: 'Migraci�n',
+    firstPart: 'Migración',
     highlightPart: 'Cloud',
-    desc: 'Llevamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar m�xima disponibilidad y escalabilidad infinita.',
+    desc: 'Llevamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar máxima disponibilidad y escalabilidad infinita.',
     icon: 'fa-cloud',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
   },
@@ -174,7 +174,7 @@ const PROJECTS = [
     category: 'RESCATE',
     firstPart: 'Rescate de',
     highlightPart: 'Proyectos',
-    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el c�digo y llevarlos a producci�n con �xito.',
+    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el código y llevarlos a producción con éxito.',
     icon: 'fa-life-ring',
     images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
   }
@@ -193,7 +193,7 @@ const Personalizado = () => {
         <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
-            <Lightbulb size={16} /> Innovación a Medida
+            <Lightbulb size={16} /> InnovaciÃ³n a Medida
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
@@ -202,11 +202,11 @@ const Personalizado = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            ¿Tienes un problema de negocio que el software convencional no puede resolver? Cuéntanoslo. Diseñamos la arquitectura y escribimos el código necesario desde cero.
+            Â¿Tienes un problema de negocio que el software convencional no puede resolver? CuÃ©ntanoslo. DiseÃ±amos la arquitectura y escribimos el cÃ³digo necesario desde cero.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
+            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20especÃ­fico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
               Contarnos tu Problema <ArrowRight size={16} />
             </a>
           </div>
@@ -215,10 +215,10 @@ const Personalizado = () => {
         </div>
       </section>
 
-      {/* STACK TECNOLÓGICO INFINITO */}
+      {/* STACK TECNOLÃ“GICO INFINITO */}
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
+          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack VersÃ¡til y Adaptable</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
             {TECH_STACK.map((tech, i) => (
               <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
@@ -235,10 +235,10 @@ const Personalizado = () => {
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
-              Ingeniería de <span className="text-[#A3E635]">Precisión</span>
+              IngenierÃ­a de <span className="text-[#A3E635]">PrecisiÃ³n</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              No encajamos tu negocio en nuestro software. Diseñamos el software para que encaje perfectamente en tu negocio.
+              No encajamos tu negocio en nuestro software. DiseÃ±amos el software para que encaje perfectamente en tu negocio.
             </p>
           </div>
 
@@ -252,10 +252,10 @@ const Personalizado = () => {
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/3 sticky top-32">
               <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
-                El Proceso de <br/> <span className="text-[#A3E635]">Creación</span>
+                El Proceso de <br/> <span className="text-[#A3E635]">CreaciÃ³n</span>
               </h2>
               <p className="text-slate-400 font-medium mb-8">
-                Construir software a medida requiere método y precisión. Así es como convertimos tus ideas en código funcional.
+                Construir software a medida requiere mÃ©todo y precisiÃ³n. AsÃ­ es como convertimos tus ideas en cÃ³digo funcional.
               </p>
             </div>
 
@@ -286,10 +286,10 @@ const Personalizado = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=1200&q=80')] opacity-[0.03] mix-blend-overlay object-cover pointer-events-none group-hover:opacity-[0.1] transition-opacity duration-700"></div>
             
             <h2 className="text-4xl md:text-6xl font-black mb-6 relative z-10 uppercase tracking-tighter">
-              ¿Listo para crear algo único?
+              Â¿Listo para crear algo Ãºnico?
             </h2>
             <p className="text-lg md:text-xl font-bold opacity-80 mb-10 max-w-2xl mx-auto relative z-10">
-              Desarrollemos la solución tecnológica que te pondrá años luz por delante de tus competidores.
+              Desarrollemos la soluciÃ³n tecnolÃ³gica que te pondrÃ¡ aÃ±os luz por delante de tus competidores.
             </p>
             <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-black text-white rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl relative z-10 hover:shadow-[#000]/50">
               Hablar del Proyecto <Zap size={18} />

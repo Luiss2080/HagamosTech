@@ -1,4 +1,4 @@
-import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
+﻿import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -23,7 +23,7 @@ const PROJECTS = [
     category: 'BRANDING',
     firstPart: 'Logos e',
     highlightPart: 'Identidad Visual',
-    desc: 'Creaci�n de marcas memorables, desde isologotipos hasta manuales de marca para servicios t�cnicos, restaurantes o corporaciones.',
+    desc: 'Creaciï¿½n de marcas memorables, desde isologotipos hasta manuales de marca para servicios tï¿½cnicos, restaurantes o corporaciones.',
     tags: ['Logos', 'Branding', 'Identidad'],
     icon: 'fa-pen-nib',
     images: [
@@ -37,7 +37,7 @@ const PROJECTS = [
     category: 'PUBLICIDAD',
     firstPart: 'Flyers y',
     highlightPart: 'Redes Sociales',
-    desc: 'Gr�ficos publicitarios de alto impacto en formato cuadrado (4x4) y gran formato para exposiciones, pancartas o Instagram.',
+    desc: 'Grï¿½ficos publicitarios de alto impacto en formato cuadrado (4x4) y gran formato para exposiciones, pancartas o Instagram.',
     tags: ['Redes Sociales', 'Banners', 'Marketing'],
     icon: 'fa-bullhorn',
     images: [
@@ -50,9 +50,9 @@ const PROJECTS = [
     num: '03',
     category: 'PRODUCTO',
     firstPart: 'Packaging y',
-    highlightPart: 'Cat�logos',
-    desc: 'Dise�o de empaques sostenibles, etiquetas atractivas y maquetaci�n de cat�logos impresos para destacar tus productos f�sicos.',
-    tags: ['Packaging', 'Cat�logos', 'Impresi�n'],
+    highlightPart: 'Catï¿½logos',
+    desc: 'Diseï¿½o de empaques sostenibles, etiquetas atractivas y maquetaciï¿½n de catï¿½logos impresos para destacar tus productos fï¿½sicos.',
+    tags: ['Packaging', 'Catï¿½logos', 'Impresiï¿½n'],
     icon: 'fa-box-open',
     images: [
       'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80',
@@ -65,7 +65,7 @@ const PROJECTS = [
     category: 'CORPORATIVO',
     firstPart: 'Tarjetas e',
     highlightPart: 'Invitaciones',
-    desc: 'Tarjetas de presentaci�n corporativas elegantes (opci�n con c�digo QR integrado) e invitaciones digitales/impresas para eventos.',
+    desc: 'Tarjetas de presentaciï¿½n corporativas elegantes (opciï¿½n con cï¿½digo QR integrado) e invitaciones digitales/impresas para eventos.',
     tags: ['Tarjetas', 'QR', 'Eventos'],
     icon: 'fa-id-card',
     images: [
@@ -76,11 +76,11 @@ const PROJECTS = [
   },
   {
     num: '05',
-    category: 'POST-PRODUCCI�N',
-    firstPart: 'Edici�n',
-    highlightPart: 'Fotogr�fica',
-    desc: 'Mejora de calidad de imagen, correcci�n de color profesional y eliminaci�n de fondos para cat�logos de comercio electr�nico.',
-    tags: ['Retoque', 'Fotograf�a', 'Photoshop'],
+    category: 'POST-PRODUCCIï¿½N',
+    firstPart: 'Ediciï¿½n',
+    highlightPart: 'Fotogrï¿½fica',
+    desc: 'Mejora de calidad de imagen, correcciï¿½n de color profesional y eliminaciï¿½n de fondos para catï¿½logos de comercio electrï¿½nico.',
+    tags: ['Retoque', 'Fotografï¿½a', 'Photoshop'],
     icon: 'fa-wand-magic-sparkles',
     images: [
       'https://images.unsplash.com/photo-1626785774625-0c5cc6a74ef4?auto=format&fit=crop&w=800&q=80',
@@ -159,12 +159,12 @@ const RecorridoDiseno = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Apoyo Académico.
+              Apoyo AcadÃ©mico.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos web diseñados a la medida. Innovación, velocidad y resultados reales para empresas de todos los tamaños.
+            Proyectos web diseÃ±ados a la medida. InnovaciÃ³n, velocidad y resultados reales para empresas de todos los tamaÃ±os.
           </p>
         </div>
 

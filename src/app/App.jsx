@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+﻿import React, { useCallback, useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
@@ -126,7 +126,7 @@ const App = () => {
       
       console.log("App | Evento personalizado recibido para abrir modal:", modalName, orderData);
       
-      // Traducir nombre del modal según useModalStore.js
+      // Traducir nombre del modal segÃºn useModalStore.js
       let resolvedModalName = modalName;
       if (modalName === 'cardModal') resolvedModalName = 'cardModal'; // mapea a cardModal
       
