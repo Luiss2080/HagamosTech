@@ -59,41 +59,53 @@ const BentoGrid = () => {
     <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 auto-rows-[300px]">
       
       {/* Bento Item 1: Large Span */}
-      <div className="md:col-span-2 md:row-span-1 p-8 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:border-[#A3E635]/40 transition-colors group overflow-hidden relative flex flex-col justify-between">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl from-[#A3E635]/10 to-transparent blur-3xl rounded-full group-hover:from-[#A3E635]/20 transition-all duration-700"></div>
-        <div className="relative z-10 flex justify-between items-start">
-          <div className="w-14 h-14 rounded-2xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] shadow-lg group-hover:scale-110 transition-transform">
-            <ShoppingCart size={24} />
+      <div className="md:col-span-2 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:border-[#A3E635]/40 transition-colors group overflow-hidden relative flex flex-col md:flex-row items-center">
+        <div className="p-8 relative z-10 flex flex-col justify-between h-full w-full md:w-1/2">
+          <div className="flex justify-between items-start mb-6">
+            <div className="w-14 h-14 rounded-2xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] shadow-lg group-hover:scale-110 transition-transform">
+              <ShoppingCart size={24} />
+            </div>
+            <span className="px-3 py-1 bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black uppercase tracking-wider rounded-lg border border-[#A3E635]/20">Core</span>
           </div>
-          <span className="px-3 py-1 bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black uppercase tracking-wider rounded-lg border border-[#A3E635]/20">Core</span>
+          <div>
+            <h3 className="text-2xl font-black text-white mb-3">E-Commerce & Ventas Online</h3>
+            <p className="text-slate-400 font-medium leading-relaxed max-w-sm">Tiendas virtuales de alto rendimiento. Conectamos pasarelas de pago, inventarios y logística en una experiencia de compra fluida que multiplica tus ventas 24/7.</p>
+          </div>
         </div>
-        <div className="relative z-10 mt-6">
-          <h3 className="text-2xl font-black text-white mb-3">E-Commerce & Ventas Online</h3>
-          <p className="text-slate-400 font-medium leading-relaxed max-w-md">Tiendas virtuales de alto rendimiento. Conectamos pasarelas de pago, inventarios y logística en una experiencia de compra fluida que multiplica tus ventas 24/7.</p>
+        <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/40 via-transparent to-transparent z-10 hidden md:block"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent z-10 md:hidden"></div>
+          <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80" alt="E-Commerce" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" />
         </div>
       </div>
 
       {/* Bento Item 2: Vertical Span */}
-      <div className="md:col-span-1 md:row-span-2 p-8 rounded-[2rem] bg-gradient-to-b from-[#A3E635] to-[#84CC16] text-black hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative flex flex-col justify-between shadow-[0_0_30px_rgba(163,230,53,0.15)] cursor-pointer">
-        <div className="absolute top-0 right-0 w-full h-full bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=400&q=80')] opacity-10 mix-blend-overlay object-cover pointer-events-none"></div>
-        <div className="relative z-10">
-          <div className="w-14 h-14 rounded-2xl bg-black/10 backdrop-blur-md flex items-center justify-center text-black mb-6 border border-black/10">
+      <div className="md:col-span-1 md:row-span-2 rounded-[2rem] bg-gradient-to-b from-[#A3E635] to-[#84CC16] text-black hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative flex flex-col shadow-[0_0_30px_rgba(163,230,53,0.15)] cursor-pointer">
+        <div className="h-2/5 w-full relative overflow-hidden">
+           <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80" alt="Dashboard BI" className="w-full h-full object-cover mix-blend-multiply opacity-80" />
+           <div className="absolute inset-0 bg-gradient-to-t from-[#A3E635] via-transparent to-transparent"></div>
+        </div>
+        <div className="p-8 relative z-10 flex-grow flex flex-col justify-end">
+          <div className="w-14 h-14 rounded-2xl bg-black/10 backdrop-blur-md flex items-center justify-center text-black mb-4 border border-black/10">
             <BarChart size={24} />
           </div>
-          <h3 className="text-3xl font-black mb-4 uppercase tracking-tight">Inteligencia de Negocios</h3>
-          <p className="font-bold opacity-80 leading-relaxed text-sm">Convierte tus datos en decisiones. Implementamos dashboards automatizados que consolidan tu información financiera, operativa y comercial en tiempo real.</p>
-        </div>
-        <div className="relative z-10 mt-8 flex flex-col gap-3">
-          <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> KPIs en Tiempo Real</div>
-          <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Análisis Predictivo</div>
-          <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Reportes Automatizados</div>
+          <h3 className="text-3xl font-black mb-3 uppercase tracking-tight">Inteligencia de Negocios</h3>
+          <p className="font-bold opacity-80 leading-relaxed text-sm mb-6">Convierte tus datos en decisiones. Implementamos dashboards automatizados que consolidan tu información financiera, operativa y comercial en tiempo real.</p>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> KPIs en Tiempo Real</div>
+            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Análisis Predictivo</div>
+          </div>
         </div>
       </div>
 
       {/* Bento Item 3 */}
-      <div className="md:col-span-1 md:row-span-1 p-8 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col justify-between">
-        <div className="relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform">
+      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
+        <div className="h-1/2 w-full overflow-hidden relative">
+           <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80" alt="Presencia Omnicanal" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
+           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+        </div>
+        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
+          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform shadow-lg relative z-20">
             <Store size={20} />
           </div>
           <h3 className="text-xl font-black text-white mb-2">Presencia Omnicanal</h3>
@@ -102,9 +114,13 @@ const BentoGrid = () => {
       </div>
 
       {/* Bento Item 4 */}
-      <div className="md:col-span-1 md:row-span-1 p-8 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col justify-between">
-        <div className="relative z-10">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:rotate-12 transition-transform">
+      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
+        <div className="h-1/2 w-full overflow-hidden relative">
+           <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80" alt="Automatización" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
+           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+        </div>
+        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
+          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:rotate-12 transition-transform shadow-lg relative z-20">
             <Cpu size={20} />
           </div>
           <h3 className="text-xl font-black text-white mb-2">Automatización (ERPs)</h3>
