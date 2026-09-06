@@ -211,8 +211,8 @@ const InteligenciaArtificial = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/IA.png"
-                    alt="Web Corporativa"
+                    src="/img/07_Servicios/soluciones/ia.jpg"
+                    alt="Inteligencia Artificial"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"

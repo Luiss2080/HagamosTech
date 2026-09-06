@@ -211,8 +211,8 @@ const Academico = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/Academico.png"
-                    alt="Web Corporativa"
+                    src="/img/07_Servicios/soluciones/academico.jpg"
+                    alt="EdTech y Académico"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"

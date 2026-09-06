@@ -211,8 +211,8 @@ const Automatizacion = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/Automatizacion.png"
-                    alt="Web Corporativa"
+                    src="/img/07_Servicios/soluciones/automatizacion.jpg"
+                    alt="Automatización"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
