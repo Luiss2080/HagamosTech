@@ -1,4 +1,4 @@
-﻿import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
@@ -42,6 +42,11 @@ import EnvioKits from '../pages/Servicios/restaurante/EnvioKits';
 import PedidosInstitucionales from '../pages/Servicios/restaurante/PedidosInstitucionales';
 import TalleresCorporativos from '../pages/Servicios/restaurante/TalleresCorporativos';
 import DesarrolloEmpresarial from '../pages/Servicios/restaurante/DesarrolloEmpresarial';
+import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
+import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
+import ContactoPagina from '../pages/Contacto/Contacto';
+import HeroContacto from '../pages/Contacto/sections/HeroContacto';
+import FormularioContacto from '../pages/Contacto/sections/FormularioContacto';
 import PaginasWeb from '../pages/Servicios/DesarrolloWeb/PaginasWeb';
 import SistemasApps from '../pages/Servicios/SistemasApps/SistemasApps';
 import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
