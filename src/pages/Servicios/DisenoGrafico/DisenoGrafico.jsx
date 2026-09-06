@@ -1,4 +1,4 @@
-�import RecorridoDiseno from './RecorridoDiseno';
+import RecorridoDiseno from './RecorridoDiseno';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';

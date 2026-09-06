@@ -1,4 +1,4 @@
-�import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
+import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 

@@ -1,4 +1,4 @@
-�import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
