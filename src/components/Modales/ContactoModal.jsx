@@ -57,14 +57,14 @@ const ContactoModal = ({ isOpen, onClose }) => {
                 setFeedback({
                     type: 'error',
                     title: 'Error',
-                    message: resp?.message || 'No se pudo enviar el mensaje. IntÃ©ntalo de nuevo.',
+                    message: resp?.message || 'No se pudo enviar el mensaje. Inténtalo de nuevo.',
                 });
             }
         } catch {
             setFeedback({
                 type: 'error',
                 title: 'Error',
-                message: 'OcurriÃ³ un error al enviar el mensaje. IntÃ©ntalo de nuevo.',
+                message: 'Ocurrió un error al enviar el mensaje. Inténtalo de nuevo.',
             });
         } finally {
             setIsSubmitting(false);
@@ -121,14 +121,14 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             </div>
 
                                             <h2 className="text-4xl font-black text-white leading-tight mb-3 tracking-tight drop-shadow-lg">
-                                                ConÃ©ctate con <br />
+                                                Conéctate con <br />
                                                 <span className="text-[#c5a059] relative inline-block">
                                                     HAGAMOSTECH
                                                     <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#c5a059]/40" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                                 </span>
                                             </h2>
                                             <p className="text-base text-white/90 font-medium max-w-sm leading-relaxed mb-7 drop-shadow-md">
-                                                El instituto lÃ­der en educaciÃ³n tecnolÃ³gica y desarrollo de software profesional con el respaldo de nuestros expertos.
+                                                El instituto líder en educación tecnológica y desarrollo de software profesional con el respaldo de nuestros expertos.
                                             </p>
 
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widest mb-8 shadow-lg">
@@ -138,7 +138,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
                                                 <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Servicios</p>
-                                                    <p className="text-sm font-bold text-white">RobÃ³tica & LMS</p>
+                                                    <p className="text-sm font-bold text-white">Robótica & LMS</p>
                                                 </div>
                                                 <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Software</p>
@@ -193,7 +193,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 </span>
                                                 <h3 className="text-2xl font-black text-[#111827] tracking-tight">Contacto</h3>
                                             </div>
-                                            <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">EscrÃ­benos tu mensaje y te responderemos</p>
+                                            <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Escríbenos tu mensaje y te responderemos</p>
                                         </div>
 
                                         <div className="mb-4 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
@@ -201,14 +201,14 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-red-50 border border-red-200 text-[#a41e22] flex items-center justify-center">
                                                     <i className="fas fa-graduation-cap text-[11px]"></i>
                                                 </div>
-                                                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">LÃ­nea</p>
+                                                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Línea</p>
                                                 <p className="text-[13px] font-extrabold text-[#111827]">Servicios</p>
                                             </div>
                                             <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
                                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-red-50 border border-red-200 text-[#a41e22] flex items-center justify-center">
                                                     <i className="fas fa-laptop-code text-[11px]"></i>
                                                 </div>
-                                                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">LÃ­nea</p>
+                                                <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Línea</p>
                                                 <p className="text-[13px] font-extrabold text-[#111827]">Software</p>
                                             </div>
                                             <div className="rounded-xl bg-white border border-[#c5a059]/40 px-3 py-2.5 text-center shadow-sm">
@@ -271,7 +271,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         placeholder="Email"
                                                         required
                                                     />
-                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#a41e22] dark:peer-focus:text-[#c5a059]">Correo electrÃ³nico</label>
+                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#a41e22] dark:peer-focus:text-[#c5a059]">Correo electrónico</label>
                                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#a41e22] dark:peer-focus:text-[#c5a059] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                                 </div>
 

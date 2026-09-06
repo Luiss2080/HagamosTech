@@ -21,14 +21,14 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [feedback, setFeedback] = useState(null);
 
-    // Ã¢â€â‚¬Ã¢â€â‚¬ Doble Factor (Google Authenticator) Ã¢â€â‚¬Ã¢â€â‚¬
+    // â⬝��â⬝�� Doble Factor (Google Authenticator) â⬝��â⬝��
     const [paso2FA, setPaso2FA] = useState(null);
     const [codigo2FA, setCodigo2FA] = useState('');
     const [faSubmitting, setFaSubmitting] = useState(false);
     const [qrRegenerating, setQrRegenerating] = useState(false);
     const [faError, setFaError] = useState('');
 
-    // Ã¢â€â‚¬Ã¢â€â‚¬ Recuperación de contraseña Ã¢â€â‚¬Ã¢â€â‚¬
+    // â⬝��â⬝�� Recuperaci�n de contrase�a â⬝��â⬝��
     const solicitarRecuperacion = useAuthStore((state) => state.solicitarRecuperacion);
     const [mostrarRecuperacion, setMostrarRecuperacion] = useState(false);
     const [correoRecuperacion, setCorreoRecuperacion] = useState('');
@@ -118,7 +118,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
         e.preventDefault();
         if (faSubmitting || !paso2FA) return;
         if (!codigo2FA || codigo2FA.length !== 6) {
-            setFaError('Ingresa el código de 6 dÃƒÂ­gitos de tu autenticador.');
+            setFaError('Ingresa el c�digo de 6 dÒ­gitos de tu autenticador.');
             return;
         }
         setFaSubmitting(true);
@@ -130,7 +130,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                 setFaError('');
                 setFeedback({
                     type: 'success',
-                    title: 'Inicio de sesión exitoso',
+                    title: 'Inicio de sesi�n exitoso',
                     message: 'Bienvenido a HAGAMOSTECH.',
                     afterClose: () => {
                         setFormData(INITIAL_FORM);
@@ -139,10 +139,10 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                     },
                 });
             } else {
-                setFaError(result.message || 'El código de autenticación es incorrecto.');
+                setFaError(result.message || 'El c�digo de autenticaci�n es incorrecto.');
             }
         } catch {
-            setFaError('No se pudo verificar el código. Intente nuevamente.');
+            setFaError('No se pudo verificar el c�digo. Intente nuevamente.');
         } finally {
             setFaSubmitting(false);
         }
@@ -184,7 +184,7 @@ const handleRegenerateQR = async () => {
         e.preventDefault();
         if (recuperacionSubmitting) return;
         if (!correoRecuperacion || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correoRecuperacion)) {
-            setRecuperacionError('Ingresa un correo electrónico vÃƒÂ¡lido.');
+            setRecuperacionError('Ingresa un correo electr�nico vÒ¡lido.');
             return;
         }
         setRecuperacionSubmitting(true);
@@ -195,14 +195,14 @@ const handleRegenerateQR = async () => {
                 setFeedback({
                     type: 'success',
                     title: 'Revisa tu correo',
-                    message: result.mensaje || 'Te enviamos un enlace para restablecer tu contraseña. Revisa tu bandeja de entrada.',
+                    message: result.mensaje || 'Te enviamos un enlace para restablecer tu contrase�a. Revisa tu bandeja de entrada.',
                     afterClose: () => setFormData(INITIAL_FORM),
                 });
             } else {
-                setRecuperacionError(result.message || 'No se pudo enviar el enlace de recuperación.');
+                setRecuperacionError(result.message || 'No se pudo enviar el enlace de recuperaci�n.');
             }
         } catch {
-            setRecuperacionError('No se pudo enviar el enlace de recuperación.');
+            setRecuperacionError('No se pudo enviar el enlace de recuperaci�n.');
         } finally {
             setRecuperacionSubmitting(false);
         }
@@ -255,14 +255,14 @@ const handleRegenerateQR = async () => {
                         </div>
 
                         <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
-                            Iniciar Sesión en <br />
+                            Iniciar Sesi�n en <br />
                             <span className="text-white relative inline-block">
                                 HAGAMOSTECH
                                 <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                             </span>
                         </h2>
                         <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
-                            Ingresa a tu cuenta de HAGAMOSTECH para realizar tus pedidos, ver el catálogo y disfrutar de las mejores salteñas.
+                            Ingresa a tu cuenta de HAGAMOSTECH para realizar tus pedidos, ver el cat�logo y disfrutar de las mejores salte�as.
                         </p>
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
@@ -271,8 +271,8 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
-                                <p className="text-xs font-bold text-white">Salteñas</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Men�</p>
+                                <p className="text-xs font-bold text-white">Salte�as</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
@@ -284,7 +284,7 @@ const handleRegenerateQR = async () => {
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Cafés</p>
+                                <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
                             </div>
                         </div>
                         
@@ -321,7 +321,7 @@ const handleRegenerateQR = async () => {
                                 <span className="w-8 h-8 rounded-xl bg-red-50 border border-red-200 text-[#FF4D00] flex items-center justify-center">
                                     <i className="fas fa-user-shield text-sm"></i>
                                 </span>
-                                <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Iniciar Sesión</h3>
+                                <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Iniciar Sesi�n</h3>
                             </div>
                             <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Accede a tu panel HAGAMOSTECH</p>
                         </div>
@@ -360,7 +360,7 @@ const handleRegenerateQR = async () => {
                                         <i className="fas fa-shield-halved text-[11px]"></i>
                                     </span>
                                     <div>
-                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificación en dos pasos</p>
+                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificaci�n en dos pasos</p>
                                         <p className="text-[10px] font-bold text-gray-400">{paso2FA.nombre}</p>
                                     </div>
                                 </div>
@@ -368,7 +368,7 @@ const handleRegenerateQR = async () => {
                                  {paso2FA.primerUso && (
                                     <div className="mb-3 text-center rounded-xl border border-gray-100 bg-gray-50 p-4">
                                         <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">
-                                            Escanea este código con Google Authenticator
+                                            Escanea este c�digo con Google Authenticator
                                         </p>
                                          <div className="mx-auto w-44 h-44 bg-white p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
                                              <QRCodeSVG value={paso2FA.otpauthUrl} size={150} />
@@ -394,7 +394,7 @@ const handleRegenerateQR = async () => {
                                          className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-[#8B4513] px-3 py-2.5 text-[10px] font-black uppercase tracking-wide text-[#8B4513] transition-all hover:bg-[#8B4513] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                                      >
                                          <i className={`fas fa-qrcode ${qrRegenerating ? 'animate-pulse' : ''}`}></i>
-                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticación'}
+                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticaci�n'}
                                      </button>
                                  )}
 
@@ -418,7 +418,7 @@ const handleRegenerateQR = async () => {
 
                             <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                  <button type="submit" disabled={faSubmitting} className="w-full py-3.5 px-6 bg-[#FF4D00] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#FF4D00]/20 hover:shadow-[#FF4D00]/40 hover:-translate-y-0.5 hover:bg-[#D93D00] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar código'}</span>
+                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar c�digo'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-shield-halved text-white text-xs"></i></div>
                                 </button>
                                 <button
@@ -439,15 +439,15 @@ const handleRegenerateQR = async () => {
                                                     <i className="fas fa-key text-[11px]"></i>
                                                 </span>
                                                 <div>
-                                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Recuperar contraseña</p>
+                                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Recuperar contrase�a</p>
                                                 </div>
                                             </div>
                                             <p className="text-[12px] text-gray-600 font-medium leading-relaxed mb-3">
-                                                Escribe el correo de tu cuenta y te enviaremos un enlace para restablecer tu contraseña.
+                                                Escribe el correo de tu cuenta y te enviaremos un enlace para restablecer tu contrase�a.
                                             </p>
                                             <div className="relative group mb-2">
                                                 <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
-                                                <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Correo electrónico</label>
+                                                <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Correo electr�nico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#FF4D00] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
                                             {recuperacionError && (
@@ -456,11 +456,11 @@ const handleRegenerateQR = async () => {
                                         </div>
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                             <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#8B4513] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#8B4513]/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#5D3A1F] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                                <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
+                                                <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperaci�n'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-white text-xs"></i></div>
                                             </button>
                                             <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#8B4513] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-[#8B4513]/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#5D3A1F] transition-all duration-300 cursor-pointer">
-                                                <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesión
+                                                <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
                                             </button>
                                         </div>
                                     </form>
@@ -476,13 +476,13 @@ const handleRegenerateQR = async () => {
 
                                 <div className="relative group mb-3">
                                     <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
-                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Correo electrónico</label>
+                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Correo electr�nico</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#FF4D00] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                 </div>
 
                                 <div className="relative group">
                                     <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
-                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Contraseña</label>
+                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#FF4D00]">Contrase�a</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#FF4D00] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                 </div>
                             </div>

@@ -61,7 +61,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                     </h2>
                                     
                                     <p className="text-sm text-white/80 font-medium max-w-sm leading-relaxed mb-5">
-                                        {video.desc || "Descubre nuestras demostraciones de robÃ³tica, programaciÃ³n y soluciones de software explicadas de forma dinÃ¡mica y visual."}
+                                        {video.desc || "Descubre nuestras demostraciones de robótica, programación y soluciones de software explicadas de forma dinámica y visual."}
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widest mb-5 shadow-lg">

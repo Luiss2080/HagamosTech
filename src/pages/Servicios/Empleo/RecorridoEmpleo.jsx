@@ -1,4 +1,4 @@
-﻿import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
+�import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
@@ -21,9 +21,9 @@ const PROJECTS = [
   {
     num: '01',
     category: 'CV & ATS',
-    firstPart: 'Currï¿½culum',
+    firstPart: 'Curr�culum',
     highlightPart: 'Optimizado ATS',
-    desc: 'Estructuraciï¿½n de perfiles tï¿½cnicos destacando certificaciones DevOps, Scrum o experiencia mï¿½dica/administrativa para superar filtros automatizados.',
+    desc: 'Estructuraci�n de perfiles t�cnicos destacando certificaciones DevOps, Scrum o experiencia m�dica/administrativa para superar filtros automatizados.',
     tags: ['CV', 'ATS', 'Reclutamiento'],
     icon: 'fa-file-lines',
     images: [
@@ -37,7 +37,7 @@ const PROJECTS = [
     category: 'LINKEDIN',
     firstPart: 'Perfil de',
     highlightPart: 'LinkedIn',
-    desc: 'Configuraciï¿½n de titulares, extractos con palabras clave y networking estratï¿½gico para atraer a reclutadores IT y corporativos.',
+    desc: 'Configuraci�n de titulares, extractos con palabras clave y networking estrat�gico para atraer a reclutadores IT y corporativos.',
     tags: ['LinkedIn', 'Networking', 'Marca Personal'],
     icon: 'fa-brands fa-linkedin-in',
     images: [
@@ -48,11 +48,11 @@ const PROJECTS = [
   },
   {
     num: '03',
-    category: 'REDACCIï¿½N',
+    category: 'REDACCI�N',
     firstPart: 'Cartas y',
-    highlightPart: 'Traducciï¿½n',
-    desc: 'Redacciï¿½n persuasiva de Cover Letters adaptadas a vacantes especï¿½ficas y traducciï¿½n tï¿½cnica al inglï¿½s de todo tu perfil.',
-    tags: ['Cover Letter', 'Traducciï¿½n', 'Inglï¿½s'],
+    highlightPart: 'Traducci�n',
+    desc: 'Redacci�n persuasiva de Cover Letters adaptadas a vacantes espec�ficas y traducci�n t�cnica al ingl�s de todo tu perfil.',
+    tags: ['Cover Letter', 'Traducci�n', 'Ingl�s'],
     icon: 'fa-language',
     images: [
       'https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80',
@@ -65,7 +65,7 @@ const PROJECTS = [
     category: 'PORTAFOLIO',
     firstPart: 'Portafolios',
     highlightPart: 'Digitales',
-    desc: 'Compilaciï¿½n visual de proyectos de cï¿½digo (GitHub), diseï¿½os (Figma) o investigaciones acadï¿½micas en una pï¿½gina web propia.',
+    desc: 'Compilaci�n visual de proyectos de c�digo (GitHub), dise�os (Figma) o investigaciones acad�micas en una p�gina web propia.',
     tags: ['Portafolio', 'GitHub', 'Proyectos'],
     icon: 'fa-laptop-code',
     images: [
@@ -78,8 +78,8 @@ const PROJECTS = [
     num: '05',
     category: 'ENTREVISTAS',
     firstPart: 'Simulaciones y',
-    highlightPart: 'Asesorï¿½a',
-    desc: 'Preparaciï¿½n y simulaciones de entrevistas con enfoque en recursos humanos, preguntas tï¿½cnicas, mï¿½tricas y seguridad personal.',
+    highlightPart: 'Asesor�a',
+    desc: 'Preparaci�n y simulaciones de entrevistas con enfoque en recursos humanos, preguntas t�cnicas, m�tricas y seguridad personal.',
     tags: ['Entrevistas', 'Soft Skills', 'RRHH'],
     icon: 'fa-user-tie',
     images: [
@@ -90,10 +90,10 @@ const PROJECTS = [
   },
   {
     num: '06',
-    category: 'VALIDACIï¿½N',
+    category: 'VALIDACI�N',
     firstPart: 'Certificados',
     highlightPart: 'Digitales',
-    desc: 'Diseï¿½o y validaciï¿½n visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
+    desc: 'Dise�o y validaci�n visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
     tags: ['Certificados', 'Diplomas', 'Cursos'],
     icon: 'fa-certificate',
     images: [
@@ -173,12 +173,12 @@ const RecorridoEmpleo = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Apoyo AcadÃ©mico.
+              Apoyo Académico.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos web diseÃ±ados a la medida. InnovaciÃ³n, velocidad y resultados reales para empresas de todos los tamaÃ±os.
+            Proyectos web diseñados a la medida. Innovación, velocidad y resultados reales para empresas de todos los tamaños.
           </p>
         </div>
 

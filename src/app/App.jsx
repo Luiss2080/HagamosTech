@@ -131,7 +131,7 @@ const App = () => {
       
       console.log("App | Evento personalizado recibido para abrir modal:", modalName, orderData);
       
-      // Traducir nombre del modal segÃºn useModalStore.js
+      // Traducir nombre del modal según useModalStore.js
       let resolvedModalName = modalName;
       if (modalName === 'cardModal') resolvedModalName = 'cardModal'; // mapea a cardModal
       
