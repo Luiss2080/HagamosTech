@@ -19,12 +19,12 @@ const TECH_DETAILS = {
 const PROJECTS = [
   {
     num: '01',
-    category: 'E-COMMERCE',
-    firstPart: 'Tienda Virtual',
-    highlightPart: 'de Alta Conversión',
-    desc: 'Plataforma de comercio electrónico diseñada para ventas masivas. Incluye pasarelas de pago (Stripe/PayPal), carrito dinámico, catálogo filtrable y panel de administración.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe', 'Node.js', 'AWS', 'MySQL', 'Git'],
-    icon: 'fa-cart-shopping',
+    category: 'EMPRESARIALES',
+    firstPart: 'Páginas Web',
+    highlightPart: 'Empresariales',
+    desc: 'Sitios corporativos completos para clínicas, empresas de tecnología o cualquier rubro, transmitiendo confianza y autoridad.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'AWS', 'Git'],
+    icon: 'fa-building',
     images: [
       'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80',
@@ -36,11 +36,11 @@ const PROJECTS = [
   {
     num: '02',
     category: 'LANDING PAGE',
-    firstPart: 'Página Web',
-    highlightPart: 'Corporativa',
-    desc: 'Sitio web moderno tipo One-Page enfocado en la presentación de servicios B2B. Optimizado para captación de leads, SEO técnico y velocidad de carga ultrarrápida.',
+    firstPart: 'Landing Pages',
+    highlightPart: 'y Portafolios',
+    desc: 'Páginas de aterrizaje de alta conversión para captar leads o mostrar trabajos freelance con diseños de alto impacto visual.',
     tags: ['React', 'Tailwind CSS', 'Figma', 'Docker', 'AWS', 'Git'],
-    icon: 'fa-building',
+    icon: 'fa-rocket',
     images: [
       'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
@@ -51,12 +51,12 @@ const PROJECTS = [
   },
   {
     num: '03',
-    category: 'PORTFOLIO',
-    firstPart: 'Catálogo de',
-    highlightPart: 'Servicios',
-    desc: 'Portal interactivo con galerías de imágenes y videos de alto rendimiento. Ideal para estudios de diseño, arquitectos o agencias creativas que necesitan exhibir su trabajo.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'AWS', 'Git'],
-    icon: 'fa-images',
+    category: 'E-COMMERCE',
+    firstPart: 'Tiendas Online',
+    highlightPart: 'y Pedidos',
+    desc: 'E-commerce autogestionables con carritos de compra e integración de pagos locales y sistemas de pedidos directos.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe', 'MySQL', 'Git'],
+    icon: 'fa-cart-shopping',
     images: [
       'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80',
@@ -67,18 +67,34 @@ const PROJECTS = [
   },
   {
     num: '04',
-    category: 'REAL ESTATE',
-    firstPart: 'Portal',
-    highlightPart: 'Inmobiliario',
-    desc: 'Plataforma web dinámica para listar propiedades con filtros avanzados de búsqueda, mapas interactivos y sistema de reservas online. Diseño optimizado para retener leads y aumentar ventas de inmuebles.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'AWS', 'MySQL', 'Git'],
-    icon: 'fa-house-building',
+    category: 'CONTENIDO',
+    firstPart: 'Catálogos Digitales',
+    highlightPart: 'y Blogs',
+    desc: 'Muestrarios de productos dinámicos y blogs optimizados para posicionamiento orgánico (SEO) y retención de usuarios.',
+    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'AWS', 'Git'],
+    icon: 'fa-book-open',
     images: [
       'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
       'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80'
+    ]
+  },
+  {
+    num: '05',
+    category: 'UI/UX DESIGN',
+    firstPart: 'Diseño UI/UX',
+    highlightPart: 'y Responsive',
+    desc: 'Prototipado interactivo, encuestas digitales complejas y adaptación perfecta a todas las pantallas móviles (Web Responsive).',
+    tags: ['Figma', 'React', 'Tailwind CSS', 'Mobile First'],
+    icon: 'fa-mobile-screen-button',
+    images: [
+      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
     ]
   }
 ];

@@ -141,12 +141,12 @@ const SistemasApps = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Sistemas y Apps</span>
-                <span className="block whitespace-nowrap">de impacto <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+                <span className="block">Software y Hardware</span>
+                <span className="block whitespace-nowrap">Soluciones <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
               </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Diseño y desarrollo de aplicaciones móviles y plataformas web a medida para optimizar los procesos de tu empresa.
+                Desarrollo de software a medida, ensamblaje de equipos de alto rendimiento, venta de hardware y mantenimiento profesional.
               </p>
 
               {/* Action Buttons */}
@@ -318,16 +318,16 @@ const SistemasApps = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES SISTEMAS Y APLICACIONES Y CÓMO AYUDA A TU EMPRESA?
+                ¿QUÉ SON LAS SOLUCIONES TECNOLÓGICAS Y CÓMO AYUDAN A TU EMPRESA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
                 <p>
-                  Desarrollamos soluciones de software a medida, aplicaciones móviles y sistemas web robustos que optimizan y escalan las operaciones de tu empresa.
+                  Desarrollamos soluciones integrales que abarcan desde software a medida hasta hardware de alto rendimiento (PCs Gamer y de Oficina), asegurando el correcto funcionamiento de tu infraestructura digital con soporte técnico especializado.
                 </p>
                 <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Sistemas Web, Aplicaciones Móviles, APIs, Bases de Datos SQL, Dashboards Corporativos, Software a Medida, Arquitecturas Escalables y Mantenimiento de Servidores.
+                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+                  Desarrollo de Software a Medida, Venta de Computadoras y Hardware Básico, Ensamblaje de PCs Gamer/Profesionales, Mantenimiento y Reparación de Equipos, y Venta de Repuestos/Accesorios.
                 </p>
               </div>
             </div>
