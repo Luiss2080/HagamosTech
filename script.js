@@ -1,4 +1,4 @@
-const fs = require('fs');
+﻿const fs = require('fs');
 const path = require('path');
 
 const dir = 'c:/laragon/www/HagamosTech/src/pages/Servicios';
@@ -25,16 +25,13 @@ files.forEach(file => {
   let content = fs.readFileSync(file, 'utf8');
   
   if (!content.includes('ModernServiceGrid')) {
-    // Add import
-    content = \"import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';\n\" + content;
+    content = "import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';\n" + content;
   }
 
-  // Regex to match from {/* Vertical interleaved list */} until the closing </div> of that section.
-  // The closing div is before </section>
   const regex = /\{\/\*\s*Vertical interleaved list\s*\*\/\}.*?<\/section>/s;
   
   if (regex.test(content)) {
-    content = content.replace(regex, '<div className=\"mt-16\">\n          <ModernServiceGrid projects={PROJECTS} />\n        </div>\n      </section>');
+    content = content.replace(regex, '<div className="mt-16">\n          <ModernServiceGrid projects={PROJECTS} />\n        </div>\n      </section>');
     fs.writeFileSync(file, content, 'utf8');
     console.log('Updated', file);
   } else {
