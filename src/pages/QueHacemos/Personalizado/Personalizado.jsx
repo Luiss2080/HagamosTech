@@ -193,6 +193,7 @@ const BentoGrid = () => {
           </div>
           <h3 className="text-xl font-black text-white mb-2">Mantenimiento</h3>
           <p className="text-slate-400 text-sm font-medium">Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas nunca fallen.</p>
+        </div>
       </div>
 
     </div>
