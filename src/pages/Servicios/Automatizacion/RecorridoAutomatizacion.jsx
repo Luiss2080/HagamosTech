@@ -181,7 +181,8 @@ const RecorridoAutomatizacion = () => {
         <div className="mt-16">
           <ModernServiceGrid projects={PROJECTS} />
         </div>
-      </section>
+      </div>
+    </section>
   );
 };
 
