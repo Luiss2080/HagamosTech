@@ -211,8 +211,8 @@ const Negocio = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/Negocio.png"
-                    alt="Web Corporativa"
+                    src="/img/07_Servicios/soluciones/negocio.jpg"
+                    alt="Tecnología para Negocios"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"

@@ -211,7 +211,7 @@ const PaginasWeb = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/PaginaWeb.png"
+                    src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
                     alt="Web Corporativa"
                     loading="eager"
                     fetchPriority="high"

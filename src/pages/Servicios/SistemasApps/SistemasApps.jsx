@@ -211,8 +211,8 @@ const SistemasApps = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/SistemaApp.png"
-                    alt="Web Corporativa"
+                    src="/img/07_Servicios/soluciones/sistemas-apps.jpg"
+                    alt="Sistemas y Apps"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
