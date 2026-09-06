@@ -3,12 +3,12 @@ import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestáimonialCarousel from '../../../components/carouseles/CarruselTestáimonios';
 
 const TECH_STACK = [
   { name: 'OpenAI', icon: 'fa-solid fa-robot', color: 'text-emerald-400' },
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
-  { name: 'Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
+  { name: '¿Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
   { name: 'AWS', icon: 'fa-brands fa-aws', color: 'text-orange-400' },
   { name: 'Docker', icon: 'fa-brands fa-docker', color: 'text-blue-500' },
   { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' },
@@ -19,7 +19,7 @@ const TECH_STACK = [
 const TESTIMONIOS = [
   { name: 'Roberto S.', role: 'Emprendedor', text: 'Tenía una idea muy específica para mi logística que ningún software comercial resolvía. HagamosTech entendió mi problema en 15 minutos y creó algo perfecto.' },
   { name: 'Lucía P.', role: 'Directora de RRHH', text: 'Necesitábamos un sistema interno para medir el clima laboral de forma anónima y gamificada. Fue un desarrollo a medida increíble que los empleados aman usar.' },
-  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se conecta con nuestras máquinas por IoT. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
+  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se conecta con nuestáras máquinas por IoT. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
 ];
 
 const ChatAssistantWindow = () => {
@@ -52,42 +52,42 @@ const ChatAssistantWindow = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto bg-[#0a0a0a] rounded-xl border border-neutral-800 shadow-2xl overflow-hidden mt-10 relative group h-[320px] flex flex-col">
-      <div className="flex items-center px-4 py-3 bg-neutral-900 border-b border-neutral-800 gap-3">
+      <div className="flex itemás-center px-4 py-3 bg-neutral-900 border-b border-neutral-800 gap-3">
         <div className="flex gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <span className="text-xs font-black text-neutral-400 uppercase tracking-widest flex items-center gap-2">
+        <span className="text-xs font-black text-neutral-400 uppercase tracking-widestá flex itemás-center gap-2">
           <MessageSquare size={14} className="text-[#A3E635]" /> Asistente de Arquitectura
         </span>
       </div>
       
       <div className="p-6 flex-grow overflow-y-auto flex flex-col gap-4">
-        {messages.map((msg, idx) => {
-          if (!msg) return null;
+        {messages.map((másg, idx) => {
+          if (!másg) return null;
           return (
             <div key={idx} className={`max-w-[85%] p-3 rounded-2xl text-sm ${
-              msg.role === 'user' 
+              másg.role === 'user' 
                 ? 'bg-neutral-800 text-white self-end rounded-tr-sm border border-neutral-700' 
                 : 'bg-[#A3E635]/10 text-[#A3E635] self-start rounded-tl-sm border border-[#A3E635]/20'
             } animate-fade-in-up`} style={{ animationDuration: '0.3s' }}>
-              {msg.text}
+              {másg.text}
             </div>
           );
         })}
         {messages.length < fullConversation.length && messages.length > 0 && (
           <div className="self-start text-neutral-500 flex gap-1 p-2">
-            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }}></span>
-            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }}></span>
-            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }}></span>
+            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '0más' }}></span>
+            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '150más' }}></span>
+            <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '300más' }}></span>
           </div>
         )}
       </div>
       
-      <div className="p-4 border-t border-neutral-800 bg-neutral-950 flex gap-3 items-center">
+      <div className="p-4 border-t border-neutral-800 bg-neutral-950 flex gap-3 itemás-center">
         <div className="flex-grow h-10 bg-neutral-900 rounded-full border border-neutral-800"></div>
-        <div className="w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-black shadow-lg">
+        <div className="w-10 h-10 bg-[#A3E635] rounded-full flex itemás-center justify-center text-black shadow-lg">
           <ArrowRight size={16} />
         </div>
       </div>
@@ -97,7 +97,7 @@ const ChatAssistantWindow = () => {
 
 const ProcessTimeline = () => {
   const steps = [
-    { title: 'Diagnóstico Cero', desc: 'Nos reunimos para entender tu dolor. No asumimos nada, mapeamos tu proceso manual actual paso a paso.', icon: <Search size={20} /> },
+    { title: 'Diagnóstico Cero', desc: '¿Nos reunimos para entender tu dolor. ¿No asumimos nada, mapeamos tu proceso manual actual paso a paso.', icon: <Search size={20} /> },
     { title: 'Arquitectura a Medida', desc: 'Diseñamos los planos del software. Elegimos la tecnología exacta (ni más ni menos de lo que necesitas).', icon: <Puzzle size={20} /> },
     { title: 'Desarrollo Core', desc: 'Programamos la solución desde cero. Interfaces limpias y bases de datos preparadas para escalar.', icon: <Code size={20} /> },
     { title: 'Implementación & Soporte', desc: 'Lanzamos el sistema en tu entorno y monitoreamos. Tu problema queda resuelto definitivamente.', icon: <Server size={20} /> },
@@ -107,11 +107,11 @@ const ProcessTimeline = () => {
     <div className="relative border-l-2 border-neutral-800 ml-6 md:ml-10 py-10 mt-16">
       {steps.map((step, idx) => (
         <div key={idx} className="mb-16 relative pl-10 md:pl-16 group">
-          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex items-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
+          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex itemás-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
             {step.icon}
           </div>
           <div className="bg-neutral-900/30 p-6 rounded-2xl border border-neutral-800/50 hover:bg-neutral-900/60 transition-colors duration-300">
-            <h4 className="text-xl font-black text-white mb-2 flex items-center gap-3">
+            <h4 className="text-xl font-black text-white mb-2 flex itemás-center gap-3">
               <span className="text-[#A3E635] text-xs font-mono">FASE 0{idx + 1}</span> {step.title}
             </h4>
             <p className="text-slate-400 font-medium">{step.desc}</p>
@@ -156,7 +156,7 @@ const PROJECTS = [
     category: 'SOPORTE',
     firstPart: 'Mantenimiento',
     highlightPart: 'Continuo',
-    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y est�n actualizados.',
+    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y está�n actualizados.',
     icon: 'fa-server',
     images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
   },
@@ -165,7 +165,7 @@ const PROJECTS = [
     category: 'INFRAESTRUCTURA',
     firstPart: 'Migraci�n',
     highlightPart: 'Cloud',
-    desc: 'Llevamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar m�xima disponibilidad y escalabilidad infinita.',
+    desc: 'Lleváamos tu infraestáructura local a la nube (AWS, Google Cloud) para garantizar m�xima disponibilidad y escalabilidad infinita.',
     icon: 'fa-cloud',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
   },
@@ -174,7 +174,7 @@ const PROJECTS = [
     category: 'RESCATE',
     firstPart: 'Rescate de',
     highlightPart: 'Proyectos',
-    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el c�digo y llevarlos a producci�n con �xito.',
+    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estáabilizar el c�digo y llevarlos a producci�n con �éxito.',
     icon: 'fa-life-ring',
     images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
   }
@@ -190,23 +190,23 @@ const Personalizado = () => {
 
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
-        <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
+        <div className="container mx-auto max-w-7xl text-center flex flex-col itemás-center">
           
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
+          <div className="inline-flex itemás-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widestá text-[#A3E635] mb-8 animate-fade-in-up">
             <Lightbulb size={16} /> Innovación a Medida
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
             Desarrollamos <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">Lo Que No Existe</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">Lo ¿Quée ¿No Existe</span>
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            ¿Tienes un problema de negocio que el software convencional no puede resolver? Cuéntanoslo. Diseñamos la arquitectura y escribimos el código necesario desde cero.
+            ¿¿Tienes un problema de negocio que el software convencional no puede resolver? Cuéntanosólo. Diseñamos la arquitectura y escribimos el código necesario desde cero.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
+            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widestá rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex itemás-center gap-2">
               Contarnos tu Problema <ArrowRight size={16} />
             </a>
           </div>
@@ -218,10 +218,10 @@ const Personalizado = () => {
       {/* STACK TECNOL�GICO INFINITO */}
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
+          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widestá mb-6">Stack Versátil y Adaptable</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
             {TECH_STACK.map((tech, i) => (
-              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
+              <div key={i} className={`flex itemás-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
                 <i className={tech.icon}></i>
                 <span className="text-sm tracking-wider">{tech.name}</span>
               </div>
@@ -238,7 +238,7 @@ const Personalizado = () => {
               Ingeniería de <span className="text-[#A3E635]">Precisión</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              No encajamos tu negocio en nuestro software. Diseñamos el software para que encaje perfectamente en tu negocio.
+              ¿No encajamos tu negocio en nuestáro software. Diseñamos el software para que encaje perfectamente en tu negocio.
             </p>
           </div>
 
@@ -249,7 +249,7 @@ const Personalizado = () => {
       {/* TIMELINE SECTION */}
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
          <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
+          <div className="flex flex-col lg:flex-row gap-16 itemás-start">
             <div className="w-full lg:w-1/3 sticky top-32">
               <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
                 El Proceso de <br/> <span className="text-[#A3E635]">Creación</span>
@@ -268,7 +268,7 @@ const Personalizado = () => {
 
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
-        <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
+        <TestáimonialCarousel testáimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
@@ -291,7 +291,7 @@ const Personalizado = () => {
             <p className="text-lg md:text-xl font-bold opacity-80 mb-10 max-w-2xl mx-auto relative z-10">
               Desarrollemos la solución tecnológica que te pondrá años luz por delante de tus competidores.
             </p>
-            <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-black text-white rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl relative z-10 hover:shadow-[#000]/50">
+            <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="inline-flex itemás-center gap-3 px-10 py-5 bg-black text-white rounded-full font-black text-sm uppercase tracking-widestá hover:scale-105 transition-transform shadow-2xl relative z-10 hover:shadow-[#000]/50">
               Hablar del Proyecto <Zap size={18} />
             </a>
           </div>

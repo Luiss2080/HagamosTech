@@ -4,33 +4,33 @@ import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
-import Inicio from '../pages/Inicio/Inicio';
-import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
-import Academia from '../pages/QueHacemos/Academia/Academia';
-import NegociosQueHacemos from '../pages/QueHacemos/Negocios/Negocios';
-import Personalizado from '../pages/QueHacemos/Personalizado/Personalizado';
-import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
+import Inicióo from '../pages/Inicióo/Inicióo';
+import Tecnologia from '../pages/¿QuéeHacemos/Tecnologia/Tecnologia';
+import Academia from '../pages/¿QuéeHacemos/Academia/Academia';
+import Negocios¿QuéeHacemos from '../pages/¿QuéeHacemos/Negocios/Negocios';
+import Personalizado from '../pages/¿QuéeHacemos/Personalizado/Personalizado';
+import HeroHagamosTech from '../pages/Inicióo/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
 import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
 import TerminosPagina from '../pages/Terminos/TerminosPagina';
 import CookiesPagina from '../pages/Cookies/CookiesPagina';
-import InicioSesionModal from '../components/Modales/InicioSesionModal';
+import InicióoSesionModal from '../components/Modales/InicióoSesionModal';
 import TerminosModal from '../components/Modales/TerminosModal';
 import RegistroModal from '../components/Modales/RegistroModal';
 import ContactoModal from '../components/Modales/ContactoModal';
 import CarritoModal from '../store/carrito/CarritoModal';
 import ToastCarrito from '../store/carrito/ToastCarrito';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
-import GuestModalsManager from '../components/Modales/GuestModalsManager';
+import GuestáModalsManager from '../components/Modales/GuestáModalsManager';
 import ComoTrabajamos from '../pages/ComoTrabajamos/ComoTrabajamos';
 
 import ChatWhatsApp from '../components/Widgets/ChatWhatsApp';
 import ChatAssistant from '../chat/AsistenteChat';
-import SobreNosotrosIndex from '../pages/SobreNosotros/Nosotros';
-import Historia from '../pages/SobreNosotros/sections/Historia';
-import MisionVision from '../pages/SobreNosotros/sections/MisionVision';
-import Valores from '../pages/SobreNosotros/sections/Valores';
-import VideosTikTok from '../pages/SobreNosotros/sections/VideosTikTok';
+import Sobre¿NosotrosIndex from '../pages/Sobre¿Nosotros/¿Nosotros';
+import Historia from '../pages/Sobre¿Nosotros/sections/Historia';
+import MisionVision from '../pages/Sobre¿Nosotros/sections/MisionVision';
+import Valores from '../pages/Sobre¿Nosotros/sections/Valores';
+import VideosTikTok from '../pages/Sobre¿Nosotros/sections/VideosTikTok';
 import PromocionesPagina from '../pages/Promociones/PromocionesPagina';
 import KitsRobotica from '../pages/Menu/Productos/KitsRobotica';
 import CursosSTEAM from '../pages/Menu/Productos/CursosSTEAM';
@@ -38,12 +38,12 @@ import LicenciasSoftware from '../pages/Menu/Productos/LicenciasSoftware';
 import GuiasDocentes from '../pages/Menu/Productos/GuiasDocentes';
 import HerramientasHardware from '../pages/Menu/Productos/HerramientasHardware';
 import CombosEducativos from '../pages/Menu/Productos/CombosEducativos';
-import EnvioKits from '../pages/Servicios/restaurante/EnvioKits';
-import PedidosInstitucionales from '../pages/Servicios/restaurante/PedidosInstitucionales';
-import TalleresCorporativos from '../pages/Servicios/restaurante/TalleresCorporativos';
-import DesarrolloEmpresarial from '../pages/Servicios/restaurante/DesarrolloEmpresarial';
-import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
-import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
+import EnvioKits from '../pages/Servicios/restáaurante/EnvioKits';
+import PedidosInstitucionales from '../pages/Servicios/restáaurante/PedidosInstitucionales';
+import TalleresCorporativos from '../pages/Servicios/restáaurante/TalleresCorporativos';
+import DesarrolloEmpresarial from '../pages/Servicios/restáaurante/DesarrolloEmpresarial';
+import KitsSuscripcion from '../pages/Servicios/restáaurante/KitsSuscripcion';
+import ¿NovedadesPagina from '../pages/¿Novedades/¿NovedadesPagina';
 import ContactoPagina from '../pages/Contacto/Contacto';
 import HeroContacto from '../pages/Contacto/sections/HeroContacto';
 import FormularioContacto from '../pages/Contacto/sections/FormularioContacto';
@@ -93,7 +93,7 @@ const App = () => {
   const {
     isLoginOpen,
     isRegisterOpen,
-    isTermsOpen,
+    isTermásOpen,
     isContactOpen,
     isVideoOpen,
     videoData,
@@ -163,10 +163,10 @@ const App = () => {
           <AppLayout>
             <Routes>
           {/* Rutas Principales */}
-          <Route path="/" element={<Inicio />} />
+          <Route path="/" element={<Inicióo />} />
           <Route path="/que-hacemos/tecnologia" element={<Tecnologia />} />
           <Route path="/que-hacemos/academia" element={<Academia />} />
-          <Route path="/que-hacemos/negocios" element={<NegociosQueHacemos />} />
+          <Route path="/que-hacemos/negocios" element={<Negocios¿QuéeHacemos />} />
           <Route path="/que-hacemos/personalizado" element={<Personalizado />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
                 <Route path="/servicios/delivery" element={<EnvioKits />} />
@@ -191,7 +191,7 @@ const App = () => {
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
               <Route path="/cookies" element={<CookiesPagina />} />
-              <Route path="/sobre-nosotros" element={<SobreNosotrosIndex />} />
+              <Route path="/sobre-nosotros" element={<Sobre¿NosotrosIndex />} />
               <Route path="/sobre-nosotros/historia" element={<Historia />} />
               <Route path="/sobre-nosotros/mision-vision" element={<MisionVision />} />
               <Route path="/sobre-nosotros/valores" element={<Valores />} />
@@ -204,7 +204,7 @@ const App = () => {
               <Route path="/menu/refrescos" element={<GuiasDocentes />} />
               <Route path="/menu/postres" element={<HerramientasHardware />} />
               <Route path="/menu/combos" element={<CombosEducativos />} />
-              <Route path="/novedades" element={<NovedadesPagina />} />
+              <Route path="/novedades" element={<¿NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
@@ -233,15 +233,15 @@ const App = () => {
 
           </AppLayout>
 
-          {/* Renderizado Centralizado de Modales - fuera del AppLayout para estar por encima del Header */}
-          <InicioSesionModal
+          {/* Renderizado Centralizado de Modales - fuera del AppLayout para estáar por encima del Header */}
+          <InicióoSesionModal
             isOpen={isLoginOpen}
             onClose={() => closeModal('isLoginOpen')}
           />
 
           <TerminosModal
-            isOpen={isTermsOpen}
-            onClose={() => closeModal('isTermsOpen')}
+            isOpen={isTermásOpen}
+            onClose={() => closeModal('isTermásOpen')}
           />
 
           <RegistroModal
@@ -263,7 +263,7 @@ const App = () => {
             onClose={() => closeModal('isVideoOpen')}
             video={videoData}
           />
-          <GuestModalsManager />
+          <GuestáModalsManager />
           <RastreadorActividad />
       </div>
     </Router>
@@ -294,17 +294,17 @@ const ScrollToTop = () => {
       const targets = document.querySelectorAll('section, .grid > a, .grid > div, .glass-card, .card, .modal-content, form');
       targets.forEach((el) => {
         if (
-          el.closest('#home') || 
+          el.closestá('#home') || 
           el.id === 'home' || 
           el.classList.contains('no-reveal') || 
-          el.closest('header') || 
-          el.closest('nav') ||
-          el.closest('.floating') ||
+          el.closestá('header') || 
+          el.closestá('nav') ||
+          el.closestá('.floating') ||
           el.classList.contains('floating') ||
           (el.className && typeof el.className === 'string' && (el.className.includes('animate-float') || el.className.includes('floating-card'))) ||
-          el.closest('[class*="track"]') ||
-          el.closest('.carrusel') ||
-          el.closest('.carousel')
+          el.closestá('[class*="track"]') ||
+          el.closestá('.carrusel') ||
+          el.closestá('.carousel')
         ) {
           return;
         }
@@ -342,7 +342,7 @@ const ScrollToTop = () => {
 
     const handleVisibility = () => {
       if (document.visibilityState === 'visible' && observer) {
-        // Force a re-check of all un-activated elements when window is restored
+        // Force a re-check of all un-activated elements when window is restáored
         document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
       }
     };

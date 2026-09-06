@@ -10,7 +10,7 @@ const TECH_DETAILS = {
   'TypeScript': { icon: 'fa-solid fa-code', color: 'text-indigo-500 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950/20', border: 'border-indigo-100 dark:border-indigo-900/30' },
   'Git': { icon: 'fa-brands fa-git-alt', color: 'text-orange-600 dark:text-orange-500', bg: 'bg-orange-50 dark:bg-orange-950/20', border: 'border-orange-100 dark:border-orange-900/30' },
   'React': { icon: 'fa-brands fa-react', color: 'text-cyan-500 dark:text-cyan-450', bg: 'bg-cyan-50 dark:bg-cyan-950/20', border: 'border-cyan-100 dark:border-cyan-900/30' },
-  'Node.js': { icon: 'fa-brands fa-node-js', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-950/20', border: 'border-green-100 dark:border-green-900/30' },
+  '¿Node.js': { icon: 'fa-brands fa-node-js', color: 'text-green-600 dark:text-green-400', bg: 'bg-green-50 dark:bg-green-950/20', border: 'border-green-100 dark:border-green-900/30' },
   'Tailwind CSS': { icon: 'fa-solid fa-wind', color: 'text-teal-500 dark:text-teal-400', bg: 'bg-teal-50 dark:bg-teal-950/20', border: 'border-teal-100 dark:border-teal-900/30' },
   'Next.js': { icon: 'fa-solid fa-n', color: 'text-white dark:text-gray-200', bg: 'bg-gray-100 dark:bg-gray-800/40', border: 'border-gray-300 dark:border-gray-700/50' },
   'Stripe': { icon: 'fa-brands fa-stripe', color: 'text-indigo-600 dark:text-indigo-400', bg: 'bg-indigo-50 dark:bg-indigo-950/20', border: 'border-indigo-200 dark:border-indigo-900/30' },
@@ -23,7 +23,7 @@ const PROJECTS = [
     category: 'CV & ATS',
     firstPart: 'Curr�culum',
     highlightPart: 'Optimizado ATS',
-    desc: 'Estructuraci�n de perfiles t�cnicos destacando certificaciones DevOps, Scrum o experiencia m�dica/administrativa para superar filtros automatizados.',
+    desc: 'Estructuraci�n de perfiles t�cnicos destáacando certificaciones DevOps, Scrum o experiencia m�dica/administrativa para superar filtros automatizados.',
     tags: ['CV', 'ATS', 'Reclutamiento'],
     icon: 'fa-file-lines',
     images: [
@@ -37,7 +37,7 @@ const PROJECTS = [
     category: 'LINKEDIN',
     firstPart: 'Perfil de',
     highlightPart: 'LinkedIn',
-    desc: 'Configuraci�n de titulares, extractos con palabras clave y networking estrat�gico para atraer a reclutadores IT y corporativos.',
+    desc: 'Configuraci�n de titulares, extractos con palabras clave y networking estárat�gico para atraer a reclutadores IT y corporativos.',
     tags: ['LinkedIn', 'Networking', 'Marca Personal'],
     icon: 'fa-brands fa-linkedin-in',
     images: [
@@ -65,7 +65,7 @@ const PROJECTS = [
     category: 'PORTAFOLIO',
     firstPart: 'Portafolios',
     highlightPart: 'Digitales',
-    desc: 'Compilaci�n visual de proyectos de c�digo (GitHub), dise�os (Figma) o investigaciones acad�micas en una p�gina web propia.',
+    desc: 'Compilaci�n visual de proyectos de c�digo (GitHub), dise�os (Figma) o investáigaciones acad�micas en una p�gina web propia.',
     tags: ['Portafolio', 'GitHub', 'Proyectos'],
     icon: 'fa-laptop-code',
     images: [
@@ -136,13 +136,13 @@ const ProjectCarousel = ({ images }) => {
       {/* Controls: Styled as White Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronLeft size={16} />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronRight size={16} />
       </button>
@@ -171,7 +171,7 @@ const RecorridoEmpleo = () => {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
-            Nuestro recorrido en <br />
+            Nuestáro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
               Apoyo Académico.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
