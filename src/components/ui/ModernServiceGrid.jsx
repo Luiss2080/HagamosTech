@@ -38,7 +38,7 @@ const ModernServiceGrid = ({ projects }) => {
 
               {/* Icon & Title */}
               <div className="mb-4">
-                <div className="w-14 h-14 rounded-2xl bg-black/60 backdrop-blur-md border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-5 group-hover:bg-[#A3E635] group-hover:text-black group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg">
+                <div className="w-14 h-14 rounded-2xl bg-[#A3E635] border border-[#A3E635] flex items-center justify-center text-black mb-5 group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-[0_0_15px_rgba(163,230,53,0.3)]">
                   <i className={`fa-solid ${p.icon || 'fa-star'} text-2xl`}></i>
                 </div>
                 
@@ -62,7 +62,7 @@ const ModernServiceGrid = ({ projects }) => {
                 href={`https://wa.me/59161320004?text=Hola,%20quisiera%20más%20detalles%20sobre%20${encodeURIComponent(p.category || p.title || 'este servicio')}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full py-3.5 rounded-xl bg-black/40 hover:bg-[#A3E635] text-white hover:text-black border border-neutral-800 hover:border-[#A3E635] text-[11px] font-black uppercase tracking-[0.15em] transition-all duration-300 flex items-center justify-center gap-3 backdrop-blur-sm shadow-md"
+                className="w-full py-3.5 rounded-xl bg-[#A3E635] text-black border border-[#A3E635] hover:bg-[#84CC16] hover:border-[#84CC16] text-[11px] font-black uppercase tracking-[0.15em] transition-all duration-300 flex items-center justify-center gap-3 shadow-[0_0_15px_rgba(163,230,53,0.2)] hover:shadow-[0_0_25px_rgba(163,230,53,0.4)]"
               >
                 <span>Ver detalles</span>
                 <i className="fa-solid fa-arrow-right text-[10px] group-hover/btn:translate-x-1 transition-transform"></i>
