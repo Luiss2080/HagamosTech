@@ -19,7 +19,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
     const regenerarQR2FA = useAuthStore((state) => state.regenerarQR2FA);
     const [formData, setFormData] = useState(INITIAL_FORM);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [feedback, setFeedbacódigo2FA, setCódigo2FA] = useState('');
+    const [feedback, setFeedbacodigo2FA, setCódigo2FA] = useState('');
     const [faSubmitting, setFaSubmitting] = useState(false);
     const [qrRegenerating, setQrRegenerating] = useState(false);
     const [faError, setFaError] = useState('');
@@ -29,7 +29,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
     const [mostrarRecuperación, setMostrarRecuperación] = useState(false);
     const [correoRecuperación, setCorreoRecuperación] = useState('');
     const [recuperaciónSubmitting, setRecuperaciónSubmitting] = useState(false);
-    const [recuperaciónError, setRecuperaciónError] = useState('');
+    const [recuperaciónError, setRecuperacionError] = useState('');
 
     useEffect(() => {
         if (isOpen) {
@@ -42,7 +42,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
             setQrRegenerating(false);
             setMostrarRecuperación(false);
             setCorreoRecuperación('');
-            setRecuperaciónError('');
+            setRecuperacionError('');
         }
         return () => {
             document.body.style.overflow = 'unset';
@@ -65,7 +65,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
         try {
             const result = await login({
                 correo: formData.correo,
-                contraseña: formData.contraseña,
+                contraseña: formData.contrasena,
             });
 
             if (result?.requires2fa) {
@@ -73,7 +73,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
                     usuarioId: result.usuarioId,
                     primerUso: !!result.primerUso,
                     nombre: result.nombre,
-                    secódigo2FA('');
+                    setCodigo2FA('');
                 setFaError('');
                 return;
             }
@@ -107,14 +107,14 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
         }
     };
 
-    const handleSubmit2FA = asyncódigo2FA || código2FA.length !== 6) {
+    const handleSubmit2FA = asyncodigo2FA || codigo2FA.length !== 6) {
             setFaError('Ingresa el código dígitos de tu autenticador.');
             return;
         }
         setFaSubmitting(true);
         try {
-            const result = await verificar2fa(paso2FA.usuarioId, código2FA);
-            if (result.sucódigo2FA('');
+            const result = await verificar2fa(paso2FA.usuarioId, codigo2FA);
+            if (result.sucodigo2FA('');
                 setFaError('');
                 setFeedback({
                     type: 'success',
@@ -144,7 +144,7 @@ const handleRegenerateQR = async () => {
         setFaError('');
         try {
             const result = await regenerarQR2FA(paso2FA.usuarioId, {
-                código2FA('');
+                codigo2FA('');
             } else {
                 setFaError(result.message);
             }
@@ -156,14 +156,14 @@ const handleRegenerateQR = async () => {
     const handleForgotPassword = () => {
         setMostrarRecuperación(true);
         setCorreoRecuperación(formData.correo || '');
-        setRecuperaciónError('');
+        setRecuperacionError('');
     };
 
     const handleEnviarRecuperación = async (e) => {
         e.preventDefault();
         if (recuperaciónSubmitting) return;
         if (!correoRecuperación || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.testá(correoRecuperación)) {
-            setRecuperaciónError('Ingresa un correo electrónico válido.');
+            setRecuperacionError('Ingresa un correo electrónico válido.');
             return;
         }
         setRecuperaciónSubmitting(true);
@@ -178,10 +178,10 @@ const handleRegenerateQR = async () => {
                     afterClose: () => setFormData(INITIAL_FORM),
                 });
             } else {
-                setRecuperaciónError(result.message || '¿No se pudo enviar el enlace de recuperación.');
+                setRecuperacionError(result.message || '¿No se pudo enviar el enlace de recuperación.');
             }
         } catch {
-            setRecuperaciónError('¿No se pudo enviar el enlace de recuperación.');
+            setRecuperacionError('¿No se pudo enviar el enlace de recuperación.');
         } finally {
             setRecuperaciónSubmitting(false);
         }
@@ -380,7 +380,7 @@ const handleRegenerateQR = async () => {
                                         inputMode="numeric"
                                         autoComplete="one-time-code"
                                         maxLength="6"
-                                        value={código2FA}
+                                        value={codigo2FA}
                                         onChange={(e) => { setCódigo2FA(e.target.value.replace(/\D/g, '')); setFaError(''); }}
                                         className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
                                         placeholder="______"
@@ -422,7 +422,7 @@ const handleRegenerateQR = async () => {
                                                 Escribe el correo de tu cuenta y te enviaremos un enlace para restáablecer tu contraseña.
                                             </p>
                                             <div className="relative group mb-2">
-                                                <input type="email" value={correoRecuperación} onChange={(e) => { setCorreoRecuperación(e.target.value); setRecuperaciónError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                                <input type="email" value={correoRecuperación} onChange={(e) => { setCorreoRecuperación(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
@@ -435,7 +435,7 @@ const handleRegenerateQR = async () => {
                                                 <span className="relative z-10">{recuperaciónSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
                                             </button>
-                                            <button type="button" onClick={() => { setMostrarRecuperación(false); setRecuperaciónError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
+                                            <button type="button" onClick={() => { setMostrarRecuperación(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
                                                 <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
                                             </button>
                                         </div>
@@ -457,7 +457,7 @@ const handleRegenerateQR = async () => {
                                 </div>
 
                                 <div className="relative group">
-                                    <input type="password" name="contraseña" value={formData.contraseña} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                    <input type="password" name="contraseña" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
                                     <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                 </div>

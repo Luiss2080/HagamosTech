@@ -70,7 +70,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
             return;
         }
 
-        if (formData.contraseña !== formData.confirmarContraseña) {
+        if (formData.contrasena !== formData.confirmarContraseña) {
             setFeedback({
                 type: 'error',
                 title: 'Contraseñas distintas',
@@ -84,7 +84,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
             const result = await register({
                 nombre: formData.nombre,
                 correo: formData.correo,
-                contraseña: formData.contraseña,
+                contraseña: formData.contrasena,
             });
 
             if (result?.requiresVerification) {
@@ -386,7 +386,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                             </div>
  
                                             <div className="relative group mb-3">
-                                                <input type="password" name="contraseña" value={formData.contraseña} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                                <input type="password" name="contraseña" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                             </div>
