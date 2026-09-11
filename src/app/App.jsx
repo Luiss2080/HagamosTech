@@ -1,4 +1,4 @@
-﻿import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
@@ -7,7 +7,7 @@ import useAuthStore from '../store/useAutenticacionStore';
 import Inicio from '../pages/Inicio/Inicio';
 import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
 import Academia from '../pages/QueHacemos/Academia/Academia';
-import NegociosQueHacemos/Negocios/Negocios';
+import NegociosQueHacemos from '../pages/QueHacemos/Negocios/Negocios';
 import Personalizado from '../pages/QueHacemos/Personalizado/Personalizado';
 import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
 import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
@@ -21,16 +21,16 @@ import ContactoModal from '../components/Modales/ContactoModal';
 import CarritoModal from '../store/carrito/CarritoModal';
 import ToastCarrito from '../store/carrito/ToastCarrito';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
-import GuestÃ¡ModalsManager from '../components/Modales/GuestÃ¡ModalsManager';
+import GuestModalsManager from '../components/Modales/GuestModalsManager';
 import ComoTrabajamos from '../pages/ComoTrabajamos/ComoTrabajamos';
 
 import ChatWhatsApp from '../components/Widgets/ChatWhatsApp';
 import ChatAssistant from '../chat/AsistenteChat';
-import SobreÂ¿NosotrosIndex from '../pages/SobreÂ¿Nosotros/Â¿Nosotros';
-import Historia from '../pages/SobreÂ¿Nosotros/sections/Historia';
-import MisionVision from '../pages/SobreÂ¿Nosotros/sections/MisionVision';
-import Valores from '../pages/SobreÂ¿Nosotros/sections/Valores';
-import VideosTikTok from '../pages/SobreÂ¿Nosotros/sections/VideosTikTok';
+import SobreNosotrosIndex from '../pages/SobreNosotros/Nosotros';
+import Historia from '../pages/SobreNosotros/sections/Historia';
+import MisionVision from '../pages/SobreNosotros/sections/MisionVision';
+import Valores from '../pages/SobreNosotros/sections/Valores';
+import VideosTikTok from '../pages/SobreNosotros/sections/VideosTikTok';
 import PromocionesPagina from '../pages/Promociones/PromocionesPagina';
 import KitsRobotica from '../pages/Menu/Productos/KitsRobotica';
 import CursosSTEAM from '../pages/Menu/Productos/CursosSTEAM';
@@ -38,12 +38,12 @@ import LicenciasSoftware from '../pages/Menu/Productos/LicenciasSoftware';
 import GuiasDocentes from '../pages/Menu/Productos/GuiasDocentes';
 import HerramientasHardware from '../pages/Menu/Productos/HerramientasHardware';
 import CombosEducativos from '../pages/Menu/Productos/CombosEducativos';
-import EnvioKits from '../pages/Servicios/restÃ¡aurante/EnvioKits';
-import PedidosInstitucionales from '../pages/Servicios/restÃ¡aurante/PedidosInstitucionales';
-import TalleresCorporativos from '../pages/Servicios/restÃ¡aurante/TalleresCorporativos';
-import DesarrolloEmpresarial from '../pages/Servicios/restÃ¡aurante/DesarrolloEmpresarial';
-import KitsSuscripcion from '../pages/Servicios/restÃ¡aurante/KitsSuscripcion';
-import Â¿NovedadesPagina from '../pages/Â¿Novedades/Â¿NovedadesPagina';
+import EnvioKits from '../pages/Servicios/restaurante/EnvioKits';
+import PedidosInstitucionales from '../pages/Servicios/restaurante/PedidosInstitucionales';
+import TalleresCorporativos from '../pages/Servicios/restaurante/TalleresCorporativos';
+import DesarrolloEmpresarial from '../pages/Servicios/restaurante/DesarrolloEmpresarial';
+import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
+import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
 import ContactoPagina from '../pages/Contacto/Contacto';
 import HeroContacto from '../pages/Contacto/sections/HeroContacto';
 import FormularioContacto from '../pages/Contacto/sections/FormularioContacto';
@@ -93,7 +93,7 @@ const App = () => {
   const {
     isLoginOpen,
     isRegisterOpen,
-    isTermÃ¡sOpen,
+    isTermsOpen,
     isContactOpen,
     isVideoOpen,
     videoData,
@@ -191,7 +191,7 @@ const App = () => {
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
               <Route path="/cookies" element={<CookiesPagina />} />
-              <Route path="/sobre-nosotros" element={<SobreÂ¿NosotrosIndex />} />
+              <Route path="/sobre-nosotros" element={<SobreNosotrosIndex />} />
               <Route path="/sobre-nosotros/historia" element={<Historia />} />
               <Route path="/sobre-nosotros/mision-vision" element={<MisionVision />} />
               <Route path="/sobre-nosotros/valores" element={<Valores />} />
@@ -204,7 +204,7 @@ const App = () => {
               <Route path="/menu/refrescos" element={<GuiasDocentes />} />
               <Route path="/menu/postres" element={<HerramientasHardware />} />
               <Route path="/menu/combos" element={<CombosEducativos />} />
-              <Route path="/novedades" element={<Â¿NovedadesPagina />} />
+              <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
@@ -233,15 +233,15 @@ const App = () => {
 
           </AppLayout>
 
-          {/* Renderizado Centralizado de Modales - fuera del AppLayout para estÃ¡ar por encima del Header */}
+          {/* Renderizado Centralizado de Modales - fuera del AppLayout para estar por encima del Header */}
           <InicioSesionModal
             isOpen={isLoginOpen}
             onClose={() => closeModal('isLoginOpen')}
           />
 
           <TerminosModal
-            isOpen={isTermÃ¡sOpen}
-            onClose={() => closeModal('isTermÃ¡sOpen')}
+            isOpen={isTermsOpen}
+            onClose={() => closeModal('isTermsOpen')}
           />
 
           <RegistroModal
@@ -263,7 +263,7 @@ const App = () => {
             onClose={() => closeModal('isVideoOpen')}
             video={videoData}
           />
-          <GuestÃ¡ModalsManager />
+          <GuestModalsManager />
           <RastreadorActividad />
       </div>
     </Router>
@@ -294,17 +294,17 @@ const ScrollToTop = () => {
       const targets = document.querySelectorAll('section, .grid > a, .grid > div, .glass-card, .card, .modal-content, form');
       targets.forEach((el) => {
         if (
-          el.closestÃ¡('#home') || 
+          el.closest('#home') || 
           el.id === 'home' || 
           el.classList.contains('no-reveal') || 
-          el.closestÃ¡('header') || 
-          el.closestÃ¡('nav') ||
-          el.closestÃ¡('.floating') ||
+          el.closest('header') || 
+          el.closest('nav') ||
+          el.closest('.floating') ||
           el.classList.contains('floating') ||
           (el.className && typeof el.className === 'string' && (el.className.includes('animate-float') || el.className.includes('floating-card'))) ||
-          el.closestÃ¡('[class*="track"]') ||
-          el.closestÃ¡('.carrusel') ||
-          el.closestÃ¡('.carousel')
+          el.closest('[class*="track"]') ||
+          el.closest('.carrusel') ||
+          el.closest('.carousel')
         ) {
           return;
         }
@@ -342,7 +342,7 @@ const ScrollToTop = () => {
 
     const handleVisibility = () => {
       if (document.visibilityState === 'visible' && observer) {
-        // Force a re-check of all un-activated elements when window is restÃ¡ored
+        // Force a re-check of all un-activated elements when window is restored
         document.querySelectorAll('.reveal:not(.active)').forEach(el => observer.observe(el));
       }
     };
