@@ -21,10 +21,11 @@ HAGAMOSTECH/
 │   ├── store/              # Estado global (Zustand)
 │   └── styles/             # Estilos CSS
 ├── server/                 # Backend Node.js + Prisma
+│   ├── server.js           # Punto de entrada (Express)
+│   ├── auth/               # Autenticación: controllers + routes + utils
 │   ├── store/              # API pública (tienda): controllers + routes
-│   ├── system/             # API del panel: controllers + routes + utils
-│   ├── prisma/             # Esquema y seed de Prisma
-│   └── servidor.js         # Punto de entrada
+│   ├── models/             # Cliente Prisma
+│   └── prisma/             # schema.prisma y seed.js
 ├── scripts/                # Scripts de automatización
 │   ├── 01-dev.bat          # Iniciar desarrollo local
 │   └── 02-build.bat        # Build para producción

@@ -8,20 +8,19 @@ Backend API construido con **Node.js + Express + Prisma ORM**.
 
 ```
 server/
-├── servidor.js          # Punto de entrada (Express)
+├── server.js            # Punto de entrada (Express)
+├── auth/
+│   ├── controllers/     # AuthController, CuponController
+│   ├── routes/          # authRoutes, cuponRoutes
+│   └── utils/           # mailer, totp
+├── store/               # Backend público (tienda)
+│   ├── controllers/     # Catalogo, Carrito, Compra, Pago
+│   └── routes/          # catalogo, carrito, compra, pago, contacto
 ├── models/
 │   └── prisma.js        # Cliente Prisma
-├── store/               # Backend público (tienda)
-│   ├── controllers/     # 01_Catalogo, 02_Carrito, 03_Compra, 04_Pago
-│   └── routes/          # 01_catalogo, 02_carrito, 03_compra, 04_pago, 05_contacto
-├── system/              # Backend del panel administrativo
-│   ├── controllers/     # 01_Auth, 02_Cliente, 03_Usuario, 04_Rol, 05_Permiso, 06_System
-│   ├── routes/          # 01_auth, 02_cliente, 03_usuario, 04_rol, 05_permiso
-│   └── utils/           # 01_mailer, 02_totp
 ├── prisma/
-│   ├── esquema.prisma   # Esquema de la base de datos
-│   ├── semilla.js       # Ejecuta los seeds en orden
-│   └── seeds/           # 01_categorias, 02_productos, 03_catalogo_flujo, 04_sucursales
+│   ├── schema.prisma    # Esquema de la base de datos
+│   └── seed.js          # Ejecuta los seeds
 ├── package.json         # Dependencias
 └── .env                 # Configuración local
 ```
@@ -30,9 +29,9 @@ server/
 
 | Archivo | Descripción |
 |---------|-------------|
-| `servidor.js` | Inicializa Express, registra rutas, inicia servidor en puerto 3000 |
-| `prisma/esquema.prisma` | Define todos los modelos de la base de datos (MySQL) |
-| `prisma/semilla.js` | Script que ejecuta todos los seeds en orden |
+| `server.js` | Inicializa Express, registra rutas, inicia servidor en puerto 3000 |
+| `prisma/schema.prisma` | Define todos los modelos de la base de datos (MySQL) |
+| `prisma/seed.js` | Script que ejecuta los seeds |
 | `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/HagamosTech` |
 
 ## API Endpoints
