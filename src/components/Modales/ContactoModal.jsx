@@ -161,7 +161,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center transition-colors group-hover:bg-[#111827]">
                                                             <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
                                                         </div>
-                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{itemspan>
+                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{item.name}</span>
                                                     </a>
                                                 ))}
                                             </div>
