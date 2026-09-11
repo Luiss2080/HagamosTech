@@ -1,18 +1,18 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "servidor.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon servidor.js",
-    "start": "node servidor.js",
+    "dev": "nodemon server.js",
+    "start": "node server.js",
     "db:push": "prisma db push",
-    "db:seed": "node prisma/semilla.js",
+    "db:seed": "node prisma/seed.js",
     "db:studio": "prisma studio",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "prisma": {
-    "seed": "node prisma/semilla.js",
-    "schema": "prisma/esquema.prisma"
+    "seed": "node prisma/seed.js",
+    "schema": "prisma/schema.prisma"
   },
   "keywords": [],
   "author": "",

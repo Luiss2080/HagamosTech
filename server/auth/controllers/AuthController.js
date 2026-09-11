@@ -4,8 +4,8 @@ const {
     generarSecret,
     verificarCodigo,
     otpauthUrl
-} = require('../utils/02_totp');
-const { enviarCorreoVerificacion, enviarCorreoRecuperacion } = require('../utils/01_mailer');
+} = require('../utils/totp');
+const { enviarCorreoVerificacion, enviarCorreoRecuperacion } = require('../utils/mailer');
 
 // Roles que exigen doble factor (2FA / Google Authenticator) al iniciar sesión
 const ROLES_2FA = [1, 12, 13]; // Administrador, Secretaria, Personal HagamosTech
