@@ -265,21 +265,22 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Men�</p>
-                                <p className="text-xs font-bold text-white">Salte�as</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
+                                <p className="text-xs font-bold text-white">Sistemas Web</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
-                                <p className="text-xs font-bold text-white">Caseros y Helados</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p>
+                                <p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-mug-hot mr-1"></i> Bebidas</p>
-                                <p className="text-xs font-bold text-white">Gaseosas y Jugos</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p>
+                                <p className="text-xs font-bold text-white">Servidores AWS</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-brain mr-1"></i> IA</p>
+                                <p className="text-xs font-bold text-white">Inteligencia Artificial</p>
                             </div>
+                        </div>
                         </div>
                         
                         <div className="w-full mt-auto pt-4 flex flex-col items-center">
@@ -371,7 +372,7 @@ const handleRegenerateQR = async () => {
                                              type="button"
                                              onClick={handleRegenerateQR}
                                              disabled={qrRegenerating || faSubmitting}
-                                             className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#111827] px-3 py-2 text-[10px] font-black uppercase tracking-wide text-white shadow-md shadow-black/20 transition-all hover:bg-black hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
+                                             className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#111827] px-3 py-2 text-[10px] font-black uppercase tracking-wide text-white shadow-md shadow-black/20 transition-all hover:bg-[#84CC16] hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-60"
                                          >
                                              <i className={`fas fa-rotate-right ${qrRegenerating ? 'animate-spin' : ''}`}></i>
                                              {qrRegenerating ? 'Generando...' : 'Generar QR nuevamente'}
@@ -419,7 +420,7 @@ const handleRegenerateQR = async () => {
                                     type="button"
                                     onClick={handleBackToCredentials}
                                     disabled={faSubmitting}
-                                    className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-50"
+                                    className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-[#050505] font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 cursor-pointer disabled:opacity-50"
                                 >
                                     <i className="fas fa-arrow-left mr-1.5"></i> Volver a las credenciales
                                 </button>
@@ -449,11 +450,11 @@ const handleRegenerateQR = async () => {
                                             )}
                                         </div>
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
-                                            <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
+                                            <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-[#050505] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                                 <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
                                             </button>
-                                            <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
+                                            <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-[#050505] font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 cursor-pointer">
                                                 <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
                                             </button>
                                         </div>
