@@ -267,8 +267,7 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
-                                <p className="text-xs font-bold text-white">Sistemas Web</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p><p className="text-xs font-bold text-white">Sistemas Web</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p><p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
