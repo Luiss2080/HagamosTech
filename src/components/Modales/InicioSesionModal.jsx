@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { QRCodeSVG } from 'qrcode.react';
 import CircleParticles from '../fondos/ParticulasCirculares';
 import useAuthStore from '../../store/useAutenticacionStore';
-import ModalEéxito from './ModalEéxito';
+import ModalExito from './ModalExito';
 import ModalError from './ModalError';
 
 const INITIAL_FORM = {
@@ -534,7 +534,7 @@ const handleRegenerateQR = async () => {
                     </div>
                 </div>
             </div>
-            <ModalEéxito
+            <ModalExito
                 isOpen={feedback?.type === 'success'}
                 onClose={handleCloseFeedback}
                 title={feedback?.title}

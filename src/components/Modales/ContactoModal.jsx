@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import CircleParticles from '../fondos/ParticulasCirculares';
 import ApiService from '../../servicios/servicioContacto';
-import ModalEéxito from './ModalEéxito';
+import ModalExito from './ModalExito';
 import ModalError from './ModalError';
 
 const ContactoModal = ({ isOpen, onClose }) => {
@@ -310,7 +310,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                 </div>
             </div>
 
-            <ModalEéxito
+            <ModalExito
                 isOpen={feedback?.type === 'success'}
                 onClose={handleCloseFeedback}
                 title={feedback?.title}
