@@ -7,7 +7,6 @@ Sistema de chat con asistente virtual y procesamiento de lenguaje natural.
 | Carpeta / Archivo | Descripción |
 |-------------------|-------------|
 | `AsistenteChat.jsx` | Componente principal del asistente virtual |
-| `index.js` | Punto de entrada y exportaciones del módulo |
 | `components/` | Sub-componentes de la interfaz de chat |
 | `data/` | Base de conocimiento y configuración del asistente |
 | `hooks/` | Lógica de estado y comportamiento del chat |
