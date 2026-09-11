@@ -33,9 +33,24 @@ model Usuario {
   verificacionCorreos     VerificacionCorreo[]
   recuperacionPasswords   RecuperacionPassword[]
   cuponDescuento          CuponDescuento?
+  suscripcion             Suscripcion?
 
-  @@index([rolId], map: "fk_usuarios_rol")
+  @@index([rolId], map: "idx_usuarios_rol")
   @@map("usuarios")
+}
+
+model Suscripcion {
+  id                Int      @id @default(autoincrement())
+  usuarioId         Int      @unique
+  estado            String   @default("suscrito") @db.VarChar(50)
+  fechaFinPrueba    DateTime? @map("fecha_fin_prueba") @db.DateTime(0)
+  invitadoActivado  Boolean  @default(false) @map("invitado_activado")
+  invitadoExtendido Boolean  @default(false) @map("invitado_extendido")
+  creadoEn          DateTime @default(now()) @map("creado_en") @db.DateTime(0)
+  actualizadoEn     DateTime @updatedAt @map("actualizado_en") @db.DateTime(0)
+  usuario           Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@map("suscripciones")
 }
 
 model CuponDescuento {
@@ -64,7 +79,7 @@ model VerificacionCorreo {
   usadoEn   DateTime? @map("usado_en") @db.DateTime(0)
   usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_verif_usuario")
 
-  @@index([usuarioId], map: "fk_verif_usuario")
+  @@index([usuarioId], map: "idx_verif_usuario")
   @@map("verificacion_correos")
 }
 
@@ -79,7 +94,7 @@ model RecuperacionPassword {
   ipSolicitud String?  @map("ip_solicitud") @db.VarChar(45)
   usuario     Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_recup_usuario")
 
-  @@index([usuarioId], map: "fk_recup_usuario")
+  @@index([usuarioId], map: "idx_recup_usuario")
   @@map("recuperacion_password")
 }
 
