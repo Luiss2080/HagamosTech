@@ -66,19 +66,6 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
             const result = await login({
                 correo: formData.correo,
                 contraseña: formData.contrasena,
-            });
-
-            if (result?.requires2fa) {
-                setPaso2FA({
-                    usuarioId: result.usuarioId,
-                    primerUso: !!result.primerUso,
-                    nombre: result.nombre,
-                    setCodigo2FA('');
-                setFaError('');
-                return;
-            }
-
-            if (result?.success) {
                 setFeedback({
                     type: 'success',
                     title: 'Inicio de sesión exitoso',
