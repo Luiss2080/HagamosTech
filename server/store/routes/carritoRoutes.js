@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const CarritoController = require('../controllers/02_CarritoController');
+const CarritoController = require('../controllers/CarritoController');
 
 router.get('/', CarritoController.getCarrito);
 router.post('/', CarritoController.addItem);

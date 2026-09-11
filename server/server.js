@@ -31,14 +31,14 @@ app.use((req, res, next) => {
 });
 
 // --- ESTRUCTURA MVC: IMPORTACIÓN DE RUTAS ---
-const catalogoRoutes = require('./store/routes/01_catalogoRoutes');
-const authRoutes = require('./auth/routes/01_authRoutes');
-const pagoRoutes = require('./store/routes/04_pagoRoutes');
-const carritoRoutes = require('./store/routes/02_carritoRoutes');
-const compraRoutes = require('./store/routes/03_compraRoutes');
-const contactoRoutes = require('./store/routes/05_contactoRoutes');
-const AuthController = require('./auth/controllers/01_AuthController');
-const cuponRoutes = require('./auth/routes/06_cuponRoutes');
+const catalogoRoutes = require('./store/routes/catalogoRoutes');
+const authRoutes = require('./auth/routes/authRoutes');
+const pagoRoutes = require('./store/routes/pagoRoutes');
+const carritoRoutes = require('./store/routes/carritoRoutes');
+const compraRoutes = require('./store/routes/compraRoutes');
+const contactoRoutes = require('./store/routes/contactoRoutes');
+const AuthController = require('./auth/controllers/AuthController');
+const cuponRoutes = require('./auth/routes/cuponRoutes');
 
 // --- ESTRUCTURA MVC: REGISTRO DE RUTAS ---
 app.use('/api/catalogo', catalogoRoutes);
