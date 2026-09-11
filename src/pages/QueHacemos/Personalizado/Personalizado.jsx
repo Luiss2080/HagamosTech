@@ -129,16 +129,16 @@ const PROJECTS = [
     category: 'MODULARES',
     firstPart: 'Proyectos',
     highlightPart: 'Especiales',
-    desc: 'Si tienes una idea at�pica o un m�dulo espec�fico que agregar a tu sistema actual, dise�amos exactamente lo que necesitas.',
+    desc: 'Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, dise�amos exactamente lo que necesitas.',
     icon: 'fa-puzzle-piece',
     images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '02',
-    category: 'MENTOR�A',
-    firstPart: 'Auditor�a &',
+    category: 'MENTORÍA',
+    firstPart: 'Auditoría &',
     highlightPart: 'Mentor�a',
-    desc: 'Mentor�as 1 a 1 y auditor�as completas para modernizar tu tecnolog�a y guiar a tu equipo in-house.',
+    desc: 'Mentorías 1 a 1 y auditorías completas para modernizar tu tecnolog�a y guiar a tu equipo in-house.',
     icon: 'fa-lightbulb',
     images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
   },
@@ -156,16 +156,16 @@ const PROJECTS = [
     category: 'SOPORTE',
     firstPart: 'Mantenimiento',
     highlightPart: 'Continuo',
-    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y está�n actualizados.',
+    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y estén actualizados.',
     icon: 'fa-server',
     images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '05',
     category: 'INFRAESTRUCTURA',
-    firstPart: 'Migraci�n',
+    firstPart: 'Migración',
     highlightPart: 'Cloud',
-    desc: 'Lleváamos tu infraestáructura local a la nube (AWS, Google Cloud) para garantizar m�xima disponibilidad y escalabilidad infinita.',
+    desc: 'Llevábamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar máxima disponibilidad y escalabilidad infinita.',
     icon: 'fa-cloud',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
   },
@@ -174,7 +174,7 @@ const PROJECTS = [
     category: 'RESCATE',
     firstPart: 'Rescate de',
     highlightPart: 'Proyectos',
-    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estáabilizar el c�digo y llevarlos a producci�n con �éxito.',
+    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el código y llevarlos a producción con éxito.',
     icon: 'fa-life-ring',
     images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
   }

@@ -76,8 +76,8 @@ const ModalExito = ({
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Men�</p>
-                                            <p className="text-xs font-bold text-white">Salte�as</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
+                                            <p className="text-xs font-bold text-white">Salteñas</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
@@ -89,7 +89,7 @@ const ModalExito = ({
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                            <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
+                                            <p className="text-xs font-bold text-white">Naturales y Cafés</p>
                                         </div>
                                     </div>
                                 </div>

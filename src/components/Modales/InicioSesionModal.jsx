@@ -265,8 +265,8 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Men�</p>
-                                <p className="text-xs font-bold text-white">Salte�as</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
+                                <p className="text-xs font-bold text-white">Salteñas</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
@@ -278,7 +278,7 @@ const handleRegenerateQR = async () => {
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
+                                <p className="text-xs font-bold text-white">Naturales y Cafés</p>
                             </div>
                         </div>
                         
@@ -354,7 +354,7 @@ const handleRegenerateQR = async () => {
                                         <i className="fas fa-shield-halved text-[11px]"></i>
                                     </span>
                                     <div>
-                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificaci�n en dos pasos</p>
+                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificación en dos pasos</p>
                                         <p className="text-[10px] font-bold text-gray-400">{paso2FA.nombre}</p>
                                     </div>
                                 </div>
@@ -362,7 +362,7 @@ const handleRegenerateQR = async () => {
                                  {paso2FA.primerUso && (
                                     <div className="mb-3 text-center rounded-xl border border-gray-100 bg-gray-50 p-4">
                                         <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">
-                                            Escanea estáe c�digo con Google Authenticator
+                                            Escanea este código con Google Authenticator
                                         </p>
                                          <div className="mx-auto w-44 h-44 bg-white p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
                                              <QRCodeSVG value={paso2FA.otpauthUrl} size={150} />
@@ -388,7 +388,7 @@ const handleRegenerateQR = async () => {
                                          className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-3 py-2.5 text-[10px] font-black uppercase tracking-wide text-gray-700 transition-all hover:bg-[#111827] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                                      >
                                          <i className={`fas fa-qrcode ${qrRegenerating ? 'animate-pulse' : ''}`}></i>
-                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticaci�n'}
+                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticación'}
                                      </button>
                                  )}
 
@@ -412,7 +412,7 @@ const handleRegenerateQR = async () => {
 
                             <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                  <button type="submit" disabled={faSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar c�digo'}</span>
+                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar código'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-shield-halved text-black text-xs"></i></div>
                                 </button>
                                 <button
@@ -454,7 +454,7 @@ const handleRegenerateQR = async () => {
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
                                             </button>
                                             <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
-                                                <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
+                                                <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesión
                                             </button>
                                         </div>
                                     </form>
