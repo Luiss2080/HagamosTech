@@ -109,8 +109,9 @@ const ModalExito = ({
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            <div className="relative flex flex-col justify-center h-full bg-[#F9F9F9] p-5 lg:p-6">
+                        <div className="relative flex flex-col justify-center h-full bg-[#F9F9F9] p-5 lg:p-6">
                                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                                     <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                                     <div className="absolute top-1/2 -left-10 w-40 h-40 bg-[#111827]/20 rounded-full blur-2xl"></div>
