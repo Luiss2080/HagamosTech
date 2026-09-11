@@ -245,7 +245,7 @@ const handleRegenerateQR = async () => {
 
                     <div className="relative z-10 flex flex-col items-center text-center">
                         <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                            <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i></div>
+                            <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i></div></div>
                         </div>
 
                         <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
@@ -291,7 +291,7 @@ const handleRegenerateQR = async () => {
                                     { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                     { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                 ].map((item, i) => (
-                                    <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#5D3A1F] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                                    <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#84CC16] transition-all duration-300 shadow-lg hover:-translate-y-1">
                                         <i className={`fab ${item.icon} text-[13px]`}></i>
                                     </a>
                                 ))}
@@ -419,7 +419,7 @@ const handleRegenerateQR = async () => {
                                     type="button"
                                     onClick={handleBackToCredentials}
                                     disabled={faSubmitting}
-                                    className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-50"
+                                    className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-50"
                                 >
                                     <i className="fas fa-arrow-left mr-1.5"></i> Volver a las credenciales
                                 </button>
@@ -449,11 +449,11 @@ const handleRegenerateQR = async () => {
                                             )}
                                         </div>
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
-                                            <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
+                                            <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                                 <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
                                             </button>
-                                            <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
+                                            <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
                                                 <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
                                             </button>
                                         </div>

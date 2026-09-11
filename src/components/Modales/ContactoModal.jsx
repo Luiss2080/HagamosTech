@@ -156,12 +156,12 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         href={item.link}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="group cursor-pointer flex items-center justify-center gap-2 rounded-lg border border-[#c5a059]/20 bg-[#111827]/30 px-2 py-2.5 hover:bg-[#A3E635] transition-all duration-300 hover:border-[#c5a059] hover:shadow-xl hover:-translate-y-1"
+                                                        className="group cursor-pointer flex items-center justify-center gap-2 rounded-lg border border-[#c5a059]/20 bg-[#111827]/30 px-2 py-2.5 hover:bg-[#A3E635] transition-all duration-300 hover:border-[#A3E635] hover:shadow-xl hover:-translate-y-1"
                                                     >
                                                         <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center transition-colors group-hover:bg-[#111827]">
                                                             <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
                                                         </div>
-                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{item.name}</span>
+                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{itemspan>
                                                     </a>
                                                 ))}
                                             </div>
