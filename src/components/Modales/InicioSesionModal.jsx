@@ -8,7 +8,7 @@ import ModalError from './ModalError';
 
 const INITIAL_FORM = {
     correo: 'admin@hagamostech.com',
-    contrasena: 'password123',
+    contraseña: 'password123',
     rememberMe: true,
 };
 
@@ -23,17 +23,17 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
 
     // â⬝��â⬝�� Doble Factor (Google Authenticator) â⬝��â⬝��
     const [paso2FA, setPaso2FA] = useState(null);
-    const [codigo2FA, setCodigo2FA] = useState('');
+    const [código2FA, setCódigo2FA] = useState('');
     const [faSubmitting, setFaSubmitting] = useState(false);
     const [qrRegenerating, setQrRegenerating] = useState(false);
     const [faError, setFaError] = useState('');
 
-    // â⬝��â⬝�� Recuperaci�n de contrase�a â⬝��â⬝��
-    const solicitarRecuperacion = useAuthStore((state) => state.solicitarRecuperacion);
-    const [mostrarRecuperacion, setMostrarRecuperacion] = useState(false);
-    const [correoRecuperacion, setCorreoRecuperacion] = useState('');
-    const [recuperacionSubmitting, setRecuperacionSubmitting] = useState(false);
-    const [recuperacionError, setRecuperacionError] = useState('');
+    // â⬝��â⬝�� Recuperación de contraseña â⬝��â⬝��
+    const solicitarRecuperación = useAuthStore((state) => state.solicitarRecuperación);
+    const [mostrarRecuperación, setMostrarRecuperación] = useState(false);
+    const [correoRecuperación, setCorreoRecuperación] = useState('');
+    const [recuperaciónSubmitting, setRecuperaciónSubmitting] = useState(false);
+    const [recuperaciónError, setRecuperaciónError] = useState('');
 
     useEffect(() => {
         if (isOpen) {
@@ -41,12 +41,12 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
         } else {
             document.body.style.overflow = 'unset';
             setPaso2FA(null);
-            setCodigo2FA('');
+            setCódigo2FA('');
             setFaError('');
             setQrRegenerating(false);
-            setMostrarRecuperacion(false);
-            setCorreoRecuperacion('');
-            setRecuperacionError('');
+            setMostrarRecuperación(false);
+            setCorreoRecuperación('');
+            setRecuperaciónError('');
         }
         return () => {
             document.body.style.overflow = 'unset';
@@ -69,7 +69,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
         try {
             const result = await login({
                 correo: formData.correo,
-                contrasena: formData.contrasena,
+                contraseña: formData.contraseña,
             });
 
             if (result?.requires2fa) {
@@ -80,7 +80,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                     secret: result.secret,
                     otpauthUrl: result.otpauthUrl,
                 });
-                setCodigo2FA('');
+                setCódigo2FA('');
                 setFaError('');
                 return;
             }
@@ -117,16 +117,16 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
     const handleSubmit2FA = async (e) => {
         e.preventDefault();
         if (faSubmitting || !paso2FA) return;
-        if (!codigo2FA || codigo2FA.length !== 6) {
-            setFaError('Ingresa el c�digo de 6 dÒ­gitos de tu autenticador.');
+        if (!código2FA || código2FA.length !== 6) {
+            setFaError('Ingresa el código de 6 dÒ­gitos de tu autenticador.');
             return;
         }
         setFaSubmitting(true);
         try {
-            const result = await verificar2fa(paso2FA.usuarioId, codigo2FA);
+            const result = await verificar2fa(paso2FA.usuarioId, código2FA);
             if (result.success) {
                 setPaso2FA(null);
-                setCodigo2FA('');
+                setCódigo2FA('');
                 setFaError('');
                 setFeedback({
                     type: 'success',
@@ -139,10 +139,10 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                     },
                 });
             } else {
-                setFaError(result.message || 'El c�digo de autenticaci�n es incorrecto.');
+                setFaError(result.message || 'El código de autenticación es incorrecto.');
             }
         } catch {
-            setFaError('¿No se pudo verificar el c�digo. Intente nuevamente.');
+            setFaError('¿No se pudo verificar el código. Intente nuevamente.');
         } finally {
             setFaSubmitting(false);
         }
@@ -150,7 +150,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
 
     const handleBackToCredentials = () => {
         setPaso2FA(null);
-        setCodigo2FA('');
+        setCódigo2FA('');
         setFaError('');
     };
 
@@ -161,11 +161,11 @@ const handleRegenerateQR = async () => {
         try {
             const result = await regenerarQR2FA(paso2FA.usuarioId, {
                 correo: formData.correo,
-                contrasena: formData.contrasena,
+                contraseña: formData.contraseña,
             });
             if (result.success) {
                 setPaso2FA((prev) => ({ ...prev, primerUso: true, secret: result.secret, otpauthUrl: result.otpauthUrl }));
-                setCodigo2FA('');
+                setCódigo2FA('');
             } else {
                 setFaError(result.message);
             }
@@ -175,36 +175,36 @@ const handleRegenerateQR = async () => {
     };
 
     const handleForgotPassword = () => {
-        setMostrarRecuperacion(true);
-        setCorreoRecuperacion(formData.correo || '');
-        setRecuperacionError('');
+        setMostrarRecuperación(true);
+        setCorreoRecuperación(formData.correo || '');
+        setRecuperaciónError('');
     };
 
-    const handleEnviarRecuperacion = async (e) => {
+    const handleEnviarRecuperación = async (e) => {
         e.preventDefault();
-        if (recuperacionSubmitting) return;
-        if (!correoRecuperacion || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.testá(correoRecuperacion)) {
-            setRecuperacionError('Ingresa un correo electr�nico vÒ¡lido.');
+        if (recuperaciónSubmitting) return;
+        if (!correoRecuperación || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.testá(correoRecuperación)) {
+            setRecuperaciónError('Ingresa un correo electrónico vÒ¡lido.');
             return;
         }
-        setRecuperacionSubmitting(true);
+        setRecuperaciónSubmitting(true);
         try {
-            const result = await solicitarRecuperacion(correoRecuperacion);
+            const result = await solicitarRecuperación(correoRecuperación);
             if (result.success) {
-                setMostrarRecuperacion(false);
+                setMostrarRecuperación(false);
                 setFeedback({
                     type: 'success',
                     title: 'Revisa tu correo',
-                    message: result.mensaje || 'Te enviamos un enlace para restáablecer tu contrase�a. Revisa tu bandeja de entrada.',
+                    message: result.mensaje || 'Te enviamos un enlace para restáablecer tu contraseña. Revisa tu bandeja de entrada.',
                     afterClose: () => setFormData(INITIAL_FORM),
                 });
             } else {
-                setRecuperacionError(result.message || '¿No se pudo enviar el enlace de recuperaci�n.');
+                setRecuperaciónError(result.message || '¿No se pudo enviar el enlace de recuperación.');
             }
         } catch {
-            setRecuperacionError('¿No se pudo enviar el enlace de recuperaci�n.');
+            setRecuperaciónError('¿No se pudo enviar el enlace de recuperación.');
         } finally {
-            setRecuperacionSubmitting(false);
+            setRecuperaciónSubmitting(false);
         }
     };
 
@@ -245,24 +245,20 @@ const handleRegenerateQR = async () => {
 
                     <div className="relative z-10 flex flex-col items-center text-center">
                         <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                            <img
-                                src="/img/02_Logos/LogoModal.png"
-                                alt="HAGAMOSTECH"
-                                loading="lazy"
-                                decoding="async"
-                                className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"
-                            />
+                            <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
+                <i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i>
+            </div>
                         </div>
 
                         <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
-                            Inicióar Sesi�n en <br />
+                            Iniciar Sesión en <br />
                             <span className="text-white relative inline-block">
                                 HAGAMOSTECH
                                 <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                             </span>
                         </h2>
                         <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
-                            Ingresa a tu cuenta de HAGAMOSTECH para realizar tus pedidos, ver el cat�logo y disfrutar de las mejores salte�as.
+                            Ingresa a tu cuenta de HAGAMOSTECH para realizar tus pedidos, ver el catálogo y disfrutar de las mejores soluciones.
                         </p>
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
@@ -271,7 +267,7 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Men�</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
                                 <p className="text-xs font-bold text-white">Salte�as</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
@@ -282,7 +278,7 @@ const handleRegenerateQR = async () => {
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
+                                <p className="text-xs font-bold text-white">Naturales y Cafés</p>
                             </div>
                         </div>
                         
@@ -319,12 +315,12 @@ const handleRegenerateQR = async () => {
                                 <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-user-shield text-sm"></i>
                                 </span>
-                                <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Inicióar Sesi�n</h3>
+                                <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Iniciar Sesión</h3>
                             </div>
                             <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Accede a tu panel HAGAMOSTECH</p>
                         </div>
  
-                        {(!paso2FA?.primerUso) && !mostrarRecuperacion && (
+                        {(!paso2FA?.primerUso) && !mostrarRecuperación && (
                         <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
                             <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
@@ -358,7 +354,7 @@ const handleRegenerateQR = async () => {
                                         <i className="fas fa-shield-halved text-[11px]"></i>
                                     </span>
                                     <div>
-                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificaci�n en dos pasos</p>
+                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificación en dos pasos</p>
                                         <p className="text-[10px] font-bold text-gray-400">{paso2FA.nombre}</p>
                                     </div>
                                 </div>
@@ -366,7 +362,7 @@ const handleRegenerateQR = async () => {
                                  {paso2FA.primerUso && (
                                     <div className="mb-3 text-center rounded-xl border border-gray-100 bg-gray-50 p-4">
                                         <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">
-                                            Escanea estáe c�digo con Google Authenticator
+                                            Escanea estáe código con Google Authenticator
                                         </p>
                                          <div className="mx-auto w-44 h-44 bg-white p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
                                              <QRCodeSVG value={paso2FA.otpauthUrl} size={150} />
@@ -392,7 +388,7 @@ const handleRegenerateQR = async () => {
                                          className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-3 py-2.5 text-[10px] font-black uppercase tracking-wide text-[#8B4513] transition-all hover:bg-[#111827] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                                      >
                                          <i className={`fas fa-qrcode ${qrRegenerating ? 'animate-pulse' : ''}`}></i>
-                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticaci�n'}
+                                         {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticación'}
                                      </button>
                                  )}
 
@@ -402,9 +398,9 @@ const handleRegenerateQR = async () => {
                                         inputMode="numeric"
                                         autoComplete="one-time-code"
                                         maxLength="6"
-                                        value={codigo2FA}
-                                        onChange={(e) => { setCodigo2FA(e.target.value.replace(/\D/g, '')); setFaError(''); }}
-                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
+                                        value={código2FA}
+                                        onChange={(e) => { setCódigo2FA(e.target.value.replace(/\D/g, '')); setFaError(''); }}
+                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
                                         placeholder="______"
                                         required
                                     />
@@ -416,7 +412,7 @@ const handleRegenerateQR = async () => {
 
                             <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                  <button type="submit" disabled={faSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar c�digo'}</span>
+                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar código'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-shield-halved text-black text-xs"></i></div>
                                 </button>
                                 <button
@@ -429,35 +425,35 @@ const handleRegenerateQR = async () => {
                                 </button>
                             </div>
                                     </form>
-                                    ) : mostrarRecuperacion ? (
-                                    <form onSubmit={handleEnviarRecuperacion} className="flex flex-col gap-3.5" autoComplete="off">
+                                    ) : mostrarRecuperación ? (
+                                    <form onSubmit={handleEnviarRecuperación} className="flex flex-col gap-3.5" autoComplete="off">
                                         <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                             <div className="mb-3 flex items-center gap-2">
                                                 <span className="w-7 h-7 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                                     <i className="fas fa-key text-[11px]"></i>
                                                 </span>
                                                 <div>
-                                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Recuperar contrase�a</p>
+                                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Recuperar contraseña</p>
                                                 </div>
                                             </div>
                                             <p className="text-[12px] text-gray-600 font-medium leading-relaxed mb-3">
-                                                Escribe el correo de tu cuenta y te enviaremos un enlace para restáablecer tu contrase�a.
+                                                Escribe el correo de tu cuenta y te enviaremos un enlace para restáablecer tu contraseña.
                                             </p>
                                             <div className="relative group mb-2">
-                                                <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
-                                                <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electr�nico</label>
+                                                <input type="email" value={correoRecuperación} onChange={(e) => { setCorreoRecuperación(e.target.value); setRecuperaciónError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                                <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
-                                            {recuperacionError && (
-                                                <p className="text-[11px] font-bold text-red-500"><i className="fas fa-circle-exclamation mr-1"></i>{recuperacionError}</p>
+                                            {recuperaciónError && (
+                                                <p className="text-[11px] font-bold text-red-500"><i className="fas fa-circle-exclamation mr-1"></i>{recuperaciónError}</p>
                                             )}
                                         </div>
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
-                                            <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                                <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperaci�n'}</span>
+                                            <button type="submit" disabled={recuperaciónSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
+                                                <span className="relative z-10">{recuperaciónSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
                                             </button>
-                                            <button type="button" onClick={() => { setMostrarRecuperacion(false); setRecuperacionError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
+                                            <button type="button" onClick={() => { setMostrarRecuperación(false); setRecuperaciónError(''); }} className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer">
                                                 <i className="fas fa-arrow-left mr-1.5"></i> Volver a iniciar sesi�n
                                             </button>
                                         </div>
@@ -473,14 +469,14 @@ const handleRegenerateQR = async () => {
                                 </div>
 
                                 <div className="relative group mb-3">
-                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
-                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electr�nico</label>
+                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                 </div>
 
                                 <div className="relative group">
-                                    <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#FF4D00] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
-                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contrase�a</label>
+                                    <input type="password" name="contraseña" value={formData.contraseña} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                 </div>
                             </div>
@@ -494,7 +490,7 @@ const handleRegenerateQR = async () => {
                                             name="rememberMe"
                                             checked={formData.rememberMe}
                                             onChange={handleChange}
-                                            className="w-4 h-4 rounded border-gray-300 accent-[#FF4D00]"
+                                            className="w-4 h-4 rounded border-gray-300 accent-[#A3E635]"
                                         />
                                         Recordarme
                                     </label>
@@ -511,7 +507,7 @@ const handleRegenerateQR = async () => {
 
                             <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                  <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                    <span className="relative z-10">{isSubmitting ? 'Ingresando...' : 'Entrar a Inicióar Sesion'}</span>
+                                    <span className="relative z-10">{isSubmitting ? 'Ingresando...' : 'Iniciar Sesión'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-arrow-right text-black text-xs"></i></div>
                                     <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                                 </button>

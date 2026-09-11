@@ -46,7 +46,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
             if (resp?.status) {
                 setFeedback({
                     type: 'success',
-                    title: 'Mensaje enviado',
+                    title: 'Menúaje enviado',
                     message: resp?.message || 'Gracias por contactarnos. Responderemos lo antes posible.',
                     afterClose: () => {
                         setFormData({ name: '', phone: '', email: '', message: '' });
@@ -111,13 +111,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                     <div className="relative z-10 flex flex-col h-full justify-center text-center items-center">
                                         <div className="flex flex-col items-center">
                                             <div className="mb-7 inline-flex items-center justify-center rounded-full bg-white/20 p-3 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                                                <img
-                                                    src="/img/01_Layout/01_Logo.png"
-                                                    alt="HAGAMOSTECH"
-                                                    loading="lazy"
-                                                    decoding="async"
-                                                    className="h-36 w-36 rounded-full object-contain"
-                                                />
+                                                <i className="fas fa-headset text-[#050505]" style={{ fontSize: '70px' }}></i>
                                             </div>
 
                                             <h2 className="text-4xl font-black text-white leading-tight mb-3 tracking-tight drop-shadow-lg">
@@ -236,7 +230,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                             name="name"
                                                             value={formData.name}
                                                             onChange={handleChange}
-                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                             placeholder="¿Nombre completo"
                                                             required
                                                         />
@@ -250,7 +244,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                             name="phone"
                                                             value={formData.phone}
                                                             onChange={handleChange}
-                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                             placeholder="Celular"
                                                             required
                                                         />
@@ -267,7 +261,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         name="email"
                                                         value={formData.email}
                                                         onChange={handleChange}
-                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                         placeholder="Email"
                                                         required
                                                     />
@@ -281,11 +275,11 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         rows="4"
                                                         value={formData.message}
                                                         onChange={handleChange}
-                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md resize-none"
-                                                        placeholder="Mensaje"
+                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#a41e22] dark:focus:border-[#c5a059] focus:ring-[#A3E635] focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md resize-none"
+                                                        placeholder="Menúaje"
                                                         required
                                                     ></textarea>
-                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Mensaje</label>
+                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Menúaje</label>
                                                     <div className="absolute top-0 h-12 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635] transition-colors duration-300"><i className="fas fa-comment-dots text-base"></i></div>
                                                 </div>
                                             </div>
@@ -295,7 +289,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 disabled={isSubmitting}
                                                 className="mt-1 w-full py-4 bg-[#A3E635] text-[#111827] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#c5a059]/20 hover:shadow-gray-900/40 hover:-translate-y-0.5 hover:bg-[#a88544] hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                                             >
-                                                <span className="relative z-10">{isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}</span>
+                                                <span className="relative z-10">{isSubmitting ? 'Enviando...' : 'Enviar Menúaje'}</span>
                                                 <div className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10">
                                                     <i className="fas fa-paper-plane text-[#111827] group-hover:text-black text-xs"></i>
                                                 </div>

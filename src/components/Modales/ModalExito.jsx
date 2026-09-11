@@ -51,7 +51,7 @@ const ModalExito = ({
                                 <div className="relative z-10 flex flex-col items-center text-center">
                                     <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md relative">
                                         <div className="h-36 w-36 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
-                                            <img src="/img/02_Logos/LogoModal.png" alt="HAGAMOSTECH" className="h-full w-full object-contain" />
+                                            <i className="fas fa-check-circle text-[#050505]" style={{ fontSize: '70px' }}></i>
                                         </div>
                                         <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center shadow-lg">
                                             <i className="fas fa-check text-white text-sm"></i>
@@ -76,7 +76,7 @@ const ModalExito = ({
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-utensils mr-1"></i> Men�</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-utensils mr-1"></i> Menú</p>
                                             <p className="text-xs font-bold text-white">Salte�as</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
@@ -87,7 +87,7 @@ const ModalExito = ({
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                            <p className="text-xs font-bold text-white">Naturales y Caf�s</p>
+                                            <p className="text-xs font-bold text-white">Naturales y Cafés</p>
                                         </div>
                                     </div>
                                 </div>
