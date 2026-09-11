@@ -35,7 +35,7 @@ model Usuario {
   cuponDescuento          CuponDescuento?
   suscripcion             Suscripcion?
 
-  @@index([rolId], map: "idx_usuarios_rol")
+  @@index([rolId], map: "fk_usuarios_rol")
   @@map("usuarios")
 }
 
@@ -79,7 +79,7 @@ model VerificacionCorreo {
   usadoEn   DateTime? @map("usado_en") @db.DateTime(0)
   usuario   Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_verif_usuario")
 
-  @@index([usuarioId], map: "idx_verif_usuario")
+  @@index([usuarioId], map: "fk_verif_usuario")
   @@map("verificacion_correos")
 }
 
@@ -94,7 +94,7 @@ model RecuperacionPassword {
   ipSolicitud String?  @map("ip_solicitud") @db.VarChar(45)
   usuario     Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_recup_usuario")
 
-  @@index([usuarioId], map: "idx_recup_usuario")
+  @@index([usuarioId], map: "fk_recup_usuario")
   @@map("recuperacion_password")
 }
 
@@ -139,8 +139,8 @@ model DetalleRolPermisos {
   permiso Permiso @relation(fields: [fkIdP], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_permiso")
   rol     Rol     @relation(fields: [fkIdR], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_rol")
 
-  @@index([fkIdP], map: "idx_detalle_permiso")
-  @@index([fkIdR], map: "idx_detalle_rol")
+  @@index([fkIdP], map: "fk_detalle_permiso")
+  @@index([fkIdR], map: "fk_detalle_rol")
   @@map("detalle_rol_permisos")
 }
 
