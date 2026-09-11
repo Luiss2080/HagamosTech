@@ -58,80 +58,63 @@ const CompilerWindow = () => {
   );
 };
 
-const BentoGrid = () => {
+const ESPECIALIDADES = [
+  {
+    title: 'Ciencias de la Salud',
+    desc: 'Recreamos escenarios clínicos virtuales y modelos anatómicos 3D para medicina y enfermería.',
+    icon: <Stethoscope size={20} />,
+    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    title: 'Sistemas de Información',
+    desc: 'Modelado de bases de datos y despliegue en servidores cloud AWS para ingeniería.',
+    icon: <Laptop size={20} />,
+    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    title: 'Recursos Educativos e IA',
+    desc: 'Plataformas E-Learning e Inteligencia Artificial para tutores virtuales.',
+    icon: <Microscope size={20} />,
+    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    title: 'Defensas Interactivas',
+    desc: 'Presentaciones de alto nivel técnico para impresionar a cualquier jurado.',
+    icon: <BookOpen size={20} />,
+    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    title: 'Análisis Estadístico',
+    desc: 'Procesamiento de datos y modelado con herramientas avanzadas para investigaciones.',
+    icon: <LineChart size={20} />,
+    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
+  },
+  {
+    title: 'Algoritmos y Lógica',
+    desc: 'Desarrollo de algoritmos complejos para resolver problemas computacionales en tesis.',
+    icon: <Binary size={20} />,
+    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
+  }
+];
+
+const EspecialidadesGrid = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 auto-rows-[300px]">
-      
-      {/* Bento Item 1: Large Span */}
-      <div className="md:col-span-2 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:border-[#A3E635]/40 transition-colors group overflow-hidden relative flex flex-col md:flex-row items-center">
-        <div className="p-8 relative z-10 flex flex-col justify-between h-full w-full md:w-1/2">
-          <div className="flex justify-between items-start mb-6">
-            <div className="w-14 h-14 rounded-2xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] shadow-lg group-hover:scale-110 transition-transform">
-              <Stethoscope size={24} />
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
+      {ESPECIALIDADES.map((item, idx) => (
+        <div key={idx} className="rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
+          <div className="h-1/2 w-full overflow-hidden relative">
+             <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
+             <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
+          </div>
+          <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end flex-grow">
+            <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform shadow-lg relative z-20">
+              {item.icon}
             </div>
-            <span className="px-3 py-1 bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black uppercase tracking-wider rounded-lg border border-[#A3E635]/20">Salud</span>
-          </div>
-          <div>
-            <h3 className="text-2xl font-black text-white mb-3">Ciencias de la Salud</h3>
-            <p className="text-slate-400 font-medium leading-relaxed max-w-sm">Recreamos escenarios clínicos virtuales, modelos anatómicos 3D y sistemas de gestión para tesis de medicina y enfermería.</p>
+            <h3 className="text-xl font-black text-white mb-2">{item.title}</h3>
+            <p className="text-slate-400 text-sm font-medium">{item.desc}</p>
           </div>
         </div>
-        <div className="w-full md:w-1/2 h-48 md:h-full relative overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-r from-neutral-900/40 via-transparent to-transparent z-10 hidden md:block"></div>
-          <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 via-transparent to-transparent z-10 md:hidden"></div>
-          <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80" alt="Medicina" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80" />
-        </div>
-      </div>
-
-      {/* Bento Item 2: Vertical Span */}
-      <div className="md:col-span-1 md:row-span-2 rounded-[2rem] bg-gradient-to-b from-[#A3E635] to-[#84CC16] text-black hover:scale-[1.02] transition-transform duration-500 overflow-hidden relative flex flex-col shadow-[0_0_30px_rgba(163,230,53,0.15)] cursor-pointer">
-        <div className="h-2/5 w-full relative overflow-hidden">
-           <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80" alt="Sistemas" className="w-full h-full object-cover mix-blend-multiply opacity-80" />
-           <div className="absolute inset-0 bg-gradient-to-t from-[#A3E635] via-transparent to-transparent"></div>
-        </div>
-        <div className="p-8 relative z-10 flex-grow flex flex-col justify-end">
-          <div className="w-14 h-14 rounded-2xl bg-black/10 backdrop-blur-md flex items-center justify-center text-black mb-4 border border-black/10">
-            <Laptop size={24} />
-          </div>
-          <h3 className="text-3xl font-black mb-3 uppercase tracking-tight">Sistemas de Información</h3>
-          <p className="font-bold opacity-80 leading-relaxed text-sm mb-6">Desde el modelado de bases de datos hasta el despliegue funcional en servidores cloud AWS para proyectos de ingeniería.</p>
-          <div className="flex flex-col gap-2">
-            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Arquitectura Cloud</div>
-            <div className="flex items-center gap-2 font-black text-xs uppercase tracking-widest"><CheckCircle2 size={16} /> Bases de Datos</div>
-          </div>
-        </div>
-      </div>
-
-      {/* Bento Item 3 */}
-      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
-        <div className="h-1/2 w-full overflow-hidden relative">
-           <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80" alt="E-Learning" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
-        </div>
-        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform shadow-lg relative z-20">
-            <Microscope size={20} />
-          </div>
-          <h3 className="text-xl font-black text-white mb-2">Recursos Educativos e IA</h3>
-          <p className="text-slate-400 text-sm font-medium">Plataformas E-Learning e Inteligencia Artificial para tutores virtuales.</p>
-        </div>
-      </div>
-
-      {/* Bento Item 4 */}
-      <div className="md:col-span-1 md:row-span-1 rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
-        <div className="h-1/2 w-full overflow-hidden relative">
-           <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Defensas" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-           <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
-        </div>
-        <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end">
-          <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:rotate-12 transition-transform shadow-lg relative z-20">
-            <BookOpen size={20} />
-          </div>
-          <h3 className="text-xl font-black text-white mb-2">Defensas Interactivas</h3>
-          <p className="text-slate-400 text-sm font-medium">Presentaciones de alto nivel técnico para impresionar a cualquier jurado.</p>
-        </div>
-      </div>
-
+      ))}
     </div>
   );
 };
@@ -218,7 +201,7 @@ const Academia = () => {
             </p>
           </div>
 
-          <BentoGrid />
+          <EspecialidadesGrid />
         </div>
       </section>
 
