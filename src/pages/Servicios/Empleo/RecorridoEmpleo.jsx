@@ -18,90 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {
-    num: '01',
-    category: 'CV & ATS',
-    firstPart: 'Curr�culum',
-    highlightPart: 'Optimizado ATS',
-    desc: 'Estructuraci�n de perfiles t�cnicos destáacando certificaciones DevOps, Scrum o experiencia m�dica/administrativa para superar filtros automatizados.',
-    tags: ['CV', 'ATS', 'Reclutamiento'],
-    icon: 'fa-file-lines',
-    images: [
-      'https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '02',
-    category: 'LINKEDIN',
-    firstPart: 'Perfil de',
-    highlightPart: 'LinkedIn',
-    desc: 'Configuraci�n de titulares, extractos con palabras clave y networking estárat�gico para atraer a reclutadores IT y corporativos.',
-    tags: ['LinkedIn', 'Networking', 'Marca Personal'],
-    icon: 'fa-brands fa-linkedin-in',
-    images: [
-      'https://images.unsplash.com/photo-1616469829581-73993eb86b02?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1557200134-90327ee9fafa?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '03',
-    category: 'REDACCI�N',
-    firstPart: 'Cartas y',
-    highlightPart: 'Traducci�n',
-    desc: 'Redacci�n persuasiva de Cover Letters adaptadas a vacantes espec�ficas y traducci�n t�cnica al ingl�s de todo tu perfil.',
-    tags: ['Cover Letter', 'Traducci�n', 'Ingl�s'],
-    icon: 'fa-language',
-    images: [
-      'https://images.unsplash.com/photo-1455390582262-044cdead27d8?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1450101499163-c8848c66cb85?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1455849318743-b2233052fcff?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '04',
-    category: 'PORTAFOLIO',
-    firstPart: 'Portafolios',
-    highlightPart: 'Digitales',
-    desc: 'Compilaci�n visual de proyectos de c�digo (GitHub), dise�os (Figma) o investáigaciones acad�micas en una p�gina web propia.',
-    tags: ['Portafolio', 'GitHub', 'Proyectos'],
-    icon: 'fa-laptop-code',
-    images: [
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '05',
-    category: 'ENTREVISTAS',
-    firstPart: 'Simulaciones y',
-    highlightPart: 'Asesor�a',
-    desc: 'Preparaci�n y simulaciones de entrevistas con enfoque en recursos humanos, preguntas t�cnicas, m�tricas y seguridad personal.',
-    tags: ['Entrevistas', 'Soft Skills', 'RRHH'],
-    icon: 'fa-user-tie',
-    images: [
-      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '06',
-    category: 'VALIDACI�N',
-    firstPart: 'Certificados',
-    highlightPart: 'Digitales',
-    desc: 'Dise�o y validaci�n visual de diplomas, constancias de cursos y participaciones en eventos y voluntariados.',
-    tags: ['Certificados', 'Diplomas', 'Cursos'],
-    icon: 'fa-certificate',
-    images: [
-      'https://images.unsplash.com/photo-1589330694653-ded6df03f754?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80'
-    ]
-  }
+  {"num":"01","category":"CV & ATS","firstPart":"Currículum","highlightPart":"Optimizado ATS","desc":"Estructuración de perfiles técnicos que superan los filtros de reclutamiento.","tags":["ATS","Keywords","PDF"],"icon":"fa-file-user","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"02","category":"LINKEDIN","firstPart":"Perfil de","highlightPart":"LinkedIn","desc":"Titulares, extractos y networking estratégico para atraer reclutadores.","tags":["LinkedIn","Networking","Extracto"],"icon":"fa-linkedin","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"03","category":"REDACCIÓN","firstPart":"Cartas y","highlightPart":"Traducción","desc":"Redacción persuasiva adaptada a vacantes y traducción técnica al inglés.","tags":["Cartas","Inglés","Redacción"],"icon":"fa-envelope-open-text","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"04","category":"PORTAFOLIO","firstPart":"Entrevistas","highlightPart":"y Certificados","desc":"Simulación de entrevistas, portafolios digitales y certificados profesionales.","tags":["Entrevistas","Portafolio","Certificados"],"icon":"fa-certificate","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]}
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -173,12 +93,11 @@ const RecorridoEmpleo = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestáro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Apoyo Académico.
-              <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Empleo.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos web diseñados a la medida. Innovación, velocidad y resultados reales para empresas de todos los tamaños.
+            CV, LinkedIn, cartas y entrevistas para destacar tu talento.
           </p>
         </div>
 

@@ -18,76 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {
-    num: '01',
-    category: 'BRANDING',
-    firstPart: 'Logos e',
-    highlightPart: 'Identidad Visual',
-    desc: 'Creaci�n de marcas memorables, desde isologotipos hasta manuales de marca para servicios t�cnicos, restáaurantes o corporaciones.',
-    tags: ['Logos', 'Branding', 'Identidad'],
-    icon: 'fa-pen-nib',
-    images: [
-      'https://images.unsplash.com/photo-1626785774573-4b799315345d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1611532736597-de2d4265fba3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '02',
-    category: 'PUBLICIDAD',
-    firstPart: 'Flyers y',
-    highlightPart: 'Redes Sociales',
-    desc: 'Gr�ficos publicitarios de alto impacto en formato cuadrado (4x4) y gran formato para exposiciones, pancartas o Instagram.',
-    tags: ['Redes Sociales', 'Banners', 'Marketing'],
-    icon: 'fa-bullhorn',
-    images: [
-      'https://images.unsplash.com/photo-1611162617474-5b21e879e113?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '03',
-    category: 'PRODUCTO',
-    firstPart: 'Packaging y',
-    highlightPart: 'Cat�logos',
-    desc: 'Dise�o de empaquíes sostenibles, etiquetas atractivas y maquíetaci�n de cat�logos impresos para destáacar tus productos f�sicos.',
-    tags: ['Packaging', 'Cat�logos', 'Impresi�n'],
-    icon: 'fa-box-open',
-    images: [
-      'https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1628191010210-a59de33e5941?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '04',
-    category: 'CORPORATIVO',
-    firstPart: 'Tarjetas e',
-    highlightPart: 'Invitaciones',
-    desc: 'Tarjetas de presentaci�n corporativas elegantes (opci�n con c�digo QR integrado) e invitaciones digitales/impresas para eventos.',
-    tags: ['Tarjetas', 'QR', 'Eventos'],
-    icon: 'fa-id-card',
-    images: [
-      'https://images.unsplash.com/photo-1589829085413-56de8ae18c73?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1558227691-41ea78d1f631?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '05',
-    category: 'POST-PRODUCCI�N',
-    firstPart: 'Edici�n',
-    highlightPart: 'Fotogr�fica',
-    desc: 'Mejora de calidad de imagen, correcci�n de color profesional y eliminaci�n de fondos para cat�logos de comercio electr�nico.',
-    tags: ['Retoque', 'Fotograf�a', 'Photoshop'],
-    icon: 'fa-wand-magic-sparkles',
-    images: [
-      'https://images.unsplash.com/photo-1626785774625-0c5cc6a74ef4?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1579389083395-4507e98b5e67?auto=format&fit=crop&w=800&q=80'
-    ]
-  }
+  {"num":"01","category":"BRANDING","firstPart":"Logos e","highlightPart":"Identidad Visual","desc":"Isologotipos y sistemas de identidad para una marca memorable.","tags":["Logo","Identidad","Vector"],"icon":"fa-pen-nib","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"02","category":"PUBLICIDAD","firstPart":"Flyers y","highlightPart":"Redes Sociales","desc":"Banners, flyers y piezas publicitarias en formato 4x4 y gran formato.","tags":["Flyers","Social","Print"],"icon":"fa-image","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"03","category":"PRODUCTO","firstPart":"Packaging y","highlightPart":"Etiquetas","desc":"Empaques sostenibles y catálogos físicos listos para producción.","tags":["Packaging","Etiquetas","Catálogos"],"icon":"fa-box-open","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"04","category":"CORPORATIVO","firstPart":"Tarjetas e","highlightPart":"Invitaciones","desc":"Tarjetas de presentación con QR integrado e invitaciones a eventos.","tags":["Tarjetas","QR","Eventos"],"icon":"fa-id-card","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]}
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -159,12 +93,11 @@ const RecorridoDiseno = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestáro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Apoyo Académico.
-              <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Diseño Gráfico.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos web diseñados a la medida. Innovación, velocidad y resultados reales para empresas de todos los tamaños.
+            Identidad, packaging y piezas de alto impacto para tu marca.
           </p>
         </div>
 

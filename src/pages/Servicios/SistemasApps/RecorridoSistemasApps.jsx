@@ -18,86 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {
-    num: '01',
-    category: 'EMPRESARIALES',
-    firstPart: 'Sistemas y Apps',
-    highlightPart: 'Empresariales',
-    desc: 'Sitios corporativos completos para clínicas, empresas de tecnología o cualquier rubro, transmitiendo confianza y autoridad.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'AWS', 'Git'],
-    icon: 'fa-building',
-    images: [
-      'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1556740738-b6a63e27c4df?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '02',
-    category: 'LANDING PAGE',
-    firstPart: 'Landing Pages',
-    highlightPart: 'y Portafolios',
-    desc: 'Páginas de aterrizaje de alta conversión para captar leads o mostrar trabajos freelance con diseños de alto impacto visual.',
-    tags: ['React', 'Tailwind CSS', 'Figma', 'Docker', 'AWS', 'Git'],
-    icon: 'fa-rocket',
-    images: [
-      'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '03',
-    category: 'E-COMMERCE',
-    firstPart: 'Tiendas Online',
-    highlightPart: 'y Pedidos',
-    desc: 'E-commerce autogestionables con carritos de compra e integración de pagos locales y sistemas de pedidos directos.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'Stripe', 'MySQL', 'Git'],
-    icon: 'fa-cart-shopping',
-    images: [
-      'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1481481656886-90518be57416?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512758117921-be3d65b16954?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1531403009284-440f080d1e12?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '04',
-    category: 'CONTENIDO',
-    firstPart: 'Catálogos Digitales',
-    highlightPart: 'y Blogs',
-    desc: 'Muestrarios de productos dinámicos y blogs optimizados para posicionamiento orgánico (SEO) y retención de usuarios.',
-    tags: ['React', 'Next.js', 'Tailwind CSS', 'TypeScript', 'AWS', 'Git'],
-    icon: 'fa-book-open',
-    images: [
-      'https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?auto=format&fit=crop&w=800&q=80'
-    ]
-  },
-  {
-    num: '05',
-    category: 'UI/UX DESIGN',
-    firstPart: 'Diseño UI/UX',
-    highlightPart: 'y Responsive',
-    desc: 'Prototipado interactivo, encuestas digitales complejas y adaptación perfecta a todas las pantallas móviles (Web Responsive).',
-    tags: ['Figma', 'React', 'Tailwind CSS', 'Mobile First'],
-    icon: 'fa-mobile-screen-button',
-    images: [
-      'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&w=800&q=80',
-      'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80'
-    ]
-  }
+  {"num":"01","category":"SOFTWARE","firstPart":"Sistemas","highlightPart":"Web","desc":"Plataformas operativas a medida para gestionar toda tu empresa.","tags":["React","Node","MySQL"],"icon":"fa-laptop-code","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"02","category":"BASES DE DATOS","firstPart":"Gestión","highlightPart":"de Datos","desc":"Diseño, normalización y mantenimiento de datos relacionales.","tags":["SQL","Datos","Normalización"],"icon":"fa-database","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"03","category":"INFRAESTRUCTURA","firstPart":"DevOps","highlightPart":"y Servidores","desc":"Despliegue, monitoreo y soporte continuo de infraestructura.","tags":["DevOps","Cloud","CI/CD"],"icon":"fa-server","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]},
+  {"num":"04","category":"PRODUCTO","firstPart":"Apps","highlightPart":"Complementarias","desc":"Aplicaciones y módulos adicionales para extender la operación.","tags":["Apps","Módulos","Integración"],"icon":"fa-mobile-screen-button","images":["https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80","https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80"]}
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -169,12 +93,11 @@ const RecorridoSistemasApps = () => {
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
             Nuestro recorrido en <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Sistemas y Apps.
-              <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              Sistemas y Apps.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos web diseñados a la medida. Innovación, velocidad y resultados reales para empresas de todos los tamaños.
+            Software a medida, bases de datos y soporte para tu operación.
           </p>
         </div>
 
