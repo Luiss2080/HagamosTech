@@ -1,5 +1,5 @@
 import RecorridoEmpleo from './RecorridoEmpleo';
-import TestáimonialCarousel from '../../../components/carouseles/CarruselTestáimonios';
+import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
@@ -389,7 +389,7 @@ const Empleo = () => {
           </p>
         </div>
 
-        <TestáimonialCarousel testáimonials={TESTIMONIOS.map((t, idx) => {
+        <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

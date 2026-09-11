@@ -3,7 +3,7 @@ import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-import TestáimonialCarousel from '../../../components/carouseles/CarruselTestáimonios';
+import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 
 const TECH_STACK = [
   { name: 'OpenAI', icon: 'fa-solid fa-robot', color: 'text-emerald-400' },
@@ -268,7 +268,7 @@ const Personalizado = () => {
 
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
-        <TestáimonialCarousel testáimonials={TESTIMONIOS.map((t, idx) => {
+        <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
