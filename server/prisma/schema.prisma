@@ -139,8 +139,8 @@ model DetalleRolPermisos {
   permiso Permiso @relation(fields: [fkIdP], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_permiso")
   rol     Rol     @relation(fields: [fkIdR], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_rol")
 
-  @@index([fkIdP], map: "fk_detalle_permiso")
-  @@index([fkIdR], map: "fk_detalle_rol")
+  @@index([fkIdP], map: "idx_detalle_permiso")
+  @@index([fkIdR], map: "idx_detalle_rol")
   @@map("detalle_rol_permisos")
 }
 
