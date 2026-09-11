@@ -32,17 +32,17 @@ import MisionVision from '../pages/SobreNosotros/sections/MisionVision';
 import Valores from '../pages/SobreNosotros/sections/Valores';
 import VideosTikTok from '../pages/SobreNosotros/sections/VideosTikTok';
 import PromocionesPagina from '../pages/Promociones/PromocionesPagina';
-import KitsRobotica from '../pages/Menu/Productos/KitsRobotica';
-import CursosSTEAM from '../pages/Menu/Productos/CursosSTEAM';
-import LicenciasSoftware from '../pages/Menu/Productos/LicenciasSoftware';
-import GuiasDocentes from '../pages/Menu/Productos/GuiasDocentes';
-import HerramientasHardware from '../pages/Menu/Productos/HerramientasHardware';
-import CombosEducativos from '../pages/Menu/Productos/CombosEducativos';
-import EnvioKits from '../pages/Servicios/restaurante/EnvioKits';
-import PedidosInstitucionales from '../pages/Servicios/restaurante/PedidosInstitucionales';
-import TalleresCorporativos from '../pages/Servicios/restaurante/TalleresCorporativos';
-import DesarrolloEmpresarial from '../pages/Servicios/restaurante/DesarrolloEmpresarial';
-import KitsSuscripcion from '../pages/Servicios/restaurante/KitsSuscripcion';
+import Saltenas from '../pages/Menu/Productos/Saltenas';
+import Cafes from '../pages/Menu/Productos/Cafes';
+import Frapuccinos from '../pages/Menu/Productos/Frapuccinos';
+import Refrescos from '../pages/Menu/Productos/Refrescos';
+import Postres from '../pages/Menu/Productos/Postres';
+import Combos from '../pages/Menu/Productos/Combos';
+import Delivery from '../pages/Servicios/restaurante/Delivery';
+import PedidosPorMayor from '../pages/Servicios/restaurante/PedidosPorMayor';
+import EventosCatering from '../pages/Servicios/restaurante/EventosCatering';
+import ServicioCorporativo from '../pages/Servicios/restaurante/ServicioCorporativo';
+import SaltenasCongeladas from '../pages/Servicios/restaurante/SaltenasCongeladas';
 import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
 import ContactoPagina from '../pages/Contacto/Contacto';
 import HeroContacto from '../pages/Contacto/sections/HeroContacto';
@@ -169,16 +169,11 @@ const App = () => {
           <Route path="/que-hacemos/negocios" element={<NegociosQueHacemos />} />
           <Route path="/que-hacemos/personalizado" element={<Personalizado />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
-                <Route path="/servicios/delivery" element={<EnvioKits />} />
-              <Route path="/servicios/mayor" element={<PedidosInstitucionales />} />
-              <Route path="/servicios/eventos" element={<TalleresCorporativos />} />
-              <Route path="/servicios/corporativo" element={<DesarrolloEmpresarial />} />
+                <Route path="/servicios/delivery" element={<Delivery />} />
+              <Route path="/servicios/mayor" element={<PedidosPorMayor />} />
+              <Route path="/servicios/eventos" element={<EventosCatering />} />
+              <Route path="/servicios/corporativo" element={<ServicioCorporativo />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
-              <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
-              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
-              <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
-              <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
-              <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
               <Route path="/servicios/automatizacion" element={<Automatizacion />} />
               <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
@@ -186,7 +181,7 @@ const App = () => {
               <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/empleo" element={<Empleo />} />
               <Route path="/servicios/diseno-grafico" element={<DisenoGrafico />} />
-              <Route path="/servicios/congeladas" element={<KitsSuscripcion />} />
+              <Route path="/servicios/congeladas" element={<SaltenasCongeladas />} />
               <Route path="/condiciones" element={<Condiciones />} />
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
@@ -198,12 +193,12 @@ const App = () => {
               <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
               <Route path="/como-trabajamos" element={<ComoTrabajamos />} />
-              <Route path="/menu/saltenas" element={<KitsRobotica />} />
-              <Route path="/menu/cafe" element={<CursosSTEAM />} />
-              <Route path="/menu/frapuccinos" element={<LicenciasSoftware />} />
-              <Route path="/menu/refrescos" element={<GuiasDocentes />} />
-              <Route path="/menu/postres" element={<HerramientasHardware />} />
-              <Route path="/menu/combos" element={<CombosEducativos />} />
+              <Route path="/menu/saltenas" element={<Saltenas />} />
+              <Route path="/menu/cafe" element={<Cafes />} />
+              <Route path="/menu/frapuccinos" element={<Frapuccinos />} />
+              <Route path="/menu/refrescos" element={<Refrescos />} />
+              <Route path="/menu/postres" element={<Postres />} />
+              <Route path="/menu/combos" element={<Combos />} />
               <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
