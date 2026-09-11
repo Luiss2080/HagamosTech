@@ -218,36 +218,20 @@ const Academia = () => {
       </section>
 
       {/* ACADEMIC CTA FULL SCREEN */}
-      <section className="relative w-full py-32 md:py-48 bg-[#A3E635] flex items-center justify-center overflow-hidden z-20">
-        {/* Textura de fondo para hacerlo más llamativo */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/30 via-transparent to-black/50"></div>
+      <section className="relative z-10 w-full bg-[#A3E635] text-black overflow-hidden py-16 md:py-24">
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-black via-transparent to-transparent"></div>
         
-        <div className="container mx-auto px-6 relative z-10 text-center flex flex-col items-center">
-          <div className="inline-flex items-center gap-2 px-6 py-2 rounded-full border-2 border-black/20 bg-black/5 text-sm md:text-base font-black uppercase tracking-widest text-black mb-10 shadow-sm">
-            <Award size={20} /> Excelencia Garantizada
-          </div>
-          
-          <h2 className="text-6xl md:text-8xl lg:text-[10rem] font-black mb-8 text-black uppercase tracking-tighter leading-[0.9]" style={{ textShadow: '0 20px 40px rgba(0,0,0,0.15)' }}>
-            ASEGÚRATE <br />
-            EL 100/100
+        <div className="container mx-auto px-6 relative z-10 flex flex-col items-center text-center">
+          <h2 className="text-4xl md:text-6xl font-black mb-6 uppercase tracking-tighter">
+            Asegúrate el 100/100
           </h2>
-          
-          <p className="text-xl md:text-3xl font-bold text-black/70 mb-14 max-w-4xl mx-auto leading-relaxed">
-            No dejes tu sustentación al azar. Construyamos una herramienta tecnológica que deje a tu jurado <span className="bg-black text-[#A3E635] px-2 py-1 rounded">sin palabras</span>.
+          <p className="text-lg md:text-xl font-bold opacity-80 mb-10 max-w-2xl mx-auto">
+            No dejes tu sustentación al azar. Construyamos una herramienta tecnológica que deje a tu jurado sin palabras.
           </p>
-          
-          <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-lg md:text-2xl uppercase tracking-widest hover:scale-110 transition-transform duration-500 shadow-[0_20px_50px_rgba(0,0,0,0.5)] hover:shadow-[0_30px_60px_rgba(0,0,0,0.7)]">
-            <span>Solicitar Asesoría</span>
-            <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover:translate-x-3 group-hover:bg-[#A3E635]/30 transition-all">
-              <ArrowRight size={28} className="md:w-8 md:h-8" />
-            </div>
+          <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-3 px-10 py-5 bg-black text-white rounded-full font-black text-sm uppercase tracking-widest hover:scale-105 transition-transform shadow-2xl hover:shadow-[#84CC16]/50">
+            Solicitar Asesoría Gratuita <ArrowRight size={18} />
           </a>
         </div>
-        
-        {/* Glow Effects */}
-        <div className="absolute top-0 left-0 w-1/2 h-full bg-white/20 blur-[150px] pointer-events-none"></div>
-        <div className="absolute bottom-0 right-0 w-1/2 h-full bg-black/30 blur-[150px] pointer-events-none"></div>
       </section>
 
     </div>
