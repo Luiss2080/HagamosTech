@@ -82,7 +82,6 @@ const CONTACT_MODAL_KEYS = new Set(['modal_contact', 'contactModal', 'contactarM
 const App = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [contentVisible, setContentVisible] = useState(false);
-  const [openWidget, setOpenWidget] = useState(null);
 
   const initSession = useAuthStore((s) => s.initSession);
 

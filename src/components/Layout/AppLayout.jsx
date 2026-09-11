@@ -1,39 +1,11 @@
 import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
 import Header from './Header';
 import Footer from './Footer';
 import useAuthStore from '../../store/useAutenticacionStore';
 import ChatWhatsApp from '../Widgets/ChatWhatsApp';
 import ChatAssistant from '../../chat/AsistenteChat';
 
-const checkIsValidRoute = (path) => {
-    // Exact static routes
-    const exacts = [
-      '/', '/condiciones', '/catalogo',
-      '/sobre-nosotros', '/opiniones', '/contactanos', '/contacto',
-      '/pago-movil', '/perfil', '/config', '/configuracion', '/perfil/compras',
-      '/competencia/2023', '/competencia/2024', '/competencia/2025',
-      '/competencia/2026',
-      '/promociones', '/menu/saltenas', '/menu/cafe', '/menu/frapuccinos', '/menu/refrescos', '/menu/postres', '/menu/combos', '/novedades', '/sucursales', '/sucursales/santa-cruz', '/sucursales/santa-cruz/equipetrol', '/sucursales/santa-cruz/2do-anillo', '/sucursales/santa-cruz/av-pirai', '/sucursales/santa-cruz/cafe-beni', '/sucursales/cochabamba', '/sucursales/oruro', '/privacidad', '/terminos', '/cookies', '/servicios/delivery', '/servicios/mayor', '/servicios/eventos', '/servicios/corporativo', '/servicios/congeladas'
-    ];
-    if (exacts.includes(path)) return true;
-
-    // Dynamic catalog slug: /catalogo/:slug
-    if (path.startsWith('/catalogo/') && !path.startsWith('/catalogo/categoria/')) {
-        const segment = path.replace('/catalogo/', '');
-        if (segment && !segment.includes('/')) return true;
-    }
-    // Dynamic catalog category: /catalogo/categoria/:categoryId
-    if (path.startsWith('/catalogo/categoria/')) {
-        const segment = path.replace('/catalogo/categoria/', '');
-        if (segment && !segment.includes('/')) return true;
-    }
-
-    return false;
-};
-
 const AppLayout = ({ children }) => {
-    const location = useLocation();
     const fetchProfile = useAuthStore((state) => state.fetchProfile);
     
     useEffect(() => {

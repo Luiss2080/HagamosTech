@@ -1,9 +1,8 @@
 import React from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import ParticulasCirculares from "../fondos/ParticulasCirculares";
 
 const Footer = () => {
-  const location = useLocation();
 
   const menuLinks = [
     { name: "Tecnología", path: "/#tecnologia", icon: "fa-microchip" },
