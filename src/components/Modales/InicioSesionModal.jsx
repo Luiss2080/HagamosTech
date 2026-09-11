@@ -100,14 +100,14 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                 setFeedback({
                     type: 'error',
                     title: 'Error',
-                    message: result?.message || '¿No se pudo iniciar sesion.',
+                    message: result?.message || 'No se pudo iniciar sesión.',
                 });
             }
                 } catch {
             setFeedback({
                 type: 'error',
                 title: 'Error',
-                message: '¿No se pudo iniciar sesion.',
+                message: 'No se pudo iniciar sesión.',
             });
         } finally {
             setIsSubmitting(false);
@@ -130,7 +130,7 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                 setFaError('');
                 setFeedback({
                     type: 'success',
-                    title: 'Inicio de sesión eéxitoso',
+                    title: 'Inicio de sesión exitoso',
                     message: 'Bienvenido a HAGAMOSTECH.',
                     afterClose: () => {
                         setFormData(INITIAL_FORM);
@@ -139,10 +139,10 @@ const InicioSesionModal = ({ isOpen, onClose }) => {
                     },
                 });
             } else {
-                setFaError(result.message || 'El c�digo de autenticaci�n es incorrecto.');
+                setFaError(result.message || 'El código de autenticación es incorrecto.');
             }
         } catch {
-            setFaError('¿No se pudo verificar el código. Intente nuevamente.');
+            setFaError('No se pudo verificar el código. Inténtalo nuevamente.');
         } finally {
             setFaSubmitting(false);
         }
@@ -184,7 +184,7 @@ const handleRegenerateQR = async () => {
         e.preventDefault();
         if (recuperacionSubmitting) return;
         if (!correoRecuperacion || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correoRecuperacion)) {
-            setRecuperacionError('Ingresa un correo electr�nico válido.');
+            setRecuperacionError('Ingresa un correo electrónico válido.');
             return;
         }
         setRecuperacionSubmitting(true);
@@ -195,14 +195,14 @@ const handleRegenerateQR = async () => {
                 setFeedback({
                     type: 'success',
                     title: 'Revisa tu correo',
-                    message: result.mensaje || 'Te enviamos un enlace para restáablecer tu contraseña. Revisa tu bandeja de entrada.',
+                    message: result.mensaje || 'Te enviamos un enlace para restablecer tu contraseña. Revisa tu bandeja de entrada.',
                     afterClose: () => setFormData(INITIAL_FORM),
                 });
             } else {
-                setRecuperacionError(result.message || '¿No se pudo enviar el enlace de recuperación.');
+                setRecuperacionError(result.message || 'No se pudo enviar el enlace de recuperación.');
             }
         } catch {
-            setRecuperacionError('¿No se pudo enviar el enlace de recuperación.');
+            setRecuperacionError('No se pudo enviar el enlace de recuperación.');
         } finally {
             setRecuperacionSubmitting(false);
         }
