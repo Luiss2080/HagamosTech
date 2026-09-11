@@ -281,8 +281,6 @@ const handleRegenerateQR = async () => {
                                 <p className="text-xs font-bold text-white">Inteligencia Artificial</p>
                             </div>
                         </div>
-                        </div>
-                        
                         <div className="w-full mt-auto pt-4 flex flex-col items-center">
                             <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                             <div className="flex justify-center gap-3">
