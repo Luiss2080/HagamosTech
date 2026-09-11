@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const PagoController = require('../controllers/04_PagoController');
+const PagoController = require('../controllers/PagoController');
 
 router.get('/estado/:id', PagoController.obtenerEstado);
 router.post('/confirmar', PagoController.confirmarPago);
