@@ -383,8 +383,7 @@ Logos e Identidad Visual (Isologotipos), Flyers, Banners, Pancartas y Redes Soci
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones de las empresas y líderes de marca que han transformado su operación digital gracias a nuestáras soluciones de software.
-          </p>
+            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
