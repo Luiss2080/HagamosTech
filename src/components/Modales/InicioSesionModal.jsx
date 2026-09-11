@@ -19,11 +19,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
     const regenerarQR2FA = useAuthStore((state) => state.regenerarQR2FA);
     const [formData, setFormData] = useState(INITIAL_FORM);
     const [isSubmitting, setIsSubmitting] = useState(false);
-    const [feedback, setFeedback] = useState(null);
-
-    // â⬝��â⬝�� Doble Factor (Google Authenticator) â⬝��â⬝��
-    const [paso2FA, setPaso2FA] = useState(null);
-    const [código2FA, setCódigo2FA] = useState('');
+    const [feedback, setFeedbacódigo2FA, setCódigo2FA] = useState('');
     const [faSubmitting, setFaSubmitting] = useState(false);
     const [qrRegenerating, setQrRegenerating] = useState(false);
     const [faError, setFaError] = useState('');
@@ -77,10 +73,7 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
                     usuarioId: result.usuarioId,
                     primerUso: !!result.primerUso,
                     nombre: result.nombre,
-                    secret: result.secret,
-                    otpauthUrl: result.otpauthUrl,
-                });
-                setCódigo2FA('');
+                    secódigo2FA('');
                 setFaError('');
                 return;
             }
@@ -114,19 +107,14 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
         }
     };
 
-    const handleSubmit2FA = async (e) => {
-        e.preventDefault();
-        if (faSubmitting || !paso2FA) return;
-        if (!código2FA || código2FA.length !== 6) {
-            setFaError('Ingresa el código de 6 dÒ­gitos de tu autenticador.');
+    const handleSubmit2FA = asyncódigo2FA || código2FA.length !== 6) {
+            setFaError('Ingresa el código dígitos de tu autenticador.');
             return;
         }
         setFaSubmitting(true);
         try {
             const result = await verificar2fa(paso2FA.usuarioId, código2FA);
-            if (result.success) {
-                setPaso2FA(null);
-                setCódigo2FA('');
+            if (result.sucódigo2FA('');
                 setFaError('');
                 setFeedback({
                     type: 'success',
@@ -135,14 +123,10 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
                     afterClose: () => {
                         setFormData(INITIAL_FORM);
                         onClose();
-                        navigate('/', { replace: true });
-                    },
-                });
-            } else {
-                setFaError(result.message || 'El código de autenticación es incorrecto.');
+                        navigate('/', { replacódigo de autenticación es incorrecto.');
             }
         } catch {
-            setFaError('¿No se pudo verificar el código. Intente nuevamente.');
+            setFaError('¿No se pudo verificódigo. Intente nuevamente.');
         } finally {
             setFaSubmitting(false);
         }
@@ -160,12 +144,7 @@ const handleRegenerateQR = async () => {
         setFaError('');
         try {
             const result = await regenerarQR2FA(paso2FA.usuarioId, {
-                correo: formData.correo,
-                contraseña: formData.contraseña,
-            });
-            if (result.success) {
-                setPaso2FA((prev) => ({ ...prev, primerUso: true, secret: result.secret, otpauthUrl: result.otpauthUrl }));
-                setCódigo2FA('');
+                código2FA('');
             } else {
                 setFaError(result.message);
             }
@@ -184,7 +163,7 @@ const handleRegenerateQR = async () => {
         e.preventDefault();
         if (recuperaciónSubmitting) return;
         if (!correoRecuperación || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.testá(correoRecuperación)) {
-            setRecuperaciónError('Ingresa un correo electrónico vÒ¡lido.');
+            setRecuperaciónError('Ingresa un correo electrónico válido.');
             return;
         }
         setRecuperaciónSubmitting(true);
@@ -251,7 +230,7 @@ const handleRegenerateQR = async () => {
                         </div>
 
                         <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
-                            Iniciar Sesión en <br />
+                            Iniciar Sesión <br />
                             <span className="text-white relative inline-block">
                                 HAGAMOSTECH
                                 <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
@@ -267,18 +246,22 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p><p className="text-xs font-bold text-white">Sistemas Web</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
+                                <p className="text-xs font-bold text-white">Sistemas Web</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p><p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p>
+                                <p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p><p className="text-xs font-bold text-white">Servidores AWS</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p>
+                                <p className="text-xs font-bold text-white">Servidores AWS</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Cafés</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-brain mr-1"></i> IA</p>
+                                <p className="text-xs font-bold text-white">Inteligencia Artificial</p>
                             </div>
+                        </div>
                         </div>
                         
                         <div className="w-full mt-auto pt-4 flex flex-col items-center">
@@ -361,7 +344,7 @@ const handleRegenerateQR = async () => {
                                  {paso2FA.primerUso && (
                                     <div className="mb-3 text-center rounded-xl border border-gray-100 bg-gray-50 p-4">
                                         <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">
-                                            Escanea estáe código con Google Authenticator
+                                            Escódigo con Google Authenticator
                                         </p>
                                          <div className="mx-auto w-44 h-44 bg-white p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
                                              <QRCodeSVG value={paso2FA.otpauthUrl} size={150} />
@@ -411,7 +394,7 @@ const handleRegenerateQR = async () => {
 
                             <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                  <button type="submit" disabled={faSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
-                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar código'}</span>
+                                    <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificódigo'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-shield-halved text-black text-xs"></i></div>
                                 </button>
                                 <button

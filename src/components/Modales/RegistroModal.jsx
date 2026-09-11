@@ -23,9 +23,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [feedback, setFeedback] = useState(null);
 
-    // â”€â”€ Verificación de correo â”€â”€
-    const [verificacion, setVerificación] = useState(null);
-    const [código, setCódigo] = useState('');
+    // â”€â”€ Verificación de código, setCódigo] = useState('');
     const [verifSubmitting, setVerifSubmitting] = useState(false);
     const [verifError, setVerifError] = useState('');
     const [reenviando, setReenviando] = useState(false);
@@ -36,8 +34,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
             document.body.style.overflow = 'hidden';
         } else {
             document.body.style.overflow = 'unset';
-            setVerificación(null);
-            setCódigo('');
+            setVerificódigo('');
             setVerifError('');
             setSegundosReenvio(0);
         }
@@ -94,9 +91,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                 setVerificación({
                     usuarioId: result.usuarioId,
                     nombre: result.nombre,
-                    correo: result.correo,
-                });
-                setCódigo('');
+                    código('');
                 setVerifError('');
                 setSegundosReenvio(60);
                 return;
@@ -132,19 +127,14 @@ const RegistroModal = ({ isOpen, onClose }) => {
         }
     };
 
-    const handleVerificarCorreo = async (e) => {
-        e.preventDefault();
-        if (verifSubmitting || !verificacion) return;
-        if (!código || código.length !== 6) {
-            setVerifError('Ingresa el código de 6 dígitos recibido por correo.');
+    const handleVerificódigo || código.length !== 6) {
+            setVerifError('Ingresa el código dígitos recibido por correo.');
             return;
         }
         setVerifSubmitting(true);
         try {
             const result = await verificarCorreo(verificacion.usuarioId, código);
-            if (result.success) {
-                setVerificación(null);
-                setCódigo('');
+            if (result.sucódigo('');
                 setFeedback({
                     type: 'success',
                     title: 'Correo verificado',
@@ -160,7 +150,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                 setVerifError(result.message || 'El código de verificación es incorrecto.');
             }
         } catch {
-            setVerifError('No se pudo verificar el código. Intente nuevamente.');
+            setVerifError('No se pudo verificódigo. Intente nuevamente.');
         } finally {
             setVerifSubmitting(false);
         }
@@ -185,8 +175,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
     };
 
     const handleVolverAlFormulario = () => {
-        setVerificación(null);
-        setCódigo('');
+        setVerificódigo('');
         setVerifError('');
     };
 
@@ -254,20 +243,24 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
-                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p><p className="text-xs font-bold text-white">Sistemas Web</p>
-                                        </div>
-                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p><p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
-                                        </div>
-                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p><p className="text-xs font-bold text-white">Servidores AWS</p>
-                                        </div>
-                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-brain mr-1"></i> IA</p><p className="text-xs font-bold text-white">Inteligencia Artificial</p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
+                                <p className="text-xs font-bold text-white">Sistemas Web</p>
+                            </div>
+                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p>
+                                <p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
+                            </div>
+                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p>
+                                <p className="text-xs font-bold text-white">Servidores AWS</p>
+                            </div>
+                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-brain mr-1"></i> IA</p>
+                                <p className="text-xs font-bold text-white">Inteligencia Artificial</p>
+                            </div>
+                        </div>
+                        </div>
                                 
                                 <div className="w-full mt-auto pt-4 flex flex-col items-center">
                                     <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
@@ -320,7 +313,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                             </div>
 
                                             <p className="text-[12px] text-gray-600 font-medium leading-relaxed mb-3">
-                                                {verificacion.nombre ? `${verificacion.nombre}, ` : ''}te enviamos un código de 6 dígitos a <strong className="text-[#84CC16]">{verificacion.correo}</strong>. Ingresa el código para verificar tu correo.
+                                                {verificódigo dígitos a <strong código para verificar tu correo.
                                             </p>
 
                                             <div className="mb-2">
