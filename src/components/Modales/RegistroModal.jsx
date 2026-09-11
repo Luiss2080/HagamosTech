@@ -254,24 +254,26 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
-                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
-                                <p className="text-xs font-bold text-white">Sistemas Web</p>
-                            </div>
-                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p>
-                                <p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
-                            </div>
-                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-cloud mr-1"></i> Cloud</p>
-                                <p className="text-xs font-bold text-white">Servidores AWS</p>
-                            </div>
-                            <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-brain mr-1"></i> IA</p>
-                                <p className="text-xs font-bold text-white">Inteligencia Artificial</p>
-                            </div>
-                        </div>
-                        <div className="w-full mt-auto pt-4 flex flex-col items-center">
+                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
+                                            <p className="text-xs font-bold text-white">Salteñas</p>
+                                        </div>
+                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
+                                            <p className="text-xs font-bold text-white">Caseros y Helados</p>
+                                        </div>
+                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-mug-hot mr-1"></i> Bebidas</p>
+                                            <p className="text-xs font-bold text-white">Gaseosas y Jugos</p>
+                                        </div>
+                                        <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
+                                            <p className="text-xs font-bold text-white">Naturales y Cafés</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div className="w-full mt-auto pt-4 flex flex-col items-center">
                                     <p className="text-[9px] font-black text-white/60 uppercase tracking-[0.2em] mb-2">Conecta con HAGAMOSTECH</p>
                                     <div className="flex justify-center gap-3">
                                         {[
@@ -352,7 +354,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                                 type="button"
                                                 onClick={handleReenviarCorreo}
                                                 disabled={reenviando || segundosReenvio > 0}
-                                                className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-[#050505] font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 cursor-pointer disabled:opacity-50"
+                                                className="w-full mt-2 py-2.5 px-6 bg-[#111827] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-50"
                                             >
                                                 <i className="fas fa-paper-plane mr-1.5"></i>
                                                 {reenviando ? 'Enviando...' : segundosReenvio > 0 ? `Reenviar código (${segundosReenvio}s)` : 'Reenviar código'}
@@ -432,7 +434,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                         </div>
 
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
-                                            <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-[#050505] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
+                                            <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#8B4513]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                                 <span className="relative z-10">{isSubmitting ? 'Creando cuenta...' : 'Crear cuenta ahora'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-user-plus text-black text-xs"></i></div>
                                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
