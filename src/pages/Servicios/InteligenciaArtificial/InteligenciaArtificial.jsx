@@ -10,26 +10,23 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
 
 const BRANDS = [
-  { name: 'Libros Escolares', tag: 'Primaria y Secundaria', icon: 'fa-book-open' },
-  { name: 'Colegios Aliados', tag: 'Alianzas Estratégicas', icon: 'fa-school' },
-  { name: 'React / Web', tag: 'Desarrollo de Software', icon: 'fa-laptop-code' },
-  { name: 'iOS & Android', tag: 'Desarrollo de Software', icon: 'fa-mobile-screen-button' },
-  { name: 'Scratch', tag: 'Cursos de Robótica', icon: 'fa-shapes' },
-  { name: 'LEGO Education', tag: 'Cursos de Robótica', icon: 'fa-puzzle-piece' },
-  { name: 'Python', tag: 'Cursos de Robótica', icon: 'fa-code' }
+  {"name":"Asistentes Virtuales","tag":"Atención y soporte 24/7","icon":"fa-robot"},
+  {"name":"Repositorios de Prompts","tag":"Buenas prácticas para equipos","icon":"fa-comment-dots"},
+  {"name":"Análisis Predictivo","tag":"Decisiones basadas en datos","icon":"fa-chart-pie"},
+  {"name":"APIs de IA","tag":"Integración con tus sistemas","icon":"fa-code"}
 ];
 
 const PROCESO = [
-  { title: 'Planificación', desc: 'Analizamos tu identidad de marca, competidores y metas de marketing para estructurar el sitemap óóptimo.' },
-  { title: 'Diseño UX/UI', desc: 'Diseñamos mockups visuales interactivos alineados a tu marca, garantizando una usabilidad excepcional.' },
-  { title: 'Programación', desc: 'Codificamos con tecnologías modernas (React, Vite, CSS) para asegurar velocidad extrema y SEO óóptimo.' },
-  { title: 'Lanzamiento', desc: 'Desplegamos en servidores seguros en la nube, optimizamos caché y realizamos indexación en Google.' }
+  {"title":"Diagnóstico","desc":"Identificamos dónde la IA puede aportar mayor valor en tu operación."},
+  {"title":"Diseño","desc":"Definimos el asistente, modelo o repositorio de prompts adecuado."},
+  {"title":"Desarrollo","desc":"Entrenamos y probamos la solución con datos reales de tu negocio."},
+  {"title":"Despliegue","desc":"Implementamos la IA y la mantenemos evolucionando con soporte continuo."}
 ];
 
 const TESTIMONIOS = [
-  { name: 'Juan Pérez', role: 'CEO, TechStart', text: 'Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.' },
-  { name: 'Ana Gómez', role: 'Directora, EduKids', text: 'La página web superó nuestras expectativas. Ahora nuestros alumnos pueden inscribirse sin problemas.' },
-  { name: 'Carlos Díaz', role: 'Fundador, Restaurante El Buen Sabor', text: 'El sistema de reservas online que nos hicieron aumentó nuestras ventas significativamente.' }
+  {"name":"Diego Arce","role":"Gerente Comercial","text":"El asistente virtual responde a nuestros clientes al instante y califica los leads automáticamente."},
+  {"name":"Natalia Vera","role":"Analista de Datos","text":"El análisis predictivo nos anticipa la demanda y mejora la toma de decisiones."},
+  {"name":"Roberto Vargas","role":"CEO","text":"Integrar la IA a nuestro sistema redujo tiempos y elevó la calidad del servicio."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -43,7 +40,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-tiktok',
     accent: '#111827',
     iconBackground: '#111827',
-    url: 'https://www.tiktok.com/@techhomebolivia',
+    url: 'https://www.tiktok.com/@hagamostech',
     positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
     scaleClass: 'origin-top-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-slow',
@@ -55,7 +52,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-youtube',
     accent: '#FF0000',
     iconBackground: '#FF0000',
-    url: 'https://www.youtube.com/@TechHomeBolivia',
+    url: 'https://www.youtube.com/@hagamostech',
     positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
     scaleClass: 'origin-top-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-medium',
@@ -67,7 +64,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-facebook',
     accent: '#1877F2',
     iconBackground: '#1877F2',
-    url: 'https://www.facebook.com/TECHHOMEERTA?locale=es_LA',
+    url: 'https://www.facebook.com/HagamosTech',
     positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
     scaleClass: 'origin-bottom-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-fast',
@@ -79,7 +76,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-instagram',
     accent: '#E4405F',
     iconBackground: 'linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)',
-    url: 'https://www.instagram.com/techhomebolivia/',
+    url: 'https://www.instagram.com/hagamostech/',
     positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
     scaleClass: 'origin-bottom-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-slow',
@@ -87,10 +84,10 @@ const FLOATING_CARDS = [
 ];
 
 const VALUE_POINTS = [
-  { icon: 'fa-globe', label: 'Páginas Modernas' },
-  { icon: 'fa-gauge-high', label: 'Velocidad de Carga <1s' },
-  { icon: 'fa-magnifying-glass', label: 'SEO Google Ready' },
-  { icon: 'fa-shield', label: 'Certificado SSL Incluido' }
+  {"icon":"fa-brain","label":"IA Aplicada"},
+  {"icon":"fa-robot","label":"Asistentes 24/7"},
+  {"icon":"fa-chart-line","label":"Datos Predictivos"},
+  {"icon":"fa-rocket","label":"Escalable"}
 ];
 
 const InteligenciaArtificial = () => {
@@ -131,7 +128,7 @@ const InteligenciaArtificial = () => {
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Inteligencia Artificial Profesionales — HagamosTech
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Inteligencia Artificial — HagamosTech
               </span>
           </div>
 
@@ -141,18 +138,18 @@ const InteligenciaArtificial = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Desarrollo Web</span>
-                <span className="block whitespace-nowrap">y E-commerce <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
-              </h1>
+<span className="block">Inteligencia Artificial</span>
+<span className="block whitespace-nowrap">aplicada a. <span className="text-[#A3E635] relative inline-block z-10">tu negocio.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+</h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
+                Integración de soluciones con IA de nueva generación: asistentes virtuales, repositorios de prompts y análisis de datos predictivos.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20implementar%20una%20solución%20con%20IA"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +160,7 @@ const InteligenciaArtificial = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20inteligencia%20artificial"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -212,7 +209,7 @@ const InteligenciaArtificial = () => {
                 >
                   <img
                     src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
-                    alt="Web Corporativa"
+                    alt="Inteligencia Artificial"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -318,18 +315,18 @@ const InteligenciaArtificial = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES DESARROLLO WEB Y CÓMO AYUDA A TU EMPRESA?
+                ¿QUÉ ES LA INTELIGENCIA ARTIFICIAL Y CÓMO IMPULSA TU NEGOCIO?
               </h2>
 
-              <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
-                <p>
-                  Digitalizamos tu presencia comercial creando sitios rápidos, atractivos y diseñados para generar conversiones, garantizando una excelente experiencia de usuario (UX/UI) y compatibilidad total con dispositivos móviles.
-                </p>
-                <p>
-                  <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-                  Inteligencia Artificial Empresariales, Landing Pages y Portafolios, Tiendas Online y Sistemas de Pedidos, Catálogos Digitales y Blogs, y Diseño UI/UX con Web Responsive.
-                </p>
-              </div>
+              <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
+<p>
+Integramos soluciones con IA de nueva generación —asistentes virtuales, repositorios de prompts y análisis predictivo— para automatizar la atención y mejorar las decisiones.
+</p>
+<p>
+<span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+Integración de Soluciones con Inteligencia Artificial, Automatización de Procesos Empresariales, y Gestión de Herramientas de Productividad.
+</p>
+</div>
             </div>
 
             <div className="lg:col-span-6">
@@ -341,7 +338,7 @@ const InteligenciaArtificial = () => {
                     <span className="w-3 h-3 rounded-full bg-[#A3E635]/100"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">model.py</span>
+                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">ia.js</span>
                   </div>
                   <Terminal size={14} className="text-slate-500" />
                 </div>

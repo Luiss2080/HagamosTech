@@ -10,26 +10,24 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
 
 const BRANDS = [
-  { name: 'Libros Escolares', tag: 'Primaria y Secundaria', icon: 'fa-book-open' },
-  { name: 'Colegios Aliados', tag: 'Alianzas Estratégicas', icon: 'fa-school' },
-  { name: 'React / Web', tag: 'Desarrollo de Software', icon: 'fa-laptop-code' },
-  { name: 'iOS & Android', tag: 'Desarrollo de Software', icon: 'fa-mobile-screen-button' },
-  { name: 'Scratch', tag: 'Cursos de Robótica', icon: 'fa-shapes' },
-  { name: 'LEGO Education', tag: 'Cursos de Robótica', icon: 'fa-puzzle-piece' },
-  { name: 'Python', tag: 'Cursos de Robótica', icon: 'fa-code' }
+  {"name":"CV Optimizado ATS","tag":"Estructuración de perfiles técnicos","icon":"fa-file-user"},
+  {"name":"Optimización LinkedIn","tag":"Titulares y networking estratégico","icon":"fa-linkedin"},
+  {"name":"Cartas y Traducción","tag":"Redacción y versión en inglés","icon":"fa-envelope-open-text"},
+  {"name":"Portafolios Digitales","tag":"GitHub, Figma e investigaciones","icon":"fa-folder-open"},
+  {"name":"Entrevistas y Certificados","tag":"Preparación y diplomas digitales","icon":"fa-certificate"}
 ];
 
 const PROCESO = [
-  { title: 'An�lisis de Perfil', desc: 'Evaluamos tu experiencia, metas y el mercado laboral al que apuntas.' },
-  { title: 'Estructuraci�n', desc: 'Dise�amos tu CV en formato ATS y optimizamos tu perfil de LinkedIn.' },
-  { title: 'Portafolio', desc: 'Recopilamos tus proyectos (c�digo, dise�o, investáigaci�n) en un formato visual.' },
-  { title: 'Preparaci�n', desc: 'Simulamos entrevistas enfocadas en recursos humanos y pruebas t�cnicas.' }
+  {"title":"Análisis de Perfil","desc":"Evaluamos tu experiencia, metas y el mercado laboral al que apuntas."},
+  {"title":"Estructuración","desc":"Diseñamos tu CV optimizado ATS y tu perfil de LinkedIn con palabras clave."},
+  {"title":"Documentos","desc":"Redactamos cartas de presentación y traducimos tu CV al inglés si lo necesitas."},
+  {"title":"Preparación","desc":"Simulamos entrevistas y armamos tu portafolio digital profesional."}
 ];
 
 const TESTIMONIOS = [
-  { name: 'Esteban Ramírez', role: 'Estudiante de Medicina', text: 'La presentación interactiva y los esquemas anatómicos que me diseñaron fueron la clave para sacar la máxima nota en mi defensa de tesis.' },
-  { name: 'Prof. Ana Torres', role: 'Docente Universitaria', text: 'Los simuladores educativos y entornos virtuales han mejorado muchísimo la comprensión de mis alumnos en sistemas informáticos.' },
-  { name: 'Felipe Guzmán', role: 'Tesista de Ingeniería', text: 'Su asesoría en formato APA 7 y lógica de programación estáructurada me salvó el proyecto de grado. Muy rigurosos y profesionales.' }
+  {"name":"Andrés Peredo","role":"Candidato IT","text":"Mi CV optimizado ATS pasó todos los filtros; en dos semanas tuve tres entrevistas."},
+  {"name":"Valeria Cruz","role":"Profesional en RRHH","text":"El rediseño de mi LinkedIn y la preparación para entrevistas marcaron la diferencia en mi búsqueda."},
+  {"name":"Marcos Herrera","role":"Ingeniero","text":"La traducción al inglés y el portafolio digital me abrieron puertas en el exterior."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -43,7 +41,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-tiktok',
     accent: '#111827',
     iconBackground: '#111827',
-    url: 'https://www.tiktok.com/@techhomebolivia',
+    url: 'https://www.tiktok.com/@hagamostech',
     positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
     scaleClass: 'origin-top-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-sólow',
@@ -55,7 +53,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-youtube',
     accent: '#FF0000',
     iconBackground: '#FF0000',
-    url: 'https://www.youtube.com/@TechHomeBolivia',
+    url: 'https://www.youtube.com/@hagamostech',
     positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
     scaleClass: 'origin-top-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-medium',
@@ -67,7 +65,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-facebook',
     accent: '#1877F2',
     iconBackground: '#1877F2',
-    url: 'https://www.facebook.com/TECHHOMEERTA?locale=es_LA',
+    url: 'https://www.facebook.com/HagamosTech',
     positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
     scaleClass: 'origin-bottom-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-fast',
@@ -79,7 +77,7 @@ const FLOATING_CARDS = [
     icon: 'fab fa-instagram',
     accent: '#E4405F',
     iconBackground: 'linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)',
-    url: 'https://www.instagram.com/techhomebolivia/',
+    url: 'https://www.instagram.com/hagamostech/',
     positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
     scaleClass: 'origin-bottom-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
     animationClass: 'animate-float-sólow',
@@ -87,10 +85,10 @@ const FLOATING_CARDS = [
 ];
 
 const VALUE_POINTS = [
-  { icon: 'fa-globe', label: 'Páginas Modernas' },
-  { icon: 'fa-gauge-high', label: 'Velocidad de Carga <1s' },
-  { icon: 'fa-magnifying-glass', label: 'SEO Google Ready' },
-  { icon: 'fa-shield', label: 'Certificado SSL Incluido' }
+  {"icon":"fa-robot","label":"Optimizado ATS"},
+  {"icon":"fa-linkedin","label":"LinkedIn Estratégico"},
+  {"icon":"fa-comments","label":"Preparación Real"},
+  {"icon":"fa-award","label":"Certificados Digitales"}
 ];
 
 const Empleo = () => {
@@ -131,7 +129,7 @@ const Empleo = () => {
           {/* ---- Migas de pan en estáilo tech (discreto) ---- */}
           <div className="flex itemás-center gap-2 mb-5">
               <span className="inline-flex itemás-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widestá text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Apoyo Académico Profesionales � HagamosTech
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Empleo Profesional — HagamosTech
               </span>
           </div>
 
@@ -141,18 +139,18 @@ const Empleo = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center itemás-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-                <span className="block">Sector Académico</span>
-                <span className="block whitespace-nowrap">para destáacar tu talento <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
-              </h1>
+<span className="block">Empleo</span>
+<span className="block whitespace-nowrap">destacá. <span className="text-[#A3E635] relative inline-block z-10">tu talento.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+</h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Orientado a estáudiantes universitarios, docentes e instituciones que requieren estáructurar, simular y presentar proyectos con alto rigor académico en áreas complejas.
+                Optimización estratégica para superar filtros de reclutamiento (ATS) y destacar el talento en portales laborales y procesos de selección corporativos.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto itemás-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20mejorar%20mi%20CV%20y%20perfil%20profesional"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex itemás-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -163,7 +161,7 @@ const Empleo = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20un%20proyecto%20académico"
+                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20laboral%20y%20de%20empleo"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex itemás-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -211,8 +209,8 @@ const Empleo = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/Empleo.jpg"
-                    alt="EdTech y Académico"
+                    src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
+                    alt="Servicio de Empleo"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -318,18 +316,18 @@ const Empleo = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 itemás-center">
             <div className="lg:col-span-6 text-center flex flex-col itemás-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QU�0 SON LAS SOLUCIONES ACAD�0MICAS Y C�MO POTENCIAN TUS PROYECTOS?
+                ¿QUÉ ES EL SERVICIO DE EMPLEO Y CÓMO MEJORA TU PERFIL PROFESIONAL?
               </h2>
 
-              <div className="space-y-5 text-slate-300 dark:text-slate-355 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
-                <p>
-                  Te ayudamos a estáructurar, desarrollar y presentar proyectos con el más alto rigor académico. Desde tesis y monografías hasta simulaciones y prototipos complejos de ingeniería.
-                </p>
-                <p>
-                  <span className="font-black uppercase tracking-widestá text-[#A3E635] dark:text-[#A3E635]">Incluye: </span>
-                  Presentaciones Interactivas, Formato APA/IEEE, Simulación Computacional, Desarrollo de Software Académico y Soporte para Defensa de Proyectos.
-                </p>
-              </div>
+              <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
+<p>
+Afrontamos cada búsqueda laboral como un proyecto: estudiamos tu perfil, lo estructuramos para los filtros ATS y te preparamos para destacar en cada etapa del proceso.
+</p>
+<p>
+<span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
+Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn, Cartas de Presentación y Traducción de CV, Portafolios Profesionales Digitales, Preparación para Entrevistas y Asesoría Laboral, y Certificados Digitales.
+</p>
+</div>
             </div>
 
             <div className="lg:col-span-6">
@@ -341,7 +339,7 @@ const Empleo = () => {
                     <span className="w-3 h-3 rounded-full bg-[#A3E635]/100"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">simulador.js</span>
+                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">empleo.js</span>
                   </div>
                   <Terminal size={14} className="text-slate-500" />
                 </div>
@@ -352,7 +350,7 @@ const Empleo = () => {
                   <div className="mt-2">export const Empleo = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
-                  <div className="pl-12">&lt;MetaTags title="HagamosTech � Apoyo Académico" /&gt;</div>
+                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Empleo y Desarrollo Profesional" /&gt;</div>
                   <div className="pl-12">&lt;HeroSection theme="premium" /&gt;</div>
                   <div className="pl-12">&lt;ServicesGrid itemás=&#123;10&#125; /&gt;</div>
                   <div className="pl-8">&lt;/div&gt;</div>
