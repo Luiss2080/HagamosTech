@@ -70,19 +70,6 @@ const InicioSesiónModal = ({ isOpen, onClose }) => {
                     type: 'success',
                     title: 'Inicio de sesión exitoso',
                     message: 'Bienvenido a HAGAMOSTECH.',
-                    afterClose: () => {
-                        setFormData(INITIAL_FORM);
-                        onClose();
-                        navigate('/', { replace: true });
-                    },
-                });
-            } else {
-                setFeedback({
-                    type: 'error',
-                    title: 'Error',
-                    message: result?.message || 'No se pudo iniciar sesión.',
-                });
-            }
                 } catch {
             setFeedback({
                 type: 'error',
