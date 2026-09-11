@@ -1,5 +1,5 @@
 import RecorridoDiseno from './RecorridoDiseno';
-import TestáimonialCarousel from '../../../components/carouseles/CarruselTestáimonios';
+import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
