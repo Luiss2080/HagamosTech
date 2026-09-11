@@ -137,8 +137,8 @@ const PROJECTS = [
     num: '02',
     category: 'MENTORÍA',
     firstPart: 'Auditoría &',
-    highlightPart: 'Mentor�a',
-    desc: 'Mentorías 1 a 1 y auditorías completas para modernizar tu tecnolog�a y guiar a tu equipo in-house.',
+    highlightPart: 'Mentoría',
+    desc: 'Mentorías 1 a 1 y auditorías completas para modernizar tu tecnología y guiar a tu equipo in-house.',
     icon: 'fa-lightbulb',
     images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
   },
