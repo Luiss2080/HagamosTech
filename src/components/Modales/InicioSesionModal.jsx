@@ -12,7 +12,7 @@ const INITIAL_FORM = {
     rememberMe: true,
 };
 
-const InicioSesionModal = ({ isOpen, onClose }) => {
+const InicioSesiónModal = ({ isOpen, onClose }) => {
     const navigate = useNavigate();
     const login = useAuthStore((state) => state.login);
     const verificar2fa = useAuthStore((state) => state.verificar2fa);
@@ -267,8 +267,8 @@ const handleRegenerateQR = async () => {
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
-                                <p className="text-xs font-bold text-white">Salte�as</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-code mr-1"></i> Desarrollo</p>
+                                <p className="text-xs font-bold text-white">Sistemas Web</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                 <p className="text-[9px] font-black uppercase tracking-widest text-gray-400"><i className="fas fa-mobile-screen mr-1"></i> Apps</p><p className="text-xs font-bold text-white">Móviles (iOS/Android)</p>
@@ -546,4 +546,4 @@ const handleRegenerateQR = async () => {
     );
 };
 
-export default InicioSesionModal;
+export default InicioSesiónModal;
