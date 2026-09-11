@@ -7,8 +7,8 @@ import ModalExito from './ModalExito';
 import ModalError from './ModalError';
 
 const INITIAL_FORM = {
-    correo: 'admin@hagamostech.com',
-    contrasena: 'password123',
+    correo: '',
+    contrasena: '',
     rememberMe: true,
 };
 
@@ -183,7 +183,7 @@ const handleRegenerateQR = async () => {
     const handleEnviarRecuperacion = async (e) => {
         e.preventDefault();
         if (recuperacionSubmitting) return;
-        if (!correoRecuperacion || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.testá(correoRecuperacion)) {
+        if (!correoRecuperacion || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correoRecuperacion)) {
             setRecuperacionError('Ingresa un correo electr�nico válido.');
             return;
         }

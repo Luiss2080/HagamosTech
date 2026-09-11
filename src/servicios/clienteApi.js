@@ -10,7 +10,10 @@ const apiClient = axios.create({
 // Interceptor para inyectar el token de autenticación (si existe)
 apiClient.interceptors.request.use(
   (config) => {
-    const token = localStorage.getItem('token'); // O el key que usen para el token
+    const token =
+      sessionStorage.getItem('hagamostech_token') ||
+      (document.cookie.match(/(?:^|;\s*)hagamostech_token=([^;]*)/) || [])[1] ||
+      localStorage.getItem('token');
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
