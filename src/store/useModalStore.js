@@ -35,14 +35,6 @@ const useModalStore = create((set) => ({
             isVideoOpen: false,
             videoData: null,
         });
-    },
-
-    setModalOpen: (modalName, isOpen, _orderData = null) => {
-        console.log(`ModalStore | Seteando ${modalName} a ${isOpen}`);
-        set(() => {
-            const updates = { [modalName]: isOpen };
-            return updates;
-        });
     }
 }));
 
