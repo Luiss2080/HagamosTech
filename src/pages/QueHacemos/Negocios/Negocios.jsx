@@ -103,7 +103,7 @@ const SolucionesGrid = () => {
              <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
           </div>
           <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end flex-grow">
-            <div className="w-12 h-12 rounded-xl bg-black border border-neutral-800 flex items-center justify-center text-[#A3E635] mb-4 group-hover:-rotate-12 transition-transform shadow-lg relative z-20">
+            <div className="w-12 h-12 rounded-xl bg-[#A3E635] border border-[#A3E635] flex items-center justify-center text-black mb-4 group-hover:-rotate-12 transition-transform shadow-[0_0_15px_rgba(163,230,53,0.3)] relative z-20">
               {item.icon}
             </div>
             <h3 className="text-xl font-black text-white mb-2">{item.title}</h3>
