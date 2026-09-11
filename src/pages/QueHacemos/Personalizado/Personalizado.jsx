@@ -129,7 +129,7 @@ const PROJECTS = [
     category: 'MODULARES',
     firstPart: 'Proyectos',
     highlightPart: 'Especiales',
-    desc: 'Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, dise�amos exactamente lo que necesitas.',
+    desc: 'Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, diseñamos exactamente lo que necesitas.',
     icon: 'fa-puzzle-piece',
     images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80']
   },
