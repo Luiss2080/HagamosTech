@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react';
-import useAuthStore from '../../store/useAutenticacionStore';
 
 const ModalRecordatorioInvitado = ({ isOpen, onClose, diasRestantes }) => {
     

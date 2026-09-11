@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X, Send, MoreVertical, Paperclip, Smile } from 'lucide-react';
-import { getRandomWhatsApp } from '../../utils/whatsapp';
 
 const ChatWhatsApp = ({ onOpen, onClose }) => {
   const [isOpen, setIsOpen] = useState(false);

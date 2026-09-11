@@ -37,7 +37,7 @@ const useModalStore = create((set) => ({
         });
     },
 
-    setModalOpen: (modalName, isOpen, orderData = null) => {
+    setModalOpen: (modalName, isOpen, _orderData = null) => {
         console.log(`ModalStore | Seteando ${modalName} a ${isOpen}`);
         set(() => {
             const updates = { [modalName]: isOpen };
