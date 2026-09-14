@@ -1,12 +1,14 @@
 import { test, expect } from '@playwright/test';
 
-// Spec 004: las páginas de contenido no deben mostrar el vertical restaurante
-// ni arrojar errores de consola.
-const RUTAS = ['/#/promociones', '/#/novedades'];
+// Spec 004 + 008: contenido tech y título SEO por ruta.
+const CASOS = [
+  { ruta: '/#/promociones', titulo: /Promociones/i },
+  { ruta: '/#/novedades', titulo: /Novedades/i },
+];
 const TERMINOS_PROHIBIDOS = ['salteñ', 'frapuccino', 'cafetería', 'delivery'];
 
-for (const ruta of RUTAS) {
-  test(`${ruta} carga sin errores y sin contenido de restaurante`, async ({ page }) => {
+for (const { ruta, titulo } of CASOS) {
+  test(`${ruta} carga con su título, sin errores y sin contenido de restaurante`, async ({ page }) => {
     const errores = [];
     page.on('console', (msg) => {
       if (msg.type() === 'error') errores.push(msg.text());
@@ -15,6 +17,7 @@ for (const ruta of RUTAS) {
 
     await page.goto(ruta);
     await expect(page.getByAltText('Logo HagamosTech').first()).toBeVisible({ timeout: 30_000 });
+    await expect(page).toHaveTitle(titulo);
 
     const contenido = (await page.content()).toLowerCase();
     for (const termino of TERMINOS_PROHIBIDOS) {
