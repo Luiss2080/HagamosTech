@@ -88,32 +88,38 @@ app.use('/api', (req, res) => {
 });
 
 // --- Inicio del Servidor ---
-// Intenta el puerto configurado y, si está ocupado, prueba los siguientes.
-// Esto evita el choque con otros proyectos (p. ej. ParqueoYa en 3000).
-const iniciarServidor = (puertoInicial, intentosMaximos = 3) => {
-    let intento = 0;
+// Sondea si un puerto responde; si nadie escucha, está libre. Es más fiable
+// que intentar enlazar (en Windows dos sockets pueden compartir el puerto).
+const net = require('net');
+const puertoOcupado = (puerto) =>
+    new Promise((resolve) => {
+        const socket = net.connect({ port: puerto, host: '127.0.0.1' });
+        socket.setTimeout(400);
+        const terminar = (ocupado) => {
+            socket.destroy();
+            resolve(ocupado);
+        };
+        socket.once('connect', () => terminar(true));
+        socket.once('timeout', () => terminar(false));
+        socket.once('error', () => terminar(false));
+    });
 
-    const escuchar = (puerto) => {
-        const server = app.listen(puerto, '0.0.0.0', () => {
-            console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
-            console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${puerto}`);
-            console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${puerto}`);
-        });
-
-        server.on('error', (error) => {
-            if (error.code === 'EADDRINUSE' && intento < intentosMaximos - 1) {
-                intento += 1;
-                const siguiente = puerto + 1;
-                console.warn(`\x1b[33m%s\x1b[0m`, `[SERVIDOR MVC] Puerto ${puerto} ocupado; probando ${siguiente}...`);
-                escuchar(siguiente);
-            } else {
-                console.error(`[SERVIDOR MVC] No se pudo iniciar el servidor: ${error.message}`);
-                process.exit(1);
-            }
-        });
-    };
-
-    escuchar(puertoInicial);
+const buscarPuertoLibre = async (puertoInicial, intentosMaximos) => {
+    for (let i = 0; i < intentosMaximos; i++) {
+        const puerto = puertoInicial + i;
+        // eslint-disable-next-line no-await-in-loop
+        const ocupado = await puertoOcupado(puerto);
+        if (!ocupado) return puerto;
+        console.warn(`\x1b[33m%s\x1b[0m`, `[SERVIDOR MVC] Puerto ${puerto} ocupado; probando ${puerto + 1}...`);
+    }
+    return puertoInicial + intentosMaximos - 1;
 };
 
-iniciarServidor(Number(PORT));
+(async () => {
+    const puerto = await buscarPuertoLibre(Number(PORT), 3);
+    app.listen(puerto, '0.0.0.0', () => {
+        console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
+        console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${puerto}`);
+        console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${puerto}`);
+    });
+})();
