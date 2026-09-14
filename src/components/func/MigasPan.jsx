@@ -52,20 +52,20 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
 
   const breadcrumbPill = (
     <div className={`flex ${isCenter ? 'justify-center' : 'justify-start'} mb-4`}>
-      <div className="inline-flex items-center gap-2 bg-white px-4 py-2 rounded-full border border-gray-100 shadow-md">
-        <Link to="/" className="w-8 h-8 rounded-full bg-[#FF4D00] text-white flex items-center justify-center hover:bg-[#CC3D00] transition-all shrink-0 shadow-sm">
+      <div className="inline-flex items-center gap-2 bg-[#111827] px-4 py-2 rounded-full border border-gray-100 shadow-md">
+        <Link to="/" className="w-8 h-8 rounded-full bg-[#A3E635] text-white flex items-center justify-center hover:bg-[#84CC16] transition-all shrink-0 shadow-sm">
           <i className="fa-solid fa-house text-xs"></i>
         </Link>
-        <span className="text-[10px] font-black text-[#5D3A1F]/70 uppercase tracking-widest">INICIO</span>
+        <span className="text-[10px] font-black text-slate-300/70 uppercase tracking-widest">INICIO</span>
         {resolvedPaths.map((p, idx) => (
           <React.Fragment key={idx}>
-            <span className="text-[#FF4D00]/40">/</span>
+            <span className="text-[#A3E635]/40">/</span>
             {p.url ? (
-              <Link to={p.url} className="text-[10px] font-black text-[#FF4D00] uppercase tracking-widest hover:underline">
+              <Link to={p.url} className="text-[10px] font-black text-[#A3E635] uppercase tracking-widest hover:underline">
                 {p.label}
               </Link>
             ) : (
-              <span className="text-[10px] font-black text-[#5D3A1F] uppercase tracking-widest">{p.label}</span>
+              <span className="text-[10px] font-black text-slate-300 uppercase tracking-widest">{p.label}</span>
             )}
           </React.Fragment>
         ))}
@@ -75,7 +75,7 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
 
   const badgePill = resolvedBadge ? (
     <div className={`flex ${isCenter ? 'justify-center' : 'justify-start'} mb-4`}>
-      <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#FF4D00]/45 bg-[#FF4D00]/10 text-[9.5px] font-black uppercase tracking-widest text-[#FF4D00] shadow-sm leading-none">
+      <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
         <i className={`fa-solid ${resolvedIcon}`}></i> {resolvedBadge}
       </span>
     </div>
@@ -84,12 +84,12 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
   const heroContent = (
     <>
       {title && (
-        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-black font-heading text-[#8B4513] leading-[1.15] tracking-tight mb-5 sm:mb-6">
+        <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-6xl font-black font-heading text-white leading-[1.15] tracking-tight mb-5 sm:mb-6">
           {title}{' '}
           {highlight && (
-            <span className="relative inline-block text-[#FF4D00]">
+            <span className="relative inline-block text-[#A3E635]">
               {highlight}
-              <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
+              <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
                 <path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/>
               </svg>
             </span>
@@ -97,7 +97,7 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
         </h1>
       )}
       {description && (
-        <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">{description}</p>
+        <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">{description}</p>
       )}
       {children && <div className="mt-8 sm:mt-10">{children}</div>}
     </>
