@@ -5,16 +5,16 @@ import ParticulasCirculares from "../fondos/ParticulasCirculares";
 const Footer = () => {
 
   const menuLinks = [
-    { name: "Tecnología", path: "/#tecnologia", icon: "fa-microchip" },
-    { name: "Academia", path: "/#academia", icon: "fa-graduation-cap" },
-    { name: "Negocios", path: "/#negocios", icon: "fa-store" },
-    { name: "Soluciones personalizadas", path: "/#personalizado", icon: "fa-lightbulb" },
-    { name: "Cómo trabajamos", path: "/#flujo", icon: "fa-diagram-project" },
+    { name: "Tecnología", path: "/que-hacemos/tecnologia", icon: "fa-microchip" },
+    { name: "Academia", path: "/que-hacemos/academia", icon: "fa-graduation-cap" },
+    { name: "Negocios", path: "/que-hacemos/negocios", icon: "fa-store" },
+    { name: "Soluciones personalizadas", path: "/que-hacemos/personalizado", icon: "fa-lightbulb" },
+    { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
   ];
 
   const nosotrosLinks = [
-    { name: "Cómo trabajamos", path: "/#flujo", icon: "fa-diagram-project" },
-    { name: "Nuestras soluciones", path: "/#que-hacemos", icon: "fa-layer-group" },
+    { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
+    { name: "Nuestras soluciones", path: "/servicios/desarrollo-web", icon: "fa-layer-group" },
     { name: "Contanos tu idea", path: "/contactanos", icon: "fa-comment-dots" },
     { name: "Apoyo y soporte", path: "/contactanos", icon: "fa-headset" },
     { name: "Trabajá con nosotros", path: "/contactanos", icon: "fa-briefcase" },

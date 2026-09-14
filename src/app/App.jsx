@@ -230,6 +230,25 @@ const App = () => {
 }
 export default App;
 
+const SeoRuta = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    const { title, description } = tituloParaRuta(pathname);
+    document.title = title;
+
+    let meta = document.querySelector('meta[name="description"]');
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute('name', 'description');
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', description);
+  }, [pathname]);
+
+  return null;
+};
+
 const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
