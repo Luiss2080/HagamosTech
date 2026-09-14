@@ -10,7 +10,7 @@ const getIconForInclude = (text) => {
   if (t.includes('video')) return 'fa-video';
   if (t.includes('proyecto')) return 'fa-diagram-project';
   if (t.includes('código') || t.includes('software') || t.includes('algoritmo') || t.includes('programación')) return 'fa-code';
-  if (t.includes('soporte') || t.includes('mentoría')) return 'fa-headset';
+  if (t.includes('soporte')) return 'fa-headset';
   if (t.includes('simulación')) return 'fa-vr-cardboard';
   if (t.includes('ejercicio')) return 'fa-gamepad';
   if (t.includes('diseño') || t.includes('modelo')) return 'fa-bezier-curve';

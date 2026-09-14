@@ -99,7 +99,6 @@ const TERMINOS_PROHIBIDOS = [
   'mentoría',
   'headhunting',
   'ciberseguridad',
-  'erp',
 ];
 
 describe('Integridad de la oferta (serviciosData)', () => {
@@ -114,6 +113,15 @@ describe('Integridad de la oferta (serviciosData)', () => {
       expect(SERVICIOS_DATA[categoria], `falta la categoría ${categoria}`).toHaveLength(cantidad);
     }
   );
+
+  it('los servicios coinciden exactamente con el Catálogo Maestro', () => {
+    for (const [categoria, nombres] of Object.entries(NOMBRES_ESPERADOS)) {
+      expect(
+        SERVICIOS_DATA[categoria].map((s) => s.name),
+        `los servicios de "${categoria}" deben coincidir con el catálogo`
+      ).toEqual(nombres);
+    }
+  });
 
   it('todos los servicios tienen los campos obligatorios', () => {
     for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {

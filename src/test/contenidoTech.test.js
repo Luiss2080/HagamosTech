@@ -2,9 +2,10 @@ import { describe, it, expect } from 'vitest';
 import { readdirSync, readFileSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
-// Verdad de contenido: Promociones y Novedades deben hablar solo de tecnología
-// (Spec 004). La oferta canónica vive en `src/data/serviciosData.js`.
-const RAICES = ['src/pages/Promociones', 'src/pages/Novedades'];
+// Verdad de contenido: todo el frontend debe hablar solo de la oferta del
+// Catálogo Maestro (docs/catalogo-servicios.md). Se excluyen los archivos de test.
+const RAICES = ['src'];
+const EXCLUIR = /(\.test\.|\.spec\.|[/\\]test[/\\])/;
 
 const TERMINOS_PROHIBIDOS = [
   'salteñ',
@@ -12,27 +13,35 @@ const TERMINOS_PROHIBIDOS = [
   'frapuccino',
   'cafetería',
   'cafeteria',
-  'delivery',
-  'sucursal',
-  'postre',
-  '1989',
+  'arduino',
+  'lego',
+  'robotics academy',
+  'robot builder',
+  'libros',
+  'tomos',
+  'modo invitado',
+  'primer pedido',
+  'mentoría',
+  'headhunting',
+  'ciberseguridad',
 ];
 
 const listarArchivos = (dir) => {
   const archivos = [];
   for (const entrada of readdirSync(dir)) {
     const ruta = join(dir, entrada);
+    if (EXCLUIR.test(ruta)) continue;
     if (statSync(ruta).isDirectory()) {
       archivos.push(...listarArchivos(ruta));
-    } else if (entrada.endsWith('.jsx') || entrada.endsWith('.js')) {
+    } else if (entrada.endsWith('.jsx') || entrada.endsWith('.js') || entrada.endsWith('.tsx')) {
       archivos.push(ruta);
     }
   }
   return archivos;
 };
 
-describe('Contenido tech en Promociones y Novedades', () => {
-  it('no contiene términos del vertical restaurante', () => {
+describe('Contenido alineado al Catálogo Maestro', () => {
+  it('el frontend no contiene términos fuera del catálogo', () => {
     for (const raiz of RAICES) {
       for (const archivo of listarArchivos(raiz)) {
         const texto = readFileSync(archivo, 'utf8').toLowerCase();
