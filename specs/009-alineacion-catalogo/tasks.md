@@ -1,0 +1,11 @@
+# Tareas — Spec 009 (Alineación total al Catálogo Maestro)
+
+- [x] T1. Alinear nombres de `serviciosData.js` al catálogo. (RF-1)
+- [x] T2. Ampliar `contenidoTech.test.js` a todo `src/` con términos prohibidos. (RF-2, RF-8)
+- [x] T3. Añadir a `serviciosData.test.js` la validación de nombres exactos. (RF-1, RF-8)
+- [x] T4. Eliminar modales/botones/lógica de invitado y cupón; quitar acceso a "libros". (RF-3)
+- [x] T5. Reemplazar el carrusel de marcas por ejemplos de soluciones permitidos; eliminar `LogosClientes`. (RF-4)
+- [x] T6. Alinear `QueHacemos/Academia|Negocios|Personalizado` y testimonios de `Servicios/*`. (RF-5, RF-6)
+- [x] T7. Corregir `TerminosModal` y `CondicionesPagina`. (RF-7)
+- [x] T8. Corregir chat (`categorias`), correo/plantilla, `PantallaCarga`, `VideoPlayerModal`, `ContactoModal`, `Error419`, `Cookies`, perfil. (RF-2, RF-5)
+- [x] T9. Verificación: lint, tests (raíz y server), build y E2E. (Todos)
