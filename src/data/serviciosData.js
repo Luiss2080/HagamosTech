@@ -13,7 +13,7 @@ export const SERVICIOS_DATA = {
     estudiantes: [
         {
             id: 'presentaciones',
-            name: 'Presentaciones Interactivas',
+            name: 'Presentaciones PowerPoint e Interactivas',
             icon: 'fa-file-powerpoint',
             img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=60',
             category: 'Académico',
@@ -35,7 +35,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'formato-apa',
-            name: 'Formato APA 7 y Docs',
+            name: 'Formato APA 7 y Documentación Técnica',
             icon: 'fa-book',
             img: 'https://images.unsplash.com/photo-1455390582262-044cdead2708?w=600&auto=format&fit=crop&q=60',
             category: 'Documentación',
@@ -57,7 +57,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'infografias-diagramas',
-            name: 'Infografías y Diagramas',
+            name: 'Infografías, Diagramas y Líneas de Tiempo',
             icon: 'fa-project-diagram',
             img: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&auto=format&fit=crop&q=60',
             category: 'Visualización',
@@ -79,7 +79,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'mapas-conceptuales',
-            name: 'Mapas Conceptuales',
+            name: 'Mapas Conceptuales y Portadas Académicas',
             icon: 'fa-network-wired',
             img: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=600&auto=format&fit=crop&q=60',
             category: 'Síntesis',
@@ -101,7 +101,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'simuladores-educativos',
-            name: 'Simuladores y Redes',
+            name: 'Simuladores Educativos y Proyectos de Redes',
             icon: 'fa-microchip',
             img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60',
             category: 'Tecnología',
@@ -123,7 +123,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'apoyo-programacion',
-            name: 'Apoyo en Programación',
+            name: 'Apoyo en Proyectos de Programación',
             icon: 'fa-code',
             img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=60',
             category: 'Software',
@@ -147,7 +147,7 @@ export const SERVICIOS_DATA = {
     emprendedores: [
         {
             id: 'creacion-marca',
-            name: 'Creación de Marca',
+            name: 'Creación de Marca y Branding Básico',
             icon: 'fa-lightbulb',
             img: 'https://images.unsplash.com/photo-1493612276216-ee3925520721?w=600&auto=format&fit=crop&q=60',
             category: 'Branding',
@@ -191,7 +191,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'menus-qr',
-            name: 'Menús QR y Catálogos',
+            name: 'Menús QR y Catálogos de Productos',
             icon: 'fa-qrcode',
             img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=60',
             category: 'Digitalización',
@@ -213,7 +213,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'publicidad-ofertas',
-            name: 'Publicidad de Ofertas',
+            name: 'Publicidad para Promociones y Ofertas',
             icon: 'fa-bullhorn',
             img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&auto=format&fit=crop&q=60',
             category: 'Marketing',
@@ -235,7 +235,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'publicidad-fechas',
-            name: 'Fechas Especiales',
+            name: 'Publicidad para Fechas Especiales',
             icon: 'fa-calendar-star',
             img: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&auto=format&fit=crop&q=60',
             category: 'Marketing',
@@ -257,7 +257,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'gestion-clientes',
-            name: 'Gestión de Clientes',
+            name: 'Gestión de Clientes Inicial',
             icon: 'fa-users-gear',
             img: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=600&auto=format&fit=crop&q=60',
             category: 'CRM',
@@ -281,7 +281,7 @@ export const SERVICIOS_DATA = {
     empleo: [
         {
             id: 'cv-ats',
-            name: 'CV Optimizado ATS',
+            name: 'Currículum Profesional y CV Optimizado ATS',
             icon: 'fa-file-user',
             img: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&auto=format&fit=crop&q=60',
             category: 'Empleabilidad',
@@ -303,7 +303,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'perfil-linkedin',
-            name: 'Optimización LinkedIn',
+            name: 'Optimización de Perfil de LinkedIn',
             icon: 'fa-linkedin',
             img: 'https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=600&auto=format&fit=crop&q=60',
             category: 'Networking',
@@ -325,7 +325,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'cartas-presentacion',
-            name: 'Cartas y Traducción',
+            name: 'Cartas de Presentación y Traducción de CV',
             icon: 'fa-envelope-open-text',
             img: 'https://images.unsplash.com/photo-1554774853-719586f82d77?w=600&auto=format&fit=crop&q=60',
             category: 'Redacción',
@@ -347,7 +347,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'portafolios-digitales',
-            name: 'Portafolios Digitales',
+            name: 'Portafolios Profesionales Digitales',
             icon: 'fa-folder-open',
             img: 'https://images.unsplash.com/photo-1481481600673-c6cb960f0896?w=600&auto=format&fit=crop&q=60',
             category: 'Exhibición',
@@ -369,7 +369,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'entrevistas',
-            name: 'Preparación Entrevistas',
+            name: 'Preparación para Entrevistas y Asesoría Laboral',
             icon: 'fa-users',
             img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=60',
             category: 'Asesoría',
@@ -415,7 +415,7 @@ export const SERVICIOS_DATA = {
     diseno: [
         {
             id: 'logos-identidad',
-            name: 'Logos e Identidad',
+            name: 'Logos e Identidad Visual (Isologotipos)',
             icon: 'fa-pen-nib',
             img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60',
             category: 'Gráfico',
@@ -437,7 +437,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'flyers-banners',
-            name: 'Flyers y Banners',
+            name: 'Flyers, Banners, Pancartas y Redes Sociales',
             icon: 'fa-image',
             img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60',
             category: 'Publicidad',
@@ -459,7 +459,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'packaging-catalogos',
-            name: 'Packaging y Catálogos',
+            name: 'Packaging, Etiquetas y Catálogos Físicos',
             icon: 'fa-box-open',
             img: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=600&auto=format&fit=crop&q=60',
             category: 'Producto',
@@ -481,7 +481,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'tarjetas-invitaciones',
-            name: 'Tarjetas e Invitaciones',
+            name: 'Tarjetas de Presentación e Invitaciones',
             icon: 'fa-id-card',
             img: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&auto=format&fit=crop&q=60',
             category: 'Corporativo',
@@ -503,7 +503,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'edicion-fotografica',
-            name: 'Edición Fotográfica',
+            name: 'Edición y Retoque Fotográfico',
             icon: 'fa-wand-magic-sparkles',
             img: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&auto=format&fit=crop&q=60',
             category: 'Retoque',
@@ -549,7 +549,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'landing-pages',
-            name: 'Landing Pages',
+            name: 'Landing Pages y Portafolios Personales',
             icon: 'fa-rocket',
             img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60',
             category: 'Conversión',
@@ -571,7 +571,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'tiendas-online',
-            name: 'Tiendas Online',
+            name: 'Tiendas Online Básicas y Sistemas de Pedidos',
             icon: 'fa-cart-shopping',
             img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop&q=60',
             category: 'E-commerce',
@@ -593,7 +593,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'catalogos-blogs',
-            name: 'Catálogos y Blogs',
+            name: 'Catálogos Digitales Online y Blogs',
             icon: 'fa-blog',
             img: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&auto=format&fit=crop&q=60',
             category: 'Contenido',
@@ -615,7 +615,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'ui-ux-responsive',
-            name: 'Diseño UI/UX',
+            name: 'Diseño UI/UX, Formularios y Web Responsive',
             icon: 'fa-mobile-screen-button',
             img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60',
             category: 'Interfaces',
@@ -639,7 +639,7 @@ export const SERVICIOS_DATA = {
     software: [
         {
             id: 'sistemas-web',
-            name: 'Sistemas y Software',
+            name: 'Desarrollo de Sistemas Web y Software',
             icon: 'fa-laptop-code',
             img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60',
             category: 'Desarrollo',
@@ -661,7 +661,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'bases-datos',
-            name: 'Bases de Datos',
+            name: 'Diseño y Gestión de Bases de Datos',
             icon: 'fa-database',
             img: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60',
             category: 'Datos',
@@ -683,7 +683,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'soporte-devops',
-            name: 'Soporte y DevOps',
+            name: 'Soporte Tecnológico y DevOps',
             icon: 'fa-server',
             img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=60',
             category: 'Infraestructura',
