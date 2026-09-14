@@ -55,23 +55,6 @@ const construirRespuestaUsuario = (usuario, dosFA) => {
         estadoSuscripcion = 'vencido';
     }
     
-    // Preparar info del cupón
-    let infoCupon = null;
-    if (usuario.cuponDescuento) {
-        const expirado = new Date() > (usuario.cuponDescuento.fechaExpiracionExtendida || usuario.cuponDescuento.fechaExpiracion);
-        let estadoCupon = usuario.cuponDescuento.estado;
-        if (estadoCupon === 'pendiente' && expirado) {
-            estadoCupon = 'inactivo';
-        }
-        infoCupon = {
-            estado: estadoCupon,
-            fechaExpiracion: usuario.cuponDescuento.fechaExpiracion,
-            fechaExpiracionExtendida: usuario.cuponDescuento.fechaExpiracionExtendida,
-            extendido: usuario.cuponDescuento.extendido,
-            codigo: usuario.cuponDescuento.codigo
-        };
-    }
-
     return {
         id: usuario.id,
         correo: usuario.correo,
@@ -90,8 +73,7 @@ const construirRespuestaUsuario = (usuario, dosFA) => {
         suscripcion: estadoSuscripcion ? {
             estado: estadoSuscripcion,
             fechaFinPrueba: finPrueba
-        } : null,
-        cupon: infoCupon
+        } : null
     };
 };
 
@@ -107,8 +89,7 @@ const AuthController = {
                             detalleRolPermisos: { include: { permiso: true } }
                         }
                     },
-                    suscripcion: true,
-                    cuponDescuento: true
+                    suscripcion: true
                 }
             });
             if (!usuario || usuario.contrasena !== contrasena) {
@@ -177,8 +158,7 @@ const AuthController = {
                             detalleRolPermisos: { include: { permiso: true } }
                         }
                     },
-                    suscripcion: true,
-                    cuponDescuento: true
+                    suscripcion: true
                 }
             });
             if (!usuario) {
@@ -317,18 +297,11 @@ const AuthController = {
                     correo: pendiente.correo,
                     contrasena: pendiente.contrasena,
                     rolId: rolInvitado.id,
-                    emailVerificado: true,
-                    cuponDescuento: {
-                        create: {
-                            estado: 'pendiente',
-                            fechaExpiracion: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000) // 72 horas para reclamar
-                        }
-                    }
+                    emailVerificado: true
                 },
                 include: {
                     rol: { include: { detalleRolPermisos: { include: { permiso: true } } } },
-                    suscripcion: true,
-                    cuponDescuento: true
+                    suscripcion: true
                 }
             });
 
@@ -494,8 +467,7 @@ const AuthController = {
                             detalleRolPermisos: { include: { permiso: true } }
                         }
                     },
-                    suscripcion: true,
-                    cuponDescuento: true
+                    suscripcion: true
                 }
             });
 

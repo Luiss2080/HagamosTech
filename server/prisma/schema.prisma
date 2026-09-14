@@ -32,7 +32,6 @@ model Usuario {
   rol                     Rol                       @relation(fields: [rolId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_usuarios_rol")
   verificacionCorreos     VerificacionCorreo[]
   recuperacionPasswords   RecuperacionPassword[]
-  cuponDescuento          CuponDescuento?
   suscripcion             Suscripcion?
 
   @@index([rolId], map: "fk_usuarios_rol")
@@ -51,21 +50,6 @@ model Suscripcion {
   usuario           Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
 
   @@map("suscripciones")
-}
-
-model CuponDescuento {
-  id                       Int       @id @default(autoincrement())
-  usuarioId                Int       @unique
-  codigo                   String?   @db.VarChar(50)
-  estado                   String    @default("pendiente") // "pendiente", "reclamado", "usado", "inactivo"
-  extendido                Boolean   @default(false)
-  fechaExpiracion          DateTime
-  fechaExpiracionExtendida DateTime?
-  creadoEn                 DateTime  @default(now())
-  actualizadoEn            DateTime  @updatedAt
-  usuario                  Usuario   @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
-
-  @@map("cupones_descuento")
 }
 
 model VerificacionCorreo {

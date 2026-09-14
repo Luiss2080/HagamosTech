@@ -34,12 +34,10 @@ app.use((req, res, next) => {
 const authRoutes = require('./auth/routes/authRoutes');
 const contactoRoutes = require('./store/routes/contactoRoutes');
 const AuthController = require('./auth/controllers/AuthController');
-const cuponRoutes = require('./auth/routes/cuponRoutes');
 
 // --- ESTRUCTURA MVC: REGISTRO DE RUTAS ---
 app.use('/api/auth', authRoutes);
 app.use('/api/contacto', contactoRoutes);
-app.use('/api/cupones-sistema', cuponRoutes);
 
 // --- ENDPOINTS RETIRADOS (Spec 003) ---
 // El vertical de restaurante/e-commerce ya no existe: se responde 410 Gone

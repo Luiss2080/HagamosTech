@@ -19,7 +19,6 @@ const usuarioBase = {
   activo: true,
   rol: { detalleRolPermisos: [] },
   suscripcion: null,
-  cuponDescuento: null,
 };
 
 // Spec 006: funciones de perfil reales (sin éxito falso).

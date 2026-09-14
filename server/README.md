@@ -8,8 +8,8 @@ Backend API de HagamosTech construido con **Node.js + Express 5 + Prisma ORM + M
 server/
 ├── server.js            # Punto de entrada (Express)
 ├── auth/
-│   ├── controllers/     # AuthController, CuponController
-│   ├── routes/          # authRoutes, cuponRoutes
+│   ├── controllers/     # AuthController
+│   ├── routes/          # authRoutes
 │   └── utils/           # mailer, totp
 ├── store/
 │   └── routes/          # contacto
@@ -45,7 +45,6 @@ Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por cons
 | `DELETE /api/perfil/sessions/:id` | Revocar sesión (404 si no existe) |
 | `POST /api/contacto` | Enviar mensaje de contacto |
 | `GET /api/contacto` | Listar mensajes |
-| `/api/cupones-sistema` | Cupones / modo invitado |
 
 > **API veraz (Spec 005):** no hay mocks ni catch-all con éxito falso. Los endpoints
 > inexistentes responden `404` y los del vertical retirado, `410`. Los módulos que el frontend
@@ -54,7 +53,7 @@ Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por cons
 
 ## Modelos de Prisma
 
-`Usuario`, `Rol`, `Permiso`, `DetalleRolPermisos`, `Suscripcion`, `CuponDescuento`,
+`Usuario`, `Rol`, `Permiso`, `DetalleRolPermisos`, `Suscripcion`,
 `VerificacionCorreo`, `RecuperacionPassword`, `RegistroPendiente`, `mensaje`.
 
 Los modelos de e-commerce (`producto`, `categoria`, `carrito_item`, `compra`, `pago`,

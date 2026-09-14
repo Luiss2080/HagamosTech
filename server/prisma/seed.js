@@ -56,24 +56,6 @@ async function main() {
   });
   console.log('Usuario administrador creado/actualizado:', adminCorreo);
 
-  // --- Cupón de bienvenida de ejemplo para el admin (modo regalo) ---
-  const admin = await prisma.usuario.findUnique({ where: { correo: adminCorreo } });
-  if (admin) {
-    const fechaExp = new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-    await prisma.cuponDescuento.upsert({
-      where: { usuarioId: admin.id },
-      create: {
-        usuarioId: admin.id,
-        codigo: 'HT-BIENVENIDA',
-        estado: 'pendiente',
-        extendido: false,
-        fechaExpiracion: fechaExp,
-      },
-      update: {},
-    });
-    console.log('Cupón de bienvenida creado/actualizado para el admin.');
-  }
-
   console.log('\n--- Siembra mínima de HagamosTech finalizada ---');
 }
 

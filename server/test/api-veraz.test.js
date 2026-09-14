@@ -19,6 +19,11 @@ describe('API veraz', () => {
     expect(res.status).toBe(410);
   });
 
+  it('el endpoint de cupones retirado responde 404', async () => {
+    const res = await request(app).post('/api/cupones-sistema/activar');
+    expect(res.status).toBe(404);
+  });
+
   it('/api/perfil sin token responde 401', async () => {
     const res = await request(app).get('/api/perfil');
     expect(res.status).toBe(401);
