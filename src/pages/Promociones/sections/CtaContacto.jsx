@@ -7,8 +7,8 @@ const CtaContacto = () => {
             <section id="contacto" className="relative z-10 py-12">
                 <CircuitBackground />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
-                    <div className="bg-gradient-to-br from-[#A3E635] via-[#84CC16] to-[#0A0A0A] rounded-[2.5rem] p-8 sm:p-12 text-center shadow-2xl shadow-lime-400/20/25 relative overflow-hidden">
-                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-white/40 via-lime-300 to-white/40"></div>
+                    <div className="bg-gradient-to-br from-[#111827] via-[#0A0A0A] to-[#0A0A0A] rounded-[2.5rem] p-8 sm:p-12 text-center shadow-2xl shadow-lime-400/20 relative overflow-hidden border border-[#A3E635]/25">
+                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635]"></div>
                         <div className="absolute top-0 right-0 w-72 h-72 bg-white/10 rounded-full blur-[60px] pointer-events-none animate-float-slow"></div>
                         <div className="absolute bottom-0 left-0 w-72 h-72 bg-black/10 rounded-full blur-[60px] pointer-events-none animate-float-medium"></div>
                         <div className="absolute -top-8 -left-8 w-40 h-40 rounded-full bg-white/10 blur-2xl pointer-events-none"></div>

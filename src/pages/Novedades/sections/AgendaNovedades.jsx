@@ -78,7 +78,7 @@ const AgendaNovedades = () => {
                                 <div className="relative z-10 px-5 sm:px-6 pt-5 pb-4 border-b border-dashed border-white/10">
                                     <div className="flex items-center justify-between">
                                         <div className="flex items-center gap-3">
-                                            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#A3E635] to-[#84CC16] text-white flex items-center justify-center shadow-lg shadow-lime-400/20/25">
+                                            <div className="w-11 h-11 rounded-2xl bg-gradient-to-br from-[#A3E635] to-[#84CC16] text-white flex items-center justify-center shadow-lg shadow-lime-400/20">
                                                 <i className="fas fa-calendar-days text-lg"></i>
                                             </div>
                                             <div>
@@ -174,14 +174,14 @@ const AgendaNovedades = () => {
                             <button
                                 onClick={anterior}
                                 aria-label="Mes anterior"
-                                className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-white hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                                className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                             >
                                 <i className="fas fa-chevron-left text-sm group-hover:-translate-x-0.5 transition-transform"></i>
                             </button>
                             <button
                                 onClick={siguiente}
                                 aria-label="Mes siguiente"
-                                className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-white hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                                className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                             >
                                 <i className="fas fa-chevron-right text-sm group-hover:translate-x-0.5 transition-transform"></i>
                             </button>

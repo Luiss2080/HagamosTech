@@ -10,7 +10,7 @@ const originalHighlights = [
         desc: 'Desarrollamos web, sistemas y automatizaciones adaptadas a tu necesidad real: "Contanos tu problema, nosotros vemos cómo hacerlo".',
         icon: 'fa-microchip',
         badge: 'Soluciones reales',
-        color: "bg-[#A3E635]",
+        color: "bg-[#171717]",
         textColor: "text-white",
         iconColor: "text-[#A3E635] bg-[#111827]",
         badgeColor: "bg-white/20 text-white border-white/10",
@@ -47,7 +47,7 @@ const originalHighlights = [
         desc: 'Acompañamos tu proyecto después del lanzamiento: mantenimiento, mejoras y ayuda directa por WhatsApp cuando lo necesites.',
         icon: 'fa-headset',
         badge: 'Soporte 24/7',
-        color: "bg-[#A3E635]",
+        color: "bg-[#171717]",
         textColor: "text-white",
         iconColor: "text-[#A3E635] bg-[#111827]",
         badgeColor: "bg-white/20 text-white border-white/10",
@@ -246,7 +246,7 @@ const VentajasCarrusel = () => {
                             type="button"
                             aria-label="Anterior"
                             onClick={prev}
-                            className="absolute left-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-white shadow-xl shadow-black/30/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-white border border-[#A3E635]/20"
+                            className="absolute left-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-[#0A0A0A] shadow-xl shadow-black/30 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-[#0A0A0A] border border-[#A3E635]/20"
                         >
                             <i className="fa-solid fa-arrow-left text-xl"></i>
                         </button>
@@ -254,7 +254,7 @@ const VentajasCarrusel = () => {
                             type="button"
                             aria-label="Siguiente"
                             onClick={next}
-                            className="absolute right-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-white shadow-xl shadow-black/30/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-white border border-[#A3E635]/20"
+                            className="absolute right-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-[#0A0A0A] shadow-xl shadow-black/30 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-[#0A0A0A] border border-[#A3E635]/20"
                         >
                             <i className="fa-solid fa-arrow-right text-xl"></i>
                         </button>
@@ -310,7 +310,7 @@ const VentajasCarrusel = () => {
                                         zIndex: zIndex
                                     }}
                                 >
-                                    <div className={`rotate-card h-auto min-h-[300px] sm:min-h-[330px] md:min-h-[355px] rounded-[2rem] sm:rounded-[2.6rem] p-4 sm:p-6 md:p-7 ${item.color} ${item.textColor} shadow-2xl shadow-black/30/15 relative overflow-hidden flex flex-col md:flex-row items-center gap-4 sm:gap-6 group border-2 ${item.borderColor || 'border-[#ffe08a]/75 ring-1 ring-black/5'} ${item.color === 'bg-[#111827]' ? 'ring-2 ring-[#A3E635]/20 shadow-[inset_0_0_0_1px_rgba(17,24,39,0.08)]' : ''} hover:shadow-[#A3E635]/15`}>
+                                    <div className={`rotate-card h-auto min-h-[300px] sm:min-h-[330px] md:min-h-[355px] rounded-[2rem] sm:rounded-[2.6rem] p-4 sm:p-6 md:p-7 ${item.color} ${item.textColor} shadow-2xl shadow-black/30 relative overflow-hidden flex flex-col md:flex-row items-center gap-4 sm:gap-6 group border-2 ${item.borderColor || 'border-[#ffe08a]/75 ring-1 ring-black/5'} ${item.color === 'bg-[#111827]' ? 'ring-2 ring-[#A3E635]/20 shadow-[inset_0_0_0_1px_rgba(17,24,39,0.08)]' : ''} hover:shadow-[#A3E635]/15`}>
 
                                         {/* Rich Pattern & Gloss */}
                                         <div
@@ -356,7 +356,7 @@ const VentajasCarrusel = () => {
                                         {/* Huge Icon Graphic */}
                                         <div className="relative z-10 w-full md:w-5/12 flex items-center justify-center">
                                             <div className={`w-20 h-20 sm:w-28 sm:h-28 md:w-44 md:h-44 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] flex items-center justify-center shadow-2xl ${item.iconColor} transition-all group-hover:scale-110 group-hover:rotate-6 duration-700 relative ring-4 sm:ring-6 md:ring-8 ring-white/20 backdrop-blur-sm border border-white/40`}>
-                                                <div className="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 md:-top-8 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-16 md:h-16 bg-[#A3E635] rounded-lg sm:rounded-2xl md:rounded-3xl flex items-center justify-center text-white text-sm sm:text-lg md:text-2xl font-bold shadow-xl animate-bounce-slow rotate-12 z-20 border-4 border-white">
+                                                <div className="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 md:-top-8 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-16 md:h-16 bg-[#A3E635] rounded-lg sm:rounded-2xl md:rounded-3xl flex items-center justify-center text-[#0A0A0A] text-sm sm:text-lg md:text-2xl font-bold shadow-xl animate-bounce-slow rotate-12 z-20 border-4 border-white">
                                                     <i className="fa-solid fa-check"></i>
                                                 </div>
                                                 <i className={`fa-solid ${item.icon} text-3xl sm:text-4xl md:text-7xl relative z-10 drop-shadow-lg`}></i>
@@ -373,7 +373,7 @@ const VentajasCarrusel = () => {
                         <button
                             onClick={prev}
                             aria-label="Anterior"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-white transition-colors text-white"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-white"
                         >
                             <i className="fa-solid fa-angle-left"></i>
                         </button>
@@ -417,7 +417,7 @@ const VentajasCarrusel = () => {
                         <button
                             onClick={next}
                             aria-label="Siguiente"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-white transition-colors text-white"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-white"
                         >
                             <i className="fa-solid fa-angle-right"></i>
                         </button>

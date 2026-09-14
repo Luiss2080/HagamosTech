@@ -3,7 +3,7 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Pack Landing Page', precio: 'Bs. 990', normal: 'Bs. 1300', img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60', desc: 'Landing de alta conversión con formulario de contacto, SEO básico y hosting por 1 año.', color: 'bg-[#A3E635]' },
+        { nombre: 'Pack Landing Page', precio: 'Bs. 990', normal: 'Bs. 1300', img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60', desc: 'Landing de alta conversión con formulario de contacto, SEO básico y hosting por 1 año.', color: 'bg-[#111827]' },
         { nombre: 'Pack Automatización', precio: 'Bs. 1490', normal: 'Bs. 1900', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60', desc: 'Automatizamos tareas repetitivas y conectamos tus herramientas, formularios y correos.', color: 'bg-[#171717]' },
         { nombre: 'Pack Identidad + Web', precio: 'Bs. 1990', normal: 'Bs. 2600', img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60', desc: 'Logo, manual de marca y sitio web corporativo listo para publicar.', color: 'bg-[#0A0A0A]' },
     ];

@@ -17,8 +17,8 @@ const MEMBRESIAS = [
             'Backup semanal',
         ],
         theme: {
-            cardBg: 'bg-[#A3E635]',
-            accentLine: 'bg-[#171717]',
+            cardBg: 'bg-[#111827]',
+            accentLine: 'bg-[#A3E635]',
             iconBg: 'bg-white/20',
             checkBg: 'bg-white/20',
             checkColor: 'text-white',
@@ -51,7 +51,7 @@ const MEMBRESIAS = [
             checkBg: 'bg-white/10',
             checkColor: 'text-[#A3E635]',
             buttonBg: 'bg-[#A3E635]',
-            buttonText: 'text-white',
+            buttonText: 'text-[#0A0A0A]',
             buttonHover: 'hover:bg-[#84CC16] hover:text-white',
             borderColor: 'border-[#171717]',
             shadow: 'shadow-2xl shadow-[#171717]/25',
@@ -81,7 +81,7 @@ const MEMBRESIAS = [
             checkColor: 'text-white',
             buttonBg: 'bg-[#111827]',
             buttonText: 'text-white',
-            buttonHover: 'hover:bg-[#A3E635] hover:text-white',
+            buttonHover: 'hover:bg-[#A3E635] hover:text-[#0A0A0A]',
             borderColor: 'border-[#0A0A0A]',
             shadow: 'shadow-xl hover:shadow-2xl shadow-[#0A0A0A]/25',
         }
@@ -111,8 +111,8 @@ const PlanesSuscripcion = () => {
                         </p>
 
                         <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
-                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-white shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Mensual</button>
-                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-white shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
+                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Mensual</button>
+                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
                         </div>
                     </div>
 

@@ -147,14 +147,14 @@ const HeroNovedades = () => {
                 <button
                     onClick={prev}
                     aria-label="Noticia anterior"
-                    className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-white hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                    className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                 >
                     <i className="fas fa-chevron-left text-sm sm:text-base group-hover:-translate-x-0.5 transition-transform"></i>
                 </button>
                 <button
                     onClick={next}
                     aria-label="Siguiente noticia"
-                    className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-white hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                    className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                 >
                     <i className="fas fa-chevron-right text-sm sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
                 </button>
