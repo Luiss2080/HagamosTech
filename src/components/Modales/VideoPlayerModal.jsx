@@ -57,30 +57,30 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                     </div>
 
                                     <h2 className="text-3xl font-black text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
-                                        Muestára en <span className="text-[#c5a059]">Video</span>
+                                        Muestra en <span className="text-[#c5a059]">Video</span>
                                     </h2>
                                     
                                     <p className="text-sm text-white/80 font-medium max-w-sm leading-relaxed mb-5">
-                                        {video.desc || "Descubre nuestáras demostraciones de robótica, programación y soluciones de software explicadas de forma dinámica y visual."}
+                                        {video.desc || "Descubrí nuestras demostraciones de simuladores, programación y soluciones de software explicadas de forma dinámica y visual."}
                                     </p>
 
-                                    <div className="inline-flex itemás-center gap-2 px-5 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widestá mb-5 shadow-lg">
+                                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widest mb-5 shadow-lg">
                                         <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Contenido Exclusivo
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2.5 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[10px] font-black uppercase tracking-widestá text-[#c5a059]">Robotica</p>
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Simuladores</p>
                                             <p className="text-sm font-bold text-white">Servicios y Soluciones</p>
                                         </div>
                                         <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[10px] font-black uppercase tracking-widestá text-[#c5a059]">Software</p>
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Software</p>
                                             <p className="text-sm font-bold text-white">Web a Medida</p>
                                         </div>
                                     </div>
 
                                     <div className="w-full max-w-xs">
-                                        <p className="text-[10px] font-bold text-white/80 uppercase tracking-widestá mb-2.5">Seguinos en redes</p>
+                                        <p className="text-[10px] font-bold text-white/80 uppercase tracking-widest mb-2.5">Seguinos en redes</p>
                                         <div className="grid grid-cols-2 gap-2">
                                             {[
                                                 { label: 'TikTok', icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },

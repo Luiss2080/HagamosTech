@@ -604,7 +604,7 @@ const PerfilPagina = () => {
                                     <CustomDatePicker 
                                         value={formData.fenac} 
                                         onChange={(date) => setFormData(prev => ({ ...prev, fenac: date }))}
-                                        tooltipText="Utilizado para la categorización y niveles de servicios (primaria, secundaria, jóvenes)."
+                                        tooltipText="Utilizado para la categorización de servicios y para el seguimiento de tus solicitudes."
                                     />
 
                                     {/* Teléfono */}

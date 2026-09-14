@@ -97,8 +97,6 @@ const Header = () => {
     const logout = useAuthStore((state) => state.logout);
 
     const esRolAdmin = user?.rolId === 1;
-    const sinPosibilidadInvitado = !!user?.suscripcion?.invitadoActivado && !!user?.suscripcion?.invitadoExtendido;
-    const showGiftBtn = isAuthenticated && !sinPosibilidadInvitado;
 
     const displayName = user?.nombre || user?.correo || 'usuario@correo.com';
     const shortName = user?.nombre || (user?.correo ? user.correo.split('@')[0] : 'usuario');
@@ -436,15 +434,6 @@ const Header = () => {
 
                                     <button
                                         type="button"
-                                        className="w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] shadow-sm hover:shadow-md hover:bg-[#84CC16] hover:scale-105 transition-all duration-300 shrink-0 relative"
-                                        onClick={() => window.dispatchEvent(new Event('abrirModalInvitado'))}
-                                        title="Mis Recompensas"
-                                    >
-                                        <i className="fas fa-gift text-sm animate-pulse"></i>
-                                    </button>
-
-                                    <button
-                                        type="button"
                                         onClick={toggleDarkMode}
                                         className="w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#0A0A0A] text-[#A3E635] shadow-sm hover:shadow-md hover:bg-[#171717] hover:scale-105 transition-all duration-300 shrink-0 border border-[#A3E635]/30"
                                         title={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
@@ -487,19 +476,6 @@ const Header = () => {
                 }`}
             >
                 <div className="flex flex-col gap-3">
-                    <div className="flex items-center justify-end px-2 py-4 shadow-md border-b border-[#A3E635]/15 border-gray-100">
-                        {showGiftBtn && (
-                            <button
-                                onClick={() => {
-                                    closeMenu();
-                                    window.dispatchEvent(new Event('abrirModalInvitado'));
-                                }}
-                                className="w-8 h-8 flex items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] shadow-sm hover:shadow-md hover:bg-[#84CC16]"
-                            >
-                                <i className="fas fa-gift"></i>
-                            </button>
-                        )}
-                    </div>
                     {NAV_ITEMS.map((item) => (
                         item.type === 'dropdown' ? (
                             <div key={item.id} className="flex flex-col shadow-md border-b border-[#A3E635]/10 border-gray-50 pb-2">

@@ -3,7 +3,7 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const TIPOS = [
     { icon: 'fa-lock', titulo: 'Esenciales', frontal: 'Las que hacen funcionar el sitio', detalle: 'Permiten el carrito, tu sesión y la seguridad. Sin ellas el sitio no funciona.', ejemplos: ['Carrito', 'Inicio de sesión', 'Seguridad'], color: 'from-[#A3E635] to-[#84CC16]' },
-    { icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', frontal: 'Recuerdan lo que te gusta', detalle: 'Guardan tus preferencias para que cada visita sea más cómoda y personalizada.', ejemplos: ['Idioma', 'Zona', 'Sabores favoritos'], color: 'from-[#0A0A0A] to-[#171717]' },
+    { icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', frontal: 'Recuerdan lo que te gusta', detalle: 'Guardan tus preferencias para que cada visita sea más cómoda y personalizada.',     ejemplos: ['Idioma', 'Zona', 'Preferencias'], color: 'from-[#0A0A0A] to-[#171717]' },
     { icon: 'fa-chart-line', titulo: 'Analíticas', frontal: 'Nos ayudan a mejorar', detalle: 'Miden cómo usás el sitio de forma anónima para que podamos optimizarlo.', ejemplos: ['Páginas vistas', 'Tiempo de uso', 'Navegación'], color: 'from-[#171717] to-[#6B3410]' },
     { icon: 'fa-bullhorn', titulo: 'Publicidad', frontal: 'Te mostramos lo que te interesa', detalle: 'Personalizan las promociones y ofertas que ves según tus intereses y hábitos.', ejemplos: ['Promos', 'Ofertas', 'Contenido relevante'], color: 'from-[#84CC16] to-[#AA3000]' },
 ];

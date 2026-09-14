@@ -76,20 +76,20 @@ const ModalError = ({
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
-                                            <p className="text-xs font-bold text-white">Salteñas</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-globe mr-1"></i> Web</p>
+                                            <p className="text-xs font-bold text-white">Páginas y Landing</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
-                                            <p className="text-xs font-bold text-white">Caseros y Helados</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
+                                            <p className="text-xs font-bold text-white">Apps y Software</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-mug-hot mr-1"></i> Bebidas</p>
-                                            <p className="text-xs font-bold text-white">Gaseosas y Jugos</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-gears mr-1"></i> Automatización</p>
+                                            <p className="text-xs font-bold text-white">Procesos e IA</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                            <p className="text-xs font-bold text-white">Naturales y Cafés</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
+                                            <p className="text-xs font-bold text-white">Identidad y Gráfica</p>
                                         </div>
                                     </div>
                                 </div>

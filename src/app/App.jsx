@@ -9,7 +9,6 @@ import TerminosModal from '../components/Modales/TerminosModal';
 import RegistroModal from '../components/Modales/RegistroModal';
 import ContactoModal from '../components/Modales/ContactoModal';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
-import GuestModalsManager from '../components/Modales/GuestModalsManager';
 import useModalStore from '../store/useModalStore';
 import { tituloParaRuta } from './seo';
 
@@ -222,7 +221,6 @@ const App = () => {
             onClose={() => closeModal('isVideoOpen')}
             video={videoData}
           />
-          <GuestModalsManager />
           <RastreadorActividad />
       </div>
     </Router>

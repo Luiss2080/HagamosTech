@@ -19,7 +19,7 @@ const TECH_STACK = [
 const TESTIMONIOS = [
   { name: 'Roberto S.', role: 'Emprendedor', text: 'Tenía una idea muy específica para mi logística que ningún software comercial resolvía. HagamosTech entendió mi problema en 15 minutos y creó algo perfecto.' },
   { name: 'Lucía P.', role: 'Directora de RRHH', text: 'Necesitábamos un sistema interno para medir el clima laboral de forma anónima y gamificada. Fue un desarrollo a medida increíble que los empleados aman usar.' },
-  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se conecta con nuestáras máquinas por IoT. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
+  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se integra con nuestros sistemas actuales. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
 ];
 
 const ChatAssistantWindow = () => {
@@ -135,19 +135,19 @@ const PROJECTS = [
   },
   {
     num: '02',
-    category: 'MENTORÍA',
-    firstPart: 'Auditoría &',
-    highlightPart: 'Mentoría',
-    desc: 'Mentorías 1 a 1 y auditorías completas para modernizar tu tecnología y guiar a tu equipo in-house.',
+    category: 'IA',
+    firstPart: 'Integración &',
+    highlightPart: 'IA',
+    desc: 'Integramos inteligencia artificial y asistentes virtuales en tus procesos y sistemas actuales.',
     icon: 'fa-lightbulb',
     images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '03',
-    category: 'TALENTO',
-    firstPart: 'Talento',
-    highlightPart: 'Tech',
-    desc: 'Headhunting especializado para encontrar a los mejores programadores e ingenieros para que formen parte de tu empresa.',
+    category: 'PROCESOS',
+    firstPart: 'Automatización',
+    highlightPart: 'de Procesos',
+    desc: 'Automatizamos tareas repetitivas y conectamos tus herramientas para ahorrar tiempo y recursos.',
     icon: 'fa-users-gear',
     images: ['https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80']
   },
@@ -162,10 +162,10 @@ const PROJECTS = [
   },
   {
     num: '05',
-    category: 'INFRAESTRUCTURA',
-    firstPart: 'Migración',
-    highlightPart: 'Cloud',
-    desc: 'Llevábamos tu infraestructura local a la nube (AWS, Google Cloud) para garantizar máxima disponibilidad y escalabilidad infinita.',
+    category: 'DATOS',
+    firstPart: 'Bases de',
+    highlightPart: 'Datos',
+    desc: 'Diseñamos, normalizamos y mantenemos tus bases de datos para que tu información sea confiable y escalable.',
     icon: 'fa-cloud',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
   },

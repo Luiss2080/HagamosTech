@@ -4,9 +4,9 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 import useAuthStore from '../../../store/useAutenticacionStore';
 
 const ACHIEVEMENTS = [
-    { id: 'ach-1', name: 'Líder Arduino', desc: 'Completó Tomo 1 y 2 de Arduino', icon: 'fa-microchip', color: 'text-amber-400 bg-amber-400/10 border-amber-400/30' },
+    { id: 'ach-1', name: 'Líder Frontend', desc: 'Completó los módulos 1 y 2 de Desarrollo Web', icon: 'fa-microchip', color: 'text-amber-400 bg-amber-400/10 border-amber-400/30' },
     { id: 'ach-2', name: 'Master Coder', desc: 'Desarrollador de Páginas Web', icon: 'fa-code', color: 'text-blue-400 bg-blue-400/10 border-blue-400/30' },
-    { id: 'ach-3', name: 'Robot Builder', desc: 'Armó su primer prototipo LEGO', icon: 'fa-robot', color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30' },
+    { id: 'ach-3', name: 'Proyecto Destacado', desc: 'Publicó su primer proyecto web en producción', icon: 'fa-rocket', color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30' },
 ];
 
 const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref, isSavingPrefs, handleSavePreferences }) => {
@@ -46,7 +46,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     <h1 className="text-xs font-black uppercase tracking-wider text-white flex items-center gap-1.5">
                         <i className="fas fa-microchip text-amber-400"></i> HagamosTech
                     </h1>
-                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Instituto de Robótica & IA</p>
+                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Estudio de Software & IA</p>
                 </div>
 
                 {/* 2. SECCIÓN DE AVATAR Y METADATA */}
@@ -268,7 +268,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#a41e22]/5 rounded-full blur-3xl pointer-events-none" />
                             
                             <h3 className="font-serif text-[#a41e22] text-xl font-bold italic tracking-wide">HagamosTech</h3>
-                            <p className="text-[8px] font-black uppercase tracking-[0.25em] text-[#c5a059] mt-1">Robotics & Software Academy</p>
+                            <p className="text-[8px] font-black uppercase tracking-[0.25em] text-[#c5a059] mt-1">Software & Digital Solutions</p>
                             
                             <div className="w-10 h-0.5 bg-slate-350 mx-auto my-3" />
                             
@@ -276,7 +276,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <h4 className="text-lg font-black font-sans text-slate-900 mt-1 uppercase tracking-wider">{displayName}</h4>
                             
                             <p className="text-[10px] font-medium leading-relaxed max-w-xs mx-auto mt-3 text-slate-600">
-                                Por completar satisfactoriamente las competencias avanzadas de <strong>Desarrollo Web & Robótica Autónoma</strong>.
+                                Por completar satisfactoriamente las competencias de <strong>Desarrollo Web & Automatización</strong>.
                             </p>
                             
                             <div className="flex justify-between items-center mt-6 px-4">

@@ -23,7 +23,7 @@ const METRICS = [
 
 const TESTIMONIOS = [
   { name: 'María G.', role: 'Estudiante de Medicina', text: 'El simulador de casos clínicos que programaron para mi tesis me aseguró la nota máxima. Increíble nivel de detalle teórico y visual.' },
-  { name: 'Andrés F.', role: 'Ingeniería de Sistemas', text: 'Estaba bloqueado con el despliegue de mi arquitectura cloud para el proyecto final. HagamosTech no sólo lo hizo, me explicaron cada línea de código.' },
+  { name: 'Andrés F.', role: 'Ingeniería de Sistemas', text: 'Estaba bloqueado con el despliegue de mi proyecto final. HagamosTech no sólo lo resolvió, me explicaron cada línea de código.' },
   { name: 'Dra. Elena V.', role: 'Docente Universitaria', text: 'He visto a mis alumnos presentar plataformas desarrolladas con su asesoría y el rigor técnico es impecable. Los recomiendo siempre.' }
 ];
 
@@ -67,13 +67,13 @@ const ESPECIALIDADES = [
   },
   {
     title: 'Sistemas de Información',
-    desc: 'Modelado de bases de datos y despliegue en servidores cloud AWS para ingeniería.',
+    desc: 'Modelado de bases de datos y documentación técnica para proyectos de ingeniería.',
     icon: <Laptop size={20} />,
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Recursos Educativos e IA',
-    desc: 'Plataformas E-Learning e Inteligencia Artificial para tutores virtuales.',
+    desc: 'Apoyo en proyectos de programación e IA aplicada para trabajos académicos.',
     icon: <Microscope size={20} />,
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
   },
@@ -84,8 +84,8 @@ const ESPECIALIDADES = [
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Análisis Estadístico',
-    desc: 'Procesamiento de datos y modelado con herramientas avanzadas para investigaciones.',
+    title: 'Infografías y Líneas de Tiempo',
+    desc: 'Esquemas, diagramas y líneas de tiempo para estructurar ideas e investigaciones.',
     icon: <LineChart size={20} />,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
   },

@@ -5,27 +5,27 @@ import Breadcrumb from '../../components/func/MigasPan';
 const TERMS_SECTIONS = [
     {
         title: '1. Alcance y aceptacion',
-        text: 'Al comprar en HagamosTech, el cliente acepta estas condiciones sobre productos, pagos, garantias, cambios y uso de la plataforma web.',
+        text: 'Al contratar servicios con HagamosTech, el cliente acepta estas condiciones sobre el alcance del servicio, los pagos, las garantias y el uso de la plataforma web.',
     },
     {
-        title: '2. Productos y disponibilidad',
-        text: 'Las imagenes y descripciones son referenciales. La disponibilidad de stock y promociones puede variar segun campaña y sucursal.',
+        title: '2. Servicios y disponibilidad',
+        text: 'Las descripciones de los servicios son referenciales. La disponibilidad y el alcance final pueden variar segun la demanda y la propuesta acordada con el cliente.',
     },
     {
         title: '3. Precios y promociones',
-        text: 'Los precios publicados pueden cambiar sin previo aviso. Las promociones aplican bajo vigencia, condiciones y cobertura detalladas en cada oferta.',
+        text: 'Los precios publicados pueden cambiar sin previo aviso. Las promociones aplican bajo vigencia, condiciones y alcance detallados en cada oferta.',
     },
     {
         title: '4. Pagos y facturacion',
         text: 'Se aceptan los medios de pago habilitados por HagamosTech. La emision de factura se realiza con los datos proporcionados por el cliente.',
     },
     {
-        title: '5. Entrega y envios',
-        text: 'La entrega se coordina segun direccion y disponibilidad de envio. El tiempo estimado de entrega es referencial y puede variar por logistica.',
+        title: '5. Entregas y plazos',
+        text: 'Los entregables se coordinan segun el alcance y los plazos acordados. Los tiempos estimados son referenciales y pueden variar por complejidad del proyecto.',
     },
     {
-        title: '6. Garantia y devoluciones',
-        text: 'La garantia cubre fallas de fabrica. Los cambios y devoluciones se procesan previa revision tecnica y segun la politica de servicio.',
+        title: '6. Garantia y ajustes',
+        text: 'La garantia cubre los defectos tecnicos de lo entregado dentro del alcance acordado. Los ajustes y cambios se procesan previa revision y segun la politica de servicio.',
     },
     {
         title: '7. Uso de la plataforma',

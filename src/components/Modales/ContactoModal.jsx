@@ -57,7 +57,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                 setFeedback({
                     type: 'error',
                     title: 'Error',
-                    message: resp?.message || '¿No se pudo enviar el mensaje. Inténtalo de nuevo.',
+                    message: resp?.message || 'No se pudo enviar el mensaje. Inténtalo de nuevo.',
                 });
             }
         } catch {
@@ -122,7 +122,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 </span>
                                             </h2>
                                             <p className="text-base text-white/90 font-medium max-w-sm leading-relaxed mb-7 drop-shadow-md">
-                                                El instituto líder en educación tecnológica y desarrollo de software profesional con el respaldo de nuestáros expertos.
+                                                El equipo de soluciones digitales y tecnológicas: web, software, diseño, automatización e inteligencia artificial.
                                             </p>
 
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111827] border border-[#A3E635]/30 text-[#A3E635] text-xs font-black uppercase tracking-widest mb-8 shadow-lg">
@@ -131,8 +131,8 @@ const ContactoModal = ({ isOpen, onClose }) => {
 
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Servicios</p>
-                                                    <p className="text-sm font-bold text-white">Robótica & LMS</p>
+                                                    <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Soluciones</p>
+                                                    <p className="text-sm font-bold text-white">Web, IA & Automatización</p>
                                                 </div>
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Software</p>
@@ -161,7 +161,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center transition-colors group-hover:bg-[#111827]">
                                                             <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
                                                         </div>
-                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{item.name}</span>
+                                                        <span className="font-bold text-black text-xs group-hover:text-[#111827] transition-colors">{item.label}</span>
                                                     </a>
                                                 ))}
                                             </div>

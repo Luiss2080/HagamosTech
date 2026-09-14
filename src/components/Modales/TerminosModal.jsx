@@ -3,20 +3,20 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 
 const TERMS_SECTIONS = [
     {
-        title: '1. Servicios educativos y de software',
-        text: 'HAGAMOSTECH ofrece servicios de tecnología, automatización, diseño, desarrollo web, y consultoría, así como libros escolares de primaria y secundaria, desarrollo de software a medida, y soluciones tecnológicas empresariales. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
+        title: '1. Servicios y soluciones',
+        text: 'HAGAMOSTECH ofrece soluciones digitales y tecnológicas: apoyo académico, servicios para emprendedores y negocios, empleo y desarrollo profesional, diseño gráfico, desarrollo web y e-commerce, software y hardware, automatización e inteligencia artificial, y soluciones a medida. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
     },
     {
         title: '2. Contratación y acceso a servicios',
-        text: 'La contratación de servicios se confirma una vez realizado el pago acordado o la primera cuota. El acceso a la plataforma o inicio de desarrollo se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
+        text: 'La contratación de un servicio se confirma una vez acordado el alcance y realizado el pago o la primera cuota. El inicio del trabajo o el acceso a la entrega se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
     },
     {
-        title: '3. Libros y materiales educativos',
-        text: 'Los libros digitales e impresos de HAGAMOSTECH están protegidos por derechos de autor. No está permitida la reproducción, distribución o comercialización no autorizada. Las imágenes de portada y contenido son referenciales.',
+        title: '3. Entregables y propiedad intelectual',
+        text: 'Los entregables (diseños, documentos, sitios, software, material académico) son para uso del cliente según el alcance acordado. No está permitida su reproducción, distribución o comercialización no autorizada. La propiedad intelectual del código fuente se transfiere al cliente una vez completado el pago del proyecto, salvo acuerdo distinto.',
     },
     {
         title: '4. Desarrollo de software y páginas web',
-        text: 'Los proyectos de desarrollo de software se rigen por un contrato específico que detalla alcance, entregables, plazos y condiciones de pago. La propiedad intelectual del código fuente se transfiere al cliente únicamente tras el pago total del proyecto.',
+        text: 'Los proyectos de desarrollo se rigen por una propuesta que detalla alcance, entregables, plazos y condiciones de pago. Los cambios fuera del alcance acordado se cotizan por separado.',
     },
     {
         title: '5. Pagos y facturación',
@@ -24,18 +24,14 @@ const TERMS_SECTIONS = [
     },
     {
         title: '6. Política de reembolsos y cambios',
-        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. Los libros físicos pueden cambiarse dentro de los 7 días si presentan defectos de fabricación. El software a medida no tiene reembolso una vez iniciado el desarrollo.',
+        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. El desarrollo de software a medida no tiene reembolso una vez iniciado el trabajo.',
     },
     {
-        title: '7. Modo invitado y acceso temporal',
-        text: 'El modo invitado otorga acceso gratuito de 3 días al visor de libros digitales. Al activarlo, el usuario acepta las condiciones de uso de la plataforma. Pasado el periodo de prueba, el acceso se deshabilita automáticamente.',
+        title: '7. Datos personales y privacidad',
+        text: 'Los datos proporcionados por el cliente se utilizan exclusivamente para fines comerciales y de soporte relacionados con los servicios contratados. No compartimos información personal con terceros sin consentimiento explícito.',
     },
     {
-        title: '8. Datos personales y privacidad',
-        text: 'Los datos proporcionados por el cliente se utilizan exclusivamente para fines académicos, comerciales y de soporte relacionados con los servicios contratados. No compartimos información personal con terceros sin consentimiento explícito.',
-    },
-    {
-        title: '9. Contacto y soporte',
+        title: '8. Contacto y soporte',
         text: 'Para consultas sobre términos, pagos, soporte técnico o garantías, contáctanos al WhatsApp +591 61320004 o al correo contacto@hagamostech.bo. Nuestro horario de atención es lunes a sábado de 9:00 a 19:00.',
     },
 ];
@@ -96,7 +92,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     </h2>
 
                                     <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-5 drop-shadow-md">
-                                        Informacion legal para compradores HAGAMOSTECH sobre productos, promociones, pagos, garantias y entregas.
+                                        Informacion legal para clientes HAGAMOSTECH sobre servicios, pagos, garantias y entregas.
                                     </p>
 
                                     <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-black uppercase tracking-widest mb-5 shadow-lg">
@@ -157,7 +153,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                             </span>
                                             <h3 className="text-2xl font-black text-[#111827] tracking-tight">Terminos y Condiciones</h3>
                                         </div>
-                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Compra segura en HAGAMOSTECH</p>
+                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Servicios claros en HAGAMOSTECH</p>
                                     </div>
 
                                     <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm max-h-[56vh] overflow-y-auto space-y-3">
@@ -172,7 +168,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     <div className="mt-4 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed">
                                         <div className="flex items-start gap-2">
                                             <i className="fas fa-circle-info text-[#a41e22] mt-0.5"></i>
-                                            <span>Al continuar navegando y comprando en HAGAMOSTECH, aceptas estas condiciones comerciales y legales.</span>
+                                            <span>Al continuar navegando y contratando servicios en HAGAMOSTECH, aceptas estas condiciones comerciales y legales.</span>
                                         </div>
                                     </div>
                                 </div>

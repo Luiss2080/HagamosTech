@@ -62,32 +62,32 @@ const SOLUCIONES = [
     image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Inteligencia de Negocios',
-    desc: 'Dashboards automatizados que consolidan tu información financiera, operativa y comercial.',
+    title: 'Catálogos Digitales',
+    desc: 'Muestrarios de productos dinámicos y blogs optimizados para búsqueda orgánica.',
     icon: <BarChart size={20} />,
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Presencia Omnicanal',
-    desc: 'Llevamos tu negocio local al entorno digital, integrando Google, redes y tu propia web.',
+    title: 'Menús QR y Catálogos',
+    desc: 'Digitalizamos tu local o tienda con menús QR, catálogos de productos y contacto directo.',
     icon: <Store size={20} />,
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Automatización (ERPs)',
-    desc: 'Integramos sistemas que facturan y organizan tu empresa solos, despidiéndote del Excel manual.',
+    title: 'Automatización de Procesos',
+    desc: 'Conectamos CRMs, sistemas de facturación y correos automáticos para reducir el trabajo manual.',
     icon: <Cpu size={20} />,
     image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
   },
   {
     title: 'Gestión de Clientes',
-    desc: 'Fideliza y administra a tus clientes desde una plataforma centralizada y fácil de usar.',
+    desc: 'Configuramos WhatsApp Business, respuestas automáticas y organización de contactos.',
     icon: <Users size={20} />,
     image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Ciberseguridad',
-    desc: 'Garantizamos que los datos de tu empresa y tus transacciones estén encriptados y protegidos.',
+    title: 'Publicidad y Promociones',
+    desc: 'Campañas para promociones, ofertas y fechas especiales que impulsan tus ventas.',
     icon: <ShieldCheck size={20} />,
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'
   }
@@ -144,9 +144,9 @@ const ProcessTimeline = () => {
 };
 
 const TESTIMONIOS = [
-  { name: 'Grupo Inmobiliario', role: 'CEO', text: 'El CRM a medida y la web interactiva que construyeron triplicó nuestra captación de leads. Una inversión que se pagó sola en 2 meses.' },
-  { name: 'Retailer Nacional', role: 'Gerente de E-Commerce', text: 'Migrar a una plataforma robusta con HagamosTech eliminó nuestras caídas en Black Friday. Transacciones fluidas y un dashboard increíble.' },
-  { name: 'Clínica Médica', role: 'Director Operativo', text: 'Automatizar las citas y el cobro nos ahorró 4 horas diarias de trabajo administrativo. La tecnología es de primer nivel.' }
+  { name: 'FitCenter', role: 'Software de gimnasios', text: 'El CRM a medida y la web interactiva que construyeron triplicó nuestra captación de clientes. Una inversión que se pagó sola en 2 meses.' },
+  { name: 'EcoPlast', role: 'Soluciones industriales', text: 'Migrar a una plataforma robusta con HagamosTech eliminó nuestros problemas de pedidos. Transacciones fluidas y un panel increíble.' },
+  { name: 'ZoofiPets', role: 'Clínica', text: 'Automatizar las citas y el cobro nos ahorró 4 horas diarias de trabajo administrativo. La tecnología es de primer nivel.' }
 ];
 
 const Negocios = () => {

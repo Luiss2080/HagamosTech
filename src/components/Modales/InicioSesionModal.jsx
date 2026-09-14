@@ -256,29 +256,29 @@ const handleRegenerateQR = async () => {
                             </span>
                         </h2>
                         <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
-                            Ingresa a tu cuenta de HAGAMOSTECH para realizar tus pedidos, ver el catálogo y disfrutar de las mejores soluciones tecnológicas.
+                            Ingresa a tu cuenta de HAGAMOSTECH para gestionar tus servicios y acceder a las soluciones tecnológicas.
                         </p>
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                            <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Pedidos HAGAMOSTECH
+                            <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Cuenta HAGAMOSTECH
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-utensils mr-1"></i> Menú</p>
-                                <p className="text-xs font-bold text-white">Salteñas</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-globe mr-1"></i> Web</p>
+                                <p className="text-xs font-bold text-white">Páginas y Landing</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-cake-candles mr-1"></i> Postres</p>
-                                <p className="text-xs font-bold text-white">Caseros y Helados</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
+                                <p className="text-xs font-bold text-white">Apps y Software</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-mug-hot mr-1"></i> Bebidas</p>
-                                <p className="text-xs font-bold text-white">Gaseosas y Jugos</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-gears mr-1"></i> Automatización</p>
+                                <p className="text-xs font-bold text-white">Procesos e IA</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-martini-glass-citrus mr-1"></i> Refrescos</p>
-                                <p className="text-xs font-bold text-white">Naturales y Cafés</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
+                                <p className="text-xs font-bold text-white">Identidad y Gráfica</p>
                             </div>
                         </div>
                         

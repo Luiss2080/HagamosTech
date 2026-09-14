@@ -1,36 +1,16 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
-import {
-  ShougangLogo,
-  ArcaContinentalLogo,
-  UrbanoLogo,
-  TexfinaLogo,
-  TaiLoyLogo,
-  RintisaLogo,
-  AunaLogo,
-  BsfLogo,
-  DaryzaLogo,
-  GrupoEfeLogo,
-  NexaLogo,
-  ColsoLogo
-} from './LogosClientes';
 
 const ROW1 = [
-  { name: 'Shougang', logoComponent: ShougangLogo, industry: 'Logística y Transporte', icon: 'fa-truck-fast', metric: 'Eficiencia: +94%' },
-  { name: 'Arca Continental', logoComponent: ArcaContinentalLogo, industry: 'Manufactura y Distribuciín', icon: 'fa-warehouse', metric: 'Despliegue: 100%' },
-  { name: 'Urbano', logoComponent: UrbanoLogo, industry: 'Tecnología / Movilidad', icon: 'fa-dolly', metric: 'Envíos: +98%' },
-  { name: 'Texfina', logoComponent: TexfinaLogo, industry: 'Corporativo', icon: 'fa-building', metric: 'Procesos: +95%' },
-  { name: 'Tai Loy', logoComponent: TaiLoyLogo, industry: 'E-commerce', icon: 'fa-store', metric: 'Ventas: +120%' },
-  { name: 'Rintisa', logoComponent: RintisaLogo, industry: 'Fintech', icon: 'fa-wallet', metric: 'Seguridad: 100%' }
+  { name: 'FitCenter', logoIcon: 'fa-dumbbell', industry: 'Software de gimnasios', icon: 'fa-laptop-code', metric: 'Gestión: 100%' },
+  { name: 'Termeco', logoIcon: 'fa-screwdriver-wrench', industry: 'Servicios técnicos', icon: 'fa-gears', metric: 'Procesos: +95%' },
+  { name: 'EcoPlast', logoIcon: 'fa-recycle', industry: 'Soluciones industriales', icon: 'fa-industry', metric: 'Eficiencia: +90%' }
 ];
 
 const ROW2 = [
-  { name: 'Auna', logoComponent: AunaLogo, industry: 'Salud', icon: 'fa-heart-pulse', metric: 'Atenciín: +99%' },
-  { name: 'BSF Almacenes', logoComponent: BsfLogo, industry: 'Corporativo', icon: 'fa-boxes-stacked', metric: 'Capacidad: +96%' },
-  { name: 'Daryza', logoComponent: DaryzaLogo, industry: 'Consultoría', icon: 'fa-user-tie', metric: 'Retorno: +93%' },
-  { name: 'Grupo Efe', logoComponent: GrupoEfeLogo, industry: 'Tecnología', icon: 'fa-laptop-code', metric: 'Sistemas: +97%' },
-  { name: 'Nexa', logoComponent: NexaLogo, industry: 'TI y Consultoría', icon: 'fa-network-wired', metric: 'Uptime: 99.9%' },
-  { name: 'Colso', logoComponent: ColsoLogo, industry: 'Logística', icon: 'fa-truck-ramp-box', metric: 'Tiempos: -24%' }
+  { name: 'ZoofiPets', logoIcon: 'fa-paw', industry: 'Clínicas', icon: 'fa-heart-pulse', metric: 'Atención: +99%' },
+  { name: 'Pyme local', logoIcon: 'fa-store', industry: 'Comercio y retail', icon: 'fa-bag-shopping', metric: 'Ventas: +80%' },
+  { name: 'Startup', logoIcon: 'fa-rocket', industry: 'Tecnología', icon: 'fa-lightbulb', metric: 'Lanzamiento: 100%' }
 ];
 
 const TrustedClients = () => {

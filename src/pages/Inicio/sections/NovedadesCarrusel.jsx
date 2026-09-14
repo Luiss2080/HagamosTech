@@ -24,37 +24,37 @@ const getIconForInclude = (text) => {
 const noticias = [
   {
     id: 'n1',
-    title: 'Plataforma de Mentorías',
-    desc: 'Lanzamos un nuevo entorno web interactivo para agendar sesiones uno a uno en Frontend y Backend.',
+    title: 'Nueva línea de Landing Pages',
+    desc: 'Lanzamos packs de landing pages de alta conversión para captar clientes, con formulario de contacto y hosting incluido.',
     category: 'Lanzamiento',
     status: 'Activo',
     date: '25 de Junio, 2026',
     img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-globe',
+    icon: 'fa-rocket',
     specs: {
-      col1: { label: 'Soporte', value: '1 a 1', icon: 'fa-user-tie' },
-      col2: { label: 'Temas', value: 'JS / Python', icon: 'fa-code' },
-      col3: { label: 'Acceso', value: '24/7 Portal', icon: 'fa-server' }
+      col1: { label: 'Entrega', value: 'Rápida', icon: 'fa-bolt' },
+      col2: { label: 'Diseño', value: 'Responsive', icon: 'fa-mobile-screen' },
+      col3: { label: 'Acceso', value: 'Hosting 1 año', icon: 'fa-server' }
     },
-    includes: ['Mentoría', 'Código', 'Soporte'],
-    link: '/contactanos'
+    includes: ['Diseño', 'Web', 'SEO'],
+    link: '/servicios/desarrollo-web'
   },
   {
     id: 'n2',
-    title: 'Webinar de IA Aplicada',
-    desc: 'Participa en nuestro webinar práctico sobre APIs de OpenAI, Gemini y creación de Chatbots.',
-    category: 'Webinar',
-    status: 'Registro',
+    title: 'Asistentes con IA para tu web',
+    desc: 'Mostramos asistentes virtuales y automatizaciones que atienden consultas de tus clientes 24/7.',
+    category: 'IA',
+    status: 'Demo',
     date: '20 de Junio, 2026',
     img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-brain',
     specs: {
-      col1: { label: 'Duración', value: '4 Sesiones', icon: 'fa-clock' },
-      col2: { label: 'Stack', value: 'Gemini API', icon: 'fa-robot' },
-      col3: { label: 'Modalidad', value: 'Online', icon: 'fa-laptop' }
+      col1: { label: 'Modelo', value: 'A medida', icon: 'fa-microchip' },
+      col2: { label: 'Canal', value: 'Web / WhatsApp', icon: 'fa-comments' },
+      col3: { label: 'Integración', value: 'API', icon: 'fa-plug' }
     },
-    includes: ['Código', 'Video', 'Certificado'],
-    link: '/contactanos'
+    includes: ['IA', 'Chatbot', 'API'],
+    link: '/servicios/inteligencia-artificial'
   },
   {
     id: 'n3',
@@ -71,41 +71,41 @@ const noticias = [
       col3: { label: 'Línea', value: 'WhatsApp', icon: 'fa-message' }
     },
     includes: ['Proyecto', 'Diseño', 'Soporte'],
-    link: '/contactanos'
+    link: '/servicios/para-tu-negocio'
   },
   {
     id: 'n4',
-    title: 'Guías de Lógica y Código',
-    desc: 'Presentamos oficialmente nuestros cuadernos de trabajo interactivos y diapositivas de lógica para colegios.',
-    category: 'Recursos',
+    title: 'Apoyo académico ampliado',
+    desc: 'Presentaciones interactivas, formato APA 7, infografías y simuladores para proyectos académicos.',
+    category: 'Academia',
     status: 'Nuevo',
     date: '10 de Junio, 2026',
     img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-book',
+    icon: 'fa-graduation-cap',
     specs: {
-      col1: { label: 'Formato', value: 'PDF / Slides', icon: 'fa-file-pdf' },
-      col2: { label: 'Temario', value: 'Algoritmos', icon: 'fa-diagram-project' },
-      col3: { label: 'Nivel', value: 'Primaria/Sec', icon: 'fa-graduation-cap' }
+      col1: { label: 'Formato', value: 'PPT / PDF', icon: 'fa-file-powerpoint' },
+      col2: { label: 'Norma', value: 'APA 7', icon: 'fa-quote-right' },
+      col3: { label: 'Nivel', value: 'Universitario', icon: 'fa-graduation-cap' }
     },
-    includes: ['Guías', 'PDF', 'Material'],
-    link: '/contactanos'
+    includes: ['Presentaciones', 'APA 7', 'Simuladores'],
+    link: '/servicios/apoyo-academico'
   },
   {
     id: 'n5',
-    title: 'Webinars de Automatización',
-    desc: 'Ciclo de charlas gratuitas sobre cómo automatizar tareas repetitivas de oficina y bases de datos usando Python.',
-    category: 'Webinar',
-    status: 'Libre',
+    title: 'Automatización para pymes',
+    desc: 'Conectamos CRMs, sistemas de facturación y correos automáticos para reducir el trabajo manual.',
+    category: 'Automatización',
+    status: 'Activo',
     date: '05 de Junio, 2026',
     img: 'https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-gears',
     specs: {
-      col1: { label: 'Acceso', value: 'Libre', icon: 'fa-circle-play' },
-      col2: { label: 'Tema', value: 'Python Scripts', icon: 'fa-code' },
-      col3: { label: 'Grabación', value: 'Incluida', icon: 'fa-video' }
+      col1: { label: 'Alcance', value: 'A medida', icon: 'fa-sliders' },
+      col2: { label: 'Procesos', value: 'CRM / Facturación', icon: 'fa-diagram-project' },
+      col3: { label: 'Soporte', value: 'Continuo', icon: 'fa-headset' }
     },
-    includes: ['Código', 'Video', 'Documento'],
-    link: '/contactanos'
+    includes: ['Automatización', 'Integraciones', 'Soporte'],
+    link: '/servicios/automatizacion'
   }
 ];
 

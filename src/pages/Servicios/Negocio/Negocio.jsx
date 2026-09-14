@@ -25,7 +25,7 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Laura Méndez","role":"Fundadora, snacks saludables","text":"El branding y el menú QR cambiaron por completo la imagen de mi emprendimiento; ahora pedir es mucho más fácil."},
+  {"name":"Laura Méndez","role":"Fundadora, tienda de accesorios","text":"El branding y el catálogo QR cambiaron por completo la imagen de mi emprendimiento; ahora mis clientes encuentran todo más fácil."},
   {"name":"Hugo Rojas","role":"Tienda de ropa","text":"Las campañas de ofertas que diseñaron impulsaron mis ventas durante el mes de inauguración."},
   {"name":"Carla Suárez","role":"Emprendedora","text":"Configuraron mi WhatsApp Business con respuestas automáticas y ordenaron todos mis contactos. Genial."}
 ];

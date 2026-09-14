@@ -27,7 +27,7 @@ const PROCESO = [
 const TESTIMONIOS = [
   {"name":"Juan Pérez","role":"CEO, TechStart","text":"Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web."},
   {"name":"Ana Gómez","role":"Directora, EduKids","text":"La página web superó nuestras expectativas; ahora nuestros alumnos pueden inscribirse sin problemas."},
-  {"name":"Carlos Díaz","role":"Fundador, Restaurante","text":"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente."}
+  {"name":"Carlos Díaz","role":"Fundador, tienda de tecnología","text":"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
