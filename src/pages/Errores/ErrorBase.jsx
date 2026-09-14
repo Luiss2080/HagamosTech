@@ -146,14 +146,14 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
             </span>
             <span className="ml-auto flex gap-1.5">
               <span className="w-2 h-2 rounded-full bg-[#A3E635]" />
-              <span className="w-2 h-2 rounded-full bg-white" />
+              <span className="w-2 h-2 rounded-full bg-[#111827]" />
               <span className="w-2 h-2 rounded-full bg-neutral-700" />
             </span>
           </div>
           <div className="p-4 space-y-2 font-mono">
             {logs.map((log, i) => (
               <p key={i} className="err-log-row flex items-center gap-2 text-[10px] font-bold">
-                <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${log.type === 'error' ? 'bg-red-500' : log.type === 'warn' ? 'bg-[#A3E635]' : 'bg-neutral-600'}`} />
+                <span className={`w-1.5 h-1.5 rounded-full shrink-0 ${log.type === 'error' ? 'bg-white/50' : log.type === 'warn' ? 'bg-[#A3E635]' : 'bg-neutral-600'}`} />
                 <span className={log.type === 'error' ? 'text-red-400' : log.type === 'warn' ? 'text-[#A3E635]' : 'text-slate-400'}>
                   {log.text}
                 </span>

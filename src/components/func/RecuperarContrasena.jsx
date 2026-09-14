@@ -70,7 +70,7 @@ const RecuperarContrasena = () => {
 
             {/* Cuerpo estilo modal de inicio de sesión */}
             <div className="relative z-10 container mx-auto px-6 pb-16">
-                <div className="mx-auto w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-[2.5rem] bg-[#111827] shadow-2xl border border-gray-200 animate-fade-in-up">
+                <div className="mx-auto w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 overflow-hidden rounded-[2.5rem] bg-[#111827] shadow-2xl border border-white/10 animate-fade-in-up">
 
                     {/* Panel Izquierdo (Rojo) */}
                     <div className="relative hidden lg:flex flex-col justify-center gap-6 p-8 overflow-hidden bg-[#0A0A0A]">
@@ -132,10 +132,10 @@ const RecuperarContrasena = () => {
                         </div>
 
                         <div className="relative z-10 w-full max-w-[520px] mx-auto">
-                            <div className="mb-4 text-center bg-[#111827] p-4 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
+                            <div className="mb-4 text-center bg-[#111827] p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
                                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0A0A0A] via-[#A3E635] to-[#0A0A0A]"></div>
                                 <div className="inline-flex items-center gap-2 mb-1.5">
-                                    <span className="w-8 h-8 rounded-xl bg-red-50 border border-red-200 text-[#0A0A0A] flex items-center justify-center">
+                                    <span className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 text-[#0A0A0A] flex items-center justify-center">
                                         <i className="fas fa-key text-sm"></i>
                                     </span>
                                     <h3 className="text-2xl font-black text-white tracking-tight">
@@ -159,20 +159,20 @@ const RecuperarContrasena = () => {
                                     <button
                                         type="button"
                                         onClick={() => navigate('/', { replace: true })}
-                                        className="w-full py-3 px-4 bg-[#0A0A0A] hover:bg-[#86181b] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-red-500/20 transition-all cursor-pointer border-0"
+                                        className="w-full py-3 px-4 bg-[#0A0A0A] hover:bg-[#0A0A0A] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-red-500/20 transition-all cursor-pointer border-0"
                                     >
                                         Ir al inicio de sesión
                                     </button>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="flex flex-col gap-3.5" autoComplete="off">
-                                    <div className="rounded-2xl border border-gray-200 bg-[#111827] p-4 shadow-sm">
+                                    <div className="rounded-2xl border border-white/10 bg-[#111827] p-4 shadow-sm">
                                         <div className="relative group mb-3">
                                             <input
                                                 type="password"
                                                 value={nuevaContrasena}
                                                 onChange={(e) => { setNuevaContrasena(e.target.value); setError(''); }}
-                                                className="peer block w-full rounded-xl border-2 border-gray-100 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#0A0A0A] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent"
+                                                className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#0A0A0A] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent"
                                                 placeholder="Nueva contraseña"
                                                 required
                                             />
@@ -184,7 +184,7 @@ const RecuperarContrasena = () => {
                                                 type="password"
                                                 value={confirmarContrasena}
                                                 onChange={(e) => { setConfirmarContrasena(e.target.value); setError(''); }}
-                                                className="peer block w-full rounded-xl border-2 border-gray-100 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#0A0A0A] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent"
+                                                className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#0A0A0A] focus:ring-4 focus:ring-red-500/10 focus:outline-none transition-all duration-300 placeholder-transparent"
                                                 placeholder="Confirmar contraseña"
                                                 required
                                             />
@@ -194,17 +194,17 @@ const RecuperarContrasena = () => {
                                     </div>
 
                                     {error && (
-                                        <div className="rounded-xl px-3.5 py-3 border bg-red-50 border-red-200 text-[11px] font-bold text-red-500 flex items-center gap-2">
+                                        <div className="rounded-xl px-3.5 py-3 border bg-white/5 border-white/10 text-[11px] font-bold text-red-500 flex items-center gap-2">
                                             <i className="fas fa-circle-exclamation"></i>
                                             <span>{error}</span>
                                         </div>
                                     )}
 
-                                    <div className="rounded-2xl border border-gray-200 bg-[#111827] p-3.5 shadow-sm">
+                                    <div className="rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full py-3.5 px-6 bg-[#0A0A0A] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#0A0A0A]/20 hover:shadow-[#0A0A0A]/40 hover:-translate-y-0.5 hover:bg-[#86181b] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
+                                            className="w-full py-3.5 px-6 bg-[#0A0A0A] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#0A0A0A]/20 hover:shadow-[#0A0A0A]/40 hover:-translate-y-0.5 hover:bg-[#0A0A0A] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
                                             <span className="relative z-10">{isSubmitting ? 'Guardando...' : 'Restablecer contraseña'}</span>
                                             <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-key text-white text-xs"></i></div>

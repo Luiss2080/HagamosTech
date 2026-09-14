@@ -110,7 +110,7 @@ const PlanesSuscripcion = () => {
                             Planes de soporte y evolución continua para que tu sitio o sistema esté siempre actualizado, seguro y funcionando. Elegí tu nivel y olvidate del mantenimiento.
                         </p>
 
-                        <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
+                        <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-white/10 shadow-sm mt-4">
                             <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Mensual</button>
                             <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
                         </div>

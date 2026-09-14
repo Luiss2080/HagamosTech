@@ -21,7 +21,7 @@ const CicloVidaCookie = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
                             El viaje de una <span className="relative inline-block text-[#A3E635]">
                                 cookie
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -41,7 +41,7 @@ const CicloVidaCookie = () => {
                                         <i className={`fas ${fase.icon} text-2xl`}></i>
                                         <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">{i + 1}</span>
                                     </div>
-                                    <div className="relative bg-white rounded-[1.5rem] p-5 border border-orange-50 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
+                                    <div className="relative bg-[#111827] rounded-[1.5rem] p-5 border border-orange-50 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                                         <div className={`absolute top-0 left-0 w-full h-1 ${fase.color}`}></div>
                                         <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-[#A3E635]/10 blur-2xl animate-float-slow pointer-events-none"></div>
                                         <div className="relative z-10">
@@ -49,7 +49,7 @@ const CicloVidaCookie = () => {
                                                 <i className="fas fa-hourglass-half mr-1 text-[8px]"></i>{fase.duracion}
                                             </span>
                                             <h3 className="font-black text-[#111827] text-base mb-1">{fase.titulo}</h3>
-                                            <p className="text-[11px] text-slate-600 font-semibold leading-relaxed">{fase.desc}</p>
+                                            <p className="text-[11px] text-slate-300 font-semibold leading-relaxed">{fase.desc}</p>
                                         </div>
                                     </div>
                                 </div>

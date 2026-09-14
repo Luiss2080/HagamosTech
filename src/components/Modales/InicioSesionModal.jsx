@@ -228,10 +228,10 @@ const handleRegenerateQR = async () => {
                         className="flex min-h-screen items-center justify-center p-4 text-center sm:p-0"
                         onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
                     >
-                        <div className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto scrollbar-none transform overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl transition-all sm:my-4 animate-modal-pop border border-gray-200">
+                        <div className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto scrollbar-none transform overflow-hidden rounded-[2.5rem] bg-[#111827] text-left shadow-2xl transition-all sm:my-4 animate-modal-pop border border-white/10">
                             <button
                                 onClick={onClose}
-                                className="absolute top-6 right-6 z-[200] w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#A3E635]/10 dark:hover:bg-red-950/30 text-gray-500 hover:text-red-500 transition-all focus:outline-none cursor-pointer shadow-sm hover:shadow-md border border-gray-200"
+                                className="absolute top-6 right-6 z-[200] w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-[#A3E635]/10 dark:hover:bg-red-950/30 text-slate-400 hover:text-red-500 transition-all focus:outline-none cursor-pointer shadow-sm hover:shadow-md border border-white/10"
                             >
                                 <i className="fas fa-times text-xl"></i>
                             </button>
@@ -245,7 +245,7 @@ const handleRegenerateQR = async () => {
 
                     <div className="relative z-10 flex flex-col items-center text-center">
                         <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                            <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i></div></div>
+                            <div className="h-40 w-40 rounded-full bg-[#111827] flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><div className="h-40 w-40 rounded-full bg-[#111827] flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"><i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i></div></div>
                         </div>
 
                         <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
@@ -260,24 +260,24 @@ const handleRegenerateQR = async () => {
                         </p>
 
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 border border-white/30 text-white text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
-                            <span className="w-2 h-2 rounded-full bg-white animate-ping"></span> Cuenta HAGAMOSTECH
+                            <span className="w-2 h-2 rounded-full bg-[#111827] animate-ping"></span> Cuenta HAGAMOSTECH
                         </div>
 
                         <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-globe mr-1"></i> Web</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-globe mr-1"></i> Web</p>
                                 <p className="text-xs font-bold text-white">Páginas y Landing</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
                                 <p className="text-xs font-bold text-white">Apps y Software</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-gears mr-1"></i> Automatización</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-gears mr-1"></i> Automatización</p>
                                 <p className="text-xs font-bold text-white">Procesos e IA</p>
                             </div>
                             <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
+                                <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
                                 <p className="text-xs font-bold text-white">Identidad y Gráfica</p>
                             </div>
                         </div>
@@ -300,7 +300,7 @@ const handleRegenerateQR = async () => {
                     </div>
                 </div>
 
-                <div className="relative flex flex-col justify-center h-full bg-[#F9F9F9] p-5 lg:p-6">
+                <div className="relative flex flex-col justify-center h-full bg-[#111111] p-5 lg:p-6">
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                         <div className="absolute top-1/2 -left-10 w-40 h-40 bg-[#111827]/20 rounded-full blur-2xl"></div>
@@ -309,7 +309,7 @@ const handleRegenerateQR = async () => {
                     </div>
  
                     <div className="relative z-10 w-full max-w-[540px] mx-auto">
-                        <div className="mb-3.5 text-center bg-white p-4 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
+                        <div className="mb-3.5 text-center bg-[#111827] p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635]"></div>
                             <div className="inline-flex items-center gap-2 mb-1.5">
                                 <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
@@ -317,27 +317,27 @@ const handleRegenerateQR = async () => {
                                 </span>
                                 <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Iniciar Sesión</h3>
                             </div>
-                            <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Accede a tu panel HAGAMOSTECH</p>
+                            <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Accede a tu panel HAGAMOSTECH</p>
                         </div>
  
                         {(!paso2FA?.primerUso) && !mostrarRecuperacion && (
                         <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                            <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
+                            <div className="rounded-xl bg-[#111827] border border-white/10 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-box-open text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
                                 <p className="text-[13px] font-extrabold text-[#111827]">Catalogo</p>
                             </div>
-                            <div className="rounded-xl bg-white border border-gray-200 px-3 py-2.5 text-center shadow-sm">
+                            <div className="rounded-xl bg-[#111827] border border-white/10 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-receipt text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
                                 <p className="text-[13px] font-extrabold text-[#111827]">Pedidos</p>
                             </div>
-                            <div className="rounded-xl bg-white border border-[#A3E635]/40 px-3 py-2.5 text-center shadow-sm">
-                                <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-gray-100 border border-gray-300 text-gray-600 flex items-center justify-center">
+                            <div className="rounded-xl bg-[#111827] border border-[#A3E635]/40 px-3 py-2.5 text-center shadow-sm">
+                                <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-white/5 border border-gray-300 text-slate-300 flex items-center justify-center">
                                     <i className="fas fa-signal text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Estado</p>
@@ -348,23 +348,23 @@ const handleRegenerateQR = async () => {
 
                         {paso2FA ? (
                         <form onSubmit={handleSubmit2FA} className="flex flex-col gap-3.5" autoComplete="off">
-                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                            <div className="rounded-2xl border border-white/10 bg-[#111827] p-4 shadow-sm">
                                 <div className="mb-3 flex items-center gap-2">
                                     <span className="w-7 h-7 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                         <i className="fas fa-shield-halved text-[11px]"></i>
                                     </span>
                                     <div>
-                                        <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Verificación en dos pasos</p>
+                                        <p className="text-[11px] font-black uppercase tracking-widest text-slate-400">Verificación en dos pasos</p>
                                         <p className="text-[10px] font-bold text-gray-400">{paso2FA.nombre}</p>
                                     </div>
                                 </div>
 
                                  {paso2FA.primerUso && (
-                                    <div className="mb-3 text-center rounded-xl border border-gray-100 bg-gray-50 p-4">
-                                        <p className="text-[10px] font-black uppercase tracking-widest text-gray-500 mb-2">
+                                    <div className="mb-3 text-center rounded-xl border border-white/10 bg-white/5 p-4">
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-2">
                                             Escanea este código con Google Authenticator
                                         </p>
-                                         <div className="mx-auto w-44 h-44 bg-white p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
+                                         <div className="mx-auto w-44 h-44 bg-[#111827] p-2.5 rounded-2xl flex items-center justify-center mb-3 shadow-md">
                                              <QRCodeSVG value={paso2FA.otpauthUrl} size={150} />
                                          </div>
                                          <button
@@ -385,7 +385,7 @@ const handleRegenerateQR = async () => {
                                          type="button"
                                          onClick={handleRegenerateQR}
                                          disabled={qrRegenerating || faSubmitting}
-                                         className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-3 py-2.5 text-[10px] font-black uppercase tracking-wide text-gray-700 transition-all hover:bg-[#111827] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
+                                         className="mb-3 inline-flex w-full items-center justify-center gap-2 rounded-xl border-2 border-gray-300 px-3 py-2.5 text-[10px] font-black uppercase tracking-wide text-slate-200 transition-all hover:bg-[#111827] hover:text-white disabled:cursor-not-allowed disabled:opacity-60"
                                      >
                                          <i className={`fas fa-qrcode ${qrRegenerating ? 'animate-pulse' : ''}`}></i>
                                          {qrRegenerating ? 'Generando QR...' : 'Volver a generar QR de autenticación'}
@@ -400,7 +400,7 @@ const handleRegenerateQR = async () => {
                                         maxLength="6"
                                         value={codigo2FA}
                                         onChange={(e) => { setCodigo2FA(e.target.value.replace(/\D/g, '')); setFaError(''); }}
-                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
+                                        className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
                                         placeholder="______"
                                         required
                                     />
@@ -410,7 +410,7 @@ const handleRegenerateQR = async () => {
                                 )}
                             </div>
 
-                            <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
+                            <div className="rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
                                  <button type="submit" disabled={faSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                     <span className="relative z-10">{faSubmitting ? 'Verificando...' : 'Verificar código'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-shield-halved text-black text-xs"></i></div>
@@ -427,20 +427,20 @@ const handleRegenerateQR = async () => {
                                     </form>
                                     ) : mostrarRecuperacion ? (
                                     <form onSubmit={handleEnviarRecuperacion} className="flex flex-col gap-3.5" autoComplete="off">
-                                        <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                                        <div className="rounded-2xl border border-white/10 bg-[#111827] p-4 shadow-sm">
                                             <div className="mb-3 flex items-center gap-2">
                                                 <span className="w-7 h-7 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                                     <i className="fas fa-key text-[11px]"></i>
                                                 </span>
                                                 <div>
-                                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Recuperar contraseña</p>
+                                                    <p className="text-[11px] font-black uppercase tracking-widest text-slate-400">Recuperar contraseña</p>
                                                 </div>
                                             </div>
-                                            <p className="text-[12px] text-gray-600 font-medium leading-relaxed mb-3">
+                                            <p className="text-[12px] text-slate-300 font-medium leading-relaxed mb-3">
                                                 Escribe el correo de tu cuenta y te enviaremos un enlace para restáablecer tu contraseña.
                                             </p>
                                             <div className="relative group mb-2">
-                                                <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                                <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
@@ -448,7 +448,7 @@ const handleRegenerateQR = async () => {
                                                 <p className="text-[11px] font-bold text-red-500"><i className="fas fa-circle-exclamation mr-1"></i>{recuperacionError}</p>
                                             )}
                                         </div>
-                                        <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
+                                        <div className="rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
                                             <button type="submit" disabled={recuperacionSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                                 <span className="relative z-10">{recuperacionSubmitting ? 'Enviando...' : 'Enviar enlace de recuperación'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-paper-plane text-black text-xs"></i></div>
@@ -460,30 +460,30 @@ const handleRegenerateQR = async () => {
                                     </form>
                                     ) : (
                                     <form onSubmit={handleSubmit} className="flex flex-col gap-3.5" autoComplete="off">
-                            <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
+                            <div className="rounded-2xl border border-white/10 bg-[#111827] p-4 shadow-sm">
                                 <div className="mb-3 flex items-center gap-2">
                                     <span className="w-7 h-7 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                         <i className="fas fa-id-card text-[11px]"></i>
                                     </span>
-                                    <p className="text-[11px] font-black uppercase tracking-widest text-gray-500">Credenciales</p>
+                                    <p className="text-[11px] font-black uppercase tracking-widest text-slate-400">Credenciales</p>
                                 </div>
 
                                 <div className="relative group mb-3">
-                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                     <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                 </div>
 
                                 <div className="relative group">
-                                    <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                    <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
                                     <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                 </div>
                             </div>
 
-                            <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
+                            <div className="rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
                                 <div className="flex items-center justify-between">
-                                    <label className="inline-flex items-center gap-2 text-[11px] font-semibold text-gray-600 cursor-pointer select-none">
+                                    <label className="inline-flex items-center gap-2 text-[11px] font-semibold text-slate-300 cursor-pointer select-none">
                                         <i className="fas fa-shield-halved text-[#84CC16] text-[11px]"></i>
                                         <input
                                             type="checkbox"
@@ -497,7 +497,7 @@ const handleRegenerateQR = async () => {
                                     <button
                                         type="button"
                                         onClick={handleForgotPassword}
-                                        className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#7f1d1d]"
+                                        className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#0A0A0A]"
                                     >
                                         <i className="fas fa-key text-[10px]"></i>
                                         Recuperar acceso
@@ -505,7 +505,7 @@ const handleRegenerateQR = async () => {
                                 </div>
                             </div>
 
-                            <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
+                            <div className="rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
                                  <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                     <span className="relative z-10">{isSubmitting ? 'Ingresando...' : 'Entrar a Iniciar Sesión'}</span>
                                     <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-arrow-right text-black text-xs"></i></div>
@@ -513,7 +513,7 @@ const handleRegenerateQR = async () => {
                                 </button>
                             </div>
 
-                            <div className="rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed text-center">
+                            <div className="rounded-xl border border-white/10 bg-[#111827] px-3.5 py-3 text-[11px] text-slate-400 font-semibold leading-relaxed text-center">
                                 <div className="flex items-center justify-center gap-2">
                                     <i className="fas fa-lightbulb text-[#84CC16] flex-shrink-0"></i>
                                     <span>Consejo: si no recuerdas tu acceso, usa la opcion Recuperar acceso o contacta al soporte oficial de HAGAMOSTECH en WhatsApp al +591 61320004.</span>

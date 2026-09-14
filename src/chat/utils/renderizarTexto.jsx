@@ -18,7 +18,7 @@ export const textRenderer = (text) => {
         </a>
       );
     } else {
-      parts.push(<strong key={match.index} className="font-extrabold text-slate-900">{match[2]}</strong>);
+      parts.push(<strong key={match.index} className="font-extrabold text-white">{match[2]}</strong>);
     }
     lastIndex = regex.lastIndex;
   }

@@ -4,7 +4,7 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 const TIPOS = [
     { icon: 'fa-lock', titulo: 'Esenciales', frontal: 'Las que hacen funcionar el sitio', detalle: 'Permiten el carrito, tu sesión y la seguridad. Sin ellas el sitio no funciona.', ejemplos: ['Carrito', 'Inicio de sesión', 'Seguridad'], color: 'from-[#A3E635] to-[#84CC16]' },
     { icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', frontal: 'Recuerdan lo que te gusta', detalle: 'Guardan tus preferencias para que cada visita sea más cómoda y personalizada.',     ejemplos: ['Idioma', 'Zona', 'Preferencias'], color: 'from-[#0A0A0A] to-[#171717]' },
-    { icon: 'fa-chart-line', titulo: 'Analíticas', frontal: 'Nos ayudan a mejorar', detalle: 'Miden cómo usás el sitio de forma anónima para que podamos optimizarlo.', ejemplos: ['Páginas vistas', 'Tiempo de uso', 'Navegación'], color: 'from-[#171717] to-[#6B3410]' },
+    { icon: 'fa-chart-line', titulo: 'Analíticas', frontal: 'Nos ayudan a mejorar', detalle: 'Miden cómo usás el sitio de forma anónima para que podamos optimizarlo.', ejemplos: ['Páginas vistas', 'Tiempo de uso', 'Navegación'], color: 'from-[#171717] to-[#171717]' },
     { icon: 'fa-bullhorn', titulo: 'Publicidad', frontal: 'Te mostramos lo que te interesa', detalle: 'Personalizan las promociones y ofertas que ves según tus intereses y hábitos.', ejemplos: ['Promos', 'Ofertas', 'Contenido relevante'], color: 'from-[#84CC16] to-[#AA3000]' },
 ];
 
@@ -25,7 +25,7 @@ const TiposCookies = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
                             Cada una tiene su <span className="relative inline-block text-[#A3E635]">
                                 función
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -58,15 +58,15 @@ const TiposCookies = () => {
                                     </div>
                                 </div>
                                 {/* Dorso */}
-                                <div className="absolute inset-0 rounded-[2rem] bg-white border-2 border-orange-100 p-6 flex flex-col justify-center shadow-xl" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
+                                <div className="absolute inset-0 rounded-[2rem] bg-[#111827] border-2 border-white/10 p-6 flex flex-col justify-center shadow-xl" style={{ backfaceVisibility: 'hidden', transform: 'rotateY(180deg)' }}>
                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#A3E635] opacity-70"></div>
                                     <div className="relative z-10">
                                         <div className="w-12 h-12 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center text-[#A3E635] text-xl mx-auto mb-3"><i className={`fas ${tipo.icon}`}></i></div>
                                         <h4 className="text-center font-black text-[#111827] text-sm mb-2">{tipo.titulo}</h4>
-                                        <p className="text-center text-[11px] text-slate-600 font-semibold leading-relaxed mb-3">{tipo.detalle}</p>
+                                        <p className="text-center text-[11px] text-slate-300 font-semibold leading-relaxed mb-3">{tipo.detalle}</p>
                                         <div className="flex flex-wrap justify-center gap-1.5">
                                             {tipo.ejemplos.map((ej, j) => (
-                                                <span key={j} className="px-2.5 py-1 rounded-full bg-[#FFFFFF] text-[#171717] text-[9px] font-black uppercase tracking-wider border border-orange-100">{ej}</span>
+                                                <span key={j} className="px-2.5 py-1 rounded-full bg-[#FFFFFF] text-[#171717] text-[9px] font-black uppercase tracking-wider border border-white/10">{ej}</span>
                                             ))}
                                         </div>
                                     </div>

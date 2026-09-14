@@ -86,7 +86,7 @@ const originalHighlights = [
         badge: 'Aprendé con nosotros',
         color: "bg-[#0A0A0A]",
         textColor: "text-white",
-        iconColor: "text-white bg-[#A3E635]",
+        iconColor: "text-[#0A0A0A] bg-[#A3E635]",
         badgeColor: "bg-white/10 text-[#A3E635] border-[#A3E635]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
@@ -373,7 +373,7 @@ const VentajasCarrusel = () => {
                         <button
                             onClick={prev}
                             aria-label="Anterior"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-white"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-[#0A0A0A]"
                         >
                             <i className="fa-solid fa-angle-left"></i>
                         </button>
@@ -393,7 +393,7 @@ const VentajasCarrusel = () => {
                                             className={`relative rounded-full transition-all duration-500 ${
                                                 index === activeDotIndex
                                                     ? 'w-16 h-2 bg-[#A3E635]'
-                                                    : 'w-2.5 h-2.5 bg-gray-400 hover:bg-gray-500'
+                                                    : 'w-2.5 h-2.5 bg-gray-400 hover:bg-white/50'
                                             }`}
                                         >
                                             {index === activeDotIndex && isAutoplaying && !isTransitioning && (
@@ -417,7 +417,7 @@ const VentajasCarrusel = () => {
                         <button
                             onClick={next}
                             aria-label="Siguiente"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-white"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-colors text-[#0A0A0A]"
                         >
                             <i className="fa-solid fa-angle-right"></i>
                         </button>

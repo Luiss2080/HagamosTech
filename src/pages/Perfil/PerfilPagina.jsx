@@ -6,10 +6,10 @@ import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
 
 const GRADIENTS = [
-    { id: 'g-red', name: 'Rojo Robótico', from: '#a41e22', to: '#f56565' },
-    { id: 'g-gold', name: 'Dorado Tech', from: '#c5a059', to: '#ecc94b' },
+    { id: 'g-red', name: 'Rojo Robótico', from: '#A3E635', to: '#f56565' },
+    { id: 'g-gold', name: 'Dorado Tech', from: '#A3E635', to: '#ecc94b' },
     { id: 'g-blue', name: 'Azul Espacial', from: '#0f172a', to: '#2563eb' },
-    { id: 'g-green', name: 'Verde Cyber', from: '#064e3b', to: '#10b981' },
+    { id: 'g-green', name: 'Verde Cyber', from: '#064e3b', to: '#A3E635' },
     { id: 'g-purple', name: 'Morado Quantum', from: '#581c87', to: '#8b5cf6' },
     { id: 'g-slate', name: 'Gris Acero', from: '#1e293b', to: '#64748b' },
 ];
@@ -33,7 +33,7 @@ const generateGradientAvatar = (color1, color2, initials) => {
 };
 
 const Tooltip = ({ text }) => (
-    <span className="group relative cursor-pointer text-slate-400 hover:text-[#a41e22] ml-1.5 select-none text-[10px]">
+    <span className="group relative cursor-pointer text-slate-400 hover:text-[#A3E635] ml-1.5 select-none text-[10px]">
         <i className="fas fa-circle-question"></i>
         <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2.5 bg-slate-900/95 text-white text-[9px] rounded-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity leading-relaxed z-50 text-center font-bold font-sans shadow-xl border border-white/10 normal-case">
             {text}
@@ -63,14 +63,14 @@ const CalendarDropdown = ({ value, options, onChange }) => {
             <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="bg-slate-50 border border-slate-200 rounded-xl px-2.5 py-1.5 text-xs font-black text-slate-850 focus:outline-none flex items-center gap-1.5 hover:border-[#a41e22]/50 transition cursor-pointer"
+                className="bg-white/5 border border-white/10 rounded-xl px-2.5 py-1.5 text-xs font-black text-slate-850 focus:outline-none flex items-center gap-1.5 hover:border-[#A3E635]/50 transition cursor-pointer"
             >
                 <span>{selectedOption.label}</span>
-                <i className={`fas fa-chevron-${isOpen ? 'up' : 'down'} text-[9px] text-[#a41e22]`}></i>
+                <i className={`fas fa-chevron-${isOpen ? 'up' : 'down'} text-[9px] text-[#A3E635]`}></i>
             </button>
 
             {isOpen && (
-                <div className="absolute top-full left-0 z-[120] mt-1 max-h-48 w-32 overflow-y-auto rounded-xl border-2 border-[#a41e22] bg-white shadow-xl scrollbar-thin">
+                <div className="absolute top-full left-0 z-[120] mt-1 max-h-48 w-32 overflow-y-auto rounded-xl border-2 border-[#A3E635] bg-[#111827] shadow-xl scrollbar-thin">
                     <div className="py-1">
                         {options.map((opt) => (
                             <button
@@ -80,7 +80,7 @@ const CalendarDropdown = ({ value, options, onChange }) => {
                                     onChange(opt.value);
                                     setIsOpen(false);
                                 }}
-                                className={`w-full px-3 py-1.5 text-left text-[11px] font-bold transition hover:bg-[#a41e22]/5 hover:text-[#a41e22] cursor-pointer ${value === opt.value ? 'bg-[#a41e22]/5 text-[#a41e22] font-black' : 'text-slate-700 dark:text-slate-350'}`}
+                                className={`w-full px-3 py-1.5 text-left text-[11px] font-bold transition hover:bg-[#A3E635]/5 hover:text-[#A3E635] cursor-pointer ${value === opt.value ? 'bg-[#A3E635]/5 text-[#A3E635] font-black' : 'text-slate-200 dark:text-slate-350'}`}
                             >
                                 {opt.label}
                             </button>
@@ -154,7 +154,7 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
 
     return (
         <div className={`relative ${isOpen ? 'z-[60]' : 'z-10'}`} ref={containerRef}>
-            <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+            <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                 Fecha de Nacimiento
                 <Tooltip text={tooltipText} />
             </label>
@@ -166,27 +166,27 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
                     onClick={() => setIsOpen(!isOpen)}
                     value={formatDateForInput(value)}
                     placeholder="Ej. dd/mm/aaaa (Toca para seleccionar)"
-                    className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold cursor-pointer placeholder:text-slate-400/50"
+                    className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold cursor-pointer placeholder:text-slate-400/50"
                 />
             </div>
 
             {isOpen && (
-                <div className="absolute top-full left-0 z-[100] mt-2 w-72 rounded-2xl border-2 border-[#a41e22] bg-white p-4 shadow-2xl text-slate-850 animate-fade-in">
-                    <div className="flex justify-between items-center mb-3.5 px-1 pb-2 border-b border-slate-100">
+                <div className="absolute top-full left-0 z-[100] mt-2 w-72 rounded-2xl border-2 border-[#A3E635] bg-[#111827] p-4 shadow-2xl text-slate-850 animate-fade-in">
+                    <div className="flex justify-between items-center mb-3.5 px-1 pb-2 border-b border-white/10">
                         {/* Month Navigation */}
                         <div className="flex items-center gap-1">
                             <button 
                                 type="button" 
                                 onClick={() => setViewMonth(prev => prev === 0 ? 11 : prev - 1)} 
-                                className="w-6 h-6 rounded-lg bg-slate-50 hover:bg-[#a41e22]/10 border border-slate-250 flex items-center justify-center text-[#a41e22] cursor-pointer transition active:scale-90"
+                                className="w-6 h-6 rounded-lg bg-white/5 hover:bg-[#A3E635]/10 border border-slate-250 flex items-center justify-center text-[#A3E635] cursor-pointer transition active:scale-90"
                             >
                                 <i className="fas fa-chevron-left text-[8px]"></i>
                             </button>
-                            <span className="text-[10px] font-black uppercase tracking-wider text-slate-800 min-w-[55px] text-center">{months[viewMonth].substring(0, 3)}.</span>
+                            <span className="text-[10px] font-black uppercase tracking-wider text-slate-100 min-w-[55px] text-center">{months[viewMonth].substring(0, 3)}.</span>
                             <button 
                                 type="button" 
                                 onClick={() => setViewMonth(prev => prev === 11 ? 0 : prev + 1)} 
-                                className="w-6 h-6 rounded-lg bg-slate-50 hover:bg-[#a41e22]/10 border border-slate-250 flex items-center justify-center text-[#a41e22] cursor-pointer transition active:scale-90"
+                                className="w-6 h-6 rounded-lg bg-white/5 hover:bg-[#A3E635]/10 border border-slate-250 flex items-center justify-center text-[#A3E635] cursor-pointer transition active:scale-90"
                             >
                                 <i className="fas fa-chevron-right text-[8px]"></i>
                             </button>
@@ -197,22 +197,22 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
                             <button 
                                 type="button" 
                                 onClick={() => setViewYear(prev => prev - 1)} 
-                                className="w-6 h-6 rounded-lg bg-slate-50 hover:bg-[#a41e22]/10 border border-slate-250 flex items-center justify-center text-[#a41e22] cursor-pointer transition active:scale-90"
+                                className="w-6 h-6 rounded-lg bg-white/5 hover:bg-[#A3E635]/10 border border-slate-250 flex items-center justify-center text-[#A3E635] cursor-pointer transition active:scale-90"
                             >
                                 <i className="fas fa-chevron-left text-[8px]"></i>
                             </button>
-                            <span className="text-[10px] font-black text-slate-800 min-w-[32px] text-center">{viewYear}</span>
+                            <span className="text-[10px] font-black text-slate-100 min-w-[32px] text-center">{viewYear}</span>
                             <button 
                                 type="button" 
                                 onClick={() => setViewYear(prev => prev + 1)} 
-                                className="w-6 h-6 rounded-lg bg-slate-50 hover:bg-[#a41e22]/10 border border-slate-250 flex items-center justify-center text-[#a41e22] cursor-pointer transition active:scale-90"
+                                className="w-6 h-6 rounded-lg bg-white/5 hover:bg-[#A3E635]/10 border border-slate-250 flex items-center justify-center text-[#A3E635] cursor-pointer transition active:scale-90"
                             >
                                 <i className="fas fa-chevron-right text-[8px]"></i>
                             </button>
                         </div>
                     </div>
 
-                    <div className="grid grid-cols-7 gap-1 text-center text-[9px] font-black text-[#a41e22] uppercase mb-1">
+                    <div className="grid grid-cols-7 gap-1 text-center text-[9px] font-black text-[#A3E635] uppercase mb-1">
                         <span>Lu</span><span>Ma</span><span>Mi</span><span>Ju</span><span>Vi</span><span>Sa</span><span>Do</span>
                     </div>
 
@@ -232,7 +232,7 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
                                     key={dayNum}
                                     type="button"
                                     onClick={() => handleSelectDay(dayNum)}
-                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-[10px] font-bold transition-all cursor-pointer ${isSelected ? 'bg-[#a41e22] text-white' : 'hover:bg-[#a41e22]/10 text-slate-800 dark:text-slate-300'}`}
+                                    className={`w-8 h-8 rounded-lg flex items-center justify-center text-[10px] font-bold transition-all cursor-pointer ${isSelected ? 'bg-[#A3E635] text-[#0A0A0A]' : 'hover:bg-[#A3E635]/10 text-slate-100 dark:text-slate-300'}`}
                                 >
                                     {dayNum}
                                 </button>
@@ -240,9 +240,9 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
                         })}
                     </div>
 
-                    <div className="flex justify-between items-center border-t border-slate-100 mt-3 pt-2 text-[10px] font-black uppercase">
-                        <button type="button" onClick={handleClear} className="text-red-500 hover:text-[#a41e22] cursor-pointer">Borrar</button>
-                        <button type="button" onClick={handleToday} className="text-[#a41e22] hover:text-[#801015] cursor-pointer">Hoy</button>
+                    <div className="flex justify-between items-center border-t border-white/10 mt-3 pt-2 text-[10px] font-black uppercase">
+                        <button type="button" onClick={handleClear} className="text-red-500 hover:text-[#A3E635] cursor-pointer">Borrar</button>
+                        <button type="button" onClick={handleToday} className="text-[#A3E635] hover:text-[#0A0A0A] cursor-pointer">Hoy</button>
                     </div>
                 </div>
             )}
@@ -393,11 +393,11 @@ const PerfilPagina = () => {
     ];
 
     return (
-        <div id="perfil-page" className="relative overflow-hidden min-h-screen bg-white">
+        <div id="perfil-page" className="relative overflow-hidden min-h-screen bg-[#111827]">
             <CircuitBackground />
             
             {/* Dots grid overlay */}
-            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#a41e22 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
+            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <PageHero
                 title="Mi cuenta"
@@ -420,14 +420,14 @@ const PerfilPagina = () => {
                     <div className="flex flex-col gap-8">
                         
                         {/* MOBILE TABS NAVIGATION */}
-                        <div className="flex lg:hidden gap-2 bg-[#f8fafc] p-2 rounded-2xl border border-slate-100 overflow-x-auto scrollbar-none">
+                        <div className="flex lg:hidden gap-2 bg-[#111111] p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
                             {navItemsMobile.map((item) => {
                                 const isActive = location.pathname === item.path;
                                 return (
                                     <Link 
                                         key={item.path}
                                         to={item.path}
-                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#a41e22] text-white shadow-md' : 'text-slate-500 hover:bg-[#a41e22]/5 dark:hover:bg-white/5'}`}
+                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:bg-[#A3E635]/5 dark:hover:bg-white/5'}`}
                                     >
                                         <i className={`fas ${item.icon}`}></i>
                                         {item.label}
@@ -437,57 +437,57 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PROFILE COMPLETION PROGRESS (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-[#111827] rounded-2xl p-5 shadow-xl border border-white/10 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-white/10/70 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                     <i className="fas fa-chart-line"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Completitud del Perfil</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Progreso de datos configurados</p>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Completitud del Perfil</h3>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Progreso de datos configurados</p>
                                 </div>
                             </div>
                             <div className="flex items-center justify-between mb-3">
-                                <span className="text-[9px] font-black uppercase tracking-wider text-[#a41e22] flex items-center gap-2">
+                                <span className="text-[9px] font-black uppercase tracking-wider text-[#A3E635] flex items-center gap-2">
                                     <i className="fas fa-chart-line text-xs"></i> Progreso
                                 </span>
-                                <span className="text-sm font-black text-slate-800">{completion}%</span>
+                                <span className="text-sm font-black text-slate-100">{completion}%</span>
                             </div>
-                            <div className="w-full bg-slate-100 h-3.5 rounded-full overflow-hidden border border-slate-200/50">
+                            <div className="w-full bg-white/5 h-3.5 rounded-full overflow-hidden border border-white/10/50">
                                 <div 
-                                    className="h-full bg-gradient-to-r from-[#a41e22] to-[#c5a059] transition-all duration-700 ease-out rounded-full"
+                                    className="h-full bg-gradient-to-r from-[#A3E635] to-[#A3E635] transition-all duration-700 ease-out rounded-full"
                                     style={{ width: `${completion}%` }}
                                 />
                             </div>
                             <p className="text-[10px] text-slate-400 font-bold uppercase mt-2.5 flex items-center gap-1.5">
-                                <i className="fas fa-sparkles text-amber-500"></i>
+                                <i className="fas fa-sparkles text-lime-400"></i>
                                 {completion === 100 ? '¡Tu perfil está completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
                             </p>
                         </div>
 
                         {/* PHOTO & AVATAR PICKER (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-[#111827] rounded-2xl p-5 shadow-xl border border-white/10 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-white/10/70 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                     <i className="fas fa-camera"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Imagen de Perfil</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Personaliza tu foto o avatar institucional</p>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Imagen de Perfil</h3>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Personaliza tu foto o avatar institucional</p>
                                 </div>
                             </div>
                             
                             <div className="flex flex-col sm:flex-row gap-8 items-center">
                                 {/* Current Avatar Preview */}
                                 <div className="relative group shrink-0">
-                                    <div className="w-32 h-32 rounded-[2.5rem] overflow-hidden bg-[#f1f5f9] border-4 border-white shadow-xl flex items-center justify-center text-5xl font-black text-[#a41e22] select-none animate-pulse-slow">
+                                    <div className="w-32 h-32 rounded-[2.5rem] overflow-hidden bg-[#f1f5f9] border-4 border-white shadow-xl flex items-center justify-center text-5xl font-black text-[#A3E635] select-none animate-pulse-slow">
                                         {userAvatar ? (
                                             <img src={userAvatar} alt="Perfil" className="w-full h-full object-cover" />
                                         ) : (
                                             displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
                                         )}
                                     </div>
-                                    <label className="absolute bottom-1 right-1 w-9 h-9 bg-[#a41e22] hover:bg-[#801015] text-white rounded-xl shadow-lg border-2 border-white flex items-center justify-center cursor-pointer transition-all duration-200 active:scale-90">
+                                    <label className="absolute bottom-1 right-1 w-9 h-9 bg-[#A3E635] hover:bg-[#0A0A0A] text-[#0A0A0A] rounded-xl shadow-lg border-2 border-white flex items-center justify-center cursor-pointer transition-all duration-200 active:scale-90">
                                         <i className="fas fa-pen text-xs"></i>
                                         <input type="file" accept="image/*" className="hidden" onChange={handleFileUpload} />
                                     </label>
@@ -495,11 +495,11 @@ const PerfilPagina = () => {
 
                                 <div className="flex-1 w-full text-center sm:text-left">
                                     <h4 className="text-base font-extrabold text-slate-850">Cambiar foto de perfil</h4>
-                                    <p className="text-[11px] text-slate-500 mt-1 mb-4 leading-relaxed">
+                                    <p className="text-[11px] text-slate-400 mt-1 mb-4 leading-relaxed">
                                         Sube tu foto o escoge uno de nuestros gradientes de alta fidelidad tecnológica de abajo.
                                     </p>
                                     {photoError && (
-                                        <div className="mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-[11px] font-bold text-red-600 flex items-start gap-2.5">
+                                        <div className="mb-4 px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-[11px] font-bold text-red-600 flex items-start gap-2.5">
                                             <i className="fas fa-circle-exclamation mt-0.5 text-sm shrink-0"></i>
                                             <span>{photoError}</span>
                                         </div>
@@ -511,7 +511,7 @@ const PerfilPagina = () => {
                                             <button
                                                 key={grad.id}
                                                 onClick={() => handlePresetSelect(grad)}
-                                                className="group relative flex flex-col items-center p-2 rounded-2xl border border-[#a41e22]/10 bg-[#fbfdff] hover:border-[#a41e22]/50 hover:bg-[#a41e22]/5 transition-all duration-300 cursor-pointer"
+                                                className="group relative flex flex-col items-center p-2 rounded-2xl border border-[#A3E635]/10 bg-[#111111] hover:border-[#A3E635]/50 hover:bg-[#A3E635]/5 transition-all duration-300 cursor-pointer"
                                                 title={grad.name}
                                             >
                                                 <div 
@@ -529,14 +529,14 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* PERSONAL INFORMATION FORM (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-[#111827] rounded-2xl p-5 shadow-xl border border-white/10 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-white/10/70 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                     <i className="fas fa-id-card"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Datos Personales</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Información personal y de contacto</p>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Datos Personales</h3>
+                                    <p className="text-[10px] text-slate-400 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Información personal y de contacto</p>
                                 </div>
                             </div>
 
@@ -544,7 +544,7 @@ const PerfilPagina = () => {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {/* Nombre */}
                                     <div>
-                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                             Nombre
                                             <Tooltip text="Tu nombre de pila. Será visible en tu perfil y diplomas de capacitación." />
                                         </label>
@@ -557,14 +557,14 @@ const PerfilPagina = () => {
                                                 onChange={handleChange}
                                                 required
                                                 placeholder="Ej. Luis Sanders"
-                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
 
                                     {/* Apellido */}
                                     <div>
-                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                             Apellido
                                             <Tooltip text="Tus apellidos paterno y materno registrados legalmente." />
                                         </label>
@@ -576,14 +576,14 @@ const PerfilPagina = () => {
                                                 value={formData.apellido}
                                                 onChange={handleChange}
                                                 placeholder="Ej. Vela Rocha"
-                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
 
                                     {/* CI / Documento */}
                                     <div>
-                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                             Cédula de Identidad (CI)
                                             <Tooltip text="Tu documento de identificación oficial. Necesario para certificar servicios y facturaciones." />
                                         </label>
@@ -595,7 +595,7 @@ const PerfilPagina = () => {
                                                 value={formData.numci}
                                                 onChange={handleChange}
                                                 placeholder="Ej. 1234567 LP"
-                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
@@ -609,7 +609,7 @@ const PerfilPagina = () => {
 
                                     {/* Teléfono */}
                                     <div>
-                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                             Número de Teléfono
                                             <Tooltip text="Tu número celular. Usado para avisos de mensajería de soporte y envíos." />
                                         </label>
@@ -621,14 +621,14 @@ const PerfilPagina = () => {
                                                 value={formData.numtel}
                                                 onChange={handleChange}
                                                 placeholder="Ej. +591 76543210"
-                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
 
                                     {/* Colegio/Institución */}
                                     <div>
-                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                        <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                             Colegio / Institución
                                             <Tooltip text="Tu colegio, universidad o empresa. Nos ayuda a adaptar el nivel académico de tus servicios." />
                                         </label>
@@ -640,7 +640,7 @@ const PerfilPagina = () => {
                                                 value={formData.nomcol}
                                                 onChange={handleChange}
                                                 placeholder="Ej. Colegio Alemán / UMSA"
-                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                                className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                             />
                                         </div>
                                     </div>
@@ -648,7 +648,7 @@ const PerfilPagina = () => {
 
                                 {/* Biografía / Frase Corta */}
                                 <div>
-                                    <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                    <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                         Biografía / Frase Corta
                                         <Tooltip text="Frase corta que aparecerá en tu barra lateral del perfil de usuario." />
                                     </label>
@@ -660,14 +660,14 @@ const PerfilPagina = () => {
                                             value={formData.bio}
                                             onChange={handleChange}
                                             placeholder="Ej. Estudiante apasionado por la robótica educativa y la inteligencia artificial"
-                                            className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                            className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                     </div>
                                 </div>
 
                                 {/* Correo (No editable) */}
                                 <div>
-                                    <label className="block text-[9px] font-black uppercase tracking-wider text-[#a41e22] mb-1">
+                                    <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
                                         Correo Electrónico (No modificable)
                                         <Tooltip text="El email de tu cuenta. No se puede modificar por motivos de integridad de usuario." />
                                     </label>
@@ -678,15 +678,15 @@ const PerfilPagina = () => {
                                             name="correo"
                                             value={formData.correo}
                                             disabled
-                                            className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold cursor-not-allowed"
+                                            className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-white/10 bg-white/5 text-slate-100 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold cursor-not-allowed"
                                         />
                                     </div>
                                 </div>
                                 {/* FORM ACTIONS BAR */}
-                                <div className="pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
+                                <div className="pt-5 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
                                     <Link 
                                         to="/" 
-                                        className="px-4 py-2.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-2 border-0"
+                                        className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-2 border-0"
                                     >
                                         <i className="fas fa-arrow-left"></i> Volver al Inicio
                                     </Link>
@@ -711,7 +711,7 @@ const PerfilPagina = () => {
                                                     });
                                                 }
                                             }}
-                                            className="px-4 py-2.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
+                                            className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
                                         >
                                             Restablecer
                                         </button>
@@ -719,7 +719,7 @@ const PerfilPagina = () => {
                                         <button 
                                             type="submit"
                                             disabled={isSaving || loading}
-                                            className="px-5 py-2.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer disabled:opacity-50 border-0"
+                                            className="px-5 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer disabled:opacity-50 border-0"
                                         >
                                             {isSaving ? (
                                                 <>
@@ -740,17 +740,17 @@ const PerfilPagina = () => {
             {/* SUCCESS FEEDBACK MODAL */}
             {showSuccessModal && (
                 <div className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 font-montserrat">
-                    <div className="bg-white rounded-2xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl relative animate-fade-in text-center">
+                    <div className="bg-[#111827] rounded-2xl p-6 max-w-sm w-full border border-white/10 shadow-2xl relative animate-fade-in text-center">
                         <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-green-100 text-green-500 text-2xl mb-4 shadow-sm">
                             <i className="fas fa-circle-check"></i>
                         </div>
-                        <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-2">¡Cambios Guardados!</h3>
-                        <p className="text-xs text-slate-500 mb-6 leading-relaxed">
+                        <h3 className="text-sm font-black text-white uppercase tracking-wider mb-2">¡Cambios Guardados!</h3>
+                        <p className="text-xs text-slate-400 mb-6 leading-relaxed">
                             {successMessage}
                         </p>
                         <button 
                             onClick={() => setShowSuccessModal(false)}
-                            className="w-full py-2.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                            className="w-full py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                         >
                             Excelente
                         </button>

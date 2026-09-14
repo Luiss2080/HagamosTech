@@ -65,7 +65,7 @@ const FormularioContacto = () => {
                                         alt="HAGAMOSTECH"
                                         loading="lazy"
                                         decoding="async"
-                                        className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"
+                                        className="h-40 w-40 rounded-full object-contain bg-[#111827] transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"
                                     />
                                 </div>
 
@@ -112,7 +112,7 @@ const FormularioContacto = () => {
                                             { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
-                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-all duration-300 shadow-lg hover:-translate-y-1">
                                                 <i className={`fab ${item.icon} text-[13px]`}></i>
                                             </a>
                                         ))}
@@ -143,21 +143,21 @@ const FormularioContacto = () => {
                                 </div>
 
                                 <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-[#111827] border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-microchip text-[11px]"></i>
                                         </div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Área</p>
                                         <p className="text-[13px] font-extrabold text-white">Tecnología</p>
                                     </div>
-                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-[#111827] border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-lightbulb text-[11px]"></i>
                                         </div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Enfoque</p>
                                         <p className="text-[13px] font-extrabold text-white">Tu necesidad</p>
                                     </div>
-                                    <div className="rounded-xl bg-white border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
+                                    <div className="rounded-xl bg-[#111827] border border-white/10 bg-white/[0.03] px-3 py-2.5 text-center shadow-sm">
                                         <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#84CC16] flex items-center justify-center">
                                             <i className="fas fa-clock text-[11px]"></i>
                                         </div>

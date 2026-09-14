@@ -26,9 +26,9 @@ const StepChip = ({ icon, label, done, active }) => (
         boxShadow: active ? '0 0 16px rgba(163,230,53,0.4)' : done ? '0 2px 8px rgba(163,230,53,0.3)' : 'none',
       }}
     >
-      <i className={`fas ${icon} text-[11px] transition-colors duration-300 ${done ? 'text-[#0A0A0A]' : active ? 'text-[#A3E635]' : 'text-gray-500'}`} />
+      <i className={`fas ${icon} text-[11px] transition-colors duration-300 ${done ? 'text-[#0A0A0A]' : active ? 'text-[#A3E635]' : 'text-slate-400'}`} />
     </div>
-    <span className={`text-[7.5px] font-black uppercase tracking-wider transition-colors duration-300 ${done || active ? 'text-[#A3E635]' : 'text-gray-500'}`}>{label}</span>
+    <span className={`text-[7.5px] font-black uppercase tracking-wider transition-colors duration-300 ${done || active ? 'text-[#A3E635]' : 'text-slate-400'}`}>{label}</span>
   </div>
 );
 

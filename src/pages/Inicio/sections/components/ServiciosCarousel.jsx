@@ -149,7 +149,7 @@ const ServiciosCarousel = ({ items }) => {
                                                     <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner">
                                                         <i className={`fa-solid ${stat.icon}`}></i>
                                                     </div>
-                                                    <div className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{stat.label}</div>
+                                                    <div className="text-[7.5px] text-slate-400 font-black uppercase tracking-wider leading-tight">{stat.label}</div>
                                                     <div className="text-[10px] font-black text-white mt-0.5 leading-tight">{stat.value}</div>
                                                 </div>
                                             ))}
@@ -171,7 +171,7 @@ const ServiciosCarousel = ({ items }) => {
                                         {/* Fila inferior de Precio & CTAs */}
                                         <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-3 w-full">
                                             <div className="flex flex-col items-start">
-                                                <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-widest leading-none">PRECIO</span>
+                                                <span className="text-[7.5px] text-slate-400 font-black uppercase tracking-widest leading-none">PRECIO</span>
                                                 <span className="text-sm font-black mt-1 leading-none text-white">{module.price}</span>
                                             </div>
 
@@ -190,7 +190,7 @@ const ServiciosCarousel = ({ items }) => {
                                                 {/* Detalles CTA */}
                                                 <Link
                                                     to={module.ctaLink}
-                                                    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all hover:-translate-y-0.5 shadow-md cursor-pointer bg-white hover:bg-white/90 text-[#0A0A0A]"
+                                                    className="flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[9px] font-black uppercase tracking-wider transition-all hover:-translate-y-0.5 shadow-md cursor-pointer bg-[#111827] hover:bg-white/90 text-[#0A0A0A]"
                                                 >
                                                     {module.cta}
                                                     <i className="fa-solid fa-arrow-right text-[8px]"></i>

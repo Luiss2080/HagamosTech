@@ -193,19 +193,19 @@ const Negocios = () => {
            <div className="flex flex-wrap justify-center gap-10 md:gap-24 opacity-80">
               <div className="text-center">
                 <h4 className="text-3xl font-black text-white">x3</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Ventas Promedio</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Ventas Promedio</p>
               </div>
               <div className="text-center">
                 <h4 className="text-3xl font-black text-white">-40%</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Costos Operativos</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Costos Operativos</p>
               </div>
               <div className="text-center">
                 <h4 className="text-3xl font-black text-white">24/7</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Operación Continua</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Operación Continua</p>
               </div>
               <div className="text-center">
                 <h4 className="text-3xl font-black text-white">100%</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Medible y Escalable</p>
+                <p className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mt-1">Medible y Escalable</p>
               </div>
            </div>
         </div>
@@ -286,7 +286,7 @@ const Negocios = () => {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
                 <Zap size={20} className="md:w-6 md:h-6" />
               </div>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
+              <div className="absolute inset-0 bg-[#111827] opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
             </a>
           </div>
         </div>

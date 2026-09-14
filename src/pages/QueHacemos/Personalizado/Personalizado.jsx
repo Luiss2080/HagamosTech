@@ -54,7 +54,7 @@ const ChatAssistantWindow = () => {
     <div className="w-full max-w-2xl mx-auto bg-[#0a0a0a] rounded-xl border border-neutral-800 shadow-2xl overflow-hidden mt-10 relative group h-[320px] flex flex-col">
       <div className="flex itemás-center px-4 py-3 bg-neutral-900 border-b border-neutral-800 gap-3">
         <div className="flex gap-2">
-          <div className="w-3 h-3 rounded-full bg-red-500"></div>
+          <div className="w-3 h-3 rounded-full bg-white/50"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
@@ -299,7 +299,7 @@ const Personalizado = () => {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
                 <Zap size={20} className="md:w-6 md:h-6" />
               </div>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
+              <div className="absolute inset-0 bg-[#111827] opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
             </a>
           </div>
         </div>

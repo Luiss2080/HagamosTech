@@ -16,8 +16,8 @@ const ChatToggle = ({ onClick }) => (
       <i className="fa-solid fa-robot text-[#0A0A0A] text-2xl group-hover:scale-110 transition-transform"></i>
     </div>
     <span className="absolute -top-1.5 -right-1.5 flex h-4 w-4 z-[60]">
-      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-500 opacity-75"></span>
-      <span className="relative inline-flex rounded-full h-4 w-4 bg-red-500 border-2 border-white shadow-sm"></span>
+      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white/50 opacity-75"></span>
+      <span className="relative inline-flex rounded-full h-4 w-4 bg-white/50 border-2 border-white shadow-sm"></span>
     </span>
   </motion.button>
 );

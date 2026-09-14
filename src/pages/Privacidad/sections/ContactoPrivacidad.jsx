@@ -19,9 +19,9 @@ const ContactoPrivacidad = () => {
                                     <i className="fas fa-headset mr-1.5 text-[#A3E635]"></i> DPO / Delegado de Datos
                                 </span>
                                 <h2 className="text-3xl sm:text-4xl font-black font-heading text-white mb-4 leading-tight drop-shadow">
-                                    ¿Dudas sobre tus <span className="relative inline-block text-amber-300">
+                                    ¿Dudas sobre tus <span className="relative inline-block text-lime-300">
                                         datos?
-                                        <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-300/60 drop-shadow-[0_0_8px_rgba(163,230,53,0.4)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                        <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-300/60 drop-shadow-[0_0_8px_rgba(163,230,53,0.4)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                                     </span>
                                 </h2>
                                 <p className="text-white/80 font-semibold leading-relaxed text-sm sm:text-base">
@@ -29,10 +29,10 @@ const ContactoPrivacidad = () => {
                                 </p>
                                 <div className="mt-5 flex flex-wrap gap-2">
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white/80 text-[9px] font-black uppercase tracking-widest">
-                                        <i className="fas fa-lock text-amber-300"></i> Canal seguro
+                                        <i className="fas fa-lock text-lime-300"></i> Canal seguro
                                     </span>
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white/80 text-[9px] font-black uppercase tracking-widest">
-                                        <i className="fas fa-clock text-amber-300"></i> Respuesta en 24h
+                                        <i className="fas fa-clock text-lime-300"></i> Respuesta en 24h
                                     </span>
                                 </div>
                             </div>
@@ -43,17 +43,17 @@ const ContactoPrivacidad = () => {
                                     </div>
                                     <div className="text-left">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/60">WhatsApp</p>
-                                        <p className="text-white font-black text-sm group-hover:text-amber-300 transition-colors">+591 61320004</p>
+                                        <p className="text-white font-black text-sm group-hover:text-lime-300 transition-colors">+591 61320004</p>
                                     </div>
                                     <i className="fas fa-arrow-right text-white/50 group-hover:translate-x-1 transition-transform ml-auto"></i>
                                 </a>
                                 <a href="mailto:privacidad@hagamostech.bo" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <div className="w-12 h-12 rounded-xl bg-[#A3E635] flex items-center justify-center text-white text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 rounded-xl bg-[#A3E635] flex items-center justify-center text-[#0A0A0A] text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                                         <i className="fas fa-envelope"></i>
                                     </div>
                                     <div className="text-left">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/60">Email</p>
-                                        <p className="text-white font-black text-sm group-hover:text-amber-300 transition-colors">privacidad@hagamostech.bo</p>
+                                        <p className="text-white font-black text-sm group-hover:text-lime-300 transition-colors">privacidad@hagamostech.bo</p>
                                     </div>
                                     <i className="fas fa-arrow-right text-white/50 group-hover:translate-x-1 transition-transform ml-auto"></i>
                                 </a>

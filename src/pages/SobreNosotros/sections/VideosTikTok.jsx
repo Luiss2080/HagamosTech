@@ -158,7 +158,7 @@ const VideosTikTok = () => {
                                         }}
                                     >
                                         <div className={isActive && lastSelectedId === video.id ? 'animate-spin-lr' : ''} style={{ transformStyle: 'preserve-3d' }}>
-                                            <div className={`w-full bg-white rounded-[2.5rem] p-4.5 shadow-2xl transition-all duration-300 ${isActive ? 'border-2 border-[#A3E635] shadow-[0_0_25px_rgba(163,230,53,0.35)]' : 'border border-gray-100 hover:border-[#A3E635]/40'}`}>
+                                            <div className={`w-full bg-[#111827] rounded-[2.5rem] p-4.5 shadow-2xl transition-all duration-300 ${isActive ? 'border-2 border-[#A3E635] shadow-[0_0_25px_rgba(163,230,53,0.35)]' : 'border border-white/10 hover:border-[#A3E635]/40'}`}>
                                                 <div className="aspect-[9/16] w-full rounded-[2rem] overflow-hidden relative shadow-inner flex items-center justify-center border border-white/10">
                                                 <iframe
                                                     id={`tiktok-iframe-${video.id}`}
@@ -208,7 +208,7 @@ const VideosTikTok = () => {
                                                     </span>
                                                     <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Muestra en video</span>
                                                 </div>
-                                                <p className="text-slate-700 text-sm font-semibold leading-relaxed">{video.desc}</p>
+                                                <p className="text-slate-200 text-sm font-semibold leading-relaxed">{video.desc}</p>
                                             </div>
                                         </div>
                                         </div>

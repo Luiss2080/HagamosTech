@@ -19,7 +19,7 @@ const ChatMessages = ({ messages, isTyping, activeCategory, onQuestionClick }) =
 
       <div className="flex-1 overflow-y-auto p-3.5 flex flex-col gap-3 relative z-10 pb-8">
         <div className="flex justify-center mb-1">
-          <span className="text-[9px] bg-white/70 text-[#FF4D00] px-2.5 py-0.5 rounded-full font-bold shadow-sm backdrop-blur-md uppercase tracking-wider border border-[#FF4D00]/10">Hoy</span>
+          <span className="text-[9px] bg-white/70 text-[#A3E635] px-2.5 py-0.5 rounded-full font-bold shadow-sm backdrop-blur-md uppercase tracking-wider border border-[#A3E635]/10">Hoy</span>
         </div>
 
         {messages.map((msg, index) => (
@@ -41,14 +41,14 @@ const ChatMessages = ({ messages, isTyping, activeCategory, onQuestionClick }) =
                 <div
                   className={`p-3 text-[13.5px] leading-relaxed shadow-sm relative ${
                     msg.type === 'user'
-                      ? 'bg-[#FFF0E6] text-[#8B3A13] rounded-2xl rounded-tr-sm border border-[#FF4D00]/20'
-                      : 'bg-white text-[#5C2B0B] rounded-2xl rounded-tl-sm border border-[#FF4D00]/10 shadow-md'
+                      ? 'bg-[#FFF0E6] text-[#171717] rounded-2xl rounded-tr-sm border border-[#A3E635]/20'
+                      : 'bg-[#111827] text-[#171717] rounded-2xl rounded-tl-sm border border-[#A3E635]/10 shadow-md'
                   }`}
                 >
                   {textRenderer(msg.text)}
                 </div>
-                <span className={`text-[9px] mt-1 font-bold px-1 ${msg.type === 'user' ? 'text-right text-[#FF4D00]/60' : 'text-left text-[#8B3A13]/50'}`}>
-                  {msg.time} {msg.type === 'user' && <span className="text-[#FF4D00]/70 ml-0.5">✓✓</span>}
+                <span className={`text-[9px] mt-1 font-bold px-1 ${msg.type === 'user' ? 'text-right text-[#A3E635]/60' : 'text-left text-[#171717]/50'}`}>
+                  {msg.time} {msg.type === 'user' && <span className="text-[#A3E635]/70 ml-0.5">✓✓</span>}
                 </span>
               </div>
             </div>
@@ -74,7 +74,7 @@ const ChatMessages = ({ messages, isTyping, activeCategory, onQuestionClick }) =
                 <button
                   key={i}
                   onClick={() => onQuestionClick(qa)}
-                  className="text-[12.5px] text-left bg-white/95 backdrop-blur-md border border-[#FF4D00]/20 text-[#5C2B0B] p-2.5 rounded-xl shadow-sm hover:bg-[#FF4D00] hover:text-white hover:shadow-md transition-all cursor-pointer font-medium leading-snug"
+                  className="text-[12.5px] text-left bg-white/95 backdrop-blur-md border border-[#A3E635]/20 text-[#171717] p-2.5 rounded-xl shadow-sm hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:shadow-md transition-all cursor-pointer font-medium leading-snug"
                 >
                   {qa.q}
                 </button>

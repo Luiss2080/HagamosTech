@@ -26,9 +26,9 @@ const stepsData = [
         desc: "Estudiamos a fondo tu caso, determinamos qué herramientas tecnológicas y metodologías se adaptan mejor a tu necesidad real y definimos el camino.",
         icon: "fa-magnifying-glass-chart",
         theme: {
-            cardBg: "bg-white",
+            cardBg: "bg-[#111827]",
             textColor: "text-[#0A0A0A]",
-            descColor: "text-slate-600",
+            descColor: "text-slate-300",
             iconBg: "bg-[#A3E635]/15",
             iconColor: "text-[#84CC16]",
             badgeBg: "bg-[#A3E635] text-[#0A0A0A]",
@@ -74,9 +74,9 @@ const stepsData = [
         desc: "Te entregamos la solución completamente funcional, lista para usar y con las pautas necesarias para que puedas gestionarla sin depender de nadie.",
         icon: "fa-circle-check",
         theme: {
-            cardBg: "bg-white",
+            cardBg: "bg-[#111827]",
             textColor: "text-[#0A0A0A]",
-            descColor: "text-slate-600",
+            descColor: "text-slate-300",
             iconBg: "bg-[#A3E635]/15",
             iconColor: "text-[#84CC16]",
             badgeBg: "bg-[#A3E635] text-[#0A0A0A]",

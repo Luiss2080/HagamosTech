@@ -8,7 +8,7 @@ import ProcesoTrabajo from './sections/Historia';
 
 const SobreNosotrosPagina = () => {
     return (
-        <div id="team-page" className="relative overflow-hidden min-h-screen bg-white">
+        <div id="team-page" className="relative overflow-hidden min-h-screen bg-[#111827]">
             {/* Organic Soft Blobs Background */}
             <div className="absolute top-[-5%] left-[-10%] w-[50%] h-[50%] bg-[#A3E635]/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute top-[30%] right-[-10%] w-[40%] h-[40%] bg-[#0A0A0A]/5 rounded-full blur-[120px] pointer-events-none"></div>
