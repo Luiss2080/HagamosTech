@@ -1,6 +1,7 @@
 const { PrismaClient } = require('@prisma/client');
 const path = require('path');
 require('dotenv').config({ path: path.join(__dirname, '..', '.env') });
+const { hashearContrasenaSync } = require('../auth/utils/password');
 
 const prisma = new PrismaClient();
 
@@ -45,7 +46,7 @@ async function main() {
     where: { correo: adminCorreo },
     create: {
       correo: adminCorreo,
-      contrasena: 'Admin123',
+      contrasena: hashearContrasenaSync('Admin123'),
       nombre: 'Administrador',
       usuario: 'admin',
       rolId: 1,

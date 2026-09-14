@@ -6,6 +6,12 @@ const {
     otpauthUrl
 } = require('../utils/totp');
 const { enviarCorreoVerificacion, enviarCorreoRecuperacion } = require('../utils/mailer');
+const {
+    esHashPassword,
+    hashearContrasena,
+    verificarContrasena
+} = require('../utils/password');
+const { firmarToken, verificarToken } = require('../utils/token');
 
 // Roles que exigen doble factor (2FA / Google Authenticator) al iniciar sesión
 const ROLES_2FA = [1, 12, 13]; // Administrador, Secretaria, Personal HagamosTech
@@ -31,9 +37,8 @@ const obtenerUsuarioPorToken = async (req) => {
     const authHeader = req.headers.authorization;
     if (!authHeader || !authHeader.startsWith('Bearer ')) return null;
     const token = authHeader.split(' ')[1];
-    const parts = token.split('-');
-    const userId = parseInt(parts[2]);
-    if (isNaN(userId)) return null;
+    const userId = verificarToken(token);
+    if (!userId) return null;
     return prisma.usuario.findUnique({
         where: { id: userId },
         include: {
@@ -92,11 +97,24 @@ const AuthController = {
                     suscripcion: true
                 }
             });
-            if (!usuario || usuario.contrasena !== contrasena) {
+            const coincide = usuario ? await verificarContrasena(contrasena, usuario.contrasena) : false;
+            if (!usuario || !coincide) {
                 return res.status(401).json({ mensaje: 'Credenciales inválidas' });
             }
             if (!usuario.activo) {
                 return res.status(403).json({ mensaje: 'Cuenta desactivada' });
+            }
+
+            // Migración transparente de contraseñas en texto plano a hash.
+            if (!esHashPassword(usuario.contrasena)) {
+                try {
+                    await prisma.usuario.update({
+                        where: { id: usuario.id },
+                        data: { contrasena: await hashearContrasena(contrasena) }
+                    });
+                } catch (e) {
+                    console.warn('No se pudo migrar la contraseña a hash:', e.message);
+                }
             }
 
             const dosFA = await leer2FA(usuario.id);
@@ -133,7 +151,7 @@ const AuthController = {
 
             res.json({
                 exito: true,
-                token_acceso: `token-user-${usuario.id}-${Date.now()}`,
+                token_acceso: firmarToken(usuario.id),
                 usuario: construirRespuestaUsuario(usuario, dosFA)
             });
         } catch (error) {
@@ -176,7 +194,7 @@ const AuthController = {
             }
             res.json({
                 exito: true,
-                token_acceso: `token-user-${usuario.id}-${Date.now()}`,
+                token_acceso: firmarToken(usuario.id),
                 usuario: construirRespuestaUsuario(usuario, { ...dosFA, twoFactorEnabled: true })
             });
         } catch (error) {
@@ -198,7 +216,8 @@ const AuthController = {
                 where: { id: userId },
                 select: { id: true, correo: true, contrasena: true, activo: true, twoFactorEnabled: true }
             });
-            if (!usuario || usuario.correo !== correo || usuario.contrasena !== contrasena) {
+            const coincide = usuario ? await verificarContrasena(contrasena, usuario.contrasena) : false;
+            if (!usuario || usuario.correo !== correo || !coincide) {
                 return res.status(401).json({ mensaje: 'Credenciales inválidas' });
             }
             if (!usuario.activo) {
@@ -295,7 +314,7 @@ const AuthController = {
                 data: {
                     nombre: pendiente.nombre,
                     correo: pendiente.correo,
-                    contrasena: pendiente.contrasena,
+                    contrasena: await hashearContrasena(pendiente.contrasena),
                     rolId: rolInvitado.id,
                     emailVerificado: true
                 },
@@ -310,7 +329,7 @@ const AuthController = {
             res.json({
                 exito: true,
                 mensaje: 'Correo verificado correctamente',
-                token_acceso: `token-user-${usuario.id}-${Date.now()}`,
+                token_acceso: firmarToken(usuario.id),
                 usuario: construirRespuestaUsuario(usuario, dosFA)
             });
         } catch (error) {
@@ -386,7 +405,7 @@ const AuthController = {
 
             await prisma.usuario.update({
                 where: { id: row.usuarioId },
-                data: { contrasena: String(nuevaContrasena) }
+                data: { contrasena: await hashearContrasena(String(nuevaContrasena)) }
             });
             await prisma.recuperacionPassword.update({
                 where: { id: row.id },
@@ -559,12 +578,12 @@ const AuthController = {
             if (String(nueva).length < 6) {
                 return res.status(400).json({ mensaje: 'La contraseña debe tener al menos 6 caracteres' });
             }
-            if (usuario.contrasena !== current) {
+            if (!(await verificarContrasena(current, usuario.contrasena))) {
                 return res.status(400).json({ mensaje: 'La contraseña actual es incorrecta' });
             }
             await prisma.usuario.update({
                 where: { id: usuario.id },
-                data: { contrasena: String(nueva) }
+                data: { contrasena: await hashearContrasena(String(nueva)) }
             });
             res.json({ success: true, mensaje: 'Contraseña cambiada con éxito' });
         } catch (error) {
