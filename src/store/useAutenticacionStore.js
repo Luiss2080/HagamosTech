@@ -21,8 +21,6 @@ const setActivity = () => sessionStorage.setItem(SS_ACTIVITY, Date.now().toStrin
 
 const LS_FOTO_BASE = 'hagamostech_foto_perfil';
 const LS_FOTO_LEGACY = 'hagamostech_foto_perfil';
-const INVITADO_KEY = 'lc_invitado';
-const INVITADO_FIN_KEY = 'lc_invitado_fin';
 
 const fotoKey = (userId) => `${LS_FOTO_BASE}_${userId}`;
 
@@ -43,13 +41,6 @@ const restoreFoto = (userObj) => {
     return { ...userObj, fotoPerfil: legacyFoto };
   }
   return userObj;
-};
-
-const esAccesoTotal = (user) => {
-  if (!user) return false;
-  if (user.rolId === 1) return true;
-  const rolNombre = (user.rolNombre || '').toLowerCase();
-  return /profesor|docente|profes/.test(rolNombre);
 };
 
 const useAuthStore = create((set, get) => ({
@@ -349,15 +340,6 @@ const useAuthStore = create((set, get) => ({
                 }
             }
 
-            // Si el sistema extendió el modo invitado, reflejar la nueva fecha de vencimiento
-            const finBackend = finalUser.suscripcion?.fechaFinPrueba;
-            if (finBackend && localStorage.getItem(INVITADO_KEY) === 'activo') {
-                const finLocal = localStorage.getItem(INVITADO_FIN_KEY);
-                if (!finLocal || new Date(finBackend) > new Date(finLocal)) {
-                    localStorage.setItem(INVITADO_FIN_KEY, new Date(finBackend).toISOString());
-                }
-            }
-
             set({ user: restoreFoto(finalUser), isAuthenticated: true });
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(finalUser));
         } catch {
@@ -367,53 +349,6 @@ const useAuthStore = create((set, get) => ({
         }
     },
 
-    verificarAccesoLibros: () => {
-        const { user } = get();
-        if (esAccesoTotal(user)) {
-            return { acceso: true, razon: 'acceso_total' };
-        }
-
-        const invitado = localStorage.getItem(INVITADO_KEY);
-        const finStr = localStorage.getItem(INVITADO_FIN_KEY);
-
-        if (invitado !== 'activo' || !finStr) {
-            return { acceso: false, razon: 'sin_suscripcion' };
-        }
-
-        const fin = new Date(finStr);
-        const hoy = new Date();
-        const diffDays = Math.ceil((fin - hoy) / (1000 * 60 * 60 * 24));
-
-        if (isNaN(diffDays)) return { acceso: false, razon: 'sin_suscripcion' };
-        if (diffDays > 0) return { acceso: true, razon: 'invitado_vigente' };
-        return { acceso: false, razon: 'invitado_vencido' };
-    },
-
-    tieneAccesoLibro: (nivel, tomoNum) => {
-        const { user } = get();
-        if (!user) return false;
-
-        // Admin y Docentes tienen acceso a todos los libros
-        if (esAccesoTotal(user)) return true;
-
-        // Invitado con pase activo (3 días)
-        const accesoInvitado = get().verificarAccesoLibros();
-        if (accesoInvitado.acceso) return true;
-
-        // Verificar permisos específicos asignados desde el sistema
-        const nivelLower = nivel.toLowerCase();
-        if (nivelLower.includes('arduino')) {
-            return user.permisos && user.permisos.some(p =>
-                p.startsWith('Secundaria_Original_') || p.startsWith('Secundaria_Consultas_') || p.startsWith('Secundaria_Solucionario_')
-            );
-        }
-
-        const prefix = nivelLower.includes('primaria') ? 'Primaria' : 'Secundaria';
-        const variants = ['Original', 'Consultas', 'Solucionario'];
-        return user.permisos && variants.some(v =>
-            user.permisos.includes(`${prefix}_${v}_${tomoNum}`)
-        );
-    }
 }));
 
 export default useAuthStore;
