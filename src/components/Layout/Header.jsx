@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from 'react';
 import { useLocation, useNavigate, Link } from 'react-router-dom';
 import useAuthStore from '../../store/useAutenticacionStore';
 import useModalStore from '../../store/useModalStore';
-import useCarritoStore from '../../store/useCarritoStore';
 
 const NAV_ITEMS = [
     {
@@ -67,8 +66,6 @@ const Header = () => {
     const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const openModal = useModalStore((state) => state.openModal);
-    const openCart = useCarritoStore((s) => s.openCart);
-    const cartCount = useCarritoStore((s) => s.resumen.cantidad_total);
     const [isDark, setIsDark] = useState(document.documentElement.classList.contains('dark'));
 
     const toggleDarkMode = () => {
@@ -268,21 +265,6 @@ const Header = () => {
                         </Link>
 
                         <div className="ml-auto flex items-center gap-2 xl:hidden">
-                            {/* Botón Carrito móvil */}
-                            <button
-                                type="button"
-                                onClick={openCart}
-                                className="relative w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] shadow-sm hover:shadow-md hover:bg-[#84CC16] hover:scale-105 transition-all duration-300 shrink-0 active:scale-95 z-50"
-                                aria-label="Abrir carrito"
-                            >
-                                <i className="fas fa-shopping-cart text-sm"></i>
-                                {cartCount > 0 && (
-                                    <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#0A0A0A] text-[#A3E635] text-[9px] font-black flex items-center justify-center border-2 border-white">
-                                        {cartCount}
-                                    </span>
-                                )}
-                            </button>
-
                             <button
                                 id="mobile-menu-btn"
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -361,21 +343,6 @@ const Header = () => {
                         </nav>
 
                         <div className="hidden xl:flex items-center gap-2.5 animate-fade-in-up delay-300">
-                            {/* Botón Carrito */}
-                            <button
-                                type="button"
-                                onClick={openCart}
-                                className="relative w-[38px] h-[38px] flex items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] shadow-sm hover:shadow-md hover:bg-[#84CC16] hover:scale-105 transition-all duration-300 shrink-0"
-                                aria-label="Abrir carrito"
-                            >
-                                <i className="fas fa-shopping-cart text-sm"></i>
-                                {cartCount > 0 && (
-                                    <span className="absolute -top-1 -right-1 min-w-[18px] h-[18px] px-1 rounded-full bg-[#0A0A0A] text-[#A3E635] text-[9px] font-black flex items-center justify-center border-2 border-white">
-                                        {cartCount}
-                                    </span>
-                                )}
-                            </button>
-
                             {isAuthenticated ? (
                                 <div className="relative flex items-center gap-2.5" ref={userMenuRef}>
                                     {esRolAdmin && (

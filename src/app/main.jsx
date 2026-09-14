@@ -3,10 +3,6 @@ import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import '../styles/index.css'
 import { getRandomWhatsApp } from '../utils/whatsapp'
-import useCarritoStore from '../store/useCarritoStore'
-
-// Inicializar el carrito desde localStorage
-useCarritoStore.getState().init();
 
 // Global WhatsApp Rotator Interceptor
 document.addEventListener('click', (e) => {
