@@ -70,7 +70,7 @@ function plantillaBase({ titulo, subtitulo, contenido, anio = new Date().getFull
 <!-- ── TOP BAR (DINÁMICO) ── -->
 <tr>
 <td style="background-color:#FF4D00;padding:6px 20px;text-align:center;">
-  <span style="color:#FFF5EC;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;">CONFIRMACIÓN DE SEGURIDAD DE TU CUENTA</span>
+  <span style="color:#FFF5EC;font-size:10px;font-weight:800;letter-spacing:1px;text-transform:uppercase;">SOLUCIONES TECNOLÓGICAS A TU MEDIDA</span>
 </td>
 </tr>
 
@@ -86,11 +86,10 @@ function plantillaBase({ titulo, subtitulo, contenido, anio = new Date().getFull
       <!-- Menú interactivo -->
       <td align="right" valign="middle">
         <a href="${BASE_URL}/" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Inicio</a>
-        <a href="${BASE_URL}/productos" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Menú</a>
-        <a href="${BASE_URL}/promociones" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Promos</a>
-        <a href="${BASE_URL}/servicios" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Servicios</a>
-        <a href="${BASE_URL}/sucursales" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Locales</a>
-        <a href="${BASE_URL}/perfil" style="display:inline-block;background-color:#FF4D00;color:#ffffff;padding:5px 12px;border-radius:12px;font-size:10px;font-weight:800;text-decoration:none;margin-left:12px;text-transform:uppercase;box-shadow:0 4px 10px rgba(255,77,0,0.2);">Mi Cuenta</a>
+        <a href="${BASE_URL}/#/que-hacemos/tecnologia" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Soluciones</a>
+        <a href="${BASE_URL}/#/promociones" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Promos</a>
+        <a href="${BASE_URL}/#/contactanos" style="color:#8B3A13;font-size:11px;font-weight:700;text-decoration:none;margin-left:12px;text-transform:uppercase;">Contacto</a>
+        <a href="${BASE_URL}/#/perfil" style="display:inline-block;background-color:#FF4D00;color:#ffffff;padding:5px 12px;border-radius:12px;font-size:10px;font-weight:800;text-decoration:none;margin-left:12px;text-transform:uppercase;box-shadow:0 4px 10px rgba(255,77,0,0.2);">Mi Cuenta</a>
       </td>
     </tr>
   </table>
@@ -110,7 +109,7 @@ function plantillaBase({ titulo, subtitulo, contenido, anio = new Date().getFull
 <!-- ── FOOTER (Estilo original sin logo) ── -->
 <tr>
 <td style="background-color:#8B3A13;background-image:linear-gradient(180deg, #8B3A13 0%, #5C2307 100%);border-top:5px solid #FF4D00;padding:35px 40px;text-align:center;">
-  <p style="margin:0 0 8px;color:#FFE8D6;font-size:13px;font-weight:600;line-height:1.5;">El verdadero sabor tradicional, horneado diariamente para alegrar tus mañanas.</p>
+  <p style="margin:0 0 8px;color:#FFE8D6;font-size:13px;font-weight:600;line-height:1.5;">Transformamos ideas y necesidades en soluciones de software, web y automatización.</p>
   <p style="margin:0;color:#C4A88C;font-size:10px;font-weight:400;letter-spacing:1px;">&copy; ${anio} ${BRAND} · Todos los derechos reservados.</p>
 </td>
 </tr>
@@ -131,7 +130,7 @@ function plantillaVerificacion({ nombre, codigo, expiraMin = 15 }) {
   </p>
 
   <p style="margin:0 0 35px;color:#5D3A1F;font-size:15px;line-height:1.7;font-weight:600;text-align:center;">
-    Estás a un paso de probar las mejores salteñas. Utiliza el siguiente código para verificar tu identidad de forma segura:
+    Estás a un paso de activar tu cuenta. Usá el siguiente código para verificar tu identidad de forma segura:
   </p>
 
   <!-- ── CÓDIGO (Estilo Header/Moderno) ── -->
@@ -167,7 +166,7 @@ function plantillaVerificacion({ nombre, codigo, expiraMin = 15 }) {
             <td style="padding:4px 0;width:30px;vertical-align:middle;">
               <div style="width:20px;height:20px;line-height:20px;text-align:center;background:#FF4D00;color:#fff;border-radius:6px;font-size:11px;font-weight:900;">3</div>
             </td>
-            <td style="padding:4px 0;color:#5D3A1F;font-size:11px;font-weight:700;">¡Empieza a disfrutar!</td>
+            <td style="padding:4px 0;color:#5D3A1F;font-size:11px;font-weight:700;">¡Ya podés empezar!</td>
           </tr>
         </table>
       </td>
@@ -278,4 +277,70 @@ async function enviarCorreoRecuperacion({ to, nombre, enlace, expiraMin = 30 }) 
     return { success: true, enviado: true };
 }
 
-module.exports = { enviarCorreoVerificacion, enviarCorreoRecuperacion, plantillaVerificacion, plantillaRecuperacion, smtpConfigurado };
+const escapeHtml = (valor = '') =>
+    String(valor)
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&#39;');
+
+function plantillaContacto({ nombre, correo, telefono, asunto, mensaje }) {
+    const fila = (etiqueta, valor) => `
+      <tr>
+        <td style="padding:6px 10px;color:#8B3A13;font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:1px;width:120px;">${etiqueta}</td>
+        <td style="padding:6px 10px;color:#374151;font-size:14px;font-weight:600;">${valor || '—'}</td>
+      </tr>`;
+
+    const contenido = `
+  <p style="margin:0 0 20px;color:#5D3A1F;font-size:15px;line-height:1.7;font-weight:600;text-align:center;">
+    Recibiste un nuevo mensaje desde el formulario de contacto del sitio.
+  </p>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#FFF6F6;border-radius:16px;padding:8px 12px;border-left:5px solid #FF4D00;margin-bottom:20px;">
+    ${fila('Nombre', escapeHtml(nombre))}
+    ${fila('Correo', escapeHtml(correo))}
+    ${fila('Teléfono', escapeHtml(telefono))}
+    ${fila('Asunto', escapeHtml(asunto))}
+  </table>
+  <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;border-radius:16px;padding:14px 16px;border:1px solid rgba(255,77,0,0.2);margin-bottom:20px;">
+    <tr>
+      <td style="color:#374151;font-size:14px;line-height:1.7;font-weight:500;white-space:pre-wrap;">${escapeHtml(mensaje)}</td>
+    </tr>
+  </table>
+  <p style="margin:0;color:#C4A88C;font-size:12px;font-weight:600;text-align:center;">Respondé directamente a este correo para contestar al contacto.</p>`;
+
+    return plantillaBase({ titulo: 'Nuevo contacto', subtitulo: 'Mensaje desde la web', contenido });
+}
+
+async function enviarCorreoContacto({ nombre, correo, telefono, asunto, mensaje }) {
+    const destino = process.env.CONTACT_EMAIL || 'contacto@hagamostech.bo';
+    const html = plantillaContacto({ nombre, correo, telefono, asunto, mensaje });
+    const text = `Nuevo contacto desde la web\n\nNombre: ${nombre || '—'}\nCorreo: ${correo || '—'}\nTeléfono: ${telefono || '—'}\nAsunto: ${asunto || '—'}\n\n${mensaje || ''}`;
+
+    if (!smtpConfigurado()) {
+        console.log('[MAIL DEV] contacto ->', destino, correo);
+        return { success: true, enviado: false, modoDev: true };
+    }
+
+    enviarAsync({
+        from: config.from,
+        to: destino,
+        replyTo: correo,
+        subject: `Nuevo contacto: ${asunto || 'Consulta desde la web'}`,
+        html,
+        text,
+        attachments: obtenerAttachments()
+    });
+
+    return { success: true, enviado: true };
+}
+
+module.exports = {
+    enviarCorreoVerificacion,
+    enviarCorreoRecuperacion,
+    enviarCorreoContacto,
+    plantillaVerificacion,
+    plantillaRecuperacion,
+    plantillaContacto,
+    smtpConfigurado
+};

@@ -6,6 +6,7 @@ import { prisma, espiarModelo } from './helpers/prismaMock.js';
 
 const require = createRequire(import.meta.url);
 const contactoRoutes = require('../store/routes/contactoRoutes.js');
+const mailer = require('../auth/utils/mailer.js');
 
 const buildApp = () => {
   const app = express();
@@ -14,18 +15,22 @@ const buildApp = () => {
   return app;
 };
 
-// RF-4, RF-5, RF-6: endpoint de contacto con Supertest y Prisma espiado.
-// No requiere MySQL: las llamadas a Prisma se interceptan (RF-5).
+// RF-1..RF-3 (Spec 007): persiste el mensaje y notifica por correo.
 describe('POST /api/contacto', () => {
   beforeEach(() => {
     espiarModelo('mensaje', ['create']);
+    vi.spyOn(mailer, 'enviarCorreoContacto').mockResolvedValue({
+      success: true,
+      enviado: false,
+      modoDev: true,
+    });
   });
 
   afterEach(() => {
     vi.restoreAllMocks();
   });
 
-  it('crea el mensaje y responde 201 con los datos persistidos', async () => {
+  it('crea el mensaje, notifica por correo y responde 201', async () => {
     prisma.mensaje.create.mockResolvedValue({
       id: 1,
       nombre: 'Ana',
@@ -39,15 +44,17 @@ describe('POST /api/contacto', () => {
 
     expect(res.status).toBe(201);
     expect(prisma.mensaje.create).toHaveBeenCalledTimes(1);
+    expect(mailer.enviarCorreoContacto).toHaveBeenCalledTimes(1);
     expect(res.body.mensaje.id).toBe(1);
   });
 
-  it('responde 400 y no persiste si faltan campos obligatorios', async () => {
+  it('responde 400 y no persiste ni notifica si faltan campos obligatorios', async () => {
     const res = await request(buildApp())
       .post('/api/contacto')
       .send({ nombre: 'Ana' });
 
     expect(res.status).toBe(400);
     expect(prisma.mensaje.create).not.toHaveBeenCalled();
+    expect(mailer.enviarCorreoContacto).not.toHaveBeenCalled();
   });
 });

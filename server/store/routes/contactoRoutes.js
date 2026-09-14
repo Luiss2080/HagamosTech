@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const prisma = require('../../models/prisma');
+const mailer = require('../../auth/utils/mailer');
 
 // POST /api/contacto - Enviar mensaje de contacto
 router.post('/', async (req, res) => {
@@ -22,6 +23,11 @@ router.post('/', async (req, res) => {
                 estado: 'nuevo'
             }
         });
+
+        // Notificación por correo (no bloquea la respuesta si falla)
+        Promise.resolve(
+            mailer.enviarCorreoContacto({ nombre, correo, telefono, asunto, mensaje })
+        ).catch((e) => console.error('[CONTACTO] No se pudo notificar por correo:', e.message));
 
         res.status(201).json({ mensaje: nuevoMensaje, message: 'Mensaje enviado exitosamente' });
     } catch (error) {

@@ -1,0 +1,10 @@
+# Tareas — Spec 006 (Funciones de perfil reales)
+
+- [x] T1. Implementar `cambiarPassword` en `AuthController`. (RF-1, RF-2)
+- [x] T2. Implementar `exportarDatos`. (RF-3)
+- [x] T3. Implementar `desactivarCuenta`. (RF-4)
+- [x] T4. Implementar `listarSesiones` y `revocarSesion` (alcance honesto). (RF-5, RF-6)
+- [x] T5. Registrar las rutas en `server.js`. (RF-1..RF-6, RF-8)
+- [x] T6. Generar el certificado en cliente con jsPDF/html2canvas. (RF-7)
+- [x] T7. Añadir `server/test/perfil.test.js`. (RF-8)
+- [x] T8. Verificación y `validation.md`. (Todos)

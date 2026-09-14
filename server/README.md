@@ -38,6 +38,11 @@ Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por cons
 | `POST /api/auth/*` | Login, registro, verificación, recuperación |
 | `GET/PUT /api/perfil` | Perfil del usuario (requiere auth) |
 | `GET/POST /api/perfil/2fa/*` | Doble factor (TOTP) |
+| `PUT /api/perfil/password` | Cambiar contraseña |
+| `GET /api/perfil/exportar` | Exportar datos personales |
+| `DELETE /api/perfil/cuenta` | Desactivar cuenta |
+| `GET /api/perfil/sessions` | Sesiones (sin multisesión persistida) |
+| `DELETE /api/perfil/sessions/:id` | Revocar sesión (404 si no existe) |
 | `POST /api/contacto` | Enviar mensaje de contacto |
 | `GET /api/contacto` | Listar mensajes |
 | `/api/cupones-sistema` | Cupones / modo invitado |
