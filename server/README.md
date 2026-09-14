@@ -1,8 +1,6 @@
-# server/ - Backend Node.js (Desarrollo)
+# server/ - Backend Node.js
 
-Backend API construido con **Node.js + Express + Prisma ORM**.
-
-**Solo se usa en desarrollo local.** En producción el hosting usa PHP (carpeta `api/`).
+Backend API de HagamosTech construido con **Node.js + Express 5 + Prisma ORM + MySQL**.
 
 ## Estructura
 
@@ -13,104 +11,68 @@ server/
 │   ├── controllers/     # AuthController, CuponController
 │   ├── routes/          # authRoutes, cuponRoutes
 │   └── utils/           # mailer, totp
-├── store/               # Backend público (tienda)
-│   ├── controllers/     # Catalogo, Carrito, Compra, Pago
-│   └── routes/          # catalogo, carrito, compra, pago, contacto
+├── store/
+│   └── routes/          # contacto
 ├── models/
 │   └── prisma.js        # Cliente Prisma
 ├── prisma/
 │   ├── schema.prisma    # Esquema de la base de datos
-│   └── seed.js          # Ejecuta los seeds
-├── package.json         # Dependencias
-└── .env                 # Configuración local
+│   └── seed.js          # Datos semilla (roles, permisos, admin, cupón)
+├── test/                # Tests (Vitest + Supertest)
+├── package.json
+└── .env
 ```
 
-## Archivos clave
+## Arranque
 
-| Archivo | Descripción |
-|---------|-------------|
-| `server.js` | Inicializa Express, registra rutas, inicia servidor en puerto 3000 |
-| `prisma/schema.prisma` | Define todos los modelos de la base de datos (MySQL) |
-| `prisma/seed.js` | Script que ejecuta los seeds |
-| `.env` | Variables de entorno: `DATABASE_URL=mysql://root:@localhost:3306/HagamosTech` |
+```bash
+cd server && npm run dev     # http://localhost:3000
+```
 
-## API Endpoints
+Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por consola.
 
-| Ruta | Controlador | Descripción |
-|------|-------------|-------------|
-| `GET /api/catalogo/productos` | CatalogoController | Lista todos los productos |
-| `GET /api/catalogo/categorias` | CatalogoController | Lista todas las categorías |
-| `GET /api/catalogo/config` | CatalogoController | Flujo de pasos del catálogo |
-| `POST /api/auth/login` | AuthController | Login de usuario |
-| `POST /api/auth/registro` | AuthController | Registro de usuario |
-| `GET /api/auth/perfil` | AuthController | Obtener perfil (requiere auth) |
-| `POST /api/carrito` | CarritoController | Agregar item al carrito |
-| `GET /api/carrito` | CarritoController | Ver carrito del usuario |
-| `DELETE /api/carrito/:id` | CarritoController | Eliminar item del carrito |
-| `POST /api/compras/crear` | CompraController | Crear nueva compra |
-| `GET /api/compras/:id` | CompraController | Ver detalle de compra |
-| `POST /api/pagos/confirmar` | PagoController | Confirmar pago |
-| `POST /api/contacto` | ContactoRoutes | Enviar mensaje de contacto |
-| `GET /api/config` | SystemController | Configuración del sistema |
-| `GET /api/estado` | SystemController | Estado del servidor |
-| `GET /api/usuarios-sistema` | UsuarioController | Usuarios del sistema |
-| `GET /api/roles-sistema` | RolController | Roles del sistema |
-| `GET /api/permisos-sistema` | PermisoController | Permisos del sistema |
-| `GET /api/clientes-sistema` | ClienteController | Clientes registrados |
+## Endpoints reales
+
+| Ruta | Descripción |
+|------|-------------|
+| `POST /api/auth/*` | Login, registro, verificación, recuperación |
+| `GET/PUT /api/perfil` | Perfil del usuario (requiere auth) |
+| `GET/POST /api/perfil/2fa/*` | Doble factor (TOTP) |
+| `POST /api/contacto` | Enviar mensaje de contacto |
+| `GET /api/contacto` | Listar mensajes |
+| `/api/cupones-sistema` | Cupones / modo invitado |
+
+> **Pendiente (Spec 005):** `server.js` todavía tiene rutas mock y un catch-all que responde
+> `{success:true}` a endpoints sin implementar. Se elimina en la spec "API veraz".
 
 ## Modelos de Prisma
 
-| Modelo | Tabla MySQL | Descripción |
-|--------|-------------|-------------|
-| `Categoria` | `categoria` | Categorías de productos |
-| `Producto` | `producto` | Productos del catálogo |
-| `Usuario` | `usuario` | Usuarios registrados |
-| `CarritoItem` | `carrito_item` | Items en carrito |
-| `Compra` | `compra` | Órdenes de compra |
-| `CompraItem` | `compra_item` | Items de cada compra |
-| `Pago` | `pago` | Registros de pago |
-| `Sucursal` | `sucursal` | Sucursales físicas |
-| `DetalleSucursalProduct` | `detalle_sucursal_product` | Stock por sucursal |
-| `Servicio` | `servicio` | Servicios de la empresa |
-| `CatalogoFlujoPaso` | `catalogo_flujo_paso` | Pasos del flujo de compra |
-| `Mensaje` | `mensaje` | Mensajes de contacto |
-| `Roles` | `roles` | Roles de usuarios |
-| `Permisos` | `permisos` | Permisos del sistema |
-| `DetalleRolPermisos` | `detalle_rol_permisos` | Matriz rol-permiso |
-| `Suscripcion` | `suscripciones` | Suscripciones / estado invitado |
-| `ClienteUsuario` | `usuario` | Clientes del store público |
+`Usuario`, `Rol`, `Permiso`, `DetalleRolPermisos`, `Suscripcion`, `CuponDescuento`,
+`VerificacionCorreo`, `RecuperacionPassword`, `RegistroPendiente`, `mensaje`.
 
-## Comandos útiles
+Los modelos de e-commerce (`producto`, `categoria`, `carrito_item`, `compra`, `pago`,
+`sucursal`, etc.) fueron retirados en la Spec 003, sin alterar la base de datos.
+
+## Comandos
 
 ```bash
-# Iniciar servidor
-cd server && npm run dev
-
-# Regenerar cliente Prisma (después de cambiar esquema)
-cd server && npx prisma generate
-
-# Ejecutar seeds (datos de prueba)
-cd server && npx prisma db seed
-
-# Verificar conexión a BD
-cd server && npx prisma studio
+cd server && npm run dev          # Servidor con nodemon
+cd server && npm run test:run     # Tests (sin MySQL, Prisma espiado)
+cd server && npx prisma generate  # Regenerar cliente Prisma
+cd server && npx prisma db push   # Sincronizar esquema con MySQL
+cd server && npm run db:seed      # Datos semilla
 ```
 
-## Configuración
+## Configuración (.env)
 
-| Variable | Valor local | Descripción |
-|----------|-------------|-------------|
-| `DATABASE_URL` | `mysql://root:@localhost:3306/HagamosTech` | Conexión a MySQL |
-| `PORT` | `3000` | Puerto del servidor |
-| `NODE_ENV` | `development` | Entorno |
-| `JWT_SECRET` | `hagamostech_dev_secret_key_2026` | Secret para tokens |
-| `FRONTEND_URL` | `http://localhost:4001` | URL del frontend (CORS) |
-
-## Notas
-
-- El servidor usa `cors()` para permitir peticiones del frontend
-- La autenticación usa JWT almacenado en cookies (`hagamostech_token`)
-- En producción se usa el backend PHP (`api/`) en lugar de este Node.js
+| Variable | Descripción |
+|----------|-------------|
+| `DATABASE_URL` | Conexión a MySQL |
+| `PORT` | Puerto del servidor (default 3000) |
+| `NODE_ENV` | Entorno |
+| `JWT_SECRET` | Secret para tokens |
+| `FRONTEND_URL` | URL del frontend (CORS) |
 
 ---
+
 *HagamosTech - 2026*

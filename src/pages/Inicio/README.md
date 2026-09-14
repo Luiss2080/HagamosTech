@@ -1,18 +1,22 @@
 # Inicio - Página Principal
 
-Landing page del sitio HAGAMOSTECH con secciones promocionales.
+Landing de HagamosTech (solo tecnología).
 
 ## Archivos
 
 | Archivo | Descripción |
 |---------|-------------|
-| `Inicio.jsx` | Página principal que compone todas las secciones |
+| `Inicio.jsx` | Compone las secciones de la página principal |
 
-### sections/ - Secciones de la Página Principal
+### sections/
 
 | Archivo | Descripción |
 |---------|-------------|
-| `HeroSaltenas.jsx` | Hero principal con deck 3D de videos |
-| `SucursalesCarrusel.jsx` | Carrusel infinito de sucursales |
+| `HeroHagamosTech.jsx` | Hero principal |
+| `InstitucionesCarrusel.jsx` | Carrusel de instituciones/clientes |
+| `ServiciosGrid.jsx` | Grilla de servicios por categoría (usa `src/data/serviciosData.js`) |
+| `VentajasCarrusel.jsx` | Ventajas de trabajar con HagamosTech |
+| `NovedadesCarrusel.jsx` | Noticias y novedades |
 
-Los carruseles de productos (Salteñas, Cafetería, Refrescos y Postres) se importan desde `src/pages/Menu/sections/` y se muestran en la página principal.
+La oferta que se muestra proviene siempre de `src/data/serviciosData.js`
+(ver `docs/catalogo-servicios.md`). El vertical de restaurante fue retirado en la Spec 003.

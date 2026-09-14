@@ -41,6 +41,18 @@ app.use('/api/auth', authRoutes);
 app.use('/api/contacto', contactoRoutes);
 app.use('/api/cupones-sistema', cuponRoutes);
 
+// --- ENDPOINTS RETIRADOS (Spec 003) ---
+// El vertical de restaurante/e-commerce ya no existe: se responde 410 Gone
+// en lugar de dejar que el catch-all mock devuelva un éxito falso.
+['/api/catalogo', '/api/carrito', '/api/compras', '/api/pagos'].forEach((base) => {
+    app.use(base, (req, res) => {
+        res.status(410).json({
+            error: 'Endpoint retirado',
+            mensaje: 'El vertical de restaurante/e-commerce ya no está disponible.',
+        });
+    });
+});
+
 // --- MOCK ROUTES TEMPORALES ---
 // Esto silencia los errores 404 en consola de los hooks que aún no tienen backend real
 const mockRouter = express.Router();
