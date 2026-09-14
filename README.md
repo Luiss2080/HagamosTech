@@ -50,15 +50,15 @@ HAGAMOSTECH/
 # Frontend:  http://localhost:4000
 npm run dev
 
-# Backend:   http://localhost:3000 (con fallback a 3001/3002 si está ocupado)
+# Backend:   http://localhost:4321 (el frontend llama a /api vía proxy de Vite)
 npm run dev:server
 
 # Ambos a la vez
 npm run dev:all
 ```
 
-> **Puerto 3000:** si otro proyecto lo ocupa (p. ej. ParqueoYa), el backend elige el siguiente
-> puerto libre y lo informa por consola. Ver [`docs/diagnostico.md`](docs/diagnostico.md).
+> **Puerto del API:** en desarrollo el backend usa `4321` (ver `server/.env`) y el frontend
+> llama a `/api` mediante el proxy de Vite (`VITE_API_PROXY_TARGET`). Ver [`docs/diagnostico.md`](docs/diagnostico.md).
 
 **Base de datos:**
 

@@ -28,8 +28,9 @@ Harness de tests habilitado en la **Spec 001** (`specs/001-harness-tests/`).
 - E2E: archivos `e2e/**/*.spec.js`.
 
 ## Puertos
-- El backend intenta `PORT` (por defecto 3000) y si está ocupado prueba 3001, 3002.
-- Los E2E usan por defecto el backend en **3001** y el frontend en **4000**
+- El backend usa `PORT` (por defecto 4321) y, si está ocupado, prueba 4322.
+- El frontend llama a `/api` mediante el proxy de Vite (`VITE_API_PROXY_TARGET`).
+- Los E2E usan por defecto el backend en **4321** y el frontend en **4000**
   (variables `E2E_BACKEND_PORT` y `E2E_FRONTEND_PORT`).
 
 ## CI

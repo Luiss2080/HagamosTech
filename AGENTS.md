@@ -9,7 +9,8 @@ tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs
 
 ## Comandos
 - Frontend (dev): `npm run dev` → `http://localhost:4000`
-- Backend (dev): `npm run dev:server` (o `cd server && npm run dev`) → `http://localhost:3000`
+- Backend (dev): `npm run dev:server` (o `cd server && npm run dev`) → `http://localhost:4321`
+  (el frontend usa el proxy de Vite: llama a `/api`).
 - Ambos: `npm run dev:all`
 - Build: `npm run build`  (usa `.env.production`)
 - Lint: `npm run lint`
@@ -17,8 +18,8 @@ tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs
   _(el harness se habilita en la Spec 001; hasta entonces verificar con lint + build)_
 - Base de datos: `cd server && npx prisma db push` · seeds: `cd server && npm run db:seed`
 
-> **Puerto 3000:** verificar que esté libre. Otro proyecto (ParqueoYa) puede ocupar
-> `127.0.0.1:3000` y romper la API del frontend. Ver `docs/diagnostico.md`.
+> **Puerto del API:** en desarrollo el backend usa `4321` (propio, ver `server/.env`) y el
+> frontend llama a `/api` vía proxy de Vite (`VITE_API_PROXY_TARGET`). Ver `docs/diagnostico.md`.
 
 ## Estilo y convenciones
 - JavaScript/JSX moderno (ESM). Componentes en PascalCase; hooks `useXxx`.

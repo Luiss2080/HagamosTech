@@ -79,6 +79,20 @@ app.use('/api', (req, res) => {
     });
 });
 
+// --- Manejo de errores ---
+// Un JSON malformado no debe tumbar el servidor: se responde 400.
+app.use((err, req, res, next) => {
+    if (err && (err.type === 'entity.parse.failed' || err instanceof SyntaxError)) {
+        return res.status(400).json({ error: 'JSON inválido en el cuerpo de la petición' });
+    }
+    console.error('[ERROR]', err && err.message);
+    return res.status(500).json({ error: 'Error interno del servidor' });
+});
+
+// Evita que una excepción no controlada termine el proceso.
+process.on('uncaughtException', (e) => console.error('[UNCAUGHT]', e && e.message));
+process.on('unhandledRejection', (e) => console.error('[UNHANDLED]', e && e.message ? e.message : e));
+
 // --- Inicio del Servidor ---
 // Sondea si un puerto responde; si nadie escucha, está libre. Es más fiable
 // que intentar enlazar (en Windows dos sockets pueden compartir el puerto).
