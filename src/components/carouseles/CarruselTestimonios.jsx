@@ -175,14 +175,14 @@ const TestimonialCarousel = ({ testimonials }) => {
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Anterior"
             >
               <i className="fa-solid fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-white dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Siguiente"
             >
               <i className="fa-solid fa-chevron-right text-xs"></i>

@@ -71,7 +71,7 @@ const DatosRecopilados = () => {
                                         <i className={`fas ${cat.icon} text-lg`}></i>
                                     </div>
                                     <div className="flex-1">
-                                        <h3 className="font-black text-[#111827] text-sm sm:text-base">{cat.titulo}</h3>
+                                        <h3 className="font-black text-white text-sm sm:text-base">{cat.titulo}</h3>
                                         <p className="text-[11px] text-slate-300 font-semibold">{cat.ejemplo}</p>
                                     </div>
                                     <span className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 border border-white/10 ${cat.badge} text-white`}>

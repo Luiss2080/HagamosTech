@@ -48,7 +48,7 @@ const CicloVidaCookie = () => {
                                             <span className={`inline-block px-2.5 py-1 rounded-full text-[8px] font-black uppercase tracking-widest ${fase.soft} mb-2`}>
                                                 <i className="fas fa-hourglass-half mr-1 text-[8px]"></i>{fase.duracion}
                                             </span>
-                                            <h3 className="font-black text-[#111827] text-base mb-1">{fase.titulo}</h3>
+                                            <h3 className="font-black text-white text-base mb-1">{fase.titulo}</h3>
                                             <p className="text-[11px] text-slate-300 font-semibold leading-relaxed">{fase.desc}</p>
                                         </div>
                                     </div>

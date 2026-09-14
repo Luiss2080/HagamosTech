@@ -95,7 +95,7 @@ const AcuerdosUso = () => {
                                                         {i + 1}
                                                     </span>
                                                     <div className="flex-1 min-w-0">
-                                                        <p className={`text-[11px] font-black truncate ${isOpen ? 'text-[#84CC16]' : 'text-[#111827]'}`}>{cl.titulo}</p>
+                                                        <p className={`text-[11px] font-black truncate ${isOpen ? 'text-[#84CC16]' : 'text-white'}`}>{cl.titulo}</p>
                                                         <p className="text-[8px] font-black uppercase tracking-widest text-slate-400">{cl.ejemplo}</p>
                                                     </div>
                                                     <i className={`fas fa-chevron-right text-[9px] ${isOpen ? 'rotate-90' : 'text-slate-300'} transition-all`}></i>
@@ -123,7 +123,7 @@ const AcuerdosUso = () => {
                                             </div>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 flex-wrap">
-                                                    <h3 className="font-black text-[#111827] text-sm sm:text-base">{cl.titulo}</h3>
+                                                    <h3 className="font-black text-white text-sm sm:text-base">{cl.titulo}</h3>
                                                     <span className={`px-2 py-0.5 rounded-full text-[7px] font-black uppercase tracking-widest ${isOpen ? `${cl.color} text-white` : cl.soft}`}>
                                                         {isOpen ? 'Abierta' : 'Cláusula ' + (i + 1)}
                                                     </span>

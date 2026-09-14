@@ -49,7 +49,7 @@ const RetencionDatos = () => {
                                             <i className={`fas ${r.icon}`}></i>
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <p className={`font-black text-sm ${isActive ? 'text-[#A3E635]' : 'text-[#111827]'}`}>{r.titulo}</p>
+                                            <p className={`font-black text-sm ${isActive ? 'text-[#A3E635]' : 'text-white'}`}>{r.titulo}</p>
                                             <p className="text-[10px] text-slate-400 font-semibold truncate">{r.detalle}</p>
                                         </div>
                                         <div className="text-right shrink-0">
@@ -73,7 +73,7 @@ const RetencionDatos = () => {
                                         <i className={`fas ${actual.icon}`}></i>
                                     </div>
                                     <div>
-                                        <h3 className="text-xl font-black font-heading text-[#111827]">{actual.titulo}</h3>
+                                        <h3 className="text-xl font-black font-heading text-white">{actual.titulo}</h3>
                                         <p className="text-[11px] text-slate-300 font-semibold">{actual.detalle}</p>
                                     </div>
                                     <span className="ml-auto inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#FFFFFF] text-[#171717] text-[9px] font-black uppercase tracking-widest border border-white/10 shrink-0">

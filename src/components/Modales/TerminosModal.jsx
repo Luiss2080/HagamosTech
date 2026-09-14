@@ -151,7 +151,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                             <span className="w-8 h-8 rounded-xl bg-white/5 border border-white/10 text-[#A3E635] flex items-center justify-center">
                                                 <i className="fas fa-scale-balanced text-sm"></i>
                                             </span>
-                                            <h3 className="text-2xl font-black text-[#111827] tracking-tight">Terminos y Condiciones</h3>
+                                            <h3 className="text-2xl font-black text-white tracking-tight">Terminos y Condiciones</h3>
                                         </div>
                                         <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Servicios claros en HAGAMOSTECH</p>
                                     </div>
@@ -159,7 +159,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                     <div className="rounded-2xl border border-white/10 bg-[#111827] p-4 shadow-sm max-h-[56vh] overflow-y-auto space-y-3">
                                         {TERMS_SECTIONS.map((section) => (
                                             <article key={section.title} className="rounded-xl border border-white/10 bg-[#111827] p-4">
-                                                <h4 className="text-sm font-black text-[#111827] uppercase tracking-wide mb-1.5">{section.title}</h4>
+                                                <h4 className="text-sm font-black text-white uppercase tracking-wide mb-1.5">{section.title}</h4>
                                                 <p className="text-sm text-slate-300 font-medium leading-relaxed">{section.text}</p>
                                             </article>
                                         ))}

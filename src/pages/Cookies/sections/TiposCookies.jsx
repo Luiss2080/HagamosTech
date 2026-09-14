@@ -62,7 +62,7 @@ const TiposCookies = () => {
                                     <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#A3E635] opacity-70"></div>
                                     <div className="relative z-10">
                                         <div className="w-12 h-12 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center text-[#A3E635] text-xl mx-auto mb-3"><i className={`fas ${tipo.icon}`}></i></div>
-                                        <h4 className="text-center font-black text-[#111827] text-sm mb-2">{tipo.titulo}</h4>
+                                        <h4 className="text-center font-black text-white text-sm mb-2">{tipo.titulo}</h4>
                                         <p className="text-center text-[11px] text-slate-300 font-semibold leading-relaxed mb-3">{tipo.detalle}</p>
                                         <div className="flex flex-wrap justify-center gap-1.5">
                                             {tipo.ejemplos.map((ej, j) => (

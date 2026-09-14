@@ -88,7 +88,7 @@ const GestorConsentimiento = () => {
                                         </div>
                                         <div>
                                             <p className="text-[8px] font-black uppercase tracking-widest text-slate-400">Modo actual</p>
-                                            <p className="text-[11px] font-black text-[#111827]">{porcentaje <= 50 ? 'Estricto' : porcentaje <= 75 ? 'Equilibrado' : 'Completo'}</p>
+                                            <p className="text-[11px] font-black text-white">{porcentaje <= 50 ? 'Estricto' : porcentaje <= 75 ? 'Equilibrado' : 'Completo'}</p>
                                         </div>
                                     </div>
 
@@ -137,7 +137,7 @@ const GestorConsentimiento = () => {
                                                 </div>
                                                 <div className="flex-1">
                                                     <div className="flex items-center gap-2">
-                                                        <h3 className="font-black text-[#111827] text-sm">{c.titulo}</h3>
+                                                        <h3 className="font-black text-white text-sm">{c.titulo}</h3>
                                                         <span className={`px-2 py-0.5 rounded-full text-[8px] font-black uppercase tracking-wider ${c.obligatoria ? 'bg-[#A3E635]/10 text-[#A3E635] border border-[#A3E635]/15' : c.soft}`}>
                                                             {c.obligatoria ? 'Siempre activas' : estados[c.id] ? 'Activa' : 'Inactiva'}
                                                         </span>

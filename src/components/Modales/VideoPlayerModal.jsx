@@ -98,7 +98,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                                     <div className="w-6 h-6 rounded bg-white/10 flex itemás-center justify-center transition-colors group-hover:bg-[#111827]">
                                                         <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
                                                     </div>
-                                                    <span className="font-bold text-white text-xs group-hover:text-[#111827] transition-colors">{item.label}</span>
+                                                    <span className="font-bold text-white text-xs group-hover:text-white transition-colors">{item.label}</span>
                                                 </a>
                                             ))}
                                         </div>

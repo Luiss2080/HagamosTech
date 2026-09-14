@@ -126,7 +126,7 @@ const ModalError = ({
                                             <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-red-500 flex items-center justify-center">
                                                 <i className="fas fa-triangle-exclamation text-sm"></i>
                                             </span>
-                                            <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">{title}</h3>
+                                            <h3 className="text-2xl font-black font-heading text-white tracking-tight">{title}</h3>
                                         </div>
                                         <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Alerta</p>
                                     </div>
@@ -137,21 +137,21 @@ const ModalError = ({
                                                 <i className="fas fa-box-open text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-[#111827]">Catalogo</p>
+                                            <p className="text-[13px] font-extrabold text-white">Catalogo</p>
                                         </div>
                                         <div className="rounded-xl bg-[#111827] border border-[#A3E635]/30/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-red-500 flex items-center justify-center">
                                                 <i className="fas fa-receipt text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-[#111827]">Pedidos</p>
+                                            <p className="text-[13px] font-extrabold text-white">Pedidos</p>
                                         </div>
                                         <div className="rounded-xl bg-[#111827] border border-[#A3E635]/30/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-red-500 flex items-center justify-center">
                                                 <i className="fas fa-signal text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Estado</p>
-                                            <p className="text-[13px] font-extrabold text-[#111827]">Error</p>
+                                            <p className="text-[13px] font-extrabold text-white">Error</p>
                                         </div>
                                     </div>
 

@@ -70,7 +70,7 @@ const Condiciones = () => {
                                 />
                                 <h1 className="mt-5 text-2xl font-black leading-tight tracking-tight sm:text-3xl">
                                     Terminos y
-                                    <span className="block text-[#111827]">Condiciones</span>
+                                    <span className="block text-white">Condiciones</span>
                                 </h1>
 
                                 <p className="mt-4 max-w-xl text-sm leading-6 text-blue-50 sm:text-base">

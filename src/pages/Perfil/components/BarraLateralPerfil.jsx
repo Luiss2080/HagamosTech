@@ -87,7 +87,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                                     <i className={`fas ${item.icon} text-[10px]`}></i>
                                 </div>
                                 <div className="truncate">
-                                    <p className={`font-black text-[11px] leading-tight ${isActive ? 'text-[#111827]' : 'text-white'}`}>{item.label}</p>
+                                    <p className={`font-black text-[11px] leading-tight ${isActive ? 'text-white' : 'text-white'}`}>{item.label}</p>
                                     <p className={`text-[7px] font-bold uppercase tracking-wider mt-0.5 ${isActive ? 'text-[#A3E635]' : 'text-white/50'}`}>{item.sub.substring(0, 24)}</p>
                                 </div>
                             </Link>

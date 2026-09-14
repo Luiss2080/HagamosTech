@@ -315,7 +315,7 @@ const handleRegenerateQR = async () => {
                                 <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-user-shield text-sm"></i>
                                 </span>
-                                <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Iniciar Sesión</h3>
+                                <h3 className="text-2xl font-black font-heading text-white tracking-tight">Iniciar Sesión</h3>
                             </div>
                             <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Accede a tu panel HAGAMOSTECH</p>
                         </div>
@@ -327,21 +327,21 @@ const handleRegenerateQR = async () => {
                                     <i className="fas fa-box-open text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                <p className="text-[13px] font-extrabold text-[#111827]">Catalogo</p>
+                                <p className="text-[13px] font-extrabold text-white">Catalogo</p>
                             </div>
                             <div className="rounded-xl bg-[#111827] border border-white/10 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-receipt text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                <p className="text-[13px] font-extrabold text-[#111827]">Pedidos</p>
+                                <p className="text-[13px] font-extrabold text-white">Pedidos</p>
                             </div>
                             <div className="rounded-xl bg-[#111827] border border-[#A3E635]/40 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-white/5 border border-gray-300 text-slate-300 flex items-center justify-center">
                                     <i className="fas fa-signal text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Estado</p>
-                                <p className="text-[13px] font-extrabold text-[#111827]">Activo</p>
+                                <p className="text-[13px] font-extrabold text-white">Activo</p>
                             </div>
                         </div>
                         )}
@@ -400,7 +400,7 @@ const handleRegenerateQR = async () => {
                                         maxLength="6"
                                         value={codigo2FA}
                                         onChange={(e) => { setCodigo2FA(e.target.value.replace(/\D/g, '')); setFaError(''); }}
-                                        className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
+                                        className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
                                         placeholder="______"
                                         required
                                     />
@@ -440,7 +440,7 @@ const handleRegenerateQR = async () => {
                                                 Escribe el correo de tu cuenta y te enviaremos un enlace para restáablecer tu contraseña.
                                             </p>
                                             <div className="relative group mb-2">
-                                                <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                                <input type="email" value={correoRecuperacion} onChange={(e) => { setCorreoRecuperacion(e.target.value); setRecuperacionError(''); }} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
@@ -469,13 +469,13 @@ const handleRegenerateQR = async () => {
                                 </div>
 
                                 <div className="relative group mb-3">
-                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                    <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                     <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                 </div>
 
                                 <div className="relative group">
-                                    <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                    <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
                                     <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                 </div>

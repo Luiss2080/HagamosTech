@@ -45,7 +45,7 @@ const DerechosUsuarios = () => {
                                     key={i}
                                     onClick={() => setActive(i)}
                                     className={`relative flex items-center gap-3 p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${
-                                        active === i ? 'bg-[#111827] text-[#111827] shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-[#111827] border border-orange-50 hover:bg-[#111827] hover:shadow-md'
+                                        active === i ? 'bg-[#111827] text-white shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-white border border-orange-50 hover:bg-[#111827] hover:shadow-md'
                                     }`}
                                 >
                                     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#A3E635] to-[#84CC16] transition-opacity duration-300" style={{ opacity: active === i ? 1 : 0 }}></div>
@@ -53,7 +53,7 @@ const DerechosUsuarios = () => {
                                         <i className={`fas ${d.icon}`}></i>
                                     </div>
                                     <div>
-                                        <p className={`font-black text-sm ${active === i ? 'text-[#A3E635]' : 'text-[#111827]'}`}>{d.titulo}</p>
+                                        <p className={`font-black text-sm ${active === i ? 'text-[#A3E635]' : 'text-white'}`}>{d.titulo}</p>
                                         <p className={`text-[9px] font-black uppercase tracking-widest ${active === i ? 'text-slate-400' : 'text-gray-400'}`}>
                                             <i className="fas fa-stopwatch text-[#A3E635] mr-1"></i>{d.tiempo}
                                         </p>

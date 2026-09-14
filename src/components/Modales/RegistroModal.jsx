@@ -303,7 +303,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                             <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                                 <i className="fas fa-user-plus text-sm"></i>
                                             </span>
-                                            <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Crear Cuenta</h3>
+                                            <h3 className="text-2xl font-black font-heading text-white tracking-tight">Crear Cuenta</h3>
                                         </div>
                                         <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Registra tu perfil de compra</p>
                                     </div>
@@ -333,7 +333,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                                     maxLength="6"
                                                     value={codigo}
                                                     onChange={(e) => { setCodigo(e.target.value.replace(/\D/g, '')); setVerifError(''); }}
-                                                    className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
+                                                    className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 py-3 text-center text-2xl font-black tracking-[0.5em] text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300"
                                                     placeholder="______"
                                                     required
                                                 />
@@ -377,31 +377,31 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                             </div>
  
                                             <div className="relative group mb-3">
-                                                <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
+                                                <input type="text" name="nombre" value={formData.nombre} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Nombre completo</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-user text-base"></i></div>
                                             </div>
  
                                             <div className="relative group mb-3">
-                                                <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
+                                                <input type="email" name="correo" value={formData.correo} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Correo" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                             </div>
  
                                             <div className="relative group mb-3">
-                                                <input type="tel" name="telefono" value={formData.telefono} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Telefono" required />
+                                                <input type="tel" name="telefono" value={formData.telefono} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Telefono" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Teléfono</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-phone text-base"></i></div>
                                             </div>
  
                                             <div className="relative group mb-3">
-                                                <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
+                                                <input type="password" name="contrasena" value={formData.contrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Password" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Contraseña</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-lock text-base"></i></div>
                                             </div>
  
                                             <div className="relative group">
-                                                <input type="password" name="confirmarContrasena" value={formData.confirmarContrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Confirmar password" required />
+                                                <input type="password" name="confirmarContrasena" value={formData.confirmarContrasena} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-[#111827] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Confirmar password" required />
                                                 <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Confirmar contraseña</label>
                                                 <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-check-double text-base"></i></div>
                                             </div>
