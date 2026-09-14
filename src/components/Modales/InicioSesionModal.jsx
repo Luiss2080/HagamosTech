@@ -327,14 +327,14 @@ const handleRegenerateQR = async () => {
                                     <i className="fas fa-box-open text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                <p className="text-[13px] font-extrabold text-white">Catalogo</p>
+                                <p className="text-[13px] font-extrabold text-white">Web</p>
                             </div>
                             <div className="rounded-xl bg-[#111827] border border-white/10 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                     <i className="fas fa-receipt text-[11px]"></i>
                                 </div>
                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                <p className="text-[13px] font-extrabold text-white">Pedidos</p>
+                                <p className="text-[13px] font-extrabold text-white">Sistemas</p>
                             </div>
                             <div className="rounded-xl bg-[#111827] border border-[#A3E635]/40 px-3 py-2.5 text-center shadow-sm">
                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-white/5 border border-gray-300 text-slate-300 flex items-center justify-center">
