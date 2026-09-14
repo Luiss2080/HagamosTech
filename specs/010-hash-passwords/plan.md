@@ -2,22 +2,22 @@
 
 ## Cambios
 - `server/auth/controllers/AuthController.js`:
-  - Helpers `esHashBcrypt`, `hashearContrasena`, `verificarContrasena` (compat. texto plano).
+  - Helpers `esHashPassword`, `hashearContrasena`, `verificarContrasena` (scrypt + compat. texto plano).
   - `login`: verificación con hash + migración oportunista.
   - `regenerarQR2FA`: comparación con hash.
   - `verificarCorreo`: hashear al crear usuario.
   - `restablecerContrasena`: hashear nueva contraseña.
   - `cambiarPassword`: verificar actual y hashear la nueva.
 - `server/prisma/seed.js`: hash del admin.
-- `server/package.json`: dependencia `bcryptjs`.
 - Test: `server/test/password.test.js`.
 
 ## Decisiones técnicas
-- **`bcryptjs` en vez de `bcrypt`.** Evita compilación nativa y problemas en Windows/CI.
-  _Alternativa descartada: `bcrypt` (binario nativo)._ _Alternativa descartada: `argon2` (misma razón)._
+- **`crypto.scrypt` nativo.** Sin dependencias (npm bloquea nuevas por política) y disponible en Node.
+  _Alternativa descartada: `bcryptjs`/`bcrypt` (403 al instalar)._ _Alternativa descartada: `argon2` (misma razón)._
+- **Formato `scrypt$<salt>$<hash>`.** Autodescriptivo y distinguible del texto plano.
 - **Compatibilidad con texto plano + migración en login.** No rompe cuentas existentes.
   _Alternativa descartada: invalidar contraseñas antiguas (obliga a resetear a todos)._
-- **Coste 10.** Estándar razonable para este tipo de app.
+- **Comparación con `crypto.timingSafeEqual`.** Evita filtrado por tiempo.
 
 ## Estrategia de tests
 - `hashearContrasena` + `verificarContrasena`: hash válido, contraseña incorrecta.
