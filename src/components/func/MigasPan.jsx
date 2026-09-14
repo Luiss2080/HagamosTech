@@ -5,65 +5,11 @@ const getBreadcrumbsAndBadge = (pathname) => {
   if (pathname.includes('/sobre-nosotros')) {
     return { paths: [{ label: 'Sobre Nosotros' }], badgeText: 'Sobre Nosotros — HAGAMOSTECH', icon: 'fa-solid fa-circle-info' };
   }
-  if (pathname.includes('/servicios/delivery')) {
-    return { paths: [{ label: 'Servicios', url: '/servicios/delivery' }, { label: 'Delivery Express' }], badgeText: 'Delivery Express — HAGAMOSTECH', icon: 'fa-solid fa-motorcycle' };
-  }
-  if (pathname.includes('/servicios/mayor')) {
-    return { paths: [{ label: 'Servicios', url: '/servicios/delivery' }, { label: 'Pedidos por Mayor' }], badgeText: 'Pedidos por Mayor — HAGAMOSTECH', icon: 'fa-solid fa-boxes-stacked' };
-  }
-  if (pathname.includes('/servicios/eventos')) {
-    return { paths: [{ label: 'Servicios', url: '/servicios/delivery' }, { label: 'Eventos y Catering' }], badgeText: 'Eventos y Catering — HAGAMOSTECH', icon: 'fa-solid fa-glass-cheers' };
-  }
-  if (pathname.includes('/servicios/corporativo')) {
-    return { paths: [{ label: 'Servicios', url: '/servicios/delivery' }, { label: 'Servicio Corporativo' }], badgeText: 'Servicio Corporativo — HAGAMOSTECH', icon: 'fa-solid fa-building' };
-  }
-  if (pathname.includes('/servicios/congeladas')) {
-    return { paths: [{ label: 'Servicios', url: '/servicios/delivery' }, { label: 'Salteñas Congeladas' }], badgeText: 'Salteñas Congeladas — HAGAMOSTECH', icon: 'fa-solid fa-snowflake' };
-  }
   if (pathname.includes('/contactanos')) {
     return { paths: [{ label: 'Contacto' }], badgeText: 'Contacto Oficial HAGAMOSTECH', icon: 'fa-solid fa-headset' };
   }
-  if (pathname.includes('/sucursales/oruro')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Oruro' }], badgeText: 'Sucursales Oruro — HAGAMOSTECH', icon: 'fa-solid fa-store' };
-  }
-  if (pathname.includes('/sucursales/cochabamba')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Cochabamba' }], badgeText: 'Sucursales Cochabamba — HAGAMOSTECH', icon: 'fa-solid fa-shop' };
-  }
-  if (pathname.includes('/sucursales/santa-cruz/equipetrol')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Santa Cruz', url: '/sucursales/santa-cruz' }, { label: 'Equipetrol' }], badgeText: 'HagamosTech Equipetrol', icon: 'fa-solid fa-store' };
-  }
-  if (pathname.includes('/sucursales/santa-cruz/2do-anillo')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Santa Cruz', url: '/sucursales/santa-cruz' }, { label: '2do Anillo' }], badgeText: 'HagamosTech 2do Anillo', icon: 'fa-solid fa-store' };
-  }
-  if (pathname.includes('/sucursales/santa-cruz/av-pirai')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Santa Cruz', url: '/sucursales/santa-cruz' }, { label: 'Av. Piraí' }], badgeText: 'Salteñas HagamosTech Av. Piraí', icon: 'fa-solid fa-store' };
-  }
-  if (pathname.includes('/sucursales/santa-cruz/cafe-beni')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Santa Cruz', url: '/sucursales/santa-cruz' }, { label: 'Café Beni' }], badgeText: 'HagamosTech Café Beni', icon: 'fa-solid fa-store' };
-  }
-  if (pathname.includes('/sucursales/santa-cruz')) {
-    return { paths: [{ label: 'Sucursales', url: '/sucursales/santa-cruz' }, { label: 'Santa Cruz' }], badgeText: 'Sucursales Santa Cruz — HAGAMOSTECH', icon: 'fa-solid fa-store' };
-  }
   if (pathname.includes('/opiniones')) {
     return { paths: [{ label: 'Opiniones' }], badgeText: 'Opiniones de Clientes HAGAMOSTECH', icon: 'fa-solid fa-comments' };
-  }
-  if (pathname.includes('/menu/saltenas')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Salteñas' }], badgeText: 'Salteñas Artesanales — HAGAMOSTECH', icon: 'fa-solid fa-fire' };
-  }
-  if (pathname.includes('/menu/cafe')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Cafetería' }], badgeText: 'Cafetería de Especialidad — HAGAMOSTECH', icon: 'fa-solid fa-mug-hot' };
-  }
-  if (pathname.includes('/menu/frapuccinos')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Frapuccinos' }], badgeText: 'Frapuccinos Refrescantes — HAGAMOSTECH', icon: 'fa-solid fa-blender' };
-  }
-  if (pathname.includes('/menu/refrescos')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Refrescos' }], badgeText: 'Refrescos Naturales — HAGAMOSTECH', icon: 'fa-solid fa-leaf' };
-  }
-  if (pathname.includes('/menu/postres')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Postres' }], badgeText: 'Postres Caseros — HAGAMOSTECH', icon: 'fa-solid fa-ice-cream' };
-  }
-  if (pathname.includes('/menu/combos')) {
-    return { paths: [{ label: 'Menú', url: '/menu/saltenas' }, { label: 'Combos' }], badgeText: 'Combos Especiales — HAGAMOSTECH', icon: 'fa-solid fa-tags' };
   }
   if (pathname.includes('/promociones')) {
     return { paths: [{ label: 'Promociones' }], badgeText: 'Promociones Oficiales HAGAMOSTECH', icon: 'fa-solid fa-tags' };
@@ -82,9 +28,6 @@ const getBreadcrumbsAndBadge = (pathname) => {
   }
   if (pathname.includes('/cookies')) {
     return { paths: [{ label: 'Cookies' }], badgeText: 'Política de Cookies — HAGAMOSTECH', icon: 'fa-solid fa-cookie-bite' };
-  }
-  if (pathname.includes('/catalogo') && !pathname.includes('/categoria/')) {
-    return { paths: [{ label: 'Catálogo' }], badgeText: 'Catálogo de Productos — HAGAMOSTECH', icon: 'fa-solid fa-shop' };
   }
   if (pathname.includes('/perfil/compras')) {
     return { paths: [{ label: 'Perfil', url: '/perfil' }, { label: 'Mis Compras' }], badgeText: 'Historial de Compras — HAGAMOSTECH', icon: 'fa-solid fa-receipt' };

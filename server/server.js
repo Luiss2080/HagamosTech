@@ -31,21 +31,13 @@ app.use((req, res, next) => {
 });
 
 // --- ESTRUCTURA MVC: IMPORTACIÓN DE RUTAS ---
-const catalogoRoutes = require('./store/routes/catalogoRoutes');
 const authRoutes = require('./auth/routes/authRoutes');
-const pagoRoutes = require('./store/routes/pagoRoutes');
-const carritoRoutes = require('./store/routes/carritoRoutes');
-const compraRoutes = require('./store/routes/compraRoutes');
 const contactoRoutes = require('./store/routes/contactoRoutes');
 const AuthController = require('./auth/controllers/AuthController');
 const cuponRoutes = require('./auth/routes/cuponRoutes');
 
 // --- ESTRUCTURA MVC: REGISTRO DE RUTAS ---
-app.use('/api/catalogo', catalogoRoutes);
 app.use('/api/auth', authRoutes);
-app.use('/api/pagos', pagoRoutes);
-app.use('/api/carrito', carritoRoutes);
-app.use('/api/compras', compraRoutes);
 app.use('/api/contacto', contactoRoutes);
 app.use('/api/cupones-sistema', cuponRoutes);
 
