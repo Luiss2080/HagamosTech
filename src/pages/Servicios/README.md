@@ -1,15 +1,22 @@
 # Servicios - HagamosTech
 
-Páginas de servicios de la salteñería.
+Páginas de servicios de tecnología de HagamosTech. La oferta canónica vive en
+[`src/data/serviciosData.js`](../../data/serviciosData.js) y su espejo documental en
+[`docs/catalogo-servicios.md`](../../../docs/catalogo-servicios.md).
 
-### restaurante/ - Vistas de Servicio
+## Páginas por categoría
 
-| Archivo | Descripción |
-|---------|-------------|
-| `DeliveryExpress.jsx` | Entrega a domicilio: zonas, tiempos y seguimiento |
-| `PedidosPorMayor.jsx` | Ventas al por mayor para revendedores y negocios |
-| `EventosCatering.jsx` | Catering para fiestas, cumpleaños y reuniones |
-| `ServicioCorporativo.jsx` | Desayunos y pedidos recurrentes para empresas |
-| `SaltenasCongeladas.jsx` | Packs para hornear en casa y envíos |
+| Carpeta | Página | Ruta |
+|---------|--------|------|
+| `DesarrolloWeb/` | Páginas Web | `/servicios/desarrollo-web` |
+| `SistemasApps/` | Sistemas y Apps | `/servicios/sistemas-apps` |
+| `Automatizacion/` | Automatización | `/servicios/automatizacion` |
+| `InteligenciaArtificial/` | Inteligencia Artificial | `/servicios/inteligencia-artificial` |
+| `Negocio/` | Soluciones para tu Negocio | `/servicios/para-tu-negocio` |
+| `Academico/` | Apoyo Académico | `/servicios/apoyo-academico` |
+| `Empleo/` | Empleo y Desarrollo Profesional | `/servicios/empleo` |
+| `DisenoGrafico/` | Diseño Gráfico | `/servicios/diseno-grafico` |
 
-Rutas: `/servicios/delivery`, `/servicios/mayor`, `/servicios/eventos`, `/servicios/corporativo`, `/servicios/congeladas`
+Cada categoría cuenta con un componente `Recorrido*` que describe el flujo de trabajo.
+
+> El vertical de restaurante/e-commerce está en retiro (ver `specs/003-*`).

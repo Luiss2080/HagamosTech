@@ -1,111 +1,103 @@
 # HagamosTech
 
-Plataforma web de HagamosTech.
+Plataforma web de **HagamosTech**, agencia de soluciones digitales y tecnológicas.
 
 ## Descripción
 
-HagamosTech es una plataforma web que ofrece:
-- **Pedidos online** de salteñas (pollo, carne, picante, vegetarianas)
-- **Delivery y retiro** en sucursales
-- **Pedidos al por mayor** para eventos y empresas
-- **Gestión de clientes** y panel administrativo completo
+HagamosTech transforma problemas, necesidades e ideas en soluciones reales con tecnología,
+creatividad y un proceso cercano. La oferta se organiza en ocho categorías:
 
-## Estructura del Proyecto
+- **Estudiantes y sector académico**: presentaciones, APA 7, infografías, simuladores, apoyo en programación.
+- **Emprendedores y nuevos negocios**: branding, manual de identidad, menús QR, publicidad, gestión de clientes.
+- **Empleo y desarrollo profesional**: CV ATS, LinkedIn, cartas, portafolios, entrevistas, certificados.
+- **Diseño gráfico integral**: logos, flyers, packaging, tarjetas, retoque fotográfico.
+- **Desarrollo web y e-commerce**: páginas empresariales, landing pages, tiendas online, catálogos/blogs, UI/UX.
+- **Soluciones tecnológicas, software y hardware**: sistemas a medida, bases de datos, DevOps.
+- **Automatización e inteligencia artificial**: integración de IA, automatización de procesos, productividad.
+- **Soluciones personalizadas**: "Contanos tu problema, nosotros vemos cómo hacerlo".
+
+El Catálogo Maestro está en [`docs/catalogo-servicios.md`](docs/catalogo-servicios.md) y su espejo
+de datos canónico en [`src/data/serviciosData.js`](src/data/serviciosData.js).
+
+## Estructura del proyecto
 
 ```
 HAGAMOSTECH/
 ├── src/                    # Frontend React + Vite
-│   ├── components/         # Componentes React
-│   ├── pages/              # Páginas de la app
-│   ├── servicios/          # Servicios API (axios)
+│   ├── app/                # Entrada y rutas
+│   ├── components/         # Layout, modales, UI, fondos
+│   ├── pages/              # Páginas por módulo
 │   ├── store/              # Estado global (Zustand)
-│   └── styles/             # Estilos CSS
-├── server/                 # Backend Node.js + Prisma
-│   ├── server.js           # Punto de entrada (Express)
-│   ├── auth/               # Autenticación: controllers + routes + utils
-│   ├── store/              # API pública (tienda): controllers + routes
+│   ├── servicios/          # Cliente HTTP y servicios de API
+│   ├── data/               # Oferta canónica (serviciosData.js)
+│   └── styles/             # Estilos globales (Tailwind)
+├── server/                 # Backend Node + Express + Prisma
+│   ├── auth/               # Autenticación (controllers, routes, utils)
+│   ├── store/              # API pública y contacto
 │   ├── models/             # Cliente Prisma
 │   └── prisma/             # schema.prisma y seed.js
-├── scripts/                # Scripts de automatización
-│   ├── 01-dev.bat          # Iniciar desarrollo local
-│   └── 02-build.bat        # Build para producción
-├── .env                    # Variables de entorno (desarrollo)
-├── .env.production         # Variables de entorno (producción)
-└── vite.config.js          # Configuración de Vite
+├── docs/                   # Constitución, catálogo, testing, diagnóstico
+├── specs/                  # Especificaciones SDD (spec/plan/tasks)
+├── e2e/                    # Tests end-to-end (Playwright)
+└── vite.config.js
 ```
 
-## Entornos de Trabajo
+## Entornos
 
-### 1. Desarrollo Local
+**Requisitos:** Node.js 18+, MySQL 8.0+ (Laragon/XAMPP), puerto 4000 (frontend) y 3000 (backend) libres.
 
-**Requisitos:**
-- Node.js 18+
-- MySQL 8.0+ (Laragon o XAMPP)
-- Puerto 3000 (backend) y 4000 (frontend) libres
-
-**Iniciar:**
 ```bash
-# Opción 1: Doble clic en scripts/01-dev.bat
-# Opción 2: Manualmente
+# Frontend:  http://localhost:4000
+npm run dev
 
-cd server && npm run dev    # Backend: http://localhost:3000
-cd .. && npm run dev        # Frontend: http://localhost:4000
+# Backend:   http://localhost:3000 (con fallback a 3001/3002 si está ocupado)
+npm run dev:server
+
+# Ambos a la vez
+npm run dev:all
 ```
 
-**Base de datos local:**
-- Base: `HagamosTech`
-- Usuario: `root` (sin password)
-- Host: `localhost:3306`
-- Esquema: `cd server && npx prisma db push`
-- Datos semilla: `cd server && npm run db:seed`
+> **Puerto 3000:** si otro proyecto lo ocupa (p. ej. ParqueoYa), el backend elige el siguiente
+> puerto libre y lo informa por consola. Ver [`docs/diagnostico.md`](docs/diagnostico.md).
 
-### 2. Producción
+**Base de datos:**
 
-**Build:**
 ```bash
-# Doble clic en scripts/02-build.bat
-# O manualmente:
-npm run build   # Usa automáticamente .env.production
+cd server && npx prisma db push     # Sincroniza el esquema
+cd server && npm run db:seed        # Datos semilla
 ```
 
-**URLs:**
-- Frontend: https://hagamostech.bo
-- API: https://hagamostech.bo/api
-
-## Configuración de Entornos
-
-### Frontend (.env vs .env.production)
-
-- **`.env`** → Desarrollo local (usa localhost:3000)
-- **`.env.production`** → Producción (usa servidor real)
-
-Vite automáticamente:
-- `npm run dev` → usa `.env`
-- `npm run build` → usa `.env.production`
-
-### Backend (Node.js + Prisma)
-
-- `server/.env` → MySQL local, puerto 3000
-- `server/.env.production` → MySQL de producción
-
-## Comandos Útiles
+## Comandos
 
 | Comando | Descripción |
 |---------|-------------|
-| `scripts/01-dev.bat` | Inicia frontend + backend en local |
-| `scripts/02-build.bat` | Genera build para producción |
-| `cd server && npx prisma db push` | Sincroniza el esquema con la BD |
-| `cd server && npm run db:seed` | Llena la BD con datos de prueba (auth) |
-| `cd server && npx prisma generate` | Regenera el cliente Prisma |
-| `npm run build` | Build del frontend (usa .env.production) |
+| `npm run dev` | Frontend en desarrollo (`:4000`) |
+| `npm run dev:server` | Backend en desarrollo (`:3000`) |
+| `npm run dev:all` | Frontend + backend |
+| `npm run build` | Build de producción (usa `.env.production`) |
+| `npm run lint` | ESLint |
+| `npm run test:run` | Tests del frontend (una pasada) |
+| `npm run test:coverage` | Cobertura del frontend |
+| `npm run test:e2e` | Tests end-to-end (Playwright) |
+| `cd server && npm run test:run` | Tests del backend |
+
+Más detalle en [`docs/testing.md`](docs/testing.md).
 
 ## Tecnologías
 
-- **Frontend:** React 19, Vite 8, Tailwind CSS v4, Framer Motion
-- **Backend:** Node.js, Express, Prisma ORM
-- **Base de Datos:** MySQL 8.0
-- **Deploy:** FTP manual
+- **Frontend:** React 19, Vite 8, Tailwind CSS 4, Zustand, Framer Motion.
+- **Backend:** Node.js, Express 5, Prisma ORM, MySQL 8.
+- **Tests:** Vitest, Testing Library, Supertest, Playwright.
 
-## Créditos
+## Documentación
+
+- Constitución del proyecto: [`docs/constitution.md`](docs/constitution.md)
+- Catálogo de soluciones: [`docs/catalogo-servicios.md`](docs/catalogo-servicios.md)
+- Testing: [`docs/testing.md`](docs/testing.md)
+- Diagnóstico: [`docs/diagnostico.md`](docs/diagnostico.md)
+- Especificaciones: [`specs/`](specs/)
+- Guía para agentes: [`AGENTS.md`](AGENTS.md)
+
+---
 
 HagamosTech - 2026
