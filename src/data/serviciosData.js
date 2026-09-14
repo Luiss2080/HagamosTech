@@ -692,7 +692,7 @@ export const SERVICIOS_DATA = {
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
                 { icon: 'fa-pen-ruler', label: 'Plan', value: 'A Medida' },
-                { icon: 'fa-cloud', label: 'Cloud', value: 'AWS/Otros' }
+                { icon: 'fa-cloud', label: 'Cloud', value: 'Gestión' }
             ],
             includes: [
                 { icon: 'fa-infinity', label: 'CI/CD' },
@@ -775,7 +775,7 @@ export const SERVICIOS_DATA = {
     personalizado: [
         {
             id: 'modelo-trabajo',
-            name: 'Soluciones a Medida',
+            name: 'Soluciones Personalizadas',
             icon: 'fa-handshake',
             img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60',
             category: 'Exclusivo',

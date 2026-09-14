@@ -30,7 +30,7 @@ const BANCO_CONOCIMIENTO = [
   {
     id: "soluciones_tech",
     keywords: ["tecnologia", "desarrollo", "sistema", "sistemas", "software", "aplicacion", "aplicaciones", "app", "ia", "inteligencia artificial", "automatizacion", "procesos", "base de datos", "bases de datos", "formularios", "gestion"],
-    answer: "Ofrecemos soluciones tecnológicas a medida para personas y empresas:\n\n• **Desarrollo Web & Sistemas:** Portales, landing pages, catálogos en línea y sistemas de gestión.\n• **Automatización de Procesos:** Integración de APIs, chatbots inteligentes y automatización con IA.\n• **Soporte & Cloud:** Configuración de bases de datos y despliegue en la nube."
+    answer: "Ofrecemos soluciones tecnológicas a medida para personas y empresas:\n\n• **Desarrollo Web & Sistemas:** Portales, landing pages, catálogos en línea y sistemas de gestión.\n• **Automatización de Procesos:** Integración de APIs, chatbots inteligentes y automatización con IA.\n• **Soporte & DevOps:** Configuración de bases de datos y soporte tecnológico continuo."
   },
   {
     id: "soluciones_academia",

@@ -22,7 +22,7 @@ const ACCENT_COLORS = [
 ];
 
 const PRIVACY_LEVELS = [
-    { id: 'public', name: 'Público', desc: 'Tu perfil es visible en los rankings del club y otros alumnos pueden ver tus proyectos de robótica.', icon: 'fa-earth-americas', color: 'text-blue-500' },
+    { id: 'public', name: 'Público', desc: 'Tu perfil es visible para otros usuarios y pueden ver tus proyectos y servicios.', icon: 'fa-earth-americas', color: 'text-blue-500' },
     { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio técnico.', icon: 'fa-users', color: 'text-[#c5a059]' },
     { id: 'private', name: 'Privado', desc: 'Nadie puede ver tu perfil. Tus avances académicos y proyectos están completamente ocultos.', icon: 'fa-user-lock', color: 'text-red-500' }
 ];

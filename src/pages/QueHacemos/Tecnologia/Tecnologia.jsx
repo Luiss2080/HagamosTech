@@ -36,7 +36,7 @@ const VERTICALS = [
     tags: ['Node.js', 'MySQL', 'APIs']
   },
   {
-    title: 'Cloud & Automatización',
+    title: 'Soporte & Automatización',
     desc: 'Despliegues serverless y contenedores Docker para escalabilidad infinita y cero caídas.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
     tags: ['AWS', 'Docker', 'Webhooks']

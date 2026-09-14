@@ -27,8 +27,8 @@ const ChatAssistantWindow = () => {
   const fullConversation = [
     { role: 'user', text: 'Hola, tengo un proceso manual que nos toma 5 horas diarias. Ningún sistema de mercado hace exactamente lo que necesito.' },
     { role: 'assistant', text: 'Entendido. ¿El proceso involucra varias plataformas o documentos físicos?' },
-    { role: 'user', text: 'Sí, cruza datos de Excel con un ERP antiguo.' },
-    { role: 'assistant', text: 'Perfecto. Vamos a diseñar un microservicio a medida que lea los Excels, se conecte a la API de tu ERP y automatice ese cruce en 5 segundos. ¿Empezamos?' }
+    { role: 'user', text: 'Sí, cruza datos de Excel con un sistema de facturación antiguo.' },
+    { role: 'assistant', text: 'Perfecto. Vamos a diseñar un microservicio a medida que lea los Excels, se conecte a la API de tu sistema y automatice ese cruce en 5 segundos. ¿Empezamos?' }
   ];
 
   useEffect(() => {

@@ -52,14 +52,14 @@ const TrustedClients = () => {
         {/* Title */}
         <div className="text-center mb-4 px-6">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black text-white leading-none">
-            Clientes y marcas que <span className="text-[#A3E635] relative inline-block">confían en nosotros<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
+            Ejemplos de soluciones que <span className="text-[#A3E635] relative inline-block">construimos<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
           </h2>
         </div>
 
         {/* Description */}
         <div className="text-center max-w-3xl mx-auto mb-10 px-6">
           <p className="text-sm font-semibold text-white/60 leading-relaxed">
-            Trabajamos junto a empresas líderes de diferentes industrias, ayudándolas a innovar, automatizar procesos y alcanzar sus objetivos con tecnología.
+            Tipos de proyectos y sectores donde aplicamos nuestras soluciones: software, automatización, web y diseño.
           </p>
         </div>
 
@@ -89,7 +89,6 @@ const TrustedClients = () => {
           <div className="w-full overflow-hidden px-1">
             <div className="marquee-track-left gap-5 sm:gap-6">
               {marqueeRow1.map((client, idx) => {
-                const Logo = client.logoComponent;
                 const indexNum = String((idx % ROW1.length) + 1).padStart(2, '0');
                 return (
                   <div
@@ -99,7 +98,7 @@ const TrustedClients = () => {
                     {/* Left Column: Larger Floating Logo (no boundary border) */}
                     <div className="w-[33%] h-full flex items-center justify-center flex-shrink-0 filter">
                       <div className="w-full h-full flex items-center justify-center transform scale-[0.82] group-hover:scale-[0.92] transition-transform duration-500">
-                        <Logo />
+                        <i className={`fa-solid ${client.logoIcon} text-4xl text-[#A3E635]`}></i>
                       </div>
                     </div>
 
@@ -157,7 +156,6 @@ const TrustedClients = () => {
           <div className="w-full overflow-hidden px-1">
             <div className="marquee-track-right gap-5 sm:gap-6">
               {marqueeRow2.map((client, idx) => {
-                const Logo = client.logoComponent;
                 const indexNum = String((idx % ROW2.length) + ROW1.length + 1).padStart(2, '0');
                 return (
                   <div
@@ -167,7 +165,7 @@ const TrustedClients = () => {
                     {/* Left Column: Larger Floating Logo (no boundary border) */}
                     <div className="w-[33%] h-full flex items-center justify-center flex-shrink-0 filter">
                       <div className="w-full h-full flex items-center justify-center transform scale-[0.82] group-hover:scale-[0.92] transition-transform duration-500">
-                        <Logo />
+                        <i className={`fa-solid ${client.logoIcon} text-4xl text-[#A3E635]`}></i>
                       </div>
                     </div>
 

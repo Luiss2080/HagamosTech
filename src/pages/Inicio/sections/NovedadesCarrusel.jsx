@@ -20,7 +20,7 @@ const getIconForInclude = (text) => {
   return 'fa-circle-check';
 };
 
-// Datos de Novedades libres de robótica y alineados al contexto
+// Datos de Novedades alineados al Catálogo Maestro
 const noticias = [
   {
     id: 'n1',

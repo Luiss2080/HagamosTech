@@ -174,7 +174,7 @@ const Negocios = () => {
           </h1>
           
           <p className="text-slate-400 text-base md:text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollamos tecnología que reemplaza el trabajo manual. Desde tiendas en línea de conversión extrema hasta sistemas ERPs que manejan tus datos en tiempo real.
+            Desarrollamos tecnología que reemplaza el trabajo manual. Desde tiendas en línea de conversión extrema hasta sistemas de gestión que manejan tus datos en tiempo real.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

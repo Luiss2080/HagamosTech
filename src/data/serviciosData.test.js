@@ -29,8 +29,78 @@ const CONTEOS_ESPERADOS = {
 
 const CAMPOS_OBLIGATORIOS = ['id', 'name', 'icon', 'category', 'shortDesc', 'cta', 'ctaLink'];
 
+// Nombres exactos del Catálogo Maestro (docs/catalogo-servicios.md).
+const NOMBRES_ESPERADOS = {
+  estudiantes: [
+    'Presentaciones PowerPoint e Interactivas',
+    'Formato APA 7 y Documentación Técnica',
+    'Infografías, Diagramas y Líneas de Tiempo',
+    'Mapas Conceptuales y Portadas Académicas',
+    'Simuladores Educativos y Proyectos de Redes',
+    'Apoyo en Proyectos de Programación',
+  ],
+  emprendedores: [
+    'Creación de Marca y Branding Básico',
+    'Manual de Identidad Visual',
+    'Menús QR y Catálogos de Productos',
+    'Publicidad para Promociones y Ofertas',
+    'Publicidad para Fechas Especiales',
+    'Gestión de Clientes Inicial',
+  ],
+  empleo: [
+    'Currículum Profesional y CV Optimizado ATS',
+    'Optimización de Perfil de LinkedIn',
+    'Cartas de Presentación y Traducción de CV',
+    'Portafolios Profesionales Digitales',
+    'Preparación para Entrevistas y Asesoría Laboral',
+    'Certificados Digitales',
+  ],
+  diseno: [
+    'Logos e Identidad Visual (Isologotipos)',
+    'Flyers, Banners, Pancartas y Redes Sociales',
+    'Packaging, Etiquetas y Catálogos Físicos',
+    'Tarjetas de Presentación e Invitaciones',
+    'Edición y Retoque Fotográfico',
+  ],
+  web: [
+    'Páginas Web Empresariales',
+    'Landing Pages y Portafolios Personales',
+    'Tiendas Online Básicas y Sistemas de Pedidos',
+    'Catálogos Digitales Online y Blogs',
+    'Diseño UI/UX, Formularios y Web Responsive',
+  ],
+  software: [
+    'Desarrollo de Sistemas Web y Software',
+    'Diseño y Gestión de Bases de Datos',
+    'Soporte Tecnológico y DevOps',
+  ],
+  ia: [
+    'Integración de Soluciones con Inteligencia Artificial',
+    'Automatización de Procesos Empresariales',
+    'Gestión de Herramientas de Productividad',
+  ],
+  personalizado: ['Soluciones Personalizadas'],
+};
+
 // Términos de un vertical que ya no se ofrece.
-const TERMINOS_PROHIBIDOS = ['salteña', 'salteñería', 'frapuccino', 'cafetería'];
+const TERMINOS_PROHIBIDOS = [
+  'salteña',
+  'salteñería',
+  'frapuccino',
+  'cafetería',
+  'arduino',
+  'lego',
+  'robot builder',
+  'robotics academy',
+  'libros',
+  'tomos',
+  'modo invitado',
+  'primer pedido',
+  'mentoría',
+  'headhunting',
+  'ciberseguridad',
+  'erp',
+];
 
 describe('Integridad de la oferta (serviciosData)', () => {
   it('declara exactamente las 8 categorías del catálogo', () => {

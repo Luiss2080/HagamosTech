@@ -18,7 +18,7 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Analizamos tu negocio, competidores y metas de marketing para estructurar el sitemap óptimo."},
+  {"title":"Planificación","desc":"Analizamos tu negocio, competidores y metas de negocio para estructurar el sitemap óptimo."},
   {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una usabilidad excepcional."},
   {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS para lograr velocidad extrema y SEO óptimo."},
   {"title":"Lanzamiento","desc":"Desplegamos en la nube, optimizamos caché y realizamos indexación en Google."}
