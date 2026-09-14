@@ -707,7 +707,7 @@ export const SERVICIOS_DATA = {
     ia: [
         {
             id: 'integracion-ia',
-            name: 'Integración de IA',
+            name: 'Integración de Soluciones con Inteligencia Artificial',
             icon: 'fa-brain',
             img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&auto=format&fit=crop&q=60',
             category: 'Innovación',
@@ -729,7 +729,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'automatizacion',
-            name: 'Automatización',
+            name: 'Automatización de Procesos Empresariales',
             icon: 'fa-gears',
             img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60',
             category: 'Procesos',
@@ -751,7 +751,7 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'herramientas-productividad',
-            name: 'Herramientas y Entornos',
+            name: 'Gestión de Herramientas de Productividad',
             icon: 'fa-toolbox',
             img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60',
             category: 'Gestión',
