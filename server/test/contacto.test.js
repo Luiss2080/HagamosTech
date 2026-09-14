@@ -1,12 +1,12 @@
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 import express from 'express';
 import request from 'supertest';
-import prismaMock from './helpers/prismaMock.js';
 
 // Reemplaza el cliente real de Prisma por el doble antes de importar la ruta.
 vi.mock('../models/prisma.js', () => import('./helpers/prismaMock.js'));
 
 import contactoRoutes from '../store/routes/contactoRoutes.js';
+import prismaMock from '../models/prisma.js';
 
 const buildApp = () => {
   const app = express();
