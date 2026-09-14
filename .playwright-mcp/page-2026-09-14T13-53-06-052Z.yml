@@ -1,0 +1,1212 @@
+- generic [ref=e82]:
+  - banner [ref=e83]:
+    - generic [ref=e85]:
+      - link "Ir al inicio de HagamosTech" [ref=e86] [cursor=pointer]:
+        - /url: "#/"
+        - img "Logo HagamosTech" [ref=e87]
+      - generic [ref=e88]:
+        - button "Abrir carrito" [ref=e89]:
+          - generic [ref=e90]: 
+        - button "Abrir Menú" [ref=e91]
+      - text:        
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Qué hacemos?
+          - generic: 
+        - generic:
+          - button "Tecnología ":
+            - text: Tecnología
+            - generic: 
+          - button "Academia ":
+            - text: Academia
+            - generic: 
+          - button "Negocios ":
+            - text: Negocios
+            - generic: 
+          - button "Soluciones personalizadas ":
+            - text: Soluciones personalizadas
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Servicios
+          - generic: 
+        - generic:
+          - button "Desarrollo Web ":
+            - text: Desarrollo Web
+            - generic: 
+          - button "Sistemas y Apps ":
+            - text: Sistemas y Apps
+            - generic: 
+          - button "Automatización ":
+            - text: Automatización
+            - generic: 
+          - button "Inteligencia Artificial ":
+            - text: Inteligencia Artificial
+            - generic: 
+          - button "Para tu Negocio ":
+            - text: Para tu Negocio
+            - generic: 
+          - button "Apoyo Académico ":
+            - text: Apoyo Académico
+            - generic: 
+          - button "Empleo ":
+            - text: Empleo
+            - generic: 
+          - button "Diseño Gráfico ":
+            - text: Diseño Gráfico
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Para quién?
+          - generic: 
+        - generic:
+          - button "Estudiantes ":
+            - text: Estudiantes
+            - generic: 
+          - button "Emprendedores ":
+            - text: Emprendedores
+            - generic: 
+          - button "Pequeños negocios ":
+            - text: Pequeños negocios
+            - generic: 
+          - button "Empresas ":
+            - text: Empresas
+            - generic: 
+          - button "Personas particulares ":
+            - text: Personas particulares
+            - generic: 
+      - button " Cómo trabajamos ":
+        - generic:
+          - generic: 
+          - text: Cómo trabajamos
+        - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Sobre Nosotros
+          - generic: 
+        - generic:
+          - button "Nuestra historia ":
+            - text: Nuestra historia
+            - generic: 
+          - button "Misión y Visión ":
+            - text: Misión y Visión
+            - generic: 
+          - button "Personalidad y Valores ":
+            - text: Personalidad y Valores
+            - generic: 
+          - button "¿Para quién? ":
+            - text: ¿Para quién?
+            - generic: 
+      - button " Contactanos ":
+        - generic:
+          - generic: 
+          - text: Contactanos
+        - generic: 
+    - generic:
+      - button " Iniciar Sesion":
+        - generic: 
+        - generic: Iniciar Sesion
+      - button " Crear Cuenta":
+        - generic:
+          - generic: 
+          - text: Crear Cuenta
+  - main [ref=e94]:
+    - generic [ref=e2096]:
+      - generic [ref=e2098]:
+        - generic [ref=e2100]:
+          - generic [ref=e2101]: 
+          - text: Páginas Web Profesionales — HagamosTech
+        - generic [ref=e2102]:
+          - generic [ref=e2103]:
+            - heading "Desarrollo Web y E-commerce premium." [level=1] [ref=e2104]:
+              - generic [ref=e2105]: Desarrollo Web
+              - generic [ref=e2106]:
+                - text: y E-commerce
+                - generic [ref=e2107]: premium.
+            - paragraph [ref=e2110]: Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
+            - generic [ref=e2111]:
+              - link " Cotizar Servicio " [ref=e2112] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web
+                - generic [ref=e2113]: 
+                - generic [ref=e2114]: Cotizar Servicio
+                - generic [ref=e2115]: 
+              - link " Contactar Asesor " [ref=e2117] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web
+                - generic [ref=e2118]: 
+                - generic [ref=e2119]: Contactar Asesor
+                - generic [ref=e2120]: 
+            - generic [ref=e2122]:
+              - generic [ref=e2123]:
+                - generic [ref=e2124]: 
+                - generic [ref=e2125]: 
+                - generic [ref=e2126]: 
+                - generic [ref=e2127]: 
+                - generic [ref=e2128]: 
+              - generic [ref=e2129]: +500 estudiantes y clientes confían en HagamosTech
+            - generic [ref=e2130]:
+              - generic [ref=e2131]: 
+              - generic [ref=e2132]: Pago único o por fases + Mantenimiento mensual
+          - generic [ref=e2133]:
+            - img "Desarrollo Web" [ref=e2136]
+            - link " Conecta con TikTok" [ref=e2137] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@hagamostech
+              - generic [ref=e2139]:
+                - generic [ref=e2140]: 
+                - generic [ref=e2142]:
+                  - paragraph [ref=e2143]: Conecta con
+                  - paragraph [ref=e2144]: TikTok
+            - link " Conecta con YouTube" [ref=e2145] [cursor=pointer]:
+              - /url: https://www.youtube.com/@hagamostech
+              - generic [ref=e2147]:
+                - generic [ref=e2148]: 
+                - generic [ref=e2150]:
+                  - paragraph [ref=e2151]: Conecta con
+                  - paragraph [ref=e2152]: YouTube
+            - link " Conecta con Facebook" [ref=e2153] [cursor=pointer]:
+              - /url: https://www.facebook.com/HagamosTech
+              - generic [ref=e2155]:
+                - generic [ref=e2156]: 
+                - generic [ref=e2158]:
+                  - paragraph [ref=e2159]: Conecta con
+                  - paragraph [ref=e2160]: Facebook
+            - link " Conecta con Instagram" [ref=e2161] [cursor=pointer]:
+              - /url: https://www.instagram.com/hagamostech/
+              - generic [ref=e2163]:
+                - generic [ref=e2164]: 
+                - generic [ref=e2166]:
+                  - paragraph [ref=e2167]: Conecta con
+                  - paragraph [ref=e2168]: Instagram
+      - generic [ref=e2170]:
+        - heading [level=2] [ref=e2172]:
+          - text: Clientes y marcas que
+          - generic [ref=e2173]: confían en nosotros
+        - paragraph [ref=e2177]: Trabajamos junto a empresas líderes de diferentes industrias, ayudándolas a innovar, automatizar procesos y alcanzar sus objetivos con tecnología.
+        - generic [ref=e2178]:
+          - button [ref=e2179]
+          - button [ref=e2182]
+          - button [ref=e2185]
+          - button [ref=e2188]
+          - generic [ref=e2192]:
+            - generic [ref=e2200]:
+              - generic [ref=e2201]:
+                - generic [ref=e2202]:
+                  - generic [ref=e2203]: "01"
+                  - heading "Shougang" [level=4] [ref=e2204]
+                - generic [ref=e2205]:
+                  - generic [ref=e2206]: 
+                  - generic [ref=e2207]: Logística y Transporte
+                - generic [ref=e2208]:
+                  - generic [ref=e2209]:
+                    - generic [ref=e2210]: 
+                    - generic [ref=e2211]: 
+                    - generic [ref=e2212]: 
+                    - generic [ref=e2213]: 
+                    - generic [ref=e2214]: 
+                  - generic [ref=e2215]: "Eficiencia: +94%"
+              - button "Ver detalles " [ref=e2216] [cursor=pointer]:
+                - generic [ref=e2217]: Ver detalles
+                - generic [ref=e2218]: 
+            - generic [ref=e2225]:
+              - generic [ref=e2226]:
+                - generic [ref=e2227]:
+                  - generic [ref=e2228]: "02"
+                  - heading "Arca Continental" [level=4] [ref=e2229]
+                - generic [ref=e2230]:
+                  - generic [ref=e2231]: 
+                  - generic [ref=e2232]: Manufactura y Distribuciín
+                - generic [ref=e2233]:
+                  - generic [ref=e2234]:
+                    - generic [ref=e2235]: 
+                    - generic [ref=e2236]: 
+                    - generic [ref=e2237]: 
+                    - generic [ref=e2238]: 
+                    - generic [ref=e2239]: 
+                  - generic [ref=e2240]: "Despliegue: 100%"
+              - button "Ver detalles " [ref=e2241] [cursor=pointer]:
+                - generic [ref=e2242]: Ver detalles
+                - generic [ref=e2243]: 
+            - generic [ref=e2252]:
+              - generic [ref=e2253]:
+                - generic [ref=e2254]:
+                  - generic [ref=e2255]: "03"
+                  - heading "Urbano" [level=4] [ref=e2256]
+                - generic [ref=e2257]:
+                  - generic [ref=e2258]: 
+                  - generic [ref=e2259]: Tecnología / Movilidad
+                - generic [ref=e2260]:
+                  - generic [ref=e2261]:
+                    - generic [ref=e2262]: 
+                    - generic [ref=e2263]: 
+                    - generic [ref=e2264]: 
+                    - generic [ref=e2265]: 
+                    - generic [ref=e2266]: 
+                  - generic [ref=e2267]: "Envíos: +98%"
+              - button "Ver detalles " [ref=e2268] [cursor=pointer]:
+                - generic [ref=e2269]: Ver detalles
+                - generic [ref=e2270]: 
+            - generic [ref=e2278]:
+              - generic [ref=e2279]:
+                - generic [ref=e2280]:
+                  - generic [ref=e2281]: "04"
+                  - heading "Texfina" [level=4] [ref=e2282]
+                - generic [ref=e2283]:
+                  - generic [ref=e2284]: 
+                  - generic [ref=e2285]: Corporativo
+                - generic [ref=e2286]:
+                  - generic [ref=e2287]:
+                    - generic [ref=e2288]: 
+                    - generic [ref=e2289]: 
+                    - generic [ref=e2290]: 
+                    - generic [ref=e2291]: 
+                    - generic [ref=e2292]: 
+                  - generic [ref=e2293]: "Procesos: +95%"
+              - button "Ver detalles " [ref=e2294] [cursor=pointer]:
+                - generic [ref=e2295]: Ver detalles
+                - generic [ref=e2296]: 
+            - generic [ref=e2297]:
+              - img [ref=e2300]:
+                - generic [ref=e2302]: TL
+              - generic [ref=e2304]:
+                - generic [ref=e2305]:
+                  - generic [ref=e2306]:
+                    - generic [ref=e2307]: "05"
+                    - heading "Tai Loy" [level=4] [ref=e2308]
+                  - generic [ref=e2309]:
+                    - generic [ref=e2310]: 
+                    - generic [ref=e2311]: E-commerce
+                  - generic [ref=e2312]:
+                    - generic [ref=e2313]:
+                      - generic [ref=e2314]: 
+                      - generic [ref=e2315]: 
+                      - generic [ref=e2316]: 
+                      - generic [ref=e2317]: 
+                      - generic [ref=e2318]: 
+                    - generic [ref=e2319]: "Ventas: +120%"
+                - button "Ver detalles " [ref=e2320] [cursor=pointer]:
+                  - generic [ref=e2321]: Ver detalles
+                  - generic [ref=e2322]: 
+            - generic [ref=e2330]:
+              - generic [ref=e2331]:
+                - generic [ref=e2332]:
+                  - generic [ref=e2333]: "06"
+                  - heading "Rintisa" [level=4] [ref=e2334]
+                - generic [ref=e2335]:
+                  - generic [ref=e2336]: 
+                  - generic [ref=e2337]: Fintech
+                - generic [ref=e2338]:
+                  - generic [ref=e2339]:
+                    - generic [ref=e2340]: 
+                    - generic [ref=e2341]: 
+                    - generic [ref=e2342]: 
+                    - generic [ref=e2343]: 
+                    - generic [ref=e2344]: 
+                  - generic [ref=e2345]: "Seguridad: 100%"
+              - button "Ver detalles " [ref=e2346] [cursor=pointer]:
+                - generic [ref=e2347]: Ver detalles
+                - generic [ref=e2348]: 
+            - generic [ref=e2356]:
+              - generic [ref=e2357]:
+                - generic [ref=e2358]:
+                  - generic [ref=e2359]: "01"
+                  - heading "Shougang" [level=4] [ref=e2360]
+                - generic [ref=e2361]:
+                  - generic [ref=e2362]: 
+                  - generic [ref=e2363]: Logística y Transporte
+                - generic [ref=e2364]:
+                  - generic [ref=e2365]:
+                    - generic [ref=e2366]: 
+                    - generic [ref=e2367]: 
+                    - generic [ref=e2368]: 
+                    - generic [ref=e2369]: 
+                    - generic [ref=e2370]: 
+                  - generic [ref=e2371]: "Eficiencia: +94%"
+              - button "Ver detalles " [ref=e2372] [cursor=pointer]:
+                - generic [ref=e2373]: Ver detalles
+                - generic [ref=e2374]: 
+            - generic [ref=e2381]:
+              - generic [ref=e2382]:
+                - generic [ref=e2383]:
+                  - generic [ref=e2384]: "02"
+                  - heading "Arca Continental" [level=4] [ref=e2385]
+                - generic [ref=e2386]:
+                  - generic [ref=e2387]: 
+                  - generic [ref=e2388]: Manufactura y Distribuciín
+                - generic [ref=e2389]:
+                  - generic [ref=e2390]:
+                    - generic [ref=e2391]: 
+                    - generic [ref=e2392]: 
+                    - generic [ref=e2393]: 
+                    - generic [ref=e2394]: 
+                    - generic [ref=e2395]: 
+                  - generic [ref=e2396]: "Despliegue: 100%"
+              - button "Ver detalles " [ref=e2397] [cursor=pointer]:
+                - generic [ref=e2398]: Ver detalles
+                - generic [ref=e2399]: 
+            - generic [ref=e2408]:
+              - generic [ref=e2409]:
+                - generic [ref=e2410]:
+                  - generic [ref=e2411]: "03"
+                  - heading "Urbano" [level=4] [ref=e2412]
+                - generic [ref=e2413]:
+                  - generic [ref=e2414]: 
+                  - generic [ref=e2415]: Tecnología / Movilidad
+                - generic [ref=e2416]:
+                  - generic [ref=e2417]:
+                    - generic [ref=e2418]: 
+                    - generic [ref=e2419]: 
+                    - generic [ref=e2420]: 
+                    - generic [ref=e2421]: 
+                    - generic [ref=e2422]: 
+                  - generic [ref=e2423]: "Envíos: +98%"
+              - button "Ver detalles " [ref=e2424] [cursor=pointer]:
+                - generic [ref=e2425]: Ver detalles
+                - generic [ref=e2426]: 
+            - generic [ref=e2434]:
+              - generic [ref=e2435]:
+                - generic [ref=e2436]:
+                  - generic [ref=e2437]: "04"
+                  - heading "Texfina" [level=4] [ref=e2438]
+                - generic [ref=e2439]:
+                  - generic [ref=e2440]: 
+                  - generic [ref=e2441]: Corporativo
+                - generic [ref=e2442]:
+                  - generic [ref=e2443]:
+                    - generic [ref=e2444]: 
+                    - generic [ref=e2445]: 
+                    - generic [ref=e2446]: 
+                    - generic [ref=e2447]: 
+                    - generic [ref=e2448]: 
+                  - generic [ref=e2449]: "Procesos: +95%"
+              - button "Ver detalles " [ref=e2450] [cursor=pointer]:
+                - generic [ref=e2451]: Ver detalles
+                - generic [ref=e2452]: 
+            - generic [ref=e2453]:
+              - img [ref=e2456]:
+                - generic [ref=e2458]: TL
+              - generic [ref=e2460]:
+                - generic [ref=e2461]:
+                  - generic [ref=e2462]:
+                    - generic [ref=e2463]: "05"
+                    - heading "Tai Loy" [level=4] [ref=e2464]
+                  - generic [ref=e2465]:
+                    - generic [ref=e2466]: 
+                    - generic [ref=e2467]: E-commerce
+                  - generic [ref=e2468]:
+                    - generic [ref=e2469]:
+                      - generic [ref=e2470]: 
+                      - generic [ref=e2471]: 
+                      - generic [ref=e2472]: 
+                      - generic [ref=e2473]: 
+                      - generic [ref=e2474]: 
+                    - generic [ref=e2475]: "Ventas: +120%"
+                - button "Ver detalles " [ref=e2476] [cursor=pointer]:
+                  - generic [ref=e2477]: Ver detalles
+                  - generic [ref=e2478]: 
+            - generic [ref=e2486]:
+              - generic [ref=e2487]:
+                - generic [ref=e2488]:
+                  - generic [ref=e2489]: "06"
+                  - heading "Rintisa" [level=4] [ref=e2490]
+                - generic [ref=e2491]:
+                  - generic [ref=e2492]: 
+                  - generic [ref=e2493]: Fintech
+                - generic [ref=e2494]:
+                  - generic [ref=e2495]:
+                    - generic [ref=e2496]: 
+                    - generic [ref=e2497]: 
+                    - generic [ref=e2498]: 
+                    - generic [ref=e2499]: 
+                    - generic [ref=e2500]: 
+                  - generic [ref=e2501]: "Seguridad: 100%"
+              - button "Ver detalles " [ref=e2502] [cursor=pointer]:
+                - generic [ref=e2503]: Ver detalles
+                - generic [ref=e2504]: 
+            - generic [ref=e2512]:
+              - generic [ref=e2513]:
+                - generic [ref=e2514]:
+                  - generic [ref=e2515]: "01"
+                  - heading "Shougang" [level=4] [ref=e2516]
+                - generic [ref=e2517]:
+                  - generic [ref=e2518]: 
+                  - generic [ref=e2519]: Logística y Transporte
+                - generic [ref=e2520]:
+                  - generic [ref=e2521]:
+                    - generic [ref=e2522]: 
+                    - generic [ref=e2523]: 
+                    - generic [ref=e2524]: 
+                    - generic [ref=e2525]: 
+                    - generic [ref=e2526]: 
+                  - generic [ref=e2527]: "Eficiencia: +94%"
+              - button "Ver detalles " [ref=e2528] [cursor=pointer]:
+                - generic [ref=e2529]: Ver detalles
+                - generic [ref=e2530]: 
+            - generic [ref=e2537]:
+              - generic [ref=e2538]:
+                - generic [ref=e2539]:
+                  - generic [ref=e2540]: "02"
+                  - heading "Arca Continental" [level=4] [ref=e2541]
+                - generic [ref=e2542]:
+                  - generic [ref=e2543]: 
+                  - generic [ref=e2544]: Manufactura y Distribuciín
+                - generic [ref=e2545]:
+                  - generic [ref=e2546]:
+                    - generic [ref=e2547]: 
+                    - generic [ref=e2548]: 
+                    - generic [ref=e2549]: 
+                    - generic [ref=e2550]: 
+                    - generic [ref=e2551]: 
+                  - generic [ref=e2552]: "Despliegue: 100%"
+              - button "Ver detalles " [ref=e2553] [cursor=pointer]:
+                - generic [ref=e2554]: Ver detalles
+                - generic [ref=e2555]: 
+            - generic [ref=e2564]:
+              - generic [ref=e2565]:
+                - generic [ref=e2566]:
+                  - generic [ref=e2567]: "03"
+                  - heading "Urbano" [level=4] [ref=e2568]
+                - generic [ref=e2569]:
+                  - generic [ref=e2570]: 
+                  - generic [ref=e2571]: Tecnología / Movilidad
+                - generic [ref=e2572]:
+                  - generic [ref=e2573]:
+                    - generic [ref=e2574]: 
+                    - generic [ref=e2575]: 
+                    - generic [ref=e2576]: 
+                    - generic [ref=e2577]: 
+                    - generic [ref=e2578]: 
+                  - generic [ref=e2579]: "Envíos: +98%"
+              - button "Ver detalles " [ref=e2580] [cursor=pointer]:
+                - generic [ref=e2581]: Ver detalles
+                - generic [ref=e2582]: 
+            - generic [ref=e2590]:
+              - generic [ref=e2591]:
+                - generic [ref=e2592]:
+                  - generic [ref=e2593]: "04"
+                  - heading "Texfina" [level=4] [ref=e2594]
+                - generic [ref=e2595]:
+                  - generic [ref=e2596]: 
+                  - generic [ref=e2597]: Corporativo
+                - generic [ref=e2598]:
+                  - generic [ref=e2599]:
+                    - generic [ref=e2600]: 
+                    - generic [ref=e2601]: 
+                    - generic [ref=e2602]: 
+                    - generic [ref=e2603]: 
+                    - generic [ref=e2604]: 
+                  - generic [ref=e2605]: "Procesos: +95%"
+              - button "Ver detalles " [ref=e2606] [cursor=pointer]:
+                - generic [ref=e2607]: Ver detalles
+                - generic [ref=e2608]: 
+            - generic [ref=e2609]:
+              - img [ref=e2612]:
+                - generic [ref=e2614]: TL
+              - generic [ref=e2616]:
+                - generic [ref=e2617]:
+                  - generic [ref=e2618]:
+                    - generic [ref=e2619]: "05"
+                    - heading "Tai Loy" [level=4] [ref=e2620]
+                  - generic [ref=e2621]:
+                    - generic [ref=e2622]: 
+                    - generic [ref=e2623]: E-commerce
+                  - generic [ref=e2624]:
+                    - generic [ref=e2625]:
+                      - generic [ref=e2626]: 
+                      - generic [ref=e2627]: 
+                      - generic [ref=e2628]: 
+                      - generic [ref=e2629]: 
+                      - generic [ref=e2630]: 
+                    - generic [ref=e2631]: "Ventas: +120%"
+                - button "Ver detalles " [ref=e2632] [cursor=pointer]:
+                  - generic [ref=e2633]: Ver detalles
+                  - generic [ref=e2634]: 
+            - generic [ref=e2642]:
+              - generic [ref=e2643]:
+                - generic [ref=e2644]:
+                  - generic [ref=e2645]: "06"
+                  - heading "Rintisa" [level=4] [ref=e2646]
+                - generic [ref=e2647]:
+                  - generic [ref=e2648]: 
+                  - generic [ref=e2649]: Fintech
+                - generic [ref=e2650]:
+                  - generic [ref=e2651]:
+                    - generic [ref=e2652]: 
+                    - generic [ref=e2653]: 
+                    - generic [ref=e2654]: 
+                    - generic [ref=e2655]: 
+                    - generic [ref=e2656]: 
+                  - generic [ref=e2657]: "Seguridad: 100%"
+              - button "Ver detalles " [ref=e2658] [cursor=pointer]:
+                - generic [ref=e2659]: Ver detalles
+                - generic [ref=e2660]: 
+          - generic [ref=e2662]:
+            - generic [ref=e2670]:
+              - generic [ref=e2671]:
+                - generic [ref=e2672]:
+                  - generic [ref=e2673]: "07"
+                  - heading "Auna" [level=4] [ref=e2674]
+                - generic [ref=e2675]:
+                  - generic [ref=e2676]: 
+                  - generic [ref=e2677]: Salud
+                - generic [ref=e2678]:
+                  - generic [ref=e2679]:
+                    - generic [ref=e2680]: 
+                    - generic [ref=e2681]: 
+                    - generic [ref=e2682]: 
+                    - generic [ref=e2683]: 
+                    - generic [ref=e2684]: 
+                  - generic [ref=e2685]: "Atenciín: +99%"
+              - button "Ver detalles " [ref=e2686] [cursor=pointer]:
+                - generic [ref=e2687]: Ver detalles
+                - generic [ref=e2688]: 
+            - generic [ref=e2696]:
+              - generic [ref=e2697]:
+                - generic [ref=e2698]:
+                  - generic [ref=e2699]: "08"
+                  - heading "BSF Almacenes" [level=4] [ref=e2700]
+                - generic [ref=e2701]:
+                  - generic [ref=e2702]: 
+                  - generic [ref=e2703]: Corporativo
+                - generic [ref=e2704]:
+                  - generic [ref=e2705]:
+                    - generic [ref=e2706]: 
+                    - generic [ref=e2707]: 
+                    - generic [ref=e2708]: 
+                    - generic [ref=e2709]: 
+                    - generic [ref=e2710]: 
+                  - generic [ref=e2711]: "Capacidad: +96%"
+              - button "Ver detalles " [ref=e2712] [cursor=pointer]:
+                - generic [ref=e2713]: Ver detalles
+                - generic [ref=e2714]: 
+            - generic [ref=e2722]:
+              - generic [ref=e2723]:
+                - generic [ref=e2724]:
+                  - generic [ref=e2725]: "09"
+                  - heading "Daryza" [level=4] [ref=e2726]
+                - generic [ref=e2727]:
+                  - generic [ref=e2728]: 
+                  - generic [ref=e2729]: Consultoría
+                - generic [ref=e2730]:
+                  - generic [ref=e2731]:
+                    - generic [ref=e2732]: 
+                    - generic [ref=e2733]: 
+                    - generic [ref=e2734]: 
+                    - generic [ref=e2735]: 
+                    - generic [ref=e2736]: 
+                  - generic [ref=e2737]: "Retorno: +93%"
+              - button "Ver detalles " [ref=e2738] [cursor=pointer]:
+                - generic [ref=e2739]: Ver detalles
+                - generic [ref=e2740]: 
+            - generic [ref=e2741]:
+              - img [ref=e2744]:
+                - generic [ref=e2746]: E
+              - generic [ref=e2748]:
+                - generic [ref=e2749]:
+                  - generic [ref=e2750]:
+                    - generic [ref=e2751]: "10"
+                    - heading "Grupo Efe" [level=4] [ref=e2752]
+                  - generic [ref=e2753]:
+                    - generic [ref=e2754]: 
+                    - generic [ref=e2755]: Tecnología
+                  - generic [ref=e2756]:
+                    - generic [ref=e2757]:
+                      - generic [ref=e2758]: 
+                      - generic [ref=e2759]: 
+                      - generic [ref=e2760]: 
+                      - generic [ref=e2761]: 
+                      - generic [ref=e2762]: 
+                    - generic [ref=e2763]: "Sistemas: +97%"
+                - button "Ver detalles " [ref=e2764] [cursor=pointer]:
+                  - generic [ref=e2765]: Ver detalles
+                  - generic [ref=e2766]: 
+            - generic [ref=e2767]:
+              - img [ref=e2770]:
+                - generic [ref=e2772]: "N"
+              - generic [ref=e2774]:
+                - generic [ref=e2775]:
+                  - generic [ref=e2776]:
+                    - generic [ref=e2777]: "11"
+                    - heading "Nexa" [level=4] [ref=e2778]
+                  - generic [ref=e2779]:
+                    - generic [ref=e2780]: 
+                    - generic [ref=e2781]: TI y Consultoría
+                  - generic [ref=e2782]:
+                    - generic [ref=e2783]:
+                      - generic [ref=e2784]: 
+                      - generic [ref=e2785]: 
+                      - generic [ref=e2786]: 
+                      - generic [ref=e2787]: 
+                      - generic [ref=e2788]: 
+                    - generic [ref=e2789]: "Uptime: 99.9%"
+                - button "Ver detalles " [ref=e2790] [cursor=pointer]:
+                  - generic [ref=e2791]: Ver detalles
+                  - generic [ref=e2792]: 
+            - generic [ref=e2800]:
+              - generic [ref=e2801]:
+                - generic [ref=e2802]:
+                  - generic [ref=e2803]: "12"
+                  - heading "Colso" [level=4] [ref=e2804]
+                - generic [ref=e2805]:
+                  - generic [ref=e2806]: 
+                  - generic [ref=e2807]: Logística
+                - generic [ref=e2808]:
+                  - generic [ref=e2809]:
+                    - generic [ref=e2810]: 
+                    - generic [ref=e2811]: 
+                    - generic [ref=e2812]: 
+                    - generic [ref=e2813]: 
+                    - generic [ref=e2814]: 
+                  - generic [ref=e2815]: "Tiempos: -24%"
+              - button "Ver detalles " [ref=e2816] [cursor=pointer]:
+                - generic [ref=e2817]: Ver detalles
+                - generic [ref=e2818]: 
+            - generic [ref=e2826]:
+              - generic [ref=e2827]:
+                - generic [ref=e2828]:
+                  - generic [ref=e2829]: "07"
+                  - heading "Auna" [level=4] [ref=e2830]
+                - generic [ref=e2831]:
+                  - generic [ref=e2832]: 
+                  - generic [ref=e2833]: Salud
+                - generic [ref=e2834]:
+                  - generic [ref=e2835]:
+                    - generic [ref=e2836]: 
+                    - generic [ref=e2837]: 
+                    - generic [ref=e2838]: 
+                    - generic [ref=e2839]: 
+                    - generic [ref=e2840]: 
+                  - generic [ref=e2841]: "Atenciín: +99%"
+              - button "Ver detalles " [ref=e2842] [cursor=pointer]:
+                - generic [ref=e2843]: Ver detalles
+                - generic [ref=e2844]: 
+            - generic [ref=e2852]:
+              - generic [ref=e2853]:
+                - generic [ref=e2854]:
+                  - generic [ref=e2855]: "08"
+                  - heading "BSF Almacenes" [level=4] [ref=e2856]
+                - generic [ref=e2857]:
+                  - generic [ref=e2858]: 
+                  - generic [ref=e2859]: Corporativo
+                - generic [ref=e2860]:
+                  - generic [ref=e2861]:
+                    - generic [ref=e2862]: 
+                    - generic [ref=e2863]: 
+                    - generic [ref=e2864]: 
+                    - generic [ref=e2865]: 
+                    - generic [ref=e2866]: 
+                  - generic [ref=e2867]: "Capacidad: +96%"
+              - button "Ver detalles " [ref=e2868] [cursor=pointer]:
+                - generic [ref=e2869]: Ver detalles
+                - generic [ref=e2870]: 
+            - generic [ref=e2878]:
+              - generic [ref=e2879]:
+                - generic [ref=e2880]:
+                  - generic [ref=e2881]: "09"
+                  - heading "Daryza" [level=4] [ref=e2882]
+                - generic [ref=e2883]:
+                  - generic [ref=e2884]: 
+                  - generic [ref=e2885]: Consultoría
+                - generic [ref=e2886]:
+                  - generic [ref=e2887]:
+                    - generic [ref=e2888]: 
+                    - generic [ref=e2889]: 
+                    - generic [ref=e2890]: 
+                    - generic [ref=e2891]: 
+                    - generic [ref=e2892]: 
+                  - generic [ref=e2893]: "Retorno: +93%"
+              - button "Ver detalles " [ref=e2894] [cursor=pointer]:
+                - generic [ref=e2895]: Ver detalles
+                - generic [ref=e2896]: 
+            - generic [ref=e2897]:
+              - img [ref=e2900]:
+                - generic [ref=e2902]: E
+              - generic [ref=e2904]:
+                - generic [ref=e2905]:
+                  - generic [ref=e2906]:
+                    - generic [ref=e2907]: "10"
+                    - heading "Grupo Efe" [level=4] [ref=e2908]
+                  - generic [ref=e2909]:
+                    - generic [ref=e2910]: 
+                    - generic [ref=e2911]: Tecnología
+                  - generic [ref=e2912]:
+                    - generic [ref=e2913]:
+                      - generic [ref=e2914]: 
+                      - generic [ref=e2915]: 
+                      - generic [ref=e2916]: 
+                      - generic [ref=e2917]: 
+                      - generic [ref=e2918]: 
+                    - generic [ref=e2919]: "Sistemas: +97%"
+                - button "Ver detalles " [ref=e2920] [cursor=pointer]:
+                  - generic [ref=e2921]: Ver detalles
+                  - generic [ref=e2922]: 
+            - generic [ref=e2923]:
+              - img [ref=e2926]:
+                - generic [ref=e2928]: "N"
+              - generic [ref=e2930]:
+                - generic [ref=e2931]:
+                  - generic [ref=e2932]:
+                    - generic [ref=e2933]: "11"
+                    - heading "Nexa" [level=4] [ref=e2934]
+                  - generic [ref=e2935]:
+                    - generic [ref=e2936]: 
+                    - generic [ref=e2937]: TI y Consultoría
+                  - generic [ref=e2938]:
+                    - generic [ref=e2939]:
+                      - generic [ref=e2940]: 
+                      - generic [ref=e2941]: 
+                      - generic [ref=e2942]: 
+                      - generic [ref=e2943]: 
+                      - generic [ref=e2944]: 
+                    - generic [ref=e2945]: "Uptime: 99.9%"
+                - button "Ver detalles " [ref=e2946] [cursor=pointer]:
+                  - generic [ref=e2947]: Ver detalles
+                  - generic [ref=e2948]: 
+            - generic [ref=e2956]:
+              - generic [ref=e2957]:
+                - generic [ref=e2958]:
+                  - generic [ref=e2959]: "12"
+                  - heading "Colso" [level=4] [ref=e2960]
+                - generic [ref=e2961]:
+                  - generic [ref=e2962]: 
+                  - generic [ref=e2963]: Logística
+                - generic [ref=e2964]:
+                  - generic [ref=e2965]:
+                    - generic [ref=e2966]: 
+                    - generic [ref=e2967]: 
+                    - generic [ref=e2968]: 
+                    - generic [ref=e2969]: 
+                    - generic [ref=e2970]: 
+                  - generic [ref=e2971]: "Tiempos: -24%"
+              - button "Ver detalles " [ref=e2972] [cursor=pointer]:
+                - generic [ref=e2973]: Ver detalles
+                - generic [ref=e2974]: 
+            - generic [ref=e2982]:
+              - generic [ref=e2983]:
+                - generic [ref=e2984]:
+                  - generic [ref=e2985]: "07"
+                  - heading "Auna" [level=4] [ref=e2986]
+                - generic [ref=e2987]:
+                  - generic [ref=e2988]: 
+                  - generic [ref=e2989]: Salud
+                - generic [ref=e2990]:
+                  - generic [ref=e2991]:
+                    - generic [ref=e2992]: 
+                    - generic [ref=e2993]: 
+                    - generic [ref=e2994]: 
+                    - generic [ref=e2995]: 
+                    - generic [ref=e2996]: 
+                  - generic [ref=e2997]: "Atenciín: +99%"
+              - button "Ver detalles " [ref=e2998] [cursor=pointer]:
+                - generic [ref=e2999]: Ver detalles
+                - generic [ref=e3000]: 
+            - generic [ref=e3008]:
+              - generic [ref=e3009]:
+                - generic [ref=e3010]:
+                  - generic [ref=e3011]: "08"
+                  - heading "BSF Almacenes" [level=4] [ref=e3012]
+                - generic [ref=e3013]:
+                  - generic [ref=e3014]: 
+                  - generic [ref=e3015]: Corporativo
+                - generic [ref=e3016]:
+                  - generic [ref=e3017]:
+                    - generic [ref=e3018]: 
+                    - generic [ref=e3019]: 
+                    - generic [ref=e3020]: 
+                    - generic [ref=e3021]: 
+                    - generic [ref=e3022]: 
+                  - generic [ref=e3023]: "Capacidad: +96%"
+              - button "Ver detalles " [ref=e3024] [cursor=pointer]:
+                - generic [ref=e3025]: Ver detalles
+                - generic [ref=e3026]: 
+            - generic [ref=e3034]:
+              - generic [ref=e3035]:
+                - generic [ref=e3036]:
+                  - generic [ref=e3037]: "09"
+                  - heading "Daryza" [level=4] [ref=e3038]
+                - generic [ref=e3039]:
+                  - generic [ref=e3040]: 
+                  - generic [ref=e3041]: Consultoría
+                - generic [ref=e3042]:
+                  - generic [ref=e3043]:
+                    - generic [ref=e3044]: 
+                    - generic [ref=e3045]: 
+                    - generic [ref=e3046]: 
+                    - generic [ref=e3047]: 
+                    - generic [ref=e3048]: 
+                  - generic [ref=e3049]: "Retorno: +93%"
+              - button "Ver detalles " [ref=e3050] [cursor=pointer]:
+                - generic [ref=e3051]: Ver detalles
+                - generic [ref=e3052]: 
+            - generic [ref=e3053]:
+              - img [ref=e3056]:
+                - generic [ref=e3058]: E
+              - generic [ref=e3060]:
+                - generic [ref=e3061]:
+                  - generic [ref=e3062]:
+                    - generic [ref=e3063]: "10"
+                    - heading "Grupo Efe" [level=4] [ref=e3064]
+                  - generic [ref=e3065]:
+                    - generic [ref=e3066]: 
+                    - generic [ref=e3067]: Tecnología
+                  - generic [ref=e3068]:
+                    - generic [ref=e3069]:
+                      - generic [ref=e3070]: 
+                      - generic [ref=e3071]: 
+                      - generic [ref=e3072]: 
+                      - generic [ref=e3073]: 
+                      - generic [ref=e3074]: 
+                    - generic [ref=e3075]: "Sistemas: +97%"
+                - button "Ver detalles " [ref=e3076] [cursor=pointer]:
+                  - generic [ref=e3077]: Ver detalles
+                  - generic [ref=e3078]: 
+            - generic [ref=e3079]:
+              - img [ref=e3082]:
+                - generic [ref=e3084]: "N"
+              - generic [ref=e3086]:
+                - generic [ref=e3087]:
+                  - generic [ref=e3088]:
+                    - generic [ref=e3089]: "11"
+                    - heading "Nexa" [level=4] [ref=e3090]
+                  - generic [ref=e3091]:
+                    - generic [ref=e3092]: 
+                    - generic [ref=e3093]: TI y Consultoría
+                  - generic [ref=e3094]:
+                    - generic [ref=e3095]:
+                      - generic [ref=e3096]: 
+                      - generic [ref=e3097]: 
+                      - generic [ref=e3098]: 
+                      - generic [ref=e3099]: 
+                      - generic [ref=e3100]: 
+                    - generic [ref=e3101]: "Uptime: 99.9%"
+                - button "Ver detalles " [ref=e3102] [cursor=pointer]:
+                  - generic [ref=e3103]: Ver detalles
+                  - generic [ref=e3104]: 
+            - generic [ref=e3112]:
+              - generic [ref=e3113]:
+                - generic [ref=e3114]:
+                  - generic [ref=e3115]: "12"
+                  - heading "Colso" [level=4] [ref=e3116]
+                - generic [ref=e3117]:
+                  - generic [ref=e3118]: 
+                  - generic [ref=e3119]: Logística
+                - generic [ref=e3120]:
+                  - generic [ref=e3121]:
+                    - generic [ref=e3122]: 
+                    - generic [ref=e3123]: 
+                    - generic [ref=e3124]: 
+                    - generic [ref=e3125]: 
+                    - generic [ref=e3126]: 
+                  - generic [ref=e3127]: "Tiempos: -24%"
+              - button "Ver detalles " [ref=e3128] [cursor=pointer]:
+                - generic [ref=e3129]: Ver detalles
+                - generic [ref=e3130]: 
+      - generic [ref=e3132]:
+        - generic [ref=e3133]:
+          - heading [level=2] [ref=e3134]:
+            - text: Nuestro proceso,
+            - generic [ref=e3135]: desarrollo ágil.
+          - paragraph [ref=e3138]: Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+        - generic [ref=e3141]:
+          - generic [ref=e3142]:
+            - generic [ref=e3144]:
+              - generic [ref=e3145]: 
+              - generic [ref=e3146]: "01"
+            - heading "Planificación" [level=3] [ref=e3147]
+            - paragraph [ref=e3148]: Analizamos tu negocio, competidores y metas de marketing para estructurar el sitemap óptimo.
+          - generic [ref=e3149]:
+            - generic [ref=e3151]:
+              - generic [ref=e3152]: 
+              - generic [ref=e3153]: "02"
+            - heading "Diseño UX/UI" [level=3] [ref=e3154]
+            - paragraph [ref=e3155]: Creamos mockups interactivos alineados a tu marca para una usabilidad excepcional.
+          - generic [ref=e3156]:
+            - generic [ref=e3158]:
+              - generic [ref=e3159]: 
+              - generic [ref=e3160]: "03"
+            - heading "Programación" [level=3] [ref=e3161]
+            - paragraph [ref=e3162]: Desarrollamos con React, Vite y CSS para lograr velocidad extrema y SEO óptimo.
+          - generic [ref=e3163]:
+            - generic [ref=e3165]:
+              - generic [ref=e3166]: 
+              - generic [ref=e3167]: "04"
+            - heading "Lanzamiento" [level=3] [ref=e3168]
+            - paragraph [ref=e3169]: Desplegamos en la nube, optimizamos caché y realizamos indexación en Google.
+      - generic [ref=e3172]:
+        - generic [ref=e3173]:
+          - heading "¿QUÉ ES DESARROLLO WEB Y CÓMO AYUDA A TU EMPRESA?" [level=2] [ref=e3174]
+          - generic [ref=e3175]:
+            - paragraph [ref=e3176]: Digitalizamos tu presencia comercial con sitios rápidos, atractivos y diseñados para generar conversiones, con una excelente experiencia de usuario (UX/UI) y total compatibilidad móvil.
+            - paragraph [ref=e3177]: "Servicios Específicos: Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Online Básicas y Sistemas de Pedidos, Catálogos Digitales Online y Blogs, y Diseño UI/UX, Formularios y Web Responsive."
+        - generic [ref=e3179]:
+          - generic [ref=e3181]: web.js
+          - generic [ref=e3189]:
+            - generic [ref=e3190]: import React from "react";
+            - generic [ref=e3191]: "import { MetaTags } from \"./seo\";"
+            - generic [ref=e3192]: "export const PaginasWeb = () => {"
+            - generic [ref=e3193]: return (
+            - generic [ref=e3194]: <div className="corporate-layout">
+            - generic [ref=e3195]: <MetaTags title="HagamosTech — Desarrollo Web" />
+            - generic [ref=e3196]: <HeroSection theme="premium" />
+            - generic [ref=e3197]: "<ServicesGrid items={10} />"
+            - generic [ref=e3198]: </div>
+            - generic [ref=e3199]: );
+            - generic [ref=e3200]: "};"
+      - generic [ref=e3211]:
+        - generic [ref=e3212]:
+          - heading [level=2] [ref=e3213]:
+            - text: Nuestro recorrido en
+            - generic [ref=e3214]: Desarrollo Web.
+          - paragraph [ref=e3217]: Páginas web y e-commerce que convierten visitantes en clientes.
+        - generic [ref=e3219]:
+          - generic [ref=e3220]:
+            - generic:
+              - img "EMPRESARIALES"
+            - generic [ref=e3221]:
+              - generic [ref=e3222]:
+                - generic [ref=e3223]:
+                  - generic [ref=e3224]: "01"
+                  - generic [ref=e3225]: EMPRESARIALES
+                - generic [ref=e3226]:
+                  - generic [ref=e3227]: 
+                  - heading "Páginas Web Empresariales" [level=3] [ref=e3229]
+                - paragraph [ref=e3230]: Sitios corporativos completos que transmiten confianza y autoridad.
+              - link "Ver detalles " [ref=e3232] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20más%20detalles%20sobre%20EMPRESARIALES
+                - generic [ref=e3233]: Ver detalles
+                - generic [ref=e3234]: 
+          - generic [ref=e3235]:
+            - generic:
+              - img "LANDING PAGE"
+            - generic [ref=e3236]:
+              - generic [ref=e3237]:
+                - generic [ref=e3238]:
+                  - generic [ref=e3239]: "02"
+                  - generic [ref=e3240]: LANDING PAGE
+                - generic [ref=e3241]:
+                  - generic [ref=e3242]: 
+                  - heading "Landing Pages y Portafolios" [level=3] [ref=e3244]
+                - paragraph [ref=e3245]: Páginas de aterrizaje de alta conversión para captar leads.
+              - link "Ver detalles " [ref=e3247] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20más%20detalles%20sobre%20LANDING%20PAGE
+                - generic [ref=e3248]: Ver detalles
+                - generic [ref=e3249]: 
+          - generic [ref=e3250]:
+            - generic:
+              - img "E-COMMERCE"
+            - generic [ref=e3251]:
+              - generic [ref=e3252]:
+                - generic [ref=e3253]:
+                  - generic [ref=e3254]: "03"
+                  - generic [ref=e3255]: E-COMMERCE
+                - generic [ref=e3256]:
+                  - generic [ref=e3257]: 
+                  - heading "Tiendas Online y Pedidos" [level=3] [ref=e3259]
+                - paragraph [ref=e3260]: E-commerce con carritos de compra e integración de pagos locales.
+              - link "Ver detalles " [ref=e3262] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20más%20detalles%20sobre%20E-COMMERCE
+                - generic [ref=e3263]: Ver detalles
+                - generic [ref=e3264]: 
+          - generic [ref=e3265]:
+            - generic:
+              - img "UI/UX"
+            - generic [ref=e3266]:
+              - generic [ref=e3267]:
+                - generic [ref=e3268]:
+                  - generic [ref=e3269]: "04"
+                  - generic [ref=e3270]: UI/UX
+                - generic [ref=e3271]:
+                  - generic [ref=e3272]: 
+                  - heading "Diseño UI/UX y Responsive" [level=3] [ref=e3274]
+                - paragraph [ref=e3275]: Prototipado interactivo y adaptación perfecta a todas las pantallas.
+              - link "Ver detalles " [ref=e3277] [cursor=pointer]:
+                - /url: https://wa.me/59161320004?text=Hola,%20quisiera%20más%20detalles%20sobre%20UI%2FUX
+                - generic [ref=e3278]: Ver detalles
+                - generic [ref=e3279]: 
+      - generic [ref=e3280]:
+        - generic [ref=e3281]:
+          - heading [level=2] [ref=e3282]:
+            - text: Casos reales,
+            - generic [ref=e3283]: resultados comprobados.
+          - paragraph [ref=e3286]: Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.
+        - generic [ref=e3290]:
+          - generic [ref=e3292]:
+            - paragraph [ref=e3309]: "\"Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.\""
+            - generic [ref=e3310]:
+              - img "Juan Pérez" [ref=e3313]
+              - generic [ref=e3314]:
+                - heading "Juan Pérez" [level=4] [ref=e3315]
+                - paragraph [ref=e3316]: CEO, TechStart
+          - generic [ref=e3318]:
+            - paragraph [ref=e3335]: "\"La página web superó nuestras expectativas; ahora nuestros alumnos pueden inscribirse sin problemas.\""
+            - generic [ref=e3336]:
+              - img "Ana Gómez" [ref=e3339]
+              - generic [ref=e3340]:
+                - heading "Ana Gómez" [level=4] [ref=e3341]
+                - paragraph [ref=e3342]: Directora, EduKids
+          - generic [ref=e3344]:
+            - paragraph [ref=e3361]: "\"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente.\""
+            - generic [ref=e3362]:
+              - img "Carlos Díaz" [ref=e3365]
+              - generic [ref=e3366]:
+                - heading "Carlos Díaz" [level=4] [ref=e3367]
+                - paragraph [ref=e3368]: Fundador, Restaurante
+          - generic [ref=e3370]:
+            - paragraph [ref=e3387]: "\"Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.\""
+            - generic [ref=e3388]:
+              - img "Juan Pérez" [ref=e3391]
+              - generic [ref=e3392]:
+                - heading "Juan Pérez" [level=4] [ref=e3393]
+                - paragraph [ref=e3394]: CEO, TechStart
+          - generic [ref=e3396]:
+            - paragraph [ref=e3413]: "\"La página web superó nuestras expectativas; ahora nuestros alumnos pueden inscribirse sin problemas.\""
+            - generic [ref=e3414]:
+              - img "Ana Gómez" [ref=e3417]
+              - generic [ref=e3418]:
+                - heading "Ana Gómez" [level=4] [ref=e3419]
+                - paragraph [ref=e3420]: Directora, EduKids
+          - generic [ref=e3422]:
+            - paragraph [ref=e3439]: "\"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente.\""
+            - generic [ref=e3440]:
+              - img "Carlos Díaz" [ref=e3443]
+              - generic [ref=e3444]:
+                - heading "Carlos Díaz" [level=4] [ref=e3445]
+                - paragraph [ref=e3446]: Fundador, Restaurante
+          - generic [ref=e3448]:
+            - paragraph [ref=e3465]: "\"Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web.\""
+            - generic [ref=e3466]:
+              - img "Juan Pérez" [ref=e3469]
+              - generic [ref=e3470]:
+                - heading "Juan Pérez" [level=4] [ref=e3471]
+                - paragraph [ref=e3472]: CEO, TechStart
+          - generic [ref=e3474]:
+            - paragraph [ref=e3491]: "\"La página web superó nuestras expectativas; ahora nuestros alumnos pueden inscribirse sin problemas.\""
+            - generic [ref=e3492]:
+              - img "Ana Gómez" [ref=e3495]
+              - generic [ref=e3496]:
+                - heading "Ana Gómez" [level=4] [ref=e3497]
+                - paragraph [ref=e3498]: Directora, EduKids
+          - generic [ref=e3500]:
+            - paragraph [ref=e3517]: "\"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente.\""
+            - generic [ref=e3518]:
+              - img "Carlos Díaz" [ref=e3521]
+              - generic [ref=e3522]:
+                - heading "Carlos Díaz" [level=4] [ref=e3523]
+                - paragraph [ref=e3524]: Fundador, Restaurante
+  - contentinfo [ref=e1971]:
+    - generic [ref=e1972]:
+      - generic [ref=e1973]:
+        - generic [ref=e1974]:
+          - link [ref=e1975] [cursor=pointer]:
+            - /url: "#/"
+            - img "Logo HagamosTech" [ref=e1976]
+          - paragraph [ref=e1977]: Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+          - generic [ref=e1978]:
+            - link "" [ref=e1979] [cursor=pointer]:
+              - /url: https://www.facebook.com/HagamosTech
+            - link "" [ref=e1981] [cursor=pointer]:
+              - /url: https://www.instagram.com/hagamostech/
+            - link "" [ref=e1983] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@hagamostech
+            - link "" [ref=e1985] [cursor=pointer]:
+              - /url: https://wa.me/59161320004
+        - generic [ref=e1987]:
+          - heading "SOLUCIONES" [level=3] [ref=e1988]
+          - list [ref=e1990]:
+            - listitem [ref=e1991]:
+              - link " Tecnología" [ref=e1992] [cursor=pointer]:
+                - /url: "#/#tecnologia"
+                - generic [ref=e1993]: 
+                - generic [ref=e1995]: Tecnología
+            - listitem [ref=e1996]:
+              - link " Academia" [ref=e1997] [cursor=pointer]:
+                - /url: "#/#academia"
+                - generic [ref=e1998]: 
+                - generic [ref=e2000]: Academia
+            - listitem [ref=e2001]:
+              - link " Negocios" [ref=e2002] [cursor=pointer]:
+                - /url: "#/#negocios"
+                - generic [ref=e2003]: 
+                - generic [ref=e2005]: Negocios
+            - listitem [ref=e2006]:
+              - link " Soluciones personalizadas" [ref=e2007] [cursor=pointer]:
+                - /url: "#/#personalizado"
+                - generic [ref=e2008]: 
+                - generic [ref=e2010]: Soluciones personalizadas
+            - listitem [ref=e2011]:
+              - link " Cómo trabajamos" [ref=e2012] [cursor=pointer]:
+                - /url: "#/#flujo"
+                - generic [ref=e2013]: 
+                - generic [ref=e2015]: Cómo trabajamos
+        - generic [ref=e2016]:
+          - heading "NOSOTROS" [level=3] [ref=e2017]
+          - list [ref=e2018]:
+            - listitem [ref=e2019]:
+              - link " Cómo trabajamos" [ref=e2020] [cursor=pointer]:
+                - /url: "#/#flujo"
+                - generic [ref=e2021]: 
+                - generic [ref=e2023]: Cómo trabajamos
+            - listitem [ref=e2024]:
+              - link " Nuestras soluciones" [ref=e2025] [cursor=pointer]:
+                - /url: "#/#que-hacemos"
+                - generic [ref=e2026]: 
+                - generic [ref=e2028]: Nuestras soluciones
+            - listitem [ref=e2029]:
+              - link " Contanos tu idea" [ref=e2030] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2031]: 
+                - generic [ref=e2033]: Contanos tu idea
+            - listitem [ref=e2034]:
+              - link " Apoyo y soporte" [ref=e2035] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2036]: 
+                - generic [ref=e2038]: Apoyo y soporte
+            - listitem [ref=e2039]:
+              - link " Trabajá con nosotros" [ref=e2040] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2041]: 
+                - generic [ref=e2043]: Trabajá con nosotros
+        - generic [ref=e2044]:
+          - heading "CONTACTO" [level=3] [ref=e2045]
+          - list [ref=e2047]:
+            - listitem [ref=e2048]:
+              - generic [ref=e2049]: 
+              - generic [ref=e2051]:
+                - generic [ref=e2052]: Oficina principal
+                - generic [ref=e2053]: Av. San Martín y 2do AnilloEquipetrol, Santa Cruz
+            - listitem [ref=e2054]:
+              - generic [ref=e2055]: 
+              - generic [ref=e2057]:
+                - generic [ref=e2058]: Email
+                - link "contacto@hagamostech.bo" [ref=e2059] [cursor=pointer]:
+                  - /url: mailto:contacto@hagamostech.bo
+            - listitem [ref=e2060]:
+              - generic [ref=e2061]: 
+              - generic [ref=e2063]:
+                - generic [ref=e2064]: Teléfono / WhatsApp
+                - link "+591 61320004" [ref=e2065] [cursor=pointer]:
+                  - /url: tel:+59161320004
+            - listitem [ref=e2066]:
+              - generic [ref=e2067]: 
+              - generic [ref=e2069]:
+                - generic [ref=e2070]: Horarios
+                - generic [ref=e2071]: "Lun - Vie: 09:00 - 18:00"
+      - generic [ref=e2072]:
+        - paragraph [ref=e2073]: © 2026 HagamosTech. Todos los derechos reservados.
+        - generic [ref=e2074]:
+          - link "Política de Privacidad" [ref=e2075] [cursor=pointer]:
+            - /url: "#/privacidad"
+          - link "Términos de Servicio" [ref=e2076] [cursor=pointer]:
+            - /url: "#/terminos"
+          - link "Cookies" [ref=e2077] [cursor=pointer]:
+            - /url: "#/cookies"
+  - button "" [ref=e2079] [cursor=pointer]
+  - button "" [ref=e2086] [cursor=pointer]

@@ -1,0 +1,1507 @@
+- generic [ref=e82]:
+  - banner [ref=e83]:
+    - generic [ref=e85]:
+      - link "Ir al inicio de HagamosTech" [ref=e86] [cursor=pointer]:
+        - /url: "#/"
+        - img "Logo HagamosTech" [ref=e87]
+      - generic [ref=e88]:
+        - button "Abrir carrito" [ref=e89]:
+          - generic [ref=e90]: 
+        - button "Abrir Menú" [ref=e91]
+      - text:        
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Qué hacemos?
+          - generic: 
+        - generic:
+          - button "Tecnología ":
+            - text: Tecnología
+            - generic: 
+          - button "Academia ":
+            - text: Academia
+            - generic: 
+          - button "Negocios ":
+            - text: Negocios
+            - generic: 
+          - button "Soluciones personalizadas ":
+            - text: Soluciones personalizadas
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Servicios
+          - generic: 
+        - generic:
+          - button "Desarrollo Web ":
+            - text: Desarrollo Web
+            - generic: 
+          - button "Sistemas y Apps ":
+            - text: Sistemas y Apps
+            - generic: 
+          - button "Automatización ":
+            - text: Automatización
+            - generic: 
+          - button "Inteligencia Artificial ":
+            - text: Inteligencia Artificial
+            - generic: 
+          - button "Para tu Negocio ":
+            - text: Para tu Negocio
+            - generic: 
+          - button "Apoyo Académico ":
+            - text: Apoyo Académico
+            - generic: 
+          - button "Empleo ":
+            - text: Empleo
+            - generic: 
+          - button "Diseño Gráfico ":
+            - text: Diseño Gráfico
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Para quién?
+          - generic: 
+        - generic:
+          - button "Estudiantes ":
+            - text: Estudiantes
+            - generic: 
+          - button "Emprendedores ":
+            - text: Emprendedores
+            - generic: 
+          - button "Pequeños negocios ":
+            - text: Pequeños negocios
+            - generic: 
+          - button "Empresas ":
+            - text: Empresas
+            - generic: 
+          - button "Personas particulares ":
+            - text: Personas particulares
+            - generic: 
+      - button " Cómo trabajamos ":
+        - generic:
+          - generic: 
+          - text: Cómo trabajamos
+        - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Sobre Nosotros
+          - generic: 
+        - generic:
+          - button "Nuestra historia ":
+            - text: Nuestra historia
+            - generic: 
+          - button "Misión y Visión ":
+            - text: Misión y Visión
+            - generic: 
+          - button "Personalidad y Valores ":
+            - text: Personalidad y Valores
+            - generic: 
+          - button "¿Para quién? ":
+            - text: ¿Para quién?
+            - generic: 
+      - button " Contactanos ":
+        - generic:
+          - generic: 
+          - text: Contactanos
+        - generic: 
+    - generic:
+      - button " Iniciar Sesion":
+        - generic: 
+        - generic: Iniciar Sesion
+      - button " Crear Cuenta":
+        - generic:
+          - generic: 
+          - text: Crear Cuenta
+  - main [ref=e94]:
+    - main [ref=e3525]:
+      - generic [ref=e3529]:
+        - generic [ref=e3531]:
+          - link "" [ref=e3532] [cursor=pointer]:
+            - /url: "#/"
+          - generic [ref=e3534]: INICIO
+          - generic [ref=e3535]: /
+          - generic [ref=e3536]: Catálogo
+        - generic [ref=e3538]:
+          - generic [ref=e3539]: 
+          - text: Catálogo de Productos — HAGAMOSTECH
+        - heading [level=1] [ref=e3540]:
+          - text: Nuestro
+          - generic [ref=e3541]: Catálogo.
+        - paragraph [ref=e3544]: Explorá todas nuestras categorías y tipos de productos. Elegí lo que más te guste y armá tu pedido.
+        - generic [ref=e3546]:
+          - button " Hacer pedido" [ref=e3547]:
+            - generic [ref=e3549]: 
+            - generic [ref=e3551]: Hacer pedido
+          - button " Ver carrito" [ref=e3552]:
+            - generic [ref=e3554]: 
+            - generic [ref=e3556]: Ver carrito
+          - button " Delivery" [ref=e3557]:
+            - generic [ref=e3559]: 
+            - generic [ref=e3561]: Delivery
+          - button " Contacto" [ref=e3562]:
+            - generic [ref=e3564]: 
+            - generic [ref=e3566]: Contacto
+      - generic [ref=e3569]:
+        - generic [ref=e3570]:
+          - generic [ref=e3571]:
+            - generic [ref=e3572]: 
+            - text: Categorías
+          - heading [level=2] [ref=e3573]:
+            - text: ¿Qué querés
+            - generic [ref=e3574]: pedir?
+          - paragraph [ref=e3577]: Elegí una categoría para explorar todos sus sabores y encontrar tu favorito.
+        - generic [ref=e3578]:
+          - button " Todos 26" [ref=e3579]:
+            - generic [ref=e3581]:
+              - generic [ref=e3582]: 
+              - text: Todos
+            - generic [ref=e3584]: "26"
+          - button " Salteñas 7" [ref=e3585]:
+            - generic [ref=e3587]:
+              - generic [ref=e3588]: 
+              - text: Salteñas
+            - generic [ref=e3590]: "7"
+          - button " Cafetería 7" [ref=e3591]:
+            - generic [ref=e3593]:
+              - generic [ref=e3594]: 
+              - text: Cafetería
+            - generic [ref=e3596]: "7"
+          - button " Frapuccinos 3" [ref=e3597]:
+            - generic [ref=e3599]:
+              - generic [ref=e3600]: 
+              - text: Frapuccinos
+            - generic [ref=e3602]: "3"
+          - button " Refrescos 6" [ref=e3603]:
+            - generic [ref=e3605]:
+              - generic [ref=e3606]: 
+              - text: Refrescos
+            - generic [ref=e3608]: "6"
+          - button " Postres 3" [ref=e3609]:
+            - generic [ref=e3611]:
+              - generic [ref=e3612]: 
+              - text: Postres
+            - generic [ref=e3614]: "3"
+        - generic [ref=e3617]:
+          - generic [ref=e3618]:
+            - generic [ref=e3619]: 
+            - textbox "Buscá tu producto favorito..." [ref=e3621]
+          - generic [ref=e3622]:
+            - generic [ref=e3623]:
+              - generic [ref=e3624]: 
+              - text: Ordenar
+            - button "Relevancia" [ref=e3625]
+            - button "Precio ↑" [ref=e3626]
+            - button "Precio ↓" [ref=e3627]
+          - generic [ref=e3628]:
+            - button "Vista grilla" [ref=e3629]:
+              - generic [ref=e3630]: 
+            - button "Vista lista" [ref=e3631]:
+              - generic [ref=e3632]: 
+        - generic [ref=e3633]:
+          - generic [ref=e3634] [cursor=pointer]:
+            - generic [ref=e3635]:
+              - img "Salteña de Carne Dulce" [ref=e3636]
+              - generic [ref=e3638]: "-20%"
+              - generic [ref=e3639]:
+                - generic [ref=e3640]: 
+                - text: Dulce
+              - generic [ref=e3641]:
+                - generic [ref=e3642]: Bs. 10
+                - generic [ref=e3643]: Bs. 8
+              - generic [ref=e3645]:
+                - generic [ref=e3646]: 
+                - text: Ver detalle
+            - generic [ref=e3647]:
+              - generic [ref=e3648]:
+                - generic [ref=e3649]:
+                  - generic [ref=e3650]: 
+                  - generic [ref=e3651]: 
+                  - generic [ref=e3652]: 
+                  - generic [ref=e3653]: 
+                  - generic [ref=e3654]: 
+                  - generic [ref=e3655]: "4.9"
+                - generic [ref=e3656]:
+                  - generic [ref=e3657]: 
+                  - text: Disponible
+              - generic [ref=e3658]:
+                - generic [ref=e3659]: La Clásica
+                - heading "Salteña de Carne Dulce" [level=3] [ref=e3660]
+              - paragraph [ref=e3661]: Jugosa y equilibrada, con el dulzor justo que resalta la carne de primera. La favorita de todos los días desde 1989.
+              - generic [ref=e3662]:
+                - generic [ref=e3663]:
+                  - generic [ref=e3664]: 
+                  - text: Carne de res
+                - generic [ref=e3665]:
+                  - generic [ref=e3666]: 
+                  - text: Aceituna
+                - generic [ref=e3667]:
+                  - generic [ref=e3668]: 
+                  - text: Huevo
+              - generic [ref=e3669]:
+                - button " Agregar" [ref=e3670]:
+                  - generic [ref=e3671]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3672]:
+                  - generic [ref=e3673]: 
+                  - text: Ver detalle
+          - generic [ref=e3674] [cursor=pointer]:
+            - generic [ref=e3675]:
+              - img "Salteña de Pollo Dulce" [ref=e3676]
+              - generic [ref=e3678]: "-20%"
+              - generic [ref=e3679]:
+                - generic [ref=e3680]: 
+                - text: Dulce
+              - generic [ref=e3681]:
+                - generic [ref=e3682]: Bs. 10
+                - generic [ref=e3683]: Bs. 8
+              - generic [ref=e3685]:
+                - generic [ref=e3686]: 
+                - text: Ver detalle
+            - generic [ref=e3687]:
+              - generic [ref=e3688]:
+                - generic [ref=e3689]:
+                  - generic [ref=e3690]: 
+                  - generic [ref=e3691]: 
+                  - generic [ref=e3692]: 
+                  - generic [ref=e3693]: 
+                  - generic [ref=e3694]: 
+                  - generic [ref=e3695]: "4.9"
+                - generic [ref=e3696]:
+                  - generic [ref=e3697]: 
+                  - text: Disponible
+              - generic [ref=e3698]:
+                - generic [ref=e3699]: Suave y Cremosa
+                - heading "Salteña de Pollo Dulce" [level=3] [ref=e3700]
+              - paragraph [ref=e3701]: Pollo tierno con un relleno suave y cremoso que se deshace en cada bocado.
+              - generic [ref=e3702]:
+                - generic [ref=e3703]:
+                  - generic [ref=e3704]: 
+                  - text: Pollo
+                - generic [ref=e3705]:
+                  - generic [ref=e3706]: 
+                  - text: Aceituna
+                - generic [ref=e3707]:
+                  - generic [ref=e3708]: 
+                  - text: Huevo
+              - generic [ref=e3709]:
+                - button " Agregar" [ref=e3710]:
+                  - generic [ref=e3711]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3712]:
+                  - generic [ref=e3713]: 
+                  - text: Ver detalle
+          - generic [ref=e3714] [cursor=pointer]:
+            - generic [ref=e3715]:
+              - img "Salteña de Carne Picante" [ref=e3716]
+              - generic [ref=e3718]: "-20%"
+              - generic [ref=e3719]:
+                - generic [ref=e3720]: 
+                - text: Picante
+              - generic [ref=e3721]:
+                - generic [ref=e3722]: Bs. 10
+                - generic [ref=e3723]: Bs. 8
+              - generic [ref=e3725]:
+                - generic [ref=e3726]: 
+                - text: Ver detalle
+            - generic [ref=e3727]:
+              - generic [ref=e3728]:
+                - generic [ref=e3729]:
+                  - generic [ref=e3730]: 
+                  - generic [ref=e3731]: 
+                  - generic [ref=e3732]: 
+                  - generic [ref=e3733]: 
+                  - generic [ref=e3734]: 
+                  - generic [ref=e3735]: "4.9"
+                - generic [ref=e3736]:
+                  - generic [ref=e3737]: 
+                  - text: Disponible
+              - generic [ref=e3738]:
+                - generic [ref=e3739]: Para Valientes
+                - heading "Salteña de Carne Picante" [level=3] [ref=e3740]
+              - paragraph [ref=e3741]: Ají molido seleccionado que despierta los sentidos en cada mordida.
+              - generic [ref=e3742]:
+                - generic [ref=e3743]:
+                  - generic [ref=e3744]: 
+                  - text: Carne de res
+                - generic [ref=e3745]:
+                  - generic [ref=e3746]: 
+                  - text: Ají molido
+                - generic [ref=e3747]:
+                  - generic [ref=e3748]: 
+                  - text: Aceituna
+              - generic [ref=e3749]:
+                - button " Agregar" [ref=e3750]:
+                  - generic [ref=e3751]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3752]:
+                  - generic [ref=e3753]: 
+                  - text: Ver detalle
+          - generic [ref=e3754] [cursor=pointer]:
+            - generic [ref=e3755]:
+              - img "Súper Picante de Carne" [ref=e3756]
+              - generic [ref=e3758]: "-18%"
+              - generic [ref=e3759]:
+                - generic [ref=e3760]: 
+                - text: Extra Picante
+              - generic [ref=e3761]:
+                - generic [ref=e3762]: Bs. 11
+                - generic [ref=e3763]: Bs. 9
+              - generic [ref=e3765]:
+                - generic [ref=e3766]: 
+                - text: Ver detalle
+            - generic [ref=e3767]:
+              - generic [ref=e3768]:
+                - generic [ref=e3769]:
+                  - generic [ref=e3770]: 
+                  - generic [ref=e3771]: 
+                  - generic [ref=e3772]: 
+                  - generic [ref=e3773]: 
+                  - generic [ref=e3774]: 
+                  - generic [ref=e3775]: "4.9"
+                - generic [ref=e3776]:
+                  - generic [ref=e3777]: 
+                  - text: Disponible
+              - generic [ref=e3778]:
+                - generic [ref=e3779]: Edición Extrema
+                - heading "Súper Picante de Carne" [level=3] [ref=e3780]
+              - paragraph [ref=e3781]: Solo para valientes. Mezcla de ajíes seleccionados que desafían tu paladar.
+              - generic [ref=e3782]:
+                - generic [ref=e3783]:
+                  - generic [ref=e3784]: 
+                  - text: Carne de res
+                - generic [ref=e3785]:
+                  - generic [ref=e3786]: 
+                  - text: Ajíes mixtos
+                - generic [ref=e3787]:
+                  - generic [ref=e3788]: 
+                  - text: Aceituna
+              - generic [ref=e3789]:
+                - button " Agregar" [ref=e3790]:
+                  - generic [ref=e3791]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3792]:
+                  - generic [ref=e3793]: 
+                  - text: Ver detalle
+          - generic [ref=e3794] [cursor=pointer]:
+            - generic [ref=e3795]:
+              - img "Salteñas Precocidas Congeladas" [ref=e3796]
+              - generic [ref=e3798]: "-17%"
+              - generic [ref=e3799]:
+                - generic [ref=e3800]: 
+                - text: Pack x6
+              - generic [ref=e3801]:
+                - generic [ref=e3802]: Bs. 48
+                - generic [ref=e3803]: Bs. 40
+              - generic [ref=e3805]:
+                - generic [ref=e3806]: 
+                - text: Ver detalle
+            - generic [ref=e3807]:
+              - generic [ref=e3808]:
+                - generic [ref=e3809]:
+                  - generic [ref=e3810]: 
+                  - generic [ref=e3811]: 
+                  - generic [ref=e3812]: 
+                  - generic [ref=e3813]: 
+                  - generic [ref=e3814]: 
+                  - generic [ref=e3815]: "4.9"
+                - generic [ref=e3816]:
+                  - generic [ref=e3817]: 
+                  - text: Disponible
+              - generic [ref=e3818]:
+                - generic [ref=e3819]: Horneá en Casa
+                - heading "Salteñas Precocidas Congeladas" [level=3] [ref=e3820]
+              - paragraph [ref=e3821]: Llevate el auténtico sabor a tu hogar. Solo 25 minutos de horno y listo.
+              - generic [ref=e3822]:
+                - generic [ref=e3823]:
+                  - generic [ref=e3824]: 
+                  - text: Pack x6
+                - generic [ref=e3825]:
+                  - generic [ref=e3826]: 
+                  - text: Precocidas
+                - generic [ref=e3827]:
+                  - generic [ref=e3828]: 
+                  - text: Listas para hornear
+              - generic [ref=e3829]:
+                - button " Agregar" [ref=e3830]:
+                  - generic [ref=e3831]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3832]:
+                  - generic [ref=e3833]: 
+                  - text: Ver detalle
+          - generic [ref=e3834] [cursor=pointer]:
+            - generic [ref=e3835]:
+              - img "Salteñas Crudas Congeladas" [ref=e3836]
+              - generic [ref=e3838]: "-17%"
+              - generic [ref=e3839]:
+                - generic [ref=e3840]: 
+                - text: Pack x6
+              - generic [ref=e3841]:
+                - generic [ref=e3842]: Bs. 42
+                - generic [ref=e3843]: Bs. 35
+              - generic [ref=e3845]:
+                - generic [ref=e3846]: 
+                - text: Ver detalle
+            - generic [ref=e3847]:
+              - generic [ref=e3848]:
+                - generic [ref=e3849]:
+                  - generic [ref=e3850]: 
+                  - generic [ref=e3851]: 
+                  - generic [ref=e3852]: 
+                  - generic [ref=e3853]: 
+                  - generic [ref=e3854]: 
+                  - generic [ref=e3855]: "4.9"
+                - generic [ref=e3856]:
+                  - generic [ref=e3857]: 
+                  - text: Disponible
+              - generic [ref=e3858]:
+                - generic [ref=e3859]: Frescas del Freezer
+                - heading "Salteñas Crudas Congeladas" [level=3] [ref=e3860]
+              - paragraph [ref=e3861]: Crudas y listas para hornear a tu gusto. El mismo sabor de siempre, cuando vos quieras.
+              - generic [ref=e3862]:
+                - generic [ref=e3863]:
+                  - generic [ref=e3864]: 
+                  - text: Pack x6
+                - generic [ref=e3865]:
+                  - generic [ref=e3866]: 
+                  - text: Crudas
+                - generic [ref=e3867]:
+                  - generic [ref=e3868]: 
+                  - text: Hornear 25 min
+              - generic [ref=e3869]:
+                - button " Agregar" [ref=e3870]:
+                  - generic [ref=e3871]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3872]:
+                  - generic [ref=e3873]: 
+                  - text: Ver detalle
+          - generic [ref=e3874] [cursor=pointer]:
+            - generic [ref=e3875]:
+              - img "Combo Pacata Familiar" [ref=e3876]
+              - generic [ref=e3878]: "-17%"
+              - generic [ref=e3879]:
+                - generic [ref=e3880]: 
+                - text: Combo
+              - generic [ref=e3881]:
+                - generic [ref=e3882]: Bs. 66
+                - generic [ref=e3883]: Bs. 55
+              - generic [ref=e3885]:
+                - generic [ref=e3886]: 
+                - text: Ver detalle
+            - generic [ref=e3887]:
+              - generic [ref=e3888]:
+                - generic [ref=e3889]:
+                  - generic [ref=e3890]: 
+                  - generic [ref=e3891]: 
+                  - generic [ref=e3892]: 
+                  - generic [ref=e3893]: 
+                  - generic [ref=e3894]: 
+                  - generic [ref=e3895]: "4.9"
+                - generic [ref=e3896]:
+                  - generic [ref=e3897]: 
+                  - text: Disponible
+              - generic [ref=e3898]:
+                - generic [ref=e3899]: Para Compartir
+                - heading "Combo Pacata Familiar" [level=3] [ref=e3900]
+              - paragraph [ref=e3901]: El combo ideal para reuniones. Variedad de salteñas mixtas, refrescos y salsa especial.
+              - generic [ref=e3902]:
+                - generic [ref=e3903]:
+                  - generic [ref=e3904]: 
+                  - text: 6 Salteñas mixtas
+                - generic [ref=e3905]:
+                  - generic [ref=e3906]: 
+                  - text: 2 Refrescos
+                - generic [ref=e3907]:
+                  - generic [ref=e3908]: 
+                  - text: Salsa especial
+              - generic [ref=e3909]:
+                - button " Agregar" [ref=e3910]:
+                  - generic [ref=e3911]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3912]:
+                  - generic [ref=e3913]: 
+                  - text: Ver detalle
+          - generic [ref=e3914] [cursor=pointer]:
+            - generic [ref=e3915]:
+              - img "Café Americano Regular" [ref=e3916]
+              - generic [ref=e3918]: "-20%"
+              - generic [ref=e3919]:
+                - generic [ref=e3920]: 
+                - text: Caliente
+              - generic [ref=e3921]:
+                - generic [ref=e3922]: Bs. 10
+                - generic [ref=e3923]: Bs. 8
+              - generic [ref=e3925]:
+                - generic [ref=e3926]: 
+                - text: Ver detalle
+            - generic [ref=e3927]:
+              - generic [ref=e3928]:
+                - generic [ref=e3929]:
+                  - generic [ref=e3930]: 
+                  - generic [ref=e3931]: 
+                  - generic [ref=e3932]: 
+                  - generic [ref=e3933]: 
+                  - generic [ref=e3934]: 
+                  - generic [ref=e3935]: "4.9"
+                - generic [ref=e3936]:
+                  - generic [ref=e3937]: 
+                  - text: Disponible
+              - generic [ref=e3938]:
+                - generic [ref=e3939]: El Clásico
+                - heading "Café Americano Regular" [level=3] [ref=e3940]
+              - paragraph [ref=e3941]: Intenso y aromático. El compañero perfecto para tus salteñas de la mañana.
+              - generic [ref=e3942]:
+                - generic [ref=e3943]:
+                  - generic [ref=e3944]: 
+                  - text: Café boliviano
+                - generic [ref=e3945]:
+                  - generic [ref=e3946]: 
+                  - text: Azúcar
+                - generic [ref=e3947]:
+                  - generic [ref=e3948]: 
+                  - text: Crema
+              - generic [ref=e3949]:
+                - button " Agregar" [ref=e3950]:
+                  - generic [ref=e3951]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3952]:
+                  - generic [ref=e3953]: 
+                  - text: Ver detalle
+          - generic [ref=e3954] [cursor=pointer]:
+            - generic [ref=e3955]:
+              - img "Café Americano Doble" [ref=e3956]
+              - generic [ref=e3958]: "-20%"
+              - generic [ref=e3959]:
+                - generic [ref=e3960]: 
+                - text: Caliente
+              - generic [ref=e3961]:
+                - generic [ref=e3962]: Bs. 15
+                - generic [ref=e3963]: Bs. 12
+              - generic [ref=e3965]:
+                - generic [ref=e3966]: 
+                - text: Ver detalle
+            - generic [ref=e3967]:
+              - generic [ref=e3968]:
+                - generic [ref=e3969]:
+                  - generic [ref=e3970]: 
+                  - generic [ref=e3971]: 
+                  - generic [ref=e3972]: 
+                  - generic [ref=e3973]: 
+                  - generic [ref=e3974]: 
+                  - generic [ref=e3975]: "4.9"
+                - generic [ref=e3976]:
+                  - generic [ref=e3977]: 
+                  - text: Disponible
+              - generic [ref=e3978]:
+                - generic [ref=e3979]: Carga Extra
+                - heading "Café Americano Doble" [level=3] [ref=e3980]
+              - paragraph [ref=e3981]: Doble shot para los que necesitan ese empujón al empezar el día.
+              - generic [ref=e3982]:
+                - generic [ref=e3983]:
+                  - generic [ref=e3984]: 
+                  - text: Doble shot
+                - generic [ref=e3985]:
+                  - generic [ref=e3986]: 
+                  - text: Azúcar
+                - generic [ref=e3987]:
+                  - generic [ref=e3988]: 
+                  - text: Crema
+              - generic [ref=e3989]:
+                - button " Agregar" [ref=e3990]:
+                  - generic [ref=e3991]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e3992]:
+                  - generic [ref=e3993]: 
+                  - text: Ver detalle
+          - generic [ref=e3994] [cursor=pointer]:
+            - generic [ref=e3995]:
+              - img "Capuccino Espumoso" [ref=e3996]
+              - generic [ref=e3998]: "-20%"
+              - generic [ref=e3999]:
+                - generic [ref=e4000]: 
+                - text: Caliente
+              - generic [ref=e4001]:
+                - generic [ref=e4002]: Bs. 15
+                - generic [ref=e4003]: Bs. 12
+              - generic [ref=e4005]:
+                - generic [ref=e4006]: 
+                - text: Ver detalle
+            - generic [ref=e4007]:
+              - generic [ref=e4008]:
+                - generic [ref=e4009]:
+                  - generic [ref=e4010]: 
+                  - generic [ref=e4011]: 
+                  - generic [ref=e4012]: 
+                  - generic [ref=e4013]: 
+                  - generic [ref=e4014]: 
+                  - generic [ref=e4015]: "4.9"
+                - generic [ref=e4016]:
+                  - generic [ref=e4017]: 
+                  - text: Disponible
+              - generic [ref=e4018]:
+                - generic [ref=e4019]: Suave y Cremoso
+                - heading "Capuccino Espumoso" [level=3] [ref=e4020]
+              - paragraph [ref=e4021]: Espresso con leche vaporizada y espuma sedosa. Suavidad con carácter.
+              - generic [ref=e4022]:
+                - generic [ref=e4023]:
+                  - generic [ref=e4024]: 
+                  - text: Espresso
+                - generic [ref=e4025]:
+                  - generic [ref=e4026]: 
+                  - text: Leche vaporizada
+                - generic [ref=e4027]:
+                  - generic [ref=e4028]: 
+                  - text: Espuma
+              - generic [ref=e4029]:
+                - button " Agregar" [ref=e4030]:
+                  - generic [ref=e4031]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4032]:
+                  - generic [ref=e4033]: 
+                  - text: Ver detalle
+          - generic [ref=e4034] [cursor=pointer]:
+            - generic [ref=e4035]:
+              - img "Capuccino Doble Shot" [ref=e4036]
+              - generic [ref=e4038]: "-20%"
+              - generic [ref=e4039]:
+                - generic [ref=e4040]: 
+                - text: Caliente
+              - generic [ref=e4041]:
+                - generic [ref=e4042]: Bs. 20
+                - generic [ref=e4043]: Bs. 16
+              - generic [ref=e4045]:
+                - generic [ref=e4046]: 
+                - text: Ver detalle
+            - generic [ref=e4047]:
+              - generic [ref=e4048]:
+                - generic [ref=e4049]:
+                  - generic [ref=e4050]: 
+                  - generic [ref=e4051]: 
+                  - generic [ref=e4052]: 
+                  - generic [ref=e4053]: 
+                  - generic [ref=e4054]: 
+                  - generic [ref=e4055]: "4.9"
+                - generic [ref=e4056]:
+                  - generic [ref=e4057]: 
+                  - text: Disponible
+              - generic [ref=e4058]:
+                - generic [ref=e4059]: Doble Intensidad
+                - heading "Capuccino Doble Shot" [level=3] [ref=e4060]
+              - paragraph [ref=e4061]: Más cremoso, más intenso. El doble de todo lo que te gusta del capuccino.
+              - generic [ref=e4062]:
+                - generic [ref=e4063]:
+                  - generic [ref=e4064]: 
+                  - text: Doble Espresso
+                - generic [ref=e4065]:
+                  - generic [ref=e4066]: 
+                  - text: Leche vaporizada
+                - generic [ref=e4067]:
+                  - generic [ref=e4068]: 
+                  - text: Espuma
+              - generic [ref=e4069]:
+                - button " Agregar" [ref=e4070]:
+                  - generic [ref=e4071]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4072]:
+                  - generic [ref=e4073]: 
+                  - text: Ver detalle
+          - generic [ref=e4074] [cursor=pointer]:
+            - generic [ref=e4075]:
+              - img "Espresso Puro" [ref=e4076]
+              - generic [ref=e4078]: "-17%"
+              - generic [ref=e4079]:
+                - generic [ref=e4080]: 
+                - text: Caliente
+              - generic [ref=e4081]:
+                - generic [ref=e4082]: Bs. 12
+                - generic [ref=e4083]: Bs. 10
+              - generic [ref=e4085]:
+                - generic [ref=e4086]: 
+                - text: Ver detalle
+            - generic [ref=e4087]:
+              - generic [ref=e4088]:
+                - generic [ref=e4089]:
+                  - generic [ref=e4090]: 
+                  - generic [ref=e4091]: 
+                  - generic [ref=e4092]: 
+                  - generic [ref=e4093]: 
+                  - generic [ref=e4094]: 
+                  - generic [ref=e4095]: "4.9"
+                - generic [ref=e4096]:
+                  - generic [ref=e4097]: 
+                  - text: Disponible
+              - generic [ref=e4098]:
+                - generic [ref=e4099]: Intensidad Pura
+                - heading "Espresso Puro" [level=3] [ref=e4100]
+              - paragraph [ref=e4101]: Para puristas. La esencia del café concentrada en un sorbo sin distracciones.
+              - generic [ref=e4102]:
+                - generic [ref=e4103]:
+                  - generic [ref=e4104]: 
+                  - text: Doble shot espresso
+                - generic [ref=e4105]:
+                  - generic [ref=e4106]: 
+                  - text: Crema natural
+              - generic [ref=e4107]:
+                - button " Agregar" [ref=e4108]:
+                  - generic [ref=e4109]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4110]:
+                  - generic [ref=e4111]: 
+                  - text: Ver detalle
+          - generic [ref=e4112] [cursor=pointer]:
+            - generic [ref=e4113]:
+              - img "Chocolatada Caliente" [ref=e4114]
+              - generic [ref=e4116]: "-17%"
+              - generic [ref=e4117]:
+                - generic [ref=e4118]: 
+                - text: Caliente
+              - generic [ref=e4119]:
+                - generic [ref=e4120]: Bs. 12
+                - generic [ref=e4121]: Bs. 10
+              - generic [ref=e4123]:
+                - generic [ref=e4124]: 
+                - text: Ver detalle
+            - generic [ref=e4125]:
+              - generic [ref=e4126]:
+                - generic [ref=e4127]:
+                  - generic [ref=e4128]: 
+                  - generic [ref=e4129]: 
+                  - generic [ref=e4130]: 
+                  - generic [ref=e4131]: 
+                  - generic [ref=e4132]: 
+                  - generic [ref=e4133]: "4.9"
+                - generic [ref=e4134]:
+                  - generic [ref=e4135]: 
+                  - text: Disponible
+              - generic [ref=e4136]:
+                - generic [ref=e4137]: Abrigo Dulce
+                - heading "Chocolatada Caliente" [level=3] [ref=e4138]
+              - paragraph [ref=e4139]: Chocolate cremoso bien caliente. El abrazo reconfortante para los días fríos.
+              - generic [ref=e4140]:
+                - generic [ref=e4141]:
+                  - generic [ref=e4142]: 
+                  - text: Chocolate
+                - generic [ref=e4143]:
+                  - generic [ref=e4144]: 
+                  - text: Leche
+                - generic [ref=e4145]:
+                  - generic [ref=e4146]: 
+                  - text: Crema batida
+              - generic [ref=e4147]:
+                - button " Agregar" [ref=e4148]:
+                  - generic [ref=e4149]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4150]:
+                  - generic [ref=e4151]: 
+                  - text: Ver detalle
+          - generic [ref=e4152] [cursor=pointer]:
+            - generic [ref=e4153]:
+              - img "Mokaccino Cremoso" [ref=e4154]
+              - generic [ref=e4156]: "-18%"
+              - generic [ref=e4157]:
+                - generic [ref=e4158]: 
+                - text: Caliente
+              - generic [ref=e4159]:
+                - generic [ref=e4160]: Bs. 17
+                - generic [ref=e4161]: Bs. 14
+              - generic [ref=e4163]:
+                - generic [ref=e4164]: 
+                - text: Ver detalle
+            - generic [ref=e4165]:
+              - generic [ref=e4166]:
+                - generic [ref=e4167]:
+                  - generic [ref=e4168]: 
+                  - generic [ref=e4169]: 
+                  - generic [ref=e4170]: 
+                  - generic [ref=e4171]: 
+                  - generic [ref=e4172]: 
+                  - generic [ref=e4173]: "4.9"
+                - generic [ref=e4174]:
+                  - generic [ref=e4175]: 
+                  - text: Disponible
+              - generic [ref=e4176]:
+                - generic [ref=e4177]: Fusión Perfecta
+                - heading "Mokaccino Cremoso" [level=3] [ref=e4178]
+              - paragraph [ref=e4179]: Café y chocolate en armonía. Dulce, cremoso y absolutamente irresistible.
+              - generic [ref=e4180]:
+                - generic [ref=e4181]:
+                  - generic [ref=e4182]: 
+                  - text: Espresso
+                - generic [ref=e4183]:
+                  - generic [ref=e4184]: 
+                  - text: Chocolate
+                - generic [ref=e4185]:
+                  - generic [ref=e4186]: 
+                  - text: Leche
+              - generic [ref=e4187]:
+                - button " Agregar" [ref=e4188]:
+                  - generic [ref=e4189]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4190]:
+                  - generic [ref=e4191]: 
+                  - text: Ver detalle
+          - generic [ref=e4192] [cursor=pointer]:
+            - generic [ref=e4193]:
+              - img "Frapuccino de Chocolate" [ref=e4194]
+              - generic [ref=e4196]: "-18%"
+              - generic [ref=e4197]:
+                - generic [ref=e4198]: 
+                - text: Helado
+              - generic [ref=e4199]:
+                - generic [ref=e4200]: Bs. 22
+                - generic [ref=e4201]: Bs. 18
+              - generic [ref=e4203]:
+                - generic [ref=e4204]: 
+                - text: Ver detalle
+            - generic [ref=e4205]:
+              - generic [ref=e4206]:
+                - generic [ref=e4207]:
+                  - generic [ref=e4208]: 
+                  - generic [ref=e4209]: 
+                  - generic [ref=e4210]: 
+                  - generic [ref=e4211]: 
+                  - generic [ref=e4212]: 
+                  - generic [ref=e4213]: "4.9"
+                - generic [ref=e4214]:
+                  - generic [ref=e4215]: 
+                  - text: Disponible
+              - generic [ref=e4216]:
+                - generic [ref=e4217]: Frescura Helada
+                - heading "Frapuccino de Chocolate" [level=3] [ref=e4218]
+              - paragraph [ref=e4219]: Bebida helada de chocolate con café. Refrescante y deliciosamente cremosa.
+              - generic [ref=e4220]:
+                - generic [ref=e4221]:
+                  - generic [ref=e4222]: 
+                  - text: Café
+                - generic [ref=e4223]:
+                  - generic [ref=e4224]: 
+                  - text: Chocolate
+                - generic [ref=e4225]:
+                  - generic [ref=e4226]: 
+                  - text: Hielo
+              - generic [ref=e4227]:
+                - button " Agregar" [ref=e4228]:
+                  - generic [ref=e4229]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4230]:
+                  - generic [ref=e4231]: 
+                  - text: Ver detalle
+          - generic [ref=e4232] [cursor=pointer]:
+            - generic [ref=e4233]:
+              - img "Frapuccino Dulce de Leche" [ref=e4234]
+              - generic [ref=e4236]: "-18%"
+              - generic [ref=e4237]:
+                - generic [ref=e4238]: 
+                - text: Helado
+              - generic [ref=e4239]:
+                - generic [ref=e4240]: Bs. 22
+                - generic [ref=e4241]: Bs. 18
+              - generic [ref=e4243]:
+                - generic [ref=e4244]: 
+                - text: Ver detalle
+            - generic [ref=e4245]:
+              - generic [ref=e4246]:
+                - generic [ref=e4247]:
+                  - generic [ref=e4248]: 
+                  - generic [ref=e4249]: 
+                  - generic [ref=e4250]: 
+                  - generic [ref=e4251]: 
+                  - generic [ref=e4252]: 
+                  - generic [ref=e4253]: "4.9"
+                - generic [ref=e4254]:
+                  - generic [ref=e4255]: 
+                  - text: Disponible
+              - generic [ref=e4256]:
+                - generic [ref=e4257]: Antojo Irresistible
+                - heading "Frapuccino Dulce de Leche" [level=3] [ref=e4258]
+              - paragraph [ref=e4259]: El sabor inconfundible del dulce de leche en un frapuccino para chuparse los dedos.
+              - generic [ref=e4260]:
+                - generic [ref=e4261]:
+                  - generic [ref=e4262]: 
+                  - text: Café
+                - generic [ref=e4263]:
+                  - generic [ref=e4264]: 
+                  - text: Dulce de leche
+                - generic [ref=e4265]:
+                  - generic [ref=e4266]: 
+                  - text: Hielo
+              - generic [ref=e4267]:
+                - button " Agregar" [ref=e4268]:
+                  - generic [ref=e4269]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4270]:
+                  - generic [ref=e4271]: 
+                  - text: Ver detalle
+          - generic [ref=e4272] [cursor=pointer]:
+            - generic [ref=e4273]:
+              - img "Frapuccino Clásico" [ref=e4274]
+              - generic [ref=e4276]: "-20%"
+              - generic [ref=e4277]:
+                - generic [ref=e4278]: 
+                - text: Helado
+              - generic [ref=e4279]:
+                - generic [ref=e4280]: Bs. 20
+                - generic [ref=e4281]: Bs. 16
+              - generic [ref=e4283]:
+                - generic [ref=e4284]: 
+                - text: Ver detalle
+            - generic [ref=e4285]:
+              - generic [ref=e4286]:
+                - generic [ref=e4287]:
+                  - generic [ref=e4288]: 
+                  - generic [ref=e4289]: 
+                  - generic [ref=e4290]: 
+                  - generic [ref=e4291]: 
+                  - generic [ref=e4292]: 
+                  - generic [ref=e4293]: "4.9"
+                - generic [ref=e4294]:
+                  - generic [ref=e4295]: 
+                  - text: Disponible
+              - generic [ref=e4296]:
+                - generic [ref=e4297]: El Original
+                - heading "Frapuccino Clásico" [level=3] [ref=e4298]
+              - paragraph [ref=e4299]: Suave, refrescante y perfecto para los días de calor en Santa Cruz. Un clásico.
+              - generic [ref=e4300]:
+                - generic [ref=e4301]:
+                  - generic [ref=e4302]: 
+                  - text: Café
+                - generic [ref=e4303]:
+                  - generic [ref=e4304]: 
+                  - text: Leche
+                - generic [ref=e4305]:
+                  - generic [ref=e4306]: 
+                  - text: Hielo
+              - generic [ref=e4307]:
+                - button " Agregar" [ref=e4308]:
+                  - generic [ref=e4309]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4310]:
+                  - generic [ref=e4311]: 
+                  - text: Ver detalle
+          - generic [ref=e4312] [cursor=pointer]:
+            - generic [ref=e4313]:
+              - img "Licuado Natural con Agua" [ref=e4314]
+              - generic [ref=e4316]: "-17%"
+              - generic [ref=e4317]:
+                - generic [ref=e4318]: 
+                - text: Frutas Frescas
+              - generic [ref=e4319]:
+                - generic [ref=e4320]: Bs. 12
+                - generic [ref=e4321]: Bs. 10
+              - generic [ref=e4323]:
+                - generic [ref=e4324]: 
+                - text: Ver detalle
+            - generic [ref=e4325]:
+              - generic [ref=e4326]:
+                - generic [ref=e4327]:
+                  - generic [ref=e4328]: 
+                  - generic [ref=e4329]: 
+                  - generic [ref=e4330]: 
+                  - generic [ref=e4331]: 
+                  - generic [ref=e4332]: 
+                  - generic [ref=e4333]: "4.9"
+                - generic [ref=e4334]:
+                  - generic [ref=e4335]: 
+                  - text: Disponible
+              - generic [ref=e4336]:
+                - generic [ref=e4337]: Refrescante y Ligero
+                - heading "Licuado Natural con Agua" [level=3] [ref=e4338]
+              - paragraph [ref=e4339]: Licuado de frutas naturales con agua. Saludable y revitalizante.
+              - generic [ref=e4340]:
+                - generic [ref=e4341]:
+                  - generic [ref=e4342]: 
+                  - text: Frutas frescas
+                - generic [ref=e4343]:
+                  - generic [ref=e4344]: 
+                  - text: Agua
+                - generic [ref=e4345]:
+                  - generic [ref=e4346]: 
+                  - text: Azúcar opcional
+              - generic [ref=e4347]:
+                - button " Agregar" [ref=e4348]:
+                  - generic [ref=e4349]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4350]:
+                  - generic [ref=e4351]: 
+                  - text: Ver detalle
+          - generic [ref=e4352] [cursor=pointer]:
+            - generic [ref=e4353]:
+              - img "Licuado Cremoso con Leche" [ref=e4354]
+              - generic [ref=e4356]: "-20%"
+              - generic [ref=e4357]:
+                - generic [ref=e4358]: 
+                - text: Frutas Frescas
+              - generic [ref=e4359]:
+                - generic [ref=e4360]: Bs. 15
+                - generic [ref=e4361]: Bs. 12
+              - generic [ref=e4363]:
+                - generic [ref=e4364]: 
+                - text: Ver detalle
+            - generic [ref=e4365]:
+              - generic [ref=e4366]:
+                - generic [ref=e4367]:
+                  - generic [ref=e4368]: 
+                  - generic [ref=e4369]: 
+                  - generic [ref=e4370]: 
+                  - generic [ref=e4371]: 
+                  - generic [ref=e4372]: 
+                  - generic [ref=e4373]: "4.9"
+                - generic [ref=e4374]:
+                  - generic [ref=e4375]: 
+                  - text: Disponible
+              - generic [ref=e4376]:
+                - generic [ref=e4377]: Sustancioso
+                - heading "Licuado Cremoso con Leche" [level=3] [ref=e4378]
+              - paragraph [ref=e4379]: Licuado cremoso con leche fresca. Ideal como complemento de tus salteñas.
+              - generic [ref=e4380]:
+                - generic [ref=e4381]:
+                  - generic [ref=e4382]: 
+                  - text: Frutas frescas
+                - generic [ref=e4383]:
+                  - generic [ref=e4384]: 
+                  - text: Leche
+                - generic [ref=e4385]:
+                  - generic [ref=e4386]: 
+                  - text: Azúcar opcional
+              - generic [ref=e4387]:
+                - button " Agregar" [ref=e4388]:
+                  - generic [ref=e4389]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4390]:
+                  - generic [ref=e4391]: 
+                  - text: Ver detalle
+          - generic [ref=e4392] [cursor=pointer]:
+            - generic [ref=e4393]:
+              - img "Limonada Recién Exprimida" [ref=e4394]
+              - generic [ref=e4396]: "-20%"
+              - generic [ref=e4397]:
+                - generic [ref=e4398]: 
+                - text: Cítrico
+              - generic [ref=e4399]:
+                - generic [ref=e4400]: Bs. 10
+                - generic [ref=e4401]: Bs. 8
+              - generic [ref=e4403]:
+                - generic [ref=e4404]: 
+                - text: Ver detalle
+            - generic [ref=e4405]:
+              - generic [ref=e4406]:
+                - generic [ref=e4407]:
+                  - generic [ref=e4408]: 
+                  - generic [ref=e4409]: 
+                  - generic [ref=e4410]: 
+                  - generic [ref=e4411]: 
+                  - generic [ref=e4412]: 
+                  - generic [ref=e4413]: "4.9"
+                - generic [ref=e4414]:
+                  - generic [ref=e4415]: 
+                  - text: Disponible
+              - generic [ref=e4416]:
+                - generic [ref=e4417]: Frescura Natural
+                - heading "Limonada Recién Exprimida" [level=3] [ref=e4418]
+              - paragraph [ref=e4419]: Recién exprimida. El clásico refrescante que nunca puede faltar en tu mesa.
+              - generic [ref=e4420]:
+                - generic [ref=e4421]:
+                  - generic [ref=e4422]: 
+                  - text: Limón fresco
+                - generic [ref=e4423]:
+                  - generic [ref=e4424]: 
+                  - text: Agua
+                - generic [ref=e4425]:
+                  - generic [ref=e4426]: 
+                  - text: Azúcar
+              - generic [ref=e4427]:
+                - button " Agregar" [ref=e4428]:
+                  - generic [ref=e4429]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4430]:
+                  - generic [ref=e4431]: 
+                  - text: Ver detalle
+          - generic [ref=e4432] [cursor=pointer]:
+            - generic [ref=e4433]:
+              - img "Mocochinchi Oriental" [ref=e4434]
+              - generic [ref=e4436]: "-20%"
+              - generic [ref=e4437]:
+                - generic [ref=e4438]: 
+                - text: Casero
+              - generic [ref=e4439]:
+                - generic [ref=e4440]: Bs. 10
+                - generic [ref=e4441]: Bs. 8
+              - generic [ref=e4443]:
+                - generic [ref=e4444]: 
+                - text: Ver detalle
+            - generic [ref=e4445]:
+              - generic [ref=e4446]:
+                - generic [ref=e4447]:
+                  - generic [ref=e4448]: 
+                  - generic [ref=e4449]: 
+                  - generic [ref=e4450]: 
+                  - generic [ref=e4451]: 
+                  - generic [ref=e4452]: 
+                  - generic [ref=e4453]: "4.9"
+                - generic [ref=e4454]:
+                  - generic [ref=e4455]: 
+                  - text: Disponible
+              - generic [ref=e4456]:
+                - generic [ref=e4457]: Tradición Boliviana
+                - heading "Mocochinchi Oriental" [level=3] [ref=e4458]
+              - paragraph [ref=e4459]: Durazno deshidratado con canela. Dulce, aromático y bien oriental.
+              - generic [ref=e4460]:
+                - generic [ref=e4461]:
+                  - generic [ref=e4462]: 
+                  - text: Durazno seco
+                - generic [ref=e4463]:
+                  - generic [ref=e4464]: 
+                  - text: Canela
+                - generic [ref=e4465]:
+                  - generic [ref=e4466]: 
+                  - text: Azúcar
+              - generic [ref=e4467]:
+                - button " Agregar" [ref=e4468]:
+                  - generic [ref=e4469]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4470]:
+                  - generic [ref=e4471]: 
+                  - text: Ver detalle
+          - generic [ref=e4472] [cursor=pointer]:
+            - generic [ref=e4473]:
+              - img "Agua Mineral 500ml" [ref=e4474]
+              - generic [ref=e4476]: "-25%"
+              - generic [ref=e4477]:
+                - generic [ref=e4478]: 
+                - text: Sin Gas
+              - generic [ref=e4479]:
+                - generic [ref=e4480]: Bs. 8
+                - generic [ref=e4481]: Bs. 6
+              - generic [ref=e4483]:
+                - generic [ref=e4484]: 
+                - text: Ver detalle
+            - generic [ref=e4485]:
+              - generic [ref=e4486]:
+                - generic [ref=e4487]:
+                  - generic [ref=e4488]: 
+                  - generic [ref=e4489]: 
+                  - generic [ref=e4490]: 
+                  - generic [ref=e4491]: 
+                  - generic [ref=e4492]: 
+                  - generic [ref=e4493]: "4.9"
+                - generic [ref=e4494]:
+                  - generic [ref=e4495]: 
+                  - text: Disponible
+              - generic [ref=e4496]:
+                - generic [ref=e4497]: Pureza en Botella
+                - heading "Agua Mineral 500ml" [level=3] [ref=e4498]
+              - paragraph [ref=e4499]: Agua mineral bien fría. El acompañante más puro para cualquier salteña.
+              - generic [ref=e4500]:
+                - generic [ref=e4501]:
+                  - generic [ref=e4502]: 
+                  - text: Agua mineral
+                - generic [ref=e4503]:
+                  - generic [ref=e4504]: 
+                  - text: 500ml
+              - generic [ref=e4505]:
+                - button " Agregar" [ref=e4506]:
+                  - generic [ref=e4507]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4508]:
+                  - generic [ref=e4509]: 
+                  - text: Ver detalle
+          - generic [ref=e4510] [cursor=pointer]:
+            - generic [ref=e4511]:
+              - img "Tostada de la Casa" [ref=e4512]
+              - generic [ref=e4514]: "-22%"
+              - generic [ref=e4515]:
+                - generic [ref=e4516]: 
+                - text: Gasificada
+              - generic [ref=e4517]:
+                - generic [ref=e4518]: Bs. 9
+                - generic [ref=e4519]: Bs. 7
+              - generic [ref=e4521]:
+                - generic [ref=e4522]: 
+                - text: Ver detalle
+            - generic [ref=e4523]:
+              - generic [ref=e4524]:
+                - generic [ref=e4525]:
+                  - generic [ref=e4526]: 
+                  - generic [ref=e4527]: 
+                  - generic [ref=e4528]: 
+                  - generic [ref=e4529]: 
+                  - generic [ref=e4530]: 
+                  - generic [ref=e4531]: "4.9"
+                - generic [ref=e4532]:
+                  - generic [ref=e4533]: 
+                  - text: Disponible
+              - generic [ref=e4534]:
+                - generic [ref=e4535]: Nuestro Refresco
+                - heading "Tostada de la Casa" [level=3] [ref=e4536]
+              - paragraph [ref=e4537]: El refresco oficial de HagamosTech. El maridaje perfecto para las picantes.
+              - generic [ref=e4538]:
+                - generic [ref=e4539]:
+                  - generic [ref=e4540]: 
+                  - text: Refresco Tostada
+                - generic [ref=e4541]:
+                  - generic [ref=e4542]: 
+                  - text: Hielo
+              - generic [ref=e4543]:
+                - button " Agregar" [ref=e4544]:
+                  - generic [ref=e4545]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4546]:
+                  - generic [ref=e4547]: 
+                  - text: Ver detalle
+          - generic [ref=e4548] [cursor=pointer]:
+            - generic [ref=e4549]:
+              - img "Sundae de Chocolate" [ref=e4550]
+              - generic [ref=e4552]: "-20%"
+              - generic [ref=e4553]:
+                - generic [ref=e4554]: 
+                - text: Postre Helado
+              - generic [ref=e4555]:
+                - generic [ref=e4556]: Bs. 15
+                - generic [ref=e4557]: Bs. 12
+              - generic [ref=e4559]:
+                - generic [ref=e4560]: 
+                - text: Ver detalle
+            - generic [ref=e4561]:
+              - generic [ref=e4562]:
+                - generic [ref=e4563]:
+                  - generic [ref=e4564]: 
+                  - generic [ref=e4565]: 
+                  - generic [ref=e4566]: 
+                  - generic [ref=e4567]: 
+                  - generic [ref=e4568]: 
+                  - generic [ref=e4569]: "4.9"
+                - generic [ref=e4570]:
+                  - generic [ref=e4571]: 
+                  - text: Disponible
+              - generic [ref=e4572]:
+                - generic [ref=e4573]: Dulce Final
+                - heading "Sundae de Chocolate" [level=3] [ref=e4574]
+              - paragraph [ref=e4575]: Helado cremoso bañado en salsa de chocolate. El broche de oro de tu comida.
+              - generic [ref=e4576]:
+                - generic [ref=e4577]:
+                  - generic [ref=e4578]: 
+                  - text: Helado de vainilla
+                - generic [ref=e4579]:
+                  - generic [ref=e4580]: 
+                  - text: Chocolate
+                - generic [ref=e4581]:
+                  - generic [ref=e4582]: 
+                  - text: Crema
+              - generic [ref=e4583]:
+                - button " Agregar" [ref=e4584]:
+                  - generic [ref=e4585]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4586]:
+                  - generic [ref=e4587]: 
+                  - text: Ver detalle
+          - generic [ref=e4588] [cursor=pointer]:
+            - generic [ref=e4589]:
+              - img "Sundae de Vainilla" [ref=e4590]
+              - generic [ref=e4592]: "-17%"
+              - generic [ref=e4593]:
+                - generic [ref=e4594]: 
+                - text: Postre Helado
+              - generic [ref=e4595]:
+                - generic [ref=e4596]: Bs. 12
+                - generic [ref=e4597]: Bs. 10
+              - generic [ref=e4599]:
+                - generic [ref=e4600]: 
+                - text: Ver detalle
+            - generic [ref=e4601]:
+              - generic [ref=e4602]:
+                - generic [ref=e4603]:
+                  - generic [ref=e4604]: 
+                  - generic [ref=e4605]: 
+                  - generic [ref=e4606]: 
+                  - generic [ref=e4607]: 
+                  - generic [ref=e4608]: 
+                  - generic [ref=e4609]: "4.9"
+                - generic [ref=e4610]:
+                  - generic [ref=e4611]: 
+                  - text: Disponible
+              - generic [ref=e4612]:
+                - generic [ref=e4613]: Simple y Perfecto
+                - heading "Sundae de Vainilla" [level=3] [ref=e4614]
+              - paragraph [ref=e4615]: El clásico de siempre. Sencillo, delicioso y perfecto para cualquier antojo.
+              - generic [ref=e4616]:
+                - generic [ref=e4617]:
+                  - generic [ref=e4618]: 
+                  - text: Helado de vainilla
+                - generic [ref=e4619]:
+                  - generic [ref=e4620]: 
+                  - text: Topping
+                - generic [ref=e4621]:
+                  - generic [ref=e4622]: 
+                  - text: Galleta
+              - generic [ref=e4623]:
+                - button " Agregar" [ref=e4624]:
+                  - generic [ref=e4625]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4626]:
+                  - generic [ref=e4627]: 
+                  - text: Ver detalle
+          - generic [ref=e4628] [cursor=pointer]:
+            - generic [ref=e4629]:
+              - img "Sundae Mixto Especial" [ref=e4630]
+              - generic [ref=e4632]: "-18%"
+              - generic [ref=e4633]:
+                - generic [ref=e4634]: 
+                - text: Postre Helado
+              - generic [ref=e4635]:
+                - generic [ref=e4636]: Bs. 17
+                - generic [ref=e4637]: Bs. 14
+              - generic [ref=e4639]:
+                - generic [ref=e4640]: 
+                - text: Ver detalle
+            - generic [ref=e4641]:
+              - generic [ref=e4642]:
+                - generic [ref=e4643]:
+                  - generic [ref=e4644]: 
+                  - generic [ref=e4645]: 
+                  - generic [ref=e4646]: 
+                  - generic [ref=e4647]: 
+                  - generic [ref=e4648]: 
+                  - generic [ref=e4649]: "4.9"
+                - generic [ref=e4650]:
+                  - generic [ref=e4651]: 
+                  - text: Disponible
+              - generic [ref=e4652]:
+                - generic [ref=e4653]: Lo Mejor de Dos
+                - heading "Sundae Mixto Especial" [level=3] [ref=e4654]
+              - paragraph [ref=e4655]: Chocolate y vainilla en un solo sundae. Para los que no saben elegir.
+              - generic [ref=e4656]:
+                - generic [ref=e4657]:
+                  - generic [ref=e4658]: 
+                  - text: Helado mixto
+                - generic [ref=e4659]:
+                  - generic [ref=e4660]: 
+                  - text: Chocolate
+                - generic [ref=e4661]:
+                  - generic [ref=e4662]: 
+                  - text: Crema
+              - generic [ref=e4663]:
+                - button " Agregar" [ref=e4664]:
+                  - generic [ref=e4665]: 
+                  - text: Agregar
+                - button " Ver detalle" [ref=e4666]:
+                  - generic [ref=e4667]: 
+                  - text: Ver detalle
+      - button " Bs. 0" [ref=e4669]:
+        - generic [ref=e4670]: 
+        - generic [ref=e4671]: Bs. 0
+  - contentinfo [ref=e1971]:
+    - generic [ref=e1972]:
+      - generic [ref=e1973]:
+        - generic [ref=e1974]:
+          - link [ref=e1975] [cursor=pointer]:
+            - /url: "#/"
+            - img "Logo HagamosTech" [ref=e1976]
+          - paragraph [ref=e1977]: Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+          - generic [ref=e1978]:
+            - link "" [ref=e1979] [cursor=pointer]:
+              - /url: https://www.facebook.com/HagamosTech
+            - link "" [ref=e1981] [cursor=pointer]:
+              - /url: https://www.instagram.com/hagamostech/
+            - link "" [ref=e1983] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@hagamostech
+            - link "" [ref=e1985] [cursor=pointer]:
+              - /url: https://wa.me/59161320004
+        - generic [ref=e1987]:
+          - heading "SOLUCIONES" [level=3] [ref=e1988]
+          - list [ref=e1990]:
+            - listitem [ref=e1991]:
+              - link " Tecnología" [ref=e1992] [cursor=pointer]:
+                - /url: "#/#tecnologia"
+                - generic [ref=e1993]: 
+                - generic [ref=e1995]: Tecnología
+            - listitem [ref=e1996]:
+              - link " Academia" [ref=e1997] [cursor=pointer]:
+                - /url: "#/#academia"
+                - generic [ref=e1998]: 
+                - generic [ref=e2000]: Academia
+            - listitem [ref=e2001]:
+              - link " Negocios" [ref=e2002] [cursor=pointer]:
+                - /url: "#/#negocios"
+                - generic [ref=e2003]: 
+                - generic [ref=e2005]: Negocios
+            - listitem [ref=e2006]:
+              - link " Soluciones personalizadas" [ref=e2007] [cursor=pointer]:
+                - /url: "#/#personalizado"
+                - generic [ref=e2008]: 
+                - generic [ref=e2010]: Soluciones personalizadas
+            - listitem [ref=e2011]:
+              - link " Cómo trabajamos" [ref=e2012] [cursor=pointer]:
+                - /url: "#/#flujo"
+                - generic [ref=e2013]: 
+                - generic [ref=e2015]: Cómo trabajamos
+        - generic [ref=e2016]:
+          - heading "NOSOTROS" [level=3] [ref=e2017]
+          - list [ref=e2018]:
+            - listitem [ref=e2019]:
+              - link " Cómo trabajamos" [ref=e2020] [cursor=pointer]:
+                - /url: "#/#flujo"
+                - generic [ref=e2021]: 
+                - generic [ref=e2023]: Cómo trabajamos
+            - listitem [ref=e2024]:
+              - link " Nuestras soluciones" [ref=e2025] [cursor=pointer]:
+                - /url: "#/#que-hacemos"
+                - generic [ref=e2026]: 
+                - generic [ref=e2028]: Nuestras soluciones
+            - listitem [ref=e2029]:
+              - link " Contanos tu idea" [ref=e2030] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2031]: 
+                - generic [ref=e2033]: Contanos tu idea
+            - listitem [ref=e2034]:
+              - link " Apoyo y soporte" [ref=e2035] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2036]: 
+                - generic [ref=e2038]: Apoyo y soporte
+            - listitem [ref=e2039]:
+              - link " Trabajá con nosotros" [ref=e2040] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e2041]: 
+                - generic [ref=e2043]: Trabajá con nosotros
+        - generic [ref=e2044]:
+          - heading "CONTACTO" [level=3] [ref=e2045]
+          - list [ref=e2047]:
+            - listitem [ref=e2048]:
+              - generic [ref=e2049]: 
+              - generic [ref=e2051]:
+                - generic [ref=e2052]: Oficina principal
+                - generic [ref=e2053]: Av. San Martín y 2do AnilloEquipetrol, Santa Cruz
+            - listitem [ref=e2054]:
+              - generic [ref=e2055]: 
+              - generic [ref=e2057]:
+                - generic [ref=e2058]: Email
+                - link "contacto@hagamostech.bo" [ref=e2059] [cursor=pointer]:
+                  - /url: mailto:contacto@hagamostech.bo
+            - listitem [ref=e2060]:
+              - generic [ref=e2061]: 
+              - generic [ref=e2063]:
+                - generic [ref=e2064]: Teléfono / WhatsApp
+                - link "+591 61320004" [ref=e2065] [cursor=pointer]:
+                  - /url: tel:+59161320004
+            - listitem [ref=e2066]:
+              - generic [ref=e2067]: 
+              - generic [ref=e2069]:
+                - generic [ref=e2070]: Horarios
+                - generic [ref=e2071]: "Lun - Vie: 09:00 - 18:00"
+      - generic [ref=e2072]:
+        - paragraph [ref=e2073]: © 2026 HagamosTech. Todos los derechos reservados.
+        - generic [ref=e2074]:
+          - link "Política de Privacidad" [ref=e2075] [cursor=pointer]:
+            - /url: "#/privacidad"
+          - link "Términos de Servicio" [ref=e2076] [cursor=pointer]:
+            - /url: "#/terminos"
+          - link "Cookies" [ref=e2077] [cursor=pointer]:
+            - /url: "#/cookies"
+  - button "" [ref=e2079] [cursor=pointer]
+  - button "" [ref=e2086] [cursor=pointer]

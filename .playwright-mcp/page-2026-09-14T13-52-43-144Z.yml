@@ -1,0 +1,1993 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e9]: 
+      - generic [ref=e10]: INICIANDO ENTORNO
+    - img "HagamosTech" [ref=e12]
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: Desarrollo a medida, robótica educativa y soluciones digitales con el estándar más alto de calidad y soporte.
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: 
+          - text: Software Pro
+        - generic [ref=e19]:
+          - generic [ref=e20]: 
+          - text: Robótica STEAM
+        - generic [ref=e22]:
+          - generic [ref=e23]: 
+          - text: Soporte 24/7
+    - generic [ref=e34]:
+      - generic [ref=e35]: "1"
+      - generic [ref=e36]: "% cargando"
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: 
+        - generic [ref=e43]: Código
+      - generic [ref=e45]:
+        - generic [ref=e46]: 
+        - generic [ref=e48]: Red
+      - generic [ref=e50]:
+        - generic [ref=e51]: 
+        - generic [ref=e53]: Servidor
+      - generic [ref=e55]:
+        - generic [ref=e56]: 
+        - generic [ref=e58]: Seguridad
+      - generic [ref=e60]:
+        - generic [ref=e61]: 
+        - generic [ref=e63]: ¡Listo!
+    - generic [ref=e64]:
+      - link " Facebook" [ref=e65] [cursor=pointer]:
+        - /url: https://www.facebook.com/HagamosTech
+        - generic [ref=e66]: 
+        - generic [ref=e68]: Facebook
+      - link " Instagram" [ref=e69] [cursor=pointer]:
+        - /url: https://www.instagram.com/hagamostech/
+        - generic [ref=e70]: 
+        - generic [ref=e72]: Instagram
+      - link " TikTok" [ref=e73] [cursor=pointer]:
+        - /url: https://www.tiktok.com/@hagamostech
+        - generic [ref=e74]: 
+        - generic [ref=e76]: TikTok
+      - link " WhatsApp" [ref=e77] [cursor=pointer]:
+        - /url: https://wa.me/59161320004
+        - generic [ref=e78]: 
+        - generic [ref=e80]: WhatsApp
+  - generic [ref=e82]:
+    - banner [ref=e83]:
+      - generic [ref=e85]:
+        - link "Ir al inicio de HagamosTech" [ref=e86] [cursor=pointer]:
+          - /url: "#/"
+          - img "Logo HagamosTech" [ref=e87]
+        - generic [ref=e88]:
+          - button "Abrir carrito" [ref=e89]:
+            - generic [ref=e90]: 
+          - button "Abrir Menú" [ref=e91]
+        - text:        
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic:
+              - generic: 
+              - generic: ¿Qué hacemos?
+            - generic: 
+          - generic:
+            - button "Tecnología ":
+              - text: Tecnología
+              - generic: 
+            - button "Academia ":
+              - text: Academia
+              - generic: 
+            - button "Negocios ":
+              - text: Negocios
+              - generic: 
+            - button "Soluciones personalizadas ":
+              - text: Soluciones personalizadas
+              - generic: 
+        - generic:
+          - generic:
+            - generic:
+              - generic: 
+              - generic: Servicios
+            - generic: 
+          - generic:
+            - button "Desarrollo Web ":
+              - text: Desarrollo Web
+              - generic: 
+            - button "Sistemas y Apps ":
+              - text: Sistemas y Apps
+              - generic: 
+            - button "Automatización ":
+              - text: Automatización
+              - generic: 
+            - button "Inteligencia Artificial ":
+              - text: Inteligencia Artificial
+              - generic: 
+            - button "Para tu Negocio ":
+              - text: Para tu Negocio
+              - generic: 
+            - button "Apoyo Académico ":
+              - text: Apoyo Académico
+              - generic: 
+            - button "Empleo ":
+              - text: Empleo
+              - generic: 
+            - button "Diseño Gráfico ":
+              - text: Diseño Gráfico
+              - generic: 
+        - generic:
+          - generic:
+            - generic:
+              - generic: 
+              - generic: ¿Para quién?
+            - generic: 
+          - generic:
+            - button "Estudiantes ":
+              - text: Estudiantes
+              - generic: 
+            - button "Emprendedores ":
+              - text: Emprendedores
+              - generic: 
+            - button "Pequeños negocios ":
+              - text: Pequeños negocios
+              - generic: 
+            - button "Empresas ":
+              - text: Empresas
+              - generic: 
+            - button "Personas particulares ":
+              - text: Personas particulares
+              - generic: 
+        - button " Cómo trabajamos ":
+          - generic:
+            - generic: 
+            - text: Cómo trabajamos
+          - generic: 
+        - generic:
+          - generic:
+            - generic:
+              - generic: 
+              - generic: Sobre Nosotros
+            - generic: 
+          - generic:
+            - button "Nuestra historia ":
+              - text: Nuestra historia
+              - generic: 
+            - button "Misión y Visión ":
+              - text: Misión y Visión
+              - generic: 
+            - button "Personalidad y Valores ":
+              - text: Personalidad y Valores
+              - generic: 
+            - button "¿Para quién? ":
+              - text: ¿Para quién?
+              - generic: 
+        - button " Contactanos ":
+          - generic:
+            - generic: 
+            - text: Contactanos
+          - generic: 
+      - generic:
+        - button " Iniciar Sesion":
+          - generic: 
+          - generic: Iniciar Sesion
+        - button " Crear Cuenta":
+          - generic:
+            - generic: 
+            - text: Crear Cuenta
+    - main [ref=e94]:
+      - generic [ref=e95]:
+        - generic [ref=e98]:
+          - generic [ref=e99]:
+            - generic [ref=e100]:
+              - generic [ref=e101]: 
+              - text: Soluciones digitales y tecnológicas
+            - heading "¿Idea, problema o necesidad? Hagámoslo." [level=1] [ref=e102]:
+              - generic [ref=e103]: ¿Idea, problema
+              - generic [ref=e104]: o necesidad?
+              - generic [ref=e105]: Hagámoslo.
+            - paragraph [ref=e108]:
+              - text: Soluciones
+              - strong [ref=e109]: tecnológicas
+              - text: ","
+              - strong [ref=e110]: digitales
+              - text: "y"
+              - strong [ref=e111]: académicas
+              - text: para
+              - strong [ref=e112]: cualquier tipo de cliente
+              - text: "y"
+              - strong [ref=e113]: cualquier necesidad
+              - text: ". No necesitás saber qué tecnología usar: contanos qué querés lograr."
+            - generic [ref=e114]:
+              - button " Contanos qué necesitás" [ref=e115] [cursor=pointer]:
+                - generic [ref=e116]: 
+                - generic [ref=e117]: Contanos qué necesitás
+              - button " Cómo trabajamos" [ref=e118] [cursor=pointer]:
+                - generic [ref=e119]: 
+                - generic [ref=e120]: Cómo trabajamos
+            - generic [ref=e121]:
+              - generic [ref=e122]:
+                - generic [ref=e123]: 
+                - generic [ref=e125]: 
+                - generic [ref=e127]: 
+              - generic [ref=e129]: Convertimos necesidades en soluciones reales
+          - img "Soluciones tecnológicas HagamosTech" [ref=e133]
+        - generic [ref=e135]:
+          - button "Mostrar elemento anterior" [ref=e136] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e137]: 
+          - button "Mostrar siguiente elemento" [ref=e138] [cursor=pointer]:
+            - generic [aria-hidden] [ref=e139]: 
+          - generic [ref=e140]:
+            - article [ref=e141]:
+              - img "React" [ref=e143]
+              - generic [ref=e145]:
+                - generic [ref=e146]:
+                  - generic [ref=e147]:
+                    - generic [ref=e148]: "01"
+                    - heading "React" [level=3] [ref=e149]
+                  - generic [ref=e150]:
+                    - generic [ref=e151]: 
+                    - generic [ref=e152]: Frontend UI
+                  - generic [ref=e153]:
+                    - generic [ref=e154]:
+                      - generic [ref=e155]: 
+                      - generic [ref=e156]: 
+                      - generic [ref=e157]: 
+                      - generic [ref=e158]: 
+                      - generic [ref=e159]: 
+                    - generic [ref=e160]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e161] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e162]: 
+            - article [ref=e163]:
+              - img "Tailwind CSS" [ref=e165]
+              - generic [ref=e167]:
+                - generic [ref=e168]:
+                  - generic [ref=e169]:
+                    - generic [ref=e170]: "02"
+                    - heading "Tailwind CSS" [level=3] [ref=e171]
+                  - generic [ref=e172]:
+                    - generic [ref=e173]: 
+                    - generic [ref=e174]: Diseño y Estilo
+                  - generic [ref=e175]:
+                    - generic [ref=e176]:
+                      - generic [ref=e177]: 
+                      - generic [ref=e178]: 
+                      - generic [ref=e179]: 
+                      - generic [ref=e180]: 
+                      - generic [ref=e181]: 
+                    - generic [ref=e182]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e183] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e184]: 
+            - article [ref=e185]:
+              - img "JavaScript" [ref=e187]
+              - generic [ref=e189]:
+                - generic [ref=e190]:
+                  - generic [ref=e191]:
+                    - generic [ref=e192]: "03"
+                    - heading "JavaScript" [level=3] [ref=e193]
+                  - generic [ref=e194]:
+                    - generic [ref=e195]: 
+                    - generic [ref=e196]: Lógica Web
+                  - generic [ref=e197]:
+                    - generic [ref=e198]:
+                      - generic [ref=e199]: 
+                      - generic [ref=e200]: 
+                      - generic [ref=e201]: 
+                      - generic [ref=e202]: 
+                      - generic [ref=e203]: 
+                    - generic [ref=e204]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e205] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e206]: 
+            - article [ref=e207]:
+              - img "TypeScript" [ref=e209]
+              - generic [ref=e211]:
+                - generic [ref=e212]:
+                  - generic [ref=e213]:
+                    - generic [ref=e214]: "04"
+                    - heading "TypeScript" [level=3] [ref=e215]
+                  - generic [ref=e216]:
+                    - generic [ref=e217]: 
+                    - generic [ref=e218]: Lógica Tipada
+                  - generic [ref=e219]:
+                    - generic [ref=e220]:
+                      - generic [ref=e221]: 
+                      - generic [ref=e222]: 
+                      - generic [ref=e223]: 
+                      - generic [ref=e224]: 
+                      - generic [ref=e225]: 
+                    - generic [ref=e226]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e227] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e228]: 
+            - article [ref=e229]:
+              - img "Node.js" [ref=e231]
+              - generic [ref=e233]:
+                - generic [ref=e234]:
+                  - generic [ref=e235]:
+                    - generic [ref=e236]: "05"
+                    - heading "Node.js" [level=3] [ref=e237]
+                  - generic [ref=e238]:
+                    - generic [ref=e239]: 
+                    - generic [ref=e240]: Backend API
+                  - generic [ref=e241]:
+                    - generic [ref=e242]:
+                      - generic [ref=e243]: 
+                      - generic [ref=e244]: 
+                      - generic [ref=e245]: 
+                      - generic [ref=e246]: 
+                      - generic [ref=e247]: 
+                    - generic [ref=e248]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e249] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e250]: 
+            - article [ref=e251]:
+              - generic [ref=e252]:
+                - img "PostgreSQL"
+              - generic [ref=e254]:
+                - generic [ref=e255]:
+                  - generic [ref=e256]:
+                    - generic [ref=e257]: "06"
+                    - heading "PostgreSQL" [level=3] [ref=e258]
+                  - generic [ref=e259]:
+                    - generic [ref=e260]: 
+                    - generic [ref=e261]: Base de Datos
+                  - generic [ref=e262]:
+                    - generic [ref=e263]:
+                      - generic [ref=e264]: 
+                      - generic [ref=e265]: 
+                      - generic [ref=e266]: 
+                      - generic [ref=e267]: 
+                      - generic [ref=e268]: 
+                    - generic [ref=e269]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e270] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e271]: 
+            - article [ref=e272]:
+              - generic [ref=e273]:
+                - img "Git"
+              - generic [ref=e275]:
+                - generic [ref=e276]:
+                  - generic [ref=e277]:
+                    - generic [ref=e278]: "07"
+                    - heading "Git" [level=3] [ref=e279]
+                  - generic [ref=e280]:
+                    - generic [ref=e281]: 
+                    - generic [ref=e282]: Version Control
+                  - generic [ref=e283]:
+                    - generic [ref=e284]:
+                      - generic [ref=e285]: 
+                      - generic [ref=e286]: 
+                      - generic [ref=e287]: 
+                      - generic [ref=e288]: 
+                      - generic [ref=e289]: 
+                    - generic [ref=e290]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e291] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e292]: 
+            - article [ref=e293]:
+              - generic [ref=e294]:
+                - img "Vite"
+              - generic [ref=e296]:
+                - generic [ref=e297]:
+                  - generic [ref=e298]:
+                    - generic [ref=e299]: "08"
+                    - heading "Vite" [level=3] [ref=e300]
+                  - generic [ref=e301]:
+                    - generic [ref=e302]: 
+                    - generic [ref=e303]: Build Tool
+                  - generic [ref=e304]:
+                    - generic [ref=e305]:
+                      - generic [ref=e306]: 
+                      - generic [ref=e307]: 
+                      - generic [ref=e308]: 
+                      - generic [ref=e309]: 
+                      - generic [ref=e310]: 
+                    - generic [ref=e311]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e312] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e313]: 
+            - article [ref=e314]:
+              - img "React" [ref=e316]
+              - generic [ref=e318]:
+                - generic [ref=e319]:
+                  - generic [ref=e320]:
+                    - generic [ref=e321]: "01"
+                    - heading "React" [level=3] [ref=e322]
+                  - generic [ref=e323]:
+                    - generic [ref=e324]: 
+                    - generic [ref=e325]: Frontend UI
+                  - generic [ref=e326]:
+                    - generic [ref=e327]:
+                      - generic [ref=e328]: 
+                      - generic [ref=e329]: 
+                      - generic [ref=e330]: 
+                      - generic [ref=e331]: 
+                      - generic [ref=e332]: 
+                    - generic [ref=e333]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e334] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e335]: 
+            - article [ref=e336]:
+              - img "Tailwind CSS" [ref=e338]
+              - generic [ref=e340]:
+                - generic [ref=e341]:
+                  - generic [ref=e342]:
+                    - generic [ref=e343]: "02"
+                    - heading "Tailwind CSS" [level=3] [ref=e344]
+                  - generic [ref=e345]:
+                    - generic [ref=e346]: 
+                    - generic [ref=e347]: Diseño y Estilo
+                  - generic [ref=e348]:
+                    - generic [ref=e349]:
+                      - generic [ref=e350]: 
+                      - generic [ref=e351]: 
+                      - generic [ref=e352]: 
+                      - generic [ref=e353]: 
+                      - generic [ref=e354]: 
+                    - generic [ref=e355]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e356] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e357]: 
+            - article [ref=e358]:
+              - img "JavaScript" [ref=e360]
+              - generic [ref=e362]:
+                - generic [ref=e363]:
+                  - generic [ref=e364]:
+                    - generic [ref=e365]: "03"
+                    - heading "JavaScript" [level=3] [ref=e366]
+                  - generic [ref=e367]:
+                    - generic [ref=e368]: 
+                    - generic [ref=e369]: Lógica Web
+                  - generic [ref=e370]:
+                    - generic [ref=e371]:
+                      - generic [ref=e372]: 
+                      - generic [ref=e373]: 
+                      - generic [ref=e374]: 
+                      - generic [ref=e375]: 
+                      - generic [ref=e376]: 
+                    - generic [ref=e377]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e378] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e379]: 
+            - article [ref=e380]:
+              - img "TypeScript" [ref=e382]
+              - generic [ref=e384]:
+                - generic [ref=e385]:
+                  - generic [ref=e386]:
+                    - generic [ref=e387]: "04"
+                    - heading "TypeScript" [level=3] [ref=e388]
+                  - generic [ref=e389]:
+                    - generic [ref=e390]: 
+                    - generic [ref=e391]: Lógica Tipada
+                  - generic [ref=e392]:
+                    - generic [ref=e393]:
+                      - generic [ref=e394]: 
+                      - generic [ref=e395]: 
+                      - generic [ref=e396]: 
+                      - generic [ref=e397]: 
+                      - generic [ref=e398]: 
+                    - generic [ref=e399]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e400] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e401]: 
+            - article [ref=e402]:
+              - img "Node.js" [ref=e404]
+              - generic [ref=e406]:
+                - generic [ref=e407]:
+                  - generic [ref=e408]:
+                    - generic [ref=e409]: "05"
+                    - heading "Node.js" [level=3] [ref=e410]
+                  - generic [ref=e411]:
+                    - generic [ref=e412]: 
+                    - generic [ref=e413]: Backend API
+                  - generic [ref=e414]:
+                    - generic [ref=e415]:
+                      - generic [ref=e416]: 
+                      - generic [ref=e417]: 
+                      - generic [ref=e418]: 
+                      - generic [ref=e419]: 
+                      - generic [ref=e420]: 
+                    - generic [ref=e421]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e422] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e423]: 
+            - article [ref=e424]:
+              - generic [ref=e425]:
+                - img "PostgreSQL"
+              - generic [ref=e427]:
+                - generic [ref=e428]:
+                  - generic [ref=e429]:
+                    - generic [ref=e430]: "06"
+                    - heading "PostgreSQL" [level=3] [ref=e431]
+                  - generic [ref=e432]:
+                    - generic [ref=e433]: 
+                    - generic [ref=e434]: Base de Datos
+                  - generic [ref=e435]:
+                    - generic [ref=e436]:
+                      - generic [ref=e437]: 
+                      - generic [ref=e438]: 
+                      - generic [ref=e439]: 
+                      - generic [ref=e440]: 
+                      - generic [ref=e441]: 
+                    - generic [ref=e442]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e443] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e444]: 
+            - article [ref=e445]:
+              - generic [ref=e446]:
+                - img "Git"
+              - generic [ref=e448]:
+                - generic [ref=e449]:
+                  - generic [ref=e450]:
+                    - generic [ref=e451]: "07"
+                    - heading "Git" [level=3] [ref=e452]
+                  - generic [ref=e453]:
+                    - generic [ref=e454]: 
+                    - generic [ref=e455]: Version Control
+                  - generic [ref=e456]:
+                    - generic [ref=e457]:
+                      - generic [ref=e458]: 
+                      - generic [ref=e459]: 
+                      - generic [ref=e460]: 
+                      - generic [ref=e461]: 
+                      - generic [ref=e462]: 
+                    - generic [ref=e463]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e464] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e465]: 
+            - article [ref=e466]:
+              - generic [ref=e467]:
+                - img "Vite"
+              - generic [ref=e469]:
+                - generic [ref=e470]:
+                  - generic [ref=e471]:
+                    - generic [ref=e472]: "08"
+                    - heading "Vite" [level=3] [ref=e473]
+                  - generic [ref=e474]:
+                    - generic [ref=e475]: 
+                    - generic [ref=e476]: Build Tool
+                  - generic [ref=e477]:
+                    - generic [ref=e478]:
+                      - generic [ref=e479]: 
+                      - generic [ref=e480]: 
+                      - generic [ref=e481]: 
+                      - generic [ref=e482]: 
+                      - generic [ref=e483]: 
+                    - generic [ref=e484]: "EFICACIA: 100%"
+                - button "VER DETALLES " [ref=e485] [cursor=pointer]:
+                  - text: VER DETALLES
+                  - generic [ref=e486]: 
+        - generic [ref=e488]:
+          - generic [ref=e489]: NUESTROS SERVICIOS
+          - generic [ref=e491]:
+            - heading [level=2] [ref=e492]:
+              - text: Soluciones que
+              - generic [ref=e493]: impulsan tu futuro
+            - paragraph [ref=e496]: Ofrecemos soluciones digitales integrales, desarrollo de software a medida y soporte especializado 24/7 para empresas, emprendedores, estudiantes y profesionales.
+          - generic [ref=e497]:
+            - button "ESTUDIANTES" [ref=e498] [cursor=pointer]
+            - button "EMPRENDEDORES" [ref=e499] [cursor=pointer]
+            - button "EMPLEO" [ref=e500] [cursor=pointer]
+            - button "DISEÑO GRÁFICO" [ref=e501] [cursor=pointer]
+            - button "WEB Y E-COMMERCE" [ref=e502] [cursor=pointer]
+            - button "SOFTWARE" [ref=e503] [cursor=pointer]
+            - button "IA Y AUTOMATIZACIÓN" [ref=e504] [cursor=pointer]
+            - button "A MEDIDA" [ref=e505] [cursor=pointer]
+          - generic [ref=e507]:
+            - button "Anterior" [disabled] [ref=e508] [cursor=pointer]:
+              - generic [ref=e509]: 
+            - button "Siguiente" [ref=e510] [cursor=pointer]:
+              - generic [ref=e511]: 
+            - generic [ref=e513]:
+              - generic [ref=e515]:
+                - generic [ref=e516]:
+                  - img "Presentaciones Interactivas" [ref=e517]
+                  - generic [ref=e519]: Académico
+                  - generic [ref=e521]: Activo
+                - generic [ref=e524]:
+                  - generic [ref=e525]: 
+                  - generic [ref=e527]: EXPOSICIONES
+                  - heading "Presentaciones Interactivas" [level=3] [ref=e530]
+                  - paragraph [ref=e532]: Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología.
+                  - generic [ref=e533]:
+                    - generic [ref=e534]:
+                      - generic [ref=e535]: 
+                      - generic [ref=e537]: Soporte
+                      - generic [ref=e538]: 24/7
+                    - generic [ref=e539]:
+                      - generic [ref=e540]: 
+                      - generic [ref=e542]: Diseño
+                      - generic [ref=e543]: A Medida
+                    - generic [ref=e544]:
+                      - generic [ref=e545]: 
+                      - generic [ref=e547]: Foco
+                      - generic [ref=e548]: Universitario
+                  - generic [ref=e550]:
+                    - generic [ref=e551]:
+                      - generic [ref=e552]: 
+                      - generic [ref=e553]: 
+                      - text: Diseño Visual
+                    - generic [ref=e554]:
+                      - generic [ref=e555]: 
+                      - generic [ref=e556]: 
+                      - text: Aprobación
+                    - generic [ref=e557]:
+                      - generic [ref=e558]: 
+                      - generic [ref=e559]: 
+                      - text: Exportación
+                  - generic [ref=e560]:
+                    - generic [ref=e561]:
+                      - generic [ref=e562]: PRECIO
+                      - generic [ref=e563]: A Medida
+                    - generic [ref=e564]:
+                      - link " WhatsApp" [ref=e565] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Presentaciones%20Interactivas
+                        - generic [ref=e566]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e567] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e568]: 
+              - generic [ref=e570]:
+                - generic [ref=e571]:
+                  - img "Formato APA 7 y Docs" [ref=e572]
+                  - generic [ref=e574]: Documentación
+                  - generic [ref=e576]: Activo
+                - generic [ref=e579]:
+                  - generic [ref=e580]: 
+                  - generic [ref=e582]: RIGOR ACADÉMICO
+                  - heading "Formato APA 7 y Docs" [level=3] [ref=e585]
+                  - paragraph [ref=e587]: Estructuración de monografías, corrección de estilo y referencias bibliográficas exactas.
+                  - generic [ref=e588]:
+                    - generic [ref=e589]:
+                      - generic [ref=e590]: 
+                      - generic [ref=e592]: Soporte
+                      - generic [ref=e593]: 24/7
+                    - generic [ref=e594]:
+                      - generic [ref=e595]: 
+                      - generic [ref=e597]: Diseño
+                      - generic [ref=e598]: A Medida
+                    - generic [ref=e599]:
+                      - generic [ref=e600]: 
+                      - generic [ref=e602]: Calidad
+                      - generic [ref=e603]: Ortografía
+                  - generic [ref=e605]:
+                    - generic [ref=e606]:
+                      - generic [ref=e607]: 
+                      - generic [ref=e608]: 
+                      - text: Índices
+                    - generic [ref=e609]:
+                      - generic [ref=e610]: 
+                      - generic [ref=e611]: 
+                      - text: Citas
+                    - generic [ref=e612]:
+                      - generic [ref=e613]: 
+                      - generic [ref=e614]: 
+                      - text: Editable
+                  - generic [ref=e615]:
+                    - generic [ref=e616]:
+                      - generic [ref=e617]: PRECIO
+                      - generic [ref=e618]: A Medida
+                    - generic [ref=e619]:
+                      - link " WhatsApp" [ref=e620] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Formato%20APA%207%20y%20Docs
+                        - generic [ref=e621]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e622] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e623]: 
+              - generic [ref=e625]:
+                - generic [ref=e626]:
+                  - img "Infografías y Diagramas" [ref=e627]
+                  - generic [ref=e629]: Visualización
+                  - generic [ref=e631]: Activo
+                - generic [ref=e634]:
+                  - generic [ref=e635]: 
+                  - generic [ref=e637]: ESQUEMAS
+                  - heading "Infografías y Diagramas" [level=3] [ref=e640]
+                  - paragraph [ref=e642]: Esquemas anatómicos, flujos de bases de datos o diagramas de procesos de recursos humanos.
+                  - generic [ref=e643]:
+                    - generic [ref=e644]:
+                      - generic [ref=e645]: 
+                      - generic [ref=e647]: Soporte
+                      - generic [ref=e648]: 24/7
+                    - generic [ref=e649]:
+                      - generic [ref=e650]: 
+                      - generic [ref=e652]: Diseño
+                      - generic [ref=e653]: A Medida
+                    - generic [ref=e654]:
+                      - generic [ref=e655]: 
+                      - generic [ref=e657]: Formato
+                      - generic [ref=e658]: Alta Res
+                  - generic [ref=e660]:
+                    - generic [ref=e661]:
+                      - generic [ref=e662]: 
+                      - generic [ref=e663]: 
+                      - text: Flujos
+                    - generic [ref=e664]:
+                      - generic [ref=e665]: 
+                      - generic [ref=e666]: 
+                      - text: Visual
+                    - generic [ref=e667]:
+                      - generic [ref=e668]: 
+                      - generic [ref=e669]: 
+                      - text: Imprimible
+                  - generic [ref=e670]:
+                    - generic [ref=e671]:
+                      - generic [ref=e672]: PRECIO
+                      - generic [ref=e673]: A Medida
+                    - generic [ref=e674]:
+                      - link " WhatsApp" [ref=e675] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Infograf%C3%ADas%20y%20Diagramas
+                        - generic [ref=e676]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e677] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e678]: 
+              - generic [ref=e680]:
+                - generic [ref=e681]:
+                  - img "Mapas Conceptuales" [ref=e682]
+                  - generic [ref=e684]: Síntesis
+                  - generic [ref=e686]: Activo
+                - generic [ref=e689]:
+                  - generic [ref=e690]: 
+                  - generic [ref=e692]: MARCO TEÓRICO
+                  - heading "Mapas Conceptuales" [level=3] [ref=e695]
+                  - paragraph [ref=e697]: Síntesis de marcos teóricos y diseño formal de carátulas para entrega de proyectos.
+                  - generic [ref=e698]:
+                    - generic [ref=e699]:
+                      - generic [ref=e700]: 
+                      - generic [ref=e702]: Soporte
+                      - generic [ref=e703]: 24/7
+                    - generic [ref=e704]:
+                      - generic [ref=e705]: 
+                      - generic [ref=e707]: Diseño
+                      - generic [ref=e708]: A Medida
+                    - generic [ref=e709]:
+                      - generic [ref=e710]: 
+                      - generic [ref=e712]: Teoría
+                      - generic [ref=e713]: Precisa
+                  - generic [ref=e715]:
+                    - generic [ref=e716]:
+                      - generic [ref=e717]: 
+                      - generic [ref=e718]: 
+                      - text: Resumen
+                    - generic [ref=e719]:
+                      - generic [ref=e720]: 
+                      - generic [ref=e721]: 
+                      - text: Niveles
+                    - generic [ref=e722]:
+                      - generic [ref=e723]: 
+                      - generic [ref=e724]: 
+                      - text: Formatos
+                  - generic [ref=e725]:
+                    - generic [ref=e726]:
+                      - generic [ref=e727]: PRECIO
+                      - generic [ref=e728]: A Medida
+                    - generic [ref=e729]:
+                      - link " WhatsApp" [ref=e730] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Mapas%20Conceptuales
+                        - generic [ref=e731]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e732] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e733]: 
+              - generic [ref=e735]:
+                - generic [ref=e736]:
+                  - img "Simuladores y Redes" [ref=e737]
+                  - generic [ref=e739]: Tecnología
+                  - generic [ref=e741]: Activo
+                - generic [ref=e744]:
+                  - generic [ref=e745]: 
+                  - generic [ref=e747]: ENTORNOS VIRTUALES
+                  - heading "Simuladores y Redes" [level=3] [ref=e750]
+                  - paragraph [ref=e752]: Entornos virtuales para pruebas de redes, robótica educativa o simulación de sistemas informáticos.
+                  - generic [ref=e753]:
+                    - generic [ref=e754]:
+                      - generic [ref=e755]: 
+                      - generic [ref=e757]: Soporte
+                      - generic [ref=e758]: 24/7
+                    - generic [ref=e759]:
+                      - generic [ref=e760]: 
+                      - generic [ref=e762]: Desarrollo
+                      - generic [ref=e763]: A Medida
+                    - generic [ref=e764]:
+                      - generic [ref=e765]: 
+                      - generic [ref=e767]: Redes
+                      - generic [ref=e768]: Cisco/Otros
+                  - generic [ref=e770]:
+                    - generic [ref=e771]:
+                      - generic [ref=e772]: 
+                      - generic [ref=e773]: 
+                      - text: Topologías
+                    - generic [ref=e774]:
+                      - generic [ref=e775]: 
+                      - generic [ref=e776]: 
+                      - text: Robótica
+                    - generic [ref=e777]:
+                      - generic [ref=e778]: 
+                      - generic [ref=e779]: 
+                      - text: Pruebas
+                  - generic [ref=e780]:
+                    - generic [ref=e781]:
+                      - generic [ref=e782]: PRECIO
+                      - generic [ref=e783]: A Medida
+                    - generic [ref=e784]:
+                      - link " WhatsApp" [ref=e785] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Simuladores%20y%20Redes
+                        - generic [ref=e786]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e787] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e788]: 
+              - generic [ref=e790]:
+                - generic [ref=e791]:
+                  - img "Apoyo en Programación" [ref=e792]
+                  - generic [ref=e794]: Software
+                  - generic [ref=e796]: Activo
+                - generic [ref=e799]:
+                  - generic [ref=e800]: 
+                  - generic [ref=e802]: CÓDIGO
+                  - heading "Apoyo en Programación" [level=3] [ref=e805]
+                  - paragraph [ref=e807]: Asesoría en desarrollo de código estructurado, algoritmos y lógica computacional.
+                  - generic [ref=e808]:
+                    - generic [ref=e809]:
+                      - generic [ref=e810]: 
+                      - generic [ref=e812]: Soporte
+                      - generic [ref=e813]: 24/7
+                    - generic [ref=e814]:
+                      - generic [ref=e815]: 
+                      - generic [ref=e817]: Solución
+                      - generic [ref=e818]: A Medida
+                    - generic [ref=e819]:
+                      - generic [ref=e820]: 
+                      - generic [ref=e822]: Debug
+                      - generic [ref=e823]: Efectivo
+                  - generic [ref=e825]:
+                    - generic [ref=e826]:
+                      - generic [ref=e827]: 
+                      - generic [ref=e828]: 
+                      - text: Algoritmos
+                    - generic [ref=e829]:
+                      - generic [ref=e830]: 
+                      - generic [ref=e831]: 
+                      - text: Bases Datos
+                    - generic [ref=e832]:
+                      - generic [ref=e833]: 
+                      - generic [ref=e834]: 
+                      - text: Funcionamiento
+                  - generic [ref=e835]:
+                    - generic [ref=e836]:
+                      - generic [ref=e837]: PRECIO
+                      - generic [ref=e838]: A Medida
+                    - generic [ref=e839]:
+                      - link " WhatsApp" [ref=e840] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20el%20servicio%3A%20Apoyo%20en%20Programaci%C3%B3n
+                        - generic [ref=e841]: 
+                        - text: WhatsApp
+                      - link "Consultar " [ref=e842] [cursor=pointer]:
+                        - /url: "#/contactanos"
+                        - text: Consultar
+                        - generic [ref=e843]: 
+            - generic [ref=e844]:
+              - button "Ir al slide 1" [ref=e845] [cursor=pointer]
+              - button "Ir al slide 2" [ref=e846] [cursor=pointer]
+              - button "Ir al slide 3" [ref=e847] [cursor=pointer]
+              - button "Ir al slide 4" [ref=e848] [cursor=pointer]
+        - generic [ref=e850]:
+          - generic [ref=e851]:
+            - heading [level=2] [ref=e852]:
+              - text: Ventajas de trabajar con
+              - generic [ref=e853]: HagamosTech
+            - paragraph [ref=e856]: Transformamos tus problemas, necesidades e ideas en soluciones reales con tecnología, creatividad y un proceso cercano.
+          - generic [ref=e857]:
+            - generic:
+              - button "Anterior" [ref=e858]:
+                - generic [ref=e859]: 
+              - button "Siguiente" [ref=e860]:
+                - generic [ref=e861]: 
+            - generic [ref=e862]:
+              - generic [ref=e864]:
+                - generic [ref=e866]:
+                  - generic [ref=e867]:
+                    - generic [ref=e868]: 
+                    - text: Desarrollo Profesional
+                  - heading "Soluciones Tecnológicas" [level=3] [ref=e869]:
+                    - text: Soluciones
+                    - generic [ref=e870]: Tecnológicas
+                  - paragraph [ref=e871]: Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.
+                  - generic [ref=e872]:
+                    - generic [ref=e873]:
+                      - generic [ref=e874]: 
+                      - text: Código Limpio
+                    - generic [ref=e875]:
+                      - generic [ref=e876]: 
+                      - text: Soporte Continuo
+                    - generic [ref=e877]:
+                      - generic [ref=e878]: 
+                      - text: Diseño Premium
+                    - generic [ref=e879]:
+                      - generic [ref=e880]: 
+                      - text: Escalable en la Nube
+                - generic [ref=e882]:
+                  - generic [ref=e883]: 
+                  - generic [ref=e885]: 
+              - generic [ref=e887]:
+                - generic [ref=e889]:
+                  - generic [ref=e890]:
+                    - generic [ref=e891]: 
+                    - text: Apoyo Estudiantil
+                  - heading "Apoyo Académico" [level=3] [ref=e892]:
+                    - text: Apoyo
+                    - generic [ref=e893]: Académico
+                  - paragraph [ref=e894]: Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.
+                  - generic [ref=e895]:
+                    - generic [ref=e896]:
+                      - generic [ref=e897]: 
+                      - text: Asesoría Técnica
+                    - generic [ref=e898]:
+                      - generic [ref=e899]: 
+                      - text: Modelado y Lógica
+                    - generic [ref=e900]:
+                      - generic [ref=e901]: 
+                      - text: Guías de Defensa
+                    - generic [ref=e902]:
+                      - generic [ref=e903]: 
+                      - text: Aprendizaje Guiado
+                - generic [ref=e905]:
+                  - generic [ref=e906]: 
+                  - generic [ref=e908]: 
+              - generic [ref=e910]:
+                - generic [ref=e912]:
+                  - generic [ref=e913]:
+                    - generic [ref=e914]: 
+                    - text: Digitalización
+                  - heading "Impulso a Negocios" [level=3] [ref=e915]:
+                    - text: Impulso a
+                    - generic [ref=e916]: Negocios
+                  - paragraph [ref=e917]: Llevamos tu negocio al mundo digital con catálogos en línea, landing pages y formularios de contacto directos.
+                  - generic [ref=e918]:
+                    - generic [ref=e919]:
+                      - generic [ref=e920]: 
+                      - text: Catálogos Digitales
+                    - generic [ref=e921]:
+                      - generic [ref=e922]: 
+                      - text: Contacto WhatsApp
+                    - generic [ref=e923]:
+                      - generic [ref=e924]: 
+                      - text: Mayor Visibilidad
+                    - generic [ref=e925]:
+                      - generic [ref=e926]: 
+                      - text: Fácil Gestión
+                - generic [ref=e928]:
+                  - generic [ref=e929]: 
+                  - generic [ref=e931]: 
+              - generic [ref=e933]:
+                - generic [ref=e935]:
+                  - generic [ref=e936]:
+                    - generic [ref=e937]: 
+                    - text: Metodología Ágil
+                  - heading "Soluciones Personalizadas" [level=3] [ref=e938]:
+                    - text: Soluciones
+                    - generic [ref=e939]: Personalizadas
+                  - paragraph [ref=e940]: "Trabajamos bajo el flujo: Contanos → Analizamos → Proponemos → Hacemos → Entregamos."
+                  - generic [ref=e941]:
+                    - generic [ref=e942]:
+                      - generic [ref=e943]: 
+                      - text: Análisis Sin Costo
+                    - generic [ref=e944]:
+                      - generic [ref=e945]: 
+                      - text: Propuesta Clara
+                    - generic [ref=e946]:
+                      - generic [ref=e947]: 
+                      - text: Desarrollo Rápido
+                    - generic [ref=e948]:
+                      - generic [ref=e949]: 
+                      - text: Entrega Llave en Mano
+                - generic [ref=e951]:
+                  - generic [ref=e952]: 
+                  - generic [ref=e954]: 
+              - generic [ref=e956]:
+                - generic [ref=e958]:
+                  - generic [ref=e959]:
+                    - generic [ref=e960]: 
+                    - text: Desarrollo Profesional
+                  - heading "Soluciones Tecnológicas" [level=3] [ref=e961]:
+                    - text: Soluciones
+                    - generic [ref=e962]: Tecnológicas
+                  - paragraph [ref=e963]: Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.
+                  - generic [ref=e964]:
+                    - generic [ref=e965]:
+                      - generic [ref=e966]: 
+                      - text: Código Limpio
+                    - generic [ref=e967]:
+                      - generic [ref=e968]: 
+                      - text: Soporte Continuo
+                    - generic [ref=e969]:
+                      - generic [ref=e970]: 
+                      - text: Diseño Premium
+                    - generic [ref=e971]:
+                      - generic [ref=e972]: 
+                      - text: Escalable en la Nube
+                - generic [ref=e974]:
+                  - generic [ref=e975]: 
+                  - generic [ref=e977]: 
+              - generic [ref=e979]:
+                - generic [ref=e981]:
+                  - generic [ref=e982]:
+                    - generic [ref=e983]: 
+                    - text: Apoyo Estudiantil
+                  - heading "Apoyo Académico" [level=3] [ref=e984]:
+                    - text: Apoyo
+                    - generic [ref=e985]: Académico
+                  - paragraph [ref=e986]: Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.
+                  - generic [ref=e987]:
+                    - generic [ref=e988]:
+                      - generic [ref=e989]: 
+                      - text: Asesoría Técnica
+                    - generic [ref=e990]:
+                      - generic [ref=e991]: 
+                      - text: Modelado y Lógica
+                    - generic [ref=e992]:
+                      - generic [ref=e993]: 
+                      - text: Guías de Defensa
+                    - generic [ref=e994]:
+                      - generic [ref=e995]: 
+                      - text: Aprendizaje Guiado
+                - generic [ref=e997]:
+                  - generic [ref=e998]: 
+                  - generic [ref=e1000]: 
+              - generic [ref=e1002]:
+                - generic [ref=e1004]:
+                  - generic [ref=e1005]:
+                    - generic [ref=e1006]: 
+                    - text: Digitalización
+                  - heading "Impulso a Negocios" [level=3] [ref=e1007]:
+                    - text: Impulso a
+                    - generic [ref=e1008]: Negocios
+                  - paragraph [ref=e1009]: Llevamos tu negocio al mundo digital con catálogos en línea, landing pages y formularios de contacto directos.
+                  - generic [ref=e1010]:
+                    - generic [ref=e1011]:
+                      - generic [ref=e1012]: 
+                      - text: Catálogos Digitales
+                    - generic [ref=e1013]:
+                      - generic [ref=e1014]: 
+                      - text: Contacto WhatsApp
+                    - generic [ref=e1015]:
+                      - generic [ref=e1016]: 
+                      - text: Mayor Visibilidad
+                    - generic [ref=e1017]:
+                      - generic [ref=e1018]: 
+                      - text: Fácil Gestión
+                - generic [ref=e1020]:
+                  - generic [ref=e1021]: 
+                  - generic [ref=e1023]: 
+              - generic [ref=e1025]:
+                - generic [ref=e1027]:
+                  - generic [ref=e1028]:
+                    - generic [ref=e1029]: 
+                    - text: Metodología Ágil
+                  - heading "Soluciones Personalizadas" [level=3] [ref=e1030]:
+                    - text: Soluciones
+                    - generic [ref=e1031]: Personalizadas
+                  - paragraph [ref=e1032]: "Trabajamos bajo el flujo: Contanos → Analizamos → Proponemos → Hacemos → Entregamos."
+                  - generic [ref=e1033]:
+                    - generic [ref=e1034]:
+                      - generic [ref=e1035]: 
+                      - text: Análisis Sin Costo
+                    - generic [ref=e1036]:
+                      - generic [ref=e1037]: 
+                      - text: Propuesta Clara
+                    - generic [ref=e1038]:
+                      - generic [ref=e1039]: 
+                      - text: Desarrollo Rápido
+                    - generic [ref=e1040]:
+                      - generic [ref=e1041]: 
+                      - text: Entrega Llave en Mano
+                - generic [ref=e1043]:
+                  - generic [ref=e1044]: 
+                  - generic [ref=e1046]: 
+              - generic [ref=e1048]:
+                - generic [ref=e1050]:
+                  - generic [ref=e1051]:
+                    - generic [ref=e1052]: 
+                    - text: Desarrollo Profesional
+                  - heading "Soluciones Tecnológicas" [level=3] [ref=e1053]:
+                    - text: Soluciones
+                    - generic [ref=e1054]: Tecnológicas
+                  - paragraph [ref=e1055]: Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.
+                  - generic [ref=e1056]:
+                    - generic [ref=e1057]:
+                      - generic [ref=e1058]: 
+                      - text: Código Limpio
+                    - generic [ref=e1059]:
+                      - generic [ref=e1060]: 
+                      - text: Soporte Continuo
+                    - generic [ref=e1061]:
+                      - generic [ref=e1062]: 
+                      - text: Diseño Premium
+                    - generic [ref=e1063]:
+                      - generic [ref=e1064]: 
+                      - text: Escalable en la Nube
+                - generic [ref=e1066]:
+                  - generic [ref=e1067]: 
+                  - generic [ref=e1069]: 
+              - generic [ref=e1071]:
+                - generic [ref=e1073]:
+                  - generic [ref=e1074]:
+                    - generic [ref=e1075]: 
+                    - text: Apoyo Estudiantil
+                  - heading "Apoyo Académico" [level=3] [ref=e1076]:
+                    - text: Apoyo
+                    - generic [ref=e1077]: Académico
+                  - paragraph [ref=e1078]: Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.
+                  - generic [ref=e1079]:
+                    - generic [ref=e1080]:
+                      - generic [ref=e1081]: 
+                      - text: Asesoría Técnica
+                    - generic [ref=e1082]:
+                      - generic [ref=e1083]: 
+                      - text: Modelado y Lógica
+                    - generic [ref=e1084]:
+                      - generic [ref=e1085]: 
+                      - text: Guías de Defensa
+                    - generic [ref=e1086]:
+                      - generic [ref=e1087]: 
+                      - text: Aprendizaje Guiado
+                - generic [ref=e1089]:
+                  - generic [ref=e1090]: 
+                  - generic [ref=e1092]: 
+              - generic [ref=e1094]:
+                - generic [ref=e1096]:
+                  - generic [ref=e1097]:
+                    - generic [ref=e1098]: 
+                    - text: Digitalización
+                  - heading "Impulso a Negocios" [level=3] [ref=e1099]:
+                    - text: Impulso a
+                    - generic [ref=e1100]: Negocios
+                  - paragraph [ref=e1101]: Llevamos tu negocio al mundo digital con catálogos en línea, landing pages y formularios de contacto directos.
+                  - generic [ref=e1102]:
+                    - generic [ref=e1103]:
+                      - generic [ref=e1104]: 
+                      - text: Catálogos Digitales
+                    - generic [ref=e1105]:
+                      - generic [ref=e1106]: 
+                      - text: Contacto WhatsApp
+                    - generic [ref=e1107]:
+                      - generic [ref=e1108]: 
+                      - text: Mayor Visibilidad
+                    - generic [ref=e1109]:
+                      - generic [ref=e1110]: 
+                      - text: Fácil Gestión
+                - generic [ref=e1112]:
+                  - generic [ref=e1113]: 
+                  - generic [ref=e1115]: 
+              - generic [ref=e1117]:
+                - generic [ref=e1119]:
+                  - generic [ref=e1120]:
+                    - generic [ref=e1121]: 
+                    - text: Metodología Ágil
+                  - heading "Soluciones Personalizadas" [level=3] [ref=e1122]:
+                    - text: Soluciones
+                    - generic [ref=e1123]: Personalizadas
+                  - paragraph [ref=e1124]: "Trabajamos bajo el flujo: Contanos → Analizamos → Proponemos → Hacemos → Entregamos."
+                  - generic [ref=e1125]:
+                    - generic [ref=e1126]:
+                      - generic [ref=e1127]: 
+                      - text: Análisis Sin Costo
+                    - generic [ref=e1128]:
+                      - generic [ref=e1129]: 
+                      - text: Propuesta Clara
+                    - generic [ref=e1130]:
+                      - generic [ref=e1131]: 
+                      - text: Desarrollo Rápido
+                    - generic [ref=e1132]:
+                      - generic [ref=e1133]: 
+                      - text: Entrega Llave en Mano
+                - generic [ref=e1135]:
+                  - generic [ref=e1136]: 
+                  - generic [ref=e1138]: 
+            - generic [ref=e1139]:
+              - button "Anterior" [ref=e1140]:
+                - generic [ref=e1141]: 
+              - generic [ref=e1142]:
+                - button "Ir a Soluciones Tecnológicas" [ref=e1143]
+                - button "Ir a Apoyo Académico" [ref=e1146]
+                - button "Ir a Impulso a Negocios" [ref=e1148]
+                - button "Ir a Soluciones Personalizadas" [ref=e1150]
+              - button "Siguiente" [ref=e1152]:
+                - generic [ref=e1153]: 
+        - generic [ref=e1155]:
+          - generic [ref=e1156]:
+            - heading [level=2] [ref=e1157]:
+              - text: Últimas
+              - generic [ref=e1158]: novedades y noticias
+            - paragraph [ref=e1161]: Mantente al tanto de nuestros eventos, lanzamientos de productos, convenios educativos y los logros más recientes de nuestra comunidad.
+          - generic [ref=e1162]:
+            - generic [ref=e1163]:
+              - generic [ref=e1165]:
+                - generic [ref=e1167]:
+                  - generic [ref=e1168]:
+                    - img "Plataforma de Mentorías" [ref=e1169]
+                    - generic [ref=e1171]: Lanzamiento
+                    - generic [ref=e1173]: Activo
+                  - generic [ref=e1176]:
+                    - generic [ref=e1177]: 
+                    - generic [ref=e1179]: NOVEDAD
+                    - heading "Plataforma de Mentorías" [level=3] [ref=e1182]
+                    - paragraph [ref=e1184]: Lanzamos un nuevo entorno web interactivo para agendar sesiones uno a uno en Frontend y Backend.
+                    - generic [ref=e1185]:
+                      - generic [ref=e1186]:
+                        - generic [ref=e1187]: 
+                        - generic [ref=e1189]: Soporte
+                        - generic [ref=e1190]: 1 a 1
+                      - generic [ref=e1191]:
+                        - generic [ref=e1192]: 
+                        - generic [ref=e1194]: Temas
+                        - generic [ref=e1195]: JS / Python
+                      - generic [ref=e1196]:
+                        - generic [ref=e1197]: 
+                        - generic [ref=e1199]: Acceso
+                        - generic [ref=e1200]: 24/7 Portal
+                    - generic [ref=e1202]:
+                      - generic [ref=e1203]:
+                        - generic [ref=e1204]: 
+                        - generic [ref=e1205]: 
+                        - text: Mentoría
+                      - generic [ref=e1206]:
+                        - generic [ref=e1207]: 
+                        - generic [ref=e1208]: 
+                        - text: Código
+                      - generic [ref=e1209]:
+                        - generic [ref=e1210]: 
+                        - generic [ref=e1211]: 
+                        - text: Soporte
+                    - generic [ref=e1212]:
+                      - generic [ref=e1213]:
+                        - generic [ref=e1214]: FECHA
+                        - generic [ref=e1215]: 25 de Junio, 2026
+                      - link " Saber más" [ref=e1217] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Plataforma%20de%20Mentor%C3%ADas
+                        - generic [ref=e1218]: 
+                        - text: Saber más
+                - generic [ref=e1220]:
+                  - generic [ref=e1221]:
+                    - img "Webinar de IA Aplicada" [ref=e1222]
+                    - generic [ref=e1224]: Webinar
+                    - generic [ref=e1226]: Registro
+                  - generic [ref=e1229]:
+                    - generic [ref=e1230]: 
+                    - generic [ref=e1232]: NOVEDAD
+                    - heading "Webinar de IA Aplicada" [level=3] [ref=e1235]
+                    - paragraph [ref=e1237]: Participa en nuestro webinar práctico sobre APIs de OpenAI, Gemini y creación de Chatbots.
+                    - generic [ref=e1238]:
+                      - generic [ref=e1239]:
+                        - generic [ref=e1240]: 
+                        - generic [ref=e1242]: Duración
+                        - generic [ref=e1243]: 4 Sesiones
+                      - generic [ref=e1244]:
+                        - generic [ref=e1245]: 
+                        - generic [ref=e1247]: Stack
+                        - generic [ref=e1248]: Gemini API
+                      - generic [ref=e1249]:
+                        - generic [ref=e1250]: 
+                        - generic [ref=e1252]: Modalidad
+                        - generic [ref=e1253]: Online
+                    - generic [ref=e1255]:
+                      - generic [ref=e1256]:
+                        - generic [ref=e1257]: 
+                        - generic [ref=e1258]: 
+                        - text: Código
+                      - generic [ref=e1259]:
+                        - generic [ref=e1260]: 
+                        - generic [ref=e1261]: 
+                        - text: Video
+                      - generic [ref=e1262]:
+                        - generic [ref=e1263]: 
+                        - generic [ref=e1264]: 
+                        - text: Certificado
+                    - generic [ref=e1265]:
+                      - generic [ref=e1266]:
+                        - generic [ref=e1267]: FECHA
+                        - generic [ref=e1268]: 20 de Junio, 2026
+                      - link " Saber más" [ref=e1270] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinar%20de%20IA%20Aplicada
+                        - generic [ref=e1271]: 
+                        - text: Saber más
+                - generic [ref=e1273]:
+                  - generic [ref=e1274]:
+                    - img "Convenio de Digitalización" [ref=e1275]
+                    - generic [ref=e1277]: Alianza
+                    - generic [ref=e1279]: Éxito
+                  - generic [ref=e1282]:
+                    - generic [ref=e1283]: 
+                    - generic [ref=e1285]: NOVEDAD
+                    - heading "Convenio de Digitalización" [level=3] [ref=e1288]
+                    - paragraph [ref=e1290]: Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.
+                    - generic [ref=e1291]:
+                      - generic [ref=e1292]:
+                        - generic [ref=e1293]: 
+                        - generic [ref=e1295]: Negocios
+                        - generic [ref=e1296]: 20+ PYMES
+                      - generic [ref=e1297]:
+                        - generic [ref=e1298]: 
+                        - generic [ref=e1300]: Solución
+                        - generic [ref=e1301]: Catálogos
+                      - generic [ref=e1302]:
+                        - generic [ref=e1303]: 
+                        - generic [ref=e1305]: Línea
+                        - generic [ref=e1306]: WhatsApp
+                    - generic [ref=e1308]:
+                      - generic [ref=e1309]:
+                        - generic [ref=e1310]: 
+                        - generic [ref=e1311]: 
+                        - text: Proyecto
+                      - generic [ref=e1312]:
+                        - generic [ref=e1313]: 
+                        - generic [ref=e1314]: 
+                        - text: Diseño
+                      - generic [ref=e1315]:
+                        - generic [ref=e1316]: 
+                        - generic [ref=e1317]: 
+                        - text: Soporte
+                    - generic [ref=e1318]:
+                      - generic [ref=e1319]:
+                        - generic [ref=e1320]: FECHA
+                        - generic [ref=e1321]: 15 de Junio, 2026
+                      - link " Saber más" [ref=e1323] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Convenio%20de%20Digitalizaci%C3%B3n
+                        - generic [ref=e1324]: 
+                        - text: Saber más
+                - generic [ref=e1326]:
+                  - generic [ref=e1327]:
+                    - img "Guías de Lógica y Código" [ref=e1328]
+                    - generic [ref=e1330]: Recursos
+                    - generic [ref=e1332]: Nuevo
+                  - generic [ref=e1335]:
+                    - generic [ref=e1336]: 
+                    - generic [ref=e1338]: NOVEDAD
+                    - heading "Guías de Lógica y Código" [level=3] [ref=e1341]
+                    - paragraph [ref=e1343]: Presentamos oficialmente nuestros cuadernos de trabajo interactivos y diapositivas de lógica para colegios.
+                    - generic [ref=e1344]:
+                      - generic [ref=e1345]:
+                        - generic [ref=e1346]: 
+                        - generic [ref=e1348]: Formato
+                        - generic [ref=e1349]: PDF / Slides
+                      - generic [ref=e1350]:
+                        - generic [ref=e1351]: 
+                        - generic [ref=e1353]: Temario
+                        - generic [ref=e1354]: Algoritmos
+                      - generic [ref=e1355]:
+                        - generic [ref=e1356]: 
+                        - generic [ref=e1358]: Nivel
+                        - generic [ref=e1359]: Primaria/Sec
+                    - generic [ref=e1361]:
+                      - generic [ref=e1362]:
+                        - generic [ref=e1363]: 
+                        - generic [ref=e1364]: 
+                        - text: Guías
+                      - generic [ref=e1365]:
+                        - generic [ref=e1366]: 
+                        - generic [ref=e1367]: 
+                        - text: PDF
+                      - generic [ref=e1368]:
+                        - generic [ref=e1369]: 
+                        - generic [ref=e1370]: 
+                        - text: Material
+                    - generic [ref=e1371]:
+                      - generic [ref=e1372]:
+                        - generic [ref=e1373]: FECHA
+                        - generic [ref=e1374]: 10 de Junio, 2026
+                      - link " Saber más" [ref=e1376] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Gu%C3%ADas%20de%20L%C3%B3gica%20y%20C%C3%B3digo
+                        - generic [ref=e1377]: 
+                        - text: Saber más
+                - generic [ref=e1379]:
+                  - generic [ref=e1380]:
+                    - img "Webinars de Automatización" [ref=e1381]
+                    - generic [ref=e1383]: Webinar
+                    - generic [ref=e1385]: Libre
+                  - generic [ref=e1388]:
+                    - generic [ref=e1389]: 
+                    - generic [ref=e1391]: NOVEDAD
+                    - heading "Webinars de Automatización" [level=3] [ref=e1394]
+                    - paragraph [ref=e1396]: Ciclo de charlas gratuitas sobre cómo automatizar tareas repetitivas de oficina y bases de datos usando Python.
+                    - generic [ref=e1397]:
+                      - generic [ref=e1398]:
+                        - generic [ref=e1399]: 
+                        - generic [ref=e1401]: Acceso
+                        - generic [ref=e1402]: Libre
+                      - generic [ref=e1403]:
+                        - generic [ref=e1404]: 
+                        - generic [ref=e1406]: Tema
+                        - generic [ref=e1407]: Python Scripts
+                      - generic [ref=e1408]:
+                        - generic [ref=e1409]: 
+                        - generic [ref=e1411]: Grabación
+                        - generic [ref=e1412]: Incluida
+                    - generic [ref=e1414]:
+                      - generic [ref=e1415]:
+                        - generic [ref=e1416]: 
+                        - generic [ref=e1417]: 
+                        - text: Código
+                      - generic [ref=e1418]:
+                        - generic [ref=e1419]: 
+                        - generic [ref=e1420]: 
+                        - text: Video
+                      - generic [ref=e1421]:
+                        - generic [ref=e1422]: 
+                        - generic [ref=e1423]: 
+                        - text: Documento
+                    - generic [ref=e1424]:
+                      - generic [ref=e1425]:
+                        - generic [ref=e1426]: FECHA
+                        - generic [ref=e1427]: 05 de Junio, 2026
+                      - link " Saber más" [ref=e1429] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinars%20de%20Automatizaci%C3%B3n
+                        - generic [ref=e1430]: 
+                        - text: Saber más
+                - generic [ref=e1432]:
+                  - generic [ref=e1433]:
+                    - img "Plataforma de Mentorías" [ref=e1434]
+                    - generic [ref=e1436]: Lanzamiento
+                    - generic [ref=e1438]: Activo
+                  - generic [ref=e1441]:
+                    - generic [ref=e1442]: 
+                    - generic [ref=e1444]: NOVEDAD
+                    - heading "Plataforma de Mentorías" [level=3] [ref=e1447]
+                    - paragraph [ref=e1449]: Lanzamos un nuevo entorno web interactivo para agendar sesiones uno a uno en Frontend y Backend.
+                    - generic [ref=e1450]:
+                      - generic [ref=e1451]:
+                        - generic [ref=e1452]: 
+                        - generic [ref=e1454]: Soporte
+                        - generic [ref=e1455]: 1 a 1
+                      - generic [ref=e1456]:
+                        - generic [ref=e1457]: 
+                        - generic [ref=e1459]: Temas
+                        - generic [ref=e1460]: JS / Python
+                      - generic [ref=e1461]:
+                        - generic [ref=e1462]: 
+                        - generic [ref=e1464]: Acceso
+                        - generic [ref=e1465]: 24/7 Portal
+                    - generic [ref=e1467]:
+                      - generic [ref=e1468]:
+                        - generic [ref=e1469]: 
+                        - generic [ref=e1470]: 
+                        - text: Mentoría
+                      - generic [ref=e1471]:
+                        - generic [ref=e1472]: 
+                        - generic [ref=e1473]: 
+                        - text: Código
+                      - generic [ref=e1474]:
+                        - generic [ref=e1475]: 
+                        - generic [ref=e1476]: 
+                        - text: Soporte
+                    - generic [ref=e1477]:
+                      - generic [ref=e1478]:
+                        - generic [ref=e1479]: FECHA
+                        - generic [ref=e1480]: 25 de Junio, 2026
+                      - link " Saber más" [ref=e1482] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Plataforma%20de%20Mentor%C3%ADas
+                        - generic [ref=e1483]: 
+                        - text: Saber más
+                - generic [ref=e1485]:
+                  - generic [ref=e1486]:
+                    - img "Webinar de IA Aplicada" [ref=e1487]
+                    - generic [ref=e1489]: Webinar
+                    - generic [ref=e1491]: Registro
+                  - generic [ref=e1494]:
+                    - generic [ref=e1495]: 
+                    - generic [ref=e1497]: NOVEDAD
+                    - heading "Webinar de IA Aplicada" [level=3] [ref=e1500]
+                    - paragraph [ref=e1502]: Participa en nuestro webinar práctico sobre APIs de OpenAI, Gemini y creación de Chatbots.
+                    - generic [ref=e1503]:
+                      - generic [ref=e1504]:
+                        - generic [ref=e1505]: 
+                        - generic [ref=e1507]: Duración
+                        - generic [ref=e1508]: 4 Sesiones
+                      - generic [ref=e1509]:
+                        - generic [ref=e1510]: 
+                        - generic [ref=e1512]: Stack
+                        - generic [ref=e1513]: Gemini API
+                      - generic [ref=e1514]:
+                        - generic [ref=e1515]: 
+                        - generic [ref=e1517]: Modalidad
+                        - generic [ref=e1518]: Online
+                    - generic [ref=e1520]:
+                      - generic [ref=e1521]:
+                        - generic [ref=e1522]: 
+                        - generic [ref=e1523]: 
+                        - text: Código
+                      - generic [ref=e1524]:
+                        - generic [ref=e1525]: 
+                        - generic [ref=e1526]: 
+                        - text: Video
+                      - generic [ref=e1527]:
+                        - generic [ref=e1528]: 
+                        - generic [ref=e1529]: 
+                        - text: Certificado
+                    - generic [ref=e1530]:
+                      - generic [ref=e1531]:
+                        - generic [ref=e1532]: FECHA
+                        - generic [ref=e1533]: 20 de Junio, 2026
+                      - link " Saber más" [ref=e1535] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinar%20de%20IA%20Aplicada
+                        - generic [ref=e1536]: 
+                        - text: Saber más
+                - generic [ref=e1538]:
+                  - generic [ref=e1539]:
+                    - img "Convenio de Digitalización" [ref=e1540]
+                    - generic [ref=e1542]: Alianza
+                    - generic [ref=e1544]: Éxito
+                  - generic [ref=e1547]:
+                    - generic [ref=e1548]: 
+                    - generic [ref=e1550]: NOVEDAD
+                    - heading "Convenio de Digitalización" [level=3] [ref=e1553]
+                    - paragraph [ref=e1555]: Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.
+                    - generic [ref=e1556]:
+                      - generic [ref=e1557]:
+                        - generic [ref=e1558]: 
+                        - generic [ref=e1560]: Negocios
+                        - generic [ref=e1561]: 20+ PYMES
+                      - generic [ref=e1562]:
+                        - generic [ref=e1563]: 
+                        - generic [ref=e1565]: Solución
+                        - generic [ref=e1566]: Catálogos
+                      - generic [ref=e1567]:
+                        - generic [ref=e1568]: 
+                        - generic [ref=e1570]: Línea
+                        - generic [ref=e1571]: WhatsApp
+                    - generic [ref=e1573]:
+                      - generic [ref=e1574]:
+                        - generic [ref=e1575]: 
+                        - generic [ref=e1576]: 
+                        - text: Proyecto
+                      - generic [ref=e1577]:
+                        - generic [ref=e1578]: 
+                        - generic [ref=e1579]: 
+                        - text: Diseño
+                      - generic [ref=e1580]:
+                        - generic [ref=e1581]: 
+                        - generic [ref=e1582]: 
+                        - text: Soporte
+                    - generic [ref=e1583]:
+                      - generic [ref=e1584]:
+                        - generic [ref=e1585]: FECHA
+                        - generic [ref=e1586]: 15 de Junio, 2026
+                      - link " Saber más" [ref=e1588] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Convenio%20de%20Digitalizaci%C3%B3n
+                        - generic [ref=e1589]: 
+                        - text: Saber más
+                - generic [ref=e1591]:
+                  - generic [ref=e1592]:
+                    - img "Guías de Lógica y Código" [ref=e1593]
+                    - generic [ref=e1595]: Recursos
+                    - generic [ref=e1597]: Nuevo
+                  - generic [ref=e1600]:
+                    - generic [ref=e1601]: 
+                    - generic [ref=e1603]: NOVEDAD
+                    - heading "Guías de Lógica y Código" [level=3] [ref=e1606]
+                    - paragraph [ref=e1608]: Presentamos oficialmente nuestros cuadernos de trabajo interactivos y diapositivas de lógica para colegios.
+                    - generic [ref=e1609]:
+                      - generic [ref=e1610]:
+                        - generic [ref=e1611]: 
+                        - generic [ref=e1613]: Formato
+                        - generic [ref=e1614]: PDF / Slides
+                      - generic [ref=e1615]:
+                        - generic [ref=e1616]: 
+                        - generic [ref=e1618]: Temario
+                        - generic [ref=e1619]: Algoritmos
+                      - generic [ref=e1620]:
+                        - generic [ref=e1621]: 
+                        - generic [ref=e1623]: Nivel
+                        - generic [ref=e1624]: Primaria/Sec
+                    - generic [ref=e1626]:
+                      - generic [ref=e1627]:
+                        - generic [ref=e1628]: 
+                        - generic [ref=e1629]: 
+                        - text: Guías
+                      - generic [ref=e1630]:
+                        - generic [ref=e1631]: 
+                        - generic [ref=e1632]: 
+                        - text: PDF
+                      - generic [ref=e1633]:
+                        - generic [ref=e1634]: 
+                        - generic [ref=e1635]: 
+                        - text: Material
+                    - generic [ref=e1636]:
+                      - generic [ref=e1637]:
+                        - generic [ref=e1638]: FECHA
+                        - generic [ref=e1639]: 10 de Junio, 2026
+                      - link " Saber más" [ref=e1641] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Gu%C3%ADas%20de%20L%C3%B3gica%20y%20C%C3%B3digo
+                        - generic [ref=e1642]: 
+                        - text: Saber más
+                - generic [ref=e1644]:
+                  - generic [ref=e1645]:
+                    - img "Webinars de Automatización" [ref=e1646]
+                    - generic [ref=e1648]: Webinar
+                    - generic [ref=e1650]: Libre
+                  - generic [ref=e1653]:
+                    - generic [ref=e1654]: 
+                    - generic [ref=e1656]: NOVEDAD
+                    - heading "Webinars de Automatización" [level=3] [ref=e1659]
+                    - paragraph [ref=e1661]: Ciclo de charlas gratuitas sobre cómo automatizar tareas repetitivas de oficina y bases de datos usando Python.
+                    - generic [ref=e1662]:
+                      - generic [ref=e1663]:
+                        - generic [ref=e1664]: 
+                        - generic [ref=e1666]: Acceso
+                        - generic [ref=e1667]: Libre
+                      - generic [ref=e1668]:
+                        - generic [ref=e1669]: 
+                        - generic [ref=e1671]: Tema
+                        - generic [ref=e1672]: Python Scripts
+                      - generic [ref=e1673]:
+                        - generic [ref=e1674]: 
+                        - generic [ref=e1676]: Grabación
+                        - generic [ref=e1677]: Incluida
+                    - generic [ref=e1679]:
+                      - generic [ref=e1680]:
+                        - generic [ref=e1681]: 
+                        - generic [ref=e1682]: 
+                        - text: Código
+                      - generic [ref=e1683]:
+                        - generic [ref=e1684]: 
+                        - generic [ref=e1685]: 
+                        - text: Video
+                      - generic [ref=e1686]:
+                        - generic [ref=e1687]: 
+                        - generic [ref=e1688]: 
+                        - text: Documento
+                    - generic [ref=e1689]:
+                      - generic [ref=e1690]:
+                        - generic [ref=e1691]: FECHA
+                        - generic [ref=e1692]: 05 de Junio, 2026
+                      - link " Saber más" [ref=e1694] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinars%20de%20Automatizaci%C3%B3n
+                        - generic [ref=e1695]: 
+                        - text: Saber más
+                - generic [ref=e1697]:
+                  - generic [ref=e1698]:
+                    - img "Plataforma de Mentorías" [ref=e1699]
+                    - generic [ref=e1701]: Lanzamiento
+                    - generic [ref=e1703]: Activo
+                  - generic [ref=e1706]:
+                    - generic [ref=e1707]: 
+                    - generic [ref=e1709]: NOVEDAD
+                    - heading "Plataforma de Mentorías" [level=3] [ref=e1712]
+                    - paragraph [ref=e1714]: Lanzamos un nuevo entorno web interactivo para agendar sesiones uno a uno en Frontend y Backend.
+                    - generic [ref=e1715]:
+                      - generic [ref=e1716]:
+                        - generic [ref=e1717]: 
+                        - generic [ref=e1719]: Soporte
+                        - generic [ref=e1720]: 1 a 1
+                      - generic [ref=e1721]:
+                        - generic [ref=e1722]: 
+                        - generic [ref=e1724]: Temas
+                        - generic [ref=e1725]: JS / Python
+                      - generic [ref=e1726]:
+                        - generic [ref=e1727]: 
+                        - generic [ref=e1729]: Acceso
+                        - generic [ref=e1730]: 24/7 Portal
+                    - generic [ref=e1732]:
+                      - generic [ref=e1733]:
+                        - generic [ref=e1734]: 
+                        - generic [ref=e1735]: 
+                        - text: Mentoría
+                      - generic [ref=e1736]:
+                        - generic [ref=e1737]: 
+                        - generic [ref=e1738]: 
+                        - text: Código
+                      - generic [ref=e1739]:
+                        - generic [ref=e1740]: 
+                        - generic [ref=e1741]: 
+                        - text: Soporte
+                    - generic [ref=e1742]:
+                      - generic [ref=e1743]:
+                        - generic [ref=e1744]: FECHA
+                        - generic [ref=e1745]: 25 de Junio, 2026
+                      - link " Saber más" [ref=e1747] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Plataforma%20de%20Mentor%C3%ADas
+                        - generic [ref=e1748]: 
+                        - text: Saber más
+                - generic [ref=e1750]:
+                  - generic [ref=e1751]:
+                    - img "Webinar de IA Aplicada" [ref=e1752]
+                    - generic [ref=e1754]: Webinar
+                    - generic [ref=e1756]: Registro
+                  - generic [ref=e1759]:
+                    - generic [ref=e1760]: 
+                    - generic [ref=e1762]: NOVEDAD
+                    - heading "Webinar de IA Aplicada" [level=3] [ref=e1765]
+                    - paragraph [ref=e1767]: Participa en nuestro webinar práctico sobre APIs de OpenAI, Gemini y creación de Chatbots.
+                    - generic [ref=e1768]:
+                      - generic [ref=e1769]:
+                        - generic [ref=e1770]: 
+                        - generic [ref=e1772]: Duración
+                        - generic [ref=e1773]: 4 Sesiones
+                      - generic [ref=e1774]:
+                        - generic [ref=e1775]: 
+                        - generic [ref=e1777]: Stack
+                        - generic [ref=e1778]: Gemini API
+                      - generic [ref=e1779]:
+                        - generic [ref=e1780]: 
+                        - generic [ref=e1782]: Modalidad
+                        - generic [ref=e1783]: Online
+                    - generic [ref=e1785]:
+                      - generic [ref=e1786]:
+                        - generic [ref=e1787]: 
+                        - generic [ref=e1788]: 
+                        - text: Código
+                      - generic [ref=e1789]:
+                        - generic [ref=e1790]: 
+                        - generic [ref=e1791]: 
+                        - text: Video
+                      - generic [ref=e1792]:
+                        - generic [ref=e1793]: 
+                        - generic [ref=e1794]: 
+                        - text: Certificado
+                    - generic [ref=e1795]:
+                      - generic [ref=e1796]:
+                        - generic [ref=e1797]: FECHA
+                        - generic [ref=e1798]: 20 de Junio, 2026
+                      - link " Saber más" [ref=e1800] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinar%20de%20IA%20Aplicada
+                        - generic [ref=e1801]: 
+                        - text: Saber más
+                - generic [ref=e1803]:
+                  - generic [ref=e1804]:
+                    - img "Convenio de Digitalización" [ref=e1805]
+                    - generic [ref=e1807]: Alianza
+                    - generic [ref=e1809]: Éxito
+                  - generic [ref=e1812]:
+                    - generic [ref=e1813]: 
+                    - generic [ref=e1815]: NOVEDAD
+                    - heading "Convenio de Digitalización" [level=3] [ref=e1818]
+                    - paragraph [ref=e1820]: Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.
+                    - generic [ref=e1821]:
+                      - generic [ref=e1822]:
+                        - generic [ref=e1823]: 
+                        - generic [ref=e1825]: Negocios
+                        - generic [ref=e1826]: 20+ PYMES
+                      - generic [ref=e1827]:
+                        - generic [ref=e1828]: 
+                        - generic [ref=e1830]: Solución
+                        - generic [ref=e1831]: Catálogos
+                      - generic [ref=e1832]:
+                        - generic [ref=e1833]: 
+                        - generic [ref=e1835]: Línea
+                        - generic [ref=e1836]: WhatsApp
+                    - generic [ref=e1838]:
+                      - generic [ref=e1839]:
+                        - generic [ref=e1840]: 
+                        - generic [ref=e1841]: 
+                        - text: Proyecto
+                      - generic [ref=e1842]:
+                        - generic [ref=e1843]: 
+                        - generic [ref=e1844]: 
+                        - text: Diseño
+                      - generic [ref=e1845]:
+                        - generic [ref=e1846]: 
+                        - generic [ref=e1847]: 
+                        - text: Soporte
+                    - generic [ref=e1848]:
+                      - generic [ref=e1849]:
+                        - generic [ref=e1850]: FECHA
+                        - generic [ref=e1851]: 15 de Junio, 2026
+                      - link " Saber más" [ref=e1853] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Convenio%20de%20Digitalizaci%C3%B3n
+                        - generic [ref=e1854]: 
+                        - text: Saber más
+                - generic [ref=e1856]:
+                  - generic [ref=e1857]:
+                    - img "Guías de Lógica y Código" [ref=e1858]
+                    - generic [ref=e1860]: Recursos
+                    - generic [ref=e1862]: Nuevo
+                  - generic [ref=e1865]:
+                    - generic [ref=e1866]: 
+                    - generic [ref=e1868]: NOVEDAD
+                    - heading "Guías de Lógica y Código" [level=3] [ref=e1871]
+                    - paragraph [ref=e1873]: Presentamos oficialmente nuestros cuadernos de trabajo interactivos y diapositivas de lógica para colegios.
+                    - generic [ref=e1874]:
+                      - generic [ref=e1875]:
+                        - generic [ref=e1876]: 
+                        - generic [ref=e1878]: Formato
+                        - generic [ref=e1879]: PDF / Slides
+                      - generic [ref=e1880]:
+                        - generic [ref=e1881]: 
+                        - generic [ref=e1883]: Temario
+                        - generic [ref=e1884]: Algoritmos
+                      - generic [ref=e1885]:
+                        - generic [ref=e1886]: 
+                        - generic [ref=e1888]: Nivel
+                        - generic [ref=e1889]: Primaria/Sec
+                    - generic [ref=e1891]:
+                      - generic [ref=e1892]:
+                        - generic [ref=e1893]: 
+                        - generic [ref=e1894]: 
+                        - text: Guías
+                      - generic [ref=e1895]:
+                        - generic [ref=e1896]: 
+                        - generic [ref=e1897]: 
+                        - text: PDF
+                      - generic [ref=e1898]:
+                        - generic [ref=e1899]: 
+                        - generic [ref=e1900]: 
+                        - text: Material
+                    - generic [ref=e1901]:
+                      - generic [ref=e1902]:
+                        - generic [ref=e1903]: FECHA
+                        - generic [ref=e1904]: 10 de Junio, 2026
+                      - link " Saber más" [ref=e1906] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Gu%C3%ADas%20de%20L%C3%B3gica%20y%20C%C3%B3digo
+                        - generic [ref=e1907]: 
+                        - text: Saber más
+                - generic [ref=e1909]:
+                  - generic [ref=e1910]:
+                    - img "Webinars de Automatización" [ref=e1911]
+                    - generic [ref=e1913]: Webinar
+                    - generic [ref=e1915]: Libre
+                  - generic [ref=e1918]:
+                    - generic [ref=e1919]: 
+                    - generic [ref=e1921]: NOVEDAD
+                    - heading "Webinars de Automatización" [level=3] [ref=e1924]
+                    - paragraph [ref=e1926]: Ciclo de charlas gratuitas sobre cómo automatizar tareas repetitivas de oficina y bases de datos usando Python.
+                    - generic [ref=e1927]:
+                      - generic [ref=e1928]:
+                        - generic [ref=e1929]: 
+                        - generic [ref=e1931]: Acceso
+                        - generic [ref=e1932]: Libre
+                      - generic [ref=e1933]:
+                        - generic [ref=e1934]: 
+                        - generic [ref=e1936]: Tema
+                        - generic [ref=e1937]: Python Scripts
+                      - generic [ref=e1938]:
+                        - generic [ref=e1939]: 
+                        - generic [ref=e1941]: Grabación
+                        - generic [ref=e1942]: Incluida
+                    - generic [ref=e1944]:
+                      - generic [ref=e1945]:
+                        - generic [ref=e1946]: 
+                        - generic [ref=e1947]: 
+                        - text: Código
+                      - generic [ref=e1948]:
+                        - generic [ref=e1949]: 
+                        - generic [ref=e1950]: 
+                        - text: Video
+                      - generic [ref=e1951]:
+                        - generic [ref=e1952]: 
+                        - generic [ref=e1953]: 
+                        - text: Documento
+                    - generic [ref=e1954]:
+                      - generic [ref=e1955]:
+                        - generic [ref=e1956]: FECHA
+                        - generic [ref=e1957]: 05 de Junio, 2026
+                      - link " Saber más" [ref=e1959] [cursor=pointer]:
+                        - /url: https://wa.me/59161320004?text=Hola%2C%20quiero%20saber%20m%C3%A1s%20sobre%3A%20Webinars%20de%20Automatizaci%C3%B3n
+                        - generic [ref=e1960]: 
+                        - text: Saber más
+              - button "Anterior" [ref=e1961] [cursor=pointer]:
+                - generic [ref=e1962]: 
+              - button "Siguiente" [ref=e1963] [cursor=pointer]:
+                - generic [ref=e1964]: 
+            - generic [ref=e1965]:
+              - button "Ir al slide 1" [ref=e1966]
+              - button "Ir al slide 2" [ref=e1967]
+              - button "Ir al slide 3" [ref=e1968]
+              - button "Ir al slide 4" [ref=e1969]
+              - button "Ir al slide 5" [ref=e1970]
+    - contentinfo [ref=e1971]:
+      - generic [ref=e1972]:
+        - generic [ref=e1973]:
+          - generic [ref=e1974]:
+            - link [ref=e1975] [cursor=pointer]:
+              - /url: "#/"
+              - img "Logo HagamosTech" [ref=e1976]
+            - paragraph [ref=e1977]: Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+            - generic [ref=e1978]:
+              - link "" [ref=e1979] [cursor=pointer]:
+                - /url: https://www.facebook.com/HagamosTech
+              - link "" [ref=e1981] [cursor=pointer]:
+                - /url: https://www.instagram.com/hagamostech/
+              - link "" [ref=e1983] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@hagamostech
+              - link "" [ref=e1985] [cursor=pointer]:
+                - /url: https://wa.me/59161320004
+          - generic [ref=e1987]:
+            - heading "SOLUCIONES" [level=3] [ref=e1988]
+            - list [ref=e1990]:
+              - listitem [ref=e1991]:
+                - link " Tecnología" [ref=e1992] [cursor=pointer]:
+                  - /url: "#/#tecnologia"
+                  - generic [ref=e1993]: 
+                  - generic [ref=e1995]: Tecnología
+              - listitem [ref=e1996]:
+                - link " Academia" [ref=e1997] [cursor=pointer]:
+                  - /url: "#/#academia"
+                  - generic [ref=e1998]: 
+                  - generic [ref=e2000]: Academia
+              - listitem [ref=e2001]:
+                - link " Negocios" [ref=e2002] [cursor=pointer]:
+                  - /url: "#/#negocios"
+                  - generic [ref=e2003]: 
+                  - generic [ref=e2005]: Negocios
+              - listitem [ref=e2006]:
+                - link " Soluciones personalizadas" [ref=e2007] [cursor=pointer]:
+                  - /url: "#/#personalizado"
+                  - generic [ref=e2008]: 
+                  - generic [ref=e2010]: Soluciones personalizadas
+              - listitem [ref=e2011]:
+                - link " Cómo trabajamos" [ref=e2012] [cursor=pointer]:
+                  - /url: "#/#flujo"
+                  - generic [ref=e2013]: 
+                  - generic [ref=e2015]: Cómo trabajamos
+          - generic [ref=e2016]:
+            - heading "NOSOTROS" [level=3] [ref=e2017]
+            - list [ref=e2018]:
+              - listitem [ref=e2019]:
+                - link " Cómo trabajamos" [ref=e2020] [cursor=pointer]:
+                  - /url: "#/#flujo"
+                  - generic [ref=e2021]: 
+                  - generic [ref=e2023]: Cómo trabajamos
+              - listitem [ref=e2024]:
+                - link " Nuestras soluciones" [ref=e2025] [cursor=pointer]:
+                  - /url: "#/#que-hacemos"
+                  - generic [ref=e2026]: 
+                  - generic [ref=e2028]: Nuestras soluciones
+              - listitem [ref=e2029]:
+                - link " Contanos tu idea" [ref=e2030] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e2031]: 
+                  - generic [ref=e2033]: Contanos tu idea
+              - listitem [ref=e2034]:
+                - link " Apoyo y soporte" [ref=e2035] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e2036]: 
+                  - generic [ref=e2038]: Apoyo y soporte
+              - listitem [ref=e2039]:
+                - link " Trabajá con nosotros" [ref=e2040] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e2041]: 
+                  - generic [ref=e2043]: Trabajá con nosotros
+          - generic [ref=e2044]:
+            - heading "CONTACTO" [level=3] [ref=e2045]
+            - list [ref=e2047]:
+              - listitem [ref=e2048]:
+                - generic [ref=e2049]: 
+                - generic [ref=e2051]:
+                  - generic [ref=e2052]: Oficina principal
+                  - generic [ref=e2053]: Av. San Martín y 2do AnilloEquipetrol, Santa Cruz
+              - listitem [ref=e2054]:
+                - generic [ref=e2055]: 
+                - generic [ref=e2057]:
+                  - generic [ref=e2058]: Email
+                  - link "contacto@hagamostech.bo" [ref=e2059] [cursor=pointer]:
+                    - /url: mailto:contacto@hagamostech.bo
+              - listitem [ref=e2060]:
+                - generic [ref=e2061]: 
+                - generic [ref=e2063]:
+                  - generic [ref=e2064]: Teléfono / WhatsApp
+                  - link "+591 61320004" [ref=e2065] [cursor=pointer]:
+                    - /url: tel:+59161320004
+              - listitem [ref=e2066]:
+                - generic [ref=e2067]: 
+                - generic [ref=e2069]:
+                  - generic [ref=e2070]: Horarios
+                  - generic [ref=e2071]: "Lun - Vie: 09:00 - 18:00"
+        - generic [ref=e2072]:
+          - paragraph [ref=e2073]: © 2026 HagamosTech. Todos los derechos reservados.
+          - generic [ref=e2074]:
+            - link "Política de Privacidad" [ref=e2075] [cursor=pointer]:
+              - /url: "#/privacidad"
+            - link "Términos de Servicio" [ref=e2076] [cursor=pointer]:
+              - /url: "#/terminos"
+            - link "Cookies" [ref=e2077] [cursor=pointer]:
+              - /url: "#/cookies"
+    - button "" [ref=e2079] [cursor=pointer]
+    - button "" [ref=e2086] [cursor=pointer]
