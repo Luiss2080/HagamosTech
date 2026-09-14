@@ -79,6 +79,8 @@ cd server && npm run db:seed      # Datos semilla
 | `NODE_ENV` | Entorno |
 | `JWT_SECRET` | Secret para tokens |
 | `FRONTEND_URL` | URL del frontend (CORS) |
+| `CONTACT_EMAIL` | Correo que recibe el formulario de contacto (default `contacto@hagamostech.bo`) |
+| `SMTP_*` | Host, puerto, usuario, contraseña y remitente para el envío de correos |
 
 ---
 
