@@ -17,16 +17,16 @@ const MEMBRESIAS = [
             'Backup semanal',
         ],
         theme: {
-            cardBg: 'bg-[#FF4D00]',
-            accentLine: 'bg-[#5D3A1F]',
+            cardBg: 'bg-[#A3E635]',
+            accentLine: 'bg-[#171717]',
             iconBg: 'bg-white/20',
             checkBg: 'bg-white/20',
             checkColor: 'text-white',
-            buttonBg: 'bg-white',
-            buttonText: 'text-[#FF4D00]',
-            buttonHover: 'hover:bg-[#5D3A1F] hover:text-white',
-            borderColor: 'border-[#FF4D00]',
-            shadow: 'shadow-xl hover:shadow-2xl shadow-orange-500/20',
+            buttonBg: 'bg-[#111827]',
+            buttonText: 'text-[#A3E635]',
+            buttonHover: 'hover:bg-[#171717] hover:text-white',
+            borderColor: 'border-[#A3E635]',
+            shadow: 'shadow-xl hover:shadow-2xl shadow-lime-400/20/20',
         }
     },
     {
@@ -45,16 +45,16 @@ const MEMBRESIAS = [
             'Prioridad de respuesta',
         ],
         theme: {
-            cardBg: 'bg-[#5D3A1F]',
-            accentLine: 'bg-[#FF4D00]',
+            cardBg: 'bg-[#171717]',
+            accentLine: 'bg-[#A3E635]',
             iconBg: 'bg-white/10',
             checkBg: 'bg-white/10',
-            checkColor: 'text-[#FF4D00]',
-            buttonBg: 'bg-[#FF4D00]',
+            checkColor: 'text-[#A3E635]',
+            buttonBg: 'bg-[#A3E635]',
             buttonText: 'text-white',
-            buttonHover: 'hover:bg-[#CC3D00] hover:text-white',
-            borderColor: 'border-[#5D3A1F]',
-            shadow: 'shadow-2xl shadow-[#5D3A1F]/25',
+            buttonHover: 'hover:bg-[#84CC16] hover:text-white',
+            borderColor: 'border-[#171717]',
+            shadow: 'shadow-2xl shadow-[#171717]/25',
         }
     },
     {
@@ -74,16 +74,16 @@ const MEMBRESIAS = [
             'Dashboard a medida',
         ],
         theme: {
-            cardBg: 'bg-[#8B4513]',
-            accentLine: 'bg-[#FF4D00]',
+            cardBg: 'bg-[#0A0A0A]',
+            accentLine: 'bg-[#A3E635]',
             iconBg: 'bg-white/20',
             checkBg: 'bg-white/20',
             checkColor: 'text-white',
-            buttonBg: 'bg-white',
-            buttonText: 'text-[#8B4513]',
-            buttonHover: 'hover:bg-[#FF4D00] hover:text-white',
-            borderColor: 'border-[#8B4513]',
-            shadow: 'shadow-xl hover:shadow-2xl shadow-[#8B4513]/25',
+            buttonBg: 'bg-[#111827]',
+            buttonText: 'text-white',
+            buttonHover: 'hover:bg-[#A3E635] hover:text-white',
+            borderColor: 'border-[#0A0A0A]',
+            shadow: 'shadow-xl hover:shadow-2xl shadow-[#0A0A0A]/25',
         }
     },
 ];
@@ -97,22 +97,22 @@ const PlanesSuscripcion = () => {
                 <CircuitBackground />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
-                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#FF4D00]/20">
-                            <i className="fas fa-user-check text-[#FF4D00] mr-1"></i> Membresía HagamosTech
+                        <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
+                            <i className="fas fa-user-check text-[#A3E635] mr-1"></i> Membresía HagamosTech
                         </span>
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            Elegí tu <span className="relative inline-block text-[#FF4D00]">
+                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-3 leading-tight">
+                            Elegí tu <span className="relative inline-block text-[#A3E635]">
                                 plan
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
-                        <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                        <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                             Planes de soporte y evolución continua para que tu sitio o sistema esté siempre actualizado, seguro y funcionando. Elegí tu nivel y olvidate del mantenimiento.
                         </p>
 
-                        <div className="inline-flex items-center gap-3 bg-white rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
-                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#FF4D00] text-white shadow-md' : 'text-gray-500 hover:text-[#FF4D00]'}`}>Mensual</button>
-                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#FF4D00] text-white shadow-md' : 'text-gray-500 hover:text-[#FF4D00]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
+                        <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
+                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-white shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Mensual</button>
+                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-white shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
                         </div>
                     </div>
 
@@ -126,7 +126,7 @@ const PlanesSuscripcion = () => {
 
                                 {plan.active && (
                                     <div className="absolute -top-0.5 left-1/2 -translate-x-1/2 z-20">
-                                        <span className="inline-block bg-white text-[#FF4D00] text-[8px] font-black uppercase tracking-wider px-4 py-1.5 rounded-b-xl shadow-lg">⭐ {plan.badge}</span>
+                                        <span className="inline-block bg-[#111827] text-[#A3E635] text-[8px] font-black uppercase tracking-wider px-4 py-1.5 rounded-b-xl shadow-lg">⭐ {plan.badge}</span>
                                     </div>
                                 )}
 

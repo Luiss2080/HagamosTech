@@ -10,9 +10,9 @@ const originalHighlights = [
         desc: 'Desarrollamos web, sistemas y automatizaciones adaptadas a tu necesidad real: "Contanos tu problema, nosotros vemos cómo hacerlo".',
         icon: 'fa-microchip',
         badge: 'Soluciones reales',
-        color: "bg-[#FF4D00]",
+        color: "bg-[#A3E635]",
         textColor: "text-white",
-        iconColor: "text-[#FF4D00] bg-white",
+        iconColor: "text-[#A3E635] bg-[#111827]",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
             { icon: 'fa-globe', text: 'Desarrollo Web' },
@@ -28,11 +28,11 @@ const originalHighlights = [
         desc: 'Trabajamos en sprints cortos con entregas parciales para que veas avances desde la primera semana y ajustemos sobre la marcha.',
         icon: 'fa-bolt',
         badge: 'Entregas rápidas',
-        color: "bg-[#5D3A1F]",
+        color: "bg-[#171717]",
         textColor: "text-white",
-        iconColor: "text-[#5D3A1F] bg-[#FF4D00]",
-        badgeColor: "bg-white/10 text-[#FF4D00] border-[#FF4D00]/20",
-        borderColor: "border-[#FF4D00]/20",
+        iconColor: "text-slate-300 bg-[#A3E635]",
+        badgeColor: "bg-white/10 text-[#A3E635] border-[#A3E635]/20",
+        borderColor: "border-[#A3E635]/20",
         features: [
             { icon: 'fa-list-check', text: 'Sprints' },
             { icon: 'fa-desktop', text: 'Demos' },
@@ -47,9 +47,9 @@ const originalHighlights = [
         desc: 'Acompañamos tu proyecto después del lanzamiento: mantenimiento, mejoras y ayuda directa por WhatsApp cuando lo necesites.',
         icon: 'fa-headset',
         badge: 'Soporte 24/7',
-        color: "bg-[#FF4D00]",
+        color: "bg-[#A3E635]",
         textColor: "text-white",
-        iconColor: "text-[#FF4D00] bg-white",
+        iconColor: "text-[#A3E635] bg-[#111827]",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
             { icon: 'fa-wrench', text: 'Mantenimiento' },
@@ -65,11 +65,11 @@ const originalHighlights = [
         desc: 'Código limpio, buenas prácticas y pruebas automatizadas en cada entrega para que tu solución sea estable y mantenible.',
         icon: 'fa-shield-halved',
         badge: 'Confianza Total',
-        color: "bg-white",
-        textColor: "text-[#111827]",
-        iconColor: "text-[#FF4D00] bg-[#5D3A1F]",
-        badgeColor: "bg-orange-50 text-[#FF4D00] border-[#FF4D00]/20",
-        borderColor: "border-[#FF4D00]/30",
+        color: "bg-[#111827]",
+        textColor: "text-white",
+        iconColor: "text-[#A3E635] bg-[#171717]",
+        badgeColor: "bg-white/5 text-[#A3E635] border-[#A3E635]/20",
+        borderColor: "border-[#A3E635]/30",
         features: [
             { icon: 'fa-code', text: 'Buenas prácticas' },
             { icon: 'fa-vial', text: 'Tests' },
@@ -84,11 +84,11 @@ const originalHighlights = [
         desc: 'Explicamos cada solución en lenguaje claro y capacitamos a tu equipo para que la use sin depender de nadie.',
         icon: 'fa-graduation-cap',
         badge: 'Aprendé con nosotros',
-        color: "bg-[#8B4513]",
+        color: "bg-[#0A0A0A]",
         textColor: "text-white",
-        iconColor: "text-[#8B4513] bg-[#FF4D00]",
-        badgeColor: "bg-white/10 text-[#FF4D00] border-[#FF4D00]/20",
-        borderColor: "border-[#FF4D00]/20",
+        iconColor: "text-white bg-[#A3E635]",
+        badgeColor: "bg-white/10 text-[#A3E635] border-[#A3E635]/20",
+        borderColor: "border-[#A3E635]/20",
         features: [
             { icon: 'fa-chalkboard-user', text: 'Capacitación' },
             { icon: 'fa-book-open', text: 'Guías' },
@@ -203,8 +203,8 @@ const VentajasCarrusel = () => {
     return (
         <section id="promociones" className="py-8 relative overflow-hidden">
             <div className="absolute top-0 left-0 w-full h-full opacity-30 pointer-events-none">
-                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-orange-200/20 rounded-full blur-[100px] animate-pulse-slow"></div>
-                <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#5D3A1F]/10 rounded-full blur-[100px] animate-pulse-slow delay-1000"></div>
+                <div className="absolute top-0 left-1/4 w-[800px] h-[800px] bg-[#A3E635]/10 rounded-full blur-[100px] animate-pulse-slow"></div>
+                <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-[#171717]/10 rounded-full blur-[100px] animate-pulse-slow delay-1000"></div>
             </div>
 
             <CircuitBackground />
@@ -225,14 +225,14 @@ const VentajasCarrusel = () => {
                         icon="fa-tags"
                         align="center"
                     />
-                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-[#8B4513] leading-tight mb-5 sm:mb-6 tracking-tighter">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5 sm:mb-6 tracking-tighter">
                         Por qué elegir <br />
                         <span className="relative inline-block px-2">
-                            <span className="relative z-10 text-[#FF4D00]">HagamosTech</span>
-                            <svg className="absolute w-full h-3 -bottom-1 left-0 z-0 text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg>
+                            <span className="relative z-10 text-[#A3E635]">HagamosTech</span>
+                            <svg className="absolute w-full h-3 -bottom-1 left-0 z-0 text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg>
                         </span>
                     </h2>
-                    <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
+                    <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
                         Descubrí por qué elegir HagamosTech: soluciones a medida, entregas ágiles, soporte continuo, calidad garantizada y un equipo que te explica todo en lenguaje claro.
                     </p>
                 </div>
@@ -246,7 +246,7 @@ const VentajasCarrusel = () => {
                             type="button"
                             aria-label="Anterior"
                             onClick={prev}
-                            className="absolute left-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-[#8B4513] shadow-xl shadow-orange-950/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#FF4D00] hover:text-white border border-[#FF4D00]/20"
+                            className="absolute left-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-white shadow-xl shadow-black/30/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-white border border-[#A3E635]/20"
                         >
                             <i className="fa-solid fa-arrow-left text-xl"></i>
                         </button>
@@ -254,7 +254,7 @@ const VentajasCarrusel = () => {
                             type="button"
                             aria-label="Siguiente"
                             onClick={next}
-                            className="absolute right-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-[#8B4513] shadow-xl shadow-orange-950/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#FF4D00] hover:text-white border border-[#FF4D00]/20"
+                            className="absolute right-[5%] top-1/2 -translate-y-1/2 w-14 h-14 rounded-2xl bg-white/90 backdrop-blur-md text-white shadow-xl shadow-black/30/15 flex items-center justify-center transition-all z-30 hover:scale-110 hover:bg-[#A3E635] hover:text-white border border-[#A3E635]/20"
                         >
                             <i className="fa-solid fa-arrow-right text-xl"></i>
                         </button>
@@ -310,17 +310,17 @@ const VentajasCarrusel = () => {
                                         zIndex: zIndex
                                     }}
                                 >
-                                    <div className={`rotate-card h-auto min-h-[300px] sm:min-h-[330px] md:min-h-[355px] rounded-[2rem] sm:rounded-[2.6rem] p-4 sm:p-6 md:p-7 ${item.color} ${item.textColor} shadow-2xl shadow-orange-950/15 relative overflow-hidden flex flex-col md:flex-row items-center gap-4 sm:gap-6 group border-2 ${item.borderColor || 'border-[#ffe08a]/75 ring-1 ring-black/5'} ${item.color === 'bg-white' ? 'ring-2 ring-[#FF4D00]/20 shadow-[inset_0_0_0_1px_rgba(17,24,39,0.08)]' : ''} hover:shadow-[#FF4D00]/15`}>
+                                    <div className={`rotate-card h-auto min-h-[300px] sm:min-h-[330px] md:min-h-[355px] rounded-[2rem] sm:rounded-[2.6rem] p-4 sm:p-6 md:p-7 ${item.color} ${item.textColor} shadow-2xl shadow-black/30/15 relative overflow-hidden flex flex-col md:flex-row items-center gap-4 sm:gap-6 group border-2 ${item.borderColor || 'border-[#ffe08a]/75 ring-1 ring-black/5'} ${item.color === 'bg-[#111827]' ? 'ring-2 ring-[#A3E635]/20 shadow-[inset_0_0_0_1px_rgba(17,24,39,0.08)]' : ''} hover:shadow-[#A3E635]/15`}>
 
                                         {/* Rich Pattern & Gloss */}
                                         <div
                                             className="absolute inset-0"
                                             style={{
-                                                opacity: item.color === 'bg-white' ? 0.16 : 0.12,
-                                                backgroundImage: item.color === 'bg-white'
-                                                    ? 'radial-gradient(#FF4D00 1.8px, transparent 1.8px)'
+                                                opacity: item.color === 'bg-[#111827]' ? 0.16 : 0.12,
+                                                backgroundImage: item.color === 'bg-[#111827]'
+                                                    ? 'radial-gradient(#A3E635 1.8px, transparent 1.8px)'
                                                     : 'radial-gradient(currentColor 2px, transparent 2px)',
-                                                backgroundSize: item.color === 'bg-white' ? '26px 26px' : '30px 30px'
+                                                backgroundSize: item.color === 'bg-[#111827]' ? '26px 26px' : '30px 30px'
                                             }}
                                         ></div>
                                         {(item.id === 'agil' || item.id === 'formacion') && (
@@ -336,16 +336,16 @@ const VentajasCarrusel = () => {
 
                                             <h3 className="text-3xl sm:text-4xl md:text-[3.3rem] font-black font-heading mb-2 sm:mb-4 leading-[1.05] drop-shadow-sm">
                                                 {item.title} <br />
-                                                <span className={`relative inline-block ${item.textColor === 'text-white' ? 'text-white' : 'text-[#FF4D00]'}`}>{item.highlight}</span>
+                                                <span className={`relative inline-block ${item.textColor === 'text-white' ? 'text-white' : 'text-[#A3E635]'}`}>{item.highlight}</span>
                                             </h3>
 
-                                            <p className={`text-sm sm:text-base md:text-lg font-semibold leading-relaxed mb-3 sm:mb-5 max-w-md ${item.textColor === 'text-white' ? 'text-white/90' : 'text-slate-600'}`}>
+                                            <p className={`text-sm sm:text-base md:text-lg font-semibold leading-relaxed mb-3 sm:mb-5 max-w-md ${item.textColor === 'text-white' ? 'text-white/90' : 'text-slate-300'}`}>
                                                 {item.desc}
                                             </p>
 
                                             <div className="grid grid-cols-2 gap-2 w-full max-w-[560px] mx-auto">
                                                 {item.features && item.features.map((feature, fIdx) => (
-                                                    <span key={fIdx} className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold border text-center ${item.textColor === 'text-white' ? 'bg-white/18 text-white border-white/45' : 'bg-[#5D3A1F]/5 text-[#111827] border-[#5D3A1F]/20'}`}>
+                                                    <span key={fIdx} className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold border text-center ${item.textColor === 'text-white' ? 'bg-white/18 text-white border-white/45' : 'bg-[#171717]/5 text-white border-[#171717]/20'}`}>
                                                         <i className={`fa-solid ${feature.icon} text-[10px] opacity-80`}></i>
                                                         {feature.text}
                                                     </span>
@@ -356,7 +356,7 @@ const VentajasCarrusel = () => {
                                         {/* Huge Icon Graphic */}
                                         <div className="relative z-10 w-full md:w-5/12 flex items-center justify-center">
                                             <div className={`w-20 h-20 sm:w-28 sm:h-28 md:w-44 md:h-44 rounded-[2rem] sm:rounded-[2.5rem] md:rounded-[3rem] flex items-center justify-center shadow-2xl ${item.iconColor} transition-all group-hover:scale-110 group-hover:rotate-6 duration-700 relative ring-4 sm:ring-6 md:ring-8 ring-white/20 backdrop-blur-sm border border-white/40`}>
-                                                <div className="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 md:-top-8 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-16 md:h-16 bg-[#FF4D00] rounded-lg sm:rounded-2xl md:rounded-3xl flex items-center justify-center text-white text-sm sm:text-lg md:text-2xl font-bold shadow-xl animate-bounce-slow rotate-12 z-20 border-4 border-white">
+                                                <div className="absolute -top-3 -right-3 sm:-top-5 sm:-right-5 md:-top-8 md:-right-8 w-8 h-8 sm:w-11 sm:h-11 md:w-16 md:h-16 bg-[#A3E635] rounded-lg sm:rounded-2xl md:rounded-3xl flex items-center justify-center text-white text-sm sm:text-lg md:text-2xl font-bold shadow-xl animate-bounce-slow rotate-12 z-20 border-4 border-white">
                                                     <i className="fa-solid fa-check"></i>
                                                 </div>
                                                 <i className={`fa-solid ${item.icon} text-3xl sm:text-4xl md:text-7xl relative z-10 drop-shadow-lg`}></i>
@@ -369,11 +369,11 @@ const VentajasCarrusel = () => {
                     </div>
 
                     {/* Custom Navigation (Bottom) */}
-                    <div className="flex justify-between items-center max-w-xs mx-auto mt-4 sm:mt-8 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-xl border border-[#FF4D00]/20">
+                    <div className="flex justify-between items-center max-w-xs mx-auto mt-4 sm:mt-8 bg-white/90 backdrop-blur-md p-2 rounded-full shadow-xl border border-[#A3E635]/20">
                         <button
                             onClick={prev}
                             aria-label="Anterior"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#FF4D00] hover:text-white transition-colors text-[#8B4513]"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-white transition-colors text-white"
                         >
                             <i className="fa-solid fa-angle-left"></i>
                         </button>
@@ -392,13 +392,13 @@ const VentajasCarrusel = () => {
                                         <span
                                             className={`relative rounded-full transition-all duration-500 ${
                                                 index === activeDotIndex
-                                                    ? 'w-16 h-2 bg-[#FF4D00]'
+                                                    ? 'w-16 h-2 bg-[#A3E635]'
                                                     : 'w-2.5 h-2.5 bg-gray-400 hover:bg-gray-500'
                                             }`}
                                         >
                                             {index === activeDotIndex && isAutoplaying && !isTransitioning && (
                                                 <span
-                                                    className="absolute top-0 left-0 h-full bg-[#5D3A1F] rounded-full"
+                                                    className="absolute top-0 left-0 h-full bg-[#171717] rounded-full"
                                                     style={{
                                                         width: '100%',
                                                         animation: 'progress 3s linear forwards'
@@ -417,7 +417,7 @@ const VentajasCarrusel = () => {
                         <button
                             onClick={next}
                             aria-label="Siguiente"
-                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#FF4D00] hover:text-white transition-colors text-[#8B4513]"
+                            className="w-9 h-9 sm:w-12 sm:h-12 rounded-full flex items-center justify-center hover:bg-[#A3E635] hover:text-white transition-colors text-white"
                         >
                             <i className="fa-solid fa-angle-right"></i>
                         </button>
