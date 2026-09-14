@@ -63,8 +63,8 @@ const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => 
                 animationDuration: i % 3 === 0 ? 'slow' : i % 2 === 0 ? 'medium' : 'fast',
                 top: `${(row * rowSize) + randomTop}%`,
                 left: `${(col * colSize) + randomLeft}%`,
-                width: `${Math.random() * 45 + 15}px`,
-                height: `${Math.random() * 45 + 15}px`,
+                width: `${pseudoRandom(i + 31) * 45 + 15}px`,
+                height: `${pseudoRandom(i + 41) * 45 + 15}px`,
                 color,
                 delay: `${i * 0.2}s`,
                 boxShadow
