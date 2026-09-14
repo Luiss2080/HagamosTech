@@ -299,7 +299,7 @@ const Header = () => {
                                     item.type === 'dropdown' ? (
                                         <div key={item.id} className="nav-item-container h-full flex items-center group">
                                             <button
-                                                className="text-[11px] font-black uppercase tracking-wider text-[#0A0A0A]/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
+                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
                                             >
                                                 <span>{item.label}</span>
                                                 <i className="fas fa-chevron-down text-[8px] transition-transform duration-300 group-hover:rotate-180"></i>
@@ -330,7 +330,7 @@ const Header = () => {
                                         <div key={item.id} className="nav-item-container h-full flex items-center">
                                             <button
                                                 onClick={() => handleNavItemClick(item)}
-                                                className="text-[11px] font-black uppercase tracking-wider text-[#0A0A0A]/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
+                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
                                             >
                                                 {item.label}
                                             </button>
@@ -416,8 +416,8 @@ const Header = () => {
 
                                                       <div className="w-full h-px bg-[#A3E635]/15 my-1"></div>
 
-                                                      <button onClick={() => { setIsUserMenuOpen(false); handleLogout(); }} className="flex items-start gap-3 w-full text-left p-2.5 rounded-lg hover:bg-white/50/10 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:translate-x-1.5 hover:shadow-md group/sub cursor-pointer">
-                                                          <div className="w-7 h-7 rounded-lg bg-white/50/10 flex items-center justify-center text-red-500 text-xs flex-shrink-0 transition-colors group-hover/sub:bg-white/50/20">
+                                                      <button onClick={() => { setIsUserMenuOpen(false); handleLogout(); }} className="flex items-start gap-3 w-full text-left p-2.5 rounded-lg hover:bg-red-500/10 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:translate-x-1.5 hover:shadow-md group/sub cursor-pointer">
+                                                          <div className="w-7 h-7 rounded-lg bg-red-500/10 flex items-center justify-center text-red-500 text-xs flex-shrink-0 transition-colors group-hover/sub:bg-red-500/20">
                                                               <i className="fas fa-arrow-right-from-bracket"></i>
                                                           </div>
                                                           <div className="flex-grow">
@@ -453,7 +453,7 @@ const Header = () => {
 
                                     <button
                                         onClick={() => openModal('registerModal')}
-                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-[#0A0A0A] bg-[#111827] hover:bg-white/90 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-[0_4px_15px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap cursor-pointer"
+                                        className="relative overflow-hidden group flex items-center justify-center min-w-0 sm:min-w-[110px] w-full sm:w-auto h-9 px-3 text-[#0A0A0A] bg-white hover:bg-white/90 font-black text-[9px] uppercase tracking-[0.12em] rounded-full shadow-[0_4px_15px_rgba(255,255,255,0.15)] hover:shadow-[0_6px_20px_rgba(255,255,255,0.35)] hover:-translate-y-0.5 transition-all duration-300 active:scale-95 whitespace-nowrap cursor-pointer"
                                     >
                                         <span className="relative z-10 flex items-center gap-2">
                                             <i className="fas fa-user-plus text-[9px] group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[8deg] transition-transform"></i>
@@ -491,7 +491,7 @@ const Header = () => {
                                         <button
                                             key={subItem.id}
                                             onClick={() => handleNavItemClick({ type: 'dropdown', target: subItem.target })}
-                                            className="flex items-center justify-between px-4 py-3 text-[14px] font-medium text-[#0A0A0A]/70 hover:bg-[#A3E635]/10 rounded-xl transition-colors"
+                                            className="flex items-center justify-between px-4 py-3 text-[14px] font-medium text-white/70 hover:bg-[#A3E635]/10 rounded-xl transition-colors"
                                         >
                                             {subItem.label}
                                             <i className="fas fa-arrow-right text-[10px] text-[#A3E635]/50"></i>
@@ -540,7 +540,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/perfil');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-user text-xs"></i>
@@ -552,7 +552,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/perfil/compras');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-receipt text-xs"></i>
@@ -564,7 +564,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/configuracion');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-gear text-xs"></i>
@@ -592,7 +592,7 @@ const Header = () => {
                                     closeMenu();
                                     openModal('loginModal');
                                 }}
-                                className="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-2xl border border-[#A3E635]/30 text-[#0A0A0A] font-bold hover:border-[#A3E635]/60 dark:hover:border-[#A3E635]/60 hover:text-[#A3E635] dark:hover:text-[#A3E635] hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 transition-all group"
+                                className="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-2xl border border-[#A3E635]/30 text-white font-bold hover:border-[#A3E635]/60 dark:hover:border-[#A3E635]/60 hover:text-[#A3E635] dark:hover:text-[#A3E635] hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 transition-all group"
                             >
                                 <i className="fas fa-user-lock text-sm group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[8deg] transition-transform"></i>
                                 <span className="group-hover:scale-105 transition-transform">Iniciar Sesion</span>
@@ -603,7 +603,7 @@ const Header = () => {
                                     closeMenu();
                                     openModal('registerModal');
                                 }}
-                                className="w-full py-3 bg-[#111827] hover:bg-white/90 text-[#0A0A0A] font-black text-[15px] uppercase tracking-[0.16em] rounded-2xl shadow-xl shadow-white/5 active:scale-95 transition-all relative overflow-hidden group flex items-center justify-center gap-2"
+                                className="w-full py-3 bg-white hover:bg-white/90 text-[#0A0A0A] font-black text-[15px] uppercase tracking-[0.16em] rounded-2xl shadow-xl shadow-white/5 active:scale-95 transition-all relative overflow-hidden group flex items-center justify-center gap-2"
                             >
                                 <span className="relative z-10 inline-flex items-center gap-2">
                                     <i className="fas fa-user-plus text-[13px]"></i>

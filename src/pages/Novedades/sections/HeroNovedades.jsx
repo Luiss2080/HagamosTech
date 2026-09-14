@@ -67,7 +67,7 @@ const HeroNovedades = () => {
 
                             {/* Badge superior */}
                             <div className="absolute top-5 left-5 z-20 flex items-center gap-2">
-                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#A3E635] text-[#0A0A0A] text-[9px] font-black uppercase tracking-widest shadow-lg shadow-lime-400/20/40">
+                                <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#A3E635] text-white text-[9px] font-black uppercase tracking-widest shadow-lg shadow-lime-400/20/40">
                                     <i className={`fas ${n.icon} text-[9px]`}></i> {n.categoria}
                                 </span>
                                 <span className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/15 backdrop-blur-md text-white/90 text-[9px] font-bold uppercase tracking-widest border border-white/25">
@@ -114,7 +114,7 @@ const HeroNovedades = () => {
                                         </a>
                                         <a
                                             href="tel:+59161320004"
-                                            className="inline-flex items-center justify-center gap-2.5 min-w-[180px] px-6 py-3.5 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full font-black text-[11px] uppercase tracking-[0.15em] shadow-xl shadow-lime-400/20/30 hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all"
+                                            className="inline-flex items-center justify-center gap-2.5 min-w-[180px] px-6 py-3.5 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full font-black text-[11px] uppercase tracking-[0.15em] shadow-xl shadow-lime-400/20/30 hover:shadow-2xl hover:-translate-y-0.5 active:scale-95 transition-all"
                                         >
                                             <i className="fas fa-phone text-sm"></i> Llamar
                                         </a>
@@ -147,14 +147,14 @@ const HeroNovedades = () => {
                 <button
                     onClick={prev}
                     aria-label="Noticia anterior"
-                    className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                    className="absolute -left-3 sm:-left-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                 >
                     <i className="fas fa-chevron-left text-sm sm:text-base group-hover:-translate-x-0.5 transition-transform"></i>
                 </button>
                 <button
                     onClick={next}
                     aria-label="Siguiente noticia"
-                    className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                    className="absolute -right-3 sm:-right-5 top-1/2 -translate-y-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#111827] shadow-xl shadow-black/10 border border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                 >
                     <i className="fas fa-chevron-right text-sm sm:text-base group-hover:translate-x-0.5 transition-transform"></i>
                 </button>

@@ -65,7 +65,7 @@ const HeroHagamosTech = () => {
                                     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
                                     else { navigate('/'); setTimeout(() => document.getElementById('flujo')?.scrollIntoView({ behavior: 'smooth' }), 120); }
                                 }}
-                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-[#111827] hover:bg-white/90 text-[#0A0A0A] font-black text-[11px] uppercase tracking-[0.14em] rounded-full shadow-lg shadow-white/10 hover:shadow-white/20 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
+                                className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-white hover:bg-white/90 text-[#0A0A0A] font-black text-[11px] uppercase tracking-[0.14em] rounded-full shadow-lg shadow-white/10 hover:shadow-white/20 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
                             >
                                 <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-[#0A0A0A]"></i>
                                 <span>Cómo trabajamos</span>

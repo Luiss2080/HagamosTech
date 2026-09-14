@@ -32,10 +32,10 @@ const ModalExito = ({
                     className="flex min-h-screen items-center justify-center p-4 text-center sm:p-0"
                     onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
                 >
-                    <div className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto scrollbar-none transform overflow-hidden rounded-[2.5rem] bg-[#111827] text-left shadow-2xl transition-all sm:my-4 animate-modal-pop border border-white/10">
+                    <div className="relative w-full max-w-5xl max-h-[92vh] overflow-y-auto scrollbar-none transform overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl transition-all sm:my-4 animate-modal-pop border border-gray-200">
                         <button
                             onClick={onClose}
-                            className="absolute top-6 right-6 z-[200] w-10 h-10 flex items-center justify-center rounded-full bg-white/5 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-slate-400 hover:text-emerald-600 transition-all focus:outline-none cursor-pointer shadow-sm hover:shadow-md border border-white/10"
+                            className="absolute top-6 right-6 z-[200] w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-gray-500 hover:text-emerald-600 transition-all focus:outline-none cursor-pointer shadow-sm hover:shadow-md border border-gray-200"
                         >
                             <i className="fas fa-times text-xl"></i>
                         </button>
@@ -50,7 +50,7 @@ const ModalExito = ({
 
                                 <div className="relative z-10 flex flex-col items-center text-center">
                                     <div className="mb-4 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md relative">
-                                        <div className="h-36 w-36 rounded-full bg-[#111827] flex items-center justify-center shadow-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
+                                        <div className="h-36 w-36 rounded-full bg-white flex items-center justify-center shadow-lg overflow-hidden transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
                                             <i className="fas fa-check-circle text-[#050505]" style={{ fontSize: '70px' }}></i>
                                         </div>
                                         <div className="absolute -bottom-1 -right-1 w-10 h-10 rounded-full bg-emerald-500 border-2 border-white flex items-center justify-center shadow-lg">
@@ -76,19 +76,19 @@ const ModalExito = ({
 
                                     <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-5">
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-globe mr-1"></i> Web</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-globe mr-1"></i> Web</p>
                                             <p className="text-xs font-bold text-white">Páginas y Landing</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-laptop-code mr-1"></i> Sistemas</p>
                                             <p className="text-xs font-bold text-white">Apps y Software</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-gears mr-1"></i> Automatización</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-gears mr-1"></i> Automatización</p>
                                             <p className="text-xs font-bold text-white">Procesos e IA</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#111111]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>
                                             <p className="text-xs font-bold text-white">Identidad y Gráfica</p>
                                         </div>
                                     </div>
@@ -111,7 +111,7 @@ const ModalExito = ({
                                 </div>
                             </div>
 
-                            <div className="relative flex flex-col justify-center h-full bg-[#111111] p-5 lg:p-6">
+                            <div className="relative flex flex-col justify-center h-full bg-[#F9F9F9] p-5 lg:p-6">
                                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                                     <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                                     <div className="absolute top-1/2 -left-10 w-40 h-40 bg-[#111827]/20 rounded-full blur-2xl"></div>
@@ -120,48 +120,48 @@ const ModalExito = ({
                                 </div>
 
                                 <div className="relative z-10 w-full max-w-[540px] mx-auto">
-                                    <div className="mb-3.5 text-center bg-[#111827] p-4 rounded-2xl shadow-sm border border-white/10 relative overflow-hidden">
+                                    <div className="mb-3.5 text-center bg-white p-4 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
                                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-[#A3E635]"></div>
                                         <div className="inline-flex items-center gap-2 mb-1.5">
                                             <span className="w-8 h-8 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
                                                 <i className="fas fa-check-circle text-sm"></i>
                                             </span>
-                                            <h3 className="text-2xl font-black font-heading text-white tracking-tight">{title}</h3>
+                                            <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">{title}</h3>
                                         </div>
-                                        <p className="text-xs text-slate-400 font-bold uppercase tracking-wide">Confirmacion</p>
+                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Confirmacion</p>
                                     </div>
 
                                     <div className="mb-3.5 grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                                        <div className="rounded-xl bg-[#111827] border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
+                                        <div className="rounded-xl bg-white border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
                                                 <i className="fas fa-box-open text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-white">Web</p>
+                                            <p className="text-[13px] font-extrabold text-[#111827]">Catalogo</p>
                                         </div>
-                                        <div className="rounded-xl bg-[#111827] border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
+                                        <div className="rounded-xl bg-white border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
                                                 <i className="fas fa-receipt text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-white">Sistemas</p>
+                                            <p className="text-[13px] font-extrabold text-[#111827]">Pedidos</p>
                                         </div>
-                                        <div className="rounded-xl bg-[#111827] border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
+                                        <div className="rounded-xl bg-white border border-emerald-200/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center">
                                                 <i className="fas fa-signal text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Estado</p>
-                                            <p className="text-[13px] font-extrabold text-white">Exitoso</p>
+                                            <p className="text-[13px] font-extrabold text-[#111827]">Exitoso</p>
                                         </div>
                                     </div>
 
-                                    <div className="rounded-2xl border border-emerald-200 bg-[#111827] p-4 shadow-sm">
+                                    <div className="rounded-2xl border border-emerald-200 bg-white p-4 shadow-sm">
                                         <div className="flex items-start gap-3">
                                             <span className="w-10 h-10 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center flex-shrink-0">
                                                 <i className="fas fa-check text-base"></i>
                                             </span>
                                             <div>
-                                                <p className="text-sm text-slate-300 font-semibold leading-relaxed">{message}</p>
+                                                <p className="text-sm text-gray-600 font-semibold leading-relaxed">{message}</p>
                                                 <div className="mt-3 inline-flex items-center gap-2 text-[11px] font-black uppercase tracking-widest text-emerald-600">
                                                     <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
                                                     Listo para continuar
@@ -170,7 +170,7 @@ const ModalExito = ({
                                         </div>
                                     </div>
 
-                                    <div className="mt-3 rounded-2xl border border-white/10 bg-[#111827] p-3.5 shadow-sm">
+                                    <div className="mt-3 rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
                                         <button
                                             type="button"
                                             onClick={onClose}
@@ -182,7 +182,7 @@ const ModalExito = ({
                                         </button>
                                     </div>
 
-                                    <div className="mt-3 rounded-xl border border-white/10 bg-[#111827] px-3.5 py-3 text-[11px] text-slate-400 font-semibold leading-relaxed text-center">
+                                    <div className="mt-3 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#84CC16] flex-shrink-0"></i>
                                             <span>Si tienes dudas, contacta al soporte HAGAMOSTECH en WhatsApp al +591 61320004.</span>

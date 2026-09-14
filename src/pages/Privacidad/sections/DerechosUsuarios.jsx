@@ -29,7 +29,7 @@ const DerechosUsuarios = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
                             Tenés el <span className="relative inline-block text-[#A3E635]">
                                 control
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -45,16 +45,16 @@ const DerechosUsuarios = () => {
                                     key={i}
                                     onClick={() => setActive(i)}
                                     className={`relative flex items-center gap-3 p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${
-                                        active === i ? 'bg-[#111827] text-white shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-white border border-orange-50 hover:bg-[#111827] hover:shadow-md'
+                                        active === i ? 'bg-white text-[#111827] shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-[#111827] border border-orange-50 hover:bg-white hover:shadow-md'
                                     }`}
                                 >
                                     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#A3E635] to-[#84CC16] transition-opacity duration-300" style={{ opacity: active === i ? 1 : 0 }}></div>
-                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md shadow-orange-500/30' : 'bg-[#FFFFFF] text-[#A3E635]'}`}>
+                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#A3E635] text-white shadow-md shadow-orange-500/30' : 'bg-[#FFFFFF] text-[#A3E635]'}`}>
                                         <i className={`fas ${d.icon}`}></i>
                                     </div>
                                     <div>
-                                        <p className={`font-black text-sm ${active === i ? 'text-[#A3E635]' : 'text-white'}`}>{d.titulo}</p>
-                                        <p className={`text-[9px] font-black uppercase tracking-widest ${active === i ? 'text-slate-400' : 'text-gray-400'}`}>
+                                        <p className={`font-black text-sm ${active === i ? 'text-[#A3E635]' : 'text-[#111827]'}`}>{d.titulo}</p>
+                                        <p className={`text-[9px] font-black uppercase tracking-widest ${active === i ? 'text-slate-500' : 'text-gray-400'}`}>
                                             <i className="fas fa-stopwatch text-[#A3E635] mr-1"></i>{d.tiempo}
                                         </p>
                                     </div>
@@ -103,7 +103,7 @@ const DerechosUsuarios = () => {
                                 </div>
 
                                 <div className="mt-auto">
-                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-[#111827] text-[#A3E635] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
+                                    <a href="https://wa.me/59161320004?text=Hola%20Los%20HagamosTech!%20Quiero%20ejercer%20mi%20derecho%20de%20acceso%20a%20mis%20datos" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-6 py-3 bg-white text-[#A3E635] rounded-full font-black text-xs uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
                                         <i className="fab fa-whatsapp"></i> Ejercer este derecho
                                     </a>
                                 </div>

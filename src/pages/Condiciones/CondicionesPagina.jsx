@@ -45,7 +45,7 @@ const Condiciones = () => {
     return (
         <main className="relative min-h-screen overflow-hidden">
             <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-[-10rem] left-[-8rem] h-[26rem] w-[26rem] rounded-full bg-[#A3E635]/10 blur-3xl"></div>
+                <div className="absolute top-[-10rem] left-[-8rem] h-[26rem] w-[26rem] rounded-full bg-[#a41e22]/10 blur-3xl"></div>
                 <div className="absolute right-[-9rem] top-[12rem] h-[24rem] w-[24rem] rounded-full bg-[#111827]/10 blur-3xl"></div>
                 <div className="absolute bottom-[-10rem] left-[20%] h-[22rem] w-[22rem] rounded-full bg-[#0d1b3e]/10 blur-3xl"></div>
             </div>
@@ -54,7 +54,7 @@ const Condiciones = () => {
 
             <section className="relative mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-8 sm:px-6 lg:px-8">
                 <div className="grid w-full gap-6 lg:grid-cols-[1.05fr_1.35fr]">
-                    <aside className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#0A0A0A] via-[#A3E635] to-[#0d1b3e] p-8 text-white shadow-2xl ring-1 ring-white/15 sm:p-10">
+                    <aside className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#801518] via-[#a41e22] to-[#0d1b3e] p-8 text-white shadow-2xl ring-1 ring-white/15 sm:p-10">
                         <div className="absolute inset-0 opacity-30">
                             <div className="absolute -top-10 right-0 h-56 w-56 rounded-full bg-[#111827]/30 blur-3xl"></div>
                             <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-white/10 blur-3xl"></div>
@@ -70,7 +70,7 @@ const Condiciones = () => {
                                 />
                                 <h1 className="mt-5 text-2xl font-black leading-tight tracking-tight sm:text-3xl">
                                     Terminos y
-                                    <span className="block text-white">Condiciones</span>
+                                    <span className="block text-[#111827]">Condiciones</span>
                                 </h1>
 
                                 <p className="mt-4 max-w-xl text-sm leading-6 text-blue-50 sm:text-base">
@@ -96,12 +96,12 @@ const Condiciones = () => {
                         </div>
                     </aside>
 
-                    <section className="relative overflow-hidden rounded-[2rem] border border-[#111111] bg-[#111827] p-5 shadow-xl sm:p-6 lg:p-8">
-                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#A3E635] via-[#111827] to-[#A3E635]"></div>
+                    <section className="relative overflow-hidden rounded-[2rem] border border-[#dbe8fb] bg-white p-5 shadow-xl sm:p-6 lg:p-8">
+                        <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#a41e22] via-[#111827] to-[#a41e22]"></div>
 
                         <div className="flex flex-col gap-4 border-b border-[#edf2fb] pb-5 sm:flex-row sm:items-end sm:justify-between">
                             <div>
-                                <span className="inline-flex items-center gap-2 rounded-full bg-[#111111] px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#A3E635] ring-1 ring-[#fca5a5]">
+                                <span className="inline-flex items-center gap-2 rounded-full bg-[#fef2f2] px-3 py-1 text-[10px] font-black uppercase tracking-[0.22em] text-[#a41e22] ring-1 ring-[#fca5a5]">
                                     <i className="fas fa-file-contract"></i>
 HagamosTech
                                 </span>
@@ -120,16 +120,16 @@ HagamosTech
 
                         <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-2">
                             {TERMS_SECTIONS.map((section) => (
-                                <article key={section.title} className="rounded-2xl border border-[#e5eefb] bg-[#111111] p-4 shadow-sm">
+                                <article key={section.title} className="rounded-2xl border border-[#e5eefb] bg-[#fbfdff] p-4 shadow-sm">
                                     <h3 className="text-sm font-black uppercase tracking-wide text-[#0d1b3e]">{section.title}</h3>
                                     <p className="mt-2 text-sm leading-6 text-[#3d5677]">{section.text}</p>
                                 </article>
                             ))}
                         </div>
 
-                        <div className="mt-5 rounded-2xl border border-[#111111] bg-[#fff5f5] p-4 text-sm leading-6 text-[#2b4566]">
+                        <div className="mt-5 rounded-2xl border border-[#dbe8fb] bg-[#fff5f5] p-4 text-sm leading-6 text-[#2b4566]">
                             <div className="flex items-start gap-3">
-                                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#111111] text-[#A3E635] ring-1 ring-[#fca5a5]">
+                                <span className="mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-xl bg-[#fef2f2] text-[#a41e22] ring-1 ring-[#fca5a5]">
                                     <i className="fas fa-circle-info"></i>
                                 </span>
                                 <p>
@@ -139,11 +139,11 @@ HagamosTech
                         </div>
 
                         <div className="mt-4 flex flex-wrap gap-3">
-                            <a href="/" className="inline-flex items-center gap-2 rounded-2xl border border-[#111111] bg-[#111827] px-4 py-2.5 text-xs font-black uppercase tracking-[0.16em] text-[#0d1b3e] transition hover:border-[#A3E635] hover:text-[#A3E635]">
+                            <a href="/" className="inline-flex items-center gap-2 rounded-2xl border border-[#dbe8fb] bg-white px-4 py-2.5 text-xs font-black uppercase tracking-[0.16em] text-[#0d1b3e] transition hover:border-[#a41e22] hover:text-[#a41e22]">
                                 <i className="fas fa-house"></i>
                                 Volver al inicio
                             </a>
-                            <a href="/contactanos" className="inline-flex items-center gap-2 rounded-2xl border border-[#111111] bg-[#111827] px-4 py-2.5 text-xs font-black uppercase tracking-[0.16em] text-[#0d1b3e] transition hover:border-[#A3E635] hover:text-[#A3E635]">
+                            <a href="/contactanos" className="inline-flex items-center gap-2 rounded-2xl border border-[#dbe8fb] bg-white px-4 py-2.5 text-xs font-black uppercase tracking-[0.16em] text-[#0d1b3e] transition hover:border-[#a41e22] hover:text-[#a41e22]">
                                 <i className="fas fa-circle-question"></i>
                                 Contactar soporte
                             </a>

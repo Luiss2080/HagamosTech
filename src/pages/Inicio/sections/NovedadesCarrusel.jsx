@@ -179,21 +179,21 @@ const NewsCard = ({ noticia, icon }) => {
             <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
               <i className={`fa-solid ${noticia.specs.col1.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[7.5px] text-slate-400 font-black uppercase tracking-wider leading-tight">{noticia.specs.col1.label}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col1.label}</span>
             <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col1.value}</span>
           </div>
           <div className="border-x border-white/10 flex flex-col items-center justify-center">
             <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
               <i className={`fa-solid ${noticia.specs.col2.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[7.5px] text-slate-400 font-black uppercase tracking-wider leading-tight">{noticia.specs.col2.label}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col2.label}</span>
             <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col2.value}</span>
           </div>
           <div className="flex flex-col items-center justify-center">
             <div className="w-6 h-6 rounded-full bg-[#A3E635]/15 text-[#84CC16] flex items-center justify-center text-[10px] shadow-inner mb-1">
               <i className={`fa-solid ${noticia.specs.col3.icon} text-[10px]`}></i>
             </div>
-            <span className="text-[7.5px] text-slate-400 font-black uppercase tracking-wider leading-tight">{noticia.specs.col3.label}</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-wider leading-tight">{noticia.specs.col3.label}</span>
             <span className="text-[10px] font-black text-white mt-0.5 leading-tight">{noticia.specs.col3.value}</span>
           </div>
         </div>
@@ -214,7 +214,7 @@ const NewsCard = ({ noticia, icon }) => {
         {/* Fila inferior de Fecha & CTAs */}
         <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-3 w-full">
           <div className="flex flex-col items-start">
-            <span className="text-[7.5px] text-slate-400 font-black uppercase tracking-widest leading-none">FECHA</span>
+            <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-widest leading-none">FECHA</span>
             <span className="text-[10px] font-black mt-1 leading-none text-white">{noticia.date}</span>
           </div>
 
@@ -380,14 +380,14 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-[#0A0A0A] transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
                   aria-label="Anterior"
                 >
                   <i className="fa-solid fa-chevron-left text-xs"></i>
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-[#0A0A0A] transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
                   aria-label="Siguiente"
                 >
                   <i className="fa-solid fa-chevron-right text-xs"></i>

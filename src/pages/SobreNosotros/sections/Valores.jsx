@@ -86,10 +86,10 @@ const Valores = () => {
                                     className="group min-w-0 px-2 w-full"
                                     style={{ flex: `0 0 ${100 / cardsPerView}%` }}
                                 >
-                                    <div className="bg-[#111827] rounded-[2.5rem] p-0 flex flex-col items-center text-center relative overflow-hidden transition-all duration-700 hover:shadow-2xl hover:shadow-[#A3E635]/20 border border-white/10/50 hover:-translate-y-2 h-full w-full">
+                                    <div className="bg-white rounded-[2.5rem] p-0 flex flex-col items-center text-center relative overflow-hidden transition-all duration-700 hover:shadow-2xl hover:shadow-[#A3E635]/20 border border-gray-100/50 hover:-translate-y-2 h-full w-full">
                                         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-br from-[#0A0A0A] to-[#171717] overflow-hidden">
                                             <CircleParticles count={8} colorScheme="dark" />
-                                            <div className="absolute bottom-0 left-0 right-0 h-10 bg-[#111827] rounded-t-[50%] transform translate-y-1/2 scale-x-150"></div>
+                                            <div className="absolute bottom-0 left-0 right-0 h-10 bg-white rounded-t-[50%] transform translate-y-1/2 scale-x-150"></div>
                                         </div>
 
                                         <div className="absolute top-4 left-4 text-3xl text-white font-black select-none z-0">#</div>
@@ -98,7 +98,7 @@ const Valores = () => {
                                         </div>
 
                                         <div className="relative w-36 h-36 mb-4 z-10 mt-12">
-                                            <div className="absolute inset-0 rounded-full border-[6px] border-white shadow-xl group-hover:scale-105 transition-transform duration-500 overflow-hidden bg-[#111827]">
+                                            <div className="absolute inset-0 rounded-full border-[6px] border-white shadow-xl group-hover:scale-105 transition-transform duration-500 overflow-hidden bg-white">
                                                 <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-[#F4FAE8] via-white to-[#F4FAE8] text-[#84CC16]">
                                                     <i className={`fas ${member.icon} text-[4.5rem] sm:text-[5rem] opacity-90`}></i>
                                                 </div>
@@ -110,7 +110,7 @@ const Valores = () => {
                                                 {member.role}
                                             </span>
                                             <h3 className="text-xl font-black font-heading text-[#0A0A0A] mb-2 group-hover:text-[#84CC16] transition-colors leading-tight">{member.name}</h3>
-                                            <p className="text-[13px] text-slate-300 font-semibold leading-relaxed mb-8 px-2">
+                                            <p className="text-[13px] text-slate-600 font-semibold leading-relaxed mb-8 px-2">
                                                 {member.desc}
                                             </p>
 

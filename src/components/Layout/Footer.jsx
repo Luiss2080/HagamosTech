@@ -90,14 +90,14 @@ const Footer = () => {
           {/* COLUMNA 3: NOSOTROS (2 cols) */}
           <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-10">
             <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#111827] shadow-[0_0_10px_rgba(255,255,255,1)]"></span>
+              <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]"></span>
               NOSOTROS
             </h3>
             <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
               {nosotrosLinks.map((link, i) => (
                 <li key={i} className="w-full max-w-[200px] lg:max-w-none transition-transform duration-300 hover:scale-[1.03] hover:translate-x-1.5">
                   <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#111827] transition-colors duration-300 shadow-inner shrink-0">
+                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white transition-colors duration-300 shadow-inner shrink-0">
                       <i className={`fas ${link.icon} text-[13px] text-white group-hover:text-[#0A0A0A] transition-colors`}></i>
                     </div>
                     <span className="text-[14px] font-semibold">{link.name}</span>
@@ -124,7 +124,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#111827] transition-colors duration-300 shadow-inner">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
                   <i className="fas fa-envelope text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">
@@ -142,7 +142,7 @@ const Footer = () => {
                 </div>
               </li>
               <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#111827] transition-colors duration-300 shadow-inner">
+                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
                   <i className="fas fa-clock text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
                 <div className="flex flex-col text-left">

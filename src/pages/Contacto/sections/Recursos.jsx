@@ -30,7 +30,7 @@ const recursosData = [
         desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
         icon: "fa-headset",
         theme: {
-            cardBg: "bg-[#111827]",
+            cardBg: "bg-white",
             accentLine: "bg-[#A3E635]",
             iconBg: "bg-neutral-150",
             iconColor: "text-[#0A0A0A]",
@@ -116,7 +116,7 @@ const Recursos = () => {
                                             const icon = typeof tag === 'string' ? null : tag.icon;
 
                                             return (
-                                                <span key={label} className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider inline-flex items-center gap-1.5 ${item.theme.cardBg === 'bg-[#111827]' ? 'bg-[#0A0A0A]/5 text-[#0A0A0A] border border-[#0A0A0A]/10' : 'bg-white/70 text-[#0A0A0A] border border-white/80'}`}>
+                                                <span key={label} className={`px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-wider inline-flex items-center gap-1.5 ${item.theme.cardBg === 'bg-white' ? 'bg-[#0A0A0A]/5 text-[#0A0A0A] border border-[#0A0A0A]/10' : 'bg-white/70 text-[#0A0A0A] border border-white/80'}`}>
                                                     {icon && <i className={`fas ${icon} text-[10px]`}></i>}
                                                     {label}
                                                 </span>

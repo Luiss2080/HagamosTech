@@ -52,8 +52,8 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
 
   const breadcrumbPill = (
     <div className={`flex ${isCenter ? 'justify-center' : 'justify-start'} mb-4`}>
-      <div className="inline-flex items-center gap-2 bg-[#111827] px-4 py-2 rounded-full border border-white/10 shadow-md">
-        <Link to="/" className="w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center hover:bg-[#84CC16] transition-all shrink-0 shadow-sm">
+      <div className="inline-flex items-center gap-2 bg-[#111827] px-4 py-2 rounded-full border border-gray-100 shadow-md">
+        <Link to="/" className="w-8 h-8 rounded-full bg-[#A3E635] text-white flex items-center justify-center hover:bg-[#84CC16] transition-all shrink-0 shadow-sm">
           <i className="fa-solid fa-house text-xs"></i>
         </Link>
         <span className="text-[10px] font-black text-slate-300/70 uppercase tracking-widest">INICIO</span>

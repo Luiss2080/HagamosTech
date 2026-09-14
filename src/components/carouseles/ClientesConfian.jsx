@@ -71,17 +71,17 @@ const TrustedClients = () => {
           <div className="absolute top-0 bottom-0 right-0 w-16 sm:w-32 bg-gradient-to-l from-[#0A0A0A] to-transparent z-20 pointer-events-none"></div>
 
           {/* Left/Right Overlapping Arrow Buttons positioned on outer margins */}
-          <button className="absolute left-4 top-[24%] z-30 w-11 h-11 rounded-full bg-[#111827] border border-white/10 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
+          <button className="absolute left-4 top-[24%] z-30 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
             <ChevronLeft size={18} />
           </button>
-          <button className="absolute right-4 top-[24%] z-30 w-11 h-11 rounded-full bg-[#111827] border border-white/10 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
+          <button className="absolute right-4 top-[24%] z-30 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
             <ChevronRight size={18} />
           </button>
 
-          <button className="absolute left-4 top-[76%] z-30 w-11 h-11 rounded-full bg-[#111827] border border-white/10 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
+          <button className="absolute left-4 top-[76%] z-30 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
             <ChevronLeft size={18} />
           </button>
-          <button className="absolute right-4 top-[76%] z-30 w-11 h-11 rounded-full bg-[#111827] border border-white/10 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
+          <button className="absolute right-4 top-[76%] z-30 w-11 h-11 rounded-full bg-white border border-slate-200 shadow-2xl flex items-center justify-center text-[#A3E635] hover:scale-105 transition-all">
             <ChevronRight size={18} />
           </button>
 
@@ -93,7 +93,7 @@ const TrustedClients = () => {
                 return (
                   <div
                     key={`${client.name}-r1-${idx}`}
-                    className="bg-[#111827] border border-white/10/80 rounded-2xl p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.02)] dark:shadow-[0_15px_35px_rgba(0,0,0,0.3)] hover:border-[#A3E635]/50 hover:shadow-[0_0_20px_rgba(164,30,34,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-row items-center w-[305px] sm:w-[325px] h-[135px] shrink-0 relative overflow-hidden group text-left"
+                    className="bg-white border border-slate-200/80 rounded-2xl p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.02)] dark:shadow-[0_15px_35px_rgba(0,0,0,0.3)] hover:border-[#A3E635]/50 hover:shadow-[0_0_20px_rgba(164,30,34,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-row items-center w-[305px] sm:w-[325px] h-[135px] shrink-0 relative overflow-hidden group text-left"
                   >
                     {/* Left Column: Larger Floating Logo (no boundary border) */}
                     <div className="w-[33%] h-full flex items-center justify-center flex-shrink-0 filter">
@@ -112,7 +112,7 @@ const TrustedClients = () => {
                           <span className="text-[10px] font-black text-[#A3E635]">
                             {indexNum}
                           </span>
-                          <h4 className="text-[12px] font-black uppercase text-slate-100 tracking-wide truncate max-w-[130px] leading-tight">
+                          <h4 className="text-[12px] font-black uppercase text-slate-800 tracking-wide truncate max-w-[130px] leading-tight">
                             {client.name}
                           </h4>
                         </div>
@@ -140,7 +140,7 @@ const TrustedClients = () => {
                       
                       <button
                         onClick={() => window.openModal?.('contactModal')}
-                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-white hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
                         <span>Ver detalles</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
@@ -160,7 +160,7 @@ const TrustedClients = () => {
                 return (
                   <div
                     key={`${client.name}-r2-${idx}`}
-                    className="bg-[#111827] border border-white/10/80 rounded-2xl p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.02)] dark:shadow-[0_15px_35px_rgba(0,0,0,0.3)] hover:border-[#A3E635]/50 hover:shadow-[0_0_20px_rgba(164,30,34,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-row items-center w-[305px] sm:w-[325px] h-[135px] shrink-0 relative overflow-hidden group text-left"
+                    className="bg-white border border-slate-200/80 rounded-2xl p-3.5 shadow-[0_8px_30px_rgba(0,0,0,0.02)] dark:shadow-[0_15px_35px_rgba(0,0,0,0.3)] hover:border-[#A3E635]/50 hover:shadow-[0_0_20px_rgba(164,30,34,0.12)] hover:-translate-y-1 transition-all duration-300 flex flex-row items-center w-[305px] sm:w-[325px] h-[135px] shrink-0 relative overflow-hidden group text-left"
                   >
                     {/* Left Column: Larger Floating Logo (no boundary border) */}
                     <div className="w-[33%] h-full flex items-center justify-center flex-shrink-0 filter">
@@ -179,7 +179,7 @@ const TrustedClients = () => {
                           <span className="text-[10px] font-black text-[#A3E635]">
                             {indexNum}
                           </span>
-                          <h4 className="text-[12px] font-black uppercase text-slate-100 tracking-wide truncate max-w-[130px] leading-tight">
+                          <h4 className="text-[12px] font-black uppercase text-slate-800 tracking-wide truncate max-w-[130px] leading-tight">
                             {client.name}
                           </h4>
                         </div>
@@ -207,7 +207,7 @@ const TrustedClients = () => {
                       
                       <button
                         onClick={() => window.openModal?.('contactModal')}
-                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-white hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
                         <span>Ver detalles</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>

@@ -64,7 +64,7 @@ const MapaFlujoCookies = () => {
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
                             El <span className="relative inline-block text-[#A3E635]">
                                 recorrido
-                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
+                                <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
@@ -72,7 +72,7 @@ const MapaFlujoCookies = () => {
                         </p>
                     </div>
 
-                    <div className="bg-[#111827] rounded-[2rem] ring-1 ring-orange-100 shadow-xl shadow-orange-950/5 relative overflow-hidden">
+                    <div className="bg-white rounded-[2rem] ring-1 ring-orange-100 shadow-xl shadow-orange-950/5 relative overflow-hidden">
                         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#A3E635]"></div>
                         <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#A3E635]/10 blur-3xl animate-float-slow pointer-events-none"></div>
 
@@ -94,7 +94,7 @@ const MapaFlujoCookies = () => {
                                                     <i className={`fas ${n.icon} text-xl`}></i>
                                                     <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">{i + 1}</span>
                                                 </div>
-                                                <span className={`text-[10px] font-black tracking-wide text-center leading-tight transition-colors ${isActive ? 'text-[#A3E635]' : 'text-slate-400 group-hover:text-[#171717]'}`}>
+                                                <span className={`text-[10px] font-black tracking-wide text-center leading-tight transition-colors ${isActive ? 'text-[#A3E635]' : 'text-slate-500 group-hover:text-[#171717]'}`}>
                                                     {n.titulo}
                                                 </span>
                                             </button>
@@ -118,7 +118,7 @@ const MapaFlujoCookies = () => {
                                             </div>
                                             <div>
                                                 <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-white/15 border border-white/25 text-[8px] font-black uppercase tracking-widest mb-1">
-                                                    <i className="fas fa-flag text-lime-300 text-[8px]"></i>{nodo.etiqueta}
+                                                    <i className="fas fa-flag text-amber-300 text-[8px]"></i>{nodo.etiqueta}
                                                 </span>
                                                 <h3 className="text-lg font-black font-heading leading-tight">{nodo.titulo}</h3>
                                             </div>
@@ -133,7 +133,7 @@ const MapaFlujoCookies = () => {
                                         {/* Col 1: descripción */}
                                         <div className="text-center">
                                             <div className="w-9 h-9 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center mx-auto mb-2">
-                                                <i className="fas fa-comment-dots text-lime-300 text-sm"></i>
+                                                <i className="fas fa-comment-dots text-amber-300 text-sm"></i>
                                             </div>
                                             <p className="text-[9px] font-black uppercase tracking-widest opacity-70 mb-1">Qué pasa</p>
                                             <p className="text-[12px] font-semibold text-white/95 leading-snug">{nodo.desc}</p>
@@ -142,7 +142,7 @@ const MapaFlujoCookies = () => {
                                         {/* Col 2: detalle */}
                                         <div className="text-center border-t sm:border-t-0 sm:border-x border-white/20 pt-4 sm:pt-0 sm:px-4">
                                             <div className="w-9 h-9 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center mx-auto mb-2">
-                                                <i className="fas fa-lightbulb text-lime-300 text-sm"></i>
+                                                <i className="fas fa-lightbulb text-amber-300 text-sm"></i>
                                             </div>
                                             <p className="text-[9px] font-black uppercase tracking-widest opacity-70 mb-1">Dato clave</p>
                                             <p className="text-[12px] font-semibold text-white/95 leading-snug">{nodo.detalle}</p>
@@ -151,7 +151,7 @@ const MapaFlujoCookies = () => {
                                         {/* Col 3: estado */}
                                         <div className="text-center">
                                             <div className="w-9 h-9 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center mx-auto mb-2">
-                                                <i className={`fas ${nodo.statIcon} text-lime-300 text-sm`}></i>
+                                                <i className={`fas ${nodo.statIcon} text-amber-300 text-sm`}></i>
                                             </div>
                                             <p className="text-[9px] font-black uppercase tracking-widest opacity-70 mb-1">Estado</p>
                                             <p className="text-[12px] font-black uppercase tracking-wider leading-snug">{nodo.stat}</p>
@@ -162,7 +162,7 @@ const MapaFlujoCookies = () => {
                                     <div className="flex flex-wrap justify-center gap-1.5 pt-4 border-t border-white/25">
                                         {nodo.chips.map((chip, j) => (
                                             <span key={j} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 border border-white/25 text-[8px] font-black uppercase tracking-wider">
-                                                <i className="fas fa-check text-lime-300 text-[8px]"></i>{chip}
+                                                <i className="fas fa-check text-amber-300 text-[8px]"></i>{chip}
                                             </span>
                                         ))}
                                     </div>

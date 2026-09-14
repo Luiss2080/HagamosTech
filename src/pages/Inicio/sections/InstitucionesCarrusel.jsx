@@ -186,10 +186,10 @@ const InstitucionesCarrusel = () => {
     const renderCard = (inst, index, globalIndex) => (
         <article
             key={`${inst.id}-${globalIndex}`}
-            className="bg-[#111827] rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3.5 flex items-center gap-3 sm:gap-4 border-b-[5px] border-[#A3E635] w-[min(290px,86vw)] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
+            className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3.5 flex items-center gap-3 sm:gap-4 border-b-[5px] border-[#A3E635] w-[min(290px,86vw)] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
         >
             {/* Logo */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-white/5/50 rounded-[14px] p-2 shrink-0 border border-white/10">
+            <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-gray-50/50 rounded-[14px] p-2 shrink-0 border border-gray-100">
                 <img src={inst.logo} alt={inst.name} loading="lazy" decoding="async" className="max-w-full max-h-full object-contain" />
             </div>
 
@@ -201,14 +201,14 @@ const InstitucionesCarrusel = () => {
                 <div className="mb-2">
                     <div className="flex items-center gap-1.5 mb-1">
                         <span className="text-[#A3E635] font-black text-[11px] sm:text-xs">0{index + 1}</span>
-                        <h3 className="font-extrabold text-slate-100 text-[11px] sm:text-xs leading-tight truncate uppercase w-32" title={inst.name}>
+                        <h3 className="font-extrabold text-gray-800 text-[11px] sm:text-xs leading-tight truncate uppercase w-32" title={inst.name}>
                             {inst.name}
                         </h3>
                     </div>
                     
                     <div className="flex items-center gap-1.5 mb-1.5">
                         <i className="fa-solid fa-code text-[#84CC16] text-[9px] sm:text-[10px]"></i>
-                        <span className="text-slate-400 font-bold text-[8px] sm:text-[9px] tracking-widest uppercase truncate">{inst.tag}</span>
+                        <span className="text-gray-500 font-bold text-[8px] sm:text-[9px] tracking-widest uppercase truncate">{inst.tag}</span>
                     </div>
 
                     <div className="flex items-center gap-1.5">
@@ -227,7 +227,7 @@ const InstitucionesCarrusel = () => {
 
                 <button 
                     onClick={() => setSelectedInst(inst)}
-                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-[#0A0A0A] font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
+                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
                 >
                     VER DETALLES
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
@@ -263,7 +263,7 @@ const InstitucionesCarrusel = () => {
                     type="button"
                     aria-label="Mostrar elemento anterior"
                     onClick={() => moveByCard(-1)}
-                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-[#111827] text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                    className="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                     <i className="fa-solid fa-chevron-left text-sm" aria-hidden="true"></i>
                 </button>
@@ -271,7 +271,7 @@ const InstitucionesCarrusel = () => {
                     type="button"
                     aria-label="Mostrar siguiente elemento"
                     onClick={() => moveByCard(1)}
-                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-[#111827] text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
+                    className="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 z-30 w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-white/95 hover:bg-white text-[#A3E635] shadow-xl flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95 cursor-pointer"
                 >
                     <i className="fa-solid fa-chevron-right text-sm" aria-hidden="true"></i>
                 </button>
