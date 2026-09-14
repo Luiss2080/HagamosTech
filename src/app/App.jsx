@@ -18,8 +18,6 @@ import InicioSesionModal from '../components/Modales/InicioSesionModal';
 import TerminosModal from '../components/Modales/TerminosModal';
 import RegistroModal from '../components/Modales/RegistroModal';
 import ContactoModal from '../components/Modales/ContactoModal';
-import CarritoModal from '../store/carrito/CarritoModal';
-import ToastCarrito from '../store/carrito/ToastCarrito';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
 import GuestModalsManager from '../components/Modales/GuestModalsManager';
 import ComoTrabajamos from '../pages/ComoTrabajamos/ComoTrabajamos';
