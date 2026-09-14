@@ -39,6 +39,7 @@ con tests en verde.
 - RF-10: CUANDO se abra o actualice un Pull Request hacia `main`, EL SISTEMA ejecutará en GitHub Actions `npm ci`, `npm run lint` y la suite de tests; si algo falla, el check quedará en rojo.
 - RF-11: EL SISTEMA no declarará como cubierta ninguna área que no tenga al menos un test asociado (las áreas se declaran explícitamente en cada spec).
 - RF-12: EL SISTEMA dejará el árbol de tests listo para recibir los tests de las specs 002+ sin cambiar de herramienta ni reconfigurar cada vez.
+- RF-13: SI el puerto configurado (`PORT`) está ocupado, ENTONCES EL SISTEMA intentará el siguiente puerto disponible (hasta 3 intentos) y registrará en consola el puerto real en uso.
 
 ## Requisitos no funcionales
 - La suite del frontend debe completarse en menos de 60 s en una máquina de desarrollo modesta.
@@ -64,6 +65,9 @@ con tests en verde.
 - Demostración de RF-3 y RF-5 mediante un test temporal que falla (código de salida ≠ 0) y luego se elimina.
 - El workflow de CI aparece configurado en `.github/workflows/`.
 
-## Dudas abiertas
-- [NECESITA ACLARACIÓN] ¿Qué puerto usará el backend para E2E: mantener 3000 (riesgo de choque con ParqueoYa) o pasar a 3001 vía `PORT`?
-- [NECESITA ACLARACIÓN] ¿Se acepta mockear Prisma en los tests de backend en lugar de una base de datos de test real, para poder correr en cualquier máquina sin MySQL?
+## Dudas abiertas (resueltas en la clarificación)
+- [RESUELTO] Puerto del backend/E2E: se mantiene `PORT` (3000) con **fallback a 3001/3002**
+  (RF-13). Los E2E usan 3001 por defecto vía `E2E_BACKEND_PORT`.
+- [RESUELTO] Prisma en tests de backend: se **espía** la instancia compartida con `vi.spyOn`
+  (no se toca MySQL), ver `docs/testing.md`.
+
