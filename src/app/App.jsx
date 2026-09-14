@@ -171,21 +171,12 @@ const App = () => {
               <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
               <Route path="/como-trabajamos" element={<ComoTrabajamos />} />
-              <Route path="/menu/saltenas" element={<Saltenas />} />
-              <Route path="/menu/cafe" element={<Cafes />} />
-              <Route path="/menu/frapuccinos" element={<Frapuccinos />} />
-              <Route path="/menu/refrescos" element={<Refrescos />} />
-              <Route path="/menu/postres" element={<Postres />} />
-              <Route path="/menu/combos" element={<Combos />} />
               <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
               <Route path="/contacto/recursos" element={<Recursos />} />
               <Route path="/contacto/ubicacion" element={<Ubicacion />} />
-              <Route path="/pago-movil" element={<PagoMovil />} />
-              <Route path="/catalogo" element={<CatalogoPagina />} />
-              <Route path="/catalogo/:id" element={<DetalleProducto />} />
               <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
 
               {/* Rutas del Perfil de Usuario */}
@@ -226,10 +217,6 @@ const App = () => {
             isOpen={isContactOpen}
             onClose={() => closeModal('isContactOpen')}
           />
-
-          <CarritoModal />
-
-          <ToastCarrito />
 
           <VideoPlayerModal
             isOpen={isVideoOpen}
