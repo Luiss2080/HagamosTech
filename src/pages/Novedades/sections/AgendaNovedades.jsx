@@ -8,12 +8,12 @@ const DIAS_POR_MES = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 const OFFSET_INICIO = [1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6];
 
 const EVENTOS_AGENDA = [
-    { dia: 5, tipo: 'promo', titulo: 'Lunes de Descuento', hora: 'Todo el día', lugar: 'Todas las sucursales', icon: 'fa-tags', desc: '10% en salteñas al por mayor para emprendedores.', extra: 'Válido en las 12 sucursales con entrega a domicilio.' },
-    { dia: 9, tipo: 'evento', titulo: 'Feria de Productores', hora: '9:00 – 13:00', lugar: 'Café Beni', icon: 'fa-seedling', desc: 'Miel, quesos y frutas locales junto a nuestras salteñas.', extra: 'Entrada libre. Participan 25 productores de la región.' },
-    { dia: 12, tipo: 'aniv', titulo: '35 Años de Aniversario', hora: '9:00 – 14:00', lugar: 'Sucursal Equipetrol', icon: 'fa-birthday-cake', desc: 'Degustación, música en vivo y regalos para los primeros 100 clientes.', extra: 'Sorteos sorpresa y torta gigante de celebración.' },
-    { dia: 18, tipo: 'evento', titulo: 'Jazz Morning', hora: '9:00 – 12:00', lugar: 'Café Beni', icon: 'fa-music', desc: 'Trío de jazz en vivo para arrancar el finde con el mejor ambiente.', extra: 'Café de cortesía para los primeros 40 asistentes.' },
-    { dia: 20, tipo: 'evento', titulo: 'Concurso La Mejor Salteña', hora: '10:00 – 13:00', lugar: 'Plaza Principal', icon: 'fa-trophy', desc: 'Nuestro maestro hornero competirá por el título regional.', extra: 'Votación popular en vivo con degustación gratuita.' },
-    { dia: 26, tipo: 'promo', titulo: 'Día del Cliente Frecuente', hora: 'Todo el día', lugar: 'Todas las sucursales', icon: 'fa-heart', desc: 'Puntos dobles y regalos sorpresa para nuestros clientes fieles.', extra: 'Cada 8 compras acumuladas = 1 salteña gratis.' },
+    { dia: 5, tipo: 'promo', titulo: 'Clínica de Proyectos', hora: 'Todo el día', lugar: 'Online / WhatsApp', icon: 'fa-tags', desc: 'Revisamos tu idea y te damos un presupuesto sin cargo.', extra: 'Cupos limitados por semana; agendá tu turno.' },
+    { dia: 9, tipo: 'evento', titulo: 'Taller de React', hora: '18:00 – 20:00', lugar: 'Modalidad online', icon: 'fa-code', desc: 'Introducción práctica a React construyendo un proyecto real.', extra: 'Requisito: lógica de programación básica.' },
+    { dia: 12, tipo: 'aniv', titulo: 'Aniversario HagamosTech', hora: '9:00 – 18:00', lugar: 'Todas las sedes', icon: 'fa-birthday-cake', desc: 'Descuentos en packs, sorteos y consultoría gratuita.', extra: 'Promociones válidas únicamente por el día.' },
+    { dia: 18, tipo: 'evento', titulo: 'Demo Day IA', hora: '16:00 – 18:00', lugar: 'Online', icon: 'fa-robot', desc: 'Mostramos asistentes y automatizaciones funcionando en vivo.', extra: 'Inscripción previa por WhatsApp.' },
+    { dia: 20, tipo: 'evento', titulo: 'Hackathon Académico', hora: '10:00 – 17:00', lugar: 'Universidad aliada', icon: 'fa-trophy', desc: 'Equipos de estudiantes compiten resolviendo un reto tecnológico.', extra: 'Premios para los tres mejores equipos.' },
+    { dia: 26, tipo: 'promo', titulo: 'Día del Cliente', hora: 'Todo el día', lugar: 'Online / WhatsApp', icon: 'fa-heart', desc: 'Descuentos y soporte prioritario para clientes activos.', extra: 'Beneficio exclusivo para clientes con soporte vigente.' },
 ];
 
 const TIPO_INFO = {
@@ -61,7 +61,7 @@ const AgendaNovedades = () => {
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Navegá por todo el año y tocá un día para ver eventos, promos y celebraciones.
+                            Navegá por todo el año y tocá un día para ver talleres, demos y promociones.
                         </p>
                     </div>
 

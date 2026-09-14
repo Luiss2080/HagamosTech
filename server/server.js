@@ -53,25 +53,7 @@ app.use('/api/cupones-sistema', cuponRoutes);
     });
 });
 
-// --- MOCK ROUTES TEMPORALES ---
-// Esto silencia los errores 404 en consola de los hooks que aún no tienen backend real
-const mockRouter = express.Router();
-mockRouter.post('/activar', (req, res) => {
-    // Simula la activación del cupón para que el Modal funcione
-    res.json({ success: true, fechaFinPrueba: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000).toISOString() });
-});
-mockRouter.post('/:id/extender-modo-invitado', (req, res) => {
-    res.json({ success: true });
-});
-mockRouter.use((req, res) => {
-    res.json({ success: true, data: [], items: [], total: 0, invitados: [] });
-});
-
-app.use('/api/colegios-sistema', mockRouter);
-app.use('/api/suscripciones-sistema', mockRouter);
-app.use('/api/invitados-sistema', mockRouter);
-app.use('/api/libros-sistema', mockRouter);
-// ------------------------------
+// --- Regla: sin mocks ni catch-all con éxito falso (ver docs/constitution.md) ---
 
 // Rutas de perfil y sesión
 app.get('/api/perfil', AuthController.perfil);
@@ -83,12 +65,13 @@ app.get('/api/perfil/2fa/setup', AuthController.obtenerSetup2FA);
 app.post('/api/perfil/2fa/enable', AuthController.activar2FA);
 app.post('/api/perfil/2fa/disable', AuthController.desactivar2FA);
 
-// --- MOCK CATCH-ALL: silencia 404 de endpoints aún sin backend real ---
-// Cubre módulos que el frontend consulta pero que aún no tienen controlador:
-// inventario-sistema, reportes-sistema, soporte, perfil (password/sessions/exportar/certificado),
-// compras (historial/factura). Si en el futuro se implementan, sus rutas deben registrarse ANTES.
+// --- Respuesta honesta para endpoints de API inexistentes ---
+// No se finge éxito: lo no implementado responde 404 explícito.
 app.use('/api', (req, res) => {
-    res.json({ success: true, data: [], items: [], total: 0, invitados: [], mensaje: null, exito: true });
+    res.status(404).json({
+        error: 'Endpoint no encontrado',
+        mensaje: `La ruta ${req.method} ${req.originalUrl} no existe.`,
+    });
 });
 
 // --- Inicio del Servidor ---
@@ -119,11 +102,17 @@ const buscarPuertoLibre = async (puertoInicial, intentosMaximos) => {
     return puertoInicial + intentosMaximos - 1;
 };
 
-(async () => {
-    const puerto = await buscarPuertoLibre(Number(PORT), 3);
-    app.listen(puerto, '0.0.0.0', () => {
-        console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
-        console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${puerto}`);
-        console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${puerto}`);
-    });
-})();
+// Solo inicia el servidor cuando se ejecuta directamente; al importarlo
+// (tests) exporta `app` sin abrir puertos.
+if (require.main === module) {
+    (async () => {
+        const puerto = await buscarPuertoLibre(Number(PORT), 3);
+        app.listen(puerto, '0.0.0.0', () => {
+            console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
+            console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${puerto}`);
+            console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${puerto}`);
+        });
+    })();
+}
+
+module.exports = app;

@@ -3,9 +3,9 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Combo Pacata', precio: 'Bs. 18', normal: 'Bs. 22', img: '/img/05_Productos/Salteñas/ComboPacata.png', desc: 'Salteña + refresco + postre casero. La mejor combinación para tu media mañana.', color: 'bg-[#FF4D00]' },
-        { nombre: 'Desayuno HagamosTech', precio: 'Bs. 15', normal: 'Bs. 19', img: '/img/05_Productos/Combos/Desayuno.png', desc: 'Salteña + café o chocolatada + tostada con mantequilla. Arrancá el día con energía.', color: 'bg-[#5D3A1F]' },
-        { nombre: 'Salteñas con Tostada', precio: 'Bs. 20', normal: 'Bs. 25', img: '/img/05_Productos/Combos/SalteñasConTostada.png', desc: '2 salteñas surtidas + tostada grande + jugo natural. Ideal para compartir.', color: 'bg-[#8B4513]' },
+        { nombre: 'Pack Landing Page', precio: 'Bs. 990', normal: 'Bs. 1300', img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60', desc: 'Landing de alta conversión con formulario de contacto, SEO básico y hosting por 1 año.', color: 'bg-[#FF4D00]' },
+        { nombre: 'Pack Automatización', precio: 'Bs. 1490', normal: 'Bs. 1900', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60', desc: 'Automatizamos tareas repetitivas y conectamos tus herramientas, formularios y correos.', color: 'bg-[#5D3A1F]' },
+        { nombre: 'Pack Identidad + Web', precio: 'Bs. 1990', normal: 'Bs. 2600', img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60', desc: 'Logo, manual de marca y sitio web corporativo listo para publicar.', color: 'bg-[#8B4513]' },
     ];
 
     return (
@@ -14,16 +14,16 @@ const PromoDestacada = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#FF4D00]/10 text-[#FF4D00] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#FF4D00]/20">
-                            <i className="fas fa-fire text-[#FF4D00] mr-1"></i> Promo del Día
+                            <i className="fas fa-fire text-[#FF4D00] mr-1"></i> Promo del Mes
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            Combos que <span className="relative inline-block text-[#FF4D00]">
-                                enamoran
+                            Packs que <span className="relative inline-block text-[#FF4D00]">
+                                impulsan
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Ofertas limitadas por día con la mejor relación precio-calidad. Pedí el tuyo antes de que se agote y disfrutá el sabor de siempre.
+                            Ofertas por tiempo limitado para arrancar tu proyecto: web, automatización e identidad reunidas a precio de pack.
                         </p>
                     </div>
 
@@ -51,7 +51,7 @@ const PromoDestacada = () => {
                                         <span className="text-3xl font-black font-heading">{combo.precio}</span>
                                     </div>
                                     <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 w-full justify-center py-3 rounded-full bg-white text-[#FF4D00] font-black text-[10px] uppercase tracking-[0.15em] shadow-lg hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
-                                        <i className="fab fa-whatsapp"></i> Pedir este combo
+                                        <i className="fab fa-whatsapp"></i> Solicitar este pack
                                     </a>
                                 </div>
                             </div>

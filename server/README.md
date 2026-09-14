@@ -42,8 +42,10 @@ Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por cons
 | `GET /api/contacto` | Listar mensajes |
 | `/api/cupones-sistema` | Cupones / modo invitado |
 
-> **Pendiente (Spec 005):** `server.js` todavía tiene rutas mock y un catch-all que responde
-> `{success:true}` a endpoints sin implementar. Se elimina en la spec "API veraz".
+> **API veraz (Spec 005):** no hay mocks ni catch-all con éxito falso. Los endpoints
+> inexistentes responden `404` y los del vertical retirado, `410`. Los módulos que el frontend
+> aún consulta sin controlador (cambio de contraseña, sesiones, exportar, certificado) quedan
+> como pendientes honestos y devuelven `404` hasta implementarse.
 
 ## Modelos de Prisma
 

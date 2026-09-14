@@ -9,7 +9,7 @@ const HeroPromociones = () => {
             <PageHero
                 title="Aprovecha nuestras"
                 highlight="promociones."
-                description="Combos especiales, descuentos por mayor y ofertas de temporada para que disfrutes el verdadero sabor tradicional de HagamosTech al mejor precio."
+                description="Packs, planes de soporte y promociones pensadas para emprendedores, estudiantes y empresas: diseño, desarrollo web, automatización e IA a precio accesible."
             />
         </div>
     );

@@ -3,18 +3,18 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const MEMBRESIAS = [
     {
-        name: 'HagamosTech Bronce',
-        desc: 'Para los que empiezan a disfrutar',
-        priceMonthly: '50',
-        priceAnnual: '40',
+        name: 'Soporte Esencial',
+        desc: 'Para mantener tu web al día',
+        priceMonthly: '250',
+        priceAnnual: '200',
         badge: 'Básico',
         active: false,
         icon: 'fa-medal',
         benefits: [
-            '2 salteñas gratis al mes',
-            '10% en bebidas',
-            'Puntos por cada compra',
-            'Promos exclusivas',
+            'Soporte por WhatsApp',
+            'Actualizaciones de contenido',
+            'Monitoreo mensual',
+            'Backup semanal',
         ],
         theme: {
             cardBg: 'bg-[#FF4D00]',
@@ -30,19 +30,19 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'HagamosTech Plata',
-        desc: 'Nuestro favorito para clientes frecuentes',
-        priceMonthly: '120',
-        priceAnnual: '96',
+        name: 'Soporte Profesional',
+        desc: 'Ideal para negocios en crecimiento',
+        priceMonthly: '650',
+        priceAnnual: '520',
         badge: 'Más Popular',
         active: true,
         icon: 'fa-crown',
         benefits: [
-            '6 salteñas gratis al mes',
-            '15% en todo el menú',
-            'Delivery gratis',
-            'Puntos dobles',
-            'Descuentos en combos',
+            'Todo lo del plan Esencial',
+            'Hasta 8 h de cambios al mes',
+            'Optimización de rendimiento',
+            'Informe mensual',
+            'Prioridad de respuesta',
         ],
         theme: {
             cardBg: 'bg-[#5D3A1F]',
@@ -58,20 +58,20 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'HagamosTech Oro',
-        desc: 'La experiencia premium completa',
-        priceMonthly: '250',
-        priceAnnual: '200',
+        name: 'Soporte Empresa',
+        desc: 'Para operaciones críticas',
+        priceMonthly: '1200',
+        priceAnnual: '960',
         badge: 'Premium',
         active: false,
         icon: 'fa-gem',
         benefits: [
-            '12 salteñas gratis al mes',
-            '20% en todo el menú',
-            'Delivery gratis ilimitado',
-            'Mesa reservada prioritaria',
-            'Degustaciones exclusivas',
-            'Regalo de cumpleaños',
+            'Todo lo del plan Profesional',
+            'Bolsa de 30 h de desarrollo',
+            'Nuevas funcionalidades',
+            'SLA de respuesta 4 h',
+            'Asesoría estratégica',
+            'Dashboard a medida',
         ],
         theme: {
             cardBg: 'bg-[#8B4513]',
@@ -101,13 +101,13 @@ const PlanesSuscripcion = () => {
                             <i className="fas fa-user-check text-[#FF4D00] mr-1"></i> Membresía HagamosTech
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#8B4513] mb-3 leading-tight">
-                            Unite al <span className="relative inline-block text-[#FF4D00]">
-                                club
+                            Elegí tu <span className="relative inline-block text-[#FF4D00]">
+                                plan
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Beneficios todos los días del año con ahorros reales en cada visita. Elegí tu plan y empezá a disfrutar de salteñas gratis, descuentos y mucho más.
+                            Planes de soporte y evolución continua para que tu sitio o sistema esté siempre actualizado, seguro y funcionando. Elegí tu nivel y olvidate del mantenimiento.
                         </p>
 
                         <div className="inline-flex items-center gap-3 bg-white rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">

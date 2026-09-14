@@ -4,12 +4,12 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 import AnunciosTicker from './AnunciosTicker';
 
 const NOTICIAS = [
-    { id: 1, fecha: '28 Ago', categoria: 'Sucursales', icon: 'fa-store', titulo: 'Abrimos nueva sucursal en Oruro', resumen: 'La capital del folklore ya tiene su HagamosTech con dos puntos de atención para acercarte el sabor de siempre.', img: '/img/10_sucursales/Oruro/01_Sucursal.png', tag: 'NUEVO' },
-    { id: 2, fecha: '15 Ago', categoria: 'Reconocimiento', icon: 'fa-trophy', titulo: 'Premio "Mejor Salteñería 2026"', resumen: 'Los lectores de la ciudad nos eligieron por quinto año consecutivo como la mejor salteñería de Santa Cruz.', img: '/img/10_sucursales/SantaCruz/01_Sucursal.png', tag: 'PREMIOS' },
-    { id: 3, fecha: '02 Ago', categoria: 'Producción', icon: 'fa-fire-burner', titulo: 'Nuevo horno artesanal', resumen: 'Invertimos en un horno de ladrillo que aumenta nuestra capacidad de horneado manteniendo el sabor de siempre.', img: '/img/10_sucursales/SantaCruz/02_Sucursal.png', tag: 'INNOVACIÓN' },
-    { id: 4, fecha: '20 Jul', categoria: 'Equipo', icon: 'fa-people-group', titulo: 'Nuevos integrantes al equipo', resumen: 'Más de 15 personas se sumaron a la familia HagamosTech para atenderte mejor en todas las sucursales.', img: '/img/10_sucursales/Cochabamba/01_Sucursal.png', tag: 'EQUIPO' },
-    { id: 5, fecha: '05 Jul', categoria: 'Alianzas', icon: 'fa-handshake', titulo: 'Convenio con productores locales', resumen: 'Trabajamos directamente con granjas de la región para garantizar ingredientes frescos todos los días.', img: '/img/10_sucursales/Cochabamba/04_Sucursal.png', tag: 'ALIANZAS' },
-    { id: 6, fecha: '18 Jun', categoria: 'Evento', icon: 'fa-music', titulo: 'Primer festival gastronómico', resumen: 'Participamos con un stand propio y nuestra salteña gigante, el hit de la feria. ¡Gracias a todos!', img: '/img/10_sucursales/Oruro/02_Sucursal.png', tag: 'EVENTO' },
+    { id: 1, fecha: '10 Sep', categoria: 'Producto', icon: 'fa-robot', titulo: 'Nuevo asistente de IA para tu web', resumen: 'Integramos asistentes con inteligencia artificial que responden las consultas de tus clientes 24/7 y derivan a WhatsApp cuando hace falta.', img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&auto=format&fit=crop&q=60', tag: 'NUEVO' },
+    { id: 2, fecha: '02 Sep', categoria: 'Automatización', icon: 'fa-gears', titulo: 'Conectamos tu CRM con WhatsApp', resumen: 'Automatizamos el seguimiento de leads y las respuestas de primer contacto para que no pierdas ninguna oportunidad.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&auto=format&fit=crop&q=60', tag: 'PRODUCTO' },
+    { id: 3, fecha: '25 Ago', categoria: 'Academia', icon: 'fa-graduation-cap', titulo: 'Taller de React para estudiantes', resumen: 'Arranca el taller de desarrollo web con React: construís un proyecto real desde cero y con acompañamiento.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1200&auto=format&fit=crop&q=60', tag: 'ACADEMIA' },
+    { id: 4, fecha: '18 Ago', categoria: 'Reconocimiento', icon: 'fa-trophy', titulo: 'Premio a la innovación local', resumen: 'Nuestro sistema de gestión fue reconocido en la feria tecnológica regional por su impacto en pymes.', img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200&auto=format&fit=crop&q=60', tag: 'PREMIOS' },
+    { id: 5, fecha: '05 Ago', categoria: 'Equipo', icon: 'fa-people-group', titulo: 'Sumamos desarrolladores al equipo', resumen: 'Ampliamos el equipo de desarrollo para responder a más proyectos en simultáneo sin perder calidad.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=60', tag: 'EQUIPO' },
+    { id: 6, fecha: '22 Jul', categoria: 'Alianzas', icon: 'fa-handshake', titulo: 'Convenio con universidades', resumen: 'Firmamos acuerdos para prácticas profesionales y desarrollo de proyectos académicos con estudiantes.', img: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=1200&auto=format&fit=crop&q=60', tag: 'ALIANZAS' },
 ];
 
 const AUTOPLAY_MS = 6000;
@@ -38,7 +38,7 @@ const HeroNovedades = () => {
             <PageHero
                 title="Novedades de"
                 highlight="HagamosTech."
-                description="Enterate de todo lo nuevo: sabores de temporada, lanzamientos exclusivos, combos especiales y noticias de nuestra salteñería. Siempre hay algo fresco para probar."
+                description="Enterate de lo nuevo: lanzamientos, talleres, logros y avisos de nuestros servicios de tecnología. Siempre hay algo nuevo para aprender o implementar."
                 className="!pb-0"
             />
 

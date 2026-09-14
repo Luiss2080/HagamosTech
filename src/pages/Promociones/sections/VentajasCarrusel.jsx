@@ -4,65 +4,65 @@ import Breadcrumb from '../../../components/func/MigasPan';
 
 const originalHighlights = [
     {
-        id: 'sabor',
-        title: 'Sabor',
-        highlight: 'Tradicional',
-        desc: 'Desde 1989 horneamos salteñas con la receta original que conquistó Santa Cruz. Cada bocado conserva el sabor auténtico que nos hizo famosos.',
-        icon: 'fa-fire-burner',
-        badge: 'Receta desde 1989',
+        id: 'medida',
+        title: 'Soluciones',
+        highlight: 'A Medida',
+        desc: 'Desarrollamos web, sistemas y automatizaciones adaptadas a tu necesidad real: "Contanos tu problema, nosotros vemos cómo hacerlo".',
+        icon: 'fa-microchip',
+        badge: 'Soluciones reales',
         color: "bg-[#FF4D00]",
         textColor: "text-white",
         iconColor: "text-[#FF4D00] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-scroll', text: 'Receta Original' },
-            { icon: 'fa-drumstick-bite', text: 'Masa Crocante' },
-            { icon: 'fa-drumstick-bite', text: 'Relleno Jugoso' },
-            { icon: 'fa-medal', text: '35+ Años' }
+            { icon: 'fa-globe', text: 'Desarrollo Web' },
+            { icon: 'fa-laptop-code', text: 'Sistemas' },
+            { icon: 'fa-gears', text: 'Automatización' },
+            { icon: 'fa-robot', text: 'IA' }
         ]
     },
     {
-        id: 'frescos',
-        title: 'Ingredientes',
-        highlight: 'Frescos',
-        desc: 'Seleccionamos cada insumo diariamente. Nada se recicla ni se recalienta: todo se prepara en el día para garantizar un sabor inigualable.',
-        icon: 'fa-leaf',
-        badge: '100% Fresco',
+        id: 'agil',
+        title: 'Entregas',
+        highlight: 'Ágiles',
+        desc: 'Trabajamos en sprints cortos con entregas parciales para que veas avances desde la primera semana y ajustemos sobre la marcha.',
+        icon: 'fa-bolt',
+        badge: 'Entregas rápidas',
         color: "bg-[#5D3A1F]",
         textColor: "text-white",
         iconColor: "text-[#5D3A1F] bg-[#FF4D00]",
         badgeColor: "bg-white/10 text-[#FF4D00] border-[#FF4D00]/20",
         borderColor: "border-[#FF4D00]/20",
         features: [
-            { icon: 'fa-seedling', text: 'Insumos del Día' },
-            { icon: 'fa-clock', text: 'Horneado 4am' },
-            { icon: 'fa-xmark', text: 'Sin Recalentar' },
-            { icon: 'fa-check-double', text: 'Calidad Diaria' }
+            { icon: 'fa-list-check', text: 'Sprints' },
+            { icon: 'fa-desktop', text: 'Demos' },
+            { icon: 'fa-comments', text: 'Feedback' },
+            { icon: 'fa-wand-magic-sparkles', text: 'Ajustes' }
         ]
     },
     {
-        id: 'delivery',
-        title: 'Delivery',
-        highlight: 'Rápido',
-        desc: 'Llevamos tus salteñas calentitas hasta tu puerta en menos de 30 minutos. Cobertura en toda la zona urbana de Santa Cruz.',
-        icon: 'fa-motorcycle',
-        badge: 'Entrega Express',
+        id: 'soporte',
+        title: 'Soporte',
+        highlight: 'Continuo',
+        desc: 'Acompañamos tu proyecto después del lanzamiento: mantenimiento, mejoras y ayuda directa por WhatsApp cuando lo necesites.',
+        icon: 'fa-headset',
+        badge: 'Soporte 24/7',
         color: "bg-[#FF4D00]",
         textColor: "text-white",
         iconColor: "text-[#FF4D00] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-bolt', text: 'Menos de 30 min' },
-            { icon: 'fa-map-location-dot', text: 'Toda la ciudad' },
-            { icon: 'fa-fire', text: 'Siempre caliente' },
-            { icon: 'fa-clock', text: 'Seguimiento en vivo' }
+            { icon: 'fa-wrench', text: 'Mantenimiento' },
+            { icon: 'fa-arrow-trend-up', text: 'Mejoras' },
+            { icon: 'fa-signal', text: 'Monitoreo' },
+            { icon: 'fa-circle-question', text: 'Ayuda' }
         ]
     },
     {
         id: 'calidad',
         title: 'Calidad',
         highlight: 'Garantizada',
-        desc: 'Miles de clientes avalan nuestro producto y servicio. Salteñas hechas con dedicación, cariño y los más altos estándares de higiene.',
+        desc: 'Código limpio, buenas prácticas y pruebas automatizadas en cada entrega para que tu solución sea estable y mantenible.',
         icon: 'fa-shield-halved',
         badge: 'Confianza Total',
         color: "bg-white",
@@ -71,29 +71,29 @@ const originalHighlights = [
         badgeColor: "bg-orange-50 text-[#FF4D00] border-[#FF4D00]/20",
         borderColor: "border-[#FF4D00]/30",
         features: [
-            { icon: 'fa-star', text: '4.9 ? Valorado' },
-            { icon: 'fa-shield-halved', text: 'Higiene Certificada' },
-            { icon: 'fa-users', text: 'Miles de Clientes' },
-            { icon: 'fa-chart-line', text: 'Confianza Total' }
+            { icon: 'fa-code', text: 'Buenas prácticas' },
+            { icon: 'fa-vial', text: 'Tests' },
+            { icon: 'fa-book', text: 'Documentación' },
+            { icon: 'fa-magnifying-glass', text: 'Revisión' }
         ]
     },
     {
-        id: 'atencion',
-        title: 'Atención',
-        highlight: 'Personalizada',
-        desc: 'Te recibimos con una sonrisa en cada sucursal. Sos parte de la familia HagamosTech y así te hacemos sentir en cada visita.',
-        icon: 'fa-user-tie',
-        badge: 'Trato Familiar',
+        id: 'formacion',
+        title: 'Formación',
+        highlight: 'Cercana',
+        desc: 'Explicamos cada solución en lenguaje claro y capacitamos a tu equipo para que la use sin depender de nadie.',
+        icon: 'fa-graduation-cap',
+        badge: 'Aprendé con nosotros',
         color: "bg-[#8B4513]",
         textColor: "text-white",
         iconColor: "text-[#8B4513] bg-[#FF4D00]",
         badgeColor: "bg-white/10 text-[#FF4D00] border-[#FF4D00]/20",
         borderColor: "border-[#FF4D00]/20",
         features: [
-            { icon: 'fa-user', text: 'Trato Cercano' },
-            { icon: 'fa-compass', text: 'Te Guiamos' },
-            { icon: 'fa-heart', text: 'Como en Casa' },
-            { icon: 'fa-infinity', text: 'Clientes de por vida' }
+            { icon: 'fa-chalkboard-user', text: 'Capacitación' },
+            { icon: 'fa-book-open', text: 'Guías' },
+            { icon: 'fa-users', text: 'Talleres' },
+            { icon: 'fa-file-lines', text: 'Material' }
         ]
     }
 ];
@@ -233,7 +233,7 @@ const VentajasCarrusel = () => {
                         </span>
                     </h2>
                     <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                        Descubrí todo lo que hace especial a HagamosTech: sabor tradicional, ingredientes frescos, delivery rápido y una atención que te hace sentir parte de la familia.
+                        Descubrí por qué elegir HagamosTech: soluciones a medida, entregas ágiles, soporte continuo, calidad garantizada y un equipo que te explica todo en lenguaje claro.
                     </p>
                 </div>
 
@@ -323,7 +323,7 @@ const VentajasCarrusel = () => {
                                                 backgroundSize: item.color === 'bg-white' ? '26px 26px' : '30px 30px'
                                             }}
                                         ></div>
-                                        {(item.id === 'delivery' || item.id === 'frescos' || item.id === 'atencion') && (
+                                        {(item.id === 'agil' || item.id === 'formacion') && (
                                             <div className="absolute inset-0 bg-black/10 pointer-events-none"></div>
                                         )}
                                         <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent rotate-45 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 pointer-events-none"></div>

@@ -2,20 +2,20 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
-    { titulo: 'Cerramos por mantenimiento', desc: 'Domingo 14 de septiembre. Volvemos el lunes con todo fresco.', img: '/img/10_sucursales/SantaCruz/01_Sucursal.png', tag: 'AVISO' },
-    { titulo: 'Nueva zona de delivery', desc: 'Ahora llegamos hasta El Urubó y Santa Rosa de la Roca.', img: '/img/05_Productos/Combos/Desayuno.png', tag: 'DELIVERY' },
-    { titulo: 'Lunes para emprendedores', desc: '10% de descuento en salteñas al por mayor.', img: '/img/05_Productos/Salteñas/ComboPacata.png', tag: 'PROMO' },
-    { titulo: 'Estacionamiento ampliado', desc: 'Sucursal 2do Anillo ahora con 20 vehículos simultáneos.', img: '/img/10_sucursales/SantaCruz/02_Sucursal.png', tag: 'SUCURSAL' },
-    { titulo: 'Empaques sustentables', desc: 'Todo para llevar ahora en empaques 100% biodegradables.', img: '/img/05_Productos/Cafe/Capuccino.png', tag: 'ECO' },
-    { titulo: 'Estamos contratando', desc: 'Buscamos repartidores y personal de atención. Escribinos.', img: '/img/10_sucursales/Cochabamba/01_Sucursal.png', tag: 'TRABAJO' },
+    { titulo: 'Asistentes con IA', desc: 'Atención al cliente 24/7 para tu web o negocio.', img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&auto=format&fit=crop&q=60', tag: 'IA' },
+    { titulo: 'Soporte ampliado', desc: 'Te atendemos por WhatsApp de lunes a sábado.', img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&auto=format&fit=crop&q=60', tag: 'SOPORTE' },
+    { titulo: 'Taller de React', desc: 'Cupos abiertos para el próximo grupo.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'ACADEMIA' },
+    { titulo: 'Hosting y dominio', desc: 'Incluidos en los packs de páginas web.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60', tag: 'WEB' },
+    { titulo: 'Automatización de procesos', desc: 'Conectá tus herramientas y ahorrá tiempo.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&auto=format&fit=crop&q=60', tag: 'PRODUCTO' },
+    { titulo: 'Estamos contratando', desc: 'Buscamos desarrolladores frontend y backend.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60', tag: 'TRABAJO' },
 ];
 
 const TAG_STYLES = {
-    AVISO: 'bg-[#8B4513]',
-    DELIVERY: 'bg-[#FF4D00]',
-    PROMO: 'bg-[#5D3A1F]',
-    SUCURSAL: 'bg-[#CC3D00]',
-    ECO: 'bg-[#4D7C0F]',
+    IA: 'bg-[#8B4513]',
+    SOPORTE: 'bg-[#FF4D00]',
+    ACADEMIA: 'bg-[#5D3A1F]',
+    WEB: 'bg-[#CC3D00]',
+    PRODUCTO: 'bg-[#4D7C0F]',
     TRABAJO: 'bg-[#1d4ed8]',
 };
 
@@ -35,7 +35,7 @@ const AnunciosTicker = ({ compact = false }) => {
                     src={anuncio.img}
                     alt={anuncio.titulo}
                     className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                    onError={(e) => { e.target.src = '/img/10_sucursales/SantaCruz/01_Sucursal.png'; }}
+                    onError={(e) => { e.target.src = '/img/03_Banners/Hero.png'; }}
                 />
             </div>
 
@@ -123,7 +123,7 @@ const AnunciosTicker = ({ compact = false }) => {
                     </span>
                 </h2>
                 <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                    Novedades urgentes y anuncios del momento: horarios, promociones y zonas de delivery al instante.
+                    Novedades y anuncios del momento: servicios nuevos, talleres, soporte y promociones al instante.
                 </p>
             </div>
 
