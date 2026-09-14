@@ -568,6 +568,104 @@ const AuthController = {
             console.error(error);
             res.status(500).json({ error: 'Error al desactivar el doble factor' });
         }
+    },
+
+    // ── Gestión de cuenta y seguridad desde el perfil ────────────────
+    cambiarPassword: async (req, res) => {
+        try {
+            const usuario = await obtenerUsuarioPorToken(req);
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'No autorizado' });
+            }
+            const { current, nueva, confirm } = req.body;
+            if (!current || !nueva || !confirm) {
+                return res.status(400).json({ mensaje: 'Completá todos los campos' });
+            }
+            if (nueva !== confirm) {
+                return res.status(400).json({ mensaje: 'Las contraseñas nuevas no coinciden' });
+            }
+            if (String(nueva).length < 6) {
+                return res.status(400).json({ mensaje: 'La contraseña debe tener al menos 6 caracteres' });
+            }
+            if (usuario.contrasena !== current) {
+                return res.status(400).json({ mensaje: 'La contraseña actual es incorrecta' });
+            }
+            await prisma.usuario.update({
+                where: { id: usuario.id },
+                data: { contrasena: String(nueva) }
+            });
+            res.json({ success: true, mensaje: 'Contraseña cambiada con éxito' });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Error al cambiar la contraseña' });
+        }
+    },
+
+    exportarDatos: async (req, res) => {
+        try {
+            const usuario = await obtenerUsuarioPorToken(req);
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'No autorizado' });
+            }
+            const { contrasena, twoFactorSecret, ...datosSeguros } = usuario;
+            res.json({
+                success: true,
+                data: { ...datosSeguros, exportadoEn: new Date().toISOString() }
+            });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Error al exportar los datos' });
+        }
+    },
+
+    desactivarCuenta: async (req, res) => {
+        try {
+            const usuario = await obtenerUsuarioPorToken(req);
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'No autorizado' });
+            }
+            await prisma.usuario.update({
+                where: { id: usuario.id },
+                data: { activo: false }
+            });
+            res.json({ success: true, mensaje: 'Cuenta desactivada correctamente' });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Error al desactivar la cuenta' });
+        }
+    },
+
+    listarSesiones: async (req, res) => {
+        try {
+            const usuario = await obtenerUsuarioPorToken(req);
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'No autorizado' });
+            }
+            // Todavía no hay un almacén de sesiones múltiples: se declara la
+            // limitación en vez de inventar sesiones.
+            res.json({
+                success: true,
+                data: [],
+                alcance: 'sin_registro_multisesion'
+            });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Error al listar las sesiones' });
+        }
+    },
+
+    revocarSesion: async (req, res) => {
+        try {
+            const usuario = await obtenerUsuarioPorToken(req);
+            if (!usuario) {
+                return res.status(401).json({ mensaje: 'No autorizado' });
+            }
+            // No existen sesiones persistidas; se responde con la verdad.
+            res.status(404).json({ mensaje: 'No existe una sesión con ese identificador' });
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({ error: 'Error al revocar la sesión' });
+        }
     }
 };
 

@@ -65,6 +65,13 @@ app.get('/api/perfil/2fa/setup', AuthController.obtenerSetup2FA);
 app.post('/api/perfil/2fa/enable', AuthController.activar2FA);
 app.post('/api/perfil/2fa/disable', AuthController.desactivar2FA);
 
+// Gestión de cuenta y seguridad
+app.put('/api/perfil/password', AuthController.cambiarPassword);
+app.get('/api/perfil/exportar', AuthController.exportarDatos);
+app.delete('/api/perfil/cuenta', AuthController.desactivarCuenta);
+app.get('/api/perfil/sessions', AuthController.listarSesiones);
+app.delete('/api/perfil/sessions/:id', AuthController.revocarSesion);
+
 // --- Respuesta honesta para endpoints de API inexistentes ---
 // No se finge éxito: lo no implementado responde 404 explícito.
 app.use('/api', (req, res) => {

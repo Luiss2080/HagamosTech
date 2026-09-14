@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 import useAuthStore from '../../../store/useAutenticacionStore';
-import apiClient from '../../../servicios/clienteApi';
-import Cookies from 'js-cookie';
 
 const ACHIEVEMENTS = [
     { id: 'ach-1', name: 'Líder Arduino', desc: 'Completó Tomo 1 y 2 de Arduino', icon: 'fa-microchip', color: 'text-amber-400 bg-amber-400/10 border-amber-400/30' },
@@ -17,6 +15,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
     
     const [showDiploma, setShowDiploma] = useState(false);
     const [selectedAch, setSelectedAch] = useState(null);
+    const diplomaRef = useRef(null);
 
     const displayName = user?.nombre || 'Usuario Tech';
     const userInitials = displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2);
@@ -264,7 +263,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                         </button>
 
                         {/* Certificate Mockup Frame */}
-                        <div className="border-8 border-[#c5a059] p-6 rounded-2xl bg-[#fffcf4] text-slate-800 relative overflow-hidden shadow-inner mb-6">
+                        <div ref={diplomaRef} className="border-8 border-[#c5a059] p-6 rounded-2xl bg-[#fffcf4] text-slate-800 relative overflow-hidden shadow-inner mb-6">
                             <div className="absolute top-0 right-0 w-24 h-24 bg-[#c5a059]/10 rounded-full blur-2xl pointer-events-none" />
                             <div className="absolute bottom-0 left-0 w-32 h-32 bg-[#a41e22]/5 rounded-full blur-3xl pointer-events-none" />
                             
@@ -300,21 +299,28 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
 
                         <button 
                             onClick={async () => {
-                                setShowDiploma(false);
                                 try {
-                                    const token = sessionStorage.getItem('hagamostech_token') || Cookies.get('hagamostech_token');
-                                    const { data } = await apiClient.get('/perfil/certificado', {
-                                        headers: { Authorization: `Bearer ${token}` },
-                                        responseType: 'blob'
+                                    if (!diplomaRef.current || !window.html2canvas || !window.jspdf) {
+                                        alert('No se pudo generar el certificado en este navegador');
+                                        return;
+                                    }
+                                    const canvas = await window.html2canvas(diplomaRef.current, {
+                                        scale: 2,
+                                        backgroundColor: '#fffcf4',
+                                        useCORS: true,
                                     });
-                                    const url = window.URL.createObjectURL(new Blob([data]));
-                                    const a = document.createElement('a');
-                                    a.href = url;
-                                    a.download = 'certificado_hagamostech.pdf';
-                                    a.click();
-                                    window.URL.revokeObjectURL(url);
+                                    const img = canvas.toDataURL('image/png');
+                                    const { jsPDF } = window.jspdf;
+                                    const pdf = new jsPDF({
+                                        orientation: 'landscape',
+                                        unit: 'px',
+                                        format: [canvas.width, canvas.height],
+                                    });
+                                    pdf.addImage(img, 'PNG', 0, 0, canvas.width, canvas.height);
+                                    pdf.save('certificado_hagamostech.pdf');
+                                    setShowDiploma(false);
                                 } catch {
-                                    alert('Error al descargar el certificado');
+                                    alert('Error al generar el certificado');
                                 }
                             }}
                             className="w-full py-3.5 bg-[#a41e22] hover:bg-[#801015] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-md transition active:scale-95 cursor-pointer"
