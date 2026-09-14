@@ -1,63 +1,59 @@
-import React, { useCallback, useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
+import React, { lazy, Suspense, useCallback, useEffect, useState } from 'react';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
-import Inicio from '../pages/Inicio/Inicio';
-import Tecnologia from '../pages/QueHacemos/Tecnologia/Tecnologia';
-import Academia from '../pages/QueHacemos/Academia/Academia';
-import NegociosQueHacemos from '../pages/QueHacemos/Negocios/Negocios';
-import Personalizado from '../pages/QueHacemos/Personalizado/Personalizado';
-import HeroHagamosTech from '../pages/Inicio/sections/HeroHagamosTech';
-import Condiciones from '../pages/Condiciones/CondicionesPagina.jsx';
-import PrivacidadPagina from '../pages/Privacidad/PrivacidadPagina';
-import TerminosPagina from '../pages/Terminos/TerminosPagina';
-import CookiesPagina from '../pages/Cookies/CookiesPagina';
 import InicioSesionModal from '../components/Modales/InicioSesionModal';
 import TerminosModal from '../components/Modales/TerminosModal';
 import RegistroModal from '../components/Modales/RegistroModal';
 import ContactoModal from '../components/Modales/ContactoModal';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
 import GuestModalsManager from '../components/Modales/GuestModalsManager';
-import ComoTrabajamos from '../pages/ComoTrabajamos/ComoTrabajamos';
-
-import ChatWhatsApp from '../components/Widgets/ChatWhatsApp';
-import ChatAssistant from '../chat/AsistenteChat';
-import SobreNosotrosIndex from '../pages/SobreNosotros/Nosotros';
-import Historia from '../pages/SobreNosotros/sections/Historia';
-import MisionVision from '../pages/SobreNosotros/sections/MisionVision';
-import Valores from '../pages/SobreNosotros/sections/Valores';
-import VideosTikTok from '../pages/SobreNosotros/sections/VideosTikTok';
-import PromocionesPagina from '../pages/Promociones/PromocionesPagina';
-import NovedadesPagina from '../pages/Novedades/NovedadesPagina';
-import ContactoPagina from '../pages/Contacto/Contacto';
-import HeroContacto from '../pages/Contacto/sections/HeroContacto';
-import FormularioContacto from '../pages/Contacto/sections/FormularioContacto';
-import PaginasWeb from '../pages/Servicios/DesarrolloWeb/PaginasWeb';
-import SistemasApps from '../pages/Servicios/SistemasApps/SistemasApps';
-import Automatizacion from '../pages/Servicios/Automatizacion/Automatizacion';
-import InteligenciaArtificial from '../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial';
-import Negocio from '../pages/Servicios/Negocio/Negocio';
-import Academico from '../pages/Servicios/Academico/Academico';
-import Empleo from '../pages/Servicios/Empleo/Empleo';
-import DisenoGrafico from '../pages/Servicios/DisenoGrafico/DisenoGrafico';
-import Recursos from '../pages/Contacto/sections/Recursos';
-import Ubicacion from '../pages/Contacto/sections/Ubicacion';
-import RecuperarContrasena from '../components/func/RecuperarContrasena';
-import Error401 from '../pages/Errores/Error401';
-import Error403 from '../pages/Errores/Error403';
-import Error404 from '../pages/Errores/Error404';
-import Error419 from '../pages/Errores/Error419';
-import Error500 from '../pages/Errores/Error500';
-
-// Importaciones de Perfil de Usuario
-import PerfilPagina from '../pages/Perfil/PerfilPagina';
-import ConfiguracionPagina from '../pages/Perfil/ConfiguracionPagina';
-import HistorialComprasPagina from '../pages/Perfil/HistorialComprasPagina';
-
-// Zustand Store de Modales
 import useModalStore from '../store/useModalStore';
+import { tituloParaRuta } from './seo';
+
+// Páginas cargadas de forma diferida (code-splitting) para reducir el bundle inicial.
+const Inicio = lazy(() => import('../pages/Inicio/Inicio'));
+const Tecnologia = lazy(() => import('../pages/QueHacemos/Tecnologia/Tecnologia'));
+const Academia = lazy(() => import('../pages/QueHacemos/Academia/Academia'));
+const NegociosQueHacemos = lazy(() => import('../pages/QueHacemos/Negocios/Negocios'));
+const Personalizado = lazy(() => import('../pages/QueHacemos/Personalizado/Personalizado'));
+const HeroHagamosTech = lazy(() => import('../pages/Inicio/sections/HeroHagamosTech'));
+const Condiciones = lazy(() => import('../pages/Condiciones/CondicionesPagina.jsx'));
+const PrivacidadPagina = lazy(() => import('../pages/Privacidad/PrivacidadPagina'));
+const TerminosPagina = lazy(() => import('../pages/Terminos/TerminosPagina'));
+const CookiesPagina = lazy(() => import('../pages/Cookies/CookiesPagina'));
+const ComoTrabajamos = lazy(() => import('../pages/ComoTrabajamos/ComoTrabajamos'));
+const SobreNosotrosIndex = lazy(() => import('../pages/SobreNosotros/Nosotros'));
+const Historia = lazy(() => import('../pages/SobreNosotros/sections/Historia'));
+const MisionVision = lazy(() => import('../pages/SobreNosotros/sections/MisionVision'));
+const Valores = lazy(() => import('../pages/SobreNosotros/sections/Valores'));
+const VideosTikTok = lazy(() => import('../pages/SobreNosotros/sections/VideosTikTok'));
+const PromocionesPagina = lazy(() => import('../pages/Promociones/PromocionesPagina'));
+const NovedadesPagina = lazy(() => import('../pages/Novedades/NovedadesPagina'));
+const ContactoPagina = lazy(() => import('../pages/Contacto/Contacto'));
+const HeroContacto = lazy(() => import('../pages/Contacto/sections/HeroContacto'));
+const FormularioContacto = lazy(() => import('../pages/Contacto/sections/FormularioContacto'));
+const Recursos = lazy(() => import('../pages/Contacto/sections/Recursos'));
+const Ubicacion = lazy(() => import('../pages/Contacto/sections/Ubicacion'));
+const PaginasWeb = lazy(() => import('../pages/Servicios/DesarrolloWeb/PaginasWeb'));
+const SistemasApps = lazy(() => import('../pages/Servicios/SistemasApps/SistemasApps'));
+const Automatizacion = lazy(() => import('../pages/Servicios/Automatizacion/Automatizacion'));
+const InteligenciaArtificial = lazy(() => import('../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial'));
+const Negocio = lazy(() => import('../pages/Servicios/Negocio/Negocio'));
+const Academico = lazy(() => import('../pages/Servicios/Academico/Academico'));
+const Empleo = lazy(() => import('../pages/Servicios/Empleo/Empleo'));
+const DisenoGrafico = lazy(() => import('../pages/Servicios/DisenoGrafico/DisenoGrafico'));
+const RecuperarContrasena = lazy(() => import('../components/func/RecuperarContrasena'));
+const PerfilPagina = lazy(() => import('../pages/Perfil/PerfilPagina'));
+const ConfiguracionPagina = lazy(() => import('../pages/Perfil/ConfiguracionPagina'));
+const HistorialComprasPagina = lazy(() => import('../pages/Perfil/HistorialComprasPagina'));
+const Error401 = lazy(() => import('../pages/Errores/Error401'));
+const Error403 = lazy(() => import('../pages/Errores/Error403'));
+const Error404 = lazy(() => import('../pages/Errores/Error404'));
+const Error419 = lazy(() => import('../pages/Errores/Error419'));
+const Error500 = lazy(() => import('../pages/Errores/Error500'));
 
 const LOGIN_MODAL_KEYS = new Set(['modal_login', 'loginModal']);
 const REGISTER_MODAL_KEYS = new Set(['modal_register', 'startTrialModal', 'registerModal']);
@@ -141,9 +137,11 @@ const App = () => {
   return (
     <Router>
       <ScrollToTop />
+      <SeoRuta />
       {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
       <div className={`transition-opacity duration-700 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
           <AppLayout>
+            <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
             <Routes>
           {/* Rutas Principales */}
           <Route path="/" element={<Inicio />} />
@@ -194,6 +192,7 @@ const App = () => {
               {/* Fallback Route */}
               <Route path="*" element={<Error404 />} />
             </Routes>
+            </Suspense>
 
           </AppLayout>
 
