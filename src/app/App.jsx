@@ -152,10 +152,6 @@ const App = () => {
           <Route path="/que-hacemos/negocios" element={<NegociosQueHacemos />} />
           <Route path="/que-hacemos/personalizado" element={<Personalizado />} />
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
-                <Route path="/servicios/delivery" element={<Delivery />} />
-              <Route path="/servicios/mayor" element={<PedidosPorMayor />} />
-              <Route path="/servicios/eventos" element={<EventosCatering />} />
-              <Route path="/servicios/corporativo" element={<ServicioCorporativo />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
               <Route path="/servicios/automatizacion" element={<Automatizacion />} />
@@ -164,7 +160,6 @@ const App = () => {
               <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/empleo" element={<Empleo />} />
               <Route path="/servicios/diseno-grafico" element={<DisenoGrafico />} />
-              <Route path="/servicios/congeladas" element={<SaltenasCongeladas />} />
               <Route path="/condiciones" element={<Condiciones />} />
               <Route path="/privacidad" element={<PrivacidadPagina />} />
               <Route path="/terminos" element={<TerminosPagina />} />
