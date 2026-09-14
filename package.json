@@ -9,7 +9,11 @@
     "dev:all": "npx concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:e2e": "playwright test"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
