@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  calidad:
+    name: Lint y tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias (frontend)
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Tests frontend
+        run: npm run test:run
+
+      - name: Instalar dependencias (backend)
+        working-directory: server
+        run: npm ci
+
+      - name: Tests backend
+        working-directory: server
+        run: npm run test:run
+
+  e2e:
+    name: E2E (Playwright)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Instalar dependencias (frontend)
+        run: npm ci
+
+      - name: Instalar dependencias (backend)
+        working-directory: server
+        run: npm ci
+
+      - name: Generar cliente Prisma
+        working-directory: server
+        run: npx prisma generate
+
+      - name: Instalar navegador Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Ejecutar E2E
+        run: npm run test:e2e
+
+      - name: Subir reporte (si falla)
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 7

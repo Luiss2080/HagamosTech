@@ -88,8 +88,32 @@ app.use('/api', (req, res) => {
 });
 
 // --- Inicio del Servidor ---
-app.listen(PORT, '0.0.0.0', () => {
-    console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
-    console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${PORT}`);
-    console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${PORT}`);
-});
+// Intenta el puerto configurado y, si está ocupado, prueba los siguientes.
+// Esto evita el choque con otros proyectos (p. ej. ParqueoYa en 3000).
+const iniciarServidor = (puertoInicial, intentosMaximos = 3) => {
+    let intento = 0;
+
+    const escuchar = (puerto) => {
+        const server = app.listen(puerto, '0.0.0.0', () => {
+            console.log(`\x1b[32m%s\x1b[0m`, `[SERVIDOR MVC] HagamosTech - Full MVC Stack`);
+            console.log(`\x1b[33m%s\x1b[0m`, `URL Local: http://localhost:${puerto}`);
+            console.log(`\x1b[33m%s\x1b[0m`, `URL Red: http://${LOCAL_IP}:${puerto}`);
+        });
+
+        server.on('error', (error) => {
+            if (error.code === 'EADDRINUSE' && intento < intentosMaximos - 1) {
+                intento += 1;
+                const siguiente = puerto + 1;
+                console.warn(`\x1b[33m%s\x1b[0m`, `[SERVIDOR MVC] Puerto ${puerto} ocupado; probando ${siguiente}...`);
+                escuchar(siguiente);
+            } else {
+                console.error(`[SERVIDOR MVC] No se pudo iniciar el servidor: ${error.message}`);
+                process.exit(1);
+            }
+        });
+    };
+
+    escuchar(puertoInicial);
+};
+
+iniciarServidor(Number(PORT));
