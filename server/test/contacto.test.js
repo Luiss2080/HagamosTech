@@ -1,12 +1,11 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { createRequire } from 'node:module';
 import express from 'express';
 import request from 'supertest';
+import { prisma, espiarModelo } from './helpers/prismaMock.js';
 
-// Reemplaza el cliente real de Prisma por el doble antes de importar la ruta.
-vi.mock('../models/prisma.js', () => import('./helpers/prismaMock.js'));
-
-import contactoRoutes from '../store/routes/contactoRoutes.js';
-import prismaMock from '../models/prisma.js';
+const require = createRequire(import.meta.url);
+const contactoRoutes = require('../store/routes/contactoRoutes.js');
 
 const buildApp = () => {
   const app = express();
@@ -15,14 +14,19 @@ const buildApp = () => {
   return app;
 };
 
-// RF-4, RF-5, RF-6: endpoint de contacto con Supertest y Prisma mockeado.
+// RF-4, RF-5, RF-6: endpoint de contacto con Supertest y Prisma espiado.
+// No requiere MySQL: las llamadas a Prisma se interceptan (RF-5).
 describe('POST /api/contacto', () => {
   beforeEach(() => {
-    vi.clearAllMocks();
+    espiarModelo('mensaje', ['create']);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
   });
 
   it('crea el mensaje y responde 201 con los datos persistidos', async () => {
-    prismaMock.mensaje.create.mockResolvedValue({
+    prisma.mensaje.create.mockResolvedValue({
       id: 1,
       nombre: 'Ana',
       correo: 'ana@example.com',
@@ -34,7 +38,7 @@ describe('POST /api/contacto', () => {
       .send({ nombre: 'Ana', correo: 'ana@example.com', mensaje: 'Hola' });
 
     expect(res.status).toBe(201);
-    expect(prismaMock.mensaje.create).toHaveBeenCalledTimes(1);
+    expect(prisma.mensaje.create).toHaveBeenCalledTimes(1);
     expect(res.body.mensaje.id).toBe(1);
   });
 
@@ -44,6 +48,6 @@ describe('POST /api/contacto', () => {
       .send({ nombre: 'Ana' });
 
     expect(res.status).toBe(400);
-    expect(prismaMock.mensaje.create).not.toHaveBeenCalled();
+    expect(prisma.mensaje.create).not.toHaveBeenCalled();
   });
 });
