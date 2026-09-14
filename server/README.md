@@ -17,7 +17,7 @@ server/
 │   └── prisma.js        # Cliente Prisma
 ├── prisma/
 │   ├── schema.prisma    # Esquema de la base de datos
-│   └── seed.js          # Datos semilla (roles, permisos, admin, cupón)
+│   └── seed.js          # Datos semilla (roles, permisos, admin)
 ├── test/                # Tests (Vitest + Supertest)
 ├── package.json
 └── .env

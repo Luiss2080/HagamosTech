@@ -19,6 +19,7 @@ Visitantes, y el equipo que mantiene la oferta.
 - RF-6: EL SISTEMA corregirá los testimonios y ejemplos con rubros fuera de catálogo (restaurantes, snacks, IoT).
 - RF-7: EL SISTEMA corregirá los términos legales (Términos, Condiciones) al modelo de servicios.
 - RF-8: EL SISTEMA incluirá tests que verifiquen (a) los nombres exactos del catálogo y (b) la ausencia de términos prohibidos en todo `src/`.
+- RF-9: EL SISTEMA retirará el backend de cupones (`/api/cupones-sistema`, `CuponController`/`cuponRoutes`, modelo `CuponDescuento` y su creación en el registro), que no corresponde al catálogo.
 
 ## Requisitos no funcionales
 - Sin cambios de diseño; solo contenido.
@@ -40,4 +41,4 @@ Visitantes, y el equipo que mantiene la oferta.
 - `npm run lint`, `npm run test:run` (raíz y server), `npm run build` y `npm run test:e2e` en verde.
 
 ## Dudas abiertas
-- [NECESITA ACLARACIÓN] ¿Se elimina también el backend de cupones (`/api/cupones-sistema`, modelo `CuponDescuento`) y su creación en el registro?
+- Ninguna. (Se retiró también el backend de cupones, RF-9.)

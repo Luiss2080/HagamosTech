@@ -9,3 +9,4 @@
 - [x] T7. Corregir `TerminosModal` y `CondicionesPagina`. (RF-7)
 - [x] T8. Corregir chat (`categorias`), correo/plantilla, `PantallaCarga`, `VideoPlayerModal`, `ContactoModal`, `Error419`, `Cookies`, perfil. (RF-2, RF-5)
 - [x] T9. Verificación: lint, tests (raíz y server), build y E2E. (Todos)
+- [x] T10. Retirar el backend de cupones (controlador, rutas, modelo Prisma, seed) y su rol en el registro. (RF-9)
