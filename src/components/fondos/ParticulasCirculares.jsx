@@ -1,5 +1,12 @@
 import React, { useMemo } from 'react';
 
+// Pseudo-aleatorio determinista: mantiene la variedad visual sin llamar a
+// funciones impuras (Math.random) durante el render.
+const pseudoRandom = (seed) => {
+    const x = Math.sin(seed * 12.9898) * 43758.5453;
+    return x - Math.floor(x);
+};
+
 const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => {
     const particles = useMemo(() => {
         const targetCount = count;
@@ -10,7 +17,7 @@ const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => 
         // Create grid slots and shuffle
         const slots = Array.from({ length: totalSlots }, (_, i) => i);
         for (let i = slots.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
+            const j = Math.floor(pseudoRandom(i + 1) * (i + 1));
             [slots[i], slots[j]] = [slots[j], slots[i]];
         }
 
@@ -23,8 +30,8 @@ const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => 
             const colSize = 100 / cols;
             const rowSize = 100 / rows;
 
-            const randomLeft = Math.random() * colSize;
-            const randomTop = Math.random() * rowSize;
+            const randomLeft = pseudoRandom(i + 11) * colSize;
+            const randomTop = pseudoRandom(i + 23) * rowSize;
 
             // Pick color based on colorScheme and index
             let color = '#ffffff';
