@@ -345,7 +345,7 @@ const VentajasCarrusel = () => {
 
                                             <div className="grid grid-cols-2 gap-2 w-full max-w-[560px] mx-auto">
                                                 {item.features && item.features.map((feature, fIdx) => (
-                                                    <span key={fIdx} className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold border text-center ${item.textColor === 'text-white' ? 'bg-white/18 text-white border-white/45' : 'bg-[#171717]/5 text-white border-[#171717]/20'}`}>
+                                                    <span key={fIdx} className={`flex items-center justify-center gap-1.5 px-3 py-2 rounded-xl text-[11px] font-bold border text-center ${item.textColor === 'text-white' ? 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/30' : 'bg-white/5 text-slate-300 border-white/10'}`}>
                                                         <i className={`fa-solid ${feature.icon} text-[10px] opacity-80`}></i>
                                                         {feature.text}
                                                     </span>
