@@ -1,103 +1,240 @@
+de datos canónico en [`src/data/serviciosData.js`](src/data/serviciosData.js).
 # HagamosTech
 
-Plataforma web de **HagamosTech**, agencia de soluciones digitales y tecnológicas.
+<div align="center">
 
-## Descripción
+![HagamosTech](public/img/01_Layout/logo.png)
 
-HagamosTech transforma problemas, necesidades e ideas en soluciones reales con tecnología,
-creatividad y un proceso cercano. La oferta se organiza en ocho categorías:
+Plataforma web de soluciones digitales, tecnología y crecimiento para estudiantes,
+emprendedores, profesionales y negocios.
 
-- **Estudiantes y sector académico**: presentaciones, APA 7, infografías, simuladores, apoyo en programación.
-- **Emprendedores y nuevos negocios**: branding, manual de identidad, menús QR, publicidad, gestión de clientes.
-- **Empleo y desarrollo profesional**: CV ATS, LinkedIn, cartas, portafolios, entrevistas, certificados.
-- **Diseño gráfico integral**: logos, flyers, packaging, tarjetas, retoque fotográfico.
-- **Desarrollo web y e-commerce**: páginas empresariales, landing pages, tiendas online, catálogos/blogs, UI/UX.
-- **Soluciones tecnológicas, software y hardware**: sistemas a medida, bases de datos, DevOps.
-- **Automatización e inteligencia artificial**: integración de IA, automatización de procesos, productividad.
-- **Soluciones personalizadas**: "Contanos tu problema, nosotros vemos cómo hacerlo".
+[Documentación](docs/constitution.md) · [Catálogo de servicios](docs/catalogo-servicios.md) · [Especificaciones](specs/) · [Guía de agentes](AGENTS.md)
 
-El Catálogo Maestro está en [`docs/catalogo-servicios.md`](docs/catalogo-servicios.md) y su espejo
-de datos canónico en [`src/data/serviciosData.js`](src/data/serviciosData.js).
+</div>
 
-## Estructura del proyecto
+## ¿Qué es HagamosTech?
 
+HagamosTech es una agencia digital orientada a convertir ideas, retos y necesidades en
+soluciones útiles, visualmente bien construidas y técnicamente sostenibles. La plataforma
+presenta servicios en áreas como:
+
+- Estudiantes y sector académico
+- Emprendedores y nuevos negocios
+- Empleo y desarrollo profesional
+- Diseño gráfico integral
+- Desarrollo web y e-commerce
+- Software, sistemas y hardware
+- Automatización e IA
+- Soluciones personalizadas
+
+La oferta oficial y canónica está definida en el catálogo de servicios del proyecto y se
+mantiene sincronizada con los datos del frontend para evitar inconsistencias.
+
+## ✅ Objetivo del proyecto
+
+Crear una experiencia web clara, moderna y confiable que permita:
+
+- presentar la oferta de servicios de forma estructurada,
+- comunicar la propuesta de valor de la agencia,
+- activar flujos de contacto y autenticación,
+- soportar operaciones del backend con validación real,
+- mantener una base técnica ordenada y verificable con tests.
+
+## 🧩 Stack tecnológico
+
+### Frontend
+
+- React 19
+- Vite 8
+- Tailwind CSS 4
+- Zustand
+- Framer Motion
+
+### Backend
+
+- Node.js + Express 5
+- Prisma ORM
+- MySQL
+- JWT / autenticación del proyecto
+
+### Calidad y validación
+
+- Vitest
+- Testing Library
+- Supertest
+- Playwright
+
+## 🏗️ Arquitectura del proyecto
+
+```text
+HagamosTech/
+├── src/                     # Frontend React + Vite
+│   ├── app/                 # enrutamiento y estructura principal
+│   ├── components/          # UI, layout, modales, elementos reutilizables
+│   ├── data/                # datos canónicos del negocio
+│   ├── hooks/               # hooks reutilizables
+│   ├── pages/               # vistas de la aplicación
+│   ├── servicios/           # cliente HTTP y servicios API
+│   ├── store/               # estado global con Zustand
+│   ├── styles/              # estilos globales
+│   └── utils/               # helpers y utilidades
+├── server/                  # API backend
+│   ├── auth/                # autenticación y seguridad
+│   ├── models/              # acceso a datos y Prisma
+│   ├── prisma/              # schema + seed + migraciones
+│   ├── store/               # endpoints y controladores de negocio
+│   └── test/                # pruebas del backend
+├── docs/                    # constitución, catálogo, diagnóstico, testing
+├── specs/                   # especificaciones del proyecto (plan/spec/tasks/validation)
+├── e2e/                     # pruebas end-to-end
+├── public/                  # assets estáticos e imágenes
+├── package.json             # scripts del frontend
+├── server/package.json      # scripts del backend
+├── vite.config.js           # configuración Vite
+├── vitest.config.js         # configuración de pruebas frontend
+├── playwright.config.js     # configuración de pruebas E2E
+├── eslint.config.js         # reglas de lint
+├── AGENTS.md                # guía de trabajo para agentes
+├── docs/constitution.md     # principios del proyecto
+├── docs/catalogo-servicios.md
+├── docs/diagnostico.md
+├── docs/testing.md
+└── README.md
 ```
-HAGAMOSTECH/
-├── src/                    # Frontend React + Vite
-│   ├── app/                # Entrada y rutas
-│   ├── components/         # Layout, modales, UI, fondos
-│   ├── pages/              # Páginas por módulo
-│   ├── store/              # Estado global (Zustand)
-│   ├── servicios/          # Cliente HTTP y servicios de API
-│   ├── data/               # Oferta canónica (serviciosData.js)
-│   └── styles/             # Estilos globales (Tailwind)
-├── server/                 # Backend Node + Express + Prisma
-│   ├── auth/               # Autenticación (controllers, routes, utils)
-│   ├── store/              # API pública y contacto
-│   ├── models/             # Cliente Prisma
-│   └── prisma/             # schema.prisma y seed.js
-├── docs/                   # Constitución, catálogo, testing, diagnóstico
-├── specs/                  # Especificaciones SDD (spec/plan/tasks)
-├── e2e/                    # Tests end-to-end (Playwright)
-└── vite.config.js
-```
 
-## Entornos
+## 🚀 Inicio rápido
 
-**Requisitos:** Node.js 18+, MySQL 8.0+ (Laragon/XAMPP), puerto 4000 (frontend) y 3000 (backend) libres.
+### Requisitos
+
+- Node.js 18+
+- MySQL 8.0+
+- Puerto 4000 libre para el frontend
+- Puerto 4321 libre para el backend
+
+### 1) Instalar dependencias
 
 ```bash
-# Frontend:  http://localhost:4000
+npm install
+cd server && npm install
+```
+
+### 2) Configurar entorno
+
+Revisa los archivos de entorno y asegúrate de tener la configuración correcta para la base de
+datos y la conexión del backend.
+
+```bash
+# Frontend
+# usa variables de entorno según Vite
+
+# Backend
+cd server
+# crea o ajusta .env según la configuración local del proyecto
+```
+
+### 3) Levantar el proyecto
+
+#### Frontend
+
+```bash
 npm run dev
+```
 
-# Backend:   http://localhost:4321 (el frontend llama a /api vía proxy de Vite)
+Abre: http://localhost:4000
+
+#### Backend
+
+```bash
 npm run dev:server
+```
 
-# Ambos a la vez
+El backend queda disponible en: http://localhost:4321
+
+#### Ejecutar ambos a la vez
+
+```bash
 npm run dev:all
 ```
 
-> **Puerto del API:** en desarrollo el backend usa `4321` (ver `server/.env`) y el frontend
-> llama a `/api` mediante el proxy de Vite (`VITE_API_PROXY_TARGET`). Ver [`docs/diagnostico.md`](docs/diagnostico.md).
+> El frontend consume el backend a través de `/api` usando el proxy de Vite. La referencia de
+> configuración y diagnóstico está en [docs/diagnostico.md](docs/diagnostico.md).
 
-**Base de datos:**
+## 🗃️ Base de datos
+
+Sincroniza el esquema de Prisma y carga los datos iniciales:
 
 ```bash
-cd server && npx prisma db push     # Sincroniza el esquema
-cd server && npm run db:seed        # Datos semilla
+cd server && npx prisma db push
+cd server && npm run db:seed
 ```
 
-## Comandos
+También puedes abrir Prisma Studio para revisar registros locales:
+
+```bash
+cd server && npx prisma studio
+```
+
+## 📋 Scripts principales
 
 | Comando | Descripción |
-|---------|-------------|
-| `npm run dev` | Frontend en desarrollo (`:4000`) |
-| `npm run dev:server` | Backend en desarrollo (`:3000`) |
-| `npm run dev:all` | Frontend + backend |
-| `npm run build` | Build de producción (usa `.env.production`) |
-| `npm run lint` | ESLint |
-| `npm run test:run` | Tests del frontend (una pasada) |
-| `npm run test:coverage` | Cobertura del frontend |
-| `npm run test:e2e` | Tests end-to-end (Playwright) |
-| `cd server && npm run test:run` | Tests del backend |
+|---|---|
+| `npm run dev` | Inicia el frontend con Vite en puerto 4000 |
+| `npm run dev:server` | Inicia el backend Express |
+| `npm run dev:all` | Ejecuta frontend y backend en paralelo |
+| `npm run build` | Genera el build de producción |
+| `npm run lint` | Verifica estilo y calidad del código |
+| `npm run test` | Ejecuta Vitest en modo watch |
+| `npm run test:run` | Ejecuta pruebas frontend en una sola pasada |
+| `npm run test:coverage` | Genera cobertura de pruebas |
+| `npm run test:e2e` | Ejecuta pruebas E2E con Playwright |
+| `cd server && npm run test:run` | Ejecuta pruebas del backend |
 
-Más detalle en [`docs/testing.md`](docs/testing.md).
+## 🧪 Validación y pruebas
 
-## Tecnologías
+Se recomienda ejecutar la validación del proyecto antes de considerar una tarea terminada:
 
-- **Frontend:** React 19, Vite 8, Tailwind CSS 4, Zustand, Framer Motion.
-- **Backend:** Node.js, Express 5, Prisma ORM, MySQL 8.
-- **Tests:** Vitest, Testing Library, Supertest, Playwright.
+```bash
+npm run lint
+npm run test:run
+```
 
-## Documentación
+Para pruebas de interfaz y flujo real:
 
-- Constitución del proyecto: [`docs/constitution.md`](docs/constitution.md)
-- Catálogo de soluciones: [`docs/catalogo-servicios.md`](docs/catalogo-servicios.md)
-- Testing: [`docs/testing.md`](docs/testing.md)
-- Diagnóstico: [`docs/diagnostico.md`](docs/diagnostico.md)
-- Especificaciones: [`specs/`](specs/)
-- Guía para agentes: [`AGENTS.md`](AGENTS.md)
+```bash
+npm run test:e2e
+```
+
+Más información en [docs/testing.md](docs/testing.md).
+
+## 🧭 Flujo recomendado de trabajo
+
+1. Revisar la especificación activa en [specs/](specs/).
+2. Leer la constitución del proyecto en [docs/constitution.md](docs/constitution.md).
+3. Mantener el catálogo de servicios como fuente única de verdad.
+4. Implementar cambios con validación de tests.
+5. Usar el backend y frontend con datos reales, nunca con respuestas genéricas o mockeadas.
+
+## 📚 Documentación relevante
+
+- [docs/constitution.md](docs/constitution.md) — principios y reglas del proyecto
+- [docs/catalogo-servicios.md](docs/catalogo-servicios.md) — oferta oficial y servicios
+- [docs/diagnostico.md](docs/diagnostico.md) — diagnóstico técnico y entorno
+- [docs/testing.md](docs/testing.md) — guía de pruebas
+- [specs/](specs/) — especificaciones del producto y tareas
+- [AGENTS.md](AGENTS.md) — instrucciones para agentes y automatizaciones
+
+## 👤 Perfil del proyecto
+
+HagamosTech combina una presencia comercial clara con una arquitectura técnica ordenada para
+apoyar crecimiento, automatización, calidad y experiencia de usuario. El enfoque está en la
+tecnología útil, el diseño bien pensado y la ejecución con enfoque realista.
+
+## 🔎 Nota importante
+
+La oferta publicada en la web debe respetar el Catálogo Maestro y no reutilizar contenido de
+verticales no vigentes. La documentación y la implementación deben alinearse con la
+especificación activa del proyecto.
 
 ---
 
-HagamosTech - 2026
+HagamosTech — 2026
