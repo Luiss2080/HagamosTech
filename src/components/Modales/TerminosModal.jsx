@@ -69,7 +69,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                             <i className="fas fa-times text-xl"></i>
                         </button>
                         <div className="grid grid-cols-1 lg:grid-cols-2 overflow-hidden">
-                            <div className="relative hidden lg:flex flex-col justify-center gap-6 p-6 lg:p-8 overflow-hidden bg-[#a41e22]">
+                            <div className="relative hidden lg:flex flex-col justify-center gap-6 p-6 lg:p-8 overflow-hidden bg-[#0A0A0A]">
                                 <div className="absolute inset-0 z-0 pointer-events-none">
                                     <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                                     <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-black/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
@@ -79,13 +79,13 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                 <div className="relative z-10 flex flex-col items-center text-center">
                                     <div className="mb-5 inline-flex items-center justify-center rounded-[2rem] bg-white/20 p-3 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
                                         <div className="h-32 w-32 rounded-2xl bg-white flex items-center justify-center shadow-lg">
-                                            <i className="fas fa-file-contract text-5xl text-[#a41e22]"></i>
+                                            <i className="fas fa-file-contract text-5xl text-[#A3E635]"></i>
                                         </div>
                                     </div>
 
                                     <h2 className="text-3xl font-black text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
                                         Terminos y <br />
-                                        <span className="text-[#c5a059] relative inline-block">
+                                        <span className="text-[#A3E635] relative inline-block">
                                             Condiciones
                                             <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-amber-500/40" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  /></svg>
                                         </span>
@@ -95,25 +95,25 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                         Informacion legal para clientes HAGAMOSTECH sobre servicios, pagos, garantias y entregas.
                                     </p>
 
-                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-[10px] font-black uppercase tracking-widest mb-5 shadow-lg">
-                                        <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Actualizado Junio 2026
+                                    <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#111827] border border-[#A3E635]/30 text-[#A3E635] text-[10px] font-black uppercase tracking-widest mb-5 shadow-lg">
+                                        <span className="w-2 h-2 rounded-full bg-[#A3E635] animate-ping"></span> Actualizado Junio 2026
                                     </div>
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-sm mb-4">
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#c5a059]"><i className="fas fa-shield-halved mr-1"></i> Garantias</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-shield-halved mr-1"></i> Garantias</p>
                                             <p className="text-xs font-bold text-white">Cobertura vigente</p>
                                         </div>
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#c5a059]"><i className="fas fa-credit-card mr-1"></i> Pagos</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-credit-card mr-1"></i> Pagos</p>
                                             <p className="text-xs font-bold text-white">Condiciones claras</p>
                                         </div>
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#c5a059]"><i className="fas fa-lock mr-1"></i> Privacidad</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-lock mr-1"></i> Privacidad</p>
                                             <p className="text-xs font-bold text-white">Datos seguros</p>
                                         </div>
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#c5a059]"><i className="fas fa-headset mr-1"></i> Soporte</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-headset mr-1"></i> Soporte</p>
                                             <p className="text-xs font-bold text-white">Post-venta</p>
                                         </div>
                                     </div>
@@ -128,7 +128,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
                                             { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
-                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#c5a059] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#111827] hover:text-[#A3E635] transition-all duration-300 shadow-lg hover:-translate-y-1">
                                                 <i className={`fab ${item.icon} text-[13px]`}></i>
                                             </a>
                                         ))}
@@ -138,17 +138,17 @@ const TerminosModal = ({ isOpen, onClose }) => {
 
                             <div className="relative flex flex-col justify-center h-full bg-[#FFF6F6] p-8 lg:p-10">
                                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                    <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#a41e22]/10 rounded-full blur-3xl"></div>
+                                    <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                                     <div className="absolute top-1/2 -left-10 w-40 h-40 bg-[#111827]/20 rounded-full blur-2xl"></div>
-                                    <div className="absolute bottom-0 right-10 w-56 h-56 bg-[#a41e22]/10 rounded-full blur-3xl"></div>
+                                    <div className="absolute bottom-0 right-10 w-56 h-56 bg-[#A3E635]/10 rounded-full blur-3xl"></div>
                                     <CircleParticles colorScheme="light" />
                                 </div>
 
                                 <div className="relative z-10 w-full max-w-[560px] mx-auto">
                                     <div className="mb-5 text-center bg-white p-5 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
-                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#a41e22] via-[#d97706] to-[#a41e22]"></div>
+                                        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#d97706] to-[#A3E635]"></div>
                                         <div className="inline-flex items-center gap-2 mb-1.5">
-                                            <span className="w-8 h-8 rounded-xl bg-red-50 border border-red-200 text-[#a41e22] flex items-center justify-center">
+                                            <span className="w-8 h-8 rounded-xl bg-red-50 border border-red-200 text-[#A3E635] flex items-center justify-center">
                                                 <i className="fas fa-scale-balanced text-sm"></i>
                                             </span>
                                             <h3 className="text-2xl font-black text-[#111827] tracking-tight">Terminos y Condiciones</h3>
@@ -167,7 +167,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
 
                                     <div className="mt-4 rounded-xl border border-gray-200 bg-white px-3.5 py-3 text-[11px] text-gray-500 font-semibold leading-relaxed">
                                         <div className="flex items-start gap-2">
-                                            <i className="fas fa-circle-info text-[#a41e22] mt-0.5"></i>
+                                            <i className="fas fa-circle-info text-[#A3E635] mt-0.5"></i>
                                             <span>Al continuar navegando y contratando servicios en HAGAMOSTECH, aceptas estas condiciones comerciales y legales.</span>
                                         </div>
                                     </div>

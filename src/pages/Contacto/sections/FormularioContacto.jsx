@@ -108,7 +108,7 @@ const FormularioContacto = () => {
                                             { icon: 'fa-tiktok', link: 'https://www.tiktok.com/@hagamostech' },
                                             { icon: 'fa-whatsapp', link: 'https://wa.me/59161320004' },
                                         ].map((item, i) => (
-                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-all duration-300 shadow-lg hover:-translate-y-1">
+                                            <a key={i} href={item.link} target="_blank" rel="noopener noreferrer" className="w-8 h-8 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] transition-all duration-300 shadow-lg hover:-translate-y-1">
                                                 <i className={`fab ${item.icon} text-[13px]`}></i>
                                             </a>
                                         ))}

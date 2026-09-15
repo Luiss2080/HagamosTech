@@ -11,7 +11,7 @@ const ModalColegio = ({ institution, onClose }) => {
             >
                 <button
                     onClick={onClose}
-                    className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] flex items-center justify-center transition-colors"
+                    className="absolute top-4 right-4 w-9 h-9 rounded-full bg-white/10 text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] flex items-center justify-center transition-colors"
                 >
                     <i className="fas fa-xmark"></i>
                 </button>

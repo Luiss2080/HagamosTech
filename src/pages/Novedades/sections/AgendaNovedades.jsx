@@ -19,7 +19,7 @@ const EVENTOS_AGENDA = [
 const TIPO_INFO = {
     promo: { label: 'Promoción', bg: 'bg-[#A3E635]', text: 'text-[#A3E635]', soft: 'bg-[#A3E635]/10 border-[#A3E635]/25', gradient: 'from-[#A3E635] to-[#84CC16]', ring: 'ring-[#A3E635]/40', glow: 'shadow-[0_6px_20px_rgba(255,77,0,0.25)]' },
     evento: { label: 'Evento', bg: 'bg-[#171717]', text: 'text-slate-300', soft: 'bg-[#171717]/10 border-[#171717]/25', gradient: 'from-[#171717] to-[#452A16]', ring: 'ring-[#171717]/40', glow: 'shadow-[0_6px_20px_rgba(93,58,31,0.25)]' },
-    aniv: { label: 'Aniversario', bg: 'bg-[#0A0A0A]', text: 'text-white', soft: 'bg-[#0A0A0A]/10 border-[#0A0A0A]/25', gradient: 'from-[#0A0A0A] to-[#6B3410]', ring: 'ring-[#0A0A0A]/40', glow: 'shadow-[0_6px_20px_rgba(139,69,19,0.25)]' },
+    aniv: { label: 'Aniversario', bg: 'bg-[#0A0A0A]', text: 'text-white', soft: 'bg-[#0A0A0A]/10 border-[#0A0A0A]/25', gradient: 'from-[#0A0A0A] to-[#0A0A0A]', ring: 'ring-[#0A0A0A]/40', glow: 'shadow-[0_6px_20px_rgba(139,69,19,0.25)]' },
 };
 
 const AgendaNovedades = () => {
@@ -174,14 +174,14 @@ const AgendaNovedades = () => {
                             <button
                                 onClick={anterior}
                                 aria-label="Mes anterior"
-                                className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                                className="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                             >
                                 <i className="fas fa-chevron-left text-sm group-hover:-translate-x-0.5 transition-transform"></i>
                             </button>
                             <button
                                 onClick={siguiente}
                                 aria-label="Mes siguiente"
-                                className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-white hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
+                                className="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#111827] shadow-xl shadow-black/10 border-2 border-white/10 text-[#0A0A0A] hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-[#A3E635] hover:scale-110 active:scale-95 flex items-center justify-center transition-all duration-300 cursor-pointer group"
                             >
                                 <i className="fas fa-chevron-right text-sm group-hover:translate-x-0.5 transition-transform"></i>
                             </button>
@@ -265,7 +265,7 @@ const AgendaNovedades = () => {
                                         </a>
                                         <a
                                             href="tel:+59161320004"
-                                            className="inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-[#A3E635] hover:bg-[#84CC16] text-white font-black text-[9px] uppercase tracking-[0.15em] shadow-md shadow-lime-400/20/20 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all"
+                                            className="inline-flex items-center justify-center gap-2 py-2.5 rounded-full bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] font-black text-[9px] uppercase tracking-[0.15em] shadow-md shadow-lime-400/20/20 hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all"
                                         >
                                             <i className="fas fa-phone text-xs"></i> Llamar
                                         </a>

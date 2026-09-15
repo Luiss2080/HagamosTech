@@ -48,7 +48,7 @@ const ContactoPrivacidad = () => {
                                     <i className="fas fa-arrow-right text-white/50 group-hover:translate-x-1 transition-transform ml-auto"></i>
                                 </a>
                                 <a href="mailto:privacidad@hagamostech.bo" className="flex items-center gap-4 p-4 bg-white/10 border border-white/15 rounded-2xl hover:bg-white/20 transition-colors group">
-                                    <div className="w-12 h-12 rounded-xl bg-[#A3E635] flex items-center justify-center text-white text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
+                                    <div className="w-12 h-12 rounded-xl bg-[#A3E635] flex items-center justify-center text-[#0A0A0A] text-xl shrink-0 shadow-lg group-hover:scale-110 transition-transform">
                                         <i className="fas fa-envelope"></i>
                                     </div>
                                     <div className="text-left">

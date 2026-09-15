@@ -305,7 +305,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                             </span>
                                             <h3 className="text-2xl font-black font-heading text-[#111827] tracking-tight">Crear Cuenta</h3>
                                         </div>
-                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Registra tu perfil de compra</p>
+                                        <p className="text-xs text-gray-500 font-bold uppercase tracking-wide">Registra tu perfil</p>
                                     </div>
 
                                     {verificacion ? (
@@ -423,7 +423,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                                 <button
                                                     type="button"
                                                     onClick={openTerms}
-                                                    className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#7f1d1d]"
+                                                    className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#0A0A0A]"
                                                 >
                                                     <i className="fas fa-file-contract text-[10px]"></i>
                                                     Ver términos

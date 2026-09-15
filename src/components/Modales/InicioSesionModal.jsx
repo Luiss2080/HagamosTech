@@ -497,7 +497,7 @@ const handleRegenerateQR = async () => {
                                     <button
                                         type="button"
                                         onClick={handleForgotPassword}
-                                        className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#7f1d1d]"
+                                        className="inline-flex items-center gap-1.5 text-[11px] font-black uppercase tracking-wide text-[#84CC16] hover:text-[#0A0A0A]"
                                     >
                                         <i className="fas fa-key text-[10px]"></i>
                                         Recuperar acceso

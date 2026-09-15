@@ -36,7 +36,7 @@ const HistorialComprasPagina = () => {
             <CircuitBackground />
             
             {/* Dots grid overlay */}
-            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#a41e22 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
+            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <PageHero
                 title="Mis compras y"
@@ -66,7 +66,7 @@ const HistorialComprasPagina = () => {
                                     <Link 
                                         key={item.path}
                                         to={item.path}
-                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#a41e22] text-white shadow-md' : 'text-slate-500 hover:bg-[#a41e22]/5 dark:hover:bg-white/5'}`}
+                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-500 hover:bg-[#A3E635]/5 dark:hover:bg-white/5'}`}
                                     >
                                         <i className={`fas ${item.icon}`}></i>
                                         {item.label}
@@ -77,8 +77,8 @@ const HistorialComprasPagina = () => {
 
                         {/* SUMMARY CARDS */}
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
-                                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#a41e22]/10 text-[#a41e22] text-lg shadow-inner">
+                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
+                                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#A3E635]/10 text-[#A3E635] text-lg shadow-inner">
                                     <i className="fas fa-wallet"></i>
                                 </div>
                                 <div>
@@ -86,7 +86,7 @@ const HistorialComprasPagina = () => {
                                     <p className="text-[9px] font-black uppercase tracking-wider text-slate-400 mt-1">Monto total invertido</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
+                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
                                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-amber-500/10 text-amber-500 text-lg shadow-inner">
                                     <i className="fas fa-box-open"></i>
                                 </div>
@@ -95,7 +95,7 @@ const HistorialComprasPagina = () => {
                                     <p className="text-[9px] font-black uppercase tracking-wider text-slate-400 mt-1">Registrados con éxito</p>
                                 </div>
                             </div>
-                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
+                            <div className="flex items-center gap-4 rounded-2xl bg-white p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
                                 <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-blue-500/10 text-blue-500 text-lg shadow-inner">
                                     <i className="fas fa-file-invoice-dollar"></i>
                                 </div>
@@ -107,9 +107,9 @@ const HistorialComprasPagina = () => {
                         </div>
 
                         {/* PURCHASE LIST */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#a41e22]">
+                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                     <i className="fas fa-receipt"></i>
                                 </div>
                                 <div>
@@ -121,7 +121,7 @@ const HistorialComprasPagina = () => {
                             <div className="overflow-x-auto">
                                 <table className="w-full text-left border-collapse text-xs">
                                     <thead>
-                                        <tr className="border-b-2 border-red-100 text-[#a41e22] uppercase text-[9px] font-black tracking-widest bg-red-50/30">
+                                        <tr className="border-b-2 border-red-100 text-[#A3E635] uppercase text-[9px] font-black tracking-widest bg-red-50/30">
                                             <th className="py-3.5 pl-4">ID Pedido</th>
                                             <th className="py-3.5">Fecha</th>
                                             <th className="py-3.5">Detalle</th>
@@ -146,7 +146,7 @@ const HistorialComprasPagina = () => {
                                                 </tr>
                                             ) : (compras.map((invoice) => (
                                             <tr key={invoice.id} className="hover:bg-red-50/30 dark:hover:bg-red-950/20 transition-colors">
-                                                <td className="py-4 pl-4 font-black text-[#a41e22]">{invoice.id}</td>
+                                                <td className="py-4 pl-4 font-black text-[#A3E635]">{invoice.id}</td>
                                                 <td className="py-4">{invoice.date}</td>
                                                 <td className="py-4 font-bold truncate max-w-[180px]" title={invoice.item}>
                                                     <span className="text-[10px] bg-slate-100 text-slate-500 px-2 py-0.5 rounded-md mr-2">{invoice.category}</span>
@@ -162,7 +162,7 @@ const HistorialComprasPagina = () => {
                                                 <td className="py-4 pr-4 text-right">
                                                     <button 
                                                         onClick={() => handleDownloadInvoice(invoice)}
-                                                        className="px-3 py-1.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0"
+                                                        className="px-3 py-1.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0"
                                                     >
                                                         <i className="fas fa-download mr-1"></i> PDF
                                                     </button>
@@ -191,7 +191,7 @@ const HistorialComprasPagina = () => {
                         </button>
 
                         <div className="text-center">
-                            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-[#a41e22] text-xl mb-3">
+                            <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-red-50 text-[#A3E635] text-xl mb-3">
                                 <i className="fas fa-file-invoice-dollar"></i>
                             </div>
                             <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-1">Factura Digital Oficial</h3>
@@ -202,7 +202,7 @@ const HistorialComprasPagina = () => {
                         <div className="border border-slate-200 p-4 rounded-xl bg-[#fbfdff] text-slate-800 text-left text-xs font-semibold space-y-3 shadow-inner mb-4">
                             <div className="flex justify-between border-b border-slate-100 pb-3">
                                 <div>
-                                    <p className="font-black text-[#a41e22] text-sm">HagamosTech</p>
+                                    <p className="font-black text-[#A3E635] text-sm">HagamosTech</p>
                                     <p className="text-[9px] text-slate-400 mt-0.5">Santa Cruz, Bolivia</p>
                                 </div>
                                 <div className="text-right">
@@ -235,7 +235,7 @@ const HistorialComprasPagina = () => {
                                 </div>
                                 <div className="text-right">
                                     <p className="text-[9px] font-black uppercase text-slate-400 tracking-wider">Total Cancelado:</p>
-                                    <p className="font-black text-sm text-[#a41e22] mt-0.5">{selectedInvoice.amount}</p>
+                                    <p className="font-black text-sm text-[#A3E635] mt-0.5">{selectedInvoice.amount}</p>
                                 </div>
                             </div>
                         </div>
@@ -245,7 +245,7 @@ const HistorialComprasPagina = () => {
                                 await descargarFactura(selectedInvoice.id);
                                 setSelectedInvoice(null);
                             }}
-                            className="w-full py-2.5 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                            className="w-full py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                         >
                             Descargar PDF Oficial
                         </button>

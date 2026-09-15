@@ -18,13 +18,13 @@ const ChatHeader = ({ botName, botRole, onToggle, onToggleMenu }) => (
     <div className="flex items-center gap-1.5 relative z-10">
       <button
         onClick={onToggleMenu}
-        className="w-8 h-8 flex items-center justify-center bg-white/10 text-white hover:bg-[#A3E635]/20 hover:text-[#A3E635] rounded-full transition-all cursor-pointer"
+        className="w-8 h-8 flex items-center justify-center bg-white/10 text-[#0A0A0A] hover:bg-[#A3E635]/20 hover:text-[#A3E635] rounded-full transition-all cursor-pointer"
       >
         <MoreVertical size={18} />
       </button>
       <button
         onClick={onToggle}
-        className="w-8 h-8 flex items-center justify-center bg-white/10 text-white hover:bg-[#A3E635]/20 hover:text-[#A3E635] rounded-full transition-all cursor-pointer transform hover:scale-110"
+        className="w-8 h-8 flex items-center justify-center bg-white/10 text-[#0A0A0A] hover:bg-[#A3E635]/20 hover:text-[#A3E635] rounded-full transition-all cursor-pointer transform hover:scale-110"
       >
         <X size={18} />
       </button>

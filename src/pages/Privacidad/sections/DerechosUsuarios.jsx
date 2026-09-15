@@ -49,7 +49,7 @@ const DerechosUsuarios = () => {
                                     }`}
                                 >
                                     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-[#A3E635] to-[#84CC16] transition-opacity duration-300" style={{ opacity: active === i ? 1 : 0 }}></div>
-                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#A3E635] text-white shadow-md shadow-orange-500/30' : 'bg-[#FFFFFF] text-[#A3E635]'}`}>
+                                    <div className={`w-11 h-11 rounded-xl flex items-center justify-center text-lg shrink-0 transition-colors ${active === i ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md shadow-orange-500/30' : 'bg-[#FFFFFF] text-[#A3E635]'}`}>
                                         <i className={`fas ${d.icon}`}></i>
                                     </div>
                                     <div>

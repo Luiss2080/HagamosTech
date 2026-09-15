@@ -133,7 +133,7 @@ const RecuperarContrasena = () => {
 
                         <div className="relative z-10 w-full max-w-[520px] mx-auto">
                             <div className="mb-4 text-center bg-[#111827] p-4 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
-                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0A0A0A] via-[#A3E635] to-[#0A0A0A]"></div>
+                                <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#0A0A0A] via-[#111827] to-[#0A0A0A]"></div>
                                 <div className="inline-flex items-center gap-2 mb-1.5">
                                     <span className="w-8 h-8 rounded-xl bg-red-50 border border-red-200 text-[#0A0A0A] flex items-center justify-center">
                                         <i className="fas fa-key text-sm"></i>
@@ -159,7 +159,7 @@ const RecuperarContrasena = () => {
                                     <button
                                         type="button"
                                         onClick={() => navigate('/', { replace: true })}
-                                        className="w-full py-3 px-4 bg-[#0A0A0A] hover:bg-[#86181b] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-red-500/20 transition-all cursor-pointer border-0"
+                                        className="w-full py-3 px-4 bg-[#0A0A0A] hover:bg-[#0A0A0A] text-white font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-red-500/20 transition-all cursor-pointer border-0"
                                     >
                                         Ir al inicio de sesión
                                     </button>
@@ -204,7 +204,7 @@ const RecuperarContrasena = () => {
                                         <button
                                             type="submit"
                                             disabled={isSubmitting}
-                                            className="w-full py-3.5 px-6 bg-[#0A0A0A] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#0A0A0A]/20 hover:shadow-[#0A0A0A]/40 hover:-translate-y-0.5 hover:bg-[#86181b] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
+                                            className="w-full py-3.5 px-6 bg-[#0A0A0A] text-white font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#0A0A0A]/20 hover:shadow-[#0A0A0A]/40 hover:-translate-y-0.5 hover:bg-[#0A0A0A] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                                         >
                                             <span className="relative z-10">{isSubmitting ? 'Guardando...' : 'Restablecer contraseña'}</span>
                                             <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-key text-white text-xs"></i></div>

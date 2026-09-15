@@ -299,7 +299,7 @@ const Header = () => {
                                     item.type === 'dropdown' ? (
                                         <div key={item.id} className="nav-item-container h-full flex items-center group">
                                             <button
-                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
+                                                className="text-[11px] font-black uppercase tracking-wider text-[#0A0A0A]/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
                                             >
                                                 <span>{item.label}</span>
                                                 <i className="fas fa-chevron-down text-[8px] transition-transform duration-300 group-hover:rotate-180"></i>
@@ -330,7 +330,7 @@ const Header = () => {
                                         <div key={item.id} className="nav-item-container h-full flex items-center">
                                             <button
                                                 onClick={() => handleNavItemClick(item)}
-                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
+                                                className="text-[11px] font-black uppercase tracking-wider text-[#0A0A0A]/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
                                             >
                                                 {item.label}
                                             </button>
@@ -491,7 +491,7 @@ const Header = () => {
                                         <button
                                             key={subItem.id}
                                             onClick={() => handleNavItemClick({ type: 'dropdown', target: subItem.target })}
-                                            className="flex items-center justify-between px-4 py-3 text-[14px] font-medium text-white/70 hover:bg-[#A3E635]/10 rounded-xl transition-colors"
+                                            className="flex items-center justify-between px-4 py-3 text-[14px] font-medium text-[#0A0A0A]/70 hover:bg-[#A3E635]/10 rounded-xl transition-colors"
                                         >
                                             {subItem.label}
                                             <i className="fas fa-arrow-right text-[10px] text-[#A3E635]/50"></i>
@@ -540,7 +540,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/perfil');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-user text-xs"></i>
@@ -552,7 +552,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/perfil/compras');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-receipt text-xs"></i>
@@ -564,7 +564,7 @@ const Header = () => {
                                         closeMenu();
                                         handleUserNavigate('/configuracion');
                                     }}
-                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
+                                    className="w-full px-4 py-2 text-left text-xs font-black uppercase text-[#0A0A0A] hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-gear text-xs"></i>
@@ -592,7 +592,7 @@ const Header = () => {
                                     closeMenu();
                                     openModal('loginModal');
                                 }}
-                                className="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-2xl border border-[#A3E635]/30 text-white font-bold hover:border-[#A3E635]/60 dark:hover:border-[#A3E635]/60 hover:text-[#A3E635] dark:hover:text-[#A3E635] hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 transition-all group"
+                                className="w-full flex items-center justify-center gap-3 py-3 px-4 rounded-2xl border border-[#A3E635]/30 text-[#0A0A0A] font-bold hover:border-[#A3E635]/60 dark:hover:border-[#A3E635]/60 hover:text-[#A3E635] dark:hover:text-[#A3E635] hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 transition-all group"
                             >
                                 <i className="fas fa-user-lock text-sm group-hover:scale-110 group-hover:-translate-y-1 group-hover:rotate-[8deg] transition-transform"></i>
                                 <span className="group-hover:scale-105 transition-transform">Iniciar Sesion</span>

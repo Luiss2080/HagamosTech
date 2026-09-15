@@ -3,8 +3,8 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RETENCION = [
     { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Mientras tu cuenta esté activa', dias: 100, color: 'from-[#A3E635] to-[#84CC16]', nota: 'Se eliminan al cerrar tu cuenta.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
-    { icon: 'fa-receipt', titulo: 'Historial de compras', detalle: 'Pedidos y facturas', duracion: '5 años (obligación fiscal)', dias: 75, color: 'from-[#0A0A0A] to-[#171717]', nota: 'Por requisito legal de facturación.', items: ['Pedidos', 'Facturas', 'NIT'] },
-    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Emails y WhatsApp', duracion: '2 años', dias: 50, color: 'from-[#171717] to-[#6B3410]', nota: 'Se purgan automáticamente.', items: ['Emails', 'Chats', 'Alertas'] },
+    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Servicios y facturas', duracion: '5 años (obligación fiscal)', dias: 75, color: 'from-[#0A0A0A] to-[#171717]', nota: 'Por requisito legal de facturación.', items: ['Servicios', 'Facturas', 'NIT'] },
+    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Emails y WhatsApp', duracion: '2 años', dias: 50, color: 'from-[#171717] to-[#0A0A0A]', nota: 'Se purgan automáticamente.', items: ['Emails', 'Chats', 'Alertas'] },
     { icon: 'fa-cookie-bite', titulo: 'Cookies', detalle: 'Preferencias de navegación', duracion: '30 días', dias: 25, color: 'from-[#84CC16] to-[#AA3000]', nota: 'Renovables con cada visita.', items: ['Preferencias', 'Sesión', 'Analítica'] },
 ];
 

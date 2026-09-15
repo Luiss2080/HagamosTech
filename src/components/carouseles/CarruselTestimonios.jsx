@@ -132,7 +132,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                           <Star key={i} size={13} fill="currentColor" className="text-[#A3E635]" />
                         ))}
                       </div>
-                      <div className="w-8 h-8 rounded-full bg-[#A3E635]/5 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-white transition-all duration-300">
+                      <div className="w-8 h-8 rounded-full bg-[#A3E635]/5 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
                         <Quote size={14} className="transform rotate-185" />
                       </div>
                     </div>
@@ -175,14 +175,14 @@ const TestimonialCarousel = ({ testimonials }) => {
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Anterior"
             >
               <i className="fa-solid fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-white transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Siguiente"
             >
               <i className="fa-solid fa-chevron-right text-xs"></i>

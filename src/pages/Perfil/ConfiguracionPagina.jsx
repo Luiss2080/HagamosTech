@@ -15,20 +15,20 @@ import {
 } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
-    { name: 'Rojo Robótico', value: '#a41e22', hover: '#801015', bg: 'bg-[#a41e22]', ring: 'ring-[#a41e22]' },
-    { name: 'Dorado Tech', value: '#c5a059', hover: '#a88544', bg: 'bg-[#c5a059]', ring: 'ring-[#c5a059]' },
+    { name: 'Rojo Robótico', value: '#A3E635', hover: '#84CC16', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
+    { name: 'Dorado Tech', value: '#A3E635', hover: '#a88544', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
     { name: 'Azul Espacial', value: '#1d4ed8', hover: '#1e40af', bg: 'bg-blue-700', ring: 'ring-blue-700' },
     { name: 'Verde Cyber', value: '#10b981', hover: '#059669', bg: 'bg-[#10b981]', ring: 'ring-[#10b981]' },
 ];
 
 const PRIVACY_LEVELS = [
     { id: 'public', name: 'Público', desc: 'Tu perfil es visible para otros usuarios y pueden ver tus proyectos y servicios.', icon: 'fa-earth-americas', color: 'text-blue-500' },
-    { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio técnico.', icon: 'fa-users', color: 'text-[#c5a059]' },
+    { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio técnico.', icon: 'fa-users', color: 'text-[#A3E635]' },
     { id: 'private', name: 'Privado', desc: 'Nadie puede ver tu perfil. Tus avances académicos y proyectos están completamente ocultos.', icon: 'fa-user-lock', color: 'text-red-500' }
 ];
 
 const Tooltip = ({ text }) => (
-    <span className="group relative cursor-pointer text-slate-400 hover:text-[#a41e22] ml-1.5 select-none">
+    <span className="group relative cursor-pointer text-slate-400 hover:text-[#A3E635] ml-1.5 select-none">
         <i className="fas fa-circle-question"></i>
         <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 w-48 p-2.5 bg-slate-900/95 text-white text-[9px] rounded-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity leading-relaxed z-50 text-center font-bold font-sans shadow-xl border border-white/10 normal-case">
             {text}
@@ -50,7 +50,7 @@ const ConfiguracionPagina = () => {
 
     // --- Estados ---
     const [accentColor, setAccentColor] = useState(() => {
-        return localStorage.getItem('hagamostech_accent_color') || '#a41e22';
+        return localStorage.getItem('hagamostech_accent_color') || '#A3E635';
     });
 
     const [privacy, setPrivacy] = useState('members');
@@ -196,7 +196,7 @@ const ConfiguracionPagina = () => {
             <CircuitBackground />
             
             {/* Dots grid overlay */}
-            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#a41e22 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
+            <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <PageHero
                 title="Ajustes y"
@@ -231,7 +231,7 @@ const ConfiguracionPagina = () => {
                                     <Link 
                                         key={item.path}
                                         to={item.path}
-                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#a41e22] text-white shadow-md' : 'text-slate-500 hover:bg-[#a41e22]/5 dark:hover:bg-white/5'}`}
+                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-500 hover:bg-[#A3E635]/5 dark:hover:bg-white/5'}`}
                                     >
                                         <i className={`fas ${item.icon}`}></i>
                                         {item.label}
@@ -241,9 +241,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PERSONALIZACIÓN VISUAL */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22]">
+                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
                                     <i className="fas fa-palette"></i>
                                 </div>
                                 <div>
@@ -263,7 +263,7 @@ const ConfiguracionPagina = () => {
                                                 <button
                                                     key={color.value}
                                                     onClick={() => handleAccentChange(color.value)}
-                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#a41e22] bg-[#a41e22]/5 font-black text-[#a41e22] ring-2 ${color.ring}/25` : 'border-slate-100 bg-[#fbfdff] text-slate-700 hover:border-slate-200 dark:hover:border-slate-700'}`}
+                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-slate-100 bg-[#fbfdff] text-slate-700 hover:border-slate-200 dark:hover:border-slate-700'}`}
                                                 >
                                                     <span className={`w-3 h-3 rounded-full shrink-0 ${color.bg} ${isSelected ? 'ring-2 ring-offset-2 ring-slate-800 dark:ring-offset-slate-900' : ''}`} />
                                                     <span className="truncate">{color.name.split(' ')[0]}</span>
@@ -276,9 +276,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PRIVACY METER */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22]">
+                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
                                     <i className="fas fa-user-shield"></i>
                                 </div>
                                 <div>
@@ -295,11 +295,11 @@ const ConfiguracionPagina = () => {
                                             <button
                                                 key={level.id}
                                                 onClick={() => setPrivacy(level.id)}
-                                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#a41e22] bg-[#a41e22]/5 font-black shadow-md ring-2 ring-[#a41e22]/15' : 'border-slate-100 bg-slate-50/50 font-bold text-slate-700 dark:text-slate-300'}`}
+                                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#A3E635] bg-[#A3E635]/5 font-black shadow-md ring-2 ring-[#A3E635]/15' : 'border-slate-100 bg-slate-50/50 font-bold text-slate-700 dark:text-slate-300'}`}
                                             >
                                                 <div className="flex items-center justify-between w-full mb-3">
                                                     <i className={`fas ${level.icon} text-lg ${level.color}`}></i>
-                                                    {isSelected && <span className="w-2.5 h-2.5 rounded-full bg-[#a41e22]" />}
+                                                    {isSelected && <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635]" />}
                                                 </div>
                                                 <div>
                                                     <p className="text-xs font-black uppercase tracking-wider">{level.name}</p>
@@ -313,9 +313,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PRIVACIDAD Y SEGURIDAD */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22]">
+                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
                                     <i className="fas fa-lock"></i>
                                 </div>
                                 <div>
@@ -336,7 +336,7 @@ const ConfiguracionPagina = () => {
                                             onChange={handlePasswordChange}
                                             placeholder="Contraseña Actual"
                                             required
-                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                         <input 
                                             type="password" 
@@ -345,7 +345,7 @@ const ConfiguracionPagina = () => {
                                             onChange={handlePasswordChange}
                                             placeholder="Nueva Contraseña"
                                             required
-                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                         <input 
                                             type="password" 
@@ -354,7 +354,7 @@ const ConfiguracionPagina = () => {
                                             onChange={handlePasswordChange}
                                             placeholder="Confirmar Nueva Contraseña"
                                             required
-                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                            className="w-full px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                         {passError && (
                                             <p className="text-[9px] font-bold text-red-500 flex items-center gap-1"><i className="fas fa-circle-exclamation"></i> {passError}</p>
@@ -362,7 +362,7 @@ const ConfiguracionPagina = () => {
                                         <button 
                                             type="submit"
                                             disabled={passLoading}
-                                            className="w-full py-2 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-[10px] font-black uppercase tracking-wider shadow-sm shadow-red-500/30 transition-all cursor-pointer border-0 disabled:opacity-50"
+                                            className="w-full py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider shadow-sm shadow-red-500/30 transition-all cursor-pointer border-0 disabled:opacity-50"
                                         >
                                             {passLoading ? 'Cambiando...' : 'Cambiar Contraseña'}
                                         </button>
@@ -394,7 +394,7 @@ const ConfiguracionPagina = () => {
                                         <button 
                                             onClick={handleToggle2FA}
                                             disabled={faLoading}
-                                            className={`relative inline-flex h-6.5 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:opacity-50 ${is2FAEnabled ? 'bg-[#a41e22]' : 'bg-slate-200 dark:bg-slate-800'}`}
+                                            className={`relative inline-flex h-6.5 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none disabled:opacity-50 ${is2FAEnabled ? 'bg-[#A3E635]' : 'bg-slate-200 dark:bg-slate-800'}`}
                                         >
                                             <span className={`pointer-events-none inline-block h-5.5 w-5.5 transform rounded-full bg-white shadow ring-0 transition duration-200 ease-in-out ${is2FAEnabled ? 'translate-x-5.5' : 'translate-x-0'}`} />
                                         </button>
@@ -407,9 +407,9 @@ const ConfiguracionPagina = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             
                             {/* Active Sessions */}
-                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22]">
+                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
                                 <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                    <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                                    <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                         <i className="fas fa-desktop"></i>
                                     </div>
                                     <div>
@@ -424,7 +424,7 @@ const ConfiguracionPagina = () => {
                                         sesiones.map((sess) => (
                                             <div key={sess.id} className="flex items-center justify-between border-b border-slate-100 pb-2 last:border-0 last:pb-0">
                                                 <div className="flex items-center gap-2.5">
-                                                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#a41e22]/10 text-[#a41e22]">
+                                                    <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg bg-[#A3E635]/10 text-[#A3E635]">
                                                         <i className={`fas ${sess.icon} text-[10px]`}></i>
                                                     </div>
                                                     <div className="text-left">
@@ -436,7 +436,7 @@ const ConfiguracionPagina = () => {
                                                     <button 
                                                         onClick={() => revocarSesion(sess.id)}
                                                         disabled={sesLoading}
-                                                        className="text-[8px] font-black uppercase tracking-wider text-red-500 hover:text-[#a41e22] cursor-pointer bg-red-50 px-2 py-1 rounded-lg border border-red-100 transition disabled:opacity-50"
+                                                        className="text-[8px] font-black uppercase tracking-wider text-red-500 hover:text-[#A3E635] cursor-pointer bg-red-50 px-2 py-1 rounded-lg border border-red-100 transition disabled:opacity-50"
                                                     >
                                                         {sesLoading ? 'Revocando...' : 'Revocar'}
                                                     </button>
@@ -448,10 +448,10 @@ const ConfiguracionPagina = () => {
                             </div>
 
                             {/* Data Export & Danger Zone */}
-                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#a41e22] flex flex-col justify-between">
+                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635] flex flex-col justify-between">
                                 <div>
                                     <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                        <div className="w-9 h-9 rounded-xl bg-[#a41e22] text-white flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                                        <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
                                             <i className="fas fa-gears"></i>
                                         </div>
                                         <div>
@@ -468,7 +468,7 @@ const ConfiguracionPagina = () => {
                                             </p>
                             <button 
                                 onClick={handleExportData}
-                                className="w-full mt-2 py-2 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-[10px] font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
+                                className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
                             >
                                 <i className="fas fa-download mr-2"></i> Exportar a JSON
                             </button>
@@ -484,7 +484,7 @@ const ConfiguracionPagina = () => {
                                     <button 
                                         onClick={() => setShowDangerModal(true)}
                                         disabled={desLoading}
-                                        className="w-full mt-2 py-2 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0 disabled:opacity-50"
+                                        className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0 disabled:opacity-50"
                                     >
                                         {desLoading ? 'Desactivando...' : 'Desactivar Cuenta'}
                                     </button>
@@ -508,7 +508,7 @@ const ConfiguracionPagina = () => {
                             <i className="fas fa-times"></i>
                         </button>
 
-                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-[#a41e22] text-2xl mb-4 shadow-sm">
+                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-red-50 text-[#A3E635] text-2xl mb-4 shadow-sm">
                             <i className="fas fa-qrcode"></i>
                         </div>
                         <h3 className="text-lg font-black text-slate-850 mb-2">Configurar Doble Factor</h3>
@@ -533,7 +533,7 @@ const ConfiguracionPagina = () => {
                                     onChange={(e) => setVerificationCode(e.target.value.replace(/\D/g, ''))}
                                     placeholder="0 0 0 0 0 0"
                                     required
-                                    className="w-full text-center text-lg font-black tracking-[0.4em] px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#a41e22]/40 outline-none font-bold placeholder:text-slate-400/50"
+                                    className="w-full text-center text-lg font-black tracking-[0.4em] px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                 />
                             </div>
                             {codeError && (
@@ -541,7 +541,7 @@ const ConfiguracionPagina = () => {
                             )}
                             <button 
                                 type="submit"
-                                className="w-full py-3 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                             >
                                 Activar 2FA
                             </button>
@@ -573,7 +573,7 @@ const ConfiguracionPagina = () => {
                                         setShowSuccessModal(true);
                                     }
                                 }}
-                                className="w-full py-3 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                             >
                                 Confirmar Desactivación
                             </button>
@@ -601,7 +601,7 @@ const ConfiguracionPagina = () => {
                         </p>
                         <button 
                             onClick={() => setShowSuccessModal(false)}
-                            className="w-full py-3 rounded-xl bg-[#a41e22] hover:bg-red-800 text-white text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                            className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
                         >
                             Aceptar
                         </button>

@@ -93,7 +93,7 @@ const GestorConsentimiento = () => {
                                     </div>
 
                                     <div className="mt-auto pt-4 border-t border-dashed border-orange-100 grid grid-cols-2 gap-2.5">
-                                        <button onClick={guardar} className="inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#A3E635] hover:bg-[#84CC16] text-white font-black text-[9px] uppercase tracking-[0.15em] shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
+                                        <button onClick={guardar} className="inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] font-black text-[9px] uppercase tracking-[0.15em] shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
                                             <i className="fas fa-check text-xs"></i> Guardar
                                         </button>
                                         <button onClick={() => setEstados({ esenciales: true, funcionales: false, analiticas: false, publicidad: false })} className="inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#0A0A0A] hover:bg-[#171717] text-white font-black text-[9px] uppercase tracking-[0.15em] shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">

@@ -38,7 +38,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                         <div className="grid grid-cols-1 md:grid-cols-2 overflow-hidden">
                             
                             {/* Left Column: Red Brand Panel */}
-                            <div className="relative hidden md:flex flex-col justify-center p-8 overflow-hidden bg-[#a41e22]">
+                            <div className="relative hidden md:flex flex-col justify-center p-8 overflow-hidden bg-[#0A0A0A]">
                                 <div className="absolute inset-0 z-0 pointer-events-none">
                                     <div className="absolute top-0 right-0 w-[450px] h-[450px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                                     <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-black/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
@@ -57,24 +57,24 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                     </div>
 
                                     <h2 className="text-3xl font-black text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
-                                        Muestra en <span className="text-[#c5a059]">Video</span>
+                                        Muestra en <span className="text-[#A3E635]">Video</span>
                                     </h2>
                                     
                                     <p className="text-sm text-white/80 font-medium max-w-sm leading-relaxed mb-5">
                                         {video.desc || "Descubrí nuestras demostraciones de simuladores, programación y soluciones de software explicadas de forma dinámica y visual."}
                                     </p>
 
-                                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#111827] border border-[#c5a059]/30 text-[#c5a059] text-xs font-black uppercase tracking-widest mb-5 shadow-lg">
-                                        <span className="w-2 h-2 rounded-full bg-[#c5a059] animate-ping"></span> Contenido Exclusivo
+                                    <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-[#111827] border border-[#A3E635]/30 text-[#A3E635] text-xs font-black uppercase tracking-widest mb-5 shadow-lg">
+                                        <span className="w-2 h-2 rounded-full bg-[#A3E635] animate-ping"></span> Contenido Exclusivo
                                     </div>
 
                                     <div className="grid grid-cols-2 gap-2.5 w-full max-w-sm mb-5">
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Simuladores</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Simuladores</p>
                                             <p className="text-sm font-bold text-white">Servicios y Soluciones</p>
                                         </div>
-                                        <div className="rounded-xl border border-[#c5a059]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#c5a059]">Software</p>
+                                        <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
+                                            <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Software</p>
                                             <p className="text-sm font-bold text-white">Web a Medida</p>
                                         </div>
                                     </div>
@@ -93,10 +93,10 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                                                     href={item.link}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
-                                                    className="group cursor-pointer flex itemás-center justify-center gap-2 rounded-lg border border-[#c5a059]/20 bg-[#111827]/30 px-2.5 py-2.5 hover:bg-[#c5a059] transition-all duration-300 hover:border-[#c5a059] hover:shadow-lg hover:-translate-y-0.5"
+                                                    className="group cursor-pointer flex itemás-center justify-center gap-2 rounded-lg border border-[#A3E635]/20 bg-[#111827]/30 px-2.5 py-2.5 hover:bg-[#A3E635] transition-all duration-300 hover:border-[#A3E635] hover:shadow-lg hover:-translate-y-0.5"
                                                 >
                                                     <div className="w-6 h-6 rounded bg-white/10 flex itemás-center justify-center transition-colors group-hover:bg-[#111827]">
-                                                        <i className={`fab ${item.icon} text-white group-hover:text-[#c5a059] text-xs transition-colors`}></i>
+                                                        <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
                                                     </div>
                                                     <span className="font-bold text-white text-xs group-hover:text-[#111827] transition-colors">{item.label}</span>
                                                 </a>
@@ -109,8 +109,8 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
                             {/* Right Column: Video Player Panel */}
                             <div className="relative flex flex-col itemás-center justify-center bg-[#FFF6F6] p-8 min-h-[480px] sm:min-h-[540px]">
                                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                                    <div className="absolute -top-10 -right-10 w-56 h-56 bg-[#a41e22]/10 rounded-full blur-2xl"></div>
-                                    <div className="absolute bottom-0 right-10 w-48 h-48 bg-[#a41e22]/10 rounded-full blur-2xl"></div>
+                                    <div className="absolute -top-10 -right-10 w-56 h-56 bg-[#A3E635]/10 rounded-full blur-2xl"></div>
+                                    <div className="absolute bottom-0 right-10 w-48 h-48 bg-[#A3E635]/10 rounded-full blur-2xl"></div>
                                     <CircleParticles colorScheme="light" />
                                 </div>
 
@@ -129,7 +129,7 @@ const VideoPlayerModal = ({ isOpen, onClose, video }) => {
 
                                 {/* Video Title */}
                                 <p className="relative z-10 mt-4 text-xs font-black uppercase tracking-widestá text-gray-500">
-                                    {video.title} <span className="text-[#a41e22]">- HAGAMOSTECH</span>
+                                    {video.title} <span className="text-[#A3E635]">- HAGAMOSTECH</span>
                                 </p>
                             </div>
 

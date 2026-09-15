@@ -140,7 +140,7 @@ const TrustedClients = () => {
                       
                       <button
                         onClick={() => window.openModal?.('contactModal')}
-                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-white hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
                         <span>Ver detalles</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
@@ -207,7 +207,7 @@ const TrustedClients = () => {
                       
                       <button
                         onClick={() => window.openModal?.('contactModal')}
-                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-white hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
+                        className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
                         <span>Ver detalles</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>

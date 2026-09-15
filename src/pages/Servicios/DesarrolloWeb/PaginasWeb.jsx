@@ -153,7 +153,7 @@ const PaginasWeb = () => {
                   href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-white rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
+                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
                 >
                   <i className="fas fa-file-contract text-[14px]"></i>
                   <span className="whitespace-nowrap">Cotizar Servicio</span>
@@ -164,7 +164,7 @@ const PaginasWeb = () => {
                   href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20el%20desarrollo%20de%20una%20página%20web"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#b08e4a] text-white hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
+                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#A3E635] text-[#0A0A0A] hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
                 >
                   <i className="fas fa-paper-plane text-[14px]"></i>
                   <span className="whitespace-nowrap">Contactar Asesor</span>
@@ -183,7 +183,7 @@ const PaginasWeb = () => {
                 <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
               </div>
 
-              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#7f1d1d] text-white border border-[#84CC16]/40 shadow-md">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
                 <i className="fas fa-tag text-[#84CC16]"></i>
                 <span className="text-[9px] font-black uppercase tracking-wider">Pago único o por fases + Mantenimiento mensual</span>
               </div>
@@ -287,9 +287,9 @@ const PaginasWeb = () => {
                   <div key={idx} className="flex flex-col items-center text-center group">
                     {/* Bubble containing step number and icon */}
                     <div className="relative mb-6">
-                      <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#1a0808] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex items-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
+                      <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#0A0A0A] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex items-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
                         <i className={'fa-solid ' + stepIcons[idx]}></i>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#A3E635] text-white flex items-center justify-center text-[11px] font-black border-4 border-white dark:border-[#0a0a0a]">
+                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] font-black border-4 border-white dark:border-[#0a0a0a]">
                           0{(idx + 1)}
                         </div>
                       </div>
@@ -360,7 +360,7 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
 
                 <div className="absolute top-1/2 -right-4 translate-y-[-50%] flex flex-col gap-3 z-20">
                   <div className="w-12 h-12 bg-neutral-900/50 dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800 rounded-2xl flex items-center justify-center text-[#A3E635] shadow-lg"><Code size={18} /></div>
-                  <div className="w-12 h-12 bg-[#A3E635] rounded-2xl flex items-center justify-center text-white shadow-lg"><Award size={18} className="text-[#84CC16]" /></div>
+                  <div className="w-12 h-12 bg-[#A3E635] rounded-2xl flex items-center justify-center text-[#0A0A0A] shadow-lg"><Award size={18} className="text-[#84CC16]" /></div>
                 </div>
               </div>
             </div>

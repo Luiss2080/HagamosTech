@@ -39,7 +39,7 @@ const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => 
 
             if (colorScheme === 'light') {
                 // For white or light backgrounds
-                color = i % 3 === 0 ? '#FF4D00' : i % 3 === 1 ? '#5D3A1F' : '#111827';
+                color = i % 3 === 0 ? '#FF4D00' : i % 3 === 1 ? '#0A0A0A' : '#111827';
             } else if (colorScheme === 'dark' || colorScheme === 'red') {
                 // For dark or red backgrounds
                 color = i % 3 === 0 ? '#111827' : i % 3 === 1 ? '#FF4D00' : '#ffffff';
@@ -52,7 +52,7 @@ const CircleParticles = React.memo(({ count = 22, colorScheme = 'default' }) => 
                 }
             } else {
                 // Default mixed scheme
-                color = i % 3 === 0 ? '#FF4D00' : i % 3 === 1 ? '#5D3A1F' : '#ffffff';
+                color = i % 3 === 0 ? '#FF4D00' : i % 3 === 1 ? '#0A0A0A' : '#ffffff';
                 if (i % 3 === 2) {
                     boxShadow = '0 0 15px rgba(255,255,255,0.3)';
                 }

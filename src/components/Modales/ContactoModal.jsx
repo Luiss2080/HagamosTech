@@ -156,7 +156,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         href={item.link}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
-                                                        className="group cursor-pointer flex items-center justify-center gap-2 rounded-lg border border-[#c5a059]/20 bg-[#111827]/30 px-2 py-2.5 hover:bg-[#A3E635] transition-all duration-300 hover:border-[#A3E635] hover:shadow-xl hover:-translate-y-1"
+                                                        className="group cursor-pointer flex items-center justify-center gap-2 rounded-lg border border-[#A3E635]/20 bg-[#111827]/30 px-2 py-2.5 hover:bg-[#A3E635] transition-all duration-300 hover:border-[#A3E635] hover:shadow-xl hover:-translate-y-1"
                                                     >
                                                         <div className="w-6 h-6 rounded bg-white/10 flex items-center justify-center transition-colors group-hover:bg-[#111827]">
                                                             <i className={`fab ${item.icon} text-white group-hover:text-[#A3E635] text-xs transition-colors`}></i>
@@ -180,7 +180,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
 
                                     <div className="relative z-10 w-full max-w-[540px] mx-auto">
                                         <div className="mb-5 text-center bg-white p-5 rounded-2xl shadow-sm border border-gray-200 relative overflow-hidden">
-                                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#a41e22] via-[#c5a059] to-[#a41e22]"></div>
+                                            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#A3E635] to-[#A3E635]"></div>
                                             <div className="inline-flex items-center gap-2 mb-1.5">
                                                 <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#84CC16] flex items-center justify-center">
                                                     <i className="fas fa-envelope-open-text text-sm"></i>
@@ -205,7 +205,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Línea</p>
                                                 <p className="text-[13px] font-extrabold text-[#111827]">Software</p>
                                             </div>
-                                            <div className="rounded-xl bg-white border border-[#c5a059]/40 px-3 py-2.5 text-center shadow-sm">
+                                            <div className="rounded-xl bg-white border border-[#A3E635]/40 px-3 py-2.5 text-center shadow-sm">
                                                 <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-gray-100 border border-gray-300 text-gray-650 flex items-center justify-center">
                                                     <i className="fas fa-signal text-[11px]"></i>
                                                 </div>
@@ -230,7 +230,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                             name="name"
                                                             value={formData.name}
                                                             onChange={handleChange}
-                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                             placeholder="¿Nombre completo"
                                                             required
                                                         />
@@ -244,7 +244,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                             name="phone"
                                                             value={formData.phone}
                                                             onChange={handleChange}
-                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                            className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                             placeholder="Celular"
                                                             required
                                                         />
@@ -261,7 +261,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         name="email"
                                                         value={formData.email}
                                                         onChange={handleChange}
-                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
+                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                         placeholder="Email"
                                                         required
                                                     />
@@ -275,7 +275,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         rows="4"
                                                         value={formData.message}
                                                         onChange={handleChange}
-                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#c5a059] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md resize-none"
+                                                        className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md resize-none"
                                                         placeholder="Mensaje"
                                                         required
                                                     ></textarea>
@@ -287,7 +287,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <button
                                                 type="submit"
                                                 disabled={isSubmitting}
-                                                className="mt-1 w-full py-4 bg-[#A3E635] text-[#111827] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#c5a059]/20 hover:shadow-gray-900/40 hover:-translate-y-0.5 hover:bg-[#a88544] hover:text-white transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
+                                                className="mt-1 w-full py-4 bg-[#A3E635] text-[#111827] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-gray-900/40 hover:-translate-y-0.5 hover:bg-[#a88544] hover:text-[#0A0A0A] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed"
                                             >
                                                 <span className="relative z-10">{isSubmitting ? 'Enviando...' : 'Enviar Mensaje'}</span>
                                                 <div className="w-6 h-6 bg-white/30 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10">

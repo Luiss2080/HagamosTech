@@ -227,7 +227,7 @@ const InstitucionesCarrusel = () => {
 
                 <button 
                     onClick={() => setSelectedInst(inst)}
-                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
+                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-[#0A0A0A] font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
                 >
                     VER DETALLES
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>

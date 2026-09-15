@@ -25,7 +25,7 @@ const CATEGORIAS = [
         titulo: 'Datos de Pago',
         ejemplo: 'Información de facturación y métodos de pago utilizados.',
         detalles: 'Los pagos se procesan a través de plataformas seguras. No almacenamos números de tarjetas en nuestros servidores.',
-        items: ['Historial de compras', 'Método de pago utilizado', 'NIT para facturación'],
+        items: ['Historial de servicios', 'Método de pago utilizado', 'NIT para facturación'],
         color: 'from-[#84CC16] to-[#A3E635]',
         badge: 'bg-[#84CC16]'
     },
