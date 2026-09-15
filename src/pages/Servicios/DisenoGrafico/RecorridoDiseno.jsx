@@ -56,13 +56,13 @@ const ProjectCarousel = ({ images }) => {
       {/* Controls: Styled as White Buttons */}
       <button
         onClick={handlePrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-[#0A0A0A] dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] z-20 cursor-pointer"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronLeft size={16} />
       </button>
       <button
         onClick={handleNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-[#0A0A0A] dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] z-20 cursor-pointer"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-[#0A0A0A]/95 dark:bg-[#0a0a0a]/95 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex itemás-center justify-center text-white dark:text-white transition-all opacity-0 group-hover:opacity-100 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-white z-20 cursor-pointer"
       >
         <ChevronRight size={16} />
       </button>

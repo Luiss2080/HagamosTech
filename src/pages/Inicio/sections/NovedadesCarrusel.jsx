@@ -380,14 +380,14 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
               <>
                 <button
                   onClick={handlePrev}
-                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-[#0A0A0A] transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
+                  className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-white hover:border-transparent opacity-100"
                   aria-label="Anterior"
                 >
                   <i className="fa-solid fa-chevron-left text-xs"></i>
                 </button>
                 <button
                   onClick={handleNext}
-                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-[#0A0A0A] transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:border-transparent opacity-100"
+                  className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-black/80 border border-white/10 flex items-center justify-center text-white transition-all z-20 cursor-pointer hover:scale-105 hover:bg-[#A3E635] hover:text-white hover:border-transparent opacity-100"
                   aria-label="Siguiente"
                 >
                   <i className="fa-solid fa-chevron-right text-xs"></i>

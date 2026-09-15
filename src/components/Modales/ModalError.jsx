@@ -174,7 +174,7 @@ const ModalError = ({
                                         <button
                                             type="button"
                                             onClick={onClose}
-                                            className="w-full py-3 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden"
+                                            className="w-full py-3 px-6 bg-[#A3E635] text-[#0A0A0A] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden"
                                         >
                                             <span className="relative z-10">{buttonText}</span>
                                             <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-arrow-right text-black text-xs"></i></div>

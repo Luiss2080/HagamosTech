@@ -352,7 +352,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                                 type="button"
                                                 onClick={handleReenviarCorreo}
                                                 disabled={reenviando || segundosReenvio > 0}
-                                                className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 cursor-pointer disabled:opacity-50"
+                                                className="w-full mt-2 py-2.5 px-6 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 cursor-pointer disabled:opacity-50"
                                             >
                                                 <i className="fas fa-paper-plane mr-1.5"></i>
                                                 {reenviando ? 'Enviando...' : segundosReenvio > 0 ? `Reenviar código (${segundosReenvio}s)` : 'Reenviar código'}
@@ -432,7 +432,7 @@ const RegistroModal = ({ isOpen, onClose }) => {
                                         </div>
 
                                         <div className="rounded-2xl border border-gray-200 bg-white p-3.5 shadow-sm">
-                                            <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#111827] text-black font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-black/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-black transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
+                                            <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-[#0A0A0A] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
                                                 <span className="relative z-10">{isSubmitting ? 'Creando cuenta...' : 'Crear cuenta ahora'}</span>
                                                 <div className="w-6 h-6 bg-white/10 rounded-full flex items-center justify-center group-hover:translate-x-1 transition-all duration-300 relative z-10"><i className="fas fa-user-plus text-black text-xs"></i></div>
                                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>

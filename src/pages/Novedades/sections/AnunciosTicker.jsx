@@ -55,7 +55,7 @@ const AnunciosTicker = ({ compact = false }) => {
                         {anuncio.desc}
                     </p>
                 </div>
-                <button className="w-full bg-[#A3E635] hover:bg-[#0A0A0A] text-[#0A0A0A] font-bold text-[9px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                <button className="w-full bg-[#A3E635] hover:bg-[#0A0A0A] hover:text-white text-[#0A0A0A] font-bold text-[9px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm">
                     SABER MÁS
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
                 </button>
