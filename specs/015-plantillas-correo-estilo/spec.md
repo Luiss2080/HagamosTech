@@ -11,6 +11,7 @@ cambiar el contenido.
 - RF-2: EL SISTEMA eliminará de las plantillas el naranja (`#FF4D00`), el marrón (`#8B3A13`, `#5D3A1F`) y la crema (`#FFF5EC`).
 - RF-3: LOS botones/enlaces de acción tendrán fondo lima y texto oscuro; el texto sobre fondos oscuros será claro.
 - RF-4: EL SISTEMA mantendrá el contenido en español y sin términos fuera del catálogo.
+- RF-5: EL SISTEMA usará **fondo exterior blanco**, conservando la tarjeta y el contenido con sus colores de marca.
 
 ## Criterios de finalización
 - Tests de `server/test/mailer.test.js` que verifican la paleta de marca y la ausencia de colores viejos.

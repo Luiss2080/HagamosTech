@@ -19,5 +19,6 @@ Fecha: 2026-09-14
 | `npm run test:e2e` | **5/5** ✅ |
 
 ## Evidencia visual
-Render de `plantillaVerificacion` (código 482915): tarjeta oscura `#111827`, acentos y código en
-lima, texto claro, barra superior y botón "Mi Cuenta" en lima con texto oscuro.
+Render de `plantillaVerificacion` (código 482915): **fondo exterior blanco**, tarjeta oscura
+`#111827`, acentos y código en lima, texto claro, barra superior y botón "Mi Cuenta" en lima con
+texto oscuro.
