@@ -1,7 +1,7 @@
 import { useState, useCallback } from 'react';
 import { URL_WHATSAPP, config_CHAT } from '../data/configuracion.js';
 import { categories } from '../data/categorias.jsx';
-import { analizarMensajeUsuario } from '../data/procesamientoLenguaje.js';
+import { analizarMensajeUsuario, esRespuestaDesconocida } from '../data/procesamientoLenguaje.js';
 
 const obtenerHoraActual = () => new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
 
@@ -86,7 +86,7 @@ export const useChatAssistant = () => {
     const botReply = analizarMensajeUsuario(userText);
     addMessage(crearMensaje('bot', botReply));
 
-    if (botReply.includes('no capté')) {
+    if (esRespuestaDesconocida(botReply)) {
       setTimeout(async () => {
         await simularEscribiendo(config_CHAT.timing.typingSimulation);
         addMessage(crearMensaje('bot', config_CHAT.followUpMessages.afterUnknown, { isMenuPrompt: true }));
