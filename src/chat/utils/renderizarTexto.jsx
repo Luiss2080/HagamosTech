@@ -1,31 +1,61 @@
 import React from 'react';
 
-export const textRenderer = (text) => {
-  const parts = [];
-  const regex = /(\[.*?\]\(.*?\)|\*\*(.*?)\*\*)/g;
-  let lastIndex = 0;
-  let match;
+// Renderiza texto con **negritas**, [enlaces](url) y saltos de línea.
+// Las negritas/enlaces heredan el color de la burbuja (oscuro o lima) para
+// que siempre sean legibles.
+const renderizarLinea = (texto, baseKey) => {
+  const partes = [];
+  const regex = /(\[([^\]]+)\]\(([^)]+)\)|\*\*([^*]+)\*\*)/g;
+  let ultimo = 0;
+  let coincidencia;
+  let i = 0;
 
-  while ((match = regex.exec(text)) !== null) {
-    if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index));
+  while ((coincidencia = regex.exec(texto)) !== null) {
+    if (coincidencia.index > ultimo) {
+      partes.push(texto.substring(ultimo, coincidencia.index));
     }
-    if (match[0].startsWith('[')) {
-      const linkMatch = match[0].match(/\[(.*?)\]\((.*?)\)/);
-      parts.push(
-        <a key={match.index} href={linkMatch[2]} target="_blank" rel="noopener noreferrer" className="font-bold underline text-white bg-[#25d366] hover:bg-[#128c7e] px-3 py-1.5 rounded-lg inline-block mt-2 shadow-sm transition-colors">
-          {linkMatch[1]}
+
+    if (coincidencia[2] && coincidencia[3]) {
+      partes.push(
+        <a
+          key={`${baseKey}-a-${i++}`}
+          href={coincidencia[3]}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold underline hover:opacity-80 transition-opacity"
+        >
+          {coincidencia[2]}
         </a>
       );
     } else {
-      parts.push(<strong key={match.index} className="font-extrabold text-slate-900">{match[2]}</strong>);
+      partes.push(
+        <strong key={`${baseKey}-b-${i++}`} className="font-extrabold">
+          {coincidencia[4]}
+        </strong>
+      );
     }
-    lastIndex = regex.lastIndex;
+    ultimo = regex.lastIndex;
   }
 
-  if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
+  if (ultimo < texto.length) {
+    partes.push(texto.substring(ultimo));
   }
 
-  return parts;
+  return partes;
 };
+
+export const textRenderer = (text) => {
+  if (text === null || text === undefined || text === '') return null;
+
+  const lineas = String(text).split('\n');
+  const nodos = [];
+
+  lineas.forEach((linea, indice) => {
+    if (indice > 0) nodos.push(<br key={`br-${indice}`} />);
+    if (linea.trim() !== '') nodos.push(...renderizarLinea(linea, indice));
+  });
+
+  return nodos;
+};
+
+export default textRenderer;
