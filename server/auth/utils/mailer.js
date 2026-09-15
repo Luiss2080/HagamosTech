@@ -70,8 +70,8 @@ function plantillaBase({ titulo, subtitulo, contenido, anio = new Date().getFull
   body, table, td, p, h1, h2, span, a { font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important; }
 </style>
 </head>
-<body style="margin:0;padding:0;background-color:${BG};">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:${BG};padding:20px 10px;">
+<body style="margin:0;padding:0;background-color:#FFFFFF;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background-color:#FFFFFF;padding:20px 10px;">
 <tr>
 <td align="center">
 
