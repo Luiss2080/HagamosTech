@@ -137,14 +137,14 @@ const ModalError = ({
                                                 <i className="fas fa-box-open text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-[#111827]">Catalogo</p>
+                                            <p className="text-[13px] font-extrabold text-[#111827]">Web</p>
                                         </div>
                                         <div className="rounded-xl bg-white border border-[#A3E635]/30/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-red-500 flex items-center justify-center">
                                                 <i className="fas fa-receipt text-[11px]"></i>
                                             </div>
                                             <p className="text-[10px] font-black uppercase tracking-widest text-gray-400">Modulo</p>
-                                            <p className="text-[13px] font-extrabold text-[#111827]">Pedidos</p>
+                                            <p className="text-[13px] font-extrabold text-[#111827]">Sistemas</p>
                                         </div>
                                         <div className="rounded-xl bg-white border border-[#A3E635]/30/60 px-3 py-2.5 text-center shadow-sm">
                                             <div className="w-7 h-7 mx-auto mb-1 rounded-lg bg-[#A3E635]/10 border border-[#A3E635]/30 text-red-500 flex items-center justify-center">
