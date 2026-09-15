@@ -59,14 +59,10 @@ const FormularioContacto = () => {
                             </div>
 
                             <div className="relative z-10 flex flex-col items-center text-center">
-                                <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/10 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
-                                    <img
-                                        src="/img/02_Logos/LogoModal.png"
-                                        alt="HAGAMOSTECH"
-                                        loading="lazy"
-                                        decoding="async"
-                                        className="h-40 w-40 rounded-full object-contain bg-white transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]"
-                                    />
+                                <div className="mb-5 inline-flex items-center justify-center rounded-full bg-white/20 p-2.5 shadow-2xl ring-[0.5px] ring-white backdrop-blur-md">
+                                    <div className="h-40 w-40 rounded-full bg-white flex items-center justify-center shadow-lg transition-transform duration-500 hover:scale-105 hover:-translate-y-2 hover:rotate-[5deg]">
+                                        <i className="fas fa-user-lock text-[#050505]" style={{ fontSize: '70px' }}></i>
+                                    </div>
                                 </div>
 
                                 <h2 className="text-3xl font-black font-heading text-white leading-tight mb-2 tracking-tight drop-shadow-lg">
