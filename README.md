@@ -169,9 +169,9 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 <details>
 <summary>Avisos importantes para quien despliegue</summary>
 
-- `server/.env.production` **está versionado** en el repositorio y contiene nombres de variables con valores de
-  ejemplo/producción (incluido un usuario SMTP). Deben tratarse como expuestos: rotar credenciales y dejar de
-  versionar ese archivo.
+- `server/.env.production` estuvo versionado (con un usuario SMTP y entradas de base de datos y JWT). Ya no se
+  versiona (se ignora y hay una plantilla sin valores en `server/.env.example`), pero sigue en el historial de git:
+  trata esos valores como expuestos y rota las credenciales (`DATABASE_URL`, `JWT_SECRET`, `SMTP_USER`, `SMTP_PASS`).
 - `JWT_SECRET` es obligatorio en producción (`NODE_ENV=production`): sin él el backend no arranca. Solo en desarrollo/tests se usa un valor de prueba. El token legado `token-user-<id>-<ts>` ya no se acepta.
 - No hay límite de peticiones (rate limit) ni bloqueo por intentos fallidos, aunque el esquema tiene columnas para ello.
 
