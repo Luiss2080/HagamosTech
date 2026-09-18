@@ -1,240 +1,199 @@
-de datos canónico en [`src/data/serviciosData.js`](src/data/serviciosData.js).
-# HagamosTech
-
 <div align="center">
-
-![HagamosTech](public/img/01_Layout/logo.png)
-
-Plataforma web de soluciones digitales, tecnología y crecimiento para estudiantes,
-emprendedores, profesionales y negocios.
-
-[Documentación](docs/constitution.md) · [Catálogo de servicios](docs/catalogo-servicios.md) · [Especificaciones](specs/) · [Guía de agentes](AGENTS.md)
-
+  <img src="docs/assets/logo.svg" width="96" alt="Logo de HagamosTech" />
+  <h1>HagamosTech</h1>
+  <p><b>Sitio web y API de una agencia de soluciones digitales: catálogo de servicios, contacto, cuentas con 2FA y un asistente de chat.</b></p>
+  <img src="https://img.shields.io/badge/estado-MVP%20en%20desarrollo-f59e0b?style=for-the-badge" alt="Estado: MVP en desarrollo" />
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8" />
+  <img src="https://img.shields.io/badge/Express-5-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express 5" />
+  <img src="https://img.shields.io/badge/Prisma-6%20%2B%20MySQL-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 6 y MySQL" />
+  <img src="https://img.shields.io/badge/tests-52%20pasan-22c55e?style=for-the-badge" alt="52 tests pasan" />
+  <img src="https://img.shields.io/badge/licencia-MIT-yellow?style=for-the-badge" alt="Licencia MIT" />
+  <br/>
+  <a href="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml"><img src="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <p>
+    <a href="#-inicio-rápido">Inicio rápido</a> ·
+    <a href="#-características">Características</a> ·
+    <a href="#-arquitectura">Arquitectura</a> ·
+    <a href="#-pruebas">Pruebas</a> ·
+    <a href="#-lo-que-todavía-no-existe">Limitaciones</a>
+  </p>
 </div>
 
-## ¿Qué es HagamosTech?
+**HagamosTech** es la web de una agencia de soluciones tecnológicas (estudiantes, emprendedores, empleo, diseño, web,
+software, IA y trabajos a medida). Incluye un frontend React con el catálogo de servicios, un backend Express/Prisma
+para cuentas y mensajes de contacto, y un asistente de chat local. **No es una tienda online**: no hay carrito ni
+pagos (esos endpoints responden `410 Gone`), y el catálogo es informativo; la contratación se canaliza por contacto.
 
-HagamosTech es una agencia digital orientada a convertir ideas, retos y necesidades en
-soluciones útiles, visualmente bien construidas y técnicamente sostenibles. La plataforma
-presenta servicios en áreas como:
+## 🎬 Vista rápida
 
-- Estudiantes y sector académico
-- Emprendedores y nuevos negocios
-- Empleo y desarrollo profesional
-- Diseño gráfico integral
-- Desarrollo web y e-commerce
-- Software, sistemas y hardware
-- Automatización e IA
-- Soluciones personalizadas
+Capturas reales del frontend en modo desarrollo (Chrome headless, 1280x800).
 
-La oferta oficial y canónica está definida en el catálogo de servicios del proyecto y se
-mantiene sincronizada con los datos del frontend para evitar inconsistencias.
+<div align="center">
+  <img src="docs/screenshots/inicio.png" width="640" alt="Página de inicio de HagamosTech con el titular ¿Idea, problema o necesidad? Hagámoslo" />
+  <img src="docs/screenshots/contacto.png" width="640" alt="Página de contacto con las opciones Consultas, Proyectos, Soporte y Contacto" />
+</div>
 
-## ✅ Objetivo del proyecto
+## ✨ Características
 
-Crear una experiencia web clara, moderna y confiable que permita:
+| Característica | Detalle |
+|---|---|
+| Catálogo de servicios | 8 categorías y 35 servicios definidos en `src/data/serviciosData.js` (estudiantes 6, emprendedores 6, empleo 6, diseño 5, web 5, software 3, IA 3, a medida 1). Es la fuente única de datos del frontend. |
+| Páginas | Inicio, Qué hacemos, Servicios (8 páginas), Cómo trabajamos, Sobre nosotros, Promociones, Novedades, Contacto, páginas legales, errores 401/403/404/419/500. Rutas con `HashRouter` y carga diferida. |
+| Contacto | `POST /api/contacto` guarda el mensaje en MySQL y notifica por correo (SMTP con nodemailer) sin bloquear la respuesta. |
+| Cuentas | Registro con código de verificación por correo, login, recuperación y restablecimiento de contraseña. Contraseñas con `scrypt`. Token firmado HMAC-SHA256 de 7 días (implementación propia, sin librería JWT). |
+| 2FA | TOTP (RFC 6238, compatible con Google Authenticator) implementado en `server/auth/utils/totp.js`. |
+| Perfil | Ver/editar perfil, cambiar contraseña, exportar datos, desactivar cuenta. |
+| Asistente "Niko" | Chat flotante con procesamiento de lenguaje local (`src/chat`); no llama a ninguna API externa. |
+| WhatsApp | Utilidad `src/utils/whatsapp.js` y botón flotante. |
 
-- presentar la oferta de servicios de forma estructurada,
-- comunicar la propuesta de valor de la agencia,
-- activar flujos de contacto y autenticación,
-- soportar operaciones del backend con validación real,
-- mantener una base técnica ordenada y verificable con tests.
+## 🏗️ Arquitectura
 
-## 🧩 Stack tecnológico
-
-### Frontend
-
-- React 19
-- Vite 8
-- Tailwind CSS 4
-- Zustand
-- Framer Motion
-
-### Backend
-
-- Node.js + Express 5
-- Prisma ORM
-- MySQL
-- JWT / autenticación del proyecto
-
-### Calidad y validación
-
-- Vitest
-- Testing Library
-- Supertest
-- Playwright
-
-## 🏗️ Arquitectura del proyecto
-
-```text
-HagamosTech/
-├── src/                     # Frontend React + Vite
-│   ├── app/                 # enrutamiento y estructura principal
-│   ├── components/          # UI, layout, modales, elementos reutilizables
-│   ├── data/                # datos canónicos del negocio
-│   ├── hooks/               # hooks reutilizables
-│   ├── pages/               # vistas de la aplicación
-│   ├── servicios/           # cliente HTTP y servicios API
-│   ├── store/               # estado global con Zustand
-│   ├── styles/              # estilos globales
-│   └── utils/               # helpers y utilidades
-├── server/                  # API backend
-│   ├── auth/                # autenticación y seguridad
-│   ├── models/              # acceso a datos y Prisma
-│   ├── prisma/              # schema + seed + migraciones
-│   ├── store/               # endpoints y controladores de negocio
-│   └── test/                # pruebas del backend
-├── docs/                    # constitución, catálogo, diagnóstico, testing
-├── specs/                   # especificaciones del proyecto (plan/spec/tasks/validation)
-├── e2e/                     # pruebas end-to-end
-├── public/                  # assets estáticos e imágenes
-├── package.json             # scripts del frontend
-├── server/package.json      # scripts del backend
-├── vite.config.js           # configuración Vite
-├── vitest.config.js         # configuración de pruebas frontend
-├── playwright.config.js     # configuración de pruebas E2E
-├── eslint.config.js         # reglas de lint
-├── AGENTS.md                # guía de trabajo para agentes
-├── docs/constitution.md     # principios del proyecto
-├── docs/catalogo-servicios.md
-├── docs/diagnostico.md
-├── docs/testing.md
-└── README.md
+```mermaid
+flowchart LR
+    U["Navegador"] --> F["Frontend React 19 + Vite (puerto 4000)"]
+    F -->|"proxy /api"| B["API Express 5 (puerto 4321)"]
+    F --> S["Zustand: sesión y modales"]
+    F --> C["Chat Niko (local)"]
+    B --> A["auth: controlador, token, scrypt, TOTP"]
+    B --> K["store: contacto"]
+    A --> P["Prisma 6"]
+    K --> P
+    P --> D[("MySQL")]
+    A --> M["nodemailer (SMTP)"]
+    K --> M
 ```
+
+```mermaid
+erDiagram
+    ROL ||--o{ USUARIO : "tiene"
+    ROL ||--o{ DETALLE_ROL_PERMISOS : "asigna"
+    PERMISO ||--o{ DETALLE_ROL_PERMISOS : "incluye"
+    USUARIO ||--o| SUSCRIPCION : "posee"
+    USUARIO ||--o{ VERIFICACION_CORREO : "genera"
+    USUARIO ||--o{ RECUPERACION_PASSWORD : "solicita"
+    MENSAJE
+    REGISTRO_PENDIENTE
+```
+
+<details>
+<summary>Estructura de carpetas</summary>
+
+```
+HagamosTech/
+├── src/
+│   ├── app/            # App.jsx (rutas), main.jsx, seo.js
+│   ├── pages/          # Inicio, Servicios, Contacto, Perfil, legales, errores...
+│   ├── components/     # Layout, Modales, Widgets, ui, fondos...
+│   ├── chat/           # Asistente Niko (NLP local)
+│   ├── data/           # serviciosData.js
+│   ├── servicios/      # clienteApi.js, servicioContacto.js
+│   └── store/          # useAutenticacionStore, useModalStore
+├── server/
+│   ├── server.js       # Express; monta /api/auth, /api/contacto, /api/perfil...
+│   ├── auth/           # controllers, routes, utils (token, password, totp, mailer)
+│   ├── store/routes/   # contactoRoutes.js
+│   ├── prisma/         # schema.prisma (MySQL) y seed.js
+│   └── test/           # tests con Prisma mockeado
+├── e2e/                # Playwright (auth, chat, humo, paginas)
+├── specs/              # Especificaciones SDD por feature
+├── docs/               # constitución, catálogo, diagnóstico, testing
+└── .github/workflows/  # ci.yml
+```
+
+</details>
 
 ## 🚀 Inicio rápido
 
-### Requisitos
+| Requisito | Versión |
+|---|---|
+| Node.js | 18+ (el CI usa 20) |
+| MySQL | 8.x (para el backend con datos reales) |
+| Puertos | 4000 (frontend) y 4321 (API) por defecto |
 
-- Node.js 18+
-- MySQL 8.0+
-- Puerto 4000 libre para el frontend
-- Puerto 4321 libre para el backend
+1. Instala dependencias del frontend y del backend:
+   ```bash
+   npm install
+   cd server && npm install && cd ..
+   ```
+2. Crea `server/.env` con al menos `DATABASE_URL` (MySQL) y `JWT_SECRET`; opcional `PORT`, `FRONTEND_URL` y `SMTP_*` (ver el desplegable de variables).
+3. Crea las tablas y los datos semilla:
+   ```bash
+   cd server && npx prisma db push && npm run db:seed && cd ..
+   ```
+4. Levanta todo (o solo el frontend con `npm run dev`; las pantallas estáticas funcionan sin backend):
+   ```bash
+   npm run dev:all
+   ```
+   Frontend en `http://localhost:4000`. El frontend llama a `/api` mediante el proxy de Vite; si no defines `VITE_API_PROXY_TARGET` el proxy apunta a `http://localhost:3001`, así que define `VITE_API_PROXY_TARGET=http://localhost:4321` (según `docs/testing.md` y `docs/diagnostico.md`).
 
-### 1) Instalar dependencias
+<details>
+<summary>Variables de entorno del backend (nombres, sin valores)</summary>
 
-```bash
-npm install
-cd server && npm install
-```
+`DATABASE_URL`, `PORT`, `NODE_ENV`, `JWT_SECRET`, `FRONTEND_URL`, `SMTP_HOST`, `SMTP_PORT`, `SMTP_SECURE`,
+`SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`. El backend prueba hasta 3 puertos consecutivos si `PORT` está ocupado.
+`npm run build` genera el sitio estático con `base: './'`.
 
-### 2) Configurar entorno
+</details>
 
-Revisa los archivos de entorno y asegúrate de tener la configuración correcta para la base de
-datos y la conexión del backend.
-
-```bash
-# Frontend
-# usa variables de entorno según Vite
-
-# Backend
-cd server
-# crea o ajusta .env según la configuración local del proyecto
-```
-
-### 3) Levantar el proyecto
-
-#### Frontend
-
-```bash
-npm run dev
-```
-
-Abre: http://localhost:4000
-
-#### Backend
-
-```bash
-npm run dev:server
-```
-
-El backend queda disponible en: http://localhost:4321
-
-#### Ejecutar ambos a la vez
-
-```bash
-npm run dev:all
-```
-
-> El frontend consume el backend a través de `/api` usando el proxy de Vite. La referencia de
-> configuración y diagnóstico está en [docs/diagnostico.md](docs/diagnostico.md).
-
-## 🗃️ Base de datos
-
-Sincroniza el esquema de Prisma y carga los datos iniciales:
-
-```bash
-cd server && npx prisma db push
-cd server && npm run db:seed
-```
-
-También puedes abrir Prisma Studio para revisar registros locales:
-
-```bash
-cd server && npx prisma studio
-```
-
-## 📋 Scripts principales
+<details>
+<summary>Scripts principales</summary>
 
 | Comando | Descripción |
 |---|---|
-| `npm run dev` | Inicia el frontend con Vite en puerto 4000 |
-| `npm run dev:server` | Inicia el backend Express |
-| `npm run dev:all` | Ejecuta frontend y backend en paralelo |
-| `npm run build` | Genera el build de producción |
-| `npm run lint` | Verifica estilo y calidad del código |
-| `npm run test` | Ejecuta Vitest en modo watch |
-| `npm run test:run` | Ejecuta pruebas frontend en una sola pasada |
-| `npm run test:coverage` | Genera cobertura de pruebas |
-| `npm run test:e2e` | Ejecuta pruebas E2E con Playwright |
-| `cd server && npm run test:run` | Ejecuta pruebas del backend |
+| `npm run dev` | Frontend con Vite (puerto 4000) |
+| `npm run dev:server` | Backend Express con nodemon |
+| `npm run dev:all` | Ambos en paralelo (`concurrently`) |
+| `npm run build` | Build de producción |
+| `npm run lint` | ESLint |
+| `npm run test:run` | Vitest del frontend (una pasada) |
+| `npm run test:e2e` | Playwright |
+| `cd server && npm run test:run` | Vitest del backend |
 
-## 🧪 Validación y pruebas
+</details>
 
-Se recomienda ejecutar la validación del proyecto antes de considerar una tarea terminada:
+## 🧪 Pruebas
 
-```bash
-npm run lint
-npm run test:run
-```
+Ejecutadas al preparar este README: `npm run lint` (0 errores, 5 avisos de `react-hooks/exhaustive-deps`),
+`npm run test:run` (**28 tests**, 5 archivos) y `cd server && npm run test:run` (**24 tests**, 6 archivos) pasan.
+Cubren catálogo de datos, SEO, NLP del chat, contenido y smoke del frontend; y en backend contacto, mailer, contraseñas,
+tokens y perfil con Prisma mockeado (no prueban MySQL real). Hay 4 specs E2E de Playwright (no ejecutadas aquí) y
+un workflow de CI (`ci.yml`) con jobs de calidad y E2E.
 
-Para pruebas de interfaz y flujo real:
+## 🔒 Seguridad
 
-```bash
-npm run test:e2e
-```
+Implementado: hash `scrypt`, comparación en tiempo constante, tokens con expiración, 2FA TOTP, JSON malformado
+responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes responden 404 y los retirados 410.
 
-Más información en [docs/testing.md](docs/testing.md).
+<details>
+<summary>Avisos importantes para quien despliegue</summary>
 
-## 🧭 Flujo recomendado de trabajo
+- `server/.env.production` **está versionado** en el repositorio y contiene nombres de variables con valores de
+  ejemplo/producción (incluido un usuario SMTP). Deben tratarse como expuestos: rotar credenciales y dejar de
+  versionar ese archivo.
+- Si `JWT_SECRET` no está definido, el backend usa un secreto por defecto escrito en `server/auth/utils/token.js`.
+  Define siempre uno propio.
+- `GET /api/contacto` y `PUT /api/contacto/:id/estado` no comprueban sesión ni rol, aunque el código los comenta como
+  "solo admin": hoy cualquiera puede listar los mensajes de contacto.
+- No hay límite de peticiones (rate limit) ni bloqueo por intentos fallidos, aunque el esquema tiene columnas para ello.
 
-1. Revisar la especificación activa en [specs/](specs/).
-2. Leer la constitución del proyecto en [docs/constitution.md](docs/constitution.md).
-3. Mantener el catálogo de servicios como fuente única de verdad.
-4. Implementar cambios con validación de tests.
-5. Usar el backend y frontend con datos reales, nunca con respuestas genéricas o mockeadas.
+</details>
 
-## 📚 Documentación relevante
+## 🚧 Lo que todavía no existe
 
-- [docs/constitution.md](docs/constitution.md) — principios y reglas del proyecto
-- [docs/catalogo-servicios.md](docs/catalogo-servicios.md) — oferta oficial y servicios
-- [docs/diagnostico.md](docs/diagnostico.md) — diagnóstico técnico y entorno
-- [docs/testing.md](docs/testing.md) — guía de pruebas
-- [specs/](specs/) — especificaciones del producto y tareas
-- [AGENTS.md](AGENTS.md) — instrucciones para agentes y automatizaciones
+- Panel de administración: hay roles y permisos en base de datos, pero ninguna pantalla ni endpoint protegido para gestionar mensajes o usuarios.
+- Compras, carrito y pagos: retirados (`410`); la página `HistorialComprasPagina` y el hook `useComprasPerfil` siguen en el frontend apuntando a `/compras/*`, que ya no existe.
+- Sesiones múltiples: `GET /api/perfil/sessions` devuelve siempre una lista vacía y revocar responde 404.
+- Protección de los endpoints de contacto, límite de peticiones y bloqueo de cuenta (ver Seguridad).
+- El README anterior citaba `public/img/01_Layout/logo.png`, que no existe en el repositorio (imagen rota); corregido aquí.
+- `public/` versiona solo 4 imágenes; no se auditó si otras páginas referencian imágenes que faltan en un clon limpio.
+- El catálogo "Personalizado" tiene un solo servicio y las cifras de marketing de la web (p. ej. "+500 estudiantes") no provienen de datos del sistema.
+- `.playwright-mcp/` (volcados de páginas) está versionado por descuido.
 
-## 👤 Perfil del proyecto
+## 📄 Licencia
 
-HagamosTech combina una presencia comercial clara con una arquitectura técnica ordenada para
-apoyar crecimiento, automatización, calidad y experiencia de usuario. El enfoque está en la
-tecnología útil, el diseño bien pensado y la ejecución con enfoque realista.
+[MIT](LICENSE) — © 2026 Luis Rocha.
 
-## 🔎 Nota importante
-
-La oferta publicada en la web debe respetar el Catálogo Maestro y no reutilizar contenido de
-verticales no vigentes. La documentación y la implementación deben alinearse con la
-especificación activa del proyecto.
-
----
-
-HagamosTech — 2026
+<div align="center">
+  <sub>Hecho por Luiss2080 · React + Express + Prisma</sub>
+</div>
