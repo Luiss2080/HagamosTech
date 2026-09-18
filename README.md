@@ -172,8 +172,7 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 - `server/.env.production` **está versionado** en el repositorio y contiene nombres de variables con valores de
   ejemplo/producción (incluido un usuario SMTP). Deben tratarse como expuestos: rotar credenciales y dejar de
   versionar ese archivo.
-- Si `JWT_SECRET` no está definido, el backend usa un secreto por defecto escrito en `server/auth/utils/token.js`.
-  Define siempre uno propio.
+- `JWT_SECRET` es obligatorio en producción (`NODE_ENV=production`): sin él el backend no arranca. Solo en desarrollo/tests se usa un valor de prueba. El token legado `token-user-<id>-<ts>` ya no se acepta.
 - No hay límite de peticiones (rate limit) ni bloqueo por intentos fallidos, aunque el esquema tiene columnas para ello.
 
 </details>

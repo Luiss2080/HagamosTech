@@ -77,7 +77,7 @@ cd server && npm run db:seed      # Datos semilla
 | `DATABASE_URL` | Conexión a MySQL |
 | `PORT` | Puerto del servidor (default 3000) |
 | `NODE_ENV` | Entorno |
-| `JWT_SECRET` | Secret para tokens |
+| `JWT_SECRET` | Secret para tokens (obligatorio en producción; el servidor no arranca sin él) |
 | `FRONTEND_URL` | URL del frontend (CORS) |
 | `CONTACT_EMAIL` | Correo que recibe el formulario de contacto (default `contacto@hagamostech.bo`) |
 | `SMTP_*` | Host, puerto, usuario, contraseña y remitente para el envío de correos |
