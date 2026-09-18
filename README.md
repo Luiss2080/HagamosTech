@@ -125,7 +125,7 @@ HagamosTech/
    ```bash
    npm run dev:all
    ```
-   Frontend en `http://localhost:4000`. El frontend llama a `/api` mediante el proxy de Vite; si no defines `VITE_API_PROXY_TARGET` el proxy apunta a `http://localhost:3001`, así que define `VITE_API_PROXY_TARGET=http://localhost:4321` (según `docs/testing.md` y `docs/diagnostico.md`).
+   Frontend en `http://localhost:4000`. El frontend llama a `/api` mediante el proxy de Vite, que por defecto apunta a `http://localhost:4321` (el puerto por defecto del backend); solo define `VITE_API_PROXY_TARGET` si cambias `PORT`.
 
 <details>
 <summary>Variables de entorno del backend (nombres, sin valores)</summary>

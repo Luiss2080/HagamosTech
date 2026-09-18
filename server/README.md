@@ -26,10 +26,10 @@ server/
 ## Arranque
 
 ```bash
-cd server && npm run dev     # http://localhost:3000
+cd server && npm run dev     # http://localhost:4321
 ```
 
-Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por consola.
+Si el puerto está ocupado, el servidor prueba 4322 y 4323 y lo informa por consola.
 
 ## Endpoints reales
 
@@ -75,7 +75,7 @@ cd server && npm run db:seed      # Datos semilla
 | Variable | Descripción |
 |----------|-------------|
 | `DATABASE_URL` | Conexión a MySQL |
-| `PORT` | Puerto del servidor (default 3000) |
+| `PORT` | Puerto del servidor (default 4321) |
 | `NODE_ENV` | Entorno |
 | `JWT_SECRET` | Secret para tokens (obligatorio en producción; el servidor no arranca sin él) |
 | `FRONTEND_URL` | URL del frontend (CORS) |
