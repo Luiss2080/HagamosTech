@@ -164,6 +164,7 @@ un workflow de CI (`ci.yml`) con jobs de calidad y E2E.
 
 Implementado: hash `scrypt`, comparación en tiempo constante, tokens con expiración, 2FA TOTP, JSON malformado
 responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes responden 404 y los retirados 410.
+`GET /api/contacto` y `PUT /api/contacto/:id/estado` exigen sesión y rol de administrador (401 sin sesión, 403 sin rol; el estado se valida contra `nuevo|leido|respondido|archivado`); solo `POST /api/contacto` es público.
 
 <details>
 <summary>Avisos importantes para quien despliegue</summary>
@@ -173,8 +174,6 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
   versionar ese archivo.
 - Si `JWT_SECRET` no está definido, el backend usa un secreto por defecto escrito en `server/auth/utils/token.js`.
   Define siempre uno propio.
-- `GET /api/contacto` y `PUT /api/contacto/:id/estado` no comprueban sesión ni rol, aunque el código los comenta como
-  "solo admin": hoy cualquiera puede listar los mensajes de contacto.
 - No hay límite de peticiones (rate limit) ni bloqueo por intentos fallidos, aunque el esquema tiene columnas para ello.
 
 </details>
@@ -184,7 +183,7 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 - Panel de administración: hay roles y permisos en base de datos, pero ninguna pantalla ni endpoint protegido para gestionar mensajes o usuarios.
 - Compras, carrito y pagos: retirados (`410`); la página `HistorialComprasPagina` y el hook `useComprasPerfil` siguen en el frontend apuntando a `/compras/*`, que ya no existe.
 - Sesiones múltiples: `GET /api/perfil/sessions` devuelve siempre una lista vacía y revocar responde 404.
-- Protección de los endpoints de contacto, límite de peticiones y bloqueo de cuenta (ver Seguridad).
+- Límite de peticiones y bloqueo de cuenta (ver Seguridad).
 - El README anterior citaba `public/img/01_Layout/logo.png`, que no existe en el repositorio (imagen rota); corregido aquí.
 - `public/` versiona solo 4 imágenes; no se auditó si otras páginas referencian imágenes que faltan en un clon limpio.
 - El catálogo "Personalizado" tiene un solo servicio y las cifras de marketing de la web (p. ej. "+500 estudiantes") no provienen de datos del sistema.
