@@ -3,7 +3,7 @@ import { createRequire } from 'node:module';
 
 const require = createRequire(import.meta.url);
 const crypto = require('node:crypto');
-const { firmarToken, verificarToken } = require('../auth/utils/token.js');
+const { firmarToken, verificarToken, resolverSecreto } = require('../auth/utils/token.js');
 
 const SECRETO = process.env.JWT_SECRET || 'hagamostech_dev_secret_key_2026';
 
@@ -41,13 +41,46 @@ describe('Tokens de sesión firmados', () => {
     expect(verificarToken(`${header}.${payload}.${firma}`)).toBeNull();
   });
 
-  it('acepta el token legado mientras expira', () => {
-    expect(verificarToken('token-user-5-1700000000000')).toBe(5);
+  it('rechaza el token legado forjable token-user-<id>-<ts>', () => {
+    expect(verificarToken('token-user-5-1700000000000')).toBeNull();
+    expect(verificarToken('token-user-1-0')).toBeNull();
+  });
+
+  it('rechaza un token con alg none / sin firma', () => {
+    const header = Buffer.from(JSON.stringify({ alg: 'none', typ: 'JWT' })).toString('base64url');
+    const payload = Buffer.from(JSON.stringify({ sub: 1, exp: Date.now() + 100000 })).toString('base64url');
+    expect(verificarToken(`${header}.${payload}.`)).toBeNull();
   });
 
   it('rechaza tokens ausentes o mal formados', () => {
     expect(verificarToken('')).toBeNull();
     expect(verificarToken(undefined)).toBeNull();
     expect(verificarToken('cualquier-cosa')).toBeNull();
+  });
+});
+
+describe('JWT_SECRET', () => {
+  it('es obligatorio en producción: falla si falta', () => {
+    expect(() => resolverSecreto({ NODE_ENV: 'production' })).toThrow(/JWT_SECRET/);
+  });
+
+  it('en producción usa el secreto del entorno', () => {
+    expect(resolverSecreto({ NODE_ENV: 'production', JWT_SECRET: 'secreto-real' })).toBe('secreto-real');
+  });
+
+  it('en desarrollo y tests permite el valor de prueba explícito', () => {
+    expect(resolverSecreto({ NODE_ENV: 'development' })).toBeTruthy();
+    expect(resolverSecreto({})).toBeTruthy();
+  });
+
+  it('el módulo no carga en producción sin JWT_SECRET (el servidor no arranca)', () => {
+    const { spawnSync } = require('node:child_process');
+    const ruta = require('node:path').join(__dirname, '..', 'auth', 'utils', 'token.js');
+    const r = spawnSync(process.execPath, ['-e', `require(${JSON.stringify(ruta)})`], {
+      env: { ...process.env, NODE_ENV: 'production', JWT_SECRET: '' },
+      encoding: 'utf8',
+    });
+    expect(r.status).not.toBe(0);
+    expect(r.stderr).toMatch(/JWT_SECRET/);
   });
 });
