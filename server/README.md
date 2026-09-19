@@ -44,7 +44,8 @@ Si el puerto está ocupado, el servidor prueba 3001 y 3002 y lo informa por cons
 | `GET /api/perfil/sessions` | Sesiones (sin multisesión persistida) |
 | `DELETE /api/perfil/sessions/:id` | Revocar sesión (404 si no existe) |
 | `POST /api/contacto` | Enviar mensaje de contacto |
-| `GET /api/contacto` | Listar mensajes |
+| `GET /api/contacto` | Listar mensajes (solo administrador: 401 sin sesión, 403 sin rol) |
+| `PUT /api/contacto/:id/estado` | Cambiar el estado de un mensaje (solo administrador) |
 
 > **API veraz (Spec 005):** no hay mocks ni catch-all con éxito falso. Los endpoints
 > inexistentes responden `404` y los del vertical retirado, `410`. Los módulos que el frontend
