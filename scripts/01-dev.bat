@@ -30,7 +30,7 @@ echo [OK] MySQL detectado
 echo.
 
 REM --- Iniciar Backend Node.js ---
-echo [1/2] Iniciando API Node.js (puerto 3000)...
+echo [1/2] Iniciando API Node.js (puerto 4321)...
 start "HagamosTech API" cmd /k "cd /d "%PROJECT_DIR%\server" && npm run dev"
 
 timeout /t 3 /nobreak >nul
@@ -45,8 +45,8 @@ echo   APLICACIONES INICIADAS
 echo ==========================================
 echo.
 echo Frontend:  http://localhost:4000
-echo Backend:   http://localhost:3000
-echo API:       http://localhost:3000/api
+echo Backend:   http://localhost:4321
+echo API:       http://localhost:4321/api
 echo.
 echo Presiona cualquier tecla para cerrar esta ventana...
 pause >nul

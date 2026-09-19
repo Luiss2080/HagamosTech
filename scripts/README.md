@@ -17,14 +17,14 @@ Scripts para facilitar el desarrollo y deploy del proyecto.
 
 ```bash
 # Equivalente manual:
-cd server && npm run dev    # Backend en localhost:3000
+cd server && npm run dev    # Backend en localhost:4321
 cd .. && npm run dev        # Frontend en localhost:4001
 ```
 
 **Qué hace:**
 1. Detecta si Node.js está instalado
 2. Detecta si MySQL está corriendo (Laragon)
-3. Abre una terminal para el backend Node.js (puerto 3000)
+3. Abre una terminal para el backend Node.js (puerto 4321)
 4. Espera 3 segundos
 5. Abre otra terminal para el frontend Vite (puerto 4001)
 6. Muestra las URLs en pantalla
@@ -68,7 +68,7 @@ Producción:
 ## Notas
 
 - **Windows:** Los scripts `.bat` solo funcionan en Windows. En Linux/Mac usa los comandos manuales.
-- **Puertos:** Si el puerto 3000 o 4001 están ocupados, modifica en `server/.env` y `vite.config.js`
+- **Puertos:** Si el puerto 4321 (API) o 4000 (frontend) están ocupados, modifica en `server/.env` y `vite.config.js`
 
 ---
 *HagamosTech - 2026*
