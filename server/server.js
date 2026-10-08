@@ -3,7 +3,7 @@ const cors = require('cors');
 const os = require('os');
 require('dotenv').config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4321; // mismo valor que el proxy de Vite (vite.config.js) y la doc
 const LOCAL_IP = (Object.values(os.networkInterfaces()).flat().find(i => i.family === 'IPv4' && !i.internal) || {}).address || 'localhost';
 
 const app = express();

@@ -6,7 +6,8 @@ import { prisma, espiarModelo } from './helpers/prismaMock.js';
 const require = createRequire(import.meta.url);
 const app = require('../server.js');
 
-const TOKEN = 'token-user-1-1700000000000';
+const { firmarToken } = require('../auth/utils/token.js');
+const TOKEN = firmarToken(1);
 
 const usuarioBase = {
   id: 1,

@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const prisma = require('../../models/prisma');
 const mailer = require('../../auth/utils/mailer');
+const { requireAdmin } = require('../../auth/middleware/requireAdmin');
 
 // POST /api/contacto - Enviar mensaje de contacto
 router.post('/', async (req, res) => {
@@ -37,7 +38,7 @@ router.post('/', async (req, res) => {
 });
 
 // GET /api/contacto - Listar mensajes (solo admin)
-router.get('/', async (req, res) => {
+router.get('/', requireAdmin, async (req, res) => {
     try {
         const mensajes = await prisma.mensaje.findMany({
             orderBy: { fechaCreacion: 'desc' }
@@ -50,9 +51,14 @@ router.get('/', async (req, res) => {
 });
 
 // PUT /api/contacto/:id/estado - Actualizar estado del mensaje
-router.put('/:id/estado', async (req, res) => {
+const ESTADOS = ['nuevo', 'leido', 'respondido', 'archivado'];
+
+router.put('/:id/estado', requireAdmin, async (req, res) => {
     try {
-        const { estado } = req.body;
+        const { estado } = req.body || {};
+        if (!ESTADOS.includes(estado)) {
+            return res.status(400).json({ error: `Estado inválido. Permitidos: ${ESTADOS.join(', ')}` });
+        }
         const mensaje = await prisma.mensaje.update({
             where: { id: parseInt(req.params.id) },
             data: { estado }

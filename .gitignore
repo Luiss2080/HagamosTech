@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Variables de entorno reales del backend (nunca se versionan; plantilla: server/.env.example)
+server/.env
+server/.env.production
