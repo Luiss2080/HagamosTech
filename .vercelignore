@@ -1,0 +1,14 @@
+node_modules
+dist
+server
+specs
+docs
+e2e
+test-results
+playwright-report
+.venv
+.agents
+.claude
+.opencode
+.playwright-mcp
+.vscode
