@@ -15,6 +15,6 @@ Fecha: 2026-10-17
 
 | Comando | Resultado |
 |---|---|
-| `npm run lint` | Pendiente |
-| `npm run test:run` | Pendiente |
-| `npm run build` | Pendiente |
+| `npm run lint` | ✅ 0 errores; 2 warnings preexistentes en Inicio |
+| `npm run test:run -- --maxWorkers=2` | ✅ 10 archivos, 39/39 tests al cierre de QA |
+| `npm run build` | ✅ |

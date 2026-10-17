@@ -14,4 +14,8 @@ La prueba `src/app/navegacionOferta.test.js` confirma que las rutas retiradas no
 
 ## Verificación
 
-La Spec 017 se valida junto con la siguiente corrida de lint, suite y build, después de cerrar las páginas de servicio en las fases 2–4.
+| Comando | Resultado |
+|---|---|
+| `npm run lint` | ✅ 0 errores, 2 warnings preexistentes |
+| `npm run test:run -- --maxWorkers=2` | ✅ 10 archivos, 39/39 tests al cierre de QA |
+| `npm run build` | ✅ |

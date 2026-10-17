@@ -40,7 +40,7 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/servicios/sistemas-apps'),
-    title: 'Sistemas y Apps | HagamosTech',
+    title: 'Sistemas y Software | HagamosTech',
     description: 'Sistemas web y bases de datos según las necesidades y el alcance de cada proyecto.',
   },
   {

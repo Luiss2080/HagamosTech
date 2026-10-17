@@ -1,6 +1,6 @@
 # Roadmap SDD — actualización de la oferta de HagamosTech
 
-Estado: **en ejecución — Fase 0 completada**  
+Estado: **fases 0–6 completadas**  
 Fecha: 2026-10-17  
 Base revisada: Constitución, Catálogo Maestro, Specs 001–015, README y `HagamosTech (2).docx`.
 
@@ -44,23 +44,23 @@ Tiendas online siguen en el catálogo como desarrollo sujeto a evaluación. Apli
 | Fase | Resultado | Artefactos SDD previstos | Criterio de salida |
 |---|---|---|---|
 | 0. Alineación de negocio | Catálogo vigente, exclusiones y límites comerciales aprobados | [Spec 016](../specs/016-catalogo-vigente/spec.md), Catálogo Maestro y decisiones de oferta | ✅ Catálogo y datos alineados; pruebas cubren los límites definidos |
-| 1. Arquitectura de contenido | Mapa de páginas, navegación, jerarquía y modelo de datos del catálogo | Spec de arquitectura de contenido; inventario de páginas y componentes | Cada servicio tiene ubicación, público y CTA definidos |
-| 2. Academia | Sección académica que explica mentoría, tareas y proyectos por nivel | Spec funcional y de copy académico | Se entiende qué tipo de ayuda se recibe, entregables y límites |
-| 3. Desarrollo digital | Reorganizar páginas de web y software en una explicación sencilla, concreta y no inflada | Spec de páginas de desarrollo web/software | No aparecen automatización, n8n, servidores ni promesas de complejidad ilimitada |
-| 4. Diseño y servicios complementarios | Alinear diseño, empleo y emprendimientos según confirmación de vigencia | Spec de catálogo y páginas restantes | Todas las secciones coinciden con el catálogo aprobado |
-| 5. Conversión y contacto | Formularios, WhatsApp y llamados a la acción coherentes con cada oferta | Spec de flujo de contacto y contenido | Una solicitud llega con contexto suficiente, sin simular cotización automática |
-| 6. QA y lanzamiento | Validar contenido, navegación, responsive, accesibilidad y rutas | Validación por requisito; revisión de regresión | Lint, tests, build y E2E aplicables pasan antes de publicar |
+| 1. Arquitectura de contenido | Menú y rutas alineados; rutas de automatización/IA retiradas | [Spec 017](../specs/017-navegacion-oferta-vigente/spec.md) | ✅ Menú, rutas y SEO alineados |
+| 2. Academia | Página común para mentorías, tareas, informes, monografías y proyectos socioformativos | [Spec 018](../specs/018-acompanamiento-academico/spec.md) | ✅ Nueve servicios académicos visibles con su alcance |
+| 3. Desarrollo digital | Páginas simples de web, software y bases de datos | [Spec 019](../specs/019-desarrollo-digital/spec.md) | ✅ Datos del catálogo; sin promesas de infraestructura |
+| 4. Diseño y complementarios | Emprendimientos, empleo y diseño conectados al catálogo | [Spec 020](../specs/020-diseno-y-servicios-complementarios/spec.md) | ✅ Catálogo único y contacto claro |
+| 5. Conversión y contacto | Proceso de propuesta y asistente alineados con la oferta | [Spec 021](../specs/021-propuesta-y-contenido-veraz/spec.md) | ✅ Sin tarifas ni promociones inventadas |
+| 6. QA | Validar contenido, navegación, pruebas y build | Validaciones de Specs 016–021 | ✅ 39/39 tests, lint sin errores y build exitoso |
 
 Cada fase futura tendrá su propia spec numerada: contexto, actores, historias, requisitos EARS, fuera de alcance, decisiones abiertas, plan técnico y tabla de validación. Las specs aprobadas se implementarán de una en una; no se adelantará copy o funcionalidad que aún no tenga fuente en el Catálogo Maestro.
 
 ## 5. Primer backlog para especificaciones
 
 - **016 — Catálogo vigente y límites de oferta: completada.** Catálogo, datos, README y pruebas alineados; se retiraron categorías de automatización/IA y soporte DevOps/servidores, y se añadieron los servicios de acompañamiento académico indicados.
-- **017 — Arquitectura de información y navegación.** Definir categorías, páginas, etiquetas y CTA sin duplicar contenido.
-- **018 — Sección de acompañamiento académico.** Detallar niveles, modalidades, ejemplos y límites de servicio.
-- **019 — Secciones de desarrollo web y software.** Aterrizar tipos de proyecto, entregables y evaluación de viabilidad.
-- **020 — Diseño y categorías complementarias.** Resolver vigencia de diseño, empleo y emprendimientos.
-- **021 — Contacto y conversión por servicio.** Mejorar contexto del mensaje y medición de solicitudes solo si se aprueba el alcance.
+- **017 — Navegación de la oferta vigente: completada.** Menú y SEO actualizados; rutas retiradas van al 404.
+- **018 — Acompañamiento académico: completada.** Página derivada del catálogo y con límites formativos claros.
+- **019 — Desarrollo digital: completada.** Páginas web/software reutilizan el catálogo.
+- **020 — Diseño y servicios complementarios: completada.** Páginas de emprendimiento, empleo y diseño alineadas.
+- **021 — Propuesta y contenido veraz: completada.** Cotización clara y respuestas actualizadas del asistente.
 
 Los números son una propuesta: confirmar el estado del repositorio al iniciar cada spec y no reutilizar números existentes.
 
@@ -75,15 +75,15 @@ Recomendación inicial:
 - GitHub MCP ya está instalado. Figma se recomendó y está pendiente de que el usuario conecte su cuenta para usar el MCP; la skill `figma` quedó instalada y estará disponible en el próximo turno.
 - Para documentos de trabajo, usar el repositorio y sus Markdown como fuente de verdad; un MCP de Notion/Drive solo si el equipo confirma que esos espacios son su sistema de documentación.
 
-Se instaló la skill `figma`. GitHub MCP ya estaba instalado; Figma MCP está pendiente de conexión. No se añadieron conectores de automatización, hosting o servidores.
+Se instaló la skill `figma` en Codex. GitHub MCP ya estaba instalado; Figma MCP está pendiente de conexión. No se añadieron conectores de automatización, hosting o servidores.
 
-## 7. Decisiones abiertas para cerrar la Fase 0
+## 7. Decisiones comerciales pendientes (no bloquean la oferta informativa)
 
-1. Confirmar las categorías finales y si empleo, emprendimientos, diseño gráfico, tiendas online, apps móviles e integraciones forman parte de la oferta vigente.
-2. Confirmar niveles académicos, tipo de ayuda por servicio y modalidad de atención (presencial/remota, individual/grupal).
-3. Definir si se publican precios, pagos únicos, cuotas, planes o cotización por evaluación.
-4. Confirmar canales de contacto y zonas/países atendidos.
-5. Elegir si se necesita integrar Figma, GitHub, Google Drive/Docs u otro MCP; no se instalará un conector por defecto.
+1. Confirmar si las tiendas online incluirán cobro en línea además del desarrollo sujeto a evaluación.
+2. Decidir si apps móviles o integraciones de pago/WhatsApp se incorporan en una fase futura.
+3. Acordar modalidad y zona de atención para mentorías académicas.
+4. Definir tarifas, anticipos, medios de pago y mantenimiento antes de publicar esas condiciones.
+5. Figma MCP está pendiente de conexión; GitHub MCP ya está instalado.
 
 ## 8. Fuente revisada y reglas de ejecución
 

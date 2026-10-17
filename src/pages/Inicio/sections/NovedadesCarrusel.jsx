@@ -26,7 +26,7 @@ const noticias = [
     id: 'n1',
     title: 'Desarrollo de Landing Pages',
     desc: 'Diseñamos landing pages para presentar servicios y facilitar consultas, con un alcance acordado para cada proyecto.',
-    category: 'Lanzamiento',
+    category: 'Desarrollo web',
     status: 'Servicio disponible',
     date: 'Oferta vigente',
     img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60',
@@ -122,7 +122,7 @@ const NewsCard = ({ noticia, icon }) => {
         {/* Pill de Info - Centrado */}
         <div className="mb-3 flex justify-center w-full">
           <span className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-md text-[9px] font-black uppercase tracking-[0.14em] bg-[#A3E635]/10 text-[#A3E635] border border-[#A3E635]/20">
-            NOVEDAD
+            SERVICIO
           </span>
         </div>
 
@@ -299,14 +299,14 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
             Últimas{' '}
             <span className="relative inline-block px-2 text-[#A3E635]">
-              novedades y noticias
+              soluciones disponibles
               <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>
             </span>
           </h2>
           <p className="text-lg text-slate-400 font-medium leading-relaxed">
-            Mantente al tanto de nuestros eventos, lanzamientos de productos, convenios educativos y los logros más recientes de nuestra comunidad.
+            Conocé algunas de las áreas de trabajo de HagamosTech y contanos qué necesitás desarrollar.
           </p>
         </div>
 
