@@ -103,10 +103,6 @@ const Recursos = () => {
                                         <i className={`fas ${item.icon}`}></i>
                                     </div>
 
-                                    <div className="absolute top-6 right-6 text-xs font-black uppercase tracking-widest opacity-70">
-                                        <i className="fas fa-sparkles mr-1"></i> TOP
-                                    </div>
-
                                     <h3 className="text-2xl font-black mb-4 tracking-tight leading-none">{item.title}</h3>
                                     <p className={`text-sm font-medium mb-8 leading-relaxed ${item.theme.descColor}`}>{item.desc}</p>
 
@@ -124,9 +120,9 @@ const Recursos = () => {
                                         })}
                                     </div>
 
-                                    <div className={`mt-auto w-full py-4 rounded-full font-black text-xs uppercase tracking-[0.15em] transition-all flex items-center justify-center gap-3 group/btn border-2 border-transparent ${item.theme.buttonBg} ${item.theme.buttonText} ${item.theme.buttonHover} shadow-lg shadow-black/10 hover:-translate-y-0.5 hover:shadow-xl`}>
-                                        Explorar <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
-                                    </div>
+                                    <a href="#support" className={`mt-auto w-full py-4 rounded-full font-black text-xs uppercase tracking-[0.15em] transition-all flex items-center justify-center gap-3 group/btn border-2 border-transparent ${item.theme.buttonBg} ${item.theme.buttonText} ${item.theme.buttonHover} shadow-lg shadow-black/10 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635]`}>
+                                        Ir al formulario <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                    </a>
                                 </div>
                             </div>
                         ))}

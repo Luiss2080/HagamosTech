@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-
-const WHATSAPP_NUMBER = '59161320004';
+import ContactService from '../../../servicios/servicioContacto';
 
 const FormularioContacto = () => {
     const [formData, setFormData] = useState({
@@ -12,23 +11,27 @@ const FormularioContacto = () => {
         message: '',
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
+    const [feedback, setFeedback] = useState(null);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData((prev) => ({ ...prev, [name]: value }));
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (isSubmitting) return;
         setIsSubmitting(true);
-
-        const texto = `*Nuevo mensaje desde HAGAMOSTECH - Contacto*%0A%0A*Nombre:* ${encodeURIComponent(formData.name)}%0A*Celular:* ${encodeURIComponent(formData.phone)}%0A*Email:* ${encodeURIComponent(formData.email)}%0A*Mensaje:* ${encodeURIComponent(formData.message)}`;
-
-        window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${texto}`, '_blank');
-
-        setFormData({ name: '', phone: '', email: '', message: '' });
-        setIsSubmitting(false);
+        setFeedback(null);
+        try {
+            const response = await ContactService.sendEmbeddedContact(formData);
+            setFormData({ name: '', phone: '', email: '', message: '' });
+            setFeedback({ type: 'success', text: response?.message || 'Recibimos tu consulta para revisión.' });
+        } catch {
+            setFeedback({ type: 'error', text: 'No pudimos enviar la consulta. Tus datos siguen aquí; revisá tu conexión e intentá nuevamente.' });
+        } finally {
+            setIsSubmitting(false);
+        }
     };
 
     return (
@@ -72,8 +75,8 @@ const FormularioContacto = () => {
                                         <svg className="absolute w-full h-2.5 -bottom-1 left-0 z-[-1] text-[#A3E635]/60" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" /></svg>
                                     </span>
                                 </h2>
-                                <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
-                                    Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento.
+                                    <p className="text-sm text-white/90 font-medium max-w-sm leading-relaxed mb-6 drop-shadow-md">
+                                    Revisamos consultas de desarrollo web y software, diseño digital y acompañamiento académico.
                                 </p>
 
                                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#A3E635]/15 border border-[#A3E635]/30 text-[#A3E635] text-[10px] font-black uppercase tracking-widest mb-6 shadow-lg backdrop-blur-sm">
@@ -83,7 +86,7 @@ const FormularioContacto = () => {
                                 <div className="grid grid-cols-2 gap-2 w-full max-w-sm mb-6">
                                     <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/70"><i className="fas fa-microchip mr-1"></i> Tecnología</p>
-                                        <p className="text-xs font-bold text-white">Web e IA</p>
+                                        <p className="text-xs font-bold text-white">Web y software</p>
                                     </div>
                                     <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/70"><i className="fas fa-graduation-cap mr-1"></i> Academia</p>
@@ -158,7 +161,7 @@ const FormularioContacto = () => {
                                             <i className="fas fa-clock text-[11px]"></i>
                                         </div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Atención</p>
-                                        <p className="text-[13px] font-extrabold text-white">Rápida</p>
+                                        <p className="text-[13px] font-extrabold text-white">Según consulta</p>
                                     </div>
                                 </div>
 
@@ -173,29 +176,31 @@ const FormularioContacto = () => {
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="text" name="name" value={formData.name} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Nombre completo</label>
+                                            <input id="contact-name" type="text" name="name" value={formData.name} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Nombre" required />
+                                            <label htmlFor="contact-name" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Nombre completo</label>
                                             <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-user text-base"></i></div>
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="text" name="phone" value={formData.phone} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Celular" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Celular</label>
+                                            <input id="contact-phone" type="tel" name="phone" value={formData.phone} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Celular" />
+                                            <label htmlFor="contact-phone" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Celular (opcional)</label>
                                             <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-phone-alt text-base"></i></div>
                                         </div>
 
                                         <div className="relative group mb-3">
-                                            <input type="email" name="email" value={formData.email} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Email" required />
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
+                                            <input id="contact-email" type="email" name="email" value={formData.email} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent" placeholder="Email" required />
+                                            <label htmlFor="contact-email" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Correo electrónico</label>
                                             <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                         </div>
 
                                         <div className="relative group">
-                                            <textarea name="message" rows="3" value={formData.message} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent resize-none" placeholder="Mensaje" required></textarea>
-                                            <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Mensaje</label>
+                                            <textarea id="contact-message" name="message" rows="3" value={formData.message} onChange={handleChange} className="peer block w-full rounded-xl border-2 border-white/10 bg-white/[0.03] px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-white focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/10 focus:outline-none transition-all duration-300 placeholder-transparent resize-none" placeholder="Mensaje" required></textarea>
+                                            <label htmlFor="contact-message" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-white/50 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16]">Mensaje</label>
                                             <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-white/50 peer-focus:text-[#84CC16] transition-colors duration-300"><i className="fas fa-comment-dots text-base"></i></div>
                                         </div>
                                     </div>
+
+                                    {feedback && <p role={feedback.type === 'error' ? 'alert' : 'status'} className={`rounded-xl border px-4 py-3 text-sm ${feedback.type === 'error' ? 'border-red-400/40 bg-red-950/30 text-red-100' : 'border-[#A3E635]/30 bg-[#A3E635]/10 text-white'}`}>{feedback.text}</p>}
 
                                     <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-3.5 shadow-sm">
                                         <button type="submit" disabled={isSubmitting} className="w-full py-3.5 px-6 bg-[#A3E635] text-[#0A0A0A] font-black text-base uppercase tracking-widest rounded-xl shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/40 hover:-translate-y-0.5 hover:bg-[#84CC16] transition-all duration-300 flex items-center justify-center gap-3 group active:scale-[0.96] relative overflow-hidden disabled:opacity-70 disabled:cursor-not-allowed">
@@ -208,7 +213,7 @@ const FormularioContacto = () => {
                                     <div className="rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-[11px] text-white/60 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#84CC16] flex-shrink-0"></i>
-                                            <span>Te responderemos a la brevedad posible a través de WhatsApp.</span>
+                                            <span>La consulta se registra para revisión. También podés escribirnos por WhatsApp; desde allí debés enviar tu mensaje.</span>
                                         </div>
                                     </div>
                                 </form>

@@ -43,23 +43,15 @@ const ContactoModal = ({ isOpen, onClose }) => {
                 message: formData.message,
             });
 
-            if (resp?.status) {
-                setFeedback({
-                    type: 'success',
-                    title: 'Mensaje enviado',
-                    message: resp?.message || 'Gracias por contactarnos. Responderemos lo antes posible.',
-                    afterClose: () => {
-                        setFormData({ name: '', phone: '', email: '', message: '' });
-                        onClose();
-                    },
-                });
-            } else {
-                setFeedback({
-                    type: 'error',
-                    title: 'Error',
-                    message: resp?.message || 'No se pudo enviar el mensaje. Inténtalo de nuevo.',
-                });
-            }
+            setFeedback({
+                type: 'success',
+                title: 'Consulta recibida',
+                message: resp?.message || 'Recibimos tu consulta para revisión.',
+                afterClose: () => {
+                    setFormData({ name: '', phone: '', email: '', message: '' });
+                    onClose();
+                },
+            });
         } catch {
             setFeedback({
                 type: 'error',
@@ -122,7 +114,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 </span>
                                             </h2>
                                             <p className="text-base text-white/90 font-medium max-w-sm leading-relaxed mb-7 drop-shadow-md">
-                                                El equipo de soluciones digitales y tecnológicas: web, software, diseño, automatización e inteligencia artificial.
+                                                El equipo de soluciones digitales: desarrollo web y software, diseño digital y acompañamiento académico.
                                             </p>
 
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111827] border border-[#A3E635]/30 text-[#A3E635] text-xs font-black uppercase tracking-widest mb-8 shadow-lg">
@@ -132,7 +124,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Soluciones</p>
-                                                    <p className="text-sm font-bold text-white">Web, IA & Automatización</p>
+                                                    <p className="text-sm font-bold text-white">Web y soluciones digitales</p>
                                                 </div>
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Software</p>
