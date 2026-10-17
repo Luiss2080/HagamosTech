@@ -30,7 +30,7 @@ const ProcesoTrabajo = () => {
         {
             num: "4",
             title: "Marca multidisciplinaria",
-            desc: "Nuestra visión es convertirnos en una marca de soluciones digitales multidisciplinaria: desarrollo, IA, automatización, diseño y soluciones a medida.",
+            desc: "Nuestra visión es crecer como una marca de soluciones digitales: desarrollo web y software, diseño gráfico y acompañamiento académico.",
             icon: "fa-rocket",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"

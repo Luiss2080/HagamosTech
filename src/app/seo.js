@@ -65,8 +65,8 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/promociones'),
-    title: 'Promociones y planes | HagamosTech',
-    description: 'Packs y planes de soporte para potenciar tu proyecto.',
+    title: 'Propuestas para tu proyecto | HagamosTech',
+    description: 'Conocé cómo definimos el alcance, los tiempos y el presupuesto antes de empezar.',
   },
   {
     coincide: (p) => p.startsWith('/como-trabajamos'),
