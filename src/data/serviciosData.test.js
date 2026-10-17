@@ -140,6 +140,22 @@ describe('Integridad de la oferta (serviciosData)', () => {
     }
   });
 
+  it('incluye ejemplos de alcance web, software y acompañamiento académico', () => {
+    const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
+    for (const ejemplo of [
+      'colegios',
+      'universidades',
+      'inventario',
+      'facturación',
+      'crm',
+      'directorios',
+      'monografías',
+      'proyectos socioformativos',
+    ]) {
+      expect(texto.includes(ejemplo), `falta el ejemplo "${ejemplo}"`).toBe(true);
+    }
+  });
+
   it('no contiene términos del vertical restaurante', () => {
     const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
     for (const termino of TERMINOS_PROHIBIDOS) {

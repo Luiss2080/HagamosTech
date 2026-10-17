@@ -1,6 +1,6 @@
 # Roadmap SDD — actualización de la oferta de HagamosTech
 
-Estado: **fases 0–6 completadas**  
+Estado: **fases 0–7 completadas**
 Fecha: 2026-10-17  
 Base revisada: Constitución, Catálogo Maestro, Specs 001–021, README y `HagamosTech (2).docx`.
 
@@ -35,9 +35,9 @@ Taxonomía base aprobada por el pedido del usuario y aplicada a la Spec 016:
 3. **Desarrollo de software**: sistemas y herramientas a medida, con alcance sujeto a evaluación.
 4. **Diseño e identidad digital**: identidad visual, piezas para redes, presentaciones y recursos gráficos/digitales.
 5. **Emprendimientos y empleo**: mantener branding, catálogos digitales, piezas promocionales, CV/LinkedIn y orientación profesional que ya estaban en la oferta.
-6. **Solicitud personalizada**: canal para necesidades digitales que no encajan en las categorías, siempre dentro del alcance anterior.
+6. **Solicitud personalizada**: canal para necesidades digitales que no encajan en las categorías, siempre dentro del alcance anterior. Se pueden evaluar prototipos, paneles, dashboards, herramientas internas y aplicaciones web/móviles.
 
-Tiendas online siguen en el catálogo como desarrollo sujeto a evaluación. Aplicaciones móviles, integraciones específicas de pago/WhatsApp, hardware, soporte de productos ajenos, precios, mantenimiento recurrente, planes y suscripciones quedan **por confirmar** y no se publicarán como servicios concretos hasta decisión explícita.
+Tiendas online siguen en el catálogo como desarrollo sujeto a evaluación; los pagos en línea dependen de revisar alcance y proveedor. Aplicaciones móviles e integración técnica entre plataformas se mencionan como posibilidades sujetas a evaluación, no como paquetes confirmados. Automatización de procesos, hardware, soporte de productos ajenos, precios, mantenimiento recurrente, planes y suscripciones no se ofrecen ni se publican hasta una decisión explícita.
 
 ## 4. Roadmap por fases
 
@@ -50,6 +50,7 @@ Tiendas online siguen en el catálogo como desarrollo sujeto a evaluación. Apli
 | 4. Diseño y complementarios | Emprendimientos, empleo y diseño conectados al catálogo | [Spec 020](../specs/020-diseno-y-servicios-complementarios/spec.md) | ✅ Catálogo único y contacto claro |
 | 5. Conversión y contacto | Proceso de propuesta y asistente alineados con la oferta | [Spec 021](../specs/021-propuesta-y-contenido-veraz/spec.md) | ✅ Sin tarifas ni promociones inventadas |
 | 6. QA | Validar contenido, navegación, pruebas y build | Validaciones de Specs 016–021 | ✅ 39/39 tests, lint sin errores y build exitoso |
+| 7. Alcance y ejemplos | Completar ejemplos concretos de desarrollo web/software y acompañamiento académico sin ampliar promesas comerciales | [Spec 022](../specs/022-alcance-y-ejemplos-de-servicios/spec.md) | ✅ 40/40 tests; build exitoso; lint sin errores |
 
 Cada fase futura tendrá su propia spec numerada: contexto, actores, historias, requisitos EARS, fuera de alcance, decisiones abiertas, plan técnico y tabla de validación. Las specs aprobadas se implementarán de una en una; no se adelantará copy o funcionalidad que aún no tenga fuente en el Catálogo Maestro.
 
@@ -61,6 +62,7 @@ Cada fase futura tendrá su propia spec numerada: contexto, actores, historias, 
 - **019 — Desarrollo digital: completada.** Páginas web/software reutilizan el catálogo.
 - **020 — Diseño y servicios complementarios: completada.** Páginas de emprendimiento, empleo y diseño alineadas.
 - **021 — Propuesta y contenido veraz: completada.** Cotización clara y respuestas actualizadas del asistente.
+- **022 — Alcance y ejemplos de servicios: completada.** El Catálogo Maestro y las tarjetas ahora explican tipos de proyectos web, sistemas empresariales/sectoriales, integraciones técnicas evaluables y el alcance formativo académico.
 
 Los números son una propuesta: confirmar el estado del repositorio al iniciar cada spec y no reutilizar números existentes.
 

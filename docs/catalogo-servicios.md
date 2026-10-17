@@ -10,19 +10,19 @@ Conteo vigente: **7 categorías** y **33 servicios** (9 / 5 / 6 / 5 / 5 / 2 / 1)
 
 ## 1. Acompañamiento académico
 
-Apoyo formativo para estudiantes de colegio, secundaria y universidad. El servicio orienta y acompaña el aprendizaje; el estudiante desarrolla y presenta su propio trabajo.
+Apoyo formativo para estudiantes de primaria/colegio, secundaria, institutos y universidad, sujeto a disponibilidad por materia y nivel. Puede incluir mentorías individuales o grupales, explicación de contenidos, resolución guiada de ejercicios, planificación de estudio, revisión de avances y preparación de exposiciones o defensas. El estudiante desarrolla y presenta su propio trabajo; no se ofrecen trabajos para suplantar al estudiante ni resultados académicos garantizados.
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Presentaciones PowerPoint e Interactivas | Organización visual de exposiciones, defensas y presentaciones académicas. |
-| Formato APA 7 y Documentación Técnica | Orientación de formato, estructura, citas y referencias bibliográficas. |
+| Presentaciones PowerPoint e Interactivas | Organización visual de exposiciones, defensas, proyectos, clases y presentaciones académicas. |
+| Formato APA 7 y Documentación Técnica | Orientación de estructura, formato, citas, referencias, tablas, figuras y documentación técnica según pauta. |
 | Infografías, Diagramas y Líneas de Tiempo | Recursos visuales para explicar temas, procesos y contenidos de estudio. |
 | Mapas Conceptuales y Portadas Académicas | Síntesis visual de temas y preparación de portadas para trabajos. |
 | Simuladores Educativos y Proyectos de Redes | Orientación en simulaciones y proyectos tecnológicos educativos, según alcance. |
 | Apoyo en Proyectos de Programación | Tutoría de algoritmos, lógica y comprensión de código. |
-| Mentorías Académicas y Apoyo en Tareas | Explicación de contenidos y guía para resolver tareas de distintos niveles. |
-| Acompañamiento en Informes y Monografías | Guía para organizar, desarrollar y revisar documentos académicos. |
-| Proyectos Socioformativos | Orientación para planificar, documentar y presentar proyectos escolares y universitarios. |
+| Mentorías Académicas y Apoyo en Tareas | Explicación de contenidos, ejercicios guiados y apoyo en tareas de distintos niveles y materias disponibles. |
+| Acompañamiento en Informes y Monografías | Guía para delimitar tema, organizar capítulos, revisar avances y preparar citas y referencias. |
+| Proyectos Socioformativos | Orientación para definir problema, objetivos, actividades, evidencias, documentación y exposición del proyecto. |
 
 ## 2. Emprendedores y nuevos negocios
 
@@ -63,28 +63,28 @@ Piezas gráficas para uso digital e impreso.
 
 ## 5. Desarrollo web y e-commerce
 
-Sitios y experiencias web para personas, emprendimientos e instituciones. El alcance de tiendas y pagos se define caso por caso antes de ofrecerlo como una solución confirmada.
+Sitios y experiencias web para personas, emprendimientos, empresas e instituciones. Las posibilidades se confirman según objetivos, contenido disponible, integraciones necesarias y viabilidad; no se incluyen hosting ni operación de servidores.
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Páginas Web Empresariales | Sitios informativos y corporativos adaptados a móvil. |
-| Landing Pages y Portafolios Personales | Páginas de presentación para campañas o perfiles profesionales. |
-| Tiendas Online Básicas y Sistemas de Pedidos | Desarrollo web sujeto a evaluación de alcance y medios de pago. |
-| Catálogos Digitales Online y Blogs | Publicación organizada de productos, servicios o artículos. |
-| Diseño UI/UX, Formularios y Web Responsive | Diseño de interfaz, formularios y adaptación a pantallas. |
+| Páginas Web Empresariales | Sitios corporativos, institucionales, educativos, inmobiliarios, de noticias, restaurantes u organizaciones; portales con secciones públicas o privadas según alcance. |
+| Landing Pages y Portafolios Personales | Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos. |
+| Tiendas Online Básicas y Sistemas de Pedidos | Catálogos con carrito o pedidos; pagos en línea y sus proveedores se evalúan por separado antes de comprometerlos. |
+| Catálogos Digitales Online y Blogs | Catálogos, blogs, plataformas de cursos, directorios y comunidades con publicación organizada de contenido. |
+| Diseño UI/UX, Formularios y Web Responsive | Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web. |
 
 ## 6. Software y soluciones digitales
 
-Desarrollo de software y modelado de datos como parte de productos digitales definidos con el cliente. No incluye operación de infraestructura ni administración de servidores.
+Desarrollo de software a medida para digitalizar y gestionar operaciones acordadas con el cliente. Los ejemplos orientan el tipo de proyecto, no son paquetes listos ni funciones garantizadas: se descubren requisitos, perfiles de usuario, permisos, datos, reportes e integraciones; luego se acuerdan alcance, fases y viabilidad. No incluye automatizaciones de procesos, n8n, operación/migración de servidores, DevOps ni infraestructura compleja.
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Desarrollo de Sistemas Web y Software | Construcción de aplicaciones y sistemas según alcance acordado. |
-| Diseño y Gestión de Bases de Datos | Modelado y organización de datos para aplicaciones. |
+| Desarrollo de Sistemas Web y Software | Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad. |
+| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable, sin flujos de automatización. |
 
 ## 7. Soluciones personalizadas
 
-Para una necesidad digital que no encaje en una categoría, HagamosTech analiza el pedido y define si está dentro de su alcance de desarrollo, diseño o acompañamiento académico.
+Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. También se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles y modernización de productos existentes; cada entrega queda limitada a lo acordado.
 
 1. **Contanos:** explicá tu idea o necesidad.
 2. **Analizamos:** revisamos alcance y viabilidad.
