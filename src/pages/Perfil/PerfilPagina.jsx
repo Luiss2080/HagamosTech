@@ -252,7 +252,7 @@ const CustomDatePicker = ({ value, onChange, tooltipText }) => {
 
 const PerfilPagina = () => {
     const location = useLocation();
-    const { user, updateProfile, loading } = useAuthStore();
+    const { user, updateProfile, fetchProfile, loading, profileStatus, profileError: serverProfileError } = useAuthStore();
     const [formData, setFormData] = useState({
         nombre: '',
         apellido: '',
@@ -398,6 +398,15 @@ const PerfilPagina = () => {
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
                     <div className="flex flex-col gap-8">
+
+                        {profileStatus === 'loading' && !user && <p className="rounded-xl border border-slate-200 bg-white p-4 text-sm font-bold text-slate-600" role="status">Cargando los datos de tu cuenta…</p>}
+                        {profileStatus === 'error' && (
+                            <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900" role="alert">
+                                <p className="font-bold">{user ? 'No se pudo actualizar tu perfil. Se muestran los últimos datos guardados en esta sesión.' : 'No se pudieron cargar los datos del perfil.'}</p>
+                                <p className="mt-1">{serverProfileError}</p>
+                                <button type="button" onClick={fetchProfile} className="mt-3 rounded-lg border border-amber-300 bg-white px-3 py-2 text-xs font-black hover:border-[#A3E635]">Reintentar</button>
+                            </div>
+                        )}
                         
                         {/* MOBILE TABS NAVIGATION */}
                         <div className="flex lg:hidden gap-2 bg-[#f8fafc] p-2 rounded-2xl border border-slate-100 overflow-x-auto scrollbar-none">

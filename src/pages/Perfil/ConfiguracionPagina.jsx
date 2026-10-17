@@ -171,7 +171,7 @@ const ConfiguracionPagina = () => {
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <PageHero
-                title="Ajustes y"
+                title="Seguridad de"
                 highlight="cuenta"
                 description="Administra las opciones de seguridad disponibles para tu cuenta."
             />

@@ -49,11 +49,11 @@ La auditoría UI-0 encontró que las rutas de perfil se renderizan sin sesión c
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 a RF-3 | Tests de rutas, datos de perfil y errores de API. | Pendiente |
-| RF-4 y RF-5 | Tests de configuración soportada y redirección de compras. | Pendiente |
-| RF-6 y RF-7 | Recorrido responsive a 390 px/escritorio y pruebas de enlaces/etiquetas. | Pendiente |
-| RF-8 | Suite frontend, lint, build y `git diff --check`. | Pendiente |
+| RF-1 a RF-3 | Tests de protección y restauración de sesión; rechazo 401; pruebas de error y persistencia del perfil. | ✅ |
+| RF-4 y RF-5 | Se retiraron preferencias sin endpoint y vistas de compras; test de redirección heredada; sesiones declaran `sin_registro_multisesion`. | ✅ |
+| RF-6 y RF-7 | Enlaces de cuenta prueban perfil/configuración; Playwright verificó protección/login y ancho sin overflow a 390/1280 px. Se mantiene superficie blanca con acento lima. | ✅ |
+| RF-8 | 9 pruebas nuevas; suite 84/84, lint, build y `git diff --check`. | ✅ |
 
 ## Estado
 
-Planificada; lista para implementación después de UI-5.
+Completada. Las rutas de cuenta requieren sesión, la API determina el resultado de cambios, las cargas diferencian errores y datos guardados, y se retiraron controles/contadores sin persistencia o respaldo comercial.
