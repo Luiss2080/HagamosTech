@@ -50,7 +50,7 @@ const recursosData = [
     },
     {
         title: "Soluciones Rápidas",
-        desc: "Desde una página web hasta la automatización de un proceso para tu negocio.",
+        desc: "Desde una página web hasta el acompañamiento de un proyecto académico.",
         icon: "fa-bolt",
         theme: {
             cardBg: "bg-[#171717]",
@@ -67,8 +67,8 @@ const recursosData = [
         },
         tags: [
             { label: "Web", icon: "fa-globe" },
-            { label: "Automatización", icon: "fa-gear" },
-            { label: "IA", icon: "fa-robot" }
+            { label: "Acompañamiento académico", icon: "fa-graduation-cap" },
+            { label: "Diseño digital", icon: "fa-pen-nib" }
         ]
     }
 ];

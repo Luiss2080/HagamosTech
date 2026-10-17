@@ -4,7 +4,7 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 const TERMS_SECTIONS = [
     {
         title: '1. Servicios y soluciones',
-        text: 'HAGAMOSTECH ofrece soluciones digitales y tecnológicas: apoyo académico, servicios para emprendedores y negocios, empleo y desarrollo profesional, diseño gráfico, desarrollo web y e-commerce, software y hardware, automatización e inteligencia artificial, y soluciones a medida. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
+        text: 'HAGAMOSTECH ofrece acompañamiento académico, servicios para emprendimientos y profesionales, diseño gráfico, desarrollo web, software y soluciones digitales a medida. No ofrece automatizaciones, n8n, operación de servidores ni infraestructura compleja. Al contratar un servicio, el cliente acepta las condiciones aquí descritas.',
     },
     {
         title: '2. Contratación y acceso a servicios',

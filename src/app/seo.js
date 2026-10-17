@@ -41,7 +41,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/servicios/sistemas-apps'),
     title: 'Sistemas y Apps | HagamosTech',
-    description: 'Sistemas de gestión y aplicaciones a medida para tu negocio.',
+    description: 'Sistemas web y bases de datos según las necesidades y el alcance de cada proyecto.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/para-tu-negocio'),
@@ -67,11 +67,6 @@ const REGLAS = [
     coincide: (p) => p.startsWith('/promociones'),
     title: 'Promociones y planes | HagamosTech',
     description: 'Packs y planes de soporte para potenciar tu proyecto.',
-  },
-  {
-    coincide: (p) => p.startsWith('/novedades'),
-    title: 'Novedades | HagamosTech',
-    description: 'Lanzamientos, talleres, logros y avisos de HagamosTech.',
   },
   {
     coincide: (p) => p.startsWith('/como-trabajamos'),

@@ -30,7 +30,6 @@ const MisionVision = lazy(() => import('../pages/SobreNosotros/sections/MisionVi
 const Valores = lazy(() => import('../pages/SobreNosotros/sections/Valores'));
 const VideosTikTok = lazy(() => import('../pages/SobreNosotros/sections/VideosTikTok'));
 const PromocionesPagina = lazy(() => import('../pages/Promociones/PromocionesPagina'));
-const NovedadesPagina = lazy(() => import('../pages/Novedades/NovedadesPagina'));
 const ContactoPagina = lazy(() => import('../pages/Contacto/Contacto'));
 const HeroContacto = lazy(() => import('../pages/Contacto/sections/HeroContacto'));
 const FormularioContacto = lazy(() => import('../pages/Contacto/sections/FormularioContacto'));
@@ -164,7 +163,6 @@ const App = () => {
               <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
               <Route path="/como-trabajamos" element={<ComoTrabajamos />} />
-              <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
