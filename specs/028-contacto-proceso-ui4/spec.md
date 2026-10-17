@@ -47,10 +47,10 @@ UI-4 unifica el contacto público con el proceso real de recepción de consultas
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 a RF-3 | Pruebas de página y modal para envío real, respuesta, error y conservación de datos. | Pendiente |
-| RF-4 a RF-6 | Pruebas de WhatsApp, proceso y ausencia de claims excluidos. | Pendiente |
-| RF-7 | Recorrido responsive, suite, lint y build. | Pendiente |
+| RF-1 a RF-3 | `contactoFlujos.test.jsx`: API en página/modal, éxito sin campo `status`, error con datos conservados, y botón durante espera. | ✅ |
+| RF-4 a RF-6 | `ChatWhatsApp.test.jsx`, `ComoTrabajamos.test.jsx`, enlaces a formulario y revisión de textos; dirección, mapa y horario pendientes retirados. | ✅ |
+| RF-7 | Playwright a 390/1280 px; enlace al formulario lleva a `#/contactanos#support`; lint limpio, 67/67 tests, build exitoso y `git diff --check` limpio. | ✅ |
 
 ## Estado
 
-En implementación.
+Implementada y validada el 2026-10-17. Los dos formularios registran la consulta mediante la API real; la confirmación solo aparece después de una respuesta exitosa.
