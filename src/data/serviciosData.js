@@ -1,11 +1,10 @@
 export const CATEGORIES = [
-    { id: 'estudiantes', label: 'ESTUDIANTES' },
+    { id: 'estudiantes', label: 'ACOMPAÑAMIENTO ACADÉMICO' },
     { id: 'emprendedores', label: 'EMPRENDEDORES' },
     { id: 'empleo', label: 'EMPLEO' },
     { id: 'diseno', label: 'DISEÑO GRÁFICO' },
     { id: 'web', label: 'WEB Y E-COMMERCE' },
     { id: 'software', label: 'SOFTWARE' },
-    { id: 'ia', label: 'IA Y AUTOMATIZACIÓN' },
     { id: 'personalizado', label: 'A MEDIDA' }
 ];
 
@@ -142,6 +141,72 @@ export const SERVICIOS_DATA = {
             cta: 'Consultar',
             ctaLink: '/contactanos',
             price: 'A Medida'
+        },
+        {
+            id: 'mentoria-apoyo-tareas',
+            name: 'Mentorías Académicas y Apoyo en Tareas',
+            icon: 'fa-chalkboard-user',
+            img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60',
+            category: 'Acompañamiento',
+            pillLabel: 'TUTORÍA',
+            shortDesc: 'Acompañamiento para comprender temas y resolver tareas de colegio, secundaria o universidad.',
+            stats: [
+                { icon: 'fa-graduation-cap', label: 'Niveles', value: 'Escolar y Superior' },
+                { icon: 'fa-user-group', label: 'Modalidad', value: 'A Coordinar' },
+                { icon: 'fa-book-open', label: 'Enfoque', value: 'Aprendizaje' }
+            ],
+            includes: [
+                { icon: 'fa-lightbulb', label: 'Explicación' },
+                { icon: 'fa-list-check', label: 'Ejercicios' },
+                { icon: 'fa-comments', label: 'Orientación' }
+            ],
+            cta: 'Consultar',
+            ctaLink: '/contactanos',
+            price: 'A Medida'
+        },
+        {
+            id: 'informes-monografias',
+            name: 'Acompañamiento en Informes y Monografías',
+            icon: 'fa-file-lines',
+            img: 'https://images.unsplash.com/photo-1455390582262-044cdead2708?w=600&auto=format&fit=crop&q=60',
+            category: 'Documentación',
+            pillLabel: 'ORIENTACIÓN',
+            shortDesc: 'Guía para organizar, desarrollar y revisar informes y monografías con criterios académicos.',
+            stats: [
+                { icon: 'fa-book', label: 'Formato', value: 'Según pauta' },
+                { icon: 'fa-spell-check', label: 'Revisión', value: 'A Coordinar' },
+                { icon: 'fa-graduation-cap', label: 'Enfoque', value: 'Formativo' }
+            ],
+            includes: [
+                { icon: 'fa-list-ol', label: 'Estructura' },
+                { icon: 'fa-quote-right', label: 'Referencias' },
+                { icon: 'fa-comments', label: 'Retroalimentación' }
+            ],
+            cta: 'Consultar',
+            ctaLink: '/contactanos',
+            price: 'A Medida'
+        },
+        {
+            id: 'proyectos-socioformativos',
+            name: 'Proyectos Socioformativos',
+            icon: 'fa-people-group',
+            img: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&auto=format&fit=crop&q=60',
+            category: 'Proyectos',
+            pillLabel: 'ACOMPAÑAMIENTO',
+            shortDesc: 'Orientación para planificar, documentar y presentar proyectos socioformativos escolares y universitarios.',
+            stats: [
+                { icon: 'fa-users', label: 'Niveles', value: 'Colegio y Universidad' },
+                { icon: 'fa-diagram-project', label: 'Proceso', value: 'Por Etapas' },
+                { icon: 'fa-file-lines', label: 'Entrega', value: 'Documentada' }
+            ],
+            includes: [
+                { icon: 'fa-bullseye', label: 'Objetivos' },
+                { icon: 'fa-list-check', label: 'Plan de trabajo' },
+                { icon: 'fa-presentation-screen', label: 'Presentación' }
+            ],
+            cta: 'Consultar',
+            ctaLink: '/contactanos',
+            price: 'A Medida'
         }
     ],
     emprendedores: [
@@ -191,12 +256,12 @@ export const SERVICIOS_DATA = {
         },
         {
             id: 'menus-qr',
-            name: 'Menús QR y Catálogos de Productos',
+            name: 'Catálogos Digitales para Emprendimientos',
             icon: 'fa-qrcode',
             img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=60',
             category: 'Digitalización',
             pillLabel: 'AGILIDAD',
-            shortDesc: 'Digitalización ágil para locales gastronómicos, tiendas de ropa o distribución.',
+            shortDesc: 'Catálogos digitales para presentar productos y servicios de un emprendimiento.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -255,28 +320,6 @@ export const SERVICIOS_DATA = {
             ctaLink: '/contactanos',
             price: 'A Medida'
         },
-        {
-            id: 'gestion-clientes',
-            name: 'Gestión de Clientes Inicial',
-            icon: 'fa-users-gear',
-            img: 'https://images.unsplash.com/photo-1552581234-26160f608093?w=600&auto=format&fit=crop&q=60',
-            category: 'CRM',
-            pillLabel: 'WHATSAPP BIZ',
-            shortDesc: 'Configuración de WhatsApp Business, respuestas automáticas y organización de contactos.',
-            stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
-                { icon: 'fa-pen-ruler', label: 'Configuración', value: 'A Medida' },
-                { icon: 'fa-robot', label: 'Auto', value: 'Respuestas' }
-            ],
-            includes: [
-                { icon: 'fa-whatsapp', label: 'Catálogo' },
-                { icon: 'fa-message', label: 'Mensajes' },
-                { icon: 'fa-address-book', label: 'Contactos' }
-            ],
-            cta: 'Consultar',
-            ctaLink: '/contactanos',
-            price: 'A Medida'
-        }
     ],
     empleo: [
         {
@@ -681,96 +724,6 @@ export const SERVICIOS_DATA = {
             ctaLink: '/contactanos',
             price: 'A Medida'
         },
-        {
-            id: 'soporte-devops',
-            name: 'Soporte Tecnológico y DevOps',
-            icon: 'fa-server',
-            img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&auto=format&fit=crop&q=60',
-            category: 'Infraestructura',
-            pillLabel: 'DESPLIEGUE',
-            shortDesc: 'Mantenimiento de servidores, prácticas ágiles de despliegue y soporte continuo.',
-            stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
-                { icon: 'fa-pen-ruler', label: 'Plan', value: 'A Medida' },
-                { icon: 'fa-cloud', label: 'Cloud', value: 'Gestión' }
-            ],
-            includes: [
-                { icon: 'fa-infinity', label: 'CI/CD' },
-                { icon: 'fa-network-wired', label: 'Redes' },
-                { icon: 'fa-wrench', label: 'Mantenimiento' }
-            ],
-            cta: 'Consultar',
-            ctaLink: '/contactanos',
-            price: 'A Medida'
-        }
-    ],
-    ia: [
-        {
-            id: 'integracion-ia',
-            name: 'Integración de Soluciones con Inteligencia Artificial',
-            icon: 'fa-brain',
-            img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&auto=format&fit=crop&q=60',
-            category: 'Innovación',
-            pillLabel: 'INTELIGENCIA',
-            shortDesc: 'Implementación de repositorios de prompts, asistentes virtuales y análisis.',
-            stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
-                { icon: 'fa-pen-ruler', label: 'Modelo', value: 'A Medida' },
-                { icon: 'fa-robot', label: 'Agentes', value: 'Autónomos' }
-            ],
-            includes: [
-                { icon: 'fa-comment-dots', label: 'Chatbots' },
-                { icon: 'fa-chart-pie', label: 'Predictivo' },
-                { icon: 'fa-code', label: 'API AI' }
-            ],
-            cta: 'Consultar',
-            ctaLink: '/contactanos',
-            price: 'A Medida'
-        },
-        {
-            id: 'automatizacion',
-            name: 'Automatización de Procesos Empresariales',
-            icon: 'fa-gears',
-            img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60',
-            category: 'Procesos',
-            pillLabel: 'EFICIENCIA',
-            shortDesc: 'Conexión de CRMs, sistemas de facturación y correos automáticos.',
-            stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
-                { icon: 'fa-pen-ruler', label: 'Flujo', value: 'A Medida' },
-                { icon: 'fa-bolt', label: 'Tiempo', value: 'Ahorrado' }
-            ],
-            includes: [
-                { icon: 'fa-plug', label: 'Integraciones' },
-                { icon: 'fa-envelope-open-text', label: 'Emails' },
-                { icon: 'fa-chart-line', label: 'Productividad' }
-            ],
-            cta: 'Consultar',
-            ctaLink: '/contactanos',
-            price: 'A Medida'
-        },
-        {
-            id: 'herramientas-productividad',
-            name: 'Gestión de Herramientas de Productividad',
-            icon: 'fa-toolbox',
-            img: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&auto=format&fit=crop&q=60',
-            category: 'Gestión',
-            pillLabel: 'COLABORACIÓN',
-            shortDesc: 'Configuración de entornos colaborativos y repositorios de código (GitHub).',
-            stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
-                { icon: 'fa-pen-ruler', label: 'Setup', value: 'A Medida' },
-                { icon: 'fa-users', label: 'Equipos', value: 'Conectados' }
-            ],
-            includes: [
-                { icon: 'fa-github', label: 'Git' },
-                { icon: 'fa-trello', label: 'Gestores' },
-                { icon: 'fa-cloud-arrow-up', label: 'Nube' }
-            ],
-            cta: 'Consultar',
-            ctaLink: '/contactanos',
-            price: 'A Medida'
-        }
     ],
     personalizado: [
         {

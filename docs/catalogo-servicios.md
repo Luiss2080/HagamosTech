@@ -1,105 +1,105 @@
 # Catálogo Maestro de Soluciones — HagamosTech
 
-Fuente de verdad del negocio. El espejo de datos implementado es
-`src/data/serviciosData.js`; cualquier cambio aquí debe reflejarse allí (y viceversa) y
-queda cubierto por el test de integridad de datos (Spec 002).
+Fuente única de la oferta publicada. Su espejo de datos es `src/data/serviciosData.js`; la prueba `src/data/serviciosData.test.js` verifica nombres, categorías, conteos y exclusiones.
 
-Conteo esperado: **8 categorías** con **6 / 6 / 6 / 5 / 5 / 3 / 3 / 1** servicios.
+La oferta combina acompañamiento académico, desarrollo digital, diseño y servicios para personas emprendedoras y profesionales. Cada proyecto de desarrollo se evalúa para acordar alcance y viabilidad.
 
-## 1. Estudiantes y Sector Académico
-Estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y
-presentar proyectos con alto rigor académico (medicina, sistemas de información, RR. HH.).
+Quedan fuera de la oferta: automatización de procesos, n8n, respuestas o flujos automáticos, operación/migración de servidores, DevOps e infraestructura compleja.
 
-| Servicio | Aplicación práctica / ejemplo |
+Conteo vigente: **7 categorías** y **33 servicios** (9 / 5 / 6 / 5 / 5 / 2 / 1).
+
+## 1. Acompañamiento académico
+
+Apoyo formativo para estudiantes de colegio, secundaria y universidad. El servicio orienta y acompaña el aprendizaje; el estudiante desarrolla y presenta su propio trabajo.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Presentaciones PowerPoint e Interactivas | Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología. |
-| Formato APA 7 y Documentación Técnica | Estructuración de monografías, corrección de estilo y referencias bibliográficas exactas. |
-| Infografías, Diagramas y Líneas de Tiempo | Esquemas anatómicos, flujos de bases de datos o diagramas de procesos de RR. HH. |
-| Mapas Conceptuales y Portadas Académicas | Síntesis de marcos teóricos y carátulas formales para entrega de proyectos. |
-| Simuladores Educativos y Proyectos de Redes | Entornos virtuales para redes, robótica educativa o simulación de sistemas. |
-| Apoyo en Proyectos de Programación | Asesoría en código estructurado, algoritmos y lógica computacional. |
+| Presentaciones PowerPoint e Interactivas | Organización visual de exposiciones, defensas y presentaciones académicas. |
+| Formato APA 7 y Documentación Técnica | Orientación de formato, estructura, citas y referencias bibliográficas. |
+| Infografías, Diagramas y Líneas de Tiempo | Recursos visuales para explicar temas, procesos y contenidos de estudio. |
+| Mapas Conceptuales y Portadas Académicas | Síntesis visual de temas y preparación de portadas para trabajos. |
+| Simuladores Educativos y Proyectos de Redes | Orientación en simulaciones y proyectos tecnológicos educativos, según alcance. |
+| Apoyo en Proyectos de Programación | Tutoría de algoritmos, lógica y comprensión de código. |
+| Mentorías Académicas y Apoyo en Tareas | Explicación de contenidos y guía para resolver tareas de distintos niveles. |
+| Acompañamiento en Informes y Monografías | Guía para organizar, desarrollar y revisar documentos académicos. |
+| Proyectos Socioformativos | Orientación para planificar, documentar y presentar proyectos escolares y universitarios. |
 
-## 2. Emprendedores y Nuevos Negocios
-Herramientas para iniciar proyectos comerciales con estructura, identidad y venta inmediata.
+## 2. Emprendedores y nuevos negocios
 
-| Servicio | Aplicación práctica / ejemplo |
+Identidad visual y recursos de comunicación para presentar un emprendimiento.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Creación de Marca y Branding Básico | Identidad para proyectos innovadores (snacks con descartes de fruta, reciclaje de Tetra Pak). |
-| Manual de Identidad Visual | Paletas (negro, verde lima, blanco), tipografías y reglas de uso en proporciones 4x4. |
-| Menús QR y Catálogos de Productos | Digitalización para locales gastronómicos, tiendas de ropa o distribución de tecnología. |
-| Publicidad para Promociones y Ofertas | Campañas "Flash Sale", 2x1 o descuentos por inauguración. |
-| Publicidad para Fechas Especiales | Campañas temáticas: Navidad, Black Friday, aniversarios. |
-| Gestión de Clientes Inicial | Configuración de WhatsApp Business, respuestas automáticas y contactos. |
+| Creación de Marca y Branding Básico | Desarrollo de identidad visual inicial para un negocio o proyecto. |
+| Manual de Identidad Visual | Reglas de uso para logotipo, colores y tipografía. |
+| Catálogos Digitales para Emprendimientos | Presentación digital de productos o servicios. |
+| Publicidad para Promociones y Ofertas | Piezas gráficas para comunicar campañas y ofertas. |
+| Publicidad para Fechas Especiales | Diseño de piezas para fechas y eventos comerciales. |
 
-## 3. Empleo y Desarrollo Profesional
-Optimización para superar filtros ATS y destacar en portales laborales y procesos de selección.
+## 3. Empleo y desarrollo profesional
 
-| Servicio | Aplicación práctica / ejemplo |
+Materiales y orientación para presentar la experiencia profesional.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Currículum Profesional y CV Optimizado ATS | Perfiles técnicos con certificaciones DevOps, Scrum o experiencia médica/administrativa. |
-| Optimización de Perfil de LinkedIn | Titulares, extractos con palabras clave y networking estratégico. |
-| Cartas de Presentación y Traducción de CV | Redacción persuasiva por vacante y traducción técnica al inglés. |
-| Portafolios Profesionales Digitales | Compilación de proyectos de código (GitHub), diseño (Figma) o investigación. |
-| Preparación para Entrevistas y Asesoría Laboral | Simulaciones con enfoque en RR. HH., métricas y seguridad personal. |
-| Certificados Digitales | Diseño y validación de diplomas, constancias y participaciones. |
+| Currículum Profesional y CV Optimizado ATS | Estructuración y presentación clara de experiencia y formación. |
+| Optimización de Perfil de LinkedIn | Mejora de titulares, extracto y presentación profesional. |
+| Cartas de Presentación y Traducción de CV | Preparación de documentos para postulaciones laborales. |
+| Portafolios Profesionales Digitales | Organización de proyectos y trabajos en un portafolio digital. |
+| Preparación para Entrevistas y Asesoría Laboral | Práctica y orientación para procesos de selección. |
+| Certificados Digitales | Diseño de certificados, constancias y reconocimientos. |
 
-## 4. Diseño Gráfico Integral
-Producción visual de alto impacto, fondos transparentes y adaptabilidad impresa/digital.
+## 4. Diseño gráfico integral
 
-| Servicio | Aplicación práctica / ejemplo |
+Piezas gráficas para uso digital e impreso.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Logos e Identidad Visual (Isologotipos) | Marcas para software (FitCenter), servicios técnicos (Termeco) o soluciones industriales (EcoPlast). |
-| Flyers, Banners, Pancartas y Redes Sociales | Gráficos en formato cuadrado (4x4) y gran formato para exposiciones o redes. |
-| Packaging, Etiquetas y Catálogos Físicos | Empaques sostenibles y maquetación de catálogos impresos. |
-| Tarjetas de Presentación e Invitaciones | Tarjetas corporativas con QR e invitaciones a eventos. |
-| Edición y Retoque Fotográfico | Calidad de imagen, corrección de color y eliminación de fondos. |
+| Logos e Identidad Visual (Isologotipos) | Diseño de marca y sus versiones gráficas. |
+| Flyers, Banners, Pancartas y Redes Sociales | Piezas para difusión digital, eventos e impresión. |
+| Packaging, Etiquetas y Catálogos Físicos | Diseño y maquetación de materiales de producto. |
+| Tarjetas de Presentación e Invitaciones | Material gráfico para contactos y eventos. |
+| Edición y Retoque Fotográfico | Ajuste de color, limpieza y preparación de imágenes. |
 
-## 5. Desarrollo Web y E-commerce
-Digitalización de la presencia comercial con UI/UX intuitiva, carga rápida y compatibilidad móvil.
+## 5. Desarrollo web y e-commerce
 
-| Servicio | Aplicación práctica / ejemplo |
+Sitios y experiencias web para personas, emprendimientos e instituciones. El alcance de tiendas y pagos se define caso por caso antes de ofrecerlo como una solución confirmada.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Páginas Web Empresariales | Sitios corporativos completos (p. ej. clínicas, empresas de tecnología). |
-| Landing Pages y Portafolios Personales | Páginas de alta conversión para captar leads o mostrar trabajos freelance. |
-| Tiendas Online Básicas y Sistemas de Pedidos | E-commerce autogestionable con carrito e integración de pagos locales. |
-| Catálogos Digitales Online y Blogs | Muestrarios dinámicos y blogs optimizados para SEO. |
-| Diseño UI/UX, Formularios y Web Responsive | Prototipado interactivo, encuestas digitales y adaptación móvil. |
+| Páginas Web Empresariales | Sitios informativos y corporativos adaptados a móvil. |
+| Landing Pages y Portafolios Personales | Páginas de presentación para campañas o perfiles profesionales. |
+| Tiendas Online Básicas y Sistemas de Pedidos | Desarrollo web sujeto a evaluación de alcance y medios de pago. |
+| Catálogos Digitales Online y Blogs | Publicación organizada de productos, servicios o artículos. |
+| Diseño UI/UX, Formularios y Web Responsive | Diseño de interfaz, formularios y adaptación a pantallas. |
 
-## 6. Soluciones Tecnológicas, Software y Hardware
-Desarrollo profundo y arquitectura para empresas: sistemas operativos a medida, datos y robótica.
+## 6. Software y soluciones digitales
 
-| Servicio | Aplicación práctica / ejemplo |
+Desarrollo de software y modelado de datos como parte de productos digitales definidos con el cliente. No incluye operación de infraestructura ni administración de servidores.
+
+| Servicio | Aplicación práctica |
 |---|---|
-| Desarrollo de Sistemas Web y Software | Plataformas con HTML, CSS, React y backends en Laravel/Blade. |
-| Diseño y Gestión de Bases de Datos | Estructuración, normalización y mantenimiento en SQL Server. |
-| Soporte Tecnológico y DevOps | Mantenimiento de servidores, prácticas ágiles de despliegue y soporte continuo. |
+| Desarrollo de Sistemas Web y Software | Construcción de aplicaciones y sistemas según alcance acordado. |
+| Diseño y Gestión de Bases de Datos | Modelado y organización de datos para aplicaciones. |
 
-## 7. Automatización e Inteligencia Artificial
-Optimización de procesos repetitivos con herramientas de nueva generación.
+## 7. Soluciones personalizadas
 
-| Servicio | Aplicación práctica / ejemplo |
-|---|---|
-| Integración de Soluciones con IA | Repositorios de prompts, asistentes virtuales y análisis predictivo. |
-| Automatización de Procesos Empresariales | Conexión de CRMs, facturación y correos automáticos. |
-| Gestión de Herramientas de Productividad | Entornos colaborativos y repositorios de código (GitHub). |
+Para una necesidad digital que no encaje en una categoría, HagamosTech analiza el pedido y define si está dentro de su alcance de desarrollo, diseño o acompañamiento académico.
 
-## 8. Soluciones Personalizadas (Modelo de Trabajo)
-Filosofía: **"Contanos tu problema, nosotros vemos cómo hacerlo."**
-
-1. **Contanos:** el cliente expone su idea, necesidad o frustración tecnológica.
-2. **Analizamos:** viabilidad, alcance, tecnologías (bases de datos, diseño, hardware).
-3. **Proponemos:** plan de acción, tiempos de entrega y metodología.
-4. **Hacemos:** construimos el software, la identidad o el proyecto académico.
-5. **Entregamos:** despliegue final con resultados, 100% de confidencialidad y soporte continuo.
+1. **Contanos:** explicá tu idea o necesidad.
+2. **Analizamos:** revisamos alcance y viabilidad.
+3. **Proponemos:** acordamos entregables, tiempos y presupuesto.
+4. **Desarrollamos:** hacemos el trabajo acordado.
+5. **Entregamos:** presentamos el resultado y las indicaciones de uso incluidas en la propuesta.
 
 ## Mapeo a `src/data/serviciosData.js`
-| Catálogo | Clave | Nº servicios |
-|---|---|---|
-| 1. Estudiantes y Sector Académico | `estudiantes` | 6 |
-| 2. Emprendedores y Nuevos Negocios | `emprendedores` | 6 |
-| 3. Empleo y Desarrollo Profesional | `empleo` | 6 |
-| 4. Diseño Gráfico Integral | `diseno` | 5 |
-| 5. Desarrollo Web y E-commerce | `web` | 5 |
-| 6. Tecnológicas, Software y Hardware | `software` | 3 |
-| 7. Automatización e IA | `ia` | 3 |
-| 8. Soluciones Personalizadas | `personalizado` | 1 |
+
+| Categoría | Clave | Servicios |
+|---|---|---:|
+| Acompañamiento académico | `estudiantes` | 9 |
+| Emprendedores y nuevos negocios | `emprendedores` | 5 |
+| Empleo y desarrollo profesional | `empleo` | 6 |
+| Diseño gráfico integral | `diseno` | 5 |
+| Desarrollo web y e-commerce | `web` | 5 |
+| Software y soluciones digitales | `software` | 2 |
+| Soluciones personalizadas | `personalizado` | 1 |
