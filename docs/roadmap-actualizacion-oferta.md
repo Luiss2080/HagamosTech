@@ -1,6 +1,6 @@
 # Roadmap SDD — actualización de la oferta de HagamosTech
 
-Estado: **oferta, fases 0–7 completadas; interfaces, UI-0 siguiente**
+Estado: **oferta, fases 0–7 completadas; UI-0 completada; UI-1 siguiente**
 Fecha: 2026-10-17  
 Base revisada: Constitución, Catálogo Maestro, Specs 001–021, README y `HagamosTech (2).docx`.
 
@@ -93,7 +93,7 @@ La spec activa al iniciar el trabajo era **015 — Plantillas de correo con la p
 
 ## 9. Plan de actualización de interfaces
 
-La planificación por interfaces está formalizada en [Spec 023](../specs/023-plan-interfaces-fase-a-fase/spec.md). La actualización de la oferta ya está terminada; las fases UI son un frente separado que comenzará con auditoría, no con cambios visuales.
+La planificación por interfaces está formalizada en [Spec 023](../specs/023-plan-interfaces-fase-a-fase/spec.md). UI-0 ya se ejecutó y sus hallazgos están en [Auditoría de interfaces](auditoria-interfaces-ui0.md) y [Spec 024](../specs/024-auditoria-interfaces-ui0/spec.md). La actualización de la oferta está terminada; UI-1 es la fase siguiente.
 
 La actualización visual y de experiencia se realizará por grupos pequeños. Cada fase tendrá una spec propia antes de tocar componentes; se revisará en móvil y escritorio, y no se empezará la siguiente fase hasta validar la actual.
 
@@ -135,4 +135,4 @@ El router declara 37 rutas funcionales, más la ruta comodín de error 404. Las 
 5. Validar links, accesibilidad por teclado, contenido, lint, suite y build.
 6. Registrar decisiones, resultado y pendientes; recién entonces iniciar la siguiente fase.
 
-**Siguiente fase:** UI-0, auditoría visual y de navegación. No implica rediseñar todavía; primero se documentarán las pantallas, rutas internas y decisiones abiertas (por ejemplo, qué hacer con `/promociones` y las rutas de secciones sueltas de contacto/inicio).
+**UI-0 completada:** se documentaron pantallas, rutas internas y decisiones abiertas (por ejemplo, qué hacer con `/promociones` y las rutas de secciones sueltas de contacto/inicio). **Siguiente fase:** UI-1, consolidar componentes compartidos y criterios visuales; las decisiones comerciales, corporativas y legales que requieren confirmación quedarán señaladas antes de rediseñar esas áreas.
