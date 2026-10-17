@@ -12,7 +12,7 @@ const NAV_ITEMS = [
         subItems: [
             { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo web y software a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
             { id: 'cat-academia', label: 'Academia', desc: 'Mentorías y acompañamiento académico.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
-            { id: 'cat-negocios', label: 'Negocios', desc: 'Diseño y presencia digital para emprendimientos.', target: '/que-hacemos/negocios', icon: 'fa-store' },
+            { id: 'cat-negocios', label: 'Emprendimientos y profesionales', desc: 'Diseño, recursos de marca y desarrollo profesional.', target: '/que-hacemos/negocios', icon: 'fa-briefcase' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
     },
@@ -36,11 +36,11 @@ const NAV_ITEMS = [
         icon: 'fa-users',
         type: 'dropdown',
         subItems: [
-            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
-            { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Sitios web y catálogos digitales.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
-            { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
-            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
+            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Mentorías y orientación según nivel y disponibilidad.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
+            { id: 'pq-emprendedores', label: 'Emprendimientos', desc: 'Identidad, diseño y recursos para presentar tu oferta.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
+            { id: 'pq-profesionales', label: 'Profesionales', desc: 'CV, perfil profesional y portafolios digitales.', target: '/que-hacemos/negocios', icon: 'fa-user-tie' },
+            { id: 'pq-empresas', label: 'Empresas e instituciones', desc: 'Sitios y software con alcance por evaluar.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
+            { id: 'pq-particulares', label: 'Solicitud personalizada', desc: 'Contanos tu proyecto y revisamos si está en nuestro alcance.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'route', target: '/como-trabajamos' },
@@ -53,7 +53,7 @@ const NAV_ITEMS = [
             { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
             { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
             { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/#que-hacemos', icon: 'fa-users' },
+            { id: 'sn-publico', label: 'Áreas de trabajo', desc: 'Tecnología, diseño y acompañamiento académico.', target: '/#areas-trabajo', icon: 'fa-users' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },

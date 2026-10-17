@@ -7,7 +7,7 @@ Alcance: revisión de rutas existentes, renderizado y contenido visible en escri
 
 - Se confirma una base visual reconocible: negro, verde lima, tipografía fuerte, header/footer comunes y páginas construidas con secciones reutilizables.
 - En las 38 rutas probadas no se detectó desbordamiento horizontal del documento a 390 px. Esto no sustituye revisión de teclado, zoom, tabletas ni lectores de pantalla.
-- Hay problemas de contenido y confianza que deben resolverse antes del rediseño visual: carrusel de tecnologías presentado como “últimas soluciones” con 100% de eficacia, textos legales con condiciones de compra/pago/garantía no confirmadas y términos de cuenta/historial con indicadores de respaldo.
+- UI-2 corrigió el mensaje demasiado amplio de Inicio y retiró el carrusel de tecnologías con “100% de eficacia” y el bloque de “últimas soluciones” sin novedades fechadas. Siguen pendientes de revisión los textos legales con condiciones no confirmadas y los estados de cuenta/historial.
 - En `/perfil` se ve el fallback “Usuario Tech” y la navegación de pestañas se corta en pantalla móvil; `/perfil/compras` presenta saldo y pedidos en cero. Durante la revisión, las peticiones de sesiones e historial dieron 502 porque el backend no estaba disponible. No se inferirá que los valores representan datos reales.
 - UI-1 retiró la pantalla de carga cronometrada y el componente `PantallaCarga.jsx`; el contenido de Inicio se muestra sin esa espera ficticia.
 - La consola mostró 2 avisos de claves duplicadas en React y errores de red 502 en endpoints de perfil/compras. Los errores 502 son limitación del entorno de auditoría; la causa de las claves duplicadas está por revisar.
@@ -16,7 +16,7 @@ Alcance: revisión de rutas existentes, renderizado y contenido visible en escri
 
 ### P0 — Veracidad de contenido y confianza
 
-1. **Inicio (`/`)**: el H1 “¿Idea, problema o necesidad? Hagámoslo” y la promesa “cualquier tipo de cliente y cualquier necesidad” exceden el alcance del Catálogo Maestro. Mantener la propuesta amplia, pero delimitarla a desarrollo digital, diseño y acompañamiento académico. La sección “Últimas soluciones disponibles” muestra tecnologías (React, Tailwind CSS, JavaScript, TypeScript), no soluciones o casos; añade estrellas y “Eficacia: 100%” sin evidencia visible. Replantear esa sección como capacidades/áreas confirmadas o mostrar proyectos reales con autorización.
+1. **Inicio (`/`) — resuelto en UI-2**: el hero ahora describe desarrollo web/software, diseño y acompañamiento académico con evaluación de alcance, materia y disponibilidad. Se añadieron cuatro accesos públicos y un proceso de cinco pasos; se retiraron el stack tecnológico como falsa evidencia y el carrusel sin novedades fechadas. No se publicaron testimonios, clientes ni estadísticas.
 2. **Condiciones (`/condiciones`)**: se promete garantía de defectos y una política de ajustes, sin política aprobada que determine plazos, cobertura y exclusiones.
 3. **Términos (`/terminos`)**: se publican QR y transferencias como medios aceptados, factura por servicio, pagos cifrados y cancelaciones. Son condiciones comerciales/operativas no confirmadas.
 4. **Privacidad (`/privacidad`)**: fija retención de datos, periodo fiscal, datos de pago/NIT, derechos “garantizados” y fecha de actualización. Requiere cotejo con prácticas reales y revisión responsable antes de conservarlo como política.

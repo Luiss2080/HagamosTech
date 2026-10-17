@@ -7,7 +7,7 @@ const Footer = () => {
   const menuLinks = [
     { name: "Tecnología", path: "/que-hacemos/tecnologia", icon: "fa-microchip" },
     { name: "Academia", path: "/que-hacemos/academia", icon: "fa-graduation-cap" },
-    { name: "Negocios", path: "/que-hacemos/negocios", icon: "fa-store" },
+    { name: "Emprendimientos y profesionales", path: "/que-hacemos/negocios", icon: "fa-briefcase" },
     { name: "Soluciones personalizadas", path: "/que-hacemos/personalizado", icon: "fa-lightbulb" },
     { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
   ];
@@ -16,7 +16,7 @@ const Footer = () => {
     { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
     { name: "Nuestras soluciones", path: "/servicios/desarrollo-web", icon: "fa-layer-group" },
     { name: "Contanos tu idea", path: "/contactanos", icon: "fa-comment-dots" },
-    { name: "Apoyo y soporte", path: "/contactanos", icon: "fa-headset" },
+    { name: "Consultas", path: "/contactanos", icon: "fa-headset" },
     { name: "Trabajá con nosotros", path: "/contactanos", icon: "fa-briefcase" },
   ];
 
@@ -45,7 +45,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/70 text-[14px] leading-relaxed max-w-sm font-medium">
-              Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+              Acompañamos procesos académicos y desarrollamos soluciones digitales y de diseño. Revisamos el alcance de cada solicitud antes de proponer.
             </p>
             <div className="flex items-center justify-center gap-4 pt-3">
               {[

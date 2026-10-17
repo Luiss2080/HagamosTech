@@ -38,4 +38,24 @@ describe('Navegación de la oferta vigente', () => {
     expect(inicio).not.toContain('institucionescarrusel');
     expect(inicio).not.toContain('novedadescarrusel');
   });
+
+  it('las cuatro áreas públicas corresponden a rutas declaradas y el copy no promete alcance ilimitado', () => {
+    const app = leer('./App.jsx');
+    const header = leer('../components/Layout/Header.jsx');
+    const footer = leer('../components/Layout/Footer.jsx');
+    const areas = leer('../pages/Inicio/sections/AreasTrabajo.jsx');
+
+    for (const ruta of [
+      '/que-hacemos/tecnologia',
+      '/que-hacemos/academia',
+      '/que-hacemos/negocios',
+      '/que-hacemos/personalizado',
+    ]) {
+      expect(areas).toContain(ruta);
+      expect(app).toContain(ruta);
+    }
+    for (const texto of [header, footer, areas]) {
+      expect(texto).not.toMatch(/cualquier cliente|cualquier proyecto|cualquier necesidad/);
+    }
+  });
 });

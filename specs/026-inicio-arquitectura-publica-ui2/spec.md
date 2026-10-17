@@ -13,7 +13,7 @@ La auditoría UI-0 observó un mensaje de Inicio demasiado amplio, un carrusel d
 
 ## Requisitos funcionales
 
-- RF-1: Inicio describirá la oferta como acompañamiento académico, desarrollo digital y diseño; no prometerá resolver cualquier necesidad o atender cualquier tipo de cliente.
+- RF-1: Inicio, header y footer describirán la oferta como acompañamiento académico, desarrollo digital y diseño; no prometerán resolver cualquier necesidad o atender cualquier tipo de cliente.
 - RF-2: Inicio ofrecerá accesos claros a las rutas `/que-hacemos/tecnologia`, `/que-hacemos/academia`, `/que-hacemos/negocios` y `/que-hacemos/personalizado`.
 - RF-3: La sección de categorías de Inicio seguirá derivando sus nombres/servicios de `SERVICIOS_DATA` y permitirá explorar las siete categorías vigentes.
 - RF-4: La experiencia pública no presentará tecnologías como casos de éxito ni cifras, reseñas, calificaciones, disponibilidad o resultados no verificados; tampoco rotulará oferta vigente como “últimas novedades”.
@@ -26,7 +26,7 @@ La auditoría UI-0 observó un mensaje de Inicio demasiado amplio, un carrusel d
 - Modificar páginas `/servicios/*`, contacto, empresa, cuenta, legales o backend.
 - Cambiar rutas, catálogo, precios, medios de pago, datos corporativos o el diseño global definido en UI-1.
 - Publicar casos de éxito, testimonios, logotipos de clientes o estadísticas sin evidencia aprobada.
-- Rehacer la navegación global o instalar dependencias.
+- Cambiar estructura/orden de navegación o instalar dependencias; sí se permite alinear el texto existente del menú/footer con la oferta aprobada.
 
 ## Decisiones de contenido
 
@@ -45,12 +45,17 @@ La auditoría UI-0 observó un mensaje de Inicio demasiado amplio, un carrusel d
 4. Reemplazar los carruseles de “ventajas”/“novedades” en Inicio por un proceso de cinco pasos alineado con el Catálogo Maestro.
 5. Alinear la página de emprendimientos para incluir categorías de emprendimientos, empleo, diseño y desarrollo web; conservar el catálogo como fuente.
 6. Añadir pruebas de Inicio y páginas públicas; recorrer rutas y tamaños con Playwright.
+7. Alinear las descripciones existentes del header/footer a las áreas y públicos vigentes, preservando sus destinos actuales.
 
 ## Validación
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 | Prueba de texto del hero | Pendiente |
-| RF-2 y RF-5 | Pruebas de enlaces y render de rutas públicas | Pendiente |
-| RF-3 y RF-4 | Pruebas de 7 categorías y ausencia de claims desautorizados | Pendiente |
-| RF-6 y RF-7 | Pruebas de componentes, Playwright móvil/escritorio, suite, lint, build y diff check | Pendiente |
+| RF-1 | Prueba del hero; copy del Header/Footer alineado a servicios y públicos vigentes. | ✅ |
+| RF-2 y RF-5 | Pruebas de enlaces/segmentos; Playwright confirmó las 4 rutas públicas y sus páginas cargadas. | ✅ |
+| RF-3 y RF-4 | `ServiciosGrid.test.jsx`: siete categorías salen de `SERVICIOS_DATA`; Inicio ya no contiene los carruseles/claims retirados. | ✅ |
+| RF-6 y RF-7 | Playwright en 390 px verificó Inicio y las cuatro rutas sin overflow; 50/50 tests, lint sin errores, build y `git diff --check` exitosos. | ✅ |
+
+## Estado
+
+Implementada y validada el 2026-10-17. Se mantienen rutas, catálogo, APIs y estructura de datos; los cambios se limitan a presentación, copy y pruebas de las áreas públicas acordadas.
