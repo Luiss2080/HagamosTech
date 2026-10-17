@@ -1,7 +1,6 @@
-import React, { lazy, Suspense, useCallback, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
-import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import InicioSesionModal from '../components/Modales/InicioSesionModal';
@@ -56,9 +55,6 @@ const REGISTER_MODAL_KEYS = new Set(['modal_register', 'startTrialModal', 'regis
 const CONTACT_MODAL_KEYS = new Set(['modal_contact', 'contactModal', 'contactarModal', 'contactoModal']);
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [contentVisible, setContentVisible] = useState(false);
-
   const initSession = useAuthStore((s) => s.initSession);
 
   useEffect(() => {
@@ -75,11 +71,6 @@ const App = () => {
     openModal,
     closeModal
   } = useModalStore();
-
-  const handleLoadComplete = useCallback(() => {
-    setIsLoading(false);
-    setTimeout(() => setContentVisible(true), 50);
-  }, []);
 
   useEffect(() => {
     window.openModal = (modalName) => {
@@ -134,10 +125,8 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <SeoRuta />
-      {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
-      <div className={`transition-opacity duration-700 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <AppLayout>
-            <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
+      <AppLayout>
+        <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
             <Routes>
           {/* Rutas Principales */}
           <Route path="/" element={<Inicio />} />
@@ -185,9 +174,8 @@ const App = () => {
               {/* Fallback Route */}
               <Route path="*" element={<Error404 />} />
             </Routes>
-            </Suspense>
-
-          </AppLayout>
+        </Suspense>
+      </AppLayout>
 
           {/* Renderizado Centralizado de Modales - fuera del AppLayout para estar por encima del Header */}
           <InicioSesionModal
@@ -216,7 +204,6 @@ const App = () => {
             video={videoData}
           />
           <RastreadorActividad />
-      </div>
     </Router>
   )
 }

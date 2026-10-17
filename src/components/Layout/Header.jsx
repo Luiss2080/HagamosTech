@@ -88,6 +88,7 @@ const Header = () => {
     }, []);
 
     const userMenuRef = useRef(null);
+    const mobileMenuButtonRef = useRef(null);
     const location = useLocation();
     const navigate = useNavigate();
     const user = useAuthStore((state) => state.user);
@@ -127,6 +128,20 @@ const Header = () => {
             document.body.classList.remove('overflow-hidden');
         }
         return () => document.body.classList.remove('overflow-hidden');
+    }, [isMenuOpen]);
+
+    useEffect(() => {
+        if (!isMenuOpen) return undefined;
+
+        const handleMenuKeyDown = (event) => {
+            if (event.key === 'Escape') {
+                setIsMenuOpen(false);
+                mobileMenuButtonRef.current?.focus();
+            }
+        };
+
+        document.addEventListener('keydown', handleMenuKeyDown);
+        return () => document.removeEventListener('keydown', handleMenuKeyDown);
     }, [isMenuOpen]);
 
     useEffect(() => {
@@ -263,6 +278,7 @@ const Header = () => {
                         <div className="ml-auto flex items-center gap-2 xl:hidden">
                             <button
                                 id="mobile-menu-btn"
+                                ref={mobileMenuButtonRef}
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 aria-label={isMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
                                 aria-expanded={isMenuOpen}
