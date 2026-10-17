@@ -10,7 +10,7 @@ const ChatHeader = ({ botName, botRole, onClose, isMenuOpen, onToggleMenu }) => 
         </div>
       </div>
       <div>
-        <h3 className="font-bold text-white text-[16px] leading-tight drop-shadow-sm">{botName}</h3>
+        <h3 id="niko-chat-title" className="font-bold text-white text-[16px] leading-tight drop-shadow-sm">{botName}</h3>
         <div className="text-[11.5px] text-slate-400 font-medium">{botRole}</div>
       </div>
     </div>
