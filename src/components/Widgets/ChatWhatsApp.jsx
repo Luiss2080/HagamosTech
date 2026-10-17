@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
 import { Send, X } from 'lucide-react';
 
@@ -13,13 +13,19 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
   const wasOpenRef = useRef(false);
   const reduceMotion = useReducedMotion();
 
+  const closePanel = useCallback((returnFocus = false) => {
+    setIsOpen(false);
+    if (returnFocus) {
+      window.setTimeout(() => triggerRef.current?.focus(), reduceMotion ? 0 : 250);
+    }
+  }, [reduceMotion]);
+
   useEffect(() => {
     if (isOpen) {
       onOpen?.();
       window.setTimeout(() => inputRef.current?.focus(), 0);
     } else if (wasOpenRef.current) {
       onClose?.();
-      window.setTimeout(() => triggerRef.current?.focus(), 0);
     }
     wasOpenRef.current = isOpen;
   }, [isOpen, onOpen, onClose]);
@@ -28,7 +34,7 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
     if (!isOpen) return undefined;
 
     const closeOnEscape = (event) => {
-      if (event.key === 'Escape') setIsOpen(false);
+      if (event.key === 'Escape') closePanel(true);
     };
     const closeOnOutsideClick = (event) => {
       if (widgetRef.current && !widgetRef.current.contains(event.target)) {
@@ -42,7 +48,7 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
       document.removeEventListener('keydown', closeOnEscape);
       document.removeEventListener('pointerdown', closeOnOutsideClick);
     };
-  }, [isOpen]);
+  }, [isOpen, closePanel]);
 
   const handleSendMessage = (event) => {
     event.preventDefault();
@@ -92,7 +98,7 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
               </div>
               <button
                 type="button"
-                onClick={() => setIsOpen(false)}
+                onClick={() => closePanel(true)}
                 aria-label="Cerrar panel de WhatsApp"
                 className="flex h-9 w-9 items-center justify-center rounded-full text-white/90 transition-colors hover:bg-white/10"
               >
@@ -136,7 +142,6 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
             onClick={() => setIsOpen(true)}
             aria-label="Abrir contacto por WhatsApp"
             aria-expanded={isOpen}
-            aria-controls="whatsapp-contact-panel"
             className="flex h-14 w-14 items-center justify-center rounded-2xl border-none bg-[#25D366] text-white shadow-lg shadow-emerald-900/30 transition-transform hover:scale-105"
           >
             <i className="fab fa-whatsapp text-4xl" aria-hidden="true" />
