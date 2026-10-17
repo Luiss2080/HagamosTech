@@ -86,6 +86,10 @@ Desarrollo de software a medida para digitalizar y gestionar operaciones acordad
 
 Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. También se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles y modernización de productos existentes; cada entrega queda limitada a lo acordado.
 
+| Servicio | Aplicación práctica |
+|---|---|
+| Soluciones Personalizadas | Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance. |
+
 1. **Contanos:** explicá tu idea o necesidad.
 2. **Analizamos:** revisamos alcance y viabilidad.
 3. **Proponemos:** acordamos entregables, tiempos y presupuesto.

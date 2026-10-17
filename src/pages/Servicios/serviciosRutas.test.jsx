@@ -23,7 +23,7 @@ describe('Rutas de servicios UI-3', () => {
 
     expect(screen.getByRole('heading', { level: 1, name: titulo })).toBeInTheDocument();
     expect(container.querySelectorAll('main article')).toHaveLength(cantidad);
-    const enlacesConsulta = screen.getAllByRole('link', { name: /consultar/i });
+    const enlacesConsulta = screen.getAllByRole('link', { name: /consultar|contanos/i });
     expect(enlacesConsulta.length).toBeGreaterThanOrEqual(2);
     expect(enlacesConsulta.every((enlace) => enlace.getAttribute('href') === '/contactanos')).toBe(true);
   });

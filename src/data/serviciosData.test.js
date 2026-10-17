@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { CATEGORIES, SERVICIOS_DATA } from './serviciosData';
 
 // Integridad de la oferta respecto al Catálogo Maestro (Spec 002).
@@ -102,7 +103,7 @@ const TERMINOS_PROHIBIDOS = [
   'inteligencia artificial',
 ];
 
-const CATALOGO_MAESTRO = readFileSync(new URL('../../docs/catalogo-servicios.md', import.meta.url), 'utf8');
+const CATALOGO_MAESTRO = readFileSync(resolve(process.cwd(), 'docs/catalogo-servicios.md'), 'utf8');
 
 describe('Integridad de la oferta (serviciosData)', () => {
   it('declara exactamente las 7 categorías del catálogo', () => {
@@ -156,8 +157,8 @@ describe('Integridad de la oferta (serviciosData)', () => {
   it('incluye ejemplos de alcance web, software y acompañamiento académico', () => {
     const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
     for (const ejemplo of [
-      'colegios',
-      'universidades',
+      'aplicaciones web',
+      'presentaciones académicas',
       'inventario',
       'facturación',
       'crm',

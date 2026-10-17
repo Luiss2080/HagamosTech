@@ -305,7 +305,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&auto=format&fit=crop&q=60',
             category: 'Marketing',
             pillLabel: 'TEMÁTICAS',
-            shortDesc: 'Piezas gráficas para fechas y eventos comerciales.',
+            shortDesc: 'Diseño de piezas para fechas y eventos comerciales.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -709,7 +709,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60',
             category: 'Datos',
             pillLabel: 'ESTRUCTURA',
-            shortDesc: 'Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable, sin flujos de automatización.',
+            shortDesc: 'Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -733,7 +733,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60',
             category: 'Exclusivo',
             pillLabel: 'CONTANOS TU PROBLEMA',
-            shortDesc: 'Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. También se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles y modernización de productos existentes; cada entrega queda limitada a lo acordado.',
+            shortDesc: 'Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: '100% A Medida' },
