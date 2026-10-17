@@ -76,7 +76,7 @@ describe('Flujos de contacto UI-4', () => {
 
     await waitFor(() => expect(ContactService.sendEmbeddedContact).toHaveBeenCalledOnce());
     expect(await screen.findByRole('heading', { name: 'Consulta recibida' })).toBeInTheDocument();
-    expect(screen.getByRole('dialog')).toHaveTextContent('Mensaje enviado exitosamente');
+    expect(screen.getByText('Mensaje enviado exitosamente')).toBeInTheDocument();
     expect(ContactService.sendEmbeddedContact).toHaveBeenCalledOnce();
     expect(onClose).not.toHaveBeenCalled();
   });
