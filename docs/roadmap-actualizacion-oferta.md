@@ -1,6 +1,6 @@
 # Roadmap SDD — actualización de la oferta de HagamosTech
 
-Estado: **fases 0–7 completadas**
+Estado: **oferta, fases 0–7 completadas; interfaces, UI-0 siguiente**
 Fecha: 2026-10-17  
 Base revisada: Constitución, Catálogo Maestro, Specs 001–021, README y `HagamosTech (2).docx`.
 
@@ -90,3 +90,49 @@ Se instaló la skill `figma` en Codex. GitHub MCP ya estaba instalado; Figma MCP
 ## 8. Fuente revisada y reglas de ejecución
 
 La spec activa al iniciar el trabajo era **015 — Plantillas de correo con la paleta de la web**; la Spec 016 ya registra el primer cambio. Se seguirá la Constitución: Catálogo Maestro como fuente de oferta, español, requisitos trazables y pruebas por requisito. Al terminar cada cambio de código se ejecutarán `npm run lint`, `npm run test:run` y `npm run build` según la validación de la spec.
+
+## 9. Plan de actualización de interfaces
+
+La planificación por interfaces está formalizada en [Spec 023](../specs/023-plan-interfaces-fase-a-fase/spec.md). La actualización de la oferta ya está terminada; las fases UI son un frente separado que comenzará con auditoría, no con cambios visuales.
+
+La actualización visual y de experiencia se realizará por grupos pequeños. Cada fase tendrá una spec propia antes de tocar componentes; se revisará en móvil y escritorio, y no se empezará la siguiente fase hasta validar la actual.
+
+### Inventario de interfaces existentes
+
+El router declara 37 rutas funcionales, más la ruta comodín de error 404. Las rutas internas como `/inicio/hero` o `/contacto/formulario` parecen secciones expuestas como páginas independientes; se revisará su propósito y acceso antes de decidir si siguen siendo navegables.
+
+| Grupo | Rutas declaradas | Enfoque |
+|---|---|---|
+| Entrada y navegación | `/`, `/inicio/hero`, `/que-hacemos/tecnologia`, `/que-hacemos/academia`, `/que-hacemos/negocios`, `/que-hacemos/personalizado` | Propuesta de valor, navegación y derivación a cada necesidad |
+| Servicios | `/servicios/desarrollo-web`, `/servicios/sistemas-apps`, `/servicios/para-tu-negocio`, `/servicios/apoyo-academico`, `/servicios/empleo`, `/servicios/diseno-grafico` | Casos de uso, alcance del Catálogo Maestro y solicitud de propuesta |
+| Empresa y proceso | `/sobre-nosotros`, `/sobre-nosotros/historia`, `/sobre-nosotros/mision-vision`, `/sobre-nosotros/valores`, `/sobre-nosotros/videos`, `/como-trabajamos`, `/promociones` | Confianza, información verificable y revisión de vigencia de promociones |
+| Contacto | `/contactanos`, `/contacto/hero`, `/contacto/formulario`, `/contacto/recursos`, `/contacto/ubicacion` | Canales, formulario, información de contacto y estados reales de envío |
+| Cuenta y acceso | `/recuperar-contrasena`, `/perfil`, `/configuracion`, `/perfil/compras`, más modales de inicio de sesión y registro | Acceso, recuperación, perfil y funciones ligadas a datos reales |
+| Legal | `/condiciones`, `/privacidad`, `/terminos`, `/cookies`, además del modal de términos | Documentos coherentes, legibles y conectados entre sí |
+| Errores | `/errors/401`, `/errors/403`, `/errors/404`, `/errors/419`, `/errors/500`, `*` | Explicar el problema y ofrecer una salida útil |
+| Elementos globales | Header, menú móvil, footer, botones, modales, chat/WhatsApp, estados de carga | Consistencia, accesibilidad y funcionamiento transversal |
+
+### Fases de interfaz propuestas
+
+| Fase | Grupo de trabajo | Resultado verificable | Criterio para avanzar |
+|---|---|---|---|
+| UI-0. Auditoría y decisiones | Capturas/estado actual por ruta, mapa de enlaces, componentes compartidos, contenido dudoso y deuda responsive/accesible | Matriz por pantalla: conservar, reorganizar, corregir o retirar; decisiones abiertas asignadas | Sin servicios o afirmaciones sin fuente; alcance firmado en spec |
+| UI-1. Sistema visual compartido | Colores, tipografía, espaciado, botones, tarjetas, formularios, navegación, footer, foco, modales y comportamiento móvil | Base visual reutilizable que respeta identidad existente | Lint/tests/build en verde y componentes globales revisados en móvil/escritorio |
+| UI-2. Inicio y arquitectura pública | Inicio, header/footer y páginas `/que-hacemos/*` | Visitante entiende qué hace HagamosTech y encuentra su camino | Rutas y CTA probados; sin contenido fuera del catálogo |
+| UI-3. Servicios y catálogo | Seis páginas `/servicios/*` y tarjetas/listados compartidos | Oferta organizada por necesidad, ejemplos y alcance | Cada servicio coincide con Catálogo Maestro y deriva a contacto |
+| UI-4. Conversión y proceso | Contacto, formulario, recursos, ubicación, `/como-trabajamos`, modales de contacto/WhatsApp | Camino de consulta claro y estados de envío veraces | Pruebas de validación, error y éxito real del formulario |
+| UI-5. Empresa y confianza | Sobre nosotros, historia, misión/visión, valores y videos | Información institucional ordenada y comprobable | Cada afirmación publicada tiene fuente confirmada |
+| UI-6. Acceso y cuenta | Registro, inicio, recuperación, perfil, configuración e historial | Flujos consistentes con autenticación y datos reales del backend | Pruebas por estado y rol; no simular compras/operaciones |
+| UI-7. Legal y errores | Términos, privacidad, cookies, condiciones y errores | Páginas legibles, navegables y con rutas de recuperación | Enlaces, responsive y navegación por teclado revisados |
+| UI-8. QA transversal | Todas las rutas, tamaños de pantalla, accesibilidad, SEO y rendimiento | Matriz final de cobertura y defectos cerrados | Suite, lint, build y recorrido E2E acordado en verde |
+
+### Forma de trabajo para cada fase
+
+1. Crear o revisar la spec de la fase y su contenido autorizado.
+2. Inspeccionar todas las pantallas del grupo en móvil y escritorio.
+3. Acordar mapa, jerarquía de contenido y estados antes de implementar.
+4. Actualizar componentes y pruebas del grupo sin adelantar páginas de otra fase.
+5. Validar links, accesibilidad por teclado, contenido, lint, suite y build.
+6. Registrar decisiones, resultado y pendientes; recién entonces iniciar la siguiente fase.
+
+**Siguiente fase:** UI-0, auditoría visual y de navegación. No implica rediseñar todavía; primero se documentarán las pantallas, rutas internas y decisiones abiertas (por ejemplo, qué hacer con `/promociones` y las rutas de secciones sueltas de contacto/inicio).
