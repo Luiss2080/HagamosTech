@@ -50,10 +50,10 @@ const NAV_ITEMS = [
         icon: 'fa-circle-info',
         type: 'dropdown',
         subItems: [
-            { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
-            { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
-            { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: 'Áreas de trabajo', desc: 'Tecnología, diseño y acompañamiento académico.', target: '/#areas-trabajo', icon: 'fa-users' },
+            { id: 'sn-origen', label: 'Nuestro enfoque', desc: 'Cómo revisamos solicitudes y acordamos alcance.', target: '/sobre-nosotros#origen', icon: 'fa-diagram-project' },
+            { id: 'sn-mision', label: 'Propósito y rumbo', desc: 'Desarrollo digital, diseño y acompañamiento académico.', target: '/sobre-nosotros#mision', icon: 'fa-compass' },
+            { id: 'sn-valores', label: 'Principios de trabajo', desc: 'Claridad, colaboración y alcance acordado.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
+            { id: 'sn-publico', label: 'Áreas que acompañamos', desc: 'Conocé los caminos de orientación a los servicios.', target: '/sobre-nosotros/videos', icon: 'fa-layer-group' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },

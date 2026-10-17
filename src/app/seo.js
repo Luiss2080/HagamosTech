@@ -79,9 +79,29 @@ const REGLAS = [
     description: 'Escribinos y te armamos una propuesta a medida.',
   },
   {
+    coincide: (p) => p.startsWith('/sobre-nosotros/historia'),
+    title: 'Nuestro enfoque | HagamosTech',
+    description: 'Conocé cómo revisamos solicitudes y acordamos el alcance antes de comenzar.',
+  },
+  {
+    coincide: (p) => p.startsWith('/sobre-nosotros/mision-vision'),
+    title: 'Propósito y rumbo | HagamosTech',
+    description: 'El propósito y la orientación de la oferta de desarrollo digital, diseño y acompañamiento académico.',
+  },
+  {
+    coincide: (p) => p.startsWith('/sobre-nosotros/valores'),
+    title: 'Principios de trabajo | HagamosTech',
+    description: 'Principios de claridad, colaboración y alcance acordado para los servicios de HagamosTech.',
+  },
+  {
+    coincide: (p) => p.startsWith('/sobre-nosotros/videos'),
+    title: 'Áreas que acompañamos | HagamosTech',
+    description: 'Explorá las áreas vigentes de desarrollo digital, diseño y acompañamiento académico.',
+  },
+  {
     coincide: (p) => p.startsWith('/sobre-nosotros'),
     title: 'Sobre nosotros | HagamosTech',
-    description: 'Historia, misión, visión y valores de HagamosTech.',
+    description: 'Conocé el alcance y enfoque de trabajo de HagamosTech.',
   },
   {
     coincide: (p) => p.startsWith('/perfil') || p.startsWith('/configuracion'),

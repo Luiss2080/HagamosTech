@@ -146,10 +146,10 @@ const App = () => {
               <Route path="/terminos" element={<TerminosPagina />} />
               <Route path="/cookies" element={<CookiesPagina />} />
               <Route path="/sobre-nosotros" element={<SobreNosotrosIndex />} />
-              <Route path="/sobre-nosotros/historia" element={<Historia />} />
-              <Route path="/sobre-nosotros/mision-vision" element={<MisionVision />} />
-              <Route path="/sobre-nosotros/valores" element={<Valores />} />
-              <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
+              <Route path="/sobre-nosotros/historia" element={<Historia standalone />} />
+              <Route path="/sobre-nosotros/mision-vision" element={<MisionVision standalone />} />
+              <Route path="/sobre-nosotros/valores" element={<Valores standalone />} />
+              <Route path="/sobre-nosotros/videos" element={<VideosTikTok standalone />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
               <Route path="/como-trabajamos" element={<ComoTrabajamos />} />
               <Route path="/contactanos" element={<ContactoPagina />} />

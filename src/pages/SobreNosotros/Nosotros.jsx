@@ -8,11 +8,9 @@ import ProcesoTrabajo from './sections/Historia';
 
 const SobreNosotrosPagina = () => {
     return (
-        <div id="team-page" className="relative overflow-hidden min-h-screen bg-white">
-            {/* Organic Soft Blobs Background */}
-            <div className="absolute top-[-5%] left-[-10%] w-[50%] h-[50%] bg-[#A3E635]/5 rounded-full blur-[100px] pointer-events-none"></div>
-            <div className="absolute top-[30%] right-[-10%] w-[40%] h-[40%] bg-[#0A0A0A]/5 rounded-full blur-[120px] pointer-events-none"></div>
-            <div className="absolute bottom-[10%] left-[20%] w-[45%] h-[45%] bg-[#A3E635]/5 rounded-full blur-[140px] pointer-events-none"></div>
+        <div id="team-page" className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
+            <div aria-hidden="true" className="pointer-events-none absolute left-[-10%] top-[5%] h-[28rem] w-[28rem] rounded-full bg-[#A3E635]/5 blur-[120px]"></div>
+            <div aria-hidden="true" className="pointer-events-none absolute right-[-10%] top-[45%] h-[26rem] w-[26rem] rounded-full bg-[#84CC16]/5 blur-[130px]"></div>
 
             {/* --- SECTION 1: HISTORY / HERO --- */}
             <div className="relative z-10">
@@ -22,7 +20,7 @@ const SobreNosotrosPagina = () => {
                     highlight="HagamosTech"
                     description={(
                         <>
-                            <strong>HagamosTech</strong> es una iniciativa de soluciones digitales, tecnológicas, académicas y empresariales. Trabajamos con <strong>cualquier tipo de cliente</strong> para resolver <strong>cualquier tipo de necesidad</strong> mediante tecnología, creatividad y conocimiento.
+                            <strong>HagamosTech</strong> reúne desarrollo digital, diseño y acompañamiento académico. Revisamos cada solicitud para explicar su alcance y los siguientes pasos antes de comenzar.
                         </>
                     )}
                 />
