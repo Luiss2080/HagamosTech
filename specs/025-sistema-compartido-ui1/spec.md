@@ -48,7 +48,11 @@ UI-0 encontró una espera inicial fija de más de tres segundos con porcentaje s
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 | Prueba de montaje de la app y revisión de referencias al loader | Pendiente |
-| RF-2, RF-3 y RF-6 | Pruebas/CSS y recorrido de teclado con Playwright | Pendiente |
-| RF-4 y RF-5 | Pruebas de texto, controles, Escape y acción de abrir WhatsApp | Pendiente |
-| RF-7 y RF-8 | Suite, lint, build y `git diff --check` | Pendiente |
+| RF-1 | `App.jsx` renderiza sin temporizador; `PantallaCarga.jsx` retirado. En navegador no aparece el copy del loader al abrir Inicio. | ✅ |
+| RF-2, RF-3 y RF-6 | Playwright: foco visible con outline, submenú visible al enfocar, Escape cierra menú móvil y devuelve foco; móvil 390 px sin overflow. CSS/widgets respetan movimiento reducido. | ✅ |
+| RF-4 y RF-5 | `ChatWhatsApp.test.jsx`: 2 pruebas pasan; suite completa confirma 42/42. WhatsApp abre con mensaje escrito, copy veraz, Escape y retorno de foco. Widgets sin presencia/avisos ficticios ni controles inactivos. | ✅ |
+| RF-7 y RF-8 | `npm run lint` sin errores (2 warnings preexistentes), `npm run test:run` 42/42, `npm run build` exitoso y `git diff --check` limpio. | ✅ |
+
+## Estado
+
+Implementada y validada el 2026-10-17. No se alteraron rutas, catálogo, API ni base de datos.

@@ -1,6 +1,6 @@
 # Roadmap SDD — actualización de la oferta de HagamosTech
 
-Estado: **oferta, fases 0–7 completadas; UI-0 completada; UI-1 siguiente**
+Estado: **oferta, fases 0–7 completadas; UI-0 y UI-1 completadas; UI-2 siguiente**
 Fecha: 2026-10-17  
 Base revisada: Constitución, Catálogo Maestro, Specs 001–021, README y `HagamosTech (2).docx`.
 
@@ -93,7 +93,7 @@ La spec activa al iniciar el trabajo era **015 — Plantillas de correo con la p
 
 ## 9. Plan de actualización de interfaces
 
-La planificación por interfaces está formalizada en [Spec 023](../specs/023-plan-interfaces-fase-a-fase/spec.md). UI-0 ya se ejecutó y sus hallazgos están en [Auditoría de interfaces](auditoria-interfaces-ui0.md) y [Spec 024](../specs/024-auditoria-interfaces-ui0/spec.md). La actualización de la oferta está terminada; UI-1 es la fase siguiente.
+La planificación por interfaces está formalizada en [Spec 023](../specs/023-plan-interfaces-fase-a-fase/spec.md). UI-0 ya se ejecutó y sus hallazgos están en [Auditoría de interfaces](auditoria-interfaces-ui0.md) y [Spec 024](../specs/024-auditoria-interfaces-ui0/spec.md). La actualización de la oferta y UI-1 están terminadas; UI-2 es la fase siguiente.
 
 La actualización visual y de experiencia se realizará por grupos pequeños. Cada fase tendrá una spec propia antes de tocar componentes; se revisará en móvil y escritorio, y no se empezará la siguiente fase hasta validar la actual.
 
@@ -117,7 +117,7 @@ El router declara 37 rutas funcionales, más la ruta comodín de error 404. Las 
 | Fase | Grupo de trabajo | Resultado verificable | Criterio para avanzar |
 |---|---|---|---|
 | UI-0. Auditoría y decisiones | Capturas/estado actual por ruta, mapa de enlaces, componentes compartidos, contenido dudoso y deuda responsive/accesible | Matriz por pantalla: conservar, reorganizar, corregir o retirar; decisiones abiertas asignadas | Sin servicios o afirmaciones sin fuente; alcance firmado en spec |
-| UI-1. Sistema visual compartido | Colores, tipografía, espaciado, botones, tarjetas, formularios, navegación, footer, foco, modales y comportamiento móvil | Base visual reutilizable que respeta identidad existente | Lint/tests/build en verde y componentes globales revisados en móvil/escritorio |
+| UI-1. Sistema visual compartido | Colores, tipografía, espaciado, botones, tarjetas, formularios, navegación, footer, foco, modales y comportamiento móvil | Base visual reutilizable que respeta identidad existente | ✅ Loader ficticio retirado; foco, submenú por teclado, Escape y movimiento reducido comprobados; widgets globales corregidos; lint, 42/42 tests y build en verde. UI-8 ampliará cobertura visual |
 | UI-2. Inicio y arquitectura pública | Inicio, header/footer y páginas `/que-hacemos/*` | Visitante entiende qué hace HagamosTech y encuentra su camino | Rutas y CTA probados; sin contenido fuera del catálogo |
 | UI-3. Servicios y catálogo | Seis páginas `/servicios/*` y tarjetas/listados compartidos | Oferta organizada por necesidad, ejemplos y alcance | Cada servicio coincide con Catálogo Maestro y deriva a contacto |
 | UI-4. Conversión y proceso | Contacto, formulario, recursos, ubicación, `/como-trabajamos`, modales de contacto/WhatsApp | Camino de consulta claro y estados de envío veraces | Pruebas de validación, error y éxito real del formulario |
@@ -135,4 +135,4 @@ El router declara 37 rutas funcionales, más la ruta comodín de error 404. Las 
 5. Validar links, accesibilidad por teclado, contenido, lint, suite y build.
 6. Registrar decisiones, resultado y pendientes; recién entonces iniciar la siguiente fase.
 
-**UI-0 completada:** se documentaron pantallas, rutas internas y decisiones abiertas (por ejemplo, qué hacer con `/promociones` y las rutas de secciones sueltas de contacto/inicio). **Siguiente fase:** UI-1, consolidar componentes compartidos y criterios visuales; las decisiones comerciales, corporativas y legales que requieren confirmación quedarán señaladas antes de rediseñar esas áreas.
+**UI-0 completada:** se documentaron pantallas, rutas internas y decisiones abiertas (por ejemplo, qué hacer con `/promociones` y las rutas de secciones sueltas de contacto/inicio). **UI-1 completada:** se retiró la carga ficticia, se mejoró el acceso por teclado del menú, foco y widgets globales, y se respetó movimiento reducido. Validación: lint sin errores (2 warnings preexistentes), 42/42 tests y build exitoso. **Siguiente fase: UI-2**, Inicio y arquitectura pública; las decisiones comerciales, corporativas y legales que requieren confirmación quedarán señaladas antes de rediseñar esas áreas.

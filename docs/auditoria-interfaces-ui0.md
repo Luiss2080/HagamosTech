@@ -9,7 +9,7 @@ Alcance: revisión de rutas existentes, renderizado y contenido visible en escri
 - En las 38 rutas probadas no se detectó desbordamiento horizontal del documento a 390 px. Esto no sustituye revisión de teclado, zoom, tabletas ni lectores de pantalla.
 - Hay problemas de contenido y confianza que deben resolverse antes del rediseño visual: carrusel de tecnologías presentado como “últimas soluciones” con 100% de eficacia, textos legales con condiciones de compra/pago/garantía no confirmadas y términos de cuenta/historial con indicadores de respaldo.
 - En `/perfil` se ve el fallback “Usuario Tech” y la navegación de pestañas se corta en pantalla móvil; `/perfil/compras` presenta saldo y pedidos en cero. Durante la revisión, las peticiones de sesiones e historial dieron 502 porque el backend no estaba disponible. No se inferirá que los valores representan datos reales.
-- La pantalla de carga habla de “Servidor” y “Software Pro”; no corresponde a la oferta que queremos comunicar. Queda pendiente cambiarla en una fase de interfaces.
+- UI-1 retiró la pantalla de carga cronometrada y el componente `PantallaCarga.jsx`; el contenido de Inicio se muestra sin esa espera ficticia.
 - La consola mostró 2 avisos de claves duplicadas en React y errores de red 502 en endpoints de perfil/compras. Los errores 502 son limitación del entorno de auditoría; la causa de las claves duplicadas está por revisar.
 
 ## Hallazgos por prioridad
@@ -25,13 +25,13 @@ Alcance: revisión de rutas existentes, renderizado y contenido visible en escri
 
 ### P1 — Estructura, coherencia y usabilidad
 
-1. **Pantalla global de carga**: incluye “Servidor”, “Software Pro” y “Simuladores”; sustituir el contenido durante UI-1 con conceptos del catálogo aprobado.
+1. **Pantalla global de carga — resuelto en UI-1**: se retiró el overlay con progreso simulado y el componente legado; no se sustituyó por otra espera.
 2. **Rutas de componentes sueltos**: `/inicio/hero`, `/contacto/hero`, `/contacto/formulario`, `/contacto/recursos` y `/contacto/ubicacion` renderizan secciones aisladas. Confirmar si son rutas de previsualización o rutas públicas necesarias; prevenir duplicación en navegación e indexación si son solo internas.
 3. **Acerca de HagamosTech**: `/sobre-nosotros` y sus subrutas de historia, misión/visión, valores y videos tienen copy institucional y video que requieren confirmar fuente, vigencia y autorización. Las cuatro páginas hijas no muestran un `h1` propio en la lectura automatizada.
 4. **Contacto (`/contactanos`)**: la página combina hero, accesos internos, sede, formulario y recursos. Confirmar teléfono, correo, dirección, horarios y mapas antes de conservarlos. El formulario abre WhatsApp externo y limpia los campos; la fase de conversión debe probar ese handoff con consentimiento y estados claros.
 5. **Promociones (`/promociones`)**: el contenido visible ahora describe propuestas, no promociones. El contenido es coherente con la oferta, pero el nombre de la ruta y su ubicación en navegación deben revisarse en la fase de conversión.
 6. **Cuenta en móvil**: las pestañas de perfil/compras/configuración exceden el espacio visible del control; aunque no generan overflow de página, parte de las etiquetas queda cortada y no todas las opciones se descubren fácilmente.
-7. **Widgets globales**: chat y WhatsApp flotan sobre el contenido en móvil. Verificar que no cubran controles, campos o avisos; comprobar etiquetas accesibles y foco por teclado.
+7. **Widgets globales — base resuelta en UI-1**: se quitaron indicadores ficticios de presencia/notificación, se añadieron etiquetas y cierre por Escape; WhatsApp explica el salto externo. Pendiente en QA/UI-8 comprobar que no cubran controles en más tamaños y páginas.
 8. **Error 500 (`/errors/500`)**: afirma que el equipo fue notificado y ya trabaja en resolverlo. Confirmar que exista esa notificación antes de usar el mensaje; redactar el estado según evidencia real.
 
 ### P2 — Pulido visual y deuda técnica a revisar
@@ -95,9 +95,9 @@ Alcance: revisión de rutas existentes, renderizado y contenido visible en escri
 
 ## Orden recomendado después de UI-0
 
-1. UI-1: depurar sistema compartido y cerrar decisiones de contenido urgentes que no requieren backend: copy de carga, navegación, botones, widgets y elementos repetidos.
+1. ✅ UI-1: sistema compartido; loader ficticio retirado, foco visible y acceso por teclado, widgets sin presencia ficticia, Escape y movimiento reducido. La UI-8 todavía revisará cobertura de widgets en todas las páginas/tamaños.
 2. Antes de trabajar UI-4/UI-5/UI-6/UI-7, confirmar datos comerciales/corporativos, políticas legales y comportamiento real de cuenta con backend disponible.
-3. UI-2: Inicio y arquitectura de información pública.
+3. Siguiente: UI-2, Inicio y arquitectura de información pública.
 4. UI-3: páginas de servicio y catálogo.
 5. UI-4: conversión y contacto.
 6. UI-5: empresa y confianza.
