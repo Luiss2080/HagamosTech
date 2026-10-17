@@ -46,7 +46,7 @@ const recursosData = [
         tags: [
             { label: "Tecnología", icon: "fa-microchip" },
             { label: "Academia", icon: "fa-graduation-cap" },
-            { label: "Soporte", icon: "fa-circle-question" }
+            { label: "Consultas", icon: "fa-circle-question" }
         ]
     },
     {

@@ -47,7 +47,7 @@ const FormularioContacto = () => {
                         </span>
                     </h2>
                     <p className="text-white/70 font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-                        Escríbenos para consultas sobre proyectos, soluciones académicas o dudas sobre cómo digitalizar tu negocio. Te responderemos a la brevedad.
+                        Escribinos para presentar tu consulta. La revisaremos para orientarte sobre los siguientes pasos, según el servicio solicitado.
                     </p>
                 </div>
 
