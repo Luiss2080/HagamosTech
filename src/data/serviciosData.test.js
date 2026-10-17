@@ -1,4 +1,5 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
 import { CATEGORIES, SERVICIOS_DATA } from './serviciosData';
 
 // Integridad de la oferta respecto al Catálogo Maestro (Spec 002).
@@ -101,6 +102,8 @@ const TERMINOS_PROHIBIDOS = [
   'inteligencia artificial',
 ];
 
+const CATALOGO_MAESTRO = readFileSync(new URL('../../docs/catalogo-servicios.md', import.meta.url), 'utf8');
+
 describe('Integridad de la oferta (serviciosData)', () => {
   it('declara exactamente las 7 categorías del catálogo', () => {
     expect(Object.keys(SERVICIOS_DATA).sort()).toEqual([...CATEGORIAS_ESPERADAS].sort());
@@ -120,6 +123,16 @@ describe('Integridad de la oferta (serviciosData)', () => {
         SERVICIOS_DATA[categoria].map((s) => s.name),
         `los servicios de "${categoria}" deben coincidir con el catálogo`
       ).toEqual(nombres);
+    }
+  });
+
+  it('cada resumen publicado coincide con la aplicación práctica del catálogo', () => {
+    const filas = CATALOGO_MAESTRO.split(/\r?\n/);
+    for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {
+      for (const servicio of servicios) {
+        const filaCanonica = `| ${servicio.name} | ${servicio.shortDesc} |`;
+        expect(filas, `${categoria}/${servicio.id}: descripción diferente del Catálogo Maestro`).toContain(filaCanonica);
+      }
     }
   });
 
