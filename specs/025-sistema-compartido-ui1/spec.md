@@ -16,9 +16,9 @@ UI-0 encontró una espera inicial fija de más de tres segundos con porcentaje s
 - RF-1: EL SISTEMA no bloqueará el contenido con una pantalla que mida un progreso simulado ni muestre mensajes de servidor, robótica o nivel de calidad no confirmado.
 - RF-2: CUANDO un enlace, botón o campo recibe foco visible por teclado, EL SISTEMA mostrará un indicador de foco reconocible sobre fondos claros y oscuros.
 - RF-3: CUANDO una persona navegue por teclado, EL SISTEMA permitirá entrar a los submenús del header usando foco, y cerrar el menú móvil con Escape.
-- RF-4: EL WIDGET de WhatsApp explicará que la acción abre WhatsApp para enviar una consulta. No mostrará presencia “en línea”, escritura automática, mensajes de notificación o respuesta inmediata.
-- RF-5: EL WIDGET expondrá nombres accesibles en los botones, cerrará con Escape y no ofrecerá controles decorativos sin función.
-- RF-6: CUANDO el sistema operativo prefiera movimiento reducido, EL SISTEMA reducirá animaciones y transiciones no esenciales.
+- RF-4: LOS WIDGETS globales de contacto/asistencia no mostrarán presencia o notificaciones ficticias; el de WhatsApp explicará que la acción abre WhatsApp para enviar una consulta.
+- RF-5: LOS WIDGETS expondrán nombres accesibles en los controles, cerrarán con Escape y no ofrecerán controles decorativos sin función.
+- RF-6: CUANDO el sistema operativo prefiera movimiento reducido, EL SISTEMA reducirá animaciones CSS y el movimiento de los widgets globales.
 - RF-7: EL SISTEMA conservará la identidad existente y no modificará enlaces de navegación, catálogo, datos de contacto, APIs ni esquema de base de datos.
 - RF-8: Las pruebas cubrirán la ausencia del cargador bloqueante, el texto veraz del widget y el comportamiento accesible previsto.
 
