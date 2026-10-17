@@ -1,5 +1,6 @@
 import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'node:fs';
+import { cwd } from 'node:process';
 import { resolve } from 'node:path';
 import { CATEGORIES, SERVICIOS_DATA } from './serviciosData';
 
@@ -103,7 +104,7 @@ const TERMINOS_PROHIBIDOS = [
   'inteligencia artificial',
 ];
 
-const CATALOGO_MAESTRO = readFileSync(resolve(process.cwd(), 'docs/catalogo-servicios.md'), 'utf8');
+const CATALOGO_MAESTRO = readFileSync(resolve(cwd(), 'docs/catalogo-servicios.md'), 'utf8');
 
 describe('Integridad de la oferta (serviciosData)', () => {
   it('declara exactamente las 7 categorías del catálogo', () => {

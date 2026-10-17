@@ -49,7 +49,11 @@ UI-3 cubre seis páginas de servicio: desarrollo web, sistemas/software, emprend
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 | Prueba de las seis páginas con los conteos de servicios de catálogo | Pendiente |
-| RF-2 | Prueba automática que cruza todas las descripciones con el Catálogo Maestro | Pendiente |
-| RF-3 y RF-4 | Pruebas de alcance digital y académico, incluidas exclusiones | Pendiente |
-| RF-5, RF-6 y RF-7 | Pruebas de CTA, Playwright responsive, suite, lint, build y diff check | Pendiente |
+| RF-1 | `serviciosRutas.test.jsx`: seis páginas con 5/2/5/9/6/5 servicios; suma 32 en las seis categorías. | ✅ |
+| RF-2 | `serviciosData.test.js` compara los 33 nombres/descripciones con las filas del Catálogo Maestro. | ✅ |
+| RF-3 y RF-4 | Pruebas de web/software con evaluación de alcance; academia cubre niveles, disponibilidad y autoría del estudiante. | ✅ |
+| RF-5, RF-6 y RF-7 | Las seis CTA funcionan; Playwright en 390/1365 px sin overflow; lint limpio, 60/60 tests, build exitoso y `git diff --check` limpio. | ✅ |
+
+## Estado
+
+Implementada y validada el 2026-10-17. Se mantuvieron las seis rutas, categorías, servicios y CTAs existentes; se alinearon las descripciones con el Catálogo Maestro.
