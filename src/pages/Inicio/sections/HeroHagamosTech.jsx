@@ -25,13 +25,14 @@ const HeroHagamosTech = () => {
                         </span>
 
                         <h1
+                            aria-label="Soluciones digitales y acompañamiento académico"
                             className="uppercase text-[2.4rem] leading-[1.02] sm:text-5xl md:text-5xl lg:text-6xl xl:text-[3.8rem] font-black font-heading text-white tracking-normal"
                             style={{ transform: 'scaleX(1.06)', transformOrigin: 'left center', WebkitTextStrokeWidth: '1.4px', WebkitTextStrokeColor: 'currentColor' }}
                         >
-                            <span className="block">¿Idea, problema</span>
-                            <span className="block">o necesidad?</span>
+                            <span className="block">Soluciones digitales</span>
+                            <span className="block">y acompañamiento</span>
                             <span className="relative inline-block text-[#A3E635] drop-shadow-[0_0_25px_rgba(163,230,53,0.45)]">
-                                Hagámoslo.
+                                académico.
                                 <svg
                                     className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_10px_rgba(163,230,53,0.55)]"
                                     viewBox="0 0 220 12" preserveAspectRatio="none"
@@ -47,7 +48,7 @@ const HeroHagamosTech = () => {
                         </h1>
 
                         <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Soluciones <strong className="text-white">tecnológicas</strong>, <strong className="text-white">digitales</strong> y <strong className="text-white">académicas</strong> para <strong className="text-white">cualquier tipo de cliente</strong> y <strong className="text-white">cualquier necesidad</strong>. No necesitás saber qué tecnología usar: contanos qué querés lograr.
+                            Desarrollamos sitios web y software a medida, creamos recursos de diseño y acompañamos procesos académicos. Revisamos cada solicitud según su alcance, materia y disponibilidad.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center lg:justify-start">
@@ -61,33 +62,17 @@ const HeroHagamosTech = () => {
 
                             <button
                                 onClick={() => {
-                                    const el = document.getElementById('flujo');
+                                    const el = document.getElementById('areas-trabajo');
                                     if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                                    else { navigate('/'); setTimeout(() => document.getElementById('flujo')?.scrollIntoView({ behavior: 'smooth' }), 120); }
+                                    else { navigate('/'); setTimeout(() => document.getElementById('areas-trabajo')?.scrollIntoView({ behavior: 'smooth' }), 120); }
                                 }}
                                 className="group flex items-center justify-center gap-3 w-full sm:w-[210px] h-12 px-6 bg-white hover:bg-white/90 text-[#0A0A0A] font-black text-[11px] uppercase tracking-[0.14em] rounded-full shadow-lg shadow-white/10 hover:shadow-white/20 hover:-translate-y-0.5 transition-all duration-300 cursor-pointer whitespace-nowrap"
                             >
                                 <i className="fas fa-diagram-project text-[13px] flex-shrink-0 text-[#0A0A0A]"></i>
-                                <span>Cómo trabajamos</span>
+                                <span>Explorar áreas</span>
                             </button>
                         </div>
 
-                        <div className="flex items-center gap-3 pt-2 opacity-85">
-                            <div className="flex -space-x-1.5">
-                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
-                                    <i className="fas fa-star"></i>
-                                </div>
-                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-white/40 flex items-center justify-center text-[9px] text-white shadow-sm">
-                                    <i className="fas fa-lightbulb"></i>
-                                </div>
-                                <div className="w-5.5 h-5.5 rounded-full bg-[#0A0A0A] border border-[#A3E635]/40 flex items-center justify-center text-[9px] text-[#A3E635] shadow-sm">
-                                    <i className="fas fa-check"></i>
-                                </div>
-                            </div>
-                            <span className="text-[9px] font-black text-white/60 uppercase tracking-widest leading-none">
-                                Convertimos necesidades en soluciones reales
-                            </span>
-                        </div>
                     </div>
 
                     {/* Right Column - Modernized Larger Image Showcase */}
@@ -97,7 +82,7 @@ const HeroHagamosTech = () => {
                             
                             <img
                                 src="/img/03_Banners/Hero.png"
-                                alt="Soluciones tecnológicas HagamosTech"
+                                alt="HagamosTech: desarrollo digital, diseño y acompañamiento académico"
                                 className="relative w-full h-auto rounded-[2.5rem] object-cover shadow-[0_0_60px_rgba(0,0,0,0.8)] border border-[#A3E635]/20 group-hover/img:scale-[1.01] transition-all duration-500"
                             />
                         </div>

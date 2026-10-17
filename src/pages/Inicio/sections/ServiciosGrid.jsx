@@ -41,11 +41,14 @@ const ServiciosGrid = () => {
                 </div>
 
                 {/* Categorías (Tabs) */}
-                <div className="flex flex-wrap items-center justify-center gap-3 mb-14">
+                <div className="flex flex-wrap items-center justify-center gap-3 mb-14" role="group" aria-label="Categorías de servicios">
                     {CATEGORIES.map((cat) => (
                         <button
                             key={cat.id}
                             onClick={() => setActiveCategory(cat.id)}
+                            type="button"
+                            aria-pressed={activeCategory === cat.id}
+                            aria-controls="servicios-destacados"
                             className={`px-6 py-3 rounded-full text-[10px] sm:text-xs font-black uppercase tracking-wider transition-all duration-300 cursor-pointer ${
                                 activeCategory === cat.id
                                     ? 'bg-[#A3E635] text-[#0A0A0A] shadow-[0_4px_15px_rgba(163,230,53,0.3)] scale-105'
@@ -58,7 +61,7 @@ const ServiciosGrid = () => {
                 </div>
 
                 {/* Renderizado dinámico del carrusel por categoría */}
-                <div className="relative w-full">
+                <div id="servicios-destacados" className="relative w-full" aria-live="polite">
                     {renderActiveCarousel()}
                 </div>
 

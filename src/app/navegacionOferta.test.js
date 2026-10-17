@@ -24,12 +24,18 @@ describe('Navegación de la oferta vigente', () => {
     }
   });
 
-  it('el menú y las novedades no enlazan a servicios retirados', () => {
+  it('el menú y las áreas públicas no enlazan a servicios retirados', () => {
     const header = leer('../components/Layout/Header.jsx');
-    const novedades = leer('../pages/Inicio/sections/NovedadesCarrusel.jsx');
-    for (const texto of [header, novedades]) {
+    const areas = leer('../pages/Inicio/sections/AreasTrabajo.jsx');
+    for (const texto of [header, areas]) {
       expect(texto).not.toContain('/servicios/automatizacion');
       expect(texto).not.toContain('/servicios/inteligencia-artificial');
     }
+  });
+
+  it('Inicio no carga carruseles de tecnologías presentados como casos o novedades', () => {
+    const inicio = leer('../pages/Inicio/Inicio.jsx');
+    expect(inicio).not.toContain('institucionescarrusel');
+    expect(inicio).not.toContain('novedadescarrusel');
   });
 });
