@@ -17,7 +17,7 @@ UI-4 unifica el contacto público con el proceso real de recepción de consultas
 - RF-3: El estado de envío deshabilitará el botón mientras la solicitud esté en curso, y el formulario impedirá envíos duplicados.
 - RF-4: El canal WhatsApp explicará que el texto se abre en WhatsApp y que la persona debe revisarlo/enviarlo desde esa aplicación.
 - RF-5: Contacto y proceso comunicarán un flujo prudente: consulta, revisión, propuesta si es viable, desarrollo con alcance acordado y entrega; no prometerán tiempos, respuesta inmediata, aceptación ni resultados garantizados.
-- RF-6: Los textos dentro del alcance no promocionarán automatizaciones, n8n, IA aplicada, hosting u operación de servidores.
+- RF-6: Los textos dentro del alcance no promocionarán automatizaciones, n8n, IA aplicada, hosting u operación de servidores, ni datos de sede/horario pendientes de confirmación.
 - RF-7: Pruebas cubrirán respuesta exitosa, error de API, datos conservados, integración con la API, WhatsApp y CTA a contacto; vistas utilizables a 390 px y escritorio sin nuevas dependencias.
 
 ## Fuera de alcance
@@ -32,6 +32,7 @@ UI-4 unifica el contacto público con el proceso real de recepción de consultas
 - La página y el modal comparten el mismo servicio de envío existente y tratan toda respuesta HTTP exitosa como confirmación de recepción; no dependen de `status`.
 - El mensaje de éxito describe únicamente que la consulta fue recibida por el sistema para revisión. La respuesta al visitante se representa solo si el endpoint responde con error explícito.
 - WhatsApp sigue siendo un canal alternativo separado del formulario, con confirmación clara de que la persona todavía debe enviar el mensaje desde WhatsApp.
+- Se retiran la dirección, el mapa y el horario de atención que la auditoría previa marcó como pendientes de confirmación; se conservan los canales digitales ya publicados.
 - La metodología no garantiza tiempo, presupuesto ni resultado hasta revisar la solicitud y acordar alcance.
 
 ## Plan técnico

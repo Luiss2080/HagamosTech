@@ -115,15 +115,6 @@ const Footer = () => {
             </h3>
             <ul className="space-y-6 w-full flex flex-col items-center lg:items-start">
               <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-location-dot text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Oficina principal</span>
-                  <span className="text-[14px] text-white/80 font-medium leading-snug group-hover:text-white transition-colors">Av. San Martín y 2do Anillo<br />Equipetrol, Santa Cruz</span>
-                </div>
-              </li>
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
                 <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
                   <i className="fas fa-envelope text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
                 </div>
@@ -139,15 +130,6 @@ const Footer = () => {
                 <div className="flex flex-col text-left">
                   <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Teléfono / WhatsApp</span>
                   <a href="tel:+59161320004" className="text-[14px] text-white/80 font-medium hover:text-white transition-colors">+591 61320004</a>
-                </div>
-              </li>
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-clock text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Horarios</span>
-                  <span className="text-[14px] text-white/80 font-medium group-hover:text-white transition-colors">Lun - Vie: 09:00 - 18:00</span>
                 </div>
               </li>
             </ul>

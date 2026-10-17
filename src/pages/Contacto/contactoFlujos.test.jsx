@@ -1,7 +1,9 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { MemoryRouter } from 'react-router-dom';
 import FormularioContacto from './sections/FormularioContacto';
+import Recursos from './sections/Recursos';
 import ContactoModal from '../../components/Modales/ContactoModal';
 import ContactService from '../../servicios/servicioContacto';
 
@@ -79,5 +81,12 @@ describe('Flujos de contacto UI-4', () => {
     expect(screen.getByText('Mensaje enviado exitosamente')).toBeInTheDocument();
     expect(ContactService.sendEmbeddedContact).toHaveBeenCalledOnce();
     expect(onClose).not.toHaveBeenCalled();
+  });
+
+  it('dirige las tarjetas de recursos al formulario en la ruta correcta', () => {
+    render(<MemoryRouter><Recursos /></MemoryRouter>);
+    const enlaces = screen.getAllByRole('link', { name: /ir al formulario/i });
+    expect(enlaces).toHaveLength(3);
+    expect(enlaces.every((enlace) => enlace.getAttribute('href') === '/contactanos#support')).toBe(true);
   });
 });
