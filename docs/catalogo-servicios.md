@@ -80,7 +80,7 @@ Desarrollo de software a medida para digitalizar y gestionar operaciones acordad
 | Servicio | Aplicación práctica |
 |---|---|
 | Desarrollo de Sistemas Web y Software | Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad. |
-| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable, sin flujos de automatización. |
+| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable. |
 
 ## 7. Soluciones personalizadas
 

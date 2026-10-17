@@ -17,7 +17,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format&fit=crop&q=60',
             category: 'Académico',
             pillLabel: 'EXPOSICIONES',
-            shortDesc: 'Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología.',
+            shortDesc: 'Organización visual de exposiciones, defensas, proyectos, clases y presentaciones académicas.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -39,7 +39,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1455390582262-044cdead2708?w=600&auto=format&fit=crop&q=60',
             category: 'Documentación',
             pillLabel: 'RIGOR ACADÉMICO',
-            shortDesc: 'Estructuración de monografías, corrección de estilo y referencias bibliográficas exactas.',
+            shortDesc: 'Orientación de estructura, formato, citas, referencias, tablas, figuras y documentación técnica según pauta.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -61,7 +61,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1543286386-713bdd548da4?w=600&auto=format&fit=crop&q=60',
             category: 'Visualización',
             pillLabel: 'ESQUEMAS',
-            shortDesc: 'Esquemas anatómicos, flujos de bases de datos o diagramas de procesos de recursos humanos.',
+            shortDesc: 'Recursos visuales para explicar temas, procesos y contenidos de estudio.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -83,7 +83,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1503428593586-e225b39bddfe?w=600&auto=format&fit=crop&q=60',
             category: 'Síntesis',
             pillLabel: 'MARCO TEÓRICO',
-            shortDesc: 'Síntesis de marcos teóricos y diseño formal de carátulas para entrega de proyectos.',
+            shortDesc: 'Síntesis visual de temas y preparación de portadas para trabajos.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -105,7 +105,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60',
             category: 'Tecnología',
             pillLabel: 'ENTORNOS VIRTUALES',
-            shortDesc: 'Entornos virtuales para pruebas de redes, robótica educativa o simulación de sistemas informáticos.',
+            shortDesc: 'Orientación en simulaciones y proyectos tecnológicos educativos, según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
@@ -127,7 +127,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&auto=format&fit=crop&q=60',
             category: 'Software',
             pillLabel: 'CÓDIGO',
-            shortDesc: 'Asesoría en desarrollo de código estructurado, algoritmos y lógica computacional.',
+            shortDesc: 'Tutoría de algoritmos, lógica y comprensión de código.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'A Medida' },
@@ -149,7 +149,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop&q=60',
             category: 'Acompañamiento',
             pillLabel: 'TUTORÍA',
-            shortDesc: 'Mentorías y ejercicios guiados para estudiantes de colegio, secundaria, instituto o universidad, según materia y disponibilidad.',
+            shortDesc: 'Explicación de contenidos, ejercicios guiados y apoyo en tareas de distintos niveles y materias disponibles.',
             stats: [
                 { icon: 'fa-graduation-cap', label: 'Niveles', value: 'Escolar y Superior' },
                 { icon: 'fa-user-group', label: 'Modalidad', value: 'A Coordinar' },
@@ -171,7 +171,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1455390582262-044cdead2708?w=600&auto=format&fit=crop&q=60',
             category: 'Documentación',
             pillLabel: 'ORIENTACIÓN',
-            shortDesc: 'Acompañamiento para delimitar el tema, ordenar capítulos, revisar avances y preparar citas y referencias según la pauta académica.',
+            shortDesc: 'Guía para delimitar tema, organizar capítulos, revisar avances y preparar citas y referencias.',
             stats: [
                 { icon: 'fa-book', label: 'Formato', value: 'Según pauta' },
                 { icon: 'fa-spell-check', label: 'Revisión', value: 'A Coordinar' },
@@ -193,7 +193,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&auto=format&fit=crop&q=60',
             category: 'Proyectos',
             pillLabel: 'ACOMPAÑAMIENTO',
-            shortDesc: 'Guía para definir el problema, objetivos, actividades, evidencias y exposición de proyectos socioformativos.',
+            shortDesc: 'Orientación para definir problema, objetivos, actividades, evidencias, documentación y exposición del proyecto.',
             stats: [
                 { icon: 'fa-users', label: 'Niveles', value: 'Colegio y Universidad' },
                 { icon: 'fa-diagram-project', label: 'Proceso', value: 'Por Etapas' },
@@ -217,7 +217,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1493612276216-ee3925520721?w=600&auto=format&fit=crop&q=60',
             category: 'Branding',
             pillLabel: 'IDENTIDAD',
-            shortDesc: 'Identidad para proyectos innovadores, como producción de snacks o reciclaje.',
+            shortDesc: 'Desarrollo de identidad visual inicial para un negocio o proyecto.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -239,7 +239,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60',
             category: 'Branding',
             pillLabel: 'REGLAS VISUALES',
-            shortDesc: 'Definición de paletas, tipografías y reglas de uso en proporciones 4x4.',
+            shortDesc: 'Reglas de uso para logotipo, colores y tipografía.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -261,7 +261,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop&q=60',
             category: 'Digitalización',
             pillLabel: 'AGILIDAD',
-            shortDesc: 'Catálogos digitales para presentar productos y servicios de un emprendimiento.',
+            shortDesc: 'Presentación digital de productos o servicios.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -283,7 +283,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&auto=format&fit=crop&q=60',
             category: 'Marketing',
             pillLabel: 'PROMOCIONES',
-            shortDesc: 'Diseño de campañas "Flash Sale", 2x1 o descuentos por inauguración.',
+            shortDesc: 'Piezas gráficas para comunicar campañas y ofertas.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -305,7 +305,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1513885535751-8b9238bd345a?w=600&auto=format&fit=crop&q=60',
             category: 'Marketing',
             pillLabel: 'TEMÁTICAS',
-            shortDesc: 'Campañas temáticas para Navidad, Black Friday o aniversarios comerciales.',
+            shortDesc: 'Piezas gráficas para fechas y eventos comerciales.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -329,7 +329,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&auto=format&fit=crop&q=60',
             category: 'Empleabilidad',
             pillLabel: 'CURRÍCULUM',
-            shortDesc: 'Estructuración de perfiles técnicos destacando certificaciones o experiencia.',
+            shortDesc: 'Estructuración y presentación clara de experiencia y formación.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -351,7 +351,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1611944212129-29977ae1398c?w=600&auto=format&fit=crop&q=60',
             category: 'Networking',
             pillLabel: 'PERFIL DIGITAL',
-            shortDesc: 'Configuración de titulares, extractos con palabras clave y networking estratégico.',
+            shortDesc: 'Mejora de titulares, extracto y presentación profesional.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Ajuste', value: 'A Medida' },
@@ -373,7 +373,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1554774853-719586f82d77?w=600&auto=format&fit=crop&q=60',
             category: 'Redacción',
             pillLabel: 'PERSUASIÓN',
-            shortDesc: 'Redacción persuasiva adaptada a vacantes específicas y traducción técnica al inglés.',
+            shortDesc: 'Preparación de documentos para postulaciones laborales.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Redacción', value: 'A Medida' },
@@ -395,7 +395,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1481481600673-c6cb960f0896?w=600&auto=format&fit=crop&q=60',
             category: 'Exhibición',
             pillLabel: 'PROYECTOS',
-            shortDesc: 'Compilación visual de proyectos de código, diseños o investigaciones.',
+            shortDesc: 'Organización de proyectos y trabajos en un portafolio digital.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -417,7 +417,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=600&auto=format&fit=crop&q=60',
             category: 'Asesoría',
             pillLabel: 'SIMULACIONES',
-            shortDesc: 'Simulaciones de entrevistas con enfoque en recursos humanos, métricas y seguridad.',
+            shortDesc: 'Práctica y orientación para procesos de selección.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Guía', value: 'A Medida' },
@@ -439,7 +439,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1523289217630-0dd16184af8e?w=600&auto=format&fit=crop&q=60',
             category: 'Validación',
             pillLabel: 'DIPLOMAS',
-            shortDesc: 'Diseño y validación visual de diplomas, constancias y participaciones.',
+            shortDesc: 'Diseño de certificados, constancias y reconocimientos.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -463,7 +463,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?w=600&auto=format&fit=crop&q=60',
             category: 'Gráfico',
             pillLabel: 'MARCAS',
-            shortDesc: 'Creación de marcas para software, servicios técnicos o soluciones industriales.',
+            shortDesc: 'Diseño de marca y sus versiones gráficas.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -485,7 +485,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60',
             category: 'Publicidad',
             pillLabel: 'REDES Y PRINT',
-            shortDesc: 'Gráficos publicitarios en formato cuadrado (4x4) y gran formato.',
+            shortDesc: 'Piezas para difusión digital, eventos e impresión.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -507,7 +507,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1607083206869-4c7672e72a8a?w=600&auto=format&fit=crop&q=60',
             category: 'Producto',
             pillLabel: 'EMPAQUES',
-            shortDesc: 'Diseño de empaques de productos sostenibles y maquetación de catálogos impresos.',
+            shortDesc: 'Diseño y maquetación de materiales de producto.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -529,7 +529,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1586075010923-2dd4570fb338?w=600&auto=format&fit=crop&q=60',
             category: 'Corporativo',
             pillLabel: 'PRESENTACIÓN',
-            shortDesc: 'Tarjetas corporativas elegantes, con opciones QR, e invitaciones a eventos.',
+            shortDesc: 'Material gráfico para contactos y eventos.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -551,7 +551,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=600&auto=format&fit=crop&q=60',
             category: 'Retoque',
             pillLabel: 'FOTOGRAFÍA',
-            shortDesc: 'Mejora de calidad de imagen, corrección de color y eliminación de fondos.',
+            shortDesc: 'Ajuste de color, limpieza y preparación de imágenes.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Edición', value: 'A Medida' },
@@ -575,7 +575,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60',
             category: 'Desarrollo Web',
             pillLabel: 'CORPORATIVO',
-            shortDesc: 'Sitios corporativos e institucionales para empresas, colegios, universidades, organizaciones y proyectos especializados, según alcance.',
+            shortDesc: 'Sitios corporativos, institucionales, educativos, inmobiliarios, de noticias, restaurantes u organizaciones; portales con secciones públicas o privadas según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
@@ -597,7 +597,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60',
             category: 'Conversión',
             pillLabel: 'LEADS',
-            shortDesc: 'Páginas para presentar campañas, captar consultas o mostrar portafolios, productos y proyectos.',
+            shortDesc: 'Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -619,7 +619,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&auto=format&fit=crop&q=60',
             category: 'E-commerce',
             pillLabel: 'VENTAS',
-            shortDesc: 'Catálogos con pedidos o tiendas online; carrito y pagos se confirman después de evaluar alcance y proveedores disponibles.',
+            shortDesc: 'Catálogos con carrito o pedidos; pagos en línea y sus proveedores se evalúan por separado antes de comprometerlos.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
@@ -641,7 +641,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&auto=format&fit=crop&q=60',
             category: 'Contenido',
             pillLabel: 'DINÁMICO',
-            shortDesc: 'Catálogos, blogs, directorios y publicaciones para cursos o comunidades, según las funciones acordadas.',
+            shortDesc: 'Catálogos, blogs, plataformas de cursos, directorios y comunidades con publicación organizada de contenido.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -663,7 +663,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60',
             category: 'Interfaces',
             pillLabel: 'RESPONSIVE',
-            shortDesc: 'Prototipado interactivo, encuestas digitales y adaptación a pantallas móviles.',
+            shortDesc: 'Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -687,7 +687,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&auto=format&fit=crop&q=60',
             category: 'Desarrollo',
             pillLabel: 'A MEDIDA',
-            shortDesc: 'Sistemas a medida para inventario, ventas, facturación, CRM, gestión académica, citas y operaciones sectoriales; alcance por definir.',
+            shortDesc: 'Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Código', value: 'A Medida' },
@@ -709,7 +709,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60',
             category: 'Datos',
             pillLabel: 'ESTRUCTURA',
-            shortDesc: 'Modelado de datos y reportes; se pueden evaluar consultas a APIs e integración técnica entre plataformas según el alcance definido.',
+            shortDesc: 'Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable, sin flujos de automatización.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -733,7 +733,7 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&auto=format&fit=crop&q=60',
             category: 'Exclusivo',
             pillLabel: 'CONTANOS TU PROBLEMA',
-            shortDesc: 'Evaluamos necesidades digitales, prototipos, paneles, dashboards y aplicaciones web o móviles; confirmamos alcance y viabilidad antes de proponer.',
+            shortDesc: 'Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. También se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles y modernización de productos existentes; cada entrega queda limitada a lo acordado.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: '100% A Medida' },
