@@ -63,6 +63,22 @@ describe('Flujos de contacto UI-4', () => {
     expect(screen.getByLabelText(/Celular/)).toHaveValue('');
   });
 
+  it('deshabilita el envío mientras la API está procesando la consulta', async () => {
+    const user = userEvent.setup();
+    let resolver;
+    ContactService.sendEmbeddedContact.mockReturnValue(new Promise((resolve) => { resolver = resolve; }));
+    render(<FormularioContacto />);
+
+    await completarFormulario(user);
+    await user.click(screen.getByRole('button', { name: /enviar mensaje/i }));
+    const boton = screen.getByRole('button', { name: /enviando/i });
+    expect(boton).toBeDisabled();
+    expect(ContactService.sendEmbeddedContact).toHaveBeenCalledOnce();
+
+    resolver({ message: 'Consulta recibida.' });
+    expect(await screen.findByRole('status')).toHaveTextContent('Consulta recibida.');
+  });
+
   it('trata como éxito la respuesta real del backend aunque no tenga status', async () => {
     const user = userEvent.setup();
     const onClose = vi.fn();
@@ -81,6 +97,21 @@ describe('Flujos de contacto UI-4', () => {
     expect(screen.getByText('Mensaje enviado exitosamente')).toBeInTheDocument();
     expect(ContactService.sendEmbeddedContact).toHaveBeenCalledOnce();
     expect(onClose).not.toHaveBeenCalled();
+  });
+
+  it('muestra el error del servicio en el modal y conserva los datos', async () => {
+    const user = userEvent.setup();
+    ContactService.sendEmbeddedContact.mockRejectedValue(new Error('offline'));
+    render(<ContactoModal isOpen onClose={vi.fn()} />);
+
+    const form = document.querySelector('#contactModal form');
+    await user.type(form.querySelector('[name="name"]'), 'Ana Pérez');
+    await user.type(form.querySelector('[name="email"]'), 'ana@example.com');
+    await user.type(form.querySelector('[name="message"]'), 'Consulta de software');
+    fireEvent.submit(form);
+
+    expect(await screen.findByRole('alert')).toHaveTextContent('Ocurrió un error');
+    expect(form.querySelector('[name="name"]')).toHaveValue('Ana Pérez');
   });
 
   it('dirige las tarjetas de recursos al formulario en la ruta correcta', () => {
