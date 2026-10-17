@@ -19,7 +19,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'EXPOSICIONES',
             shortDesc: 'Defensas de tesis, exposiciones de ciencias de la salud, investigación médica o tecnología.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-graduation-cap', label: 'Foco', value: 'Universitario' }
             ],
@@ -41,7 +41,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'RIGOR ACADÉMICO',
             shortDesc: 'Estructuración de monografías, corrección de estilo y referencias bibliográficas exactas.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-spell-check', label: 'Calidad', value: 'Ortografía' }
             ],
@@ -63,7 +63,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'ESQUEMAS',
             shortDesc: 'Esquemas anatómicos, flujos de bases de datos o diagramas de procesos de recursos humanos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-image', label: 'Formato', value: 'Alta Res' }
             ],
@@ -85,7 +85,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'MARCO TEÓRICO',
             shortDesc: 'Síntesis de marcos teóricos y diseño formal de carátulas para entrega de proyectos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-book-open', label: 'Teoría', value: 'Precisa' }
             ],
@@ -107,7 +107,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'ENTORNOS VIRTUALES',
             shortDesc: 'Entornos virtuales para pruebas de redes, robótica educativa o simulación de sistemas informáticos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
                 { icon: 'fa-server', label: 'Redes', value: 'Cisco/Otros' }
             ],
@@ -129,7 +129,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CÓDIGO',
             shortDesc: 'Asesoría en desarrollo de código estructurado, algoritmos y lógica computacional.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'A Medida' },
                 { icon: 'fa-bug', label: 'Debug', value: 'Efectivo' }
             ],
@@ -219,7 +219,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'IDENTIDAD',
             shortDesc: 'Identidad para proyectos innovadores, como producción de snacks o reciclaje.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-star', label: 'Impacto', value: 'Visual' }
             ],
@@ -241,7 +241,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'REGLAS VISUALES',
             shortDesc: 'Definición de paletas, tipografías y reglas de uso en proporciones 4x4.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-palette', label: 'Color', value: 'Exacto' }
             ],
@@ -263,7 +263,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'AGILIDAD',
             shortDesc: 'Catálogos digitales para presentar productos y servicios de un emprendimiento.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-mobile-screen', label: 'Móvil', value: 'Optimizado' }
             ],
@@ -285,7 +285,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PROMOCIONES',
             shortDesc: 'Diseño de campañas "Flash Sale", 2x1 o descuentos por inauguración.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-bolt', label: 'Ventas', value: 'Rápidas' }
             ],
@@ -307,7 +307,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'TEMÁTICAS',
             shortDesc: 'Campañas temáticas para Navidad, Black Friday o aniversarios comerciales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-calendar-days', label: 'Eventos', value: 'Clave' }
             ],
@@ -331,7 +331,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CURRÍCULUM',
             shortDesc: 'Estructuración de perfiles técnicos destacando certificaciones o experiencia.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-robot', label: 'Filtros', value: 'ATS' }
             ],
@@ -353,7 +353,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PERFIL DIGITAL',
             shortDesc: 'Configuración de titulares, extractos con palabras clave y networking estratégico.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Ajuste', value: 'A Medida' },
                 { icon: 'fa-globe', label: 'Alcance', value: 'Global' }
             ],
@@ -375,7 +375,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PERSUASIÓN',
             shortDesc: 'Redacción persuasiva adaptada a vacantes específicas y traducción técnica al inglés.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Redacción', value: 'A Medida' },
                 { icon: 'fa-language', label: 'Idiomas', value: 'ES/EN' }
             ],
@@ -397,7 +397,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PROYECTOS',
             shortDesc: 'Compilación visual de proyectos de código, diseños o investigaciones.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-github', label: 'Plataformas', value: 'Integradas' }
             ],
@@ -419,7 +419,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'SIMULACIONES',
             shortDesc: 'Simulaciones de entrevistas con enfoque en recursos humanos, métricas y seguridad.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Guía', value: 'A Medida' },
                 { icon: 'fa-comments', label: 'Práctica', value: 'En Vivo' }
             ],
@@ -441,7 +441,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'DIPLOMAS',
             shortDesc: 'Diseño y validación visual de diplomas, constancias y participaciones.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-check-double', label: 'Validación', value: 'Digital' }
             ],
@@ -465,7 +465,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'MARCAS',
             shortDesc: 'Creación de marcas para software, servicios técnicos o soluciones industriales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-vector-square', label: 'Vectores', value: 'Originales' }
             ],
@@ -487,7 +487,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'REDES Y PRINT',
             shortDesc: 'Gráficos publicitarios en formato cuadrado (4x4) y gran formato.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-expand', label: 'Tamaño', value: 'Adaptable' }
             ],
@@ -509,7 +509,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'EMPAQUES',
             shortDesc: 'Diseño de empaques de productos sostenibles y maquetación de catálogos impresos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-leaf', label: 'Estilo', value: 'Sostenible' }
             ],
@@ -531,7 +531,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PRESENTACIÓN',
             shortDesc: 'Tarjetas corporativas elegantes, con opciones QR, e invitaciones a eventos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-qrcode', label: 'Extras', value: 'QR Integrado' }
             ],
@@ -553,7 +553,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'FOTOGRAFÍA',
             shortDesc: 'Mejora de calidad de imagen, corrección de color y eliminación de fondos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Edición', value: 'A Medida' },
                 { icon: 'fa-palette', label: 'Color', value: 'Corrección' }
             ],
@@ -577,7 +577,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CORPORATIVO',
             shortDesc: 'Sitios corporativos completos para clínicas o empresas de tecnología.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
                 { icon: 'fa-bolt', label: 'Carga', value: 'Rápida' }
             ],
@@ -599,7 +599,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'LEADS',
             shortDesc: 'Páginas de aterrizaje de alta conversión para captar leads o mostrar trabajos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-bullseye', label: 'Foco', value: 'Conversión' }
             ],
@@ -621,7 +621,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'VENTAS',
             shortDesc: 'E-commerce autogestionables con carritos e integración de pagos locales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
                 { icon: 'fa-credit-card', label: 'Pagos', value: 'Integrados' }
             ],
@@ -643,7 +643,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'DINÁMICO',
             shortDesc: 'Muestrarios de productos dinámicos y blogs optimizados para SEO orgánico.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-pen-nib', label: 'Contenido', value: 'Gestionable' }
             ],
@@ -665,7 +665,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'RESPONSIVE',
             shortDesc: 'Prototipado interactivo, encuestas digitales y adaptación a pantallas móviles.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-mobile', label: 'Mobile', value: 'First' }
             ],
@@ -689,7 +689,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'A MEDIDA',
             shortDesc: 'Creación de plataformas utilizando React y backends en Laravel/Blade.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Código', value: 'A Medida' },
                 { icon: 'fa-layer-group', label: 'Stack', value: 'Moderno' }
             ],
@@ -709,9 +709,9 @@ export const SERVICIOS_DATA = {
             img: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600&auto=format&fit=crop&q=60',
             category: 'Datos',
             pillLabel: 'ESTRUCTURA',
-            shortDesc: 'Estructuración, normalización y mantenimiento de datos en SQL Server.',
+            shortDesc: 'Modelado y organización de bases de datos para sistemas digitales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-server', label: 'Rendimiento', value: 'Óptimo' }
             ],
@@ -735,7 +735,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CONTANOS TU PROBLEMA',
             shortDesc: 'Aplicamos la filosofía: "Contanos tu problema, nosotros vemos cómo hacerlo."',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: '24/7' },
+                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: '100% A Medida' },
                 { icon: 'fa-lock', label: 'Privacidad', value: 'Confidencial' }
             ],
