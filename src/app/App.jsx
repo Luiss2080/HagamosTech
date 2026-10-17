@@ -10,6 +10,7 @@ import ContactoModal from '../components/Modales/ContactoModal';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
 import useModalStore from '../store/useModalStore';
 import { tituloParaRuta } from './seo';
+import RutaCuentaProtegida, { RutaComprasHeredada } from './RutaCuentaProtegida';
 
 // Páginas cargadas de forma diferida (code-splitting) para reducir el bundle inicial.
 const Inicio = lazy(() => import('../pages/Inicio/Inicio'));
@@ -43,7 +44,6 @@ const DisenoGrafico = lazy(() => import('../pages/Servicios/DisenoGrafico/Diseno
 const RecuperarContrasena = lazy(() => import('../components/func/RecuperarContrasena'));
 const PerfilPagina = lazy(() => import('../pages/Perfil/PerfilPagina'));
 const ConfiguracionPagina = lazy(() => import('../pages/Perfil/ConfiguracionPagina'));
-const HistorialComprasPagina = lazy(() => import('../pages/Perfil/HistorialComprasPagina'));
 const Error401 = lazy(() => import('../pages/Errores/Error401'));
 const Error403 = lazy(() => import('../pages/Errores/Error403'));
 const Error404 = lazy(() => import('../pages/Errores/Error404'));
@@ -160,9 +160,9 @@ const App = () => {
               <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
 
               {/* Rutas del Perfil de Usuario */}
-              <Route path="/perfil" element={<PerfilPagina />} />
-              <Route path="/configuracion" element={<ConfiguracionPagina />} />
-              <Route path="/perfil/compras" element={<HistorialComprasPagina />} />
+              <Route path="/perfil" element={<RutaCuentaProtegida><PerfilPagina /></RutaCuentaProtegida>} />
+              <Route path="/configuracion" element={<RutaCuentaProtegida><ConfiguracionPagina /></RutaCuentaProtegida>} />
+              <Route path="/perfil/compras" element={<RutaComprasHeredada />} />
 
               {/* Error Pages Routing */}
               <Route path="/errors/401" element={<Error401 />} />

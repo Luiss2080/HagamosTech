@@ -47,10 +47,10 @@ UI-5 cubre `/sobre-nosotros` y sus rutas hijas de historia, misión/visión, val
 
 | Requisito | Evidencia | Estado |
 |---|---|---|
-| RF-1 a RF-5 | Pruebas de alcance, valores estáticos, retiro de embeds y contenido no verificado. | Pendiente |
-| RF-6 | Pruebas de render con título `h1` propio para las cuatro rutas directas. | Pendiente |
-| RF-7 y RF-8 | Tests, recorrido responsive/teclado, lint, suite, build y `git diff --check`. | Pendiente |
+| RF-1 a RF-5 | 8 pruebas de UI-5; alcance, valores estáticos, retiro de embeds/afirmaciones no verificadas y enlaces a áreas vigentes. | ✅ |
+| RF-6 | Las cuatro rutas hijas muestran su propio `h1`; migas incluyen retorno accesible al inicio. | ✅ |
+| RF-7 y RF-8 | Playwright en rutas institucionales a 390/1280 px sin overflow; lint, suite, build y `git diff --check`. | ✅ |
 
 ## Estado
 
-En implementación.
+Completada. Se preservaron rutas y sistema visual vigente; la ruta histórica `/sobre-nosotros/videos` ahora orienta a áreas de trabajo sin embeds externos ni métricas no verificadas.

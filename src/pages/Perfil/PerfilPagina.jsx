@@ -261,15 +261,12 @@ const PerfilPagina = () => {
         numtel: '',
         nomcol: '',
         correo: '',
-        bio: '',
-        linkedin: '',
-        github: '',
-        facebook: ''
     });
 
     const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
     const [isSaving, setIsSaving] = useState(false);
+    const [profileError, setProfileError] = useState('');
 
     // Cargar datos iniciales del usuario
     useEffect(() => {
@@ -282,10 +279,6 @@ const PerfilPagina = () => {
                 numtel: user.numtel || user.telefono || '',
                 nomcol: user.nomcol || '',
                 correo: user.correo || '',
-                bio: user.bio || '',
-                linkedin: user.linkedin || '',
-                github: user.github || '',
-                facebook: user.facebook || ''
             });
         }
     }, [user]);
@@ -320,11 +313,14 @@ const PerfilPagina = () => {
         const reader = new FileReader();
         reader.onloadend = async () => {
             setIsSaving(true);
+            setProfileError('');
             const result = await updateProfile({ fotoPerfil: reader.result });
             setIsSaving(false);
             if (result.success) {
                 setSuccessMessage('¡Foto de perfil actualizada con éxito!');
                 setShowSuccessModal(true);
+            } else {
+                setProfileError(result.message);
             }
         };
         reader.readAsDataURL(file);
@@ -332,6 +328,7 @@ const PerfilPagina = () => {
 
     const handlePresetSelect = async (grad) => {
         setIsSaving(true);
+        setProfileError('');
         const displayName = formData.nombre || user?.nombre || 'Usuario';
         const initials = displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) || 'U';
         const dataUri = generateGradientAvatar(grad.from, grad.to, initials);
@@ -341,55 +338,38 @@ const PerfilPagina = () => {
         if (result.success) {
             setSuccessMessage('¡Avatar preestablecido seleccionado!');
             setShowSuccessModal(true);
+        } else {
+            setProfileError(result.message);
         }
     };
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSaving(true);
+        setProfileError('');
         const result = await updateProfile({
             nombre: formData.nombre,
             apellido: formData.apellido,
             numci: formData.numci,
             fenac: formData.fenac ? new Date(formData.fenac) : null,
             numtel: formData.numtel,
-            nomcol: formData.nomcol,
-            correo: formData.correo,
-            bio: formData.bio,
-            linkedin: formData.linkedin,
-            github: formData.github,
-            facebook: formData.facebook
+            nomcol: formData.nomcol
         });
         setIsSaving(false);
         if (result.success) {
-            setSuccessMessage('Tus datos de perfil han sido actualizados y sincronizados en tiempo real.');
+            setSuccessMessage('El servidor confirmó la actualización de tus datos.');
             setShowSuccessModal(true);
+        } else {
+            setProfileError(result.message);
         }
     };
 
-    const getCompletionPercentage = () => {
-        let count = 0;
-        const total = 9;
-        if (formData.nombre) count++;
-        if (formData.apellido) count++;
-        if (formData.numci) count++;
-        if (formData.fenac) count++;
-        if (formData.numtel) count++;
-        if (formData.nomcol) count++;
-        if (formData.bio) count++;
-        if (user?.fotoPerfil) count++;
-        if (formData.linkedin || formData.github || formData.facebook) count++;
-        return Math.round((count / total) * 100);
-    };
-
-    const completion = getCompletionPercentage();
-    const displayName = user?.nombre || 'Usuario Tech';
+    const displayName = user?.nombre || '';
     const userAvatar = user?.fotoPerfil || '';
 
     const navItemsMobile = [
         { path: '/perfil', label: 'Mi Perfil', icon: 'fa-user' },
-        { path: '/perfil/compras', label: 'Compras', icon: 'fa-receipt' },
-        { path: '/configuracion', label: 'Config', icon: 'fa-gear' },
+        { path: '/configuracion', label: 'Configuración', icon: 'fa-gear' },
     ];
 
     return (
@@ -436,35 +416,6 @@ const PerfilPagina = () => {
                             })}
                         </div>
 
-                        {/* INTERACTIVE PROFILE COMPLETION PROGRESS (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
-                                    <i className="fas fa-chart-line"></i>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Completitud del Perfil</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Progreso de datos configurados</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[9px] font-black uppercase tracking-wider text-[#A3E635] flex items-center gap-2">
-                                    <i className="fas fa-chart-line text-xs"></i> Progreso
-                                </span>
-                                <span className="text-sm font-black text-slate-800">{completion}%</span>
-                            </div>
-                            <div className="w-full bg-slate-100 h-3.5 rounded-full overflow-hidden border border-slate-200/50">
-                                <div 
-                                    className="h-full bg-gradient-to-r from-[#A3E635] to-[#A3E635] transition-all duration-700 ease-out rounded-full"
-                                    style={{ width: `${completion}%` }}
-                                />
-                            </div>
-                            <p className="text-[10px] text-slate-400 font-bold uppercase mt-2.5 flex items-center gap-1.5">
-                                <i className="fas fa-sparkles text-amber-500"></i>
-                                {completion === 100 ? '¡Tu perfil está completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
-                            </p>
-                        </div>
-
                         {/* PHOTO & AVATAR PICKER (Red outline border) */}
                         <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
                             <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
@@ -484,7 +435,7 @@ const PerfilPagina = () => {
                                         {userAvatar ? (
                                             <img src={userAvatar} alt="Perfil" className="w-full h-full object-cover" />
                                         ) : (
-                                            displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
+                                            displayName ? displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2) : <i className="fas fa-user" aria-hidden="true"></i>
                                         )}
                                     </div>
                                     <label className="absolute bottom-1 right-1 w-9 h-9 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-xl shadow-lg border-2 border-white flex items-center justify-center cursor-pointer transition-all duration-200 active:scale-90">
@@ -540,6 +491,7 @@ const PerfilPagina = () => {
                                 </div>
                             </div>
 
+                            {profileError && <p role="alert" className="mb-4 rounded-xl border border-red-200 bg-red-50 p-3 text-xs font-bold text-red-700">{profileError}</p>}
                             <form onSubmit={handleSubmit} className="space-y-5">
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {/* Nombre */}
@@ -646,25 +598,6 @@ const PerfilPagina = () => {
                                     </div>
                                 </div>
 
-                                {/* Biografía / Frase Corta */}
-                                <div>
-                                    <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
-                                        Biografía / Frase Corta
-                                        <Tooltip text="Frase corta que aparecerá en tu barra lateral del perfil de usuario." />
-                                    </label>
-                                    <div className="relative">
-                                        <span className="absolute inset-y-0 left-0 pl-3.5 flex items-center text-slate-455 "><i className="fas fa-quote-left text-xs"></i></span>
-                                        <input 
-                                            type="text" 
-                                            name="bio"
-                                            value={formData.bio}
-                                            onChange={handleChange}
-                                            placeholder="Ej. Estudiante apasionado por la robótica educativa y la inteligencia artificial"
-                                            className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
-                                        />
-                                    </div>
-                                </div>
-
                                 {/* Correo (No editable) */}
                                 <div>
                                     <label className="block text-[9px] font-black uppercase tracking-wider text-[#A3E635] mb-1">
@@ -704,10 +637,6 @@ const PerfilPagina = () => {
                                                         numtel: user.numtel || user.telefono || '',
                                                         nomcol: user.nomcol || '',
                                                         correo: user.correo || '',
-                                                        bio: user.bio || '',
-                                                        linkedin: user.linkedin || '',
-                                                        github: user.github || '',
-                                                        facebook: user.facebook || ''
                                                     });
                                                 }
                                             }}
