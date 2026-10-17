@@ -46,7 +46,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     <h1 className="text-xs font-black uppercase tracking-wider text-white flex items-center gap-1.5">
                         <i className="fas fa-microchip text-amber-400"></i> HagamosTech
                     </h1>
-                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Estudio de Software & IA</p>
+                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Soluciones Digitales</p>
                 </div>
 
                 {/* 2. SECCIÓN DE AVATAR Y METADATA */}
@@ -276,7 +276,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <h4 className="text-lg font-black font-sans text-slate-900 mt-1 uppercase tracking-wider">{displayName}</h4>
                             
                             <p className="text-[10px] font-medium leading-relaxed max-w-xs mx-auto mt-3 text-slate-600">
-                                Por completar satisfactoriamente las competencias de <strong>Desarrollo Web & Automatización</strong>.
+                                Por completar satisfactoriamente las competencias de <strong>Desarrollo Web y Software</strong>.
                             </p>
                             
                             <div className="flex justify-between items-center mt-6 px-4">

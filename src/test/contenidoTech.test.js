@@ -21,7 +21,6 @@ const TERMINOS_PROHIBIDOS = [
   'tomos',
   'modo invitado',
   'primer pedido',
-  'mentoría',
   'headhunting',
   'ciberseguridad',
 ];

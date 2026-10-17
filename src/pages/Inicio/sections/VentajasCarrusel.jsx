@@ -6,7 +6,7 @@ const originalHighlights = [
         id: 'tecnologia',
         title: 'Soluciones',
         highlight: 'Tecnológicas',
-        desc: 'Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.',
+        desc: 'Desarrollamos páginas web y sistemas personalizados según el alcance acordado para tu proyecto.',
         icon: 'fa-laptop-code',
         badge: 'Desarrollo Profesional',
         color: "bg-[#111827]",
@@ -16,16 +16,16 @@ const originalHighlights = [
         borderColor: "border-[#A3E635]/20",
         features: [
             { icon: 'fa-code', text: 'Código Limpio' },
-            { icon: 'fa-screwdriver-wrench', text: 'Soporte Continuo' },
-            { icon: 'fa-paint-brush', text: 'Diseño Premium' },
-            { icon: 'fa-cloud', text: 'Escalable en la Nube' }
+            { icon: 'fa-list-check', text: 'Alcance Acordado' },
+            { icon: 'fa-paint-brush', text: 'Diseño Adaptable' },
+            { icon: 'fa-file-lines', text: 'Entregables Claros' }
         ]
     },
     {
         id: 'academia',
         title: 'Apoyo',
         highlight: 'Académico',
-        desc: 'Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.',
+        desc: 'Te orientamos con tareas, informes, monografías y proyectos académicos de distintos niveles.',
         icon: 'fa-graduation-cap',
         badge: 'Apoyo Estudiantil',
         color: "bg-[#A3E635]",
@@ -33,9 +33,9 @@ const originalHighlights = [
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-user-graduate', text: 'Asesoría Técnica' },
-            { icon: 'fa-diagram-project', text: 'Modelado y Lógica' },
-            { icon: 'fa-file-lines', text: 'Guías de Defensa' },
+            { icon: 'fa-user-graduate', text: 'Mentorías' },
+            { icon: 'fa-diagram-project', text: 'Proyectos Socioformativos' },
+            { icon: 'fa-file-lines', text: 'Informes y Monografías' },
             { icon: 'fa-chalkboard-user', text: 'Aprendizaje Guiado' }
         ]
     },
@@ -54,8 +54,8 @@ const originalHighlights = [
         features: [
             { icon: 'fa-list-check', text: 'Catálogos Digitales' },
             { icon: 'fa-message', text: 'Contacto WhatsApp' },
-            { icon: 'fa-chart-line', text: 'Mayor Visibilidad' },
-            { icon: 'fa-gears', text: 'Fácil Gestión' }
+            { icon: 'fa-chart-line', text: 'Presentación de Oferta' },
+            { icon: 'fa-globe', text: 'Presencia Web' }
         ]
     },
     {
@@ -70,10 +70,10 @@ const originalHighlights = [
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-comments', text: 'Análisis Sin Costo' },
+            { icon: 'fa-comments', text: 'Revisión de Viabilidad' },
             { icon: 'fa-file-signature', text: 'Propuesta Clara' },
-            { icon: 'fa-code-branch', text: 'Desarrollo Rápido' },
-            { icon: 'fa-circle-check', text: 'Entrega Llave en Mano' }
+            { icon: 'fa-code-branch', text: 'Trabajo por Etapas' },
+            { icon: 'fa-circle-check', text: 'Entrega Acordada' }
         ]
     }
 ];

@@ -4,7 +4,7 @@
 export const SEO_POR_DEFECTO = {
   title: 'HagamosTech | Soluciones digitales y tecnológicas',
   description:
-    'HagamosTech transforma problemas, necesidades e ideas en soluciones reales: web, software, diseño, automatización e inteligencia artificial.',
+    'HagamosTech ofrece acompañamiento académico, desarrollo web y software, diseño y soluciones digitales a medida.',
 };
 
 const REGLAS = [
@@ -16,7 +16,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/tecnologia'),
     title: 'Tecnología | HagamosTech',
-    description: 'Desarrollo web, sistemas, automatización e inteligencia artificial a medida.',
+    description: 'Desarrollo de páginas web, sistemas y software según el alcance de cada proyecto.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/academia'),
@@ -26,7 +26,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/negocios'),
     title: 'Negocios | HagamosTech',
-    description: 'Digitalización, páginas web y automatización para emprendedores y pymes.',
+    description: 'Identidad visual, catálogos digitales y presencia web para emprendimientos.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/personalizado'),
@@ -42,16 +42,6 @@ const REGLAS = [
     coincide: (p) => p.startsWith('/servicios/sistemas-apps'),
     title: 'Sistemas y Apps | HagamosTech',
     description: 'Sistemas de gestión y aplicaciones a medida para tu negocio.',
-  },
-  {
-    coincide: (p) => p.startsWith('/servicios/automatizacion'),
-    title: 'Automatización | HagamosTech',
-    description: 'Automatizamos procesos y conectamos tus herramientas.',
-  },
-  {
-    coincide: (p) => p.startsWith('/servicios/inteligencia-artificial'),
-    title: 'Inteligencia Artificial | HagamosTech',
-    description: 'Asistentes, análisis predictivo e integración de IA.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/para-tu-negocio'),

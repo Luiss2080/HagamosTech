@@ -28,8 +28,12 @@ describe('NLU del asistente (Niko)', () => {
     expect(analizarMensajeUsuario('ayuda con mi tesis')).toMatch(/Presentaciones PowerPoint|tesis/i);
   });
 
-  it('reconoce IA / automatización', () => {
-    expect(analizarMensajeUsuario('quiero automatizar procesos con ia')).toMatch(/automatización e IA/i);
+  it('explica con claridad los servicios excluidos', () => {
+    expect(analizarMensajeUsuario('quiero automatizar procesos con n8n')).toMatch(/no ofrecemos automatizaciones, n8n/i);
+  });
+
+  it('reconoce mentorías y apoyo académico', () => {
+    expect(analizarMensajeUsuario('necesito ayuda con una tarea y monografía')).toMatch(/Mentorías académicas|Informes, monografías/i);
   });
 
   it('reconoce saludos', () => {

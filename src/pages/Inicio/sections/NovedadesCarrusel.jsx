@@ -24,62 +24,45 @@ const getIconForInclude = (text) => {
 const noticias = [
   {
     id: 'n1',
-    title: 'Nueva línea de Landing Pages',
-    desc: 'Lanzamos packs de landing pages de alta conversión para captar clientes, con formulario de contacto y hosting incluido.',
+    title: 'Desarrollo de Landing Pages',
+    desc: 'Diseñamos landing pages para presentar servicios y facilitar consultas, con un alcance acordado para cada proyecto.',
     category: 'Lanzamiento',
-    status: 'Activo',
-    date: '25 de Junio, 2026',
+    status: 'Servicio disponible',
+    date: 'Oferta vigente',
     img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-rocket',
     specs: {
-      col1: { label: 'Entrega', value: 'Rápida', icon: 'fa-bolt' },
+      col1: { label: 'Alcance', value: 'Acordado', icon: 'fa-list-check' },
       col2: { label: 'Diseño', value: 'Responsive', icon: 'fa-mobile-screen' },
-      col3: { label: 'Acceso', value: 'Hosting 1 año', icon: 'fa-server' }
+      col3: { label: 'Entrega', value: 'Según alcance', icon: 'fa-circle-check' }
     },
-    includes: ['Diseño', 'Web', 'SEO'],
+    includes: ['Diseño', 'Web', 'Contacto'],
     link: '/servicios/desarrollo-web'
   },
   {
-    id: 'n2',
-    title: 'Asistentes con IA para tu web',
-    desc: 'Mostramos asistentes virtuales y automatizaciones que atienden consultas de tus clientes 24/7.',
-    category: 'IA',
-    status: 'Demo',
-    date: '20 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-brain',
-    specs: {
-      col1: { label: 'Modelo', value: 'A medida', icon: 'fa-microchip' },
-      col2: { label: 'Canal', value: 'Web / WhatsApp', icon: 'fa-comments' },
-      col3: { label: 'Integración', value: 'API', icon: 'fa-plug' }
-    },
-    includes: ['IA', 'Chatbot', 'API'],
-    link: '/servicios/inteligencia-artificial'
-  },
-  {
     id: 'n3',
-    title: 'Convenio de Digitalización',
-    desc: 'Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.',
-    category: 'Alianza',
-    status: 'Éxito',
-    date: '15 de Junio, 2026',
+    title: 'Catálogos digitales',
+    desc: 'Creamos catálogos web para presentar productos y servicios de emprendimientos.',
+    category: 'Emprendimientos',
+    status: 'Servicio disponible',
+    date: 'Oferta vigente',
     img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-handshake',
     specs: {
-      col1: { label: 'Negocios', value: '20+ PYMES', icon: 'fa-briefcase' },
+      col1: { label: 'Formato', value: 'Web', icon: 'fa-globe' },
       col2: { label: 'Solución', value: 'Catálogos', icon: 'fa-list-check' },
-      col3: { label: 'Línea', value: 'WhatsApp', icon: 'fa-message' }
+      col3: { label: 'Enfoque', value: 'Digital', icon: 'fa-display' }
     },
     includes: ['Proyecto', 'Diseño', 'Soporte'],
     link: '/servicios/para-tu-negocio'
   },
   {
     id: 'n4',
-    title: 'Apoyo académico ampliado',
+    title: 'Acompañamiento académico',
     desc: 'Presentaciones interactivas, formato APA 7, infografías y simuladores para proyectos académicos.',
     category: 'Academia',
-    status: 'Nuevo',
-    date: '10 de Junio, 2026',
+    status: 'Servicio disponible',
+    date: 'Oferta vigente',
     img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60',
     icon: 'fa-graduation-cap',
     specs: {
@@ -90,23 +73,6 @@ const noticias = [
     includes: ['Presentaciones', 'APA 7', 'Simuladores'],
     link: '/servicios/apoyo-academico'
   },
-  {
-    id: 'n5',
-    title: 'Automatización para pymes',
-    desc: 'Conectamos CRMs, sistemas de facturación y correos automáticos para reducir el trabajo manual.',
-    category: 'Automatización',
-    status: 'Activo',
-    date: '05 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-gears',
-    specs: {
-      col1: { label: 'Alcance', value: 'A medida', icon: 'fa-sliders' },
-      col2: { label: 'Procesos', value: 'CRM / Facturación', icon: 'fa-diagram-project' },
-      col3: { label: 'Soporte', value: 'Continuo', icon: 'fa-headset' }
-    },
-    includes: ['Automatización', 'Integraciones', 'Soporte'],
-    link: '/servicios/automatizacion'
-  }
 ];
 
 // Componente Tarjeta de Noticia (Mismo diseño exacto que Servicios)

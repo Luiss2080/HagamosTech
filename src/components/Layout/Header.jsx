@@ -10,9 +10,9 @@ const NAV_ITEMS = [
         icon: 'fa-layer-group',
         type: 'dropdown',
         subItems: [
-            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
-            { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
-            { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-store' },
+            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo web y software a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
+            { id: 'cat-academia', label: 'Academia', desc: 'Mentorías y acompañamiento académico.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
+            { id: 'cat-negocios', label: 'Negocios', desc: 'Diseño y presencia digital para emprendimientos.', target: '/que-hacemos/negocios', icon: 'fa-store' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
     },
@@ -24,8 +24,6 @@ const NAV_ITEMS = [
         subItems: [
             { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
             { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
-            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/servicios/automatizacion', icon: 'fa-gear' },
-            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/servicios/inteligencia-artificial', icon: 'fa-robot' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
             { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
             { id: 'srv-empleo', label: 'Empleo', desc: 'CVs y preparación profesional.', target: '/servicios/empleo', icon: 'fa-user-tie' },
@@ -40,7 +38,7 @@ const NAV_ITEMS = [
         subItems: [
             { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
             { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
+            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Sitios web y catálogos digitales.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
             { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
             { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]

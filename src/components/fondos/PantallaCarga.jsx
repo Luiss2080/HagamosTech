@@ -227,7 +227,7 @@ const LoadingScreen = ({ onComplete }) => {
             </span>
             <span className="w-1 h-1 rounded-full bg-[#A3E635]/30" />
             <span className="flex items-center gap-1.5 text-[10px] font-black text-slate-400 uppercase tracking-wider">
-              <i className="fas fa-headset text-[#A3E635] text-[9px]" /> Soporte 24/7
+              <i className="fas fa-headset text-[#A3E635] text-[9px]" /> HagamosTech
             </span>
           </div>
         </div>

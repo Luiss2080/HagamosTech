@@ -38,8 +38,6 @@ const Recursos = lazy(() => import('../pages/Contacto/sections/Recursos'));
 const Ubicacion = lazy(() => import('../pages/Contacto/sections/Ubicacion'));
 const PaginasWeb = lazy(() => import('../pages/Servicios/DesarrolloWeb/PaginasWeb'));
 const SistemasApps = lazy(() => import('../pages/Servicios/SistemasApps/SistemasApps'));
-const Automatizacion = lazy(() => import('../pages/Servicios/Automatizacion/Automatizacion'));
-const InteligenciaArtificial = lazy(() => import('../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial'));
 const Negocio = lazy(() => import('../pages/Servicios/Negocio/Negocio'));
 const Academico = lazy(() => import('../pages/Servicios/Academico/Academico'));
 const Empleo = lazy(() => import('../pages/Servicios/Empleo/Empleo'));
@@ -151,8 +149,6 @@ const App = () => {
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
-              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
-              <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
               <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
               <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/empleo" element={<Empleo />} />

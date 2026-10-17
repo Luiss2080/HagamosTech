@@ -36,7 +36,7 @@ const ServiciosGrid = () => {
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-                        Ofrecemos soluciones digitales integrales, desarrollo de software a medida y soporte especializado 24/7 para empresas, emprendedores, estudiantes y profesionales.
+                        Acompañamos proyectos académicos y desarrollamos soluciones web, software y diseño para empresas, emprendimientos, estudiantes y profesionales.
                     </p>
                 </div>
 
