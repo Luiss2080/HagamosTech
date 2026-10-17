@@ -8,15 +8,15 @@ export default function AcompanamientoAcademico() {
     <main className="min-h-screen bg-[#050505] px-5 pb-20 pt-28 text-white sm:px-8">
       <section className="mx-auto max-w-6xl">
         <p className="mb-4 text-sm font-bold uppercase tracking-[0.2em] text-[#A3E635]">
-          Para colegio, secundaria y universidad
+          Para primaria/colegio, secundaria, institutos y universidad
         </p>
         <h1 className="max-w-4xl text-4xl font-black leading-tight sm:text-6xl">
           Acompañamiento académico para avanzar con claridad
         </h1>
         <p className="mt-6 max-w-3xl text-lg leading-relaxed text-neutral-300">
-          Mentorías y orientación para comprender temas, organizar tareas y desarrollar informes,
-          monografías y proyectos socioformativos. También apoyamos con presentaciones, recursos
-          visuales y proyectos de programación.
+          Mentorías y orientación para comprender temas, organizar tareas y avanzar en informes,
+          monografías y proyectos socioformativos. También acompañamos presentaciones, recursos
+          visuales y proyectos de programación, según materia y disponibilidad.
         </p>
         <p className="mt-4 max-w-3xl text-sm leading-relaxed text-neutral-400">
           Trabajamos sobre las pautas de tu materia. Te explicamos, revisamos avances y te damos

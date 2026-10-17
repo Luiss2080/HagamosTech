@@ -31,9 +31,16 @@ export default function CatalogoServicios({ categorias, etiqueta, titulo, descri
             </article>
           ))}
         </div>
-        <p className="mx-auto mt-10 max-w-3xl text-center text-sm leading-relaxed text-neutral-400">
-          Contanos qué necesitás y revisamos contigo el alcance, los tiempos y el presupuesto antes de iniciar.
+      </section>
+
+      <section className="mx-auto mt-14 max-w-6xl rounded-3xl border border-[#A3E635]/20 bg-[#A3E635]/[0.06] p-7 sm:p-10" aria-labelledby="consulta-catalogo-servicio">
+        <h2 id="consulta-catalogo-servicio" className="text-2xl font-black sm:text-3xl">¿Querés consultar una de estas opciones?</h2>
+        <p className="mt-3 max-w-3xl leading-relaxed text-neutral-300">
+          Contanos qué buscás y revisamos el alcance, los entregables, los tiempos y el presupuesto antes de iniciar.
         </p>
+        <Link to="/contactanos" className="mt-6 inline-flex min-h-12 items-center justify-center rounded-full bg-[#A3E635] px-7 font-bold text-[#0A0A0A] transition hover:bg-[#84CC16] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#A3E635]">
+          Consultar una opción
+        </Link>
       </section>
     </main>
   );

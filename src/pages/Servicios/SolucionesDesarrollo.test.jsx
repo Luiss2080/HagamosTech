@@ -36,4 +36,21 @@ describe('Páginas de desarrollo', () => {
     expect(screen.getByRole('heading', { name: 'Diseño y Gestión de Bases de Datos' })).toBeInTheDocument();
     expect(container.textContent.toLowerCase()).not.toMatch(/automatiz|n8n|devops|servidores/);
   });
+
+  it('aclara que los pagos en línea y proveedores de tienda requieren evaluación aparte', () => {
+    render(
+      <MemoryRouter>
+        <SolucionesDesarrollo
+          categorias={['web']}
+          etiqueta="Desarrollo web"
+          titulo="Tu presencia digital"
+          descripcion="Creamos páginas y experiencias web."
+          notaAlcance="Tiendas y pagos se evalúan según alcance."
+        />
+      </MemoryRouter>
+    );
+
+    expect(screen.getByText('Tiendas y pagos se evalúan según alcance.')).toBeInTheDocument();
+    expect(screen.getAllByRole('link', { name: /consultar/i }).every((link) => link.getAttribute('href') === '/contactanos')).toBe(true);
+  });
 });
