@@ -2,7 +2,7 @@
 
 Estado: **fases 0–6 completadas**  
 Fecha: 2026-10-17  
-Base revisada: Constitución, Catálogo Maestro, Specs 001–015, README y `HagamosTech (2).docx`.
+Base revisada: Constitución, Catálogo Maestro, Specs 001–021, README y `HagamosTech (2).docx`.
 
 ## 1. Objetivo
 
