@@ -43,14 +43,14 @@ const ModernServiceGrid = ({ projects = [] }) => {
             <div key={`${project.num || project.title || 'solucion'}-${index}`} className="h-full px-2 sm:px-3" style={{ width: `${cardWidth}%` }}>
               <article className="group relative flex min-h-[380px] h-full flex-col overflow-hidden rounded-[2rem] border border-neutral-800 bg-neutral-900/40 shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/50 hover:shadow-[#A3E635]/15">
                 <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent" />
-                  <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0A0A0A]/60 via-transparent to-transparent" />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/72 to-transparent" />
+                  <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0A0A0A]/45 via-transparent to-transparent" />
                   {project.images?.length > 0 && (
                     <img
                       src={project.images[index % project.images.length]}
                       alt=""
                       aria-hidden="true"
-                      className="h-full w-full object-cover opacity-[0.24] mix-blend-screen transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.36]"
+                      className="h-full w-full object-cover opacity-[0.30] mix-blend-screen transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.44]"
                     />
                   )}
                 </div>

@@ -74,11 +74,11 @@ const Empleo = () => {
 
       {/* SECCI�N 1: HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-32 pb-12" id="home">
-        <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col itemás-center">
+        <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center">
           
           {/* ---- Migas de pan en estáilo tech (discreto) ---- */}
-          <div className="flex itemás-center gap-2 mb-5">
-              <span className="inline-flex itemás-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widestá text-[#A3E635] shadow-sm leading-none">
+          <div className="flex items-center gap-2 mb-5">
+              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
                   <i className="fa-solid fa-laptop-code mr-1.5"></i> Empleo Profesional — HagamosTech
               </span>
           </div>
@@ -98,7 +98,7 @@ const Empleo = () => {
               </p>
 
               {/* Action Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto itemás-center justify-center">
+              <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
                   href="https://wa.me/59161320004?text=Hola,%20quisiera%20mejorar%20mi%20CV%20y%20perfil%20profesional"
                   target="_blank"
@@ -124,12 +124,12 @@ const Empleo = () => {
               </div>
 
               {/* Trust badges */}
-              <div className="flex flex-wrap itemás-center justify-center gap-x-3 gap-y-1.5 pt-4">
+              <div className="flex flex-wrap items-center justify-center gap-x-3 gap-y-1.5 pt-4">
                 <i className="fas fa-comments text-[#A3E635] text-base" aria-hidden="true" />
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widestá leading-none">Acompañamiento y soluciones según cada proyecto</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
-              <div className="inline-flex itemás-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
                 <i className="fas fa-tag text-[#84CC16]"></i>
                 <span className="text-[9px] font-black uppercase tracking-wider">Pago único o por fases + Mantenimiento mensual</span>
               </div>
@@ -201,7 +201,7 @@ const Empleo = () => {
                 const stepColors = ['text-[#A3E635]', 'text-white', 'text-[#A3E635]', 'text-[#A3E635]'];
                 const stepBgs = ['bg-[#A3E635]/10', 'bg-neutral-900/40', 'bg-[#A3E635]/10', 'bg-[#A3E635]/10'];
                 return (
-                  <div key={idx} className="flex flex-col itemás-center text-center group">
+                  <div key={idx} className="flex flex-col items-center text-center group">
                     {/* Bubble containing step number and icon */}
                     <div className="relative mb-6">
                       <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#0A0A0A] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex items-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
@@ -230,8 +230,8 @@ const Empleo = () => {
       {/* SECCI�N 4: EXPLICACI�N Y MOCKUP */}
       <section className="py-12 relative overflow-hidden reveal overflow-hidden">
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 itemás-center">
-            <div className="lg:col-span-6 text-center flex flex-col itemás-center justify-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
                 ¿QUÉ ES EL SERVICIO DE EMPLEO Y CÓMO MEJORA TU PERFIL PROFESIONAL?
               </h2>
@@ -251,8 +251,8 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
               <div className="bg-[#1e1e1e] rounded-3xl shadow-2xl border border-neutral-800 overflow-hidden text-left relative group">
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] to-[#84CC16]"></div>
                 
-                <div className="bg-[#252526] p-3 flex itemás-center justify-between border-b border-neutral-900">
-                  <div className="flex itemás-center gap-1.5">
+                <div className="bg-[#252526] p-3 flex items-center justify-between border-b border-neutral-900">
+                  <div className="flex items-center gap-1.5">
                     <span className="w-3 h-3 rounded-full bg-[#A3E635]/100"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
