@@ -50,6 +50,7 @@ test('las rutas directas muestran el shell, título de HagamosTech y no generan 
     await page.goto(`/#${ruta}`);
     await expect(page.getByRole('main').first()).not.toBeEmpty({ timeout: 15_000 });
     await expect(page).toHaveTitle(/HagamosTech/i);
+    await expect.poll(() => page.locator('meta[name="description"]').getAttribute('content')).toBeTruthy();
   }
 
   expect(pageErrors).toEqual([]);
@@ -76,6 +77,26 @@ test('rutas representativas conservan el ancho de pantalla en móvil, tablet y e
       }));
       expect(dimensions.body, `${ruta} presenta overflow a ${width}px`).toBeLessThanOrEqual(dimensions.document);
     }
+  }
+});
+
+test('los enlaces internos de páginas clave apuntan a rutas registradas', async ({ page }) => {
+  const rutasValidas = new Set(RUTAS);
+  const paginas = ['/', '/servicios/desarrollo-web', '/contactanos', '/privacidad', '/cookies'];
+
+  for (const ruta of paginas) {
+    await page.goto(`/#${ruta}`);
+    await expect(page.getByRole('main').first()).not.toBeEmpty({ timeout: 15_000 });
+    const destinos = await page.locator('a[href]').evaluateAll((anchors) => anchors
+      .map((anchor) => anchor.getAttribute('href'))
+      .filter((href) => href?.startsWith('/#/') || href?.startsWith('#/') || (href?.startsWith('/') && !href.startsWith('//')))
+      .map((href) => {
+        const url = new URL(href, window.location.href);
+        return url.hash.startsWith('#/') ? url.hash.slice(1).split('#')[0] : url.pathname;
+      }));
+
+    const desconocidos = destinos.filter((destino) => !rutasValidas.has(destino));
+    expect(desconocidos, `${ruta} contiene enlaces internos no registrados`).toEqual([]);
   }
 });
 

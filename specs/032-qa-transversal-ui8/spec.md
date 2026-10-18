@@ -42,4 +42,24 @@ visual ya establecidos; las correcciones se limitan a fallos reproducibles.
 
 ## Validación
 
-Pendiente de auditoría.
+| Requisito | Evidencia | Estado |
+|---|---|---|
+| RF-1 y RF-5 | 38 rutas con carga directa, título HagamosTech y meta descripción; sin errores JavaScript. | ✅ |
+| RF-2 | Enlaces internos de Inicio, servicio web, Contacto, Privacidad y Cookies apuntan a rutas registradas. | ✅ |
+| RF-3 | Inicio, servicio web, Contacto, Cookies y error 500 revisados a 390, 768 y 1280 px; sin overflow horizontal. | ✅ |
+| RF-4 | El menú móvil se abre con Enter y se cierra con Escape; menú cerrado se marca `aria-hidden` y `inert`. | ✅ |
+| RF-6 | Cambios limitados a QA/configuración E2E y accesibilidad del menú; páginas y secciones existentes conservadas. | ✅ |
+| RF-7 | Frontend 88/88, backend 36/36, E2E 9/9; lint, build y `git diff --check` correctos. | ✅ |
+
+## Límites de la revisión
+
+El recorrido E2E corre en Chromium. La revisión manual de teclado no sustituye pruebas con
+lector de pantalla. No se ejecutó una auditoría formal de accesibilidad ni una prueba de
+carga/Lighthouse. Los textos de políticas que requieren confirmación se documentaron en
+Spec 031 y siguen pendientes del negocio.
+
+## Estado
+
+UI-8 completada. No se encontraron errores de JavaScript ni desbordamientos en las rutas y
+anchos cubiertos. El harness E2E usa puertos aislados (4401 y 44321) para evitar reutilizar
+por accidente otro servidor local.
