@@ -68,11 +68,11 @@ garantías, métodos de pago ni prácticas de datos no confirmados.
 
 ## Validación de implementación parcial
 
-- Vitest: 89/89 pruebas y 1 nueva prueba focalizada de privacidad/cookies aprobada.
-- Playwright E2E: 9/9 pruebas (ejecutadas antes de los cambios de privacidad/cookies; falta repetir).
-- `npm run lint`: correcto antes de esta iteración; falta repetir.
-- `npm run build`: correcto antes de esta iteración; falta repetir.
-- `git diff --check`: falta repetir al cerrar esta iteración.
+- Vitest: 90/90 pruebas en 26 archivos.
+- Playwright E2E: 9/9 pruebas.
+- `npm run lint`: correcto.
+- `npm run build`: correcto.
+- `git diff --check`: correcto al cerrar esta iteración.
 
 ## Estado
 
