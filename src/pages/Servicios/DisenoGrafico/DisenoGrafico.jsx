@@ -19,10 +19,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Identidad y Brief","desc":"Estudiamos los valores de tu marca, colores corporativos y a quién te diriges."},
-  {"title":"Concepto y Diseño","desc":"Creamos propuestas conceptuales y bocetos iniciales hasta definir la dirección visual."},
-  {"title":"Producción Final","desc":"Vectorizamos, preparamos fondos transparentes y formatos listos para imprimir o redes."},
-  {"title":"Entrega y Soporte","desc":"Entregamos el set completo de archivos con guías de uso y soporte de ajustes."}
+  {"title":"Identidad y Brief","desc":"Estudiamos los valores de tu marca, colores corporativos y a quién te diriges.","image":"/img/08_Cards/proceso-diseno-brief.webp"},
+  {"title":"Concepto y Diseño","desc":"Creamos propuestas conceptuales y bocetos iniciales hasta definir la dirección visual.","image":"/img/08_Cards/proceso-diseno-concepto.webp"},
+  {"title":"Producción Final","desc":"Vectorizamos, preparamos fondos transparentes y formatos listos para imprimir o redes.","image":"/img/08_Cards/proceso-diseno-produccion.webp"},
+  {"title":"Entrega y Soporte","desc":"Entregamos el set completo de archivos con guías de uso y soporte de ajustes.","image":"/img/08_Cards/proceso-diseno-entrega.webp"}
 ];
 
 const TESTIMONIOS = [

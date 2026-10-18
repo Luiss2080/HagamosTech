@@ -19,10 +19,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Análisis de Perfil","desc":"Evaluamos tu experiencia, metas y el mercado laboral al que apuntas."},
-  {"title":"Estructuración","desc":"Diseñamos tu CV optimizado ATS y tu perfil de LinkedIn con palabras clave."},
-  {"title":"Documentos","desc":"Redactamos cartas de presentación y traducimos tu CV al inglés si lo necesitas."},
-  {"title":"Preparación","desc":"Simulamos entrevistas y armamos tu portafolio digital profesional."}
+  {"title":"Análisis de Perfil","desc":"Evaluamos tu experiencia, metas y el mercado laboral al que apuntas.","image":"/img/08_Cards/proceso-empleo-perfil.webp"},
+  {"title":"Estructuración","desc":"Diseñamos tu CV optimizado ATS y tu perfil de LinkedIn con palabras clave.","image":"/img/08_Cards/proceso-empleo-cv.webp"},
+  {"title":"Documentos","desc":"Redactamos cartas de presentación y traducimos tu CV al inglés si lo necesitas.","image":"/img/08_Cards/proceso-empleo-documentos.webp"},
+  {"title":"Preparación","desc":"Simulamos entrevistas y armamos tu portafolio digital profesional.","image":"/img/08_Cards/proceso-empleo-entrevista.webp"}
 ];
 
 const TESTIMONIOS = [

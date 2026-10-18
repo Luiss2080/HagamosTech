@@ -45,7 +45,7 @@ const ModernServiceGrid = ({ projects = [] }) => {
                 <div className="relative h-48 shrink-0 overflow-hidden bg-[#171A13] sm:h-52">
                   {(project.image || project.images?.[0]) && (
                     <img
-                      src={project.image || project.images[0]}
+                      src={project.image || project.images[index % project.images.length]}
                       alt={`Imagen relacionada con ${project.firstPart || project.title || project.category}`}
                       loading="lazy"
                       decoding="async"
