@@ -48,12 +48,33 @@ garantías, métodos de pago ni prácticas de datos no confirmados.
 | Requisito | Evidencia | Estado |
 |---|---|---|
 | RF-1 | Auditoría inicial y datos solicitados registrados aquí. | ✅ |
-| RF-2 | Código confirma `sessionStorage`, `localStorage` y cookie `hagamostech_token`; falta revisar configuración de despliegue y terceros. | ⚠️ |
+| RF-2 | Código confirma `sessionStorage`, `localStorage` y cookie `hagamostech_token`; no se encontraron integraciones de analítica en el código fuente revisado. Falta validar configuración del despliegue y proveedores externos. | ⚠️ |
 | RF-3 | El gestor solo actualiza React state; el mensaje de guardado es prematuro. | ⚠️ Pendiente confirmar categorías y persistencia. |
-| RF-4 | Sin cambios a páginas o componentes en esta auditoría. | ⏳ |
-| RF-5 | Decisiones aún no recibidas. | ⏳ |
+| RF-4 | Condiciones, términos, modal y tarjetas de pago ahora describen acuerdos flexibles por proyecto; rutas, páginas y secciones se conservaron. | ✅ Parcial, falta privacidad/cookies. |
+| RF-5 | Decisión comercial registrada; prueba de contenido añadida. | ✅ Parcial; faltan datos de privacidad y resultados de validación. |
+
+## Decisiones recibidas
+
+- Garantías, ajustes, medios y modalidades de pago, anticipos y cancelaciones se conversan
+  de forma flexible según la situación de cada cliente. Las condiciones específicas deben
+  acordarse en la propuesta del proyecto; no se publicarán como plazos o reglas universales.
+- El precio, alcance, entregas y fecha de inicio se confirman por propuesta antes de comenzar.
+- No se publicará un medio de pago específico ni una regla universal de reembolso sin
+  confirmación. La pausa o cancelación se conversa según avance y compromisos acordados.
+- Sigue pendiente confirmar prácticas de tratamiento y conservación de datos, responsable
+  y tiempos reales de atención de privacidad, proveedores externos y tecnologías de
+  analítica/publicidad. El código fuente no basta para confirmar la configuración del
+  despliegue.
+
+## Validación de implementación parcial
+
+- Vitest: 89/89 pruebas en 25 archivos.
+- Playwright E2E: 9/9 pruebas.
+- `npm run lint`: correcto.
+- `npm run build`: correcto.
+- `git diff --check`: pendiente de repetir tras la edición final de esta spec.
 
 ## Estado
 
-Auditoría inicial completada. La edición de contenido y el ajuste funcional del gestor
-esperan datos reales del negocio.
+Condiciones comerciales actualizadas según la decisión recibida. La revisión de privacidad,
+la confirmación de configuración externa y el ajuste funcional del gestor siguen pendientes.

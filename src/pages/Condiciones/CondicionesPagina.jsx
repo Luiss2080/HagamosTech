@@ -14,11 +14,11 @@ const TERMS_SECTIONS = [
     },
     {
         title: '3. Precios y promociones',
-        text: 'Los precios publicados pueden cambiar sin previo aviso. Las promociones aplican bajo vigencia, condiciones y alcance detallados en cada oferta.',
+        text: 'Cada proyecto se evalúa según la necesidad y las posibilidades del cliente. El alcance, el precio y cualquier promoción se detallan en la propuesta antes de iniciar.',
     },
     {
         title: '4. Pagos y facturacion',
-        text: 'Se aceptan los medios de pago habilitados por HagamosTech. La emision de factura se realiza con los datos proporcionados por el cliente.',
+        text: 'Los medios de pago, anticipos, cuotas y facturación se conversan para cada proyecto y se dejan indicados en la propuesta acordada.',
     },
     {
         title: '5. Entregas y plazos',
@@ -26,7 +26,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '6. Garantia y ajustes',
-        text: 'La garantia cubre los defectos tecnicos de lo entregado dentro del alcance acordado. Los ajustes y cambios se procesan previa revision y segun la politica de servicio.',
+        text: 'Los ajustes, soporte y cualquier garantía aplicable se revisan según el tipo de proyecto. Su alcance y condiciones se acuerdan por escrito en la propuesta antes de iniciar.',
     },
     {
         title: '7. Uso de la plataforma',
@@ -84,7 +84,7 @@ const Condiciones = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
                                     <p className="text-[10px] font-black uppercase tracking-[0.24em] text-white/70">Cobertura</p>
-                                    <p className="mt-1 text-lg font-black">Compras seguras</p>
+                                    <p className="mt-1 text-lg font-black">Acuerdos claros</p>
                                 </div>
                                 <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur">
                                     <p className="text-[10px] font-black uppercase tracking-[0.24em] text-white/70">Soporte</p>

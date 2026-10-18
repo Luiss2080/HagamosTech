@@ -8,7 +8,7 @@ const TERMS_SECTIONS = [
     },
     {
         title: '2. Contratación y acceso a servicios',
-        text: 'La contratación de un servicio se confirma una vez acordado el alcance y realizado el pago o la primera cuota. El inicio del trabajo o el acceso a la entrega se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
+        text: 'La contratación se confirma cuando ambas partes acuerdan la propuesta, que define el alcance, las entregas, los tiempos y la modalidad de pago. La fecha de inicio también se coordina para cada proyecto.',
     },
     {
         title: '3. Entregables y propiedad intelectual',
@@ -20,11 +20,11 @@ const TERMS_SECTIONS = [
     },
     {
         title: '5. Pagos y facturación',
-        text: 'Se aceptan pagos en efectivo, transferencia bancaria, QR y tarjeta de débito/crédito. La facturación se realiza con los datos fiscales proporcionados por el cliente. Los precios pueden variar sin previo aviso, respetando el valor confirmado al momento de la contratación.',
+        text: 'Los medios de pago, anticipos, cuotas y documentos de facturación se conversan según cada proyecto y se detallan en la propuesta acordada. El precio y alcance confirmados quedan registrados antes de iniciar.',
     },
     {
         title: '6. Política de reembolsos y cambios',
-        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. El desarrollo de software a medida no tiene reembolso una vez iniciado el trabajo.',
+        text: 'Si necesitás cambiar, pausar o cancelar un servicio, revisamos contigo el avance y los compromisos de la propuesta para acordar una solución según tu situación y el trabajo realizado.',
     },
     {
         title: '7. Datos personales y privacidad',
