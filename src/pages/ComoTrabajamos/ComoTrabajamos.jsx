@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FondoTech from '../../components/fondos/FondoTech';
-import CircleParticles from '../../components/fondos/ParticulasCirculares';
+import ServiceCardsCarousel from '../../components/ui/ServiceCardsCarousel';
 
 const stepsData = [
     {
@@ -9,6 +9,8 @@ const stepsData = [
         title: "Contanos",
         desc: "Explicamos tu necesidad, dificultad, problema o la idea que querés llevar a cabo. No necesitás tecnicismos, solo contanos tu objetivo.",
         icon: "fa-comments",
+        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
+        category: 'PASO 01',
         theme: {
             cardBg: "bg-[#A3E635]",
             textColor: "text-[#0A0A0A]",
@@ -25,6 +27,8 @@ const stepsData = [
         title: "Analizamos",
         desc: "Estudiamos a fondo tu caso, determinamos qué herramientas tecnológicas y metodologías se adaptan mejor a tu necesidad real y definimos el camino.",
         icon: "fa-magnifying-glass-chart",
+        image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
+        category: 'PASO 02',
         theme: {
             cardBg: "bg-white",
             textColor: "text-[#0A0A0A]",
@@ -41,6 +45,8 @@ const stepsData = [
         title: "Proponemos",
         desc: "Planteamos una propuesta clara con el alcance, tecnologías recomendadas, tiempos de entrega estimados y presupuesto transparente sin sorpresas.",
         icon: "fa-file-signature",
+        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+        category: 'PASO 03',
         theme: {
             cardBg: "bg-[#111111]",
             textColor: "text-white",
@@ -57,6 +63,8 @@ const stepsData = [
         title: "Hacemos",
         desc: "Nuestro equipo se encarga del desarrollo, diseño y la construcción de tu solución, manteniéndote informado de los avances de manera constante.",
         icon: "fa-code",
+        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
+        category: 'PASO 04',
         theme: {
             cardBg: "bg-[#A3E635]",
             textColor: "text-[#0A0A0A]",
@@ -73,6 +81,8 @@ const stepsData = [
         title: "Entregamos",
         desc: "Te entregamos la solución completamente funcional, lista para usar y con las pautas necesarias para que puedas gestionarla sin depender de nadie.",
         icon: "fa-circle-check",
+        image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80',
+        category: 'PASO 05',
         theme: {
             cardBg: "bg-white",
             textColor: "text-[#0A0A0A]",
@@ -122,53 +132,22 @@ const ComoTrabajamos = () => {
             <section className="relative z-10 py-20">
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-center">
-                        {stepsData.map((step, idx) => (
-                            <div 
-                                key={idx} 
-                                className={`relative rounded-[2.5rem] p-8 transition-all duration-500 group overflow-hidden border-2 ${step.theme.cardBg} ${step.theme.textColor} ${step.theme.shadow} ${step.theme.border} hover:-translate-y-2 z-10 flex flex-col justify-between min-h-[300px]`}
-                            >
-                                {/* Partículas de fondo para tarjetas oscuras */}
-                                {step.theme.cardBg === 'bg-[#111111]' && (
-                                    <div className="absolute inset-0 z-0 opacity-40">
-                                        <CircleParticles count={6} colorScheme="dark" />
-                                    </div>
-                                )}
+                    <ServiceCardsCarousel items={stepsData} label="Nuestra metodología de trabajo" />
 
-                                <div className="relative z-10 flex flex-col items-center text-center">
-                                    {/* Icono flotante centrado */}
-                                    <div className={`w-16 h-16 rounded-2xl flex items-center justify-center text-2xl shadow-sm mb-6 ${step.theme.iconBg} ${step.theme.iconColor} group-hover:scale-110 transition-transform duration-300`}>
-                                        <i className={`fas ${step.icon}`}></i>
-                                    </div>
-
-                                    {/* Número del paso */}
-                                    <div className="absolute top-0 right-0 z-30">
-                                        <span className={`inline-flex items-center justify-center px-3 py-1 rounded-full text-[10px] font-black tracking-widest ${step.theme.badgeBg}`}>
-                                            PASO {step.num}
-                                        </span>
-                                    </div>
-
-                                    {/* Título y Descripción */}
-                                    <h3 className="text-2xl font-black mb-3 tracking-tight leading-none uppercase">{step.title}</h3>
-                                    <p className={`text-xs font-semibold leading-relaxed ${step.theme.descColor}`}>{step.desc}</p>
-                                </div>
+                    <div className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#111111] p-7 text-center sm:p-9">
+                        <img src="/img/07_Servicios/soluciones/hero-soluciones-v2.webp" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-20" />
+                        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/85 to-[#050505]/60" />
+                        <div className="relative z-10 mx-auto max-w-2xl">
+                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 text-xl text-[#A3E635]">
+                                <i className="fas fa-circle-question" aria-hidden="true"></i>
                             </div>
-                        ))}
-
-                        {/* Tarjeta CTA final dentro de la grilla */}
-                        <div 
-                            className="relative rounded-[2.5rem] p-8 transition-all duration-500 group overflow-hidden border-2 border-dashed border-[#A3E635]/30 bg-transparent text-white hover:border-[#A3E635] hover:-translate-y-2 z-10 flex flex-col justify-center items-center text-center min-h-[300px]"
-                        >
-                            <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 text-[#A3E635] flex items-center justify-center text-2xl mb-6 border border-[#A3E635]/20 animate-pulse">
-                                <i className="fas fa-circle-question"></i>
-                            </div>
-                            <h3 className="text-xl font-black mb-3 tracking-tight leading-none text-[#A3E635]">¿Tenés una idea?</h3>
-                            <p className="text-xs text-slate-400 font-semibold leading-relaxed mb-6">
+                            <h3 className="mb-3 text-xl font-black tracking-tight text-white">¿Tenés una idea?</h3>
+                            <p className="mb-6 text-sm font-medium leading-relaxed text-slate-300">
                                 Empecemos hoy mismo a trabajar en tu propuesta personalizada.
                             </p>
                             <button
                                 onClick={() => navigate('/contactanos')}
-                                className="px-5 py-2.5 rounded-full bg-[#A3E635] text-[#0A0A0A] font-black text-[10px] uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-[#84CC16] cursor-pointer shadow-lg shadow-[#A3E635]/15"
+                                className="rounded-full bg-[#A3E635] px-6 py-3 text-[10px] font-black uppercase tracking-wider text-[#0A0A0A] shadow-lg shadow-[#A3E635]/15 transition-all duration-300 hover:scale-105 hover:bg-[#84CC16]"
                             >
                                 Contanos qué necesitás
                             </button>
