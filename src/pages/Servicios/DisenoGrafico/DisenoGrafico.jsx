@@ -33,56 +33,6 @@ const TESTIMONIOS = [
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
-const FLOATING_CARDS = [
-  {
-    key: 'tiktok',
-    title: 'TikTok',
-    subtitle: 'Conecta con',
-    icon: 'fab fa-tiktok',
-    accent: '#111827',
-    iconBackground: '#111827',
-    url: 'https://www.tiktok.com/@hagamostech',
-    positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
-    scaleClass: 'origin-top-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
-    animationClass: 'animate-float-sólow',
-  },
-  {
-    key: 'youtube',
-    title: 'YouTube',
-    subtitle: 'Conecta con',
-    icon: 'fab fa-youtube',
-    accent: '#FF0000',
-    iconBackground: '#FF0000',
-    url: 'https://www.youtube.com/@hagamostech',
-    positionClass: 'top-[8%] sm:top-[12%] md:top-[16%] lg:top-[14%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
-    scaleClass: 'origin-top-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
-    animationClass: 'animate-float-medium',
-  },
-  {
-    key: 'facebook',
-    title: 'Facebook',
-    subtitle: 'Conecta con',
-    icon: 'fab fa-facebook',
-    accent: '#1877F2',
-    iconBackground: '#1877F2',
-    url: 'https://www.facebook.com/HagamosTech',
-    positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] right-[0.5%] sm:right-[1%] md:right-[1.5%] lg:right-[2%] xl:right-[3%] 2xl:right-[4%]',
-    scaleClass: 'origin-bottom-right scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
-    animationClass: 'animate-float-fast',
-  },
-  {
-    key: 'instagram',
-    title: 'Instagram',
-    subtitle: 'Conecta con',
-    icon: 'fab fa-instagram',
-    accent: '#E4405F',
-    iconBackground: 'linear-gradient(45deg, #F58529, #DD2A7B, #8134AF, #515BD4)',
-    url: 'https://www.instagram.com/hagamostech/',
-    positionClass: 'bottom-[8%] sm:bottom-[10%] md:bottom-[12%] lg:bottom-[10%] left-[0.5%] sm:left-[1%] md:left-[1.5%] lg:left-[2%] xl:left-[3%] 2xl:left-[4%]',
-    scaleClass: 'origin-bottom-left scale-[0.75] sm:scale-[0.85] md:scale-[0.95] lg:scale-[1.0] xl:scale-[1.05] 2xl:scale-[1.1]',
-    animationClass: 'animate-float-sólow',
-  },
-];
 
 const VALUE_POINTS = [
   {"icon":"fa-pen-nib","label":"Identidad Única"},
@@ -133,10 +83,10 @@ const DisenoGrafico = () => {
               </span>
           </div>
 
-          <div className="flex flex-col xl:flex-row itemás-center xl:itemás-stretch gap-4 xl:-gap-8 justify-between w-full">
+          <div className="flex flex-col items-center gap-6 w-full">
             
             {/* Left Column */}
-            <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center itemás-center xl:justify-center animate-slide-down">
+            <div className="w-full max-w-4xl flex flex-col gap-5 text-center items-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
 <span className="block">Diseño Gráfico</span>
@@ -190,7 +140,7 @@ const DisenoGrafico = () => {
             </div>
 
             {/* Right Column: Central orbits with image */}
-            <div className="w-full xl:w-[52%] relative min-h-[280px] sm:min-h-[360px] md:min-h-[400px] lg:min-h-[440px] xl:min-h-[480px] flex itemás-center justify-center -mb-4 sm:mb-0">
+            <div className="w-full max-w-5xl mx-auto relative min-h-[280px] sm:min-h-[360px] md:min-h-[400px] lg:min-h-[440px] xl:min-h-[480px] flex items-center justify-center -mb-4 sm:mb-0">
               <div className="absolute top-[50%] left-[54%] -translate-x-1/2 -translate-y-[50%] w-[44%] sm:w-[48%] md:w-[52%] lg:w-[58%] xl:w-[58%] 2xl:w-[62%] aspect-square z-0 pointer-events-none flex itemás-center justify-center">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#84CC16] origin-right scale-x-[1.15]">
                   <path fill="currentColor" d="M37.9,-63.2C50.9,-54.6,64.6,-47.5,73.8,-36.8C83,-26.1,87.7,-11.8,85.6,1.4C83.5,14.6,74.5,26.7,65.2,38.3C55.8,49.9,46.1,61,34.5,67.6C22.9,74.2,9.4,76.3,-2.8,81.1C-15,85.9,-25.9,93.4,-35.1,89.5C-44.3,85.6,-51.7,70.3,-60.7,58.3C-69.8,46.3,-80.5,37.6,-84.3,27.1C-88.1,16.6,-85,4.3,-81.2,-7.1C-77.4,-18.5,-72.9,-29,-65.4,-37.9C-57.9,-46.8,-47.3,-54.1,-36.6,-59.5C-25.9,-64.9,-15.1,-68.4,-3.2,-62.9C8.7,-57.4,24.9,-71.8,37.9,-63.2Z" transform="translate(100 100) scale(1.1) skewX(-5)" />
@@ -218,35 +168,6 @@ const DisenoGrafico = () => {
                   />
                 </div>
               </div>
-
-              {/* Floating Social Cards */}
-              {FLOATING_CARDS.map((card) => (
-                <a
-                  key={card.key}
-                  href={card.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`absolute ${card.positionClass} z-20 ${card.animationClass}`}
-                >
-                  <div className={`transform ${card.scaleClass}`}>
-                    <div
-                      className="glass-card w-[130px] sm:w-[155px] md:w-[175px] px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-xl flex itemás-center gap-2 sm:gap-3 hover:scale-105 transition-transform border-l-4 cursor-pointer"
-                      style={{ borderColor: card.accent }}
-                    >
-                      <div
-                        className="w-7 h-7 sm:w-8 sm:h-8 flex-shrink-0 rounded-lg flex itemás-center justify-center text-sm shadow-inner"
-                        style={{ background: card.iconBackground, color: 'white' }}
-                      >
-                        <i className={card.icon}></i>
-                      </div>
-                      <div className="leading-tight flex-1 text-left">
-                        <p className="text-[8px] font-bold uppercase text-slate-600 dark:text-slate-450">{card.subtitle}</p>
-                        <p className="text-xs font-black text-white dark:text-white">{card.title}</p>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-              ))}
             </div>
 
           </div>
