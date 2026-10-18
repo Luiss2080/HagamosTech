@@ -3,6 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import Error500 from '../Errores/Error500';
+import Error401 from '../Errores/Error401';
 import NavigationDocumentosLegales from './NavigationDocumentosLegales';
 import TiposCookies from '../Cookies/sections/TiposCookies';
 
@@ -42,5 +43,18 @@ describe('UI-7: documentos legales y errores', () => {
         expect(screen.getByRole('heading', { level: 1, name: 'Error del servidor' })).toBeInTheDocument();
         expect(screen.getByRole('link', { name: /volver al inicio/i })).toHaveAttribute('href', '/');
         expect(screen.queryByText(/equipo técnico.*notificado|está trabajando/i)).not.toBeInTheDocument();
+    });
+
+    it('el CTA de error 401 abre el modal de acceso desde una ruta válida', async () => {
+        const abrirModal = vi.fn();
+        window.openModal = abrirModal;
+        const user = userEvent.setup();
+        render(<MemoryRouter><Error401 /></MemoryRouter>);
+
+        await user.click(screen.getByRole('link', { name: /iniciar sesión/i }));
+
+        expect(abrirModal).toHaveBeenCalledWith('loginModal');
+        expect(screen.getByRole('link', { name: /iniciar sesión/i })).toHaveAttribute('href', '/');
+        delete window.openModal;
     });
 });

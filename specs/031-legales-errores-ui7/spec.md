@@ -42,8 +42,8 @@ actual (fondos claros, texto oscuro, acento lima y componentes ya establecidos).
 |---|---|---|
 | RF-1 y RF-2 | Se conservaron las secciones y se añadió navegación a los cuatro documentos; el documento actual se marca con `aria-current`. | ✅ |
 | RF-3 | Pestañas y tarjetas seleccionables indican estado y relación con el panel; tarjeta cookie se opera con teclado. | ✅ |
-| RF-4 y RF-5 | Error 500 ya no promete aviso técnico; 401/419 abren login en inicio; 404 y 419 usan mensajes comprobables; movimiento reducido desactiva animaciones. | ✅ |
-| RF-6 | 3 pruebas nuevas; suite 87/87, lint y build correctos; `git diff --check` limpio. | ✅ |
+| RF-4 y RF-5 | Error 500 ya no promete aviso técnico; 401/419 abren login en inicio; 403 enlaza a contacto; 404 y 419 usan mensajes comprobables; movimiento reducido desactiva animaciones. | ✅ |
+| RF-6 | 4 pruebas nuevas; suite 88/88, lint y build correctos; `git diff --check` limpio. | ✅ |
 
 ## Pendientes de contenido
 
