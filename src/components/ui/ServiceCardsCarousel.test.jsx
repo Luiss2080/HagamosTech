@@ -37,4 +37,16 @@ describe('ServiceCardsCarousel', () => {
       items.map((item) => item.image)
     );
   });
+
+  it.each([
+    { width: 375, trackWidth: '400%', dotCount: 4 },
+    { width: 768, trackWidth: '200%', dotCount: 3 },
+    { width: 1440, trackWidth: '133.33333333333334%', dotCount: 2 },
+  ])('adapta el carrusel a $width px de ancho', ({ width, trackWidth, dotCount }) => {
+    Object.defineProperty(window, 'innerWidth', { configurable: true, value: width });
+    const { container } = render(<ServiceCardsCarousel items={items} />);
+
+    expect(container.querySelector('.flex.items-stretch').style.width).toBe(trackWidth);
+    expect(screen.getAllByRole('group', { name: 'Elegir tarjeta' })[0].querySelectorAll('button')).toHaveLength(dotCount);
+  });
 });

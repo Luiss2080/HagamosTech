@@ -9,7 +9,7 @@ const PROCESS_IMAGES = [
 
 const DEFAULT_ICONS = ['fa-magnifying-glass', 'fa-palette', 'fa-code', 'fa-rocket'];
 
-const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios' }) => {
+const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', badgePrefix = 'Etapa' }) => {
   const [visibleCards, setVisibleCards] = useState(3);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -68,7 +68,7 @@ const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios' }) =
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/10 to-transparent" />
                     <span className="absolute left-4 top-4 rounded-full border border-[#A3E635]/40 bg-black/70 px-3 py-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#A3E635] backdrop-blur">
-                      {item.category || `Etapa 0${index + 1}`}
+                      {item.category || `${badgePrefix} 0${index + 1}`}
                     </span>
                   </div>
 

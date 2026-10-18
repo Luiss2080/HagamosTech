@@ -3,6 +3,7 @@ import { BookOpen, Stethoscope, Laptop, Microscope, ArrowRight, CheckCircle2, Aw
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 
 const ACADEMIC_TOOLS = [
   { name: 'SPSS', icon: 'fa-solid fa-chart-pie', color: 'text-blue-500' },
@@ -98,25 +99,7 @@ const ESPECIALIDADES = [
 ];
 
 const EspecialidadesGrid = () => {
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[350px]">
-      {ESPECIALIDADES.map((item, idx) => (
-        <div key={idx} className="rounded-[2rem] bg-neutral-900/40 border border-neutral-800 hover:bg-neutral-900 transition-colors group overflow-hidden relative flex flex-col">
-          <div className="h-1/2 w-full overflow-hidden relative">
-             <img src={item.image} alt={item.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 opacity-60" />
-             <div className="absolute inset-0 bg-gradient-to-t from-neutral-900/40 to-transparent"></div>
-          </div>
-          <div className="p-6 relative z-10 -mt-10 flex flex-col justify-end flex-grow">
-            <div className="w-12 h-12 rounded-xl bg-[#A3E635] border border-[#A3E635] flex items-center justify-center text-black mb-4 group-hover:-rotate-12 transition-transform shadow-[0_0_15px_rgba(163,230,53,0.3)] relative z-20">
-              {item.icon}
-            </div>
-            <h3 className="text-xl font-black text-white mb-2">{item.title}</h3>
-            <p className="text-slate-400 text-sm font-medium">{item.desc}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+  return <ServiceCardsCarousel items={ESPECIALIDADES} label="Especialidades académicas" badgePrefix="Área" />;
 };
 
 const Academia = () => {

@@ -15,9 +15,12 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 ## Alcance
 
 - Etapas de proceso de las ocho interfaces de servicio y de la página de metodología.
-- Tarjetas de soluciones de la página de negocios y áreas de tecnología.
+- Tarjetas de soluciones de la página de negocios, áreas de tecnología y especialidades académicas.
 - Tres tarjetas visibles en escritorio para el carrusel existente de novedades.
 
 ## Validación
 
-Pendiente de lint, pruebas y build.
+- `npm run lint`: correcto, 0 errores y cinco advertencias preexistentes en componentes fuera de este cambio.
+- `npm run test:run -- --maxWorkers=1`: correcto, 7 archivos y 39 pruebas aprobados.
+- `npm run build`: correcto.
+- Las cuatro imágenes externas usadas en las etapas del proceso respondieron HTTP 200.
