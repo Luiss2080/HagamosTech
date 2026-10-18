@@ -28,11 +28,14 @@ export default defineConfig({
       env: { PORT: BACKEND_PORT },
     },
     {
-      command: 'npm run dev',
+      command: `npm run dev -- --host 127.0.0.1 --port ${FRONTEND_PORT}`,
       port: Number(FRONTEND_PORT),
       reuseExistingServer: !process.env.CI,
       timeout: 120_000,
-      env: { VITE_API_BASE_URL: `http://localhost:${BACKEND_PORT}/api` },
+      env: {
+        VITE_API_BASE_URL: `http://localhost:${BACKEND_PORT}/api`,
+        VITE_API_PROXY_TARGET: `http://localhost:${BACKEND_PORT}`,
+      },
     },
   ],
 });
