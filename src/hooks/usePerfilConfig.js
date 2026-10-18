@@ -24,26 +24,39 @@ export function useCambioPassword() {
   return { loading, cambiar };
 }
 
+export function usePreferencias() {
+  const [loading, setLoading] = useState(false);
+  const guardar = useCallback(async (preferences) => {
+    setLoading(true);
+    try {
+      const token = getToken();
+      await apiClient.put('/perfil/preferences', preferences, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      return { success: true };
+    } catch {
+      return { success: false, message: 'Error al guardar preferencias' };
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+  return { loading, guardar };
+}
+
 export function useSesiones() {
   const [sesiones, setSesiones] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [alcance, setAlcance] = useState(null);
-  const [error, setError] = useState('');
 
   const listar = useCallback(async () => {
     setLoading(true);
-    setError('');
     try {
       const token = getToken();
       const { data } = await apiClient.get('/perfil/sessions', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSesiones(data.data || data || []);
-      setAlcance(data.alcance || null);
-    } catch (error) {
+    } catch {
       setSesiones([]);
-      setAlcance(null);
-      setError(error.response?.data?.mensaje || 'No se pudieron consultar las sesiones. Inténtalo nuevamente.');
     } finally {
       setLoading(false);
     }
@@ -62,7 +75,7 @@ export function useSesiones() {
     }
   }, []);
 
-  return { sesiones, loading, alcance, error, listar, revocar };
+  return { sesiones, loading, listar, revocar };
 }
 
 export function useDosFA() {

@@ -1,5 +1,5 @@
-import React, { useCallback, useEffect, useRef } from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import React, { useEffect, useRef } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { useChatAssistant } from './hooks/useAsistenteChat';
 import { config_CHAT } from './data/configuracion.js';
 import ChatHeader from './components/EncabezadoChat';
@@ -27,36 +27,13 @@ const ChatAssistant = ({ onOpen, onClose }) => {
   } = useChatAssistant();
 
   const widgetRef = useRef(null);
-  const toggleRef = useRef(null);
   const prevIsOpen = useRef(isOpen);
-  const reduceMotion = useReducedMotion();
-
-  const closeChat = useCallback(() => {
-    toggleChat();
-    window.setTimeout(() => toggleRef.current?.focus(), reduceMotion ? 0 : 300);
-  }, [toggleChat, reduceMotion]);
 
   useEffect(() => {
     if (isOpen && !prevIsOpen.current && onOpen) onOpen();
     if (!isOpen && prevIsOpen.current && onClose) onClose();
     prevIsOpen.current = isOpen;
   }, [isOpen, onOpen, onClose]);
-
-  useEffect(() => {
-    if (!isOpen) return undefined;
-
-    const closeOnEscape = (event) => {
-      if (event.key !== 'Escape') return;
-      if (isMenuOpen) {
-        setIsMenuOpen(false);
-        return;
-      }
-      closeChat();
-    };
-
-    document.addEventListener('keydown', closeOnEscape);
-    return () => document.removeEventListener('keydown', closeOnEscape);
-  }, [isOpen, isMenuOpen, setIsMenuOpen, closeChat]);
 
   // Click outside to close assistant
   useEffect(() => {
@@ -75,12 +52,10 @@ const ChatAssistant = ({ onOpen, onClose }) => {
         {isOpen ? (
           <motion.div
             key="chat-window"
-            role="dialog"
-            aria-labelledby="niko-chat-title"
-            initial={reduceMotion ? false : { opacity: 0, y: 50, scale: 0.9, transformOrigin: 'bottom left' }}
+            initial={{ opacity: 0, y: 50, scale: 0.9, transformOrigin: 'bottom left' }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={reduceMotion ? undefined : { opacity: 0, y: 50, scale: 0.9 }}
-            transition={reduceMotion ? { duration: 0 } : { duration: 0.3, type: "spring", bounce: 0.2 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            transition={{ duration: 0.3, type: "spring", bounce: 0.2 }}
             className="relative w-[calc(100vw-1.5rem)] max-w-[350px] bg-[#0A0A0A] rounded-3xl shadow-[0_20px_40px_-10px_rgba(163,230,53,0.25)] overflow-hidden flex flex-col border border-[#A3E635]/20"
             style={{ height: '560px', maxHeight: '85vh' }}
           >
@@ -92,8 +67,7 @@ const ChatAssistant = ({ onOpen, onClose }) => {
             <ChatHeader
               botName={config_CHAT.botName}
               botRole={config_CHAT.botRole}
-              onClose={closeChat}
-              isMenuOpen={isMenuOpen}
+              onToggle={toggleChat}
               onToggleMenu={() => setIsMenuOpen((prev) => !prev)}
             />
 
@@ -110,7 +84,7 @@ const ChatAssistant = ({ onOpen, onClose }) => {
               onQuestionClick={handleQuestionClick}
             />
 
-              <ChatInput
+            <ChatInput
               value={inputValue}
               onChange={setInputValue}
               onSubmit={handleSendMessage}
@@ -119,7 +93,7 @@ const ChatAssistant = ({ onOpen, onClose }) => {
             />
           </motion.div>
         ) : (
-          <ChatToggle onClick={toggleChat} buttonRef={toggleRef} reduceMotion={reduceMotion} />
+          <ChatToggle onClick={toggleChat} />
         )}
       </AnimatePresence>
     </div>

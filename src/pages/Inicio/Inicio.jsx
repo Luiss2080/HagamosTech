@@ -1,19 +1,24 @@
 import React from 'react';
 import HeroHagamosTech from './sections/HeroHagamosTech';
-import AreasTrabajo from './sections/AreasTrabajo';
+import InstitucionesCarrusel from './sections/InstitucionesCarrusel';
 import ServiciosGrid from './sections/ServiciosGrid';
-import ProcesoTrabajo from './sections/ProcesoTrabajo';
+import VentajasCarrusel from './sections/VentajasCarrusel';
+import NovedadesCarrusel from './sections/NovedadesCarrusel';
 
 const Inicio = () => {
     return (
         <div id="app" className="relative overflow-hidden">
             <HeroHagamosTech />
 
-            <AreasTrabajo />
+            <InstitucionesCarrusel />
 
             <ServiciosGrid />
 
-            <ProcesoTrabajo />
+            {/* --- VENTAJAS DE TRABAJAR CON HagamosTech --- */}
+            <VentajasCarrusel />
+
+            {/* --- NOTICIAS Y NOVEDADES --- */}
+            <NovedadesCarrusel />
         </div>
     );
 };

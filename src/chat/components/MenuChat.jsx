@@ -1,16 +1,14 @@
 import React from 'react';
-import { AnimatePresence, motion, useReducedMotion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
-const ChatMenu = ({ isOpen, categories, onSelectCategory }) => {
-  const reduceMotion = useReducedMotion();
-
-  return <AnimatePresence>
+const ChatMenu = ({ isOpen, categories, onSelectCategory }) => (
+  <AnimatePresence>
     {isOpen && (
       <motion.div
-        initial={reduceMotion ? false : { opacity: 0, y: -10, scale: 0.95 }}
+        initial={{ opacity: 0, y: -10, scale: 0.95 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
-        exit={reduceMotion ? undefined : { opacity: 0, y: -10, scale: 0.95 }}
-        transition={reduceMotion ? { duration: 0 } : { duration: 0.15 }}
+        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+        transition={{ duration: 0.15 }}
         className="absolute top-[68px] right-3 z-[100] w-60 bg-[#111827]/95 backdrop-blur-xl rounded-2xl shadow-xl border border-[#A3E635]/20 overflow-hidden"
       >
         <div className="flex flex-col">
@@ -32,7 +30,7 @@ const ChatMenu = ({ isOpen, categories, onSelectCategory }) => {
         </div>
       </motion.div>
     )}
-  </AnimatePresence>;
-};
+  </AnimatePresence>
+);
 
 export default ChatMenu;

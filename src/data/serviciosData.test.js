@@ -28,7 +28,7 @@ const CONTEOS_ESPERADOS = {
   personalizado: 1,
 };
 
-const CAMPOS_OBLIGATORIOS = ['id', 'name', 'icon', 'category', 'shortDesc', 'cta', 'ctaLink'];
+const CAMPOS_OBLIGATORIOS = ['id', 'name', 'icon', 'img', 'category', 'shortDesc', 'cta', 'ctaLink'];
 
 // Nombres exactos del Catálogo Maestro (docs/catalogo-servicios.md).
 const NOMBRES_ESPERADOS = {
@@ -144,6 +144,14 @@ describe('Integridad de la oferta (serviciosData)', () => {
         for (const campo of CAMPOS_OBLIGATORIOS) {
           expect(servicio[campo], `${categoria}/${servicio.id} sin "${campo}"`).toBeTruthy();
         }
+      }
+    }
+  });
+
+  it('cada servicio del catálogo tiene una imagen utilizable', () => {
+    for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {
+      for (const servicio of servicios) {
+        expect(servicio.img, `${categoria}/${servicio.id} sin imagen`).toMatch(/^https:\/\//);
       }
     }
   });

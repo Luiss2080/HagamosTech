@@ -4,11 +4,11 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 const TERMS_SECTIONS = [
     {
         title: '1. Servicios y soluciones',
-        text: 'HAGAMOSTECH ofrece acompañamiento académico, servicios para emprendimientos y profesionales, diseño gráfico, desarrollo web, software y soluciones digitales a medida. No ofrece automatizaciones, n8n, operación de servidores ni infraestructura compleja. Al contratar un servicio, el cliente acepta las condiciones aquí descritas.',
+        text: 'HAGAMOSTECH ofrece soluciones digitales y tecnológicas: apoyo académico, servicios para emprendedores y negocios, empleo y desarrollo profesional, diseño gráfico, desarrollo web y e-commerce, software y hardware, automatización e inteligencia artificial, y soluciones a medida. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
     },
     {
         title: '2. Contratación y acceso a servicios',
-        text: 'La contratación se confirma cuando ambas partes acuerdan la propuesta, que define el alcance, las entregas, los tiempos y la modalidad de pago. La fecha de inicio también se coordina para cada proyecto.',
+        text: 'La contratación de un servicio se confirma una vez acordado el alcance y realizado el pago o la primera cuota. El inicio del trabajo o el acceso a la entrega se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
     },
     {
         title: '3. Entregables y propiedad intelectual',
@@ -20,11 +20,11 @@ const TERMS_SECTIONS = [
     },
     {
         title: '5. Pagos y facturación',
-        text: 'Los medios de pago, anticipos, cuotas y documentos de facturación se conversan según cada proyecto y se detallan en la propuesta acordada. El precio y alcance confirmados quedan registrados antes de iniciar.',
+        text: 'Se aceptan pagos en efectivo, transferencia bancaria, QR y tarjeta de débito/crédito. La facturación se realiza con los datos fiscales proporcionados por el cliente. Los precios pueden variar sin previo aviso, respetando el valor confirmado al momento de la contratación.',
     },
     {
         title: '6. Política de reembolsos y cambios',
-        text: 'Si necesitás cambiar, pausar o cancelar un servicio, revisamos contigo el avance y los compromisos de la propuesta para acordar una solución según tu situación y el trabajo realizado.',
+        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. El desarrollo de software a medida no tiene reembolso una vez iniciado el trabajo.',
     },
     {
         title: '7. Datos personales y privacidad',

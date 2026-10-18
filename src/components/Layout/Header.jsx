@@ -10,9 +10,9 @@ const NAV_ITEMS = [
         icon: 'fa-layer-group',
         type: 'dropdown',
         subItems: [
-            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo web y software a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
-            { id: 'cat-academia', label: 'Academia', desc: 'Mentorías y acompañamiento académico.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
-            { id: 'cat-negocios', label: 'Emprendimientos y profesionales', desc: 'Diseño, recursos de marca y desarrollo profesional.', target: '/que-hacemos/negocios', icon: 'fa-briefcase' },
+            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
+            { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
+            { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-store' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
     },
@@ -23,7 +23,9 @@ const NAV_ITEMS = [
         type: 'dropdown',
         subItems: [
             { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
-            { id: 'srv-apps', label: 'Sistemas y Software', desc: 'Sistemas web y bases de datos.', target: '/servicios/sistemas-apps', icon: 'fa-laptop-code' },
+            { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
+            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/servicios/automatizacion', icon: 'fa-gear' },
+            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/servicios/inteligencia-artificial', icon: 'fa-robot' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
             { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
             { id: 'srv-empleo', label: 'Empleo', desc: 'CVs y preparación profesional.', target: '/servicios/empleo', icon: 'fa-user-tie' },
@@ -36,11 +38,11 @@ const NAV_ITEMS = [
         icon: 'fa-users',
         type: 'dropdown',
         subItems: [
-            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Mentorías y orientación según nivel y disponibilidad.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
-            { id: 'pq-emprendedores', label: 'Emprendimientos', desc: 'Identidad, diseño y recursos para presentar tu oferta.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-profesionales', label: 'Profesionales', desc: 'CV, perfil profesional y portafolios digitales.', target: '/que-hacemos/negocios', icon: 'fa-user-tie' },
-            { id: 'pq-empresas', label: 'Empresas e instituciones', desc: 'Sitios y software con alcance por evaluar.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
-            { id: 'pq-particulares', label: 'Solicitud personalizada', desc: 'Contanos tu proyecto y revisamos si está en nuestro alcance.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
+            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
+            { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
+            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
+            { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
+            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'route', target: '/como-trabajamos' },
@@ -50,10 +52,10 @@ const NAV_ITEMS = [
         icon: 'fa-circle-info',
         type: 'dropdown',
         subItems: [
-            { id: 'sn-origen', label: 'Nuestro enfoque', desc: 'Cómo revisamos solicitudes y acordamos alcance.', target: '/sobre-nosotros#origen', icon: 'fa-diagram-project' },
-            { id: 'sn-mision', label: 'Propósito y rumbo', desc: 'Desarrollo digital, diseño y acompañamiento académico.', target: '/sobre-nosotros#mision', icon: 'fa-compass' },
-            { id: 'sn-valores', label: 'Principios de trabajo', desc: 'Claridad, colaboración y alcance acordado.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: 'Áreas que acompañamos', desc: 'Conocé los caminos de orientación a los servicios.', target: '/sobre-nosotros/videos', icon: 'fa-layer-group' },
+            { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
+            { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
+            { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
+            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/#que-hacemos', icon: 'fa-users' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
@@ -88,7 +90,6 @@ const Header = () => {
     }, []);
 
     const userMenuRef = useRef(null);
-    const mobileMenuButtonRef = useRef(null);
     const location = useLocation();
     const navigate = useNavigate();
     const user = useAuthStore((state) => state.user);
@@ -128,20 +129,6 @@ const Header = () => {
             document.body.classList.remove('overflow-hidden');
         }
         return () => document.body.classList.remove('overflow-hidden');
-    }, [isMenuOpen]);
-
-    useEffect(() => {
-        if (!isMenuOpen) return undefined;
-
-        const handleMenuKeyDown = (event) => {
-            if (event.key === 'Escape') {
-                setIsMenuOpen(false);
-                mobileMenuButtonRef.current?.focus();
-            }
-        };
-
-        document.addEventListener('keydown', handleMenuKeyDown);
-        return () => document.removeEventListener('keydown', handleMenuKeyDown);
     }, [isMenuOpen]);
 
     useEffect(() => {
@@ -278,7 +265,6 @@ const Header = () => {
                         <div className="ml-auto flex items-center gap-2 xl:hidden">
                             <button
                                 id="mobile-menu-btn"
-                                ref={mobileMenuButtonRef}
                                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 aria-label={isMenuOpen ? 'Cerrar Menú' : 'Abrir Menú'}
                                 aria-expanded={isMenuOpen}
@@ -485,8 +471,6 @@ const Header = () => {
 
             <div
                 id="navbar-collapse"
-                aria-hidden={!isMenuOpen}
-                inert={!isMenuOpen}
                 className={`fixed inset-0 z-[70] bg-[#0A0A0A] xl:hidden flex flex-col px-4 sm:px-5 pt-16 pb-8 overflow-y-auto transition-all duration-300 ease-out ${
                     isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}

@@ -9,7 +9,7 @@ const HeroPrivacidad = () => {
             <PageHero
                 title="Política de"
                 highlight="Privacidad."
-                description="Conocé qué información se usa al crear una cuenta, escribirnos o coordinar un servicio con HagamosTech."
+                description="En HagamosTech nos tomamos muy en serio la protección de tus datos personales. Conocé cómo recopilamos, usamos y protegemos tu información."
             />
         </div>
     );

@@ -5,36 +5,36 @@ const CATEGORIAS = [
     {
         icon: 'fa-id-card',
         titulo: 'Datos de Identificación',
-        ejemplo: 'Nombre, correo y teléfono; el perfil puede incluir datos adicionales.',
-        detalles: 'Al crear una cuenta se solicitan nombre, correo y teléfono. El perfil también permite guardar identificación, fecha de nacimiento, institución educativa y foto.',
-        items: ['Nombre y apellido', 'Correo y teléfono', 'Identificación y fecha de nacimiento', 'Institución y foto de perfil'],
+        ejemplo: 'Nombre, apellido, correo electrónico y número de celular.',
+        detalles: 'Los solicitamos al registrarte, al enviar una solicitud o al contactarnos. Son necesarios para coordinar tus proyectos y mantenerte informado.',
+        items: ['Nombre y apellido', 'Correo electrónico', 'Número de celular', 'Preferencias de proyecto'],
         color: 'from-[#A3E635] to-[#84CC16]',
         badge: 'bg-[#A3E635]'
     },
     {
         icon: 'fa-location-dot',
         titulo: 'Datos de Contacto',
-        ejemplo: 'Datos que compartís al escribirnos o solicitar atención.',
-        detalles: 'El formulario de contacto solicita nombre, correo, teléfono, asunto y mensaje. La consulta se registra en el sistema y se envía al correo de atención configurado.',
-        items: ['Nombre', 'Correo y teléfono', 'Asunto', 'Mensaje'],
+        ejemplo: 'Ciudad, empresa o institución y datos para coordinar la atención.',
+        detalles: 'Usamos estos datos solo para coordinar reuniones, entregas de soluciones y seguimiento. Nunca compartimos tu información con terceros.',
+        items: ['Ciudad o zona', 'Empresa o institución', 'Referencias de contacto'],
         color: 'from-[#0A0A0A] to-[#171717]',
         badge: 'bg-[#0A0A0A]'
     },
     {
         icon: 'fa-credit-card',
         titulo: 'Datos de Pago',
-        ejemplo: 'Información necesaria para acordar un servicio y su documentación.',
-        detalles: 'El sitio no tiene un checkout ni un formulario para ingresar tarjetas. Los medios de pago y los datos de facturación se coordinan para cada proyecto.',
-        items: ['Alcance acordado', 'Medio de pago coordinado', 'Datos de facturación si corresponden'],
+        ejemplo: 'Información de facturación y métodos de pago utilizados.',
+        detalles: 'Los pagos se procesan a través de plataformas seguras. No almacenamos números de tarjetas en nuestros servidores.',
+        items: ['Historial de servicios', 'Método de pago utilizado', 'NIT para facturación'],
         color: 'from-[#84CC16] to-[#A3E635]',
         badge: 'bg-[#84CC16]'
     },
     {
         icon: 'fa-mobile-screen-button',
         titulo: 'Datos de Uso',
-        ejemplo: 'Datos técnicos que el sitio usa para mantener funciones de cuenta y preferencias.',
-        detalles: 'La web usa almacenamiento de sesión para la cuenta y almacenamiento local para algunas preferencias y la foto de perfil. No encontramos herramientas de analítica o publicidad integradas en el código revisado.',
-        items: ['Sesión de cuenta', 'Tema y color elegidos', 'Foto de perfil', 'Sin analítica integrada detectada'],
+        ejemplo: 'Cómo interactuás con nuestro sitio y tus preferencias.',
+        detalles: 'Analizamos la navegación para mejorar nuestra web y personalizar tu experiencia. Los datos son anónimos y agregados.',
+        items: ['Páginas visitadas', 'Proyectos de interés', 'Tiempo de visita'],
         color: 'from-[#171717] to-[#0A0A0A]',
         badge: 'bg-[#171717]'
     },

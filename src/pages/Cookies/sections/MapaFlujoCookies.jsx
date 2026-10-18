@@ -4,46 +4,46 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 const FLUJO = [
     {
         icon: 'fa-mobile-screen-button',
-        titulo: 'Tu navegador',
+        titulo: 'Tu Dispositivo',
         etiqueta: 'Origen',
-        desc: 'El navegador mantiene la cookie de autenticación y el almacenamiento local de la aplicación.',
-        detalle: 'Las preferencias y los datos de sesión permanecen en tu navegador.',
-        chips: ['Cookie', 'Sesión', 'Preferencias'],
+        desc: 'Navegás y aceptás las cookies desde tu navegador.',
+        detalle: 'La cookie se guarda de forma local en tu equipo.',
+        chips: ['Navegación', 'Aceptación', 'Local'],
         stat: 'Local',
         statIcon: 'fa-laptop',
         color: 'bg-[#A3E635]'
     },
     {
         icon: 'fa-globe',
-        titulo: 'La aplicación',
+        titulo: 'Nuestro Servidor',
         etiqueta: 'Tránsito',
-        desc: 'Usa la cookie de autenticación para atender las funciones de tu cuenta.',
-        detalle: 'Las preferencias de cookies no se guardan en un panel de consentimiento.',
-        chips: ['Autenticación', 'Cuenta', 'Solicitud'],
-        stat: 'Cuenta',
+        desc: 'Guardamos tus preferencias para identificarte.',
+        detalle: 'Tu cookie se asocia a tus preferencias.',
+        chips: ['Identificación', 'Sesión', 'Segura'],
+        stat: 'Cifrado',
         statIcon: 'fa-lock',
         color: 'bg-[#0A0A0A]'
     },
     {
         icon: 'fa-database',
-        titulo: 'Servicios del sitio',
+        titulo: 'Base de Datos',
         etiqueta: 'Almacenamiento',
-        desc: 'Las consultas y los datos de cuenta se procesan para atender las funciones solicitadas.',
-        detalle: 'La aplicación registra consultas de contacto y datos de cuenta en su base de datos.',
-        chips: ['Cuenta', 'Contacto', 'Seguimiento'],
-        stat: 'Atención',
+        desc: 'Los datos se almacenan cifrados y seguros.',
+        detalle: 'Nada se comparte con terceros.',
+        chips: ['Cifrado', 'Privacidad', 'Protegido'],
+        stat: 'Seguro',
         statIcon: 'fa-shield-halved',
         color: 'bg-[#171717]'
     },
     {
         icon: 'fa-chart-simple',
-        titulo: 'Recursos externos',
+        titulo: 'Análisis Anónimo',
         etiqueta: 'Destino',
-        desc: 'La página carga recursos como fuentes, iconos, librerías e imágenes alojadas fuera del sitio.',
-        detalle: 'Al solicitarlos, el navegador se conecta con el proveedor que aloja cada recurso.',
-        chips: ['Fuentes', 'Librerías', 'Imágenes'],
-        stat: 'Terceros',
-        statIcon: 'fa-arrow-up-right-from-square',
+        desc: 'Usamos la información para mejorar el servicio.',
+        detalle: 'Datos agregados, nunca personales.',
+        chips: ['Anónimo', 'Optimización', 'Mejora'],
+        stat: 'Anónimo',
+        statIcon: 'fa-user-secret',
         color: 'bg-[#84CC16]'
     },
 ];
@@ -87,9 +87,6 @@ const MapaFlujoCookies = () => {
                                         return (
                                             <button
                                                 key={i}
-                                                type="button"
-                                                aria-pressed={isActive}
-                                                aria-controls="detalle-flujo-cookie"
                                                 onClick={() => setActivo(i)}
                                                 className="relative flex flex-col items-center gap-2 group"
                                             >
@@ -107,7 +104,7 @@ const MapaFlujoCookies = () => {
                             </div>
 
                             {/* Panel de detalle del paso activo */}
-                            <div id="detalle-flujo-cookie" key={activo} aria-live="polite" className={`relative mt-6 rounded-[1.5rem] overflow-hidden ${nodo.color} text-white shadow-lg animate-fade-in`}>
+                            <div key={activo} className={`relative mt-6 rounded-[1.5rem] overflow-hidden ${nodo.color} text-white shadow-lg animate-fade-in`}>
                                 <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/15 blur-3xl animate-float-slow pointer-events-none"></div>
                                 <div className="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-black/10 blur-3xl animate-float-medium pointer-events-none"></div>

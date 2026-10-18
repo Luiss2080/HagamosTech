@@ -2,10 +2,10 @@ import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const USOS = [
-    { icon: 'fa-lightbulb', titulo: 'Atender tus solicitudes', desc: 'Usamos los datos del formulario para entender tu consulta y responderte por los canales disponibles.', puntos: ['Revisar el mensaje', 'Contactarte', 'Dar seguimiento'], color: 'bg-[#A3E635]' },
-    { icon: 'fa-user-gear', titulo: 'Gestionar tu cuenta', desc: 'Los datos del perfil permiten identificar tu cuenta y guardar la información que elegís completar.', puntos: ['Acceso a la cuenta', 'Datos de perfil', 'Preferencias locales'], color: 'bg-[#84CC16]' },
-    { icon: 'fa-envelope', titulo: 'Enviar comunicaciones necesarias', desc: 'Usamos el correo para verificar la cuenta, gestionar el acceso y responder solicitudes.', puntos: ['Verificación', 'Recuperación de acceso', 'Respuesta a consultas'], color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-handshake', titulo: 'Coordinar cada proyecto', desc: 'Si avanzamos con un servicio, acordamos alcance, entregas y condiciones según tu situación.', puntos: ['Propuesta', 'Entregas', 'Condiciones acordadas'], color: 'bg-[#171717]' },
+    { icon: 'fa-lightbulb', titulo: 'Procesar tus solicitudes', desc: 'Coordinamos el análisis y desarrollo de cada proyecto para entregarte la solución que necesitás.', puntos: ['Confirmación de solicitud', 'Seguimiento del proyecto', 'Historial de consultas'], color: 'bg-[#A3E635]' },
+    { icon: 'fa-heart', titulo: 'Mejorar tu experiencia', desc: 'Recordamos tus preferencias y te mostramos recursos y soluciones que realmente te interesan.', puntos: ['Recomendaciones', 'Recursos personalizados', 'Proyectos favoritos'], color: 'bg-[#84CC16]' },
+    { icon: 'fa-envelope', titulo: 'Comunicarnos con vos', desc: 'Te enviamos novedades, avisos y actualizaciones relacionadas a tu cuenta y tus proyectos.', puntos: ['Novedades', 'Actualizaciones', 'Avisos de cuenta'], color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-chart-line', titulo: 'Mejorar el servicio', desc: 'Analizamos tendencias para optimizar nuestras soluciones, tiempos y cobertura de atención.', puntos: ['Análisis de demanda', 'Optimización de servicios', 'Nuevas soluciones'], color: 'bg-[#171717]' },
 ];
 
 const UsoDatos = () => {
@@ -25,7 +25,7 @@ const UsoDatos = () => {
                             </span>
                         </h2>
                         <p className="text-slate-600 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Usamos la información para gestionar tu cuenta, responder consultas y coordinar servicios.
+                            Tus datos siempre trabajan para darte una mejor experiencia.
                         </p>
                     </div>
 

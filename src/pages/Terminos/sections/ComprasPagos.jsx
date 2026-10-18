@@ -2,10 +2,10 @@ import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const POLITICAS = [
-    { icon: 'fa-credit-card', titulo: 'Alternativas de pago', desc: 'Conversamos los medios de pago, anticipos y cuotas según tu situación. Las condiciones acordadas quedan en la propuesta.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-rotate-left', titulo: 'Cambios y cancelaciones', desc: 'Si necesitás pausar o cancelar, revisamos contigo el avance y los compromisos acordados para encontrar una salida clara.', color: 'bg-[#84CC16]' },
-    { icon: 'fa-receipt', titulo: 'Comprobantes y factura', desc: 'Coordinamos los datos y documentos de pago que correspondan a tu proyecto antes de comenzar.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-comments', titulo: 'Acuerdo transparente', desc: 'Alcance, entregas, pagos y ajustes se conversan y quedan definidos en la propuesta aceptada por ambas partes.', color: 'bg-[#171717]' },
+    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Aceptamos QR, transferencia bancaria y otros medios digitales. Los pagos se confirman antes de iniciar el desarrollo.', color: 'bg-[#A3E635]' },
+    { icon: 'fa-rotate-left', titulo: 'Cancelaciones', desc: 'Podés cancelar o pausar tu solicitud antes de que comience el desarrollo. Coordinamos los tiempos contigo.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'Indicá tu NIT al contratar. Recibís comprobante digital y factura por cada servicio entregado.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-shield', titulo: 'Seguridad', desc: 'Tus datos de pago están cifrados y nunca se comparten con terceros. Los pagos se procesan por plataformas seguras.', color: 'bg-[#171717]' },
 ];
 
 const ComprasPagos = () => {

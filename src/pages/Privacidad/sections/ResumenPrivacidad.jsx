@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RESUMEN = [
-    { icon: 'fa-shield-halved', titulo: 'Uso relacionado con tu solicitud', desc: 'Los datos que compartís se usan para gestionar tu cuenta, responderte y coordinar los servicios que consultás.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-lock', titulo: 'Datos que puede guardar el sitio', desc: 'La cuenta, el perfil y los mensajes de contacto pueden quedar registrados para prestar esas funciones.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-user-shield', titulo: 'Solicitudes sobre tus datos', desc: 'Podés escribirnos para consultar, corregir o pedir la revisión de tus datos y de tu cuenta.', color: 'bg-[#171717]' },
-    { icon: 'fa-file-shield', titulo: 'Revisión editorial', desc: 'Contenido revisado en octubre de 2026. Las condiciones específicas de cada servicio se acuerdan en su propuesta.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-shield-halved', titulo: 'Compromiso con tu privacidad', desc: 'Nunca vendemos tus datos personales a terceros. Tu información se usa solo para mejorar tu experiencia con nosotros.', color: 'bg-[#A3E635]' },
+    { icon: 'fa-lock', titulo: 'Transparencia total', desc: 'Todo lo que hacemos con tus datos está explicado en esta página, en lenguaje simple y claro.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-user-shield', titulo: 'Control en tus manos', desc: 'Podés acceder, corregir o eliminar tus datos cuando quieras. Tus derechos están garantizados.', color: 'bg-[#171717]' },
+    { icon: 'fa-file-shield', titulo: 'Actualización 2026', desc: 'Esta política se actualizó por última vez en enero de 2026. Te avisaremos ante cualquier cambio.', color: 'bg-[#84CC16]' },
 ];
 
 const ResumenPrivacidad = () => {
@@ -19,8 +19,8 @@ const ResumenPrivacidad = () => {
                             <i className="fas fa-check-double text-[#A3E635] mr-1"></i> Lo Esencial
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
-                            En resumen, tus <span className="relative inline-block text-[#A3E635]">
-                                datos
+                            En resumen, te <span className="relative inline-block text-[#A3E635]">
+                                protegemos
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-amber-500 drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>

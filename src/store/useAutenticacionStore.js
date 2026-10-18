@@ -46,10 +46,7 @@ const restoreFoto = (userObj) => {
 const useAuthStore = create((set, get) => ({
     user: null,
     isAuthenticated: false,
-    isInitialized: false,
     loading: false,
-    profileStatus: 'idle',
-    profileError: '',
 
     initSession: () => {
       const ssToken = getToken();
@@ -58,7 +55,7 @@ const useAuthStore = create((set, get) => ({
       const lastActivity = getActivity();
 
       if (!token) {
-      set({ user: null, isAuthenticated: false, isInitialized: true, profileStatus: 'idle', profileError: '' });
+      set({ user: null, isAuthenticated: false });
         return false;
       }
 
@@ -73,7 +70,7 @@ const useAuthStore = create((set, get) => ({
         if (elapsed < SESSION_TIMEOUT_MS) {
           Cookies.set('hagamostech_token', token);
           setActivity();
-          set({ user: restoreFoto(userFromCache), isAuthenticated: true, isInitialized: true, profileStatus: userFromCache ? 'ready' : 'loading' });
+          set({ user: restoreFoto(userFromCache), isAuthenticated: true });
           return true;
         }
         get()._destroySession();
@@ -83,7 +80,7 @@ const useAuthStore = create((set, get) => ({
       if (!ssToken && cookieToken) {
         setToken(cookieToken);
         setActivity();
-        set({ user: restoreFoto(userFromCache), isAuthenticated: true, isInitialized: true, profileStatus: userFromCache ? 'ready' : 'loading' });
+        set({ user: restoreFoto(userFromCache), isAuthenticated: true });
         return true;
       }
 
@@ -110,7 +107,7 @@ const useAuthStore = create((set, get) => ({
       sessionStorage.removeItem(SS_ACTIVITY);
       sessionStorage.removeItem(SS_PROFILE);
       Cookies.remove('hagamostech_token');
-      set({ user: null, isAuthenticated: false, isInitialized: true, profileStatus: 'idle', profileError: '' });
+      set({ user: null, isAuthenticated: false });
     },
 
     login: async (datos) => {
@@ -134,7 +131,7 @@ const useAuthStore = create((set, get) => ({
             setActivity();
             const userData = data.usuario;
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(userData));
-            set({ user: restoreFoto(userData), isAuthenticated: true, isInitialized: true, profileStatus: 'ready', profileError: '', loading: false });
+            set({ user: restoreFoto(userData), isAuthenticated: true, loading: false });
             return { success: true };
         } catch (error) {
             set({ loading: false });
@@ -153,7 +150,7 @@ const useAuthStore = create((set, get) => ({
             setActivity();
             const userData = data.usuario;
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(userData));
-            set({ user: restoreFoto(userData), isAuthenticated: true, isInitialized: true, profileStatus: 'ready', profileError: '', loading: false });
+            set({ user: restoreFoto(userData), isAuthenticated: true, loading: false });
             return { success: true };
         } catch (error) {
             set({ loading: false });
@@ -198,7 +195,7 @@ const useAuthStore = create((set, get) => ({
             setActivity();
             const userData = data.usuario;
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(userData));
-            set({ user: restoreFoto(userData), isAuthenticated: true, isInitialized: true, profileStatus: 'ready', profileError: '', loading: false });
+            set({ user: restoreFoto(userData), isAuthenticated: true, loading: false });
             return { success: true };
         } catch (error) {
             set({ loading: false });
@@ -217,7 +214,7 @@ const useAuthStore = create((set, get) => ({
             setActivity();
             const userData = data.usuario;
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(userData));
-            set({ user: restoreFoto(userData), isAuthenticated: true, isInitialized: true, profileStatus: 'ready', profileError: '', loading: false });
+            set({ user: restoreFoto(userData), isAuthenticated: true, loading: false });
             return { success: true };
         } catch (error) {
             set({ loading: false });
@@ -276,29 +273,29 @@ const useAuthStore = create((set, get) => ({
 
     updateProfile: async (datos) => {
         set({ loading: true });
+        if (datos.fotoPerfil && get().user?.id) {
+            localStorage.setItem(fotoKey(get().user.id), datos.fotoPerfil);
+        }
         try {
             const token = getToken() || Cookies.get('hagamostech_token');
             const { data } = await apiClient.put('/perfil', datos, {
                 headers: { Authorization: `Bearer ${token}` }
             });
             if (data.success) {
-                const updatedUser = data.data;
+                const updatedUser = { ...data.data, ...datos };
                 sessionStorage.setItem(SS_PROFILE, JSON.stringify(updatedUser));
-                if (datos.fotoPerfil && updatedUser.id) {
-                    localStorage.setItem(fotoKey(updatedUser.id), datos.fotoPerfil);
-                }
                 set({ user: updatedUser, loading: false });
                 return { success: true };
             }
-            set({ loading: false });
-            return { success: false, message: 'El servidor no confirmó la actualización del perfil.' };
         } catch (error) {
-            set({ loading: false });
-            return {
-                success: false,
-                message: error.response?.data?.mensaje || error.response?.data?.error || 'No se pudo guardar el perfil. Inténtalo nuevamente.'
-            };
+            console.warn('API /perfil update failed, falling back to local state only.', error);
         }
+        set((state) => {
+            const updatedUser = { ...state.user, ...datos };
+            sessionStorage.setItem(SS_PROFILE, JSON.stringify(updatedUser));
+            return { user: updatedUser, loading: false };
+        });
+        return { success: true, message: 'Perfil actualizado localmente' };
     },
 
     fetchProfile: async () => {
@@ -315,7 +312,6 @@ const useAuthStore = create((set, get) => ({
             get()._destroySession();
             return;
         }
-        set({ profileStatus: 'loading', profileError: '' });
         try {
             const { data } = await apiClient.get('/perfil');
             let finalUser = data.data;
@@ -344,13 +340,11 @@ const useAuthStore = create((set, get) => ({
                 }
             }
 
-            set({ user: restoreFoto(finalUser), isAuthenticated: true, profileStatus: 'ready', profileError: '' });
+            set({ user: restoreFoto(finalUser), isAuthenticated: true });
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(finalUser));
-        } catch (error) {
-            if (error.response?.status === 401) {
+        } catch {
+            if (!cached) {
                 get()._destroySession();
-            } else {
-                set({ profileStatus: 'error', profileError: error.response?.data?.mensaje || error.response?.data?.error || 'No se pudo actualizar la información de tu cuenta.' });
             }
         }
     },

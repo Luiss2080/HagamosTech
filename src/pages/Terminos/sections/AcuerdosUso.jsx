@@ -34,7 +34,7 @@ const ACUERDOS = [
         titulo: 'Cuenta de Usuario',
         ejemplo: 'Responsabilidades de tu cuenta.',
         detalles: 'Sos responsable de mantener la confidencialidad de tus credenciales de acceso. Cualquier actividad realizada con tu cuenta es tu responsabilidad. Podés eliminar tu cuenta cuando quieras.',
-        items: ['Credenciales seguras', 'Responsabilidad propia', 'Eliminación libre', 'Canales de contacto'],
+        items: ['Credenciales seguras', 'Responsabilidad propia', 'Eliminación libre', 'Soporte 24/7'],
         color: 'bg-[#171717]',
         soft: 'bg-[#171717]/5 text-[#171717] border-[#171717]/15'
     },

@@ -4,7 +4,7 @@ import FondoTech from '../../../components/fondos/FondoTech';
 const RESUMEN = [
     { icon: 'fa-file-signature', titulo: 'Aceptación al usar', desc: 'Al navegar nuestro sitio o enviar una solicitud, aceptás automáticamente estos términos de servicio.', color: 'bg-[#A3E635]' },
     { icon: 'fa-lightbulb', titulo: 'Soluciones a medida', desc: 'Cada proyecto se analiza según tu necesidad real. El alcance se define junto con vos antes de empezar.', color: 'bg-[#84CC16]' },
-    { icon: 'fa-hand-holding-dollar', titulo: 'Acuerdos flexibles', desc: 'Definimos contigo las alternativas de pago y las condiciones de cada proyecto.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-hand-holding-dollar', titulo: 'Pagos seguros', desc: 'Los pagos se procesan de forma transparente y segura. Aceptamos QR, transferencia y otros medios.', color: 'bg-[#0A0A0A]' },
     { icon: 'fa-rotate', titulo: 'Acompañamiento', desc: 'Te entregamos el resultado y las indicaciones para usarlo. Consultas posteriores incluidas.', color: 'bg-[#171717]' },
 ];
 

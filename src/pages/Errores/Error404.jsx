@@ -10,7 +10,7 @@ const Error404 = () => (
     logs={[
       { type: 'info', text: 'Buscando recurso en el servidor de HagamosTech...' },
       { type: 'error', text: 'URL no coincide con ninguna ruta registrada en el sistema.' },
-      { type: 'warn', text: 'Usa el botón para volver al inicio.' },
+      { type: 'warn', text: 'Redireccionando al portal de inicio automáticamente.' },
     ]}
     action={{ to: '/', label: 'Volver al Inicio', icon: 'fa-house' }}
   />

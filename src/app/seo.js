@@ -4,7 +4,7 @@
 export const SEO_POR_DEFECTO = {
   title: 'HagamosTech | Soluciones digitales y tecnológicas',
   description:
-    'HagamosTech ofrece acompañamiento académico, desarrollo web y software, diseño y soluciones digitales a medida.',
+    'HagamosTech transforma problemas, necesidades e ideas en soluciones reales: web, software, diseño, automatización e inteligencia artificial.',
 };
 
 const REGLAS = [
@@ -16,7 +16,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/tecnologia'),
     title: 'Tecnología | HagamosTech',
-    description: 'Desarrollo de páginas web, sistemas y software según el alcance de cada proyecto.',
+    description: 'Desarrollo web, sistemas, automatización e inteligencia artificial a medida.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/academia'),
@@ -26,7 +26,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/negocios'),
     title: 'Negocios | HagamosTech',
-    description: 'Identidad visual, catálogos digitales y presencia web para emprendimientos.',
+    description: 'Digitalización, páginas web y automatización para emprendedores y pymes.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/personalizado'),
@@ -40,8 +40,18 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/servicios/sistemas-apps'),
-    title: 'Sistemas y Software | HagamosTech',
-    description: 'Sistemas web y bases de datos según las necesidades y el alcance de cada proyecto.',
+    title: 'Sistemas y Apps | HagamosTech',
+    description: 'Sistemas de gestión y aplicaciones a medida para tu negocio.',
+  },
+  {
+    coincide: (p) => p.startsWith('/servicios/automatizacion'),
+    title: 'Automatización | HagamosTech',
+    description: 'Automatizamos procesos y conectamos tus herramientas.',
+  },
+  {
+    coincide: (p) => p.startsWith('/servicios/inteligencia-artificial'),
+    title: 'Inteligencia Artificial | HagamosTech',
+    description: 'Asistentes, análisis predictivo e integración de IA.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/para-tu-negocio'),
@@ -65,8 +75,13 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/promociones'),
-    title: 'Propuestas para tu proyecto | HagamosTech',
-    description: 'Conocé cómo definimos el alcance, los tiempos y el presupuesto antes de empezar.',
+    title: 'Promociones y planes | HagamosTech',
+    description: 'Packs y planes de soporte para potenciar tu proyecto.',
+  },
+  {
+    coincide: (p) => p.startsWith('/novedades'),
+    title: 'Novedades | HagamosTech',
+    description: 'Lanzamientos, talleres, logros y avisos de HagamosTech.',
   },
   {
     coincide: (p) => p.startsWith('/como-trabajamos'),
@@ -79,29 +94,9 @@ const REGLAS = [
     description: 'Escribinos y te armamos una propuesta a medida.',
   },
   {
-    coincide: (p) => p.startsWith('/sobre-nosotros/historia'),
-    title: 'Nuestro enfoque | HagamosTech',
-    description: 'Conocé cómo revisamos solicitudes y acordamos el alcance antes de comenzar.',
-  },
-  {
-    coincide: (p) => p.startsWith('/sobre-nosotros/mision-vision'),
-    title: 'Propósito y rumbo | HagamosTech',
-    description: 'El propósito y la orientación de la oferta de desarrollo digital, diseño y acompañamiento académico.',
-  },
-  {
-    coincide: (p) => p.startsWith('/sobre-nosotros/valores'),
-    title: 'Principios de trabajo | HagamosTech',
-    description: 'Principios de claridad, colaboración y alcance acordado para los servicios de HagamosTech.',
-  },
-  {
-    coincide: (p) => p.startsWith('/sobre-nosotros/videos'),
-    title: 'Áreas que acompañamos | HagamosTech',
-    description: 'Explorá las áreas vigentes de desarrollo digital, diseño y acompañamiento académico.',
-  },
-  {
     coincide: (p) => p.startsWith('/sobre-nosotros'),
     title: 'Sobre nosotros | HagamosTech',
-    description: 'Conocé el alcance y enfoque de trabajo de HagamosTech.',
+    description: 'Historia, misión, visión y valores de HagamosTech.',
   },
   {
     coincide: (p) => p.startsWith('/perfil') || p.startsWith('/configuracion'),

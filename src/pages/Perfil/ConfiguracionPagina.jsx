@@ -7,6 +7,7 @@ import ProfileSidebar from './components/BarraLateralPerfil';
 import useAuthStore from '../../store/useAutenticacionStore';
 import {
     useCambioPassword,
+    usePreferencias,
     useSesiones,
     useDosFA,
     useDesactivarCuenta,
@@ -14,7 +15,16 @@ import {
 } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
-    { name: 'Lima HagamosTech', value: '#A3E635', hover: '#84CC16', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
+    { name: 'Rojo Robótico', value: '#A3E635', hover: '#84CC16', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
+    { name: 'Dorado Tech', value: '#A3E635', hover: '#a88544', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
+    { name: 'Azul Espacial', value: '#1d4ed8', hover: '#1e40af', bg: 'bg-blue-700', ring: 'ring-blue-700' },
+    { name: 'Verde Cyber', value: '#10b981', hover: '#059669', bg: 'bg-[#10b981]', ring: 'ring-[#10b981]' },
+];
+
+const PRIVACY_LEVELS = [
+    { id: 'public', name: 'Público', desc: 'Tu perfil es visible para otros usuarios y pueden ver tus proyectos y servicios.', icon: 'fa-earth-americas', color: 'text-blue-500' },
+    { id: 'members', name: 'Solo Club', desc: 'Solo los alumnos registrados y tutores pueden ver tus insignias y portafolio técnico.', icon: 'fa-users', color: 'text-[#A3E635]' },
+    { id: 'private', name: 'Privado', desc: 'Nadie puede ver tu perfil. Tus avances académicos y proyectos están completamente ocultos.', icon: 'fa-user-lock', color: 'text-red-500' }
 ];
 
 const Tooltip = ({ text }) => (
@@ -31,7 +41,8 @@ const ConfiguracionPagina = () => {
     const navigate = useNavigate();
 
     const { loading: passLoading, cambiar: cambiarPassword } = useCambioPassword();
-    const { sesiones, loading: sesLoading, alcance: alcanceSesiones, error: errorSesiones, listar: listarSesiones, revocar: revocarSesion } = useSesiones();
+    const { loading: prefLoading, guardar: guardarPrefs } = usePreferencias();
+    const { sesiones, loading: sesLoading, listar: listarSesiones, revocar: revocarSesion } = useSesiones();
     const { loading: faLoading, toggle: toggle2FA, setup: setup2FA } = useDosFA();
     const { loading: desLoading, desactivar: desactivarCuenta } = useDesactivarCuenta();
     const { exportar: exportarDatos } = useExportarDatos();
@@ -41,6 +52,15 @@ const ConfiguracionPagina = () => {
     const [accentColor, setAccentColor] = useState(() => {
         return localStorage.getItem('hagamostech_accent_color') || '#A3E635';
     });
+
+    const [privacy, setPrivacy] = useState('members');
+
+    const [preferences, setPreferences] = useState({
+        email_promociones: true,
+        email_pedidos: true,
+        sms_alertas: false,
+    });
+
 
     const [successMessage, setSuccessMessage] = useState('');
     const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -52,7 +72,6 @@ const ConfiguracionPagina = () => {
     const [codeError, setCodeError] = useState('');
     const [secret2FA, setSecret2FA] = useState('');
     const [otpauthUrl2FA, setOtpauthUrl2FA] = useState('');
-    useEffect(() => setIs2FAEnabled(!!user?.twoFactorEnabled), [user?.twoFactorEnabled]);
 
     // --- Cambio de Contraseña ---
     const [passwords, setPasswords] = useState({
@@ -80,6 +99,19 @@ const ConfiguracionPagina = () => {
         setShowSuccessModal(true);
     };
 
+    const handleTogglePref = (key) => {
+        setPreferences(prev => ({ ...prev, [key]: !prev[key] }));
+    };
+
+    const handleSavePreferences = async () => {
+        const result = await guardarPrefs(preferences);
+        if (result.success) {
+            setSuccessMessage('Preferencias guardadas correctamente.');
+            setShowSuccessModal(true);
+        }
+    };
+
+
     // --- Handlers de Contraseña ---
     const handlePasswordChange = (e) => {
         const { name, value } = e.target;
@@ -102,17 +134,12 @@ const ConfiguracionPagina = () => {
     };
 
     // --- Handlers de 2FA ---
-    const handleToggle2FA = async () => {
+    const handleToggle2FA = () => {
         if (is2FAEnabled) {
-            const result = await toggle2FA(false);
-            if (result.success) {
-                setIs2FAEnabled(false);
-                setSuccessMessage('La verificación en dos pasos se desactivó.');
-                setShowSuccessModal(true);
-            } else {
-                setSuccessMessage(result.message);
-                setShowSuccessModal(true);
-            }
+            setIs2FAEnabled(false);
+            toggle2FA(false);
+            setSuccessMessage('2FA desactivada.');
+            setShowSuccessModal(true);
         } else {
             setCodeError('');
             (async () => {
@@ -160,7 +187,8 @@ const ConfiguracionPagina = () => {
     // Menú de pestañas para móviles/tablets
     const navItemsMobile = [
         { path: '/perfil', label: 'Mi Perfil', icon: 'fa-user' },
-        { path: '/configuracion', label: 'Configuración', icon: 'fa-gear' },
+        { path: '/perfil/compras', label: 'Compras', icon: 'fa-receipt' },
+        { path: '/configuracion', label: 'Config', icon: 'fa-gear' },
     ];
 
     return (
@@ -171,9 +199,9 @@ const ConfiguracionPagina = () => {
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <PageHero
-                title="Seguridad de"
-                highlight="cuenta"
-                description="Administra las opciones de seguridad disponibles para tu cuenta."
+                title="Ajustes y"
+                highlight="preferencias"
+                description="Personaliza la apariencia del portal, administra tus preferencias de notificaciones, sesiones activas y seguridad."
             />
 
             {/* MAIN LAYOUT GRID (50/50 EQUAL COLUMNS ON DESKTOP) */}
@@ -184,7 +212,12 @@ const ConfiguracionPagina = () => {
                     
                     {/* LEFT SIDE: SIDEBAR */}
                     <div className="rounded-[2rem] overflow-hidden shadow-xl flex flex-col h-full">
-                        <ProfileSidebar />
+                        <ProfileSidebar
+                            preferences={preferences}
+                            handleTogglePref={handleTogglePref}
+                            isSavingPrefs={prefLoading}
+                            handleSavePreferences={handleSavePreferences}
+                        />
                     </div>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
@@ -238,6 +271,43 @@ const ConfiguracionPagina = () => {
                                             );
                                         })}
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* INTERACTIVE PRIVACY METER */}
+                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                                    <i className="fas fa-user-shield"></i>
+                                </div>
+                                <div>
+                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Nivel de Privacidad</h3>
+                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">VISIBILIDAD DEL PERFIL</p>
+                                </div>
+                            </div>
+
+                            <div className="space-y-2">
+                                <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                                    {PRIVACY_LEVELS.map((level) => {
+                                        const isSelected = privacy === level.id;
+                                        return (
+                                            <button
+                                                key={level.id}
+                                                onClick={() => setPrivacy(level.id)}
+                                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#A3E635] bg-[#A3E635]/5 font-black shadow-md ring-2 ring-[#A3E635]/15' : 'border-slate-100 bg-slate-50/50 font-bold text-slate-700 dark:text-slate-300'}`}
+                                            >
+                                                <div className="flex items-center justify-between w-full mb-3">
+                                                    <i className={`fas ${level.icon} text-lg ${level.color}`}></i>
+                                                    {isSelected && <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635]" />}
+                                                </div>
+                                                <div>
+                                                    <p className="text-xs font-black uppercase tracking-wider">{level.name}</p>
+                                                    <p className="text-[10px] text-slate-400 font-semibold mt-1 leading-snug">{level.desc}</p>
+                                                </div>
+                                            </button>
+                                        );
+                                    })}
                                 </div>
                             </div>
                         </div>
@@ -343,20 +413,13 @@ const ConfiguracionPagina = () => {
                                         <i className="fas fa-desktop"></i>
                                     </div>
                                     <div>
-                                        <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Registro de sesiones</h3>
-                                        <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">ALCANCE DISPONIBLE</p>
+                                        <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Sesiones Activas</h3>
+                                        <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">DISPOSITIVOS CONECTADOS</p>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    {sesLoading ? (
-                                        <p className="py-6 text-center text-xs text-slate-500" role="status">Consultando sesiones…</p>
-                                    ) : errorSesiones ? (
-                                        <div className="py-4 text-center">
-                                            <p className="text-xs text-red-700" role="alert">{errorSesiones}</p>
-                                            <button type="button" onClick={listarSesiones} className="mt-2 rounded-lg border border-slate-200 px-3 py-2 text-xs font-bold text-slate-700 hover:border-[#A3E635]">Reintentar</button>
-                                        </div>
-                                    ) : sesiones.length === 0 ? (
-                                        <p className="py-5 text-center text-xs text-slate-600">{alcanceSesiones === 'sin_registro_multisesion' ? 'Esta versión no registra sesiones en otros dispositivos.' : 'No hay otras sesiones para mostrar.'}</p>
+                                    {sesiones.length === 0 ? (
+                                        <p className="text-xs text-slate-400 italic text-center py-6">No hay otras sesiones activas.</p>
                                     ) : (
                                         sesiones.map((sess) => (
                                             <div key={sess.id} className="flex items-center justify-between border-b border-slate-100 pb-2 last:border-0 last:pb-0">
@@ -529,10 +592,10 @@ const ConfiguracionPagina = () => {
             {showSuccessModal && (
                 <div className="fixed inset-0 z-[200] bg-black/60 backdrop-blur-sm flex items-center justify-center p-4 font-montserrat" onClick={() => setShowSuccessModal(false)}>
                     <div className="bg-white rounded-2xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl relative animate-fade-in" onClick={(e) => e.stopPropagation()}>
-                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-[#A3E635]/15 text-[#365314] text-3xl mb-6 shadow-inner">
-                            <i className="fas fa-circle-info"></i>
+                        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-green-100 text-green-500 text-3xl mb-6 shadow-inner">
+                            <i className="fas fa-circle-check"></i>
                         </div>
-                        <h3 className="text-xl font-black text-slate-800 mb-2">Resultado de la operación</h3>
+                        <h3 className="text-xl font-black text-slate-800 mb-2">Configuración Guardada</h3>
                         <p className="text-sm text-slate-500 mb-6 leading-relaxed">
                             {successMessage}
                         </p>

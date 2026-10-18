@@ -1,18 +1,10 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import React from 'react';
 import HeroContacto from './sections/HeroContacto';
 import Ubicacion from './sections/Ubicacion';
 import Recursos from './sections/Recursos';
 import FormularioContacto from './sections/FormularioContacto';
 
 const ContactoPagina = () => {
-    const { hash } = useLocation();
-
-    useEffect(() => {
-        if (hash !== '#support') return;
-        window.requestAnimationFrame(() => document.getElementById('support')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-    }, [hash]);
-
     return (
         <div id="support-page" className="relative overflow-hidden min-h-screen bg-[#050505]">
             {/* Organic Soft Blobs Background (tech) */}

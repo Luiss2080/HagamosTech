@@ -284,12 +284,6 @@ select option {
   transform: translateX(-50%) translateY(4px);
 }
 
-.nav-item-container:focus-within .nav-dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateX(-50%) translateY(4px);
-}
-
 /* Dark Mode styles for Dropdown Menu */
 .dark .nav-dropdown-menu {
   background: rgba(15, 23, 42, 0.96);
@@ -320,25 +314,6 @@ select option {
 
 .animate-modal-content {
   animation: modal-content-in 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
-}
-
-/* Indicador de foco legible sobre los fondos claros y oscuros de la marca. */
-:where(a, button, input, select, textarea, [tabindex]):focus-visible {
-  outline: 3px solid #A3E635 !important;
-  outline-offset: 3px !important;
-  box-shadow: 0 0 0 5px #0A0A0A !important;
-}
-
-/* Reducir movimiento no esencial cuando la persona así lo prefiere. */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    scroll-behavior: auto !important;
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
 }
 
 

@@ -1,6 +1,6 @@
 # Servicios - HagamosTech
 
-Páginas de servicios de HagamosTech. La oferta canónica vive en
+Páginas de servicios de tecnología de HagamosTech. La oferta canónica vive en
 [`src/data/serviciosData.js`](../../data/serviciosData.js) y su espejo documental en
 [`docs/catalogo-servicios.md`](../../../docs/catalogo-servicios.md).
 
@@ -8,13 +8,15 @@ Páginas de servicios de HagamosTech. La oferta canónica vive en
 
 | Carpeta | Página | Ruta |
 |---------|--------|------|
-| `DesarrolloWeb/` | Páginas web y tiendas/pedidos sujetos a evaluación | `/servicios/desarrollo-web` |
-| `SistemasApps/` | Sistemas web, software y bases de datos | `/servicios/sistemas-apps` |
-| `Negocio/` | Marca y recursos para emprendimientos | `/servicios/para-tu-negocio` |
-| `Academico/` | Mentorías y acompañamiento académico | `/servicios/apoyo-academico` |
-| `Empleo/` | Empleo y desarrollo profesional | `/servicios/empleo` |
-| `DisenoGrafico/` | Diseño gráfico integral | `/servicios/diseno-grafico` |
+| `DesarrolloWeb/` | Páginas Web | `/servicios/desarrollo-web` |
+| `SistemasApps/` | Sistemas y Apps | `/servicios/sistemas-apps` |
+| `Automatizacion/` | Automatización | `/servicios/automatizacion` |
+| `InteligenciaArtificial/` | Inteligencia Artificial | `/servicios/inteligencia-artificial` |
+| `Negocio/` | Soluciones para tu Negocio | `/servicios/para-tu-negocio` |
+| `Academico/` | Apoyo Académico | `/servicios/apoyo-academico` |
+| `Empleo/` | Empleo y Desarrollo Profesional | `/servicios/empleo` |
+| `DisenoGrafico/` | Diseño Gráfico | `/servicios/diseno-grafico` |
 
-Las tarjetas muestran los resúmenes canónicos de `docs/catalogo-servicios.md`. Las tiendas/pedidos y los proyectos de software se evalúan según alcance y viabilidad; no se ofrece hosting ni operación de servidores.
+Cada categoría cuenta con un componente `Recorrido*` que describe el flujo de trabajo.
 
-Automatización de procesos, n8n, DevOps e infraestructura compleja quedan fuera de la oferta vigente.
+> El vertical de restaurante/e-commerce está en retiro (ver `specs/003-*`).

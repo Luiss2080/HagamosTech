@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import FondoTech from '../../components/fondos/FondoTech';
 import CircleParticles from '../../components/fondos/ParticulasCirculares';
 
@@ -7,7 +7,7 @@ const stepsData = [
     {
         num: "01",
         title: "Contanos",
-        desc: "Contanos tu necesidad, idea o consulta. No necesitás conocer términos técnicos: alcanza con explicar qué querés resolver.",
+        desc: "Explicamos tu necesidad, dificultad, problema o la idea que querés llevar a cabo. No necesitás tecnicismos, solo contanos tu objetivo.",
         icon: "fa-comments",
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -23,7 +23,7 @@ const stepsData = [
     {
         num: "02",
         title: "Analizamos",
-        desc: "Revisamos la solicitud, su contexto y si corresponde a los servicios disponibles. Si hace falta, te pedimos más información.",
+        desc: "Estudiamos a fondo tu caso, determinamos qué herramientas tecnológicas y metodologías se adaptan mejor a tu necesidad real y definimos el camino.",
         icon: "fa-magnifying-glass-chart",
         theme: {
             cardBg: "bg-white",
@@ -39,7 +39,7 @@ const stepsData = [
     {
         num: "03",
         title: "Proponemos",
-        desc: "Si la solicitud es viable, acordamos alcance, entregables y condiciones. Los tiempos y el presupuesto se estiman después de revisar el proyecto.",
+        desc: "Planteamos una propuesta clara con el alcance, tecnologías recomendadas, tiempos de entrega estimados y presupuesto transparente sin sorpresas.",
         icon: "fa-file-signature",
         theme: {
             cardBg: "bg-[#111111]",
@@ -55,7 +55,7 @@ const stepsData = [
     {
         num: "04",
         title: "Hacemos",
-        desc: "Realizamos el desarrollo, diseño o acompañamiento según el alcance acordado y coordinamos contigo los avances relevantes.",
+        desc: "Nuestro equipo se encarga del desarrollo, diseño y la construcción de tu solución, manteniéndote informado de los avances de manera constante.",
         icon: "fa-code",
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -71,7 +71,7 @@ const stepsData = [
     {
         num: "05",
         title: "Entregamos",
-        desc: "Presentamos el trabajo acordado y compartimos las indicaciones de uso o continuidad que correspondan a ese servicio.",
+        desc: "Te entregamos la solución completamente funcional, lista para usar y con las pautas necesarias para que puedas gestionarla sin depender de nadie.",
         icon: "fa-circle-check",
         theme: {
             cardBg: "bg-white",
@@ -87,6 +87,8 @@ const stepsData = [
 ];
 
 const ComoTrabajamos = () => {
+    const navigate = useNavigate();
+
     return (
         <div id="how-we-work-page" className="relative overflow-hidden min-h-screen bg-[#050505] text-white">
             {/* Blobs de Fondo */}
@@ -164,12 +166,12 @@ const ComoTrabajamos = () => {
                             <p className="text-xs text-slate-400 font-semibold leading-relaxed mb-6">
                                 Empecemos hoy mismo a trabajar en tu propuesta personalizada.
                             </p>
-                            <Link
-                                to="/contactanos"
-                                className="px-5 py-2.5 rounded-full bg-[#A3E635] text-[#0A0A0A] font-black text-[10px] uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-[#84CC16] shadow-lg shadow-[#A3E635]/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            <button
+                                onClick={() => navigate('/contactanos')}
+                                className="px-5 py-2.5 rounded-full bg-[#A3E635] text-[#0A0A0A] font-black text-[10px] uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-[#84CC16] cursor-pointer shadow-lg shadow-[#A3E635]/15"
                             >
                                 Contanos qué necesitás
-                            </Link>
+                            </button>
                         </div>
                     </div>
 
@@ -183,12 +185,12 @@ const ComoTrabajamos = () => {
                     <p className="text-xs sm:text-sm text-slate-400 font-medium mb-8 max-w-lg mx-auto">
                         HagamosTech es un espacio multidisciplinario creado para resolver de forma cercana y profesional. Escribinos sin compromiso.
                     </p>
-                    <Link
-                        to="/contactanos"
-                        className="inline-flex px-8 py-3 rounded-full bg-[#A3E635] text-[#0A0A0A] font-black text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-[#84CC16] shadow-lg shadow-[#A3E635]/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                    <button
+                        onClick={() => navigate('/contactanos')}
+                        className="px-8 py-3 rounded-full bg-[#A3E635] text-[#0A0A0A] font-black text-xs uppercase tracking-wider transition-all duration-300 hover:scale-105 hover:bg-[#84CC16] cursor-pointer shadow-lg shadow-[#A3E635]/20"
                     >
                         Comenzar Ahora <i className="fa-solid fa-arrow-right ml-2 text-[10px]"></i>
-                    </Link>
+                    </button>
                 </div>
             </section>
         </div>

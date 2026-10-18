@@ -6,7 +6,6 @@ import RetencionDatos from './sections/RetencionDatos';
 import UsoDatos from './sections/UsoDatos';
 import DerechosUsuarios from './sections/DerechosUsuarios';
 import ContactoPrivacidad from './sections/ContactoPrivacidad';
-import NavigationDocumentosLegales from '../Legal/NavigationDocumentosLegales';
 
 const PrivacidadPagina = () => {
     return (
@@ -15,7 +14,6 @@ const PrivacidadPagina = () => {
             <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-[#0A0A0A]/5 rounded-full blur-[100px] pointer-events-none"></div>
             <div className="absolute top-[40%] left-[20%] w-[40%] h-[40%] bg-[#A3E635]/5 rounded-full blur-[120px] pointer-events-none"></div>
 
-            <NavigationDocumentosLegales />
             <HeroPrivacidad />
             <ResumenPrivacidad />
             <DatosRecopilados />

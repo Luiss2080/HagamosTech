@@ -60,7 +60,7 @@ const CtaCookies = () => {
                             </div>
 
                             <div className="inline-flex items-center gap-1.5 text-white/70 text-[9px] font-black uppercase tracking-widest">
-                                <i className="fas fa-rotate text-[#A3E635]"></i>Revisión editorial: octubre 2026
+                                <i className="fas fa-rotate text-[#A3E635]"></i>Última actualización: enero 2026
                             </div>
                         </div>
                     </div>
