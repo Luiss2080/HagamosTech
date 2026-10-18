@@ -84,9 +84,12 @@ test('el menú móvil se abre con teclado y se cierra con Escape', async ({ page
   await page.goto('/');
 
   const abrirMenu = page.getByRole('button', { name: 'Abrir Menú' });
+  await expect(page.locator('#navbar-collapse')).toHaveAttribute('aria-hidden', 'true');
+  await expect(page.locator('#navbar-collapse')).toHaveAttribute('inert', '');
   await abrirMenu.focus();
   await page.keyboard.press('Enter');
   await expect(page.getByRole('button', { name: 'Cerrar Menú' })).toHaveAttribute('aria-expanded', 'true');
+  await expect(page.locator('#navbar-collapse')).toHaveAttribute('aria-hidden', 'false');
   await page.keyboard.press('Escape');
   await expect(page.getByRole('button', { name: 'Abrir Menú' })).toHaveAttribute('aria-expanded', 'false');
 });

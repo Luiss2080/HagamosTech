@@ -32,10 +32,7 @@ export default defineConfig({
       port: Number(FRONTEND_PORT),
       reuseExistingServer: !process.env.CI,
       timeout: 120_000,
-      env: {
-        VITE_API_BASE_URL: `http://localhost:${BACKEND_PORT}/api`,
-        VITE_API_PROXY_TARGET: `http://localhost:${BACKEND_PORT}`,
-      },
+      env: { VITE_API_PROXY_TARGET: `http://localhost:${BACKEND_PORT}` },
     },
   ],
 });

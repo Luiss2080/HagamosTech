@@ -485,6 +485,8 @@ const Header = () => {
 
             <div
                 id="navbar-collapse"
+                aria-hidden={!isMenuOpen}
+                inert={!isMenuOpen}
                 className={`fixed inset-0 z-[70] bg-[#0A0A0A] xl:hidden flex flex-col px-4 sm:px-5 pt-16 pb-8 overflow-y-auto transition-all duration-300 ease-out ${
                     isMenuOpen ? 'opacity-100 translate-y-0 pointer-events-auto' : 'opacity-0 -translate-y-2 pointer-events-none'
                 }`}
