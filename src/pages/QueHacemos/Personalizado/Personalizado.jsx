@@ -130,7 +130,7 @@ const PROJECTS = [
     highlightPart: 'Especiales',
     desc: 'Si tienes una idea atípica o un módulo específico que agregar a tu sistema actual, diseñamos exactamente lo que necesitas.',
     icon: 'fa-puzzle-piece',
-    images: ['https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-modulo.webp']
   },
   {
     num: '02',
@@ -139,7 +139,7 @@ const PROJECTS = [
     highlightPart: 'y aplicaciones',
     desc: 'Evaluamos interfaces y aplicaciones web según las funciones, los datos y los perfiles de usuario que necesitás.',
     icon: 'fa-lightbulb',
-    images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-app.webp']
   },
   {
     num: '03',
@@ -148,7 +148,7 @@ const PROJECTS = [
     highlightPart: 'y herramientas',
     desc: 'Desarrollamos herramientas digitales para organizar información y apoyar tareas definidas dentro del alcance acordado.',
     icon: 'fa-users-gear',
-    images: ['https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-herramienta.webp']
   },
   {
     num: '04',
@@ -157,7 +157,7 @@ const PROJECTS = [
     highlightPart: 'Continuo',
     desc: 'Podemos revisar correcciones o mejoras para sistemas existentes. La disponibilidad, el alcance y la modalidad se conversan por proyecto.',
     icon: 'fa-server',
-    images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-mantenimiento.webp']
   },
   {
     num: '05',
@@ -166,7 +166,7 @@ const PROJECTS = [
     highlightPart: 'Datos',
     desc: 'Evaluamos estructura, consultas y reportes para bases de datos según los requisitos del sistema.',
     icon: 'fa-cloud',
-    images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-base-datos.webp']
   },
   {
     num: '06',
@@ -175,7 +175,7 @@ const PROJECTS = [
     highlightPart: 'Proyectos',
     desc: 'Podemos revisar un proyecto existente y conversar las mejoras posibles, sujeto a una evaluación previa del código y el alcance.',
     icon: 'fa-life-ring',
-    images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
+    images: ['/img/08_Cards/proyecto-personalizado-rescate.webp']
   }
 ];
 const Personalizado = () => {

@@ -19,10 +19,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Diagnóstico","desc":"Analizamos tu propuesta, público y mercado para definir la estrategia de marca y de venta."},
-  {"title":"Identidad","desc":"Creamos branding, manual de identidad y catálogo inicial alineado a tu negocio."},
-  {"title":"Publicidad","desc":"Diseñamos campañas de promociones, ofertas y fechas especiales listas para publicar."},
-  {"title":"Lanzamiento","desc":"Configuramos menús QR, WhatsApp Business y las herramientas para vender desde el día uno."}
+  {"title":"Diagnóstico","desc":"Analizamos tu propuesta, público y mercado para definir la estrategia de marca y de venta.","image":"/img/08_Cards/proceso-negocio-diagnostico.webp"},
+  {"title":"Identidad","desc":"Creamos branding, manual de identidad y catálogo inicial alineado a tu negocio.","image":"/img/08_Cards/proceso-negocio-identidad.webp"},
+  {"title":"Publicidad","desc":"Diseñamos campañas de promociones, ofertas y fechas especiales listas para publicar.","image":"/img/08_Cards/proceso-negocio-campana.webp"},
+  {"title":"Lanzamiento","desc":"Configuramos menús QR, WhatsApp Business y las herramientas para vender desde el día uno.","image":"/img/08_Cards/proceso-negocio-lanzamiento.webp"}
 ];
 
 const TESTIMONIOS = [

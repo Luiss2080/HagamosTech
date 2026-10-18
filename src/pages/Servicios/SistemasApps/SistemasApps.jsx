@@ -18,10 +18,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Requerimientos","desc":"Analizamos tus procesos y definimos la arquitectura de la solución a medida."},
-  {"title":"Bases de Datos","desc":"Diseñamos y normalizamos la estructura de datos que soportará la operación."},
-  {"title":"Desarrollo","desc":"Construimos el sistema según requisitos, funcionalidades y entregables acordados."},
-  {"title":"Entrega","desc":"Presentamos los entregables acordados. El mantenimiento posterior se conversa por separado."}
+  {"title":"Requerimientos","desc":"Analizamos tus procesos y definimos la arquitectura de la solución a medida.","image":"/img/08_Cards/proceso-sistemas-requisitos.webp"},
+  {"title":"Bases de Datos","desc":"Diseñamos y normalizamos la estructura de datos que soportará la operación.","image":"/img/08_Cards/proceso-sistemas-datos.webp"},
+  {"title":"Desarrollo","desc":"Construimos el sistema según requisitos, funcionalidades y entregables acordados.","image":"/img/08_Cards/proceso-sistemas-desarrollo.webp"},
+  {"title":"Entrega","desc":"Presentamos los entregables acordados. El mantenimiento posterior se conversa por separado.","image":"/img/08_Cards/proceso-sistemas-entrega.webp"}
 ];
 
 const TESTIMONIOS = [

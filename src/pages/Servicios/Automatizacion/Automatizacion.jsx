@@ -18,10 +18,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Necesidad","desc":"Conversamos qué problema querés resolver y quiénes usarían la herramienta."},
-  {"title":"Requisitos","desc":"Revisamos funciones, datos, permisos, integraciones y viabilidad."},
-  {"title":"Propuesta","desc":"Acordamos alcance, entregables, etapas, presupuesto y fechas posibles."},
-  {"title":"Desarrollo","desc":"Trabajamos sobre lo acordado y presentamos el resultado para su revisión."}
+  {"title":"Necesidad","desc":"Conversamos qué problema querés resolver y quiénes usarían la herramienta.","image":"/img/08_Cards/proceso-soluciones-necesidad.webp"},
+  {"title":"Requisitos","desc":"Revisamos funciones, datos, permisos, integraciones y viabilidad.","image":"/img/08_Cards/proceso-soluciones-requisitos.webp"},
+  {"title":"Propuesta","desc":"Acordamos alcance, entregables, etapas, presupuesto y fechas posibles.","image":"/img/08_Cards/proceso-soluciones-propuesta.webp"},
+  {"title":"Desarrollo","desc":"Trabajamos sobre lo acordado y presentamos el resultado para su revisión.","image":"/img/08_Cards/proceso-soluciones-desarrollo.webp"}
 ];
 
 const TESTIMONIOS = [
