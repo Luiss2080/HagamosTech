@@ -27,7 +27,7 @@ const VERTICALS = [
     desc: 'Sitios y aplicaciones web planteados según objetivos, contenido, funciones y requisitos acordados.',
     icon: <Code size={32} className="text-[#A3E635]" />,
     tags: ['React', 'Tailwind', 'UX/UI'],
-    image: '/img/07_Servicios/soluciones/hero-web-v2.webp',
+    image: '/img/08_Cards/tecnologia-web.webp',
     category: 'WEB'
   },
   {
@@ -35,7 +35,7 @@ const VERTICALS = [
     desc: 'Sistemas a medida y estructuras de datos revisados según necesidades y viabilidad.',
     icon: <Database size={32} className="text-[#84CC16]" />,
     tags: ['Node.js', 'MySQL', 'APIs'],
-    image: '/img/07_Servicios/soluciones/hero-sistemas-v2.webp',
+    image: '/img/08_Cards/tecnologia-sistemas.webp',
     category: 'SOFTWARE'
   },
   {
@@ -43,7 +43,7 @@ const VERTICALS = [
     desc: 'Diseño de interfaces y herramientas digitales; alojamiento y operación de servidores no forman parte de la oferta.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
     tags: ['Diseño', 'Interfaces', 'Web'],
-    image: '/img/07_Servicios/soluciones/hero-ia-v2.webp',
+    image: '/img/08_Cards/tecnologia-interfaces.webp',
     category: 'INTERFACES'
   },
   {
@@ -51,7 +51,7 @@ const VERTICALS = [
     desc: 'Evaluamos necesidades digitales para proponer un alcance posible y conversarlo antes de iniciar.',
     icon: <Cpu size={32} className="text-[#84CC16]" />,
     tags: ['Requisitos', 'Propuesta', 'Desarrollo'],
-    image: '/img/07_Servicios/soluciones/hero-soluciones-v2.webp',
+    image: '/img/08_Cards/tecnologia-personalizadas.webp',
     category: 'A MEDIDA'
   }
 ];

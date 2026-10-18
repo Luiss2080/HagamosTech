@@ -64,37 +64,37 @@ const ESPECIALIDADES = [
     title: 'Apoyo por materia',
     desc: 'Orientación académica según la materia, el nivel y la disponibilidad para acompañamiento.',
     icon: <Stethoscope size={20} />,
-    image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-mentorias.webp'
   },
   {
     title: 'Sistemas de Información',
     desc: 'Modelado de bases de datos y documentación técnica para proyectos de ingeniería.',
     icon: <Laptop size={20} />,
-    image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-sistemas-datos.webp'
   },
   {
     title: 'Acompañamiento en tareas',
     desc: 'Explicación de contenidos y resolución guiada de ejercicios; el estudiante desarrolla sus respuestas.',
     icon: <Microscope size={20} />,
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-tareas.webp'
   },
   {
     title: 'Presentaciones y exposiciones',
     desc: 'Organización visual de ideas para clases, exposiciones y defensas académicas.',
     icon: <BookOpen size={20} />,
-    image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-exposiciones.webp'
   },
   {
     title: 'Infografías y Líneas de Tiempo',
     desc: 'Esquemas, diagramas y líneas de tiempo para estructurar ideas e investigaciones.',
     icon: <LineChart size={20} />,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-infografias.webp'
   },
   {
     title: 'Algoritmos y Lógica',
     desc: 'Tutoría de lógica, algoritmos y comprensión de código; el estudiante desarrolla su solución.',
     icon: <Binary size={20} />,
-    image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
+    image: '/img/08_Cards/academico-programacion.webp'
   }
 ];
 

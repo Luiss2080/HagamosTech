@@ -19,10 +19,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Conversamos sobre los objetivos, el contenido disponible y la estructura que necesitás."},
-  {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una experiencia de uso acorde al proyecto."},
-  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS según el alcance y los requisitos acordados."},
-  {"title":"Lanzamiento","desc":"La publicación, el hosting y la indexación se evalúan por separado según el alcance acordado."}
+  {"title":"Planificación","desc":"Conversamos sobre los objetivos, el contenido disponible y la estructura que necesitás.","image":"/img/08_Cards/proceso-web-planificacion.webp"},
+  {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una experiencia de uso acorde al proyecto.","image":"/img/08_Cards/proceso-web-uxui.webp"},
+  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS según el alcance y los requisitos acordados.","image":"/img/08_Cards/proceso-web-programacion.webp"},
+  {"title":"Lanzamiento","desc":"La publicación, el hosting y la indexación se evalúan por separado según el alcance acordado.","image":"/img/08_Cards/proceso-web-publicacion.webp"}
 ];
 
 const TESTIMONIOS = [

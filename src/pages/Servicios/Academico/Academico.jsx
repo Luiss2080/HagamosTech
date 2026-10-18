@@ -20,10 +20,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Conversamos sobre la consigna, la materia y el tipo de acompañamiento que necesitás."},
-  {"title":"Contenido y Diseño","desc":"Orientamos la organización de secciones, recursos visuales y referencias según la pauta académica."},
-  {"title":"Desarrollo y Simulación","desc":"Construimos simuladores, proyectos de redes o código estructurado cuando la tarea lo requiere."},
-  {"title":"Entrega y Ajustes","desc":"Revisamos avances y dudas según lo acordado; el estudiante desarrolla y presenta su propio trabajo."}
+  {"title":"Planificación","desc":"Conversamos sobre la consigna, la materia y el tipo de acompañamiento que necesitás.","image":"/img/08_Cards/proceso-academico-planificacion.webp"},
+  {"title":"Contenido y Diseño","desc":"Orientamos la organización de secciones, recursos visuales y referencias según la pauta académica.","image":"/img/08_Cards/proceso-academico-recursos.webp"},
+  {"title":"Desarrollo y Simulación","desc":"Construimos simuladores, proyectos de redes o código estructurado cuando la tarea lo requiere.","image":"/img/08_Cards/proceso-academico-simulacion.webp"},
+  {"title":"Entrega y Ajustes","desc":"Revisamos avances y dudas según lo acordado; el estudiante desarrolla y presenta su propio trabajo.","image":"/img/08_Cards/proceso-academico-revision.webp"}
 ];
 
 const TESTIMONIOS = [

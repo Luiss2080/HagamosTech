@@ -49,10 +49,10 @@ const DynamicDashboard = () => {
 };
 
 const SOLUCIONES = [
-  { title: 'Sitios web y catálogos', desc: 'Presencia digital para empresas, profesionales y emprendimientos.', icon: <Globe size={24} />, image: '/img/07_Servicios/soluciones/hero-web-v2.webp', category: 'DESARROLLO WEB' },
-  { title: 'Software a medida', desc: 'Sistemas que se evalúan según requisitos, usuarios y datos.', icon: <Cpu size={24} />, image: '/img/07_Servicios/soluciones/hero-sistemas-v2.webp', category: 'SOFTWARE' },
-  { title: 'Identidad visual', desc: 'Recursos gráficos para presentar una marca o proyecto.', icon: <Store size={24} />, image: '/img/07_Servicios/soluciones/hero-diseno-v2.webp', category: 'DISEÑO' },
-  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación de acuerdo con materia y disponibilidad.', icon: <Users size={24} />, image: '/img/07_Servicios/soluciones/hero-academico-v2.webp', category: 'ACOMPAÑAMIENTO' }
+  { title: 'Sitios web y catálogos', desc: 'Presencia digital para empresas, profesionales y emprendimientos.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
+  { title: 'Software a medida', desc: 'Sistemas que se evalúan según requisitos, usuarios y datos.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
+  { title: 'Identidad visual', desc: 'Recursos gráficos para presentar una marca o proyecto.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
+  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación de acuerdo con materia y disponibilidad.', icon: <Users size={24} />, image: '/img/08_Cards/negocios-academico.webp', category: 'ACOMPAÑAMIENTO' }
 ];
 
 const SolucionesGrid = () => {
