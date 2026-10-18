@@ -3,9 +3,9 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: 'https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&auto=format&fit=crop&q=60', desc: 'Sitio web definido según tus objetivos, contenidos y funciones necesarias. El alcance se acuerda antes de iniciar.', color: 'bg-[#111827]' },
-        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop&q=60', desc: 'Revisamos tus procesos y necesidades para determinar qué sistema es viable y qué etapas requiere.', color: 'bg-[#171717]' },
-        { nombre: 'Identidad visual y diseño', precio: 'A conversar', normal: '', img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=600&auto=format&fit=crop&q=60', desc: 'Recursos gráficos para presentar tu proyecto, marca o emprendimiento. Entregables según propuesta.', color: 'bg-[#0A0A0A]' },
+        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Sitio web definido según tus objetivos, contenidos y funciones necesarias. El alcance se acuerda antes de iniciar.', color: 'bg-[#111827]' },
+        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Revisamos tus procesos y necesidades para determinar qué sistema es viable y qué etapas requiere.', color: 'bg-[#171717]' },
+        { nombre: 'Identidad visual y diseño', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'Recursos gráficos para presentar tu proyecto, marca o emprendimiento. Entregables según propuesta.', color: 'bg-[#0A0A0A]' },
     ];
 
     return (
