@@ -1,6 +1,7 @@
 import RecorridoPaginasWeb from './RecorridoPaginasWeb';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
+import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
@@ -192,37 +193,8 @@ const PaginasWeb = () => {
           </div>
 
           <div className="relative py-8">
-            {/* Horizontal Line connecting steps (hidden on mobile) */}
-            <div className="hidden md:block absolute top-18 left-16 right-16 h-0.5 border-t-2 border-dashed border-[#A3E635]/20 z-0"></div>
 
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 relative z-10 max-w-6xl mx-auto">
-              {PROCESO.map((step, idx) => {
-                const stepIcons = ['fa-magnifying-glass', 'fa-palette', 'fa-code', 'fa-rocket'];
-                const stepColors = ['text-[#A3E635]', 'text-white', 'text-[#A3E635]', 'text-[#A3E635]'];
-                const stepBgs = ['bg-[#A3E635]/10', 'bg-neutral-900/40', 'bg-[#A3E635]/10', 'bg-[#A3E635]/10'];
-                return (
-                  <div key={idx} className="flex flex-col items-center text-center group">
-                    {/* Bubble containing step number and icon */}
-                    <div className="relative mb-6">
-                      <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#0A0A0A] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex items-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
-                        <i className={'fa-solid ' + stepIcons[idx]}></i>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] font-black border-4 border-white dark:border-[#0a0a0a]">
-                          0{(idx + 1)}
-                        </div>
-                      </div>
-                    </div>
-                    
-                    {/* Text */}
-                    <h3 className="text-base font-black text-white dark:text-white mb-2 group-hover:text-[#A3E635] dark:group-hover:text-[#A3E635] transition-colors uppercase tracking-tight">
-                      {step.title}
-                    </h3>
-                    <p className="text-xs sm:text-sm text-slate-400 dark:text-slate-400 font-bold leading-relaxed max-w-xs">
-                      {step.desc}
-                    </p>
-                  </div>
-                );
-              })}
-            </div>
+            <ServiceCardsCarousel items={PROCESO} label="Etapas del proceso" />
           </div>
         </div>
       </section>

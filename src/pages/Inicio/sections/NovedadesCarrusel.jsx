@@ -159,7 +159,7 @@ const NewsCard = ({ noticia, icon }) => {
 // Componente Principal
 const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
   const [currentIndex, setCurrentIndex] = useState(noticias.length);
-  const [visibleCards, setVisibleCards] = useState(4);
+  const [visibleCards, setVisibleCards] = useState(3);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(0);
@@ -173,7 +173,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
       } else if (width < 1024) {
         setVisibleCards(2);
       } else {
-        setVisibleCards(4);
+        setVisibleCards(3);
       }
     };
     handleResize();
