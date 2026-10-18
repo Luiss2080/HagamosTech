@@ -45,11 +45,12 @@ const ModernServiceGrid = ({ projects = [] }) => {
                 <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
                   <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0A0A0A] via-[#0A0A0A]/90 to-transparent" />
                   <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0A0A0A]/60 via-transparent to-transparent" />
-                  {project.images?.[0] && (
+                  {project.images?.length > 0 && (
                     <img
-                      src={project.images[0]}
-                      alt={project.category || project.title || 'Solución digital'}
-                      className="h-full w-full object-cover opacity-[0.15] mix-blend-screen transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.25]"
+                      src={project.images[index % project.images.length]}
+                      alt=""
+                      aria-hidden="true"
+                      className="h-full w-full object-cover opacity-[0.24] mix-blend-screen transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.36]"
                     />
                   )}
                 </div>

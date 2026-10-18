@@ -62,11 +62,11 @@ const DisenoGrafico = () => {
       <div className="absolute top-[40%] left-[20%] w-[40%] h-[40%] bg-[#A3E635]/5 rounded-full blur-[140px] pointer-events-none"></div>
 
       {/* Decorative Orbits */}
-      <div className="absolute top-[12%] left-[-5%] w-80 h-80 rounded-full border border-[#A3E635]/10 pointer-events-none flex itemás-center justify-center z-0">
+      <div className="absolute top-[12%] left-[-5%] w-80 h-80 rounded-full border border-[#A3E635]/10 pointer-events-none flex items-center justify-center z-0">
         <div className="w-60 h-60 rounded-full border border-[#84CC16]/10 border-dashed animate-spin" style={{ animationDuration: '100s' }}></div>
         <div className="absolute w-2 h-2 rounded-full bg-[#A3E635]/30 top-0 left-1/2"></div>
       </div>
-      <div className="absolute top-[45%] right-[-5%] w-96 h-96 rounded-full border border-[#84CC16]/10 pointer-events-none flex itemás-center justify-center z-0">
+      <div className="absolute top-[45%] right-[-5%] w-96 h-96 rounded-full border border-[#84CC16]/10 pointer-events-none flex items-center justify-center z-0">
         <div className="w-72 h-72 rounded-full border border-[#A3E635]/10 border-dashed animate-spin" style={{ animationDuration: '80s' }}></div>
       </div>
 
@@ -83,10 +83,10 @@ const DisenoGrafico = () => {
               </span>
           </div>
 
-          <div className="flex flex-col items-center gap-6 w-full">
+          <div className="flex flex-col xl:flex-row items-center gap-6 xl:gap-10 w-full">
             
             {/* Left Column */}
-            <div className="w-full max-w-4xl flex flex-col gap-5 text-center items-center animate-slide-down">
+            <div className="w-full xl:w-[46%] max-w-4xl xl:max-w-none flex flex-col gap-5 text-center items-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
 <span className="block">Diseño Gráfico</span>
@@ -103,7 +103,7 @@ const DisenoGrafico = () => {
                   href="https://wa.me/59161320004?text=Hola,%20quisiera%20cotizar%20un%20diseño%20gráfico"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden flex itemás-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
+                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-white hover:bg-neutral-100 text-[#0A0A0A] rounded-full shadow-lg shadow-white/15 hover:shadow-white/25 hover:-translate-y-0.5 transition-all duration-300 border border-white/80 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
                 >
                   <i className="fas fa-file-contract text-[14px]"></i>
                   <span className="whitespace-nowrap">Cotizar Servicio</span>
@@ -114,7 +114,7 @@ const DisenoGrafico = () => {
                   href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20de%20diseño%20gráfico"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group relative overflow-hidden flex itemás-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#A3E635] text-[#0A0A0A] hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
+                  className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#A3E635] text-[#0A0A0A] hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
                 >
                   <i className="fas fa-paper-plane text-[14px]"></i>
                   <span className="whitespace-nowrap">Contactar Asesor</span>
@@ -136,17 +136,17 @@ const DisenoGrafico = () => {
             </div>
 
             {/* Right Column: Central orbits with image */}
-            <div className="w-full max-w-5xl mx-auto relative min-h-[280px] sm:min-h-[360px] md:min-h-[400px] lg:min-h-[440px] xl:min-h-[480px] flex items-center justify-center -mb-4 sm:mb-0">
-              <div className="absolute top-[50%] left-[54%] -translate-x-1/2 -translate-y-[50%] w-[44%] sm:w-[48%] md:w-[52%] lg:w-[58%] xl:w-[58%] 2xl:w-[62%] aspect-square z-0 pointer-events-none flex itemás-center justify-center">
+            <div className="w-full xl:w-[54%] max-w-5xl mx-auto relative min-h-[280px] sm:min-h-[360px] md:min-h-[400px] lg:min-h-[440px] xl:min-h-[480px] flex items-center justify-center -mb-4 sm:mb-0">
+              <div className="absolute top-[50%] left-[54%] -translate-x-1/2 -translate-y-[50%] w-[44%] sm:w-[48%] md:w-[52%] lg:w-[58%] xl:w-[58%] 2xl:w-[62%] aspect-square z-0 pointer-events-none flex items-center justify-center">
                 <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-full text-[#84CC16] origin-right scale-x-[1.15]">
                   <path fill="currentColor" d="M37.9,-63.2C50.9,-54.6,64.6,-47.5,73.8,-36.8C83,-26.1,87.7,-11.8,85.6,1.4C83.5,14.6,74.5,26.7,65.2,38.3C55.8,49.9,46.1,61,34.5,67.6C22.9,74.2,9.4,76.3,-2.8,81.1C-15,85.9,-25.9,93.4,-35.1,89.5C-44.3,85.6,-51.7,70.3,-60.7,58.3C-69.8,46.3,-80.5,37.6,-84.3,27.1C-88.1,16.6,-85,4.3,-81.2,-7.1C-77.4,-18.5,-72.9,-29,-65.4,-37.9C-57.9,-46.8,-47.3,-54.1,-36.6,-59.5C-25.9,-64.9,-15.1,-68.4,-3.2,-62.9C8.7,-57.4,24.9,-71.8,37.9,-63.2Z" transform="translate(100 100) scale(1.1) skewX(-5)" />
                 </svg>
               </div>
 
-              <div className="relative z-10 w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] 2xl:max-w-[820px] mx-auto animate-fade-in-up delay-200 group/hero flex itemás-center justify-center mt-6 sm:mt-8">
-                <div className="absolute -inset-[8%] -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.25)_0%,rgba(164,30,34,0.12)_45%,transparent_75%)] blur-xl"></div>
+              <div className="relative z-10 w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] 2xl:max-w-[820px] mx-auto animate-fade-in-up delay-200 group/hero flex items-center justify-center mt-6 sm:mt-8">
+                <div className="absolute -inset-[8%] -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(163,230,53,0.28)_0%,rgba(16,185,129,0.12)_45%,transparent_75%)] blur-xl"></div>
                 <div
-                  className="transition-transform duration-700 ease-out group-hover/hero:scale-[1.03] flex itemás-center justify-center"
+                  className="transition-transform duration-700 ease-out group-hover/hero:scale-[1.03] flex items-center justify-center"
                   style={{
                     WebkitMaskImage: 'linear-gradient(to right, transparent, black 4%, black 96%, transparent), linear-gradient(to bottom, transparent, black 4%, black 96%, transparent)',
                     maskImage: 'linear-gradient(to right, transparent, black 4%, black 96%, transparent), linear-gradient(to bottom, transparent, black 4%, black 96%, transparent)',
@@ -155,7 +155,7 @@ const DisenoGrafico = () => {
                   }}
                 >
                   <img
-                    src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
+                    src="/img/07_Servicios/soluciones/hero-diseno-v2.webp"
                     alt="Diseño Gráfico Integral"
                     loading="eager"
                     fetchPriority="high"
@@ -204,9 +204,9 @@ const DisenoGrafico = () => {
                   <div key={idx} className="flex flex-col itemás-center text-center group">
                     {/* Bubble containing step number and icon */}
                     <div className="relative mb-6">
-                      <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#0A0A0A] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex itemás-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
+                      <div className={'w-20 h-20 rounded-[1.6rem] ' + stepBgs[idx] + ' dark:bg-[#0A0A0A] border-4 border-white dark:border-[#0a0a0a] ring-1 ring-gray-100 dark:ring-[#A3E635]/20 flex items-center justify-center text-3xl shadow-lg ' + stepColors[idx] + ' group-hover:scale-105 transition-transform duration-500'}>
                         <i className={'fa-solid ' + stepIcons[idx]}></i>
-                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex itemás-center justify-center text-[11px] font-black border-4 border-white dark:border-[#0a0a0a]">
+                        <div className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] font-black border-4 border-white dark:border-[#0a0a0a]">
                           0{(idx + 1)}
                         </div>
                       </div>
@@ -276,8 +276,8 @@ Logos e Identidad Visual (Isologotipos), Flyers, Banners, Pancartas y Redes Soci
                 </div>
 
                 <div className="absolute top-1/2 -right-4 translate-y-[-50%] flex flex-col gap-3 z-20">
-                  <div className="w-12 h-12 bg-neutral-900/50 dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800 rounded-2xl flex itemás-center justify-center text-[#A3E635] shadow-lg"><Code size={18} /></div>
-                  <div className="w-12 h-12 bg-[#A3E635] rounded-2xl flex itemás-center justify-center text-[#0A0A0A] shadow-lg"><Award size={18} className="text-[#84CC16]" /></div>
+                  <div className="w-12 h-12 bg-neutral-900/50 dark:bg-neutral-900 border border-slate-100 dark:border-neutral-800 rounded-2xl flex items-center justify-center text-[#A3E635] shadow-lg"><Code size={18} /></div>
+                  <div className="w-12 h-12 bg-[#A3E635] rounded-2xl flex items-center justify-center text-[#0A0A0A] shadow-lg"><Award size={18} className="text-[#84CC16]" /></div>
                 </div>
               </div>
             </div>
