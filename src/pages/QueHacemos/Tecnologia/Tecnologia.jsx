@@ -17,42 +17,42 @@ const TECH_STACK = [
 ];
 
 const METRICS = [
-  { label: 'Disponibilidad según proveedor', value: '99.9%', icon: <Zap size={24} /> },
-  { label: 'Proyectos Escalables', value: '+50', icon: <Server size={24} /> },
-  { label: 'Seguridad en Datos', value: 'Nivel 1', icon: <ShieldCheck size={24} /> }
+  { label: 'Alcance', value: 'A definir', icon: <Zap size={24} /> },
+  { label: 'Etapas', value: 'A acordar', icon: <Server size={24} /> },
+  { label: 'Requisitos', value: 'A revisar', icon: <ShieldCheck size={24} /> }
 ];
 
 const VERTICALS = [
   {
-    title: 'Desarrollo Frontend & Web',
-    desc: 'Interfaces reactivas de ultra baja latencia con React y Next.js. Enfocados en la conversión y UX.',
+    title: 'Desarrollo web',
+    desc: 'Sitios y aplicaciones web planteados según objetivos, contenido, funciones y requisitos acordados.',
     icon: <Code size={32} className="text-[#A3E635]" />,
     tags: ['React', 'Tailwind', 'UX/UI']
   },
   {
-    title: 'Arquitectura Backend',
-    desc: 'Bases de datos relacionales y APIs robustas capaces de soportar miles de peticiones por segundo.',
+    title: 'Sistemas y software',
+    desc: 'Sistemas a medida y estructuras de datos revisados según necesidades y viabilidad.',
     icon: <Database size={32} className="text-[#84CC16]" />,
     tags: ['Node.js', 'MySQL', 'APIs']
   },
   {
-    title: 'Soporte & Automatización',
-    desc: 'Despliegues serverless y contenedores Docker para escalabilidad infinita y cero caídas.',
+    title: 'Interfaces y aplicaciones web',
+    desc: 'Diseño de interfaces y herramientas digitales; alojamiento y operación de servidores no forman parte de la oferta.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
     tags: ['AWS', 'Docker', 'Webhooks']
   },
   {
-    title: 'Inteligencia Artificial',
-    desc: 'Modelos predictivos, RAG y agentes autónomos integrados directamente en tus flujos de trabajo.',
+    title: 'Soluciones personalizadas',
+    desc: 'Evaluamos necesidades digitales para proponer un alcance posible y conversarlo antes de iniciar.',
     icon: <Cpu size={32} className="text-[#84CC16]" />,
     tags: ['Python', 'OpenAI', 'ML']
   }
 ];
 
 const TESTIMONIOS = [
-  { name: 'TechSolutions Corp', role: 'CTO', text: 'La arquitectura en la nube que implementaron redujo nuestros costos de servidores en un 40% y mejoró la velocidad.' },
-  { name: 'StartUp Innova', role: 'Founder', text: 'El desarrollo de nuestro MVP fue rapidísimo. El código es limpio y altamente escalable para nuestras futuras rondas.' },
-  { name: 'Agencia Digital', role: 'Director de Operaciones', text: 'Automatizaron nuestros CRMs con IA, ahora nuestro equipo de ventas se enfoca sólo en cerrar, no en hacer clics.' }
+  { name: 'Aplicación web', role: 'Ejemplo orientativo', text: 'Quiero evaluar una aplicación web para presentar y gestionar información de mi proyecto.' },
+  { name: 'Solución digital', role: 'Ejemplo orientativo', text: 'Necesito conversar el alcance y las etapas de una solución digital para mi negocio.' },
+  { name: 'Herramienta web', role: 'Ejemplo orientativo', text: 'Busco orientación para definir las funcionalidades y el contenido de una herramienta web.' }
 ];
 
 const TerminalWindow = () => {

@@ -6,7 +6,7 @@ const originalHighlights = [
         id: 'tecnologia',
         title: 'Soluciones',
         highlight: 'Tecnológicas',
-        desc: 'Desarrollamos páginas web, sistemas personalizados y automatización de procesos adaptados a tu negocio.',
+        desc: 'Desarrollamos páginas web y sistemas personalizados según el alcance acordado para tu negocio.',
         icon: 'fa-laptop-code',
         badge: 'Desarrollo Profesional',
         color: "bg-[#111827]",

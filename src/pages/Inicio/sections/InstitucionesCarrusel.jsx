@@ -36,7 +36,7 @@ export const INSTITUTIONS = [
         name: 'Node.js',
         tag: 'Backend API',
         logo: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg',
-        desc: 'Entorno de ejecución de JavaScript para construir servidores rápidos, eficientes y altamente escalables.'
+        desc: 'Entorno de JavaScript que puede utilizarse en aplicaciones web y servicios de software.'
     },
     {
         id: 'postgresql',
@@ -220,7 +220,7 @@ const InstitucionesCarrusel = () => {
                             <i className="fa-solid fa-star"></i>
                         </div>
                         <span className="text-gray-400 font-bold text-[8px] uppercase tracking-wider">
-                            EFICACIA: 100%
+                            PROYECTOS A MEDIDA
                         </span>
                     </div>
                 </div>

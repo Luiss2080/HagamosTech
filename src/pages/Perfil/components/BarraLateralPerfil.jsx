@@ -225,7 +225,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                         onClick={() => setShowDiploma(true)}
                         className="w-full py-3.5 bg-white hover:bg-slate-100 text-[#A3E635] text-[10px] font-black uppercase tracking-widest shadow-lg transition-all hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center gap-2 rounded-full border-0"
                     >
-                        <i className="fas fa-file-pdf text-xs"></i> Certificado Oficial
+                        <i className="fas fa-file-pdf text-xs"></i> Descargar constancia personal
                     </button>
                 </div>
             </div>
@@ -272,11 +272,11 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             
                             <div className="w-10 h-0.5 bg-slate-350 mx-auto my-3" />
                             
-                            <p className="text-[10px] font-bold italic text-slate-500">Este certificado de excelencia es otorgado a:</p>
+                            <p className="text-[10px] font-bold italic text-slate-500">Registro personal de actividad para:</p>
                             <h4 className="text-lg font-black font-sans text-slate-900 mt-1 uppercase tracking-wider">{displayName}</h4>
                             
                             <p className="text-[10px] font-medium leading-relaxed max-w-xs mx-auto mt-3 text-slate-600">
-                                Por completar satisfactoriamente las competencias de <strong>Desarrollo Web & Automatización</strong>.
+                                Este documento es un registro personal de tu actividad en HagamosTech; no acredita estudios ni certificaciones oficiales.
                             </p>
                             
                             <div className="flex justify-between items-center mt-6 px-4">

@@ -7,7 +7,7 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import Breadcrumb from '../../../components/func/MigasPan';
 
-const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
+const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
   {"name":"CV Optimizado ATS","tag":"Estructuración de perfiles técnicos","icon":"fa-file-user"},
@@ -376,7 +376,7 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
-            Casos reales, <br />
+            Ejemplos orientativos, <br />
             <span className="text-[#A3E635] relative inline-block">
               soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>

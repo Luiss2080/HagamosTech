@@ -9,23 +9,23 @@ const TERMS_SECTIONS = [
     },
     {
         title: '2. Servicios y disponibilidad',
-        text: 'Las descripciones de los servicios son referenciales. La disponibilidad y el alcance final pueden variar segun la demanda y la propuesta acordada con el cliente.',
+        text: 'Las descripciones son orientativas. La disponibilidad, el alcance y las condiciones se conversan para cada solicitud antes de iniciar.',
     },
     {
         title: '3. Precios y promociones',
-        text: 'Los precios publicados pueden cambiar sin previo aviso. Las promociones aplican bajo vigencia, condiciones y alcance detallados en cada oferta.',
+        text: 'El precio, la modalidad de pago y cualquier condición comercial se conversan y detallan en la propuesta del proyecto.',
     },
     {
         title: '4. Pagos y facturacion',
-        text: 'Se aceptan los medios de pago habilitados por HagamosTech. La emision de factura se realiza con los datos proporcionados por el cliente.',
+        text: 'Los medios de pago, anticipos, facturación y demás condiciones se informan y acuerdan en la propuesta correspondiente.',
     },
     {
         title: '5. Entregas y plazos',
         text: 'Los entregables se coordinan segun el alcance y los plazos acordados. Los tiempos estimados son referenciales y pueden variar por complejidad del proyecto.',
     },
     {
-        title: '6. Garantia y ajustes',
-        text: 'La garantia cubre los defectos tecnicos de lo entregado dentro del alcance acordado. Los ajustes y cambios se procesan previa revision y segun la politica de servicio.',
+        title: '6. Alcance y ajustes',
+        text: 'Los ajustes, correcciones y cambios se revisan según el alcance y las condiciones que se acuerden por escrito para cada proyecto.',
     },
     {
         title: '7. Uso de la plataforma',
@@ -74,7 +74,7 @@ const Condiciones = () => {
                                 </h1>
 
                                 <p className="mt-4 max-w-xl text-sm leading-6 text-blue-50 sm:text-base">
-                                    Consulta las reglas de contratación, entrega, garantía y uso de HagamosTech en una página clara, compacta y pensada para clientes.
+                                    Consulta información general sobre el alcance, las entregas, los pagos y el uso de HagamosTech. Las condiciones concretas se detallan en cada propuesta.
                                 </p>
                             </div>
 

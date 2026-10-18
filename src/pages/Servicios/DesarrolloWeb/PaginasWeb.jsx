@@ -7,21 +7,21 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import Breadcrumb from '../../../components/func/MigasPan';
 
-const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
+const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
   {"name":"Páginas Web Empresariales","tag":"Sitios corporativos completos","icon":"fa-globe"},
-  {"name":"Landing Pages","tag":"Alta conversión de leads","icon":"fa-rocket"},
-  {"name":"Tiendas Online","tag":"Carritos y pagos locales","icon":"fa-cart-shopping"},
-  {"name":"Catálogos y Blogs","tag":"Muestrarios y SEO orgánico","icon":"fa-blog"},
+  {"name":"Landing Pages","tag":"Presentación de productos y servicios","icon":"fa-rocket"},
+  {"name":"Tiendas Online","tag":"Opciones de pedido a evaluar","icon":"fa-cart-shopping"},
+  {"name":"Catálogos y Blogs","tag":"Catálogos, blogs y contenidos","icon":"fa-blog"},
   {"name":"Diseño UI/UX","tag":"Prototipos y web responsive","icon":"fa-mobile-screen-button"}
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Analizamos tu negocio, competidores y metas de negocio para estructurar el sitemap óptimo."},
-  {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una usabilidad excepcional."},
-  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS para lograr un rendimiento y una estructura SEO que se definen según el alcance."},
-  {"title":"Lanzamiento","desc":"Desplegamos en la nube, optimizamos caché y realizamos indexación en Google."}
+  {"title":"Planificación","desc":"Conversamos sobre los objetivos, el contenido disponible y la estructura que necesitás."},
+  {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una experiencia de uso acorde al proyecto."},
+  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS según el alcance y los requisitos acordados."},
+  {"title":"Lanzamiento","desc":"La publicación, el hosting y la indexación se evalúan por separado según el alcance acordado."}
 ];
 
 const TESTIMONIOS = [
@@ -321,7 +321,7 @@ const PaginasWeb = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Digitalizamos tu presencia comercial con sitios rápidos, atractivos y diseñados para generar conversiones, con una excelente experiencia de usuario (UX/UI) y total compatibilidad móvil.
+Diseñamos y desarrollamos sitios web para presentar tu empresa, proyecto o trabajo. Definimos el alcance, el contenido y las funciones contigo; la compatibilidad y el rendimiento dependen de lo acordado para cada proyecto.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
@@ -376,7 +376,7 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
-            Casos reales, <br />
+            Ejemplos orientativos, <br />
             <span className="text-[#A3E635] relative inline-block">
               soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>

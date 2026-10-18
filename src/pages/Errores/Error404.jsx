@@ -8,7 +8,7 @@ const Error404 = () => (
     description="La ruta que buscas no existe en HagamosTech. Es posible que haya sido eliminada, movida o que hayas escrito mal la dirección."
     icon="fa-map-location-dot"
     logs={[
-      { type: 'info', text: 'Buscando recurso en el servidor de HagamosTech...' },
+      { type: 'info', text: 'Revisá la dirección o volvé a una sección disponible.' },
       { type: 'error', text: 'URL no coincide con ninguna ruta registrada en el sistema.' },
       { type: 'warn', text: 'Redireccionando al portal de inicio automáticamente.' },
     ]}

@@ -2,10 +2,10 @@ import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const POLITICAS = [
-    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Aceptamos QR, transferencia bancaria y otros medios digitales. Los pagos se confirman antes de iniciar el desarrollo.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-rotate-left', titulo: 'Cancelaciones', desc: 'Podés cancelar o pausar tu solicitud antes de que comience el desarrollo. Coordinamos los tiempos contigo.', color: 'bg-[#84CC16]' },
-    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'Indicá tu NIT al contratar. Recibís comprobante digital y factura por cada servicio entregado.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-shield', titulo: 'Seguridad', desc: 'Tus datos de pago están cifrados y nunca se comparten con terceros. Los pagos se procesan por plataformas seguras.', color: 'bg-[#171717]' },
+    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Los medios de pago, anticipos y etapas se conversan para cada propuesta antes de iniciar.', color: 'bg-[#A3E635]' },
+    { icon: 'fa-rotate-left', titulo: 'Pausas o cancelaciones', desc: 'Si necesitás pausar o cancelar un proyecto, escribinos para revisar el estado del trabajo y las condiciones acordadas.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'La información de facturación y la documentación correspondiente se coordinan al preparar la propuesta.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-shield', titulo: 'Canal de pago', desc: 'El medio y el canal de pago se definen en la propuesta. No ingreses datos de tarjeta en formularios que no indiquen expresamente esa función.', color: 'bg-[#171717]' },
 ];
 
 const ComprasPagos = () => {

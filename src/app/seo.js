@@ -4,7 +4,7 @@
 export const SEO_POR_DEFECTO = {
   title: 'HagamosTech | Soluciones digitales y tecnológicas',
   description:
-    'HagamosTech transforma problemas, necesidades e ideas en soluciones reales: web, software, diseño, automatización e inteligencia artificial.',
+    'HagamosTech ofrece acompañamiento académico, diseño y desarrollo web y de software según el alcance de cada proyecto.',
 };
 
 const REGLAS = [
@@ -16,7 +16,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/tecnologia'),
     title: 'Tecnología | HagamosTech',
-    description: 'Desarrollo web, sistemas, automatización e inteligencia artificial a medida.',
+    description: 'Desarrollo de sistemas web y software a medida, evaluado según requisitos y viabilidad.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/academia'),
@@ -26,7 +26,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/negocios'),
     title: 'Negocios | HagamosTech',
-    description: 'Digitalización, páginas web y automatización para emprendedores y pymes.',
+    description: 'Diseño y desarrollo web para emprendimientos y empresas, con alcance conversado para cada proyecto.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/personalizado'),
@@ -45,7 +45,7 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/servicios/automatizacion'),
-    title: 'Automatización | HagamosTech',
+    title: 'Soluciones digitales a medida | HagamosTech',
     description: 'Automatizamos procesos y conectamos tus herramientas.',
   },
   {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { 
   Store, ShoppingCart, TrendingUp, BarChart, ArrowRight, 
   CheckCircle2, Globe, Cpu, Users, Zap, ShieldCheck 
@@ -78,10 +78,10 @@ const SolucionesGrid = () => {
 
 const ProcessTimeline = () => {
   const steps = [
-    { title: 'Auditoría Digital', desc: 'Analizamos tus cuellos de botella actuales y fugas de capital.', icon: <BarChart size={20} /> },
-    { title: 'Arquitectura de Solución', desc: 'Diseñamos la plataforma web o el sistema de automatización.', icon: <Store size={20} /> },
-    { title: 'Desarrollo e Integración', desc: 'Programamos y conectamos pasarelas de pago, inventarios y CRMs.', icon: <Cpu size={20} /> },
-    { title: 'Escalamiento y Soporte', desc: 'Tu negocio crece, nuestro sistema lo soporta A coordinar sin caídas.', icon: <TrendingUp size={20} /> },
+    { title: 'Conversamos sobre tu necesidad', desc: 'Entendemos el objetivo, las personas usuarias y el contexto del proyecto.', icon: <BarChart size={20} /> },
+    { title: 'Definimos el alcance', desc: 'Revisamos opciones digitales, requisitos y viabilidad.', icon: <Store size={20} /> },
+    { title: 'Acordamos una propuesta', desc: 'Detallamos entregables, etapas, tiempos y presupuesto para conversar.', icon: <Cpu size={20} /> },
+    { title: 'Desarrollamos lo acordado', desc: 'Avanzamos con revisiones coordinadas y presentamos los entregables definidos.', icon: <TrendingUp size={20} /> },
   ];
 
   return (
@@ -119,7 +119,7 @@ const Negocios = () => {
       {/* Dynamic Grid Background for Tech feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none opacity-20"></div>
       
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[Según alcance] h-[60%] bg-[#A3E635]/5 rounded-[Según alcance] blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[80%] h-[60%] bg-[#A3E635]/5 rounded-full blur-[150px] pointer-events-none"></div>
 
       {/* HERO SECTION - IMMERSIVE DASHBOARD */}
       <section className="relative pt-32 pb-10 z-10 px-6">

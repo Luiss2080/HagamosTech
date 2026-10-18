@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const DERECHOS = [
-    { icon: 'fa-eye', titulo: 'Acceso', desc: 'Pedí una copia de todos los datos personales que tenemos sobre vos. Te la entregamos en un formato simple y legible.', tiempo: '10 días hábiles' },
-    { icon: 'fa-pen-to-square', titulo: 'Rectificación', desc: 'Si algún dato está desactualizado o es incorrecto, podés pedirnos que lo corrijamos de inmediato.', tiempo: '5 días hábiles' },
-    { icon: 'fa-trash-can', titulo: 'Eliminación', desc: 'Podés solicitar la eliminación total de tus datos personales de nuestros sistemas en cualquier momento.', tiempo: '15 días hábiles' },
-    { icon: 'fa-file-export', titulo: 'Portabilidad', desc: 'Tenés derecho a recibir tus datos en un formato que puedas llevar a otro proveedor de servicio.', tiempo: '10 días hábiles' },
+    { icon: 'fa-eye', titulo: 'Acceso', desc: 'Podés consultar por los datos personales asociados a tu interacción con HagamosTech.', tiempo: 'A coordinar' },
+    { icon: 'fa-pen-to-square', titulo: 'Rectificación', desc: 'Podés contactarnos para solicitar la revisión de datos desactualizados o incorrectos.', tiempo: 'A coordinar' },
+    { icon: 'fa-trash-can', titulo: 'Eliminación', desc: 'Podés escribirnos para consultar si corresponde eliminar información vinculada a tu solicitud o cuenta.', tiempo: 'A coordinar' },
+    { icon: 'fa-file-export', titulo: 'Otras consultas', desc: 'Escribinos para conversar cualquier consulta relacionada con tus datos personales.', tiempo: 'A coordinar' },
 ];
 
 const PASOS = [
     { icon: 'fa-pen', label: 'Solicitud', desc: 'Escribinos por WhatsApp o email indicando tu derecho.' },
     { icon: 'fa-id-card', label: 'Verificación', desc: 'Confirmamos tu identidad para proteger tus datos.' },
-    { icon: 'fa-circle-check', label: 'Respuesta', desc: `Te respondemos en ${DERECHOS[0].tiempo} máximo.` },
+    { icon: 'fa-circle-check', label: 'Respuesta', desc: 'Coordinamos la atención de tu solicitud por el canal de contacto.' },
 ];
 
 const DerechosUsuarios = () => {

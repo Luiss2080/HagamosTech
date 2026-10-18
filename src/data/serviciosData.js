@@ -290,7 +290,7 @@ export const SERVICIOS_DATA = {
                 { icon: 'fa-bolt', label: 'Ventas', value: 'Rápidas' }
             ],
             includes: [
-                { icon: 'fa-tag', label: 'Descuentos' },
+                { icon: 'fa-tag', label: 'Campañas' },
                 { icon: 'fa-share-nodes', label: 'Redes' },
                 { icon: 'fa-eye', label: 'Atractivo' }
             ],
@@ -736,7 +736,7 @@ export const SERVICIOS_DATA = {
             shortDesc: 'Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
-                { icon: 'fa-pen-ruler', label: 'Solución', value: '100% A Medida' },
+                { icon: 'fa-pen-ruler', label: 'Solución', value: 'Según alcance' },
                 { icon: 'fa-lock', label: 'Privacidad', value: 'Confidencial' }
             ],
             includes: [

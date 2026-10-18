@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RESUMEN = [
-    { icon: 'fa-shield-halved', titulo: 'Compromiso con tu privacidad', desc: 'Nunca vendemos tus datos personales a terceros. Tu información se usa solo para mejorar tu experiencia con nosotros.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-lock', titulo: 'Transparencia total', desc: 'Todo lo que hacemos con tus datos está explicado en esta página, en lenguaje simple y claro.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-user-shield', titulo: 'Control en tus manos', desc: 'Podés acceder, corregir o eliminar tus datos cuando quieras. Tus derechos están garantizados.', color: 'bg-[#171717]' },
-    { icon: 'fa-file-shield', titulo: 'Actualización 2026', desc: 'Esta política se actualizó por última vez en enero de 2026. Te avisaremos ante cualquier cambio.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-shield-halved', titulo: 'Compromiso con tu privacidad', desc: 'La información que compartís se utiliza para gestionar consultas y servicios, según el contexto de cada contacto.', color: 'bg-[#A3E635]' },
+    { icon: 'fa-lock', titulo: 'Transparencia total', desc: 'Esta página resume el tratamiento de datos descrito en la política de privacidad.', color: 'bg-[#0A0A0A]' },
+    { icon: 'fa-user-shield', titulo: 'Control en tus manos', desc: 'Podés contactarnos para consultar o solicitar la revisión de tus datos personales.', color: 'bg-[#171717]' },
+    { icon: 'fa-file-shield', titulo: 'Actualización 2026', desc: 'Revisá esta política para conocer la información vigente sobre el tratamiento de datos.', color: 'bg-[#84CC16]' },
 ];
 
 const ResumenPrivacidad = () => {

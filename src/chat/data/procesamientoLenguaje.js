@@ -51,8 +51,8 @@ export const BANCO_CONOCIMIENTO = [
       '3. **Empleo** → CV optimizado ATS, LinkedIn, cartas, portafolios, entrevistas y certificados.\n' +
       '4. **Diseño gráfico** → logos, flyers, packaging, tarjetas y retoque fotográfico.\n' +
       '5. **Desarrollo web y e-commerce** → páginas, landing, tiendas online, catálogos y UI/UX.\n' +
-      '6. **Software y hardware** → sistemas a medida, bases de datos y DevOps.\n' +
-      '7. **Automatización e IA** → asistentes, integración de IA y productividad.\n' +
+      '6. **Software** → sistemas a medida y bases de datos.\n' +
+      '7. **Soluciones personalizadas** → desarrollo digital según alcance y viabilidad.\n' +
       '8. **Soluciones a medida** → "Contanos tu problema, nosotros vemos cómo hacerlo".\n\n' +
       '¿Sobre cuál querés que profundice?'
   },

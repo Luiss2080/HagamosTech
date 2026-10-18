@@ -16,7 +16,7 @@ const ContactoPrivacidad = () => {
                         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 <span className="inline-block bg-white/10 text-[#FFE8D6] px-4 py-1.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase border border-white/15 mb-5">
-                                    <i className="fas fa-headset mr-1.5 text-[#A3E635]"></i> DPO / Delegado de Datos
+                                    <i className="fas fa-headset mr-1.5 text-[#A3E635]"></i> Contacto sobre privacidad
                                 </span>
                                 <h2 className="text-3xl sm:text-4xl font-black font-heading text-white mb-4 leading-tight drop-shadow">
                                     ¿Dudas sobre tus <span className="relative inline-block text-amber-300">
@@ -25,14 +25,14 @@ const ContactoPrivacidad = () => {
                                     </span>
                                 </h2>
                                 <p className="text-white/80 font-semibold leading-relaxed text-sm sm:text-base">
-                                    Tenemos un equipo dedicado a atender tus consultas sobre privacidad. Escribinos y te respondemos a la brevedad.
+                                    Podés escribirnos por los canales indicados para realizar una consulta relacionada con privacidad.
                                 </p>
                                 <div className="mt-5 flex flex-wrap gap-2">
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white/80 text-[9px] font-black uppercase tracking-widest">
-                                        <i className="fas fa-lock text-amber-300"></i> Canal seguro
+                                        <i className="fas fa-lock text-amber-300"></i> Canal de contacto
                                     </span>
                                     <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 border border-white/15 text-white/80 text-[9px] font-black uppercase tracking-widest">
-                                        <i className="fas fa-clock text-amber-300"></i> Respuesta en 24h
+                                        <i className="fas fa-clock text-amber-300"></i> Plazo a coordinar
                                     </span>
                                 </div>
                             </div>

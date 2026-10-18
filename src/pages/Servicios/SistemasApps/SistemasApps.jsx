@@ -7,20 +7,20 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import Breadcrumb from '../../../components/func/MigasPan';
 
-const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
+const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
   {"name":"Sistemas Web","tag":"Plataformas operativas a medida","icon":"fa-laptop-code"},
   {"name":"Software de Gestión","tag":"Inventarios, ventas y reportes","icon":"fa-gears"},
   {"name":"Bases de Datos","tag":"Normalización y mantenimiento","icon":"fa-database"},
-  {"name":"DevOps y Servidores","tag":"Despliegue y soporte continuo","icon":"fa-server"}
+  {"name":"Paneles administrativos","tag":"Funciones y perfiles según requisitos","icon":"fa-table-columns"}
 ];
 
 const PROCESO = [
   {"title":"Requerimientos","desc":"Analizamos tus procesos y definimos la arquitectura de la solución a medida."},
   {"title":"Bases de Datos","desc":"Diseñamos y normalizamos la estructura de datos que soportará la operación."},
-  {"title":"Desarrollo","desc":"Construimos el sistema con tecnologías modernas y prácticas de DevOps."},
-  {"title":"Soporte","desc":"Desplegamos y mantenemos la plataforma con soporte continuo."}
+  {"title":"Desarrollo","desc":"Construimos el sistema según requisitos, funcionalidades y entregables acordados."},
+  {"title":"Entrega","desc":"Presentamos los entregables acordados. El mantenimiento posterior se conversa por separado."}
 ];
 
 const TESTIMONIOS = [
@@ -86,8 +86,8 @@ const FLOATING_CARDS = [
 const VALUE_POINTS = [
   {"icon":"fa-laptop-code","label":"Sistemas a Medida"},
   {"icon":"fa-database","label":"Datos Normalizados"},
-  {"icon":"fa-infinity","label":"DevOps"},
-  {"icon":"fa-headset","label":"Soporte Continuo"}
+  {"icon":"fa-database","label":"Bases de datos"},
+  {"icon":"fa-headset","label":"Mantenimiento a coordinar"}
 ];
 
 const SistemasApps = () => {
@@ -315,16 +315,16 @@ const SistemasApps = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ SON LAS SOLUCIONES DE SOFTWARE Y HARDWARE Y CÓMO OPTIMIZAN TU OPERACIÓN?
+                ¿QUÉ SON LAS SOLUCIONES DE SOFTWARE Y CÓMO PUEDEN APOYAR TU OPERACIÓN?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Desarrollamos sistemas operativos a medida —plataformas web, gestión de bases de datos y soporte DevOps— pensados para las necesidades reales de tu empresa.
+Desarrollamos sistemas y aplicaciones web a medida, con estructuras de datos definidas según los requisitos y el alcance acordado.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y Soporte Tecnológico y DevOps.
+Desarrollo de sistemas web y software, diseño de interfaces y gestión de bases de datos según viabilidad.
 </p>
 </div>
             </div>
@@ -375,7 +375,7 @@ Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y S
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
-            Casos reales, <br />
+            Ejemplos orientativos, <br />
             <span className="text-[#A3E635] relative inline-block">
               soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>

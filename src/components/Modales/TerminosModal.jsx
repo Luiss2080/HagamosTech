@@ -101,7 +101,7 @@ const TerminosModal = ({ isOpen, onClose }) => {
 
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 w-full max-w-sm mb-4">
                                         <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-shield-halved mr-1"></i> Garantias</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#A3E635]"><i className="fas fa-shield-halved mr-1"></i> Condiciones</p>
                                             <p className="text-xs font-bold text-white">Cobertura vigente</p>
                                         </div>
                                         <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">

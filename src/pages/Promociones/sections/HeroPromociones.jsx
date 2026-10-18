@@ -7,9 +7,9 @@ const HeroPromociones = () => {
         <div className="relative z-10">
             <CircuitBackground />
             <PageHero
-                title="Aprovecha nuestras"
-                highlight="promociones."
-                description="Packs, planes de soporte y promociones pensadas para emprendedores, estudiantes y empresas: diseño, desarrollo web, automatización e IA a precio accesible."
+                title="Conversemos sobre"
+                highlight="tu proyecto."
+                description="Acompañamiento académico, diseño y desarrollo digital para personas, emprendimientos e instituciones. Revisamos tu necesidad y conversamos alternativas, alcance y presupuesto según tus posibilidades."
             />
         </div>
     );

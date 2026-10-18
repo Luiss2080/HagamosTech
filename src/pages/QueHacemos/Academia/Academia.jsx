@@ -12,24 +12,24 @@ const ACADEMIC_TOOLS = [
   { name: 'Python', icon: 'fa-brands fa-python', color: 'text-yellow-400' },
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
   { name: 'R', icon: 'fa-solid fa-chart-line', color: 'text-indigo-400' },
-  { name: 'AWS', icon: 'fa-brands fa-aws', color: 'text-orange-400' }
+  { name: 'APA 7', icon: 'fa-solid fa-book', color: 'text-orange-400' }
 ];
 
 const METRICS = [
-  { label: 'Rigor Académico', value: '100%', icon: <Award size={24} /> },
-  { label: 'Proyectos Aprobados', value: '+200', icon: <CheckCircle2 size={24} /> },
-  { label: 'Soporte Estudiantil', value: '24/7', icon: <Laptop size={24} /> }
+  { label: 'Alcance', value: 'Acordado', icon: <Award size={24} /> },
+  { label: 'Modalidad', value: 'Flexible', icon: <CheckCircle2 size={24} /> },
+  { label: 'Disponibilidad', value: 'A consultar', icon: <Laptop size={24} /> }
 ];
 
 const TESTIMONIOS = [
-  { name: 'María G.', role: 'Estudiante de Medicina', text: 'El simulador de casos clínicos que programaron para mi tesis me aseguró la nota máxima. Increíble nivel de detalle teórico y visual.' },
-  { name: 'Andrés F.', role: 'Ingeniería de Sistemas', text: 'Estaba bloqueado con el despliegue de mi proyecto final. HagamosTech no sólo lo resolvió, me explicaron cada línea de código.' },
-  { name: 'Dra. Elena V.', role: 'Docente Universitaria', text: 'He visto a mis alumnos presentar plataformas desarrolladas con su asesoría y el rigor técnico es impecable. Los recomiendo siempre.' }
+  { name: 'Mentoría académica', role: 'Ejemplo orientativo', text: 'Necesito repasar un tema y resolver ejercicios guiados de una materia.' },
+  { name: 'Informe o monografía', role: 'Ejemplo orientativo', text: 'Busco orientación para organizar el tema, las secciones y las referencias según la pauta.' },
+  { name: 'Proyecto socioformativo', role: 'Ejemplo orientativo', text: 'Quiero planificar objetivos, actividades y evidencias para desarrollar mi proyecto.' }
 ];
 
 const CompilerWindow = () => {
   const [text, setText] = useState('');
-  const fullText = `[info] Iniciando entorno de simulación...\n[info] Cargando base de datos médica (1.2M registros)... OK\n[build] Compilando modelos anatómicos 3D... 100%\n[test] Verificando rigor metodológico (APA 7)... PASSED\n[success] Proyecto Universitario desplegado correctamente.\n> Listo para la defensa de tesis.`;
+  const fullText = `[ejemplo] Conversamos sobre la materia y la consigna\n[guía] Organizamos los temas que requieren repaso\n[práctica] Resolvemos ejercicios de forma guiada\n[revisión] Contrastamos el avance con la pauta compartida\n> El estudiante desarrolla y presenta su propio trabajo.`;
   
   useEffect(() => {
     let i = 0;
@@ -47,7 +47,7 @@ const CompilerWindow = () => {
         <div className="w-3 h-3 rounded-full bg-red-500"></div>
         <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
         <div className="w-3 h-3 rounded-full bg-green-500"></div>
-        <span className="ml-2 text-[10px] text-neutral-500 font-mono">tesis_workspace ~/simulador</span>
+        <span className="ml-2 text-[10px] text-neutral-500 font-mono">ejemplo_mentoria ~/estudio</span>
       </div>
       <div className="p-6 font-mono text-sm md:text-base text-[#A3E635] whitespace-pre-wrap h-[180px] text-left">
         {text}
@@ -60,8 +60,8 @@ const CompilerWindow = () => {
 
 const ESPECIALIDADES = [
   {
-    title: 'Ciencias de la Salud',
-    desc: 'Recreamos escenarios clínicos virtuales y modelos anatómicos 3D para medicina y enfermería.',
+    title: 'Apoyo por materia',
+    desc: 'Orientación académica según la materia, el nivel y la disponibilidad para acompañamiento.',
     icon: <Stethoscope size={20} />,
     image: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=800&q=80'
   },
@@ -72,14 +72,14 @@ const ESPECIALIDADES = [
     image: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Recursos Educativos e IA',
-    desc: 'Apoyo en proyectos de programación e IA aplicada para trabajos académicos.',
+    title: 'Acompañamiento en tareas',
+    desc: 'Explicación de contenidos y resolución guiada de ejercicios; el estudiante desarrolla sus respuestas.',
     icon: <Microscope size={20} />,
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80'
   },
   {
-    title: 'Defensas Interactivas',
-    desc: 'Presentaciones de alto nivel técnico para impresionar a cualquier jurado.',
+    title: 'Presentaciones y exposiciones',
+    desc: 'Organización visual de ideas para clases, exposiciones y defensas académicas.',
     icon: <BookOpen size={20} />,
     image: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80'
   },
@@ -91,7 +91,7 @@ const ESPECIALIDADES = [
   },
   {
     title: 'Algoritmos y Lógica',
-    desc: 'Desarrollo de algoritmos complejos para resolver problemas computacionales en tesis.',
+    desc: 'Tutoría de lógica, algoritmos y comprensión de código; el estudiante desarrolla su solución.',
     icon: <Binary size={20} />,
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=800&q=80'
   }
@@ -142,7 +142,7 @@ const Academia = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollo de software, simuladores médicos y ecosistemas de información diseñados específicamente para cumplir con el más alto rigor universitario y tesis de grado.
+            Mentorías y apoyo académico para comprender contenidos, resolver ejercicios y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -197,7 +197,7 @@ const Academia = () => {
               Áreas de <span className="text-[#A3E635]">Especialidad</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Nuestros desarrollos no son simples páginas, son simuladores, plataformas y algoritmos listos para ser sustentados frente a jurados exigentes.
+              Revisamos cada necesidad según la materia, el nivel, la consigna y la disponibilidad. La modalidad y el alcance se conversan antes de comenzar.
             </p>
           </div>
 
@@ -227,10 +227,10 @@ const Academia = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80')] opacity-[0.03] mix-blend-overlay object-cover pointer-events-none group-hover/cta:opacity-[0.08] transition-opacity duration-700"></div>
             
             <h2 className="text-5xl md:text-7xl font-black mb-6 relative z-10 uppercase tracking-tighter drop-shadow-lg leading-none">
-              Asegúrate el 100/100
+              Avancemos con tu proyecto académico
             </h2>
             <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
-              No dejes tu sustentación al azar. Construyamos una herramienta tecnológica que deje a tu jurado sin palabras.
+              Contanos qué necesitás comprender o preparar. Conversamos alternativas de acompañamiento según tu situación y posibilidades.
             </p>
             
             <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-sm md:text-lg uppercase tracking-widest hover:scale-110 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] group/btn overflow-hidden">

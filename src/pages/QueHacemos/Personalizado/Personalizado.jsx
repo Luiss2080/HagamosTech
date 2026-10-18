@@ -52,13 +52,13 @@ const ChatAssistantWindow = () => {
 
   return (
     <div className="w-full max-w-2xl mx-auto bg-[#0a0a0a] rounded-xl border border-neutral-800 shadow-2xl overflow-hidden mt-10 relative group h-[320px] flex flex-col">
-      <div className="flex itemás-center px-4 py-3 bg-neutral-900 border-b border-neutral-800 gap-3">
+      <div className="flex items-center px-4 py-3 bg-neutral-900 border-b border-neutral-800 gap-3">
         <div className="flex gap-2">
           <div className="w-3 h-3 rounded-full bg-red-500"></div>
           <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
-        <span className="text-xs font-black text-neutral-400 uppercase tracking-widestá flex itemás-center gap-2">
+        <span className="text-xs font-black text-neutral-400 uppercase tracking-widest flex items-center gap-2">
           <MessageSquare size={14} className="text-[#A3E635]" /> Asistente de Arquitectura
         </span>
       </div>
@@ -85,9 +85,9 @@ const ChatAssistantWindow = () => {
         )}
       </div>
       
-      <div className="p-4 border-t border-neutral-800 bg-neutral-950 flex gap-3 itemás-center">
+      <div className="p-4 border-t border-neutral-800 bg-neutral-950 flex gap-3 items-center">
         <div className="flex-grow h-10 bg-neutral-900 rounded-full border border-neutral-800"></div>
-        <div className="w-10 h-10 bg-[#A3E635] rounded-full flex itemás-center justify-center text-black shadow-lg">
+        <div className="w-10 h-10 bg-[#A3E635] rounded-full flex items-center justify-center text-black shadow-lg">
           <ArrowRight size={16} />
         </div>
       </div>
@@ -107,11 +107,11 @@ const ProcessTimeline = () => {
     <div className="relative border-l-2 border-neutral-800 ml-6 md:ml-10 py-10 mt-16">
       {steps.map((step, idx) => (
         <div key={idx} className="mb-16 relative pl-10 md:pl-16 group">
-          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex itemás-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
+          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex items-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
             {step.icon}
           </div>
           <div className="bg-neutral-900/30 p-6 rounded-2xl border border-neutral-800/50 hover:bg-neutral-900/60 transition-colors duration-300">
-            <h4 className="text-xl font-black text-white mb-2 flex itemás-center gap-3">
+            <h4 className="text-xl font-black text-white mb-2 flex items-center gap-3">
               <span className="text-[#A3E635] text-xs font-mono">FASE 0{idx + 1}</span> {step.title}
             </h4>
             <p className="text-slate-400 font-medium">{step.desc}</p>
@@ -135,19 +135,19 @@ const PROJECTS = [
   },
   {
     num: '02',
-    category: 'IA',
-    firstPart: 'Integración &',
-    highlightPart: 'IA',
-    desc: 'Integramos inteligencia artificial y asistentes virtuales en tus procesos y sistemas actuales.',
+    category: 'DISEÑO Y DESARROLLO',
+    firstPart: 'Interfaces',
+    highlightPart: 'y aplicaciones',
+    desc: 'Evaluamos interfaces y aplicaciones web según las funciones, los datos y los perfiles de usuario que necesitás.',
     icon: 'fa-lightbulb',
     images: ['https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80']
   },
   {
     num: '03',
-    category: 'PROCESOS',
-    firstPart: 'Automatización',
-    highlightPart: 'de Procesos',
-    desc: 'Automatizamos tareas repetitivas y conectamos tus herramientas para ahorrar tiempo y recursos.',
+    category: 'HERRAMIENTAS DIGITALES',
+    firstPart: 'Paneles',
+    highlightPart: 'y herramientas',
+    desc: 'Desarrollamos herramientas digitales para organizar información y apoyar tareas definidas dentro del alcance acordado.',
     icon: 'fa-users-gear',
     images: ['https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80']
   },
@@ -156,7 +156,7 @@ const PROJECTS = [
     category: 'SOPORTE',
     firstPart: 'Mantenimiento',
     highlightPart: 'Continuo',
-    desc: 'Soporte según acuerdo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y estén actualizados.',
+    desc: 'Podemos revisar correcciones o mejoras para sistemas existentes. La disponibilidad, el alcance y la modalidad se conversan por proyecto.',
     icon: 'fa-server',
     images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
   },
@@ -165,7 +165,7 @@ const PROJECTS = [
     category: 'DATOS',
     firstPart: 'Bases de',
     highlightPart: 'Datos',
-    desc: 'Diseñamos, normalizamos y mantenemos tus bases de datos para que tu información sea confiable y escalable.',
+    desc: 'Evaluamos estructura, consultas y reportes para bases de datos según los requisitos del sistema.',
     icon: 'fa-cloud',
     images: ['https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=800&q=80']
   },
@@ -174,7 +174,7 @@ const PROJECTS = [
     category: 'RESCATE',
     firstPart: 'Rescate de',
     highlightPart: 'Proyectos',
-    desc: 'Retomamos proyectos de software abandonados o mal desarrollados para estabilizar el código y llevarlos a producción con éxito.',
+    desc: 'Podemos revisar un proyecto existente y conversar las mejoras posibles, sujeto a una evaluación previa del código y el alcance.',
     icon: 'fa-life-ring',
     images: ['https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80']
   }
@@ -190,9 +190,9 @@ const Personalizado = () => {
 
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
-        <div className="container mx-auto max-w-7xl text-center flex flex-col itemás-center">
+        <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
           
-          <div className="inline-flex itemás-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widestá text-[#A3E635] mb-8 animate-fade-in-up">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
             <Lightbulb size={16} /> Innovación a Medida
           </div>
 
@@ -206,7 +206,7 @@ const Personalizado = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widestá rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex itemás-center gap-2">
+            <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
               Contarnos tu Problema <ArrowRight size={16} />
             </a>
           </div>
@@ -218,10 +218,10 @@ const Personalizado = () => {
       {/* STACK TECNOL�GICO INFINITO */}
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widestá mb-6">Stack Versátil y Adaptable</p>
+          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
           <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
             {TECH_STACK.map((tech, i) => (
-              <div key={i} className={`flex itemás-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
+              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
                 <i className={tech.icon}></i>
                 <span className="text-sm tracking-wider">{tech.name}</span>
               </div>
@@ -238,7 +238,7 @@ const Personalizado = () => {
               Ingeniería de <span className="text-[#A3E635]">Precisión</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              ¿No encajamos tu negocio en nuestáro software. Diseñamos el software para que encaje perfectamente en tu negocio.
+              Revisamos tu necesidad y proponemos un alcance viable que podamos conversar y ajustar a tus posibilidades.
             </p>
           </div>
 
@@ -249,13 +249,13 @@ const Personalizado = () => {
       {/* TIMELINE SECTION */}
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
          <div className="container mx-auto max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-16 itemás-start">
+          <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/3 sticky top-32">
               <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
                 El Proceso de <br/> <span className="text-[#A3E635]">Creación</span>
               </h2>
               <p className="text-slate-400 font-medium mb-8">
-                Construir software a medida requiere método y precisión. Así es como convertimos tus ideas en código funcional.
+                Conversamos sobre requisitos y alternativas antes de definir las etapas y entregables del desarrollo.
               </p>
             </div>
 

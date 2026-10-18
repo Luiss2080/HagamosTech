@@ -15,7 +15,7 @@ const CATEGORIAS = [
         icon: 'fa-location-dot',
         titulo: 'Datos de Contacto',
         ejemplo: 'Ciudad, empresa o institución y datos para coordinar la atención.',
-        detalles: 'Usamos estos datos solo para coordinar reuniones, entregas de soluciones y seguimiento. Nunca compartimos tu información con terceros.',
+        detalles: 'Podemos usar estos datos para responder consultas y coordinar servicios. El tratamiento y cualquier comunicación con terceros depende de las herramientas utilizadas y del caso.',
         items: ['Ciudad o zona', 'Empresa o institución', 'Referencias de contacto'],
         color: 'from-[#0A0A0A] to-[#171717]',
         badge: 'bg-[#0A0A0A]'
@@ -24,7 +24,7 @@ const CATEGORIAS = [
         icon: 'fa-credit-card',
         titulo: 'Datos de Pago',
         ejemplo: 'Información de facturación y métodos de pago utilizados.',
-        detalles: 'Los pagos se procesan a través de plataformas seguras. No almacenamos números de tarjetas en nuestros servidores.',
+        detalles: 'La información de pago que eventualmente se solicite dependerá del medio acordado. No se ofrece pago con tarjeta desde este formulario.',
         items: ['Historial de servicios', 'Método de pago utilizado', 'NIT para facturación'],
         color: 'from-[#84CC16] to-[#A3E635]',
         badge: 'bg-[#84CC16]'
@@ -33,7 +33,7 @@ const CATEGORIAS = [
         icon: 'fa-mobile-screen-button',
         titulo: 'Datos de Uso',
         ejemplo: 'Cómo interactuás con nuestro sitio y tus preferencias.',
-        detalles: 'Analizamos la navegación para mejorar nuestra web y personalizar tu experiencia. Los datos son anónimos y agregados.',
+        detalles: 'El sitio puede registrar datos técnicos necesarios para su funcionamiento. No afirmamos utilizar analítica o personalización que no haya sido configurada.',
         items: ['Páginas visitadas', 'Proyectos de interés', 'Tiempo de visita'],
         color: 'from-[#171717] to-[#0A0A0A]',
         badge: 'bg-[#171717]'

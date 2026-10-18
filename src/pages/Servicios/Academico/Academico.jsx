@@ -7,7 +7,7 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import Breadcrumb from '../../../components/func/MigasPan';
 
-const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
+const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
   {"name":"Monografías y Tesis","tag":"Formato APA 7 y documentación","icon":"fa-book"},
@@ -19,10 +19,10 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Analizamos tu proyecto, los requisitos de la materia y los objetivos de la defensa para definir el plan de trabajo."},
-  {"title":"Contenido y Diseño","desc":"Estructuramos marco teórico, esquemas, infografías y presentaciones bajo normas académicas (APA 7)."},
+  {"title":"Planificación","desc":"Conversamos sobre la consigna, la materia y el tipo de acompañamiento que necesitás."},
+  {"title":"Contenido y Diseño","desc":"Orientamos la organización de secciones, recursos visuales y referencias según la pauta académica."},
   {"title":"Desarrollo y Simulación","desc":"Construimos simuladores, proyectos de redes o código estructurado cuando la tarea lo requiere."},
-  {"title":"Entrega y Ajustes","desc":"Entregamos el trabajo funcional con revisión final, corrección de estilo y acompañamiento pre-defensa."}
+  {"title":"Entrega y Ajustes","desc":"Revisamos avances y dudas según lo acordado; el estudiante desarrolla y presenta su propio trabajo."}
 ];
 
 const TESTIMONIOS = [
@@ -145,7 +145,7 @@ const Academico = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Orientadas a estudiantes universitarios, docentes e instituciones que requieren estructurar, simular y presentar proyectos con alto rigor académico.
+                Acompañamiento para estudiantes de distintos niveles, sujeto a disponibilidad por materia. El estudiante desarrolla y presenta su propio trabajo.
               </p>
 
               {/* Action Buttons */}
@@ -322,11 +322,11 @@ const Academico = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Asesoramos la estructuración, simulación y presentación de tus proyectos académicos con alto rigor, desde monografías y tesis hasta simuladores de redes, robótica educativa y sistemas informáticos.
+Brindamos orientación académica para comprender contenidos y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Presentaciones PowerPoint e Interactivas, Formato APA 7 y Documentación Técnica, Infografías y Diagramas, Mapas Conceptuales y Portadas Académicas, Simuladores Educativos y Proyectos de Redes, y Apoyo en Proyectos de Programación.
+Mentorías académicas, apoyo guiado en tareas, informes, monografías, proyectos socioformativos, presentaciones, formato APA 7 y apoyo en proyectos de programación según materia y disponibilidad.
 </p>
 </div>
             </div>
@@ -377,7 +377,7 @@ Presentaciones PowerPoint e Interactivas, Formato APA 7 y Documentación Técnic
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
-            Casos reales, <br />
+            Ejemplos orientativos, <br />
             <span className="text-[#A3E635] relative inline-block">
               soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>

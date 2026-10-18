@@ -23,7 +23,8 @@ describe('Contenido comercial veraz', () => {
       leer('../../src/chat/data/procesamientoLenguaje.js'),
     ].join('\n');
     expect(mensajes).not.toMatch(/soporte.{0,10}24\/7|24\/7.{0,10}soporte/);
-    expect(mensajes).not.toMatch(/automatizaci[oó]n de procesos|n8n|devops/);
+    expect(mensajes).toContain('no ofrecemos automatización de procesos');
+    expect(mensajes).toContain('no ofrecemos operación de servidores');
     expect(mensajes).toContain('acompañamiento académico');
   });
 
