@@ -28,11 +28,11 @@ garantías, métodos de pago ni prácticas de datos no confirmados.
 |---|---|---|
 | Garantía y ajustes | `/condiciones` promete cobertura de defectos técnicos y ajustes según política; `/terminos` repite esa cobertura. | Si se ofrece garantía; duración, cobertura, exclusiones y proceso. Si no existe una política fija, autorizar redacción según la propuesta de cada proyecto. |
 | Pagos y cancelaciones | Términos menciona QR, transferencia y “otros medios”; `ComprasPagos.jsx` anuncia pago previo, comprobante y factura por servicio; el modal añade efectivo/tarjeta y cancelación antes de iniciar. | Medios aceptados hoy; cuándo se factura; si se emite factura; anticipos/saldos y reglas de cancelación/reembolso. |
-| Datos personales | Privacidad declara categorías de datos, no compartirlos, no almacenar números de tarjeta y analítica agregada. | Datos pedidos en formularios, perfil y contacto; quién los recibe; proveedores externos; procesamiento de pagos y analítica activa. |
-| Conservación | `RetencionDatos.jsx` afirma cuenta activa, historial fiscal 5 años, mensajes 2 años y cookies 30 días. | Plazos y sistemas donde se guardan cuentas, mensajes, comprobantes y respaldos. Indicar “por definir” si no hay política vigente. |
-| Derechos y atención | La página fija plazos de 5, 10 y 15 días; contacto promete respuesta en 24 horas y presenta un canal seguro. | Canal atendido, responsable, horario/SLA y plazos que se pueden cumplir. |
-| Cookies y almacenamiento | El gestor muestra categorías esenciales, funcionales, analíticas y publicitarias y confirma guardado; no persiste la selección. La aplicación usa `sessionStorage`, `localStorage` y cookie `hagamostech_token`. | Tecnologías externas, categorías, finalidad y vencimiento; confirmar si hay analítica/publicidad y si se desea persistir consentimiento. |
-| Fechas | Hay fechas editoriales diferentes entre páginas. | Fecha efectiva al aprobar el contenido. |
+| Datos personales | El código solicita datos básicos de cuenta, perfil y contacto; los mensajes se guardan en base de datos y se envían por el correo configurado. No hay checkout en la web. | Revisar proveedores del despliegue/correo y obligaciones de conservación. |
+| Conservación | La base de datos incluye usuarios, perfiles, mensajes, verificaciones y recuperación; no se identificó un purgado automático general. | La política de conservación debe definirse con la persona responsable y revisarse según obligaciones aplicables. |
+| Derechos y atención | La UI conserva WhatsApp y contacto general; no hay SLA o DPO acreditados. Desactivar cuenta es diferente de borrar datos. | Confirmar responsable interno y obligaciones aplicables antes de publicar tiempos o garantías. |
+| Cookies y almacenamiento | El código usa cookie de autenticación, `sessionStorage` y `localStorage`; no se encontraron integraciones de analítica/publicidad. El HTML carga fuentes y recursos de CDN. | Confirmar proveedores del despliegue; no se ofrece panel de consentimiento porque no hay categorías opcionales detectadas en el código. |
+| Fechas | Se usan fechas de revisión editorial, no como aprobación legal. | Actualizar al aprobar la siguiente revisión del negocio. |
 
 ## Plan
 
@@ -48,10 +48,10 @@ garantías, métodos de pago ni prácticas de datos no confirmados.
 | Requisito | Evidencia | Estado |
 |---|---|---|
 | RF-1 | Auditoría inicial y datos solicitados registrados aquí. | ✅ |
-| RF-2 | Código confirma `sessionStorage`, `localStorage` y cookie `hagamostech_token`; no se encontraron integraciones de analítica en el código fuente revisado. Falta validar configuración del despliegue y proveedores externos. | ⚠️ |
-| RF-3 | El gestor solo actualiza React state; el mensaje de guardado es prematuro. | ⚠️ Pendiente confirmar categorías y persistencia. |
-| RF-4 | Condiciones, términos, modal y tarjetas de pago ahora describen acuerdos flexibles por proyecto; rutas, páginas y secciones se conservaron. | ✅ Parcial, falta privacidad/cookies. |
-| RF-5 | Decisión comercial registrada; prueba de contenido añadida. | ✅ Parcial; faltan datos de privacidad y resultados de validación. |
+| RF-2 | Código fuente revisado: cookie de autenticación, `sessionStorage`, `localStorage`, recursos externos de fuentes/CDN y sin integraciones de analítica/publicidad encontradas. Falta verificar configuración activa de despliegue y correo. | ✅ Parcial |
+| RF-3 | El gestor ahora es informativo; ya no presenta interruptores ni éxito de guardado ficticio. | ✅ |
+| RF-4 | Condiciones, términos, modal, privacidad y cookies describen acuerdos flexibles, datos observados y almacenamiento local; se conservaron rutas y secciones. | ✅ Parcial: revisión de proveedores/despliegue y legal pendiente. |
+| RF-5 | Pruebas de contenido comercial y de privacidad/cookies añadidas. | ✅ Parcial; validación completa de esta iteración pendiente. |
 
 ## Decisiones recibidas
 
@@ -61,20 +61,21 @@ garantías, métodos de pago ni prácticas de datos no confirmados.
 - El precio, alcance, entregas y fecha de inicio se confirman por propuesta antes de comenzar.
 - No se publicará un medio de pago específico ni una regla universal de reembolso sin
   confirmación. La pausa o cancelación se conversa según avance y compromisos acordados.
-- Sigue pendiente confirmar prácticas de tratamiento y conservación de datos, responsable
-  y tiempos reales de atención de privacidad, proveedores externos y tecnologías de
-  analítica/publicidad. El código fuente no basta para confirmar la configuración del
-  despliegue.
+- Sigue pendiente confirmar proveedores de correo/alojamiento, responsable de atención y
+  obligaciones aplicables a la conservación. La aplicación no define un purgado automático
+  general. El código fuente no basta para confirmar la configuración activa de despliegue ni
+  para aprobar legalmente los textos.
 
 ## Validación de implementación parcial
 
-- Vitest: 89/89 pruebas en 25 archivos.
-- Playwright E2E: 9/9 pruebas.
-- `npm run lint`: correcto.
-- `npm run build`: correcto.
-- `git diff --check`: pendiente de repetir tras la edición final de esta spec.
+- Vitest: 89/89 pruebas y 1 nueva prueba focalizada de privacidad/cookies aprobada.
+- Playwright E2E: 9/9 pruebas (ejecutadas antes de los cambios de privacidad/cookies; falta repetir).
+- `npm run lint`: correcto antes de esta iteración; falta repetir.
+- `npm run build`: correcto antes de esta iteración; falta repetir.
+- `git diff --check`: falta repetir al cerrar esta iteración.
 
 ## Estado
 
-Condiciones comerciales actualizadas según la decisión recibida. La revisión de privacidad,
-la confirmación de configuración externa y el ajuste funcional del gestor siguen pendientes.
+Condiciones comerciales, privacidad y cookies actualizadas con base en la decisión recibida
+y el código del proyecto. Falta validar servicios externos de despliegue/correo y revisar los
+textos legalmente antes de presentarlos como aprobados.

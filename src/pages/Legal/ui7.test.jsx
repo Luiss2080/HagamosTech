@@ -30,11 +30,11 @@ describe('UI-7: documentos legales y errores', () => {
         const user = userEvent.setup();
         render(<MemoryRouter><TiposCookies /></MemoryRouter>);
 
-        const tarjeta = screen.getByRole('button', { name: 'Esenciales: mostrar detalle' });
+        const tarjeta = screen.getByRole('button', { name: 'Cookie de autenticación: mostrar detalle' });
         tarjeta.focus();
         await user.keyboard('{Enter}');
 
-        expect(screen.getByRole('button', { name: 'Esenciales: ocultar detalle' })).toHaveAttribute('aria-pressed', 'true');
+        expect(screen.getByRole('button', { name: 'Cookie de autenticación: ocultar detalle' })).toHaveAttribute('aria-pressed', 'true');
     });
 
     it('el error 500 ofrece una explicación y recuperación sin afirmar acciones no verificadas', () => {
