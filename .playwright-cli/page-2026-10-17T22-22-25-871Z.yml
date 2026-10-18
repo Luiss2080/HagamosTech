@@ -1,0 +1,248 @@
+- generic [ref=e3]:
+  - banner [ref=e4]:
+    - generic [ref=e6]:
+      - link "Ir al inicio de HagamosTech" [ref=e7] [cursor=pointer]:
+        - /url: "#/"
+        - img "Logo HagamosTech" [ref=e8]
+      - button "Abrir Menú" [ref=e371]
+      - text:       
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Qué hacemos?
+          - generic: 
+        - generic:
+          - button "Tecnología ":
+            - text: Tecnología
+            - generic: 
+          - button "Academia ":
+            - text: Academia
+            - generic: 
+          - button "Emprendimientos y profesionales ":
+            - text: Emprendimientos y profesionales
+            - generic: 
+          - button "Soluciones personalizadas ":
+            - text: Soluciones personalizadas
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Servicios
+          - generic: 
+        - generic:
+          - button "Desarrollo Web ":
+            - text: Desarrollo Web
+            - generic: 
+          - button "Sistemas y Software ":
+            - text: Sistemas y Software
+            - generic: 
+          - button "Para tu Negocio ":
+            - text: Para tu Negocio
+            - generic: 
+          - button "Apoyo Académico ":
+            - text: Apoyo Académico
+            - generic: 
+          - button "Empleo ":
+            - text: Empleo
+            - generic: 
+          - button "Diseño Gráfico ":
+            - text: Diseño Gráfico
+            - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: ¿Para quién?
+          - generic: 
+        - generic:
+          - button "Estudiantes ":
+            - text: Estudiantes
+            - generic: 
+          - button "Emprendimientos ":
+            - text: Emprendimientos
+            - generic: 
+          - button "Profesionales ":
+            - text: Profesionales
+            - generic: 
+          - button "Empresas e instituciones ":
+            - text: Empresas e instituciones
+            - generic: 
+          - button "Solicitud personalizada ":
+            - text: Solicitud personalizada
+            - generic: 
+      - button " Cómo trabajamos ":
+        - generic:
+          - generic: 
+          - text: Cómo trabajamos
+        - generic: 
+      - generic:
+        - generic:
+          - generic:
+            - generic: 
+            - generic: Sobre Nosotros
+          - generic: 
+        - generic:
+          - button "Nuestra historia ":
+            - text: Nuestra historia
+            - generic: 
+          - button "Misión y Visión ":
+            - text: Misión y Visión
+            - generic: 
+          - button "Personalidad y Valores ":
+            - text: Personalidad y Valores
+            - generic: 
+          - button "Áreas de trabajo ":
+            - text: Áreas de trabajo
+            - generic: 
+      - button " Contactanos ":
+        - generic:
+          - generic: 
+          - text: Contactanos
+        - generic: 
+    - generic:
+      - button " Iniciar Sesion":
+        - generic: 
+        - generic: Iniciar Sesion
+      - button " Crear Cuenta":
+        - generic:
+          - generic: 
+          - text: Crear Cuenta
+  - main [ref=e40]:
+    - generic [ref=e375]:
+      - generic [ref=e376]:
+        - generic [ref=e380]: 
+        - generic [ref=e381]: ERROR DE ENTORNO
+      - heading "404 404 404" [level=1] [ref=e383]
+      - heading "Página no encontrada" [level=2] [ref=e385]
+      - paragraph [ref=e388]: La ruta que buscas no existe en HagamosTech. Es posible que haya sido eliminada, movida o que hayas escrito mal la dirección.
+      - generic [ref=e389]:
+        - generic [ref=e390]:
+          - generic [ref=e391]: 
+          - generic [ref=e392]: Diagnóstico del sistema
+        - generic [ref=e397]:
+          - paragraph [ref=e398]:
+            - generic [ref=e400]: Buscando recurso en el servidor de HagamosTech...
+          - paragraph [ref=e401]:
+            - generic [ref=e403]: URL no coincide con ninguna ruta registrada en el sistema.
+          - paragraph [ref=e404]:
+            - generic [ref=e406]: Redireccionando al portal de inicio automáticamente.
+      - link " Volver al Inicio " [ref=e408] [cursor=pointer]:
+        - /url: "#/"
+        - generic [ref=e409]: 
+        - text: Volver al Inicio
+        - generic [ref=e410]: 
+  - contentinfo [ref=e42]:
+    - generic [ref=e43]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - link [ref=e46] [cursor=pointer]:
+            - /url: "#/"
+            - img "Logo HagamosTech" [ref=e47]
+          - paragraph [ref=e48]: Acompañamos procesos académicos y desarrollamos soluciones digitales y de diseño. Revisamos el alcance de cada solicitud antes de proponer.
+          - generic [ref=e49]:
+            - link "" [ref=e50] [cursor=pointer]:
+              - /url: https://www.facebook.com/HagamosTech
+            - link "" [ref=e52] [cursor=pointer]:
+              - /url: https://www.instagram.com/hagamostech/
+            - link "" [ref=e54] [cursor=pointer]:
+              - /url: https://www.tiktok.com/@hagamostech
+            - link "" [ref=e56] [cursor=pointer]:
+              - /url: https://wa.me/59161320004
+        - generic [ref=e58]:
+          - heading "SOLUCIONES" [level=3] [ref=e59]
+          - list [ref=e61]:
+            - listitem [ref=e62]:
+              - link " Tecnología" [ref=e63] [cursor=pointer]:
+                - /url: "#/que-hacemos/tecnologia"
+                - generic [ref=e64]: 
+                - generic [ref=e66]: Tecnología
+            - listitem [ref=e67]:
+              - link " Academia" [ref=e68] [cursor=pointer]:
+                - /url: "#/que-hacemos/academia"
+                - generic [ref=e69]: 
+                - generic [ref=e71]: Academia
+            - listitem [ref=e72]:
+              - link " Emprendimientos y profesionales" [ref=e73] [cursor=pointer]:
+                - /url: "#/que-hacemos/negocios"
+                - generic [ref=e74]: 
+                - generic [ref=e76]: Emprendimientos y profesionales
+            - listitem [ref=e77]:
+              - link " Soluciones personalizadas" [ref=e78] [cursor=pointer]:
+                - /url: "#/que-hacemos/personalizado"
+                - generic [ref=e79]: 
+                - generic [ref=e81]: Soluciones personalizadas
+            - listitem [ref=e82]:
+              - link " Cómo trabajamos" [ref=e83] [cursor=pointer]:
+                - /url: "#/como-trabajamos"
+                - generic [ref=e84]: 
+                - generic [ref=e86]: Cómo trabajamos
+        - generic [ref=e87]:
+          - heading "NOSOTROS" [level=3] [ref=e88]
+          - list [ref=e90]:
+            - listitem [ref=e91]:
+              - link " Cómo trabajamos" [ref=e92] [cursor=pointer]:
+                - /url: "#/como-trabajamos"
+                - generic [ref=e93]: 
+                - generic [ref=e95]: Cómo trabajamos
+            - listitem [ref=e96]:
+              - link " Nuestras soluciones" [ref=e97] [cursor=pointer]:
+                - /url: "#/servicios/desarrollo-web"
+                - generic [ref=e98]: 
+                - generic [ref=e100]: Nuestras soluciones
+            - listitem [ref=e101]:
+              - link " Contanos tu idea" [ref=e102] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e103]: 
+                - generic [ref=e105]: Contanos tu idea
+            - listitem [ref=e106]:
+              - link " Consultas" [ref=e107] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e108]: 
+                - generic [ref=e110]: Consultas
+            - listitem [ref=e111]:
+              - link " Trabajá con nosotros" [ref=e112] [cursor=pointer]:
+                - /url: "#/contactanos"
+                - generic [ref=e113]: 
+                - generic [ref=e115]: Trabajá con nosotros
+        - generic [ref=e116]:
+          - heading "CONTACTO" [level=3] [ref=e117]
+          - list [ref=e119]:
+            - listitem [ref=e120]:
+              - generic [ref=e121]: 
+              - generic [ref=e123]:
+                - generic [ref=e124]: Oficina principal
+                - generic [ref=e125]: Av. San Martín y 2do AnilloEquipetrol, Santa Cruz
+            - listitem [ref=e126]:
+              - generic [ref=e127]: 
+              - generic [ref=e129]:
+                - generic [ref=e130]: Email
+                - link "contacto@hagamostech.bo" [ref=e131] [cursor=pointer]:
+                  - /url: mailto:contacto@hagamostech.bo
+            - listitem [ref=e132]:
+              - generic [ref=e133]: 
+              - generic [ref=e135]:
+                - generic [ref=e136]: Teléfono / WhatsApp
+                - link "+591 61320004" [ref=e137] [cursor=pointer]:
+                  - /url: tel:+59161320004
+            - listitem [ref=e138]:
+              - generic [ref=e139]: 
+              - generic [ref=e141]:
+                - generic [ref=e142]: Horarios
+                - generic [ref=e143]: "Lun - Vie: 09:00 - 18:00"
+      - generic [ref=e144]:
+        - paragraph [ref=e145]: © 2026 HagamosTech. Todos los derechos reservados.
+        - generic [ref=e146]:
+          - link "Política de Privacidad" [ref=e147] [cursor=pointer]:
+            - /url: "#/privacidad"
+          - link "Términos de Servicio" [ref=e148] [cursor=pointer]:
+            - /url: "#/terminos"
+          - link "Cookies" [ref=e149] [cursor=pointer]:
+            - /url: "#/cookies"
+  - button "Abrir contacto por WhatsApp" [ref=e151]:
+    - generic [aria-hidden] [ref=e152]: 
+  - button "Abrir asistente Niko" [ref=e154] [cursor=pointer]:
+    - generic [ref=e155]: 

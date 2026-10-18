@@ -12,8 +12,8 @@ describe('tituloParaRuta (SEO)', () => {
     expect(tituloParaRuta('/contactanos').title).toMatch(/Contacto/);
   });
 
-  it('las rutas hijas coinciden por prefijo', () => {
-    expect(tituloParaRuta('/sobre-nosotros/historia').title).toMatch(/Sobre nosotros/);
+  it('las rutas hijas tienen metadatos específicos y sus rutas por prefijo', () => {
+    expect(tituloParaRuta('/sobre-nosotros/historia').title).toMatch(/Nuestro enfoque/);
     expect(tituloParaRuta('/perfil/compras').title).toMatch(/Mi cuenta/);
   });
 

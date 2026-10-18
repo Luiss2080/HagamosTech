@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const TIPOS = [
-    { icon: 'fa-lock', titulo: 'Esenciales', frontal: 'Las que hacen funcionar el sitio', detalle: 'Permiten el carrito, tu sesión y la seguridad. Sin ellas el sitio no funciona.', ejemplos: ['Carrito', 'Inicio de sesión', 'Seguridad'], color: 'from-[#A3E635] to-[#84CC16]' },
-    { icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', frontal: 'Recuerdan lo que te gusta', detalle: 'Guardan tus preferencias para que cada visita sea más cómoda y personalizada.',     ejemplos: ['Idioma', 'Zona', 'Preferencias'], color: 'from-[#0A0A0A] to-[#171717]' },
-    { icon: 'fa-chart-line', titulo: 'Analíticas', frontal: 'Nos ayudan a mejorar', detalle: 'Miden cómo usás el sitio de forma anónima para que podamos optimizarlo.', ejemplos: ['Páginas vistas', 'Tiempo de uso', 'Navegación'], color: 'from-[#171717] to-[#0A0A0A]' },
-    { icon: 'fa-bullhorn', titulo: 'Publicidad', frontal: 'Te mostramos lo que te interesa', detalle: 'Personalizan las promociones y ofertas que ves según tus intereses y hábitos.', ejemplos: ['Promos', 'Ofertas', 'Contenido relevante'], color: 'from-[#84CC16] to-[#AA3000]' },
+    { icon: 'fa-lock', titulo: 'Cookie de autenticación', frontal: 'Se usa al acceder a tu cuenta', detalle: 'La aplicación guarda una cookie de sesión para reconocer la autenticación cuando usás funciones de cuenta.', ejemplos: ['Inicio de sesión', 'Acceso a cuenta', 'Hagamostech token'], color: 'from-[#A3E635] to-[#84CC16]' },
+    { icon: 'fa-window-maximize', titulo: 'Almacenamiento de sesión', frontal: 'Dura durante la sesión del navegador', detalle: 'La aplicación usa sessionStorage para el token, actividad y perfil de la sesión iniciada.', ejemplos: ['Token', 'Actividad', 'Perfil'], color: 'from-[#0A0A0A] to-[#171717]' },
+    { icon: 'fa-sliders', titulo: 'Almacenamiento local', frontal: 'Guarda algunas preferencias', detalle: 'localStorage puede guardar el tema, color de acento y foto de perfil. Se conserva en el navegador hasta que se borra.', ejemplos: ['Tema', 'Color', 'Foto de perfil'], color: 'from-[#171717] to-[#0A0A0A]' },
+    { icon: 'fa-chart-line', titulo: 'Analítica y publicidad', frontal: 'No detectadas en el código revisado', detalle: 'No encontramos integraciones de analítica ni publicidad en el código de la aplicación. Recursos externos como fuentes e imágenes pueden conectarse con sus proveedores.', ejemplos: ['Sin analítica integrada', 'Sin píxeles publicitarios detectados', 'Recursos externos'], color: 'from-[#84CC16] to-[#AA3000]' },
 ];
 
 const TiposCookies = () => {
@@ -20,7 +20,7 @@ const TiposCookies = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
-                            <i className="fas fa-cookie text-[#A3E635] mr-1"></i> Tipos de Cookie
+                            <i className="fas fa-cookie text-[#A3E635] mr-1"></i> Tecnologías del Navegador
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-[#171717] mb-3 leading-tight">
                             Cada una tiene su <span className="relative inline-block text-[#A3E635]">
@@ -29,16 +29,19 @@ const TiposCookies = () => {
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Tocá cada tarjeta para descubrir qué hace cada tipo de cookie.
+                            Tocá cada tarjeta para ver qué tecnología se usa y qué información conserva en tu navegador.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" style={{ perspective: '1200px' }}>
                         {TIPOS.map((tipo, i) => (
-                            <div
+                            <button
                                 key={i}
+                                type="button"
+                                aria-pressed={Boolean(flipped[i])}
+                                aria-label={`${tipo.titulo}: ${flipped[i] ? 'ocultar detalle' : 'mostrar detalle'}`}
                                 onClick={() => toggleFlip(i)}
-                                className="relative h-64 cursor-pointer"
+                                className="relative h-64 w-full cursor-pointer rounded-[2rem] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#84CC16]"
                                 style={{ transformStyle: 'preserve-3d', transition: 'transform 0.7s cubic-bezier(0.4,0,0.2,1)', transform: flipped[i] ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
                             >
                                 {/* Frente */}
@@ -71,7 +74,7 @@ const TiposCookies = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
                         ))}
                     </div>
                 </div>

@@ -29,22 +29,21 @@ const HeroContacto = () => {
                 </h1>
 
                 <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
-                    No hace falta que sepas de tecnología. Explicanos tu idea, problema o necesidad y nosotros encontramos la mejor forma de resolverla. Esta sección te brinda asistencia directa para consultas, proyectos y soporte.
+                    No hace falta que sepas de tecnología. Explicanos tu idea o necesidad; revisaremos si está dentro de nuestros servicios y qué alcance puede tener.
                 </p>
 
                 {/* ---- Chips de categorías (misma estructura que antes) ---- */}
                 <div className="flex flex-wrap justify-center gap-4">
                     {[
-                        { label: 'Consultas', icon: 'fa-message' },
-                        { label: 'Proyectos', icon: 'fa-diagram-project' },
-                        { label: 'Soporte', icon: 'fa-headset' },
-                        { label: 'Contacto', icon: 'fa-phone-volume' }
+                        { label: 'Desarrollo digital', icon: 'fa-laptop-code' },
+                        { label: 'Diseño', icon: 'fa-pen-nib' },
+                        { label: 'Acompañamiento académico', icon: 'fa-graduation-cap' },
+                        { label: 'Consulta personalizada', icon: 'fa-message' }
                     ].map((item, i) => (
-                        <div key={i} className="group px-6 py-3 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] font-black text-[11px] uppercase tracking-[0.15em] transition-all shadow-lg shadow-[#A3E635]/10 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer">
+                        <span key={i} className="px-5 py-3 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] font-black text-[11px] uppercase tracking-[0.12em] flex items-center gap-2">
                             <i className={`fas ${item.icon} text-[11px]`}></i>
                             {item.label}
-                            <i className="fas fa-chevron-right text-[10px] transition-colors group-hover:translate-x-0.5"></i>
-                        </div>
+                        </span>
                     ))}
                 </div>
 

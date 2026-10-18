@@ -43,23 +43,15 @@ const ContactoModal = ({ isOpen, onClose }) => {
                 message: formData.message,
             });
 
-            if (resp?.status) {
-                setFeedback({
-                    type: 'success',
-                    title: 'Mensaje enviado',
-                    message: resp?.message || 'Gracias por contactarnos. Responderemos lo antes posible.',
-                    afterClose: () => {
-                        setFormData({ name: '', phone: '', email: '', message: '' });
-                        onClose();
-                    },
-                });
-            } else {
-                setFeedback({
-                    type: 'error',
-                    title: 'Error',
-                    message: resp?.message || 'No se pudo enviar el mensaje. Inténtalo de nuevo.',
-                });
-            }
+            setFeedback({
+                type: 'success',
+                title: 'Consulta recibida',
+                message: resp?.message || 'Recibimos tu consulta para revisión.',
+                afterClose: () => {
+                    setFormData({ name: '', phone: '', email: '', message: '' });
+                    onClose();
+                },
+            });
         } catch {
             setFeedback({
                 type: 'error',
@@ -94,6 +86,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                         <div className="relative w-full max-w-6xl transform overflow-hidden rounded-[2.5rem] bg-white text-left shadow-2xl transition-all sm:my-8 animate-modal-pop border border-gray-200">
                             <button
                                 onClick={onClose}
+                                aria-label="Cerrar formulario de contacto"
                                 className="absolute top-6 right-6 z-[200] w-10 h-10 flex items-center justify-center rounded-full bg-gray-100 hover:bg-[#A3E635]/10 dark:hover:bg-red-950/30 text-gray-500 hover:text-red-500 transition-all focus:outline-none cursor-pointer shadow-sm hover:shadow-md border border-gray-200"
                             >
                                 <i className="fas fa-times text-xl"></i>
@@ -122,7 +115,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 </span>
                                             </h2>
                                             <p className="text-base text-white/90 font-medium max-w-sm leading-relaxed mb-7 drop-shadow-md">
-                                                El equipo de soluciones digitales y tecnológicas: web, software, diseño, automatización e inteligencia artificial.
+                                                El equipo de soluciones digitales: desarrollo web y software, diseño digital y acompañamiento académico.
                                             </p>
 
                                             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111827] border border-[#A3E635]/30 text-[#A3E635] text-xs font-black uppercase tracking-widest mb-8 shadow-lg">
@@ -132,7 +125,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 w-full max-w-sm mb-8">
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Soluciones</p>
-                                                    <p className="text-sm font-bold text-white">Web, IA & Automatización</p>
+                                                    <p className="text-sm font-bold text-white">Web y soluciones digitales</p>
                                                 </div>
                                                 <div className="rounded-xl border border-[#A3E635]/30 bg-[#111827]/40 px-3 py-2 text-left backdrop-blur-sm">
                                                     <p className="text-[10px] font-black uppercase tracking-widest text-[#A3E635]">Software</p>
@@ -226,29 +219,30 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                 <div className="grid md:grid-cols-2 gap-4">
                                                     <div className="relative group">
                                                         <input
+                                                            id="modal-contact-name"
                                                             type="text"
                                                             name="name"
                                                             value={formData.name}
                                                             onChange={handleChange}
                                                             className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
-                                                            placeholder="¿Nombre completo"
+                                                            placeholder="Nombre completo"
                                                             required
                                                         />
-                                                        <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">¿Nombre completo</label>
+                                                        <label htmlFor="modal-contact-name" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Nombre completo</label>
                                                         <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635] transition-colors duration-300"><i className="fas fa-user text-base"></i></div>
                                                     </div>
 
                                                     <div className="relative group">
                                                         <input
-                                                            type="text"
+                                                            id="modal-contact-phone"
+                                                            type="tel"
                                                             name="phone"
                                                             value={formData.phone}
                                                             onChange={handleChange}
                                                             className="peer block w-full rounded-xl border-2 border-gray-100 bg-white px-4 pt-5 pb-1.5 pl-12 text-sm font-bold text-[#111827] focus:border-[#A3E635] dark:focus:border-[#A3E635] focus:ring-4 focus:ring-[#A3E635]/20 focus:outline-none transition-all duration-300 placeholder-transparent shadow-[0_2px_8px_rgb(0,0,0,0.02)] hover:shadow-md"
                                                             placeholder="Celular"
-                                                            required
                                                         />
-                                                        <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Celular</label>
+                                                        <label htmlFor="modal-contact-phone" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Celular (opcional)</label>
                                                         <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635] transition-colors duration-300"><i className="fas fa-phone-alt text-base"></i></div>
                                                     </div>
                                                 </div>
@@ -257,6 +251,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                             <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
                                                 <div className="relative group mb-4">
                                                     <input
+                                                        id="modal-contact-email"
                                                         type="email"
                                                         name="email"
                                                         value={formData.email}
@@ -265,12 +260,13 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         placeholder="Email"
                                                         required
                                                     />
-                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Correo electrónico</label>
+                                                    <label htmlFor="modal-contact-email" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Correo electrónico</label>
                                                     <div className="absolute top-0 bottom-0 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635] transition-colors duration-300"><i className="fas fa-envelope text-base"></i></div>
                                                 </div>
 
                                                 <div className="relative group">
                                                     <textarea
+                                                        id="modal-contact-message"
                                                         name="message"
                                                         rows="4"
                                                         value={formData.message}
@@ -279,7 +275,7 @@ const ContactoModal = ({ isOpen, onClose }) => {
                                                         placeholder="Mensaje"
                                                         required
                                                     ></textarea>
-                                                    <label className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Mensaje</label>
+                                                    <label htmlFor="modal-contact-message" className="absolute top-3.5 left-12 z-10 origin-[0] -translate-y-2.5 scale-75 transform text-[9px] text-gray-400 font-black uppercase tracking-widest duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-placeholder-shown:text-[10px] peer-placeholder-shown:font-bold peer-focus:-translate-y-2.5 peer-focus:scale-75 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635]">Mensaje</label>
                                                     <div className="absolute top-0 h-12 left-0 flex items-center justify-center w-12 text-gray-400 peer-focus:text-[#84CC16] dark:peer-focus:text-[#A3E635] transition-colors duration-300"><i className="fas fa-comment-dots text-base"></i></div>
                                                 </div>
                                             </div>

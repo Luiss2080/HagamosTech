@@ -9,7 +9,7 @@ const HeroCookies = () => {
             <PageHero
                 title="Política de"
                 highlight="Cookies."
-                description="Las cookies nos ayudan a que tu experiencia sea más rápida y personalizada. Elegí cuáles querés aceptar: todo está en tus manos."
+                description="Te contamos qué almacenamiento usa HagamosTech para el acceso a tu cuenta y las preferencias del navegador."
             />
         </div>
     );

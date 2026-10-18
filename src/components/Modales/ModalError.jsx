@@ -84,8 +84,8 @@ const ModalError = ({
                                             <p className="text-xs font-bold text-white">Apps y Software</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
-                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-gears mr-1"></i> Automatización</p>
-                                            <p className="text-xs font-bold text-white">Procesos e IA</p>
+                                            <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-graduation-cap mr-1"></i> Academia</p>
+                                            <p className="text-xs font-bold text-white">Mentorías y proyectos</p>
                                         </div>
                                         <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                             <p className="text-[9px] font-black uppercase tracking-widest text-[#FFF5EC]"><i className="fas fa-pen-nib mr-1"></i> Diseño</p>

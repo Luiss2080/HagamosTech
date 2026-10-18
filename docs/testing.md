@@ -30,7 +30,8 @@ Harness de tests habilitado en la **Spec 001** (`specs/001-harness-tests/`).
 ## Puertos
 - El backend usa `PORT` (por defecto 4321) y, si está ocupado, prueba 4322.
 - El frontend llama a `/api` mediante el proxy de Vite (`VITE_API_PROXY_TARGET`).
-- Los E2E usan por defecto el backend en **4321** y el frontend en **4000**
+- Los E2E usan puertos aislados por defecto: backend **44321** y frontend **4401**.
+  No interfieren con los servidores de desarrollo (4321 y 4000).
   (variables `E2E_BACKEND_PORT` y `E2E_FRONTEND_PORT`).
 
 ## CI

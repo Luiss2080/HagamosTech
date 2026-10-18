@@ -1,10 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const recursosData = [
     {
         title: "Consultas de Proyectos",
-        desc: "Contanos tu idea, problema o necesidad y te ayudamos a definir la mejor solución tecnológica.",
+        desc: "Contanos tu idea o necesidad y revisaremos qué alternativas del catálogo podrían responderla.",
         icon: "fa-lightbulb",
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -26,8 +27,8 @@ const recursosData = [
         ]
     },
     {
-        title: "Atención y Soporte",
-        desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
+        title: "Orientación sobre servicios",
+        desc: "Consultanos sobre desarrollo digital, diseño o acompañamiento académico y te orientamos sobre el alcance.",
         icon: "fa-headset",
         theme: {
             cardBg: "bg-white",
@@ -45,12 +46,12 @@ const recursosData = [
         tags: [
             { label: "Tecnología", icon: "fa-microchip" },
             { label: "Academia", icon: "fa-graduation-cap" },
-            { label: "Soporte", icon: "fa-circle-question" }
+            { label: "Consultas", icon: "fa-circle-question" }
         ]
     },
     {
-        title: "Soluciones Rápidas",
-        desc: "Desde una página web hasta la automatización de un proceso para tu negocio.",
+        title: "Opciones a medida",
+        desc: "Desde desarrollo web hasta acompañamiento académico, cada solicitud se revisa según su alcance y disponibilidad.",
         icon: "fa-bolt",
         theme: {
             cardBg: "bg-[#171717]",
@@ -67,8 +68,8 @@ const recursosData = [
         },
         tags: [
             { label: "Web", icon: "fa-globe" },
-            { label: "Automatización", icon: "fa-gear" },
-            { label: "IA", icon: "fa-robot" }
+            { label: "Acompañamiento académico", icon: "fa-graduation-cap" },
+            { label: "Diseño digital", icon: "fa-pen-nib" }
         ]
     }
 ];
@@ -103,10 +104,6 @@ const Recursos = () => {
                                         <i className={`fas ${item.icon}`}></i>
                                     </div>
 
-                                    <div className="absolute top-6 right-6 text-xs font-black uppercase tracking-widest opacity-70">
-                                        <i className="fas fa-sparkles mr-1"></i> TOP
-                                    </div>
-
                                     <h3 className="text-2xl font-black mb-4 tracking-tight leading-none">{item.title}</h3>
                                     <p className={`text-sm font-medium mb-8 leading-relaxed ${item.theme.descColor}`}>{item.desc}</p>
 
@@ -124,9 +121,9 @@ const Recursos = () => {
                                         })}
                                     </div>
 
-                                    <div className={`mt-auto w-full py-4 rounded-full font-black text-xs uppercase tracking-[0.15em] transition-all flex items-center justify-center gap-3 group/btn border-2 border-transparent ${item.theme.buttonBg} ${item.theme.buttonText} ${item.theme.buttonHover} shadow-lg shadow-black/10 hover:-translate-y-0.5 hover:shadow-xl`}>
-                                        Explorar <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform"></i>
-                                    </div>
+                                    <Link to="/contactanos#support" className={`mt-auto w-full py-4 rounded-full font-black text-xs uppercase tracking-[0.15em] transition-all flex items-center justify-center gap-3 group/btn border-2 border-transparent ${item.theme.buttonBg} ${item.theme.buttonText} ${item.theme.buttonHover} shadow-lg shadow-black/10 hover:-translate-y-0.5 hover:shadow-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635]`}>
+                                        Ir al formulario <i className="fa-solid fa-arrow-right group-hover/btn:translate-x-1 transition-transform" aria-hidden="true"></i>
+                                    </Link>
                                 </div>
                             </div>
                         ))}

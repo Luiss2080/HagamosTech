@@ -5,6 +5,7 @@ const ChatInput = ({ value, onChange, onSubmit, disabled, placeholder }) => (
   <form onSubmit={onSubmit} className="bg-[#0A0A0A] p-3 border-t border-[#A3E635]/15 flex items-center gap-2.5 relative z-20 shadow-[0_-5px_15px_-10px_rgba(0,0,0,0.5)]">
     <input
       type="text"
+      aria-label="Escribe tu consulta para Niko"
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
@@ -12,12 +13,13 @@ const ChatInput = ({ value, onChange, onSubmit, disabled, placeholder }) => (
     />
     <button
       type="submit"
+      aria-label="Enviar consulta a Niko"
       disabled={disabled}
       className={`w-11 h-11 rounded-full flex items-center justify-center transition-all flex-shrink-0 bg-[#A3E635] text-[#0A0A0A] shadow-[0_4px_15px_rgba(163,230,53,0.3)] hover:shadow-[0_6px_20px_rgba(163,230,53,0.5)] ${
         !disabled ? 'hover:scale-105 cursor-pointer' : 'cursor-default opacity-80'
       }`}
     >
-      <Send size={18} className="ml-0.5" />
+      <Send size={18} className="ml-0.5" aria-hidden="true" />
     </button>
   </form>
 );

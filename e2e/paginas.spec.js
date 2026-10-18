@@ -2,8 +2,8 @@ import { test, expect } from '@playwright/test';
 
 // Spec 004 + 008: contenido tech y título SEO por ruta.
 const CASOS = [
-  { ruta: '/#/promociones', titulo: /Promociones/i },
-  { ruta: '/#/novedades', titulo: /Novedades/i },
+  { ruta: '/#/promociones', titulo: /Propuestas para tu proyecto/i },
+  { ruta: '/#/como-trabajamos', titulo: /Cómo trabajamos/i },
 ];
 const TERMINOS_PROHIBIDOS = ['salteñ', 'frapuccino', 'cafetería', 'delivery'];
 

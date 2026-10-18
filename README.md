@@ -20,8 +20,9 @@
   </p>
 </div>
 
-**HagamosTech** es la web de una agencia de soluciones tecnológicas (estudiantes, emprendedores, empleo, diseño, web,
-software, IA y trabajos a medida). Incluye un frontend React con el catálogo de servicios, un backend Express/Prisma
+**HagamosTech** es la web de una agencia de soluciones digitales con acompañamiento académico, desarrollo web y software,
+diseño, servicios para emprendimientos y profesionales, y proyectos a medida. No ofrecemos automatización de procesos,
+n8n, operación de servidores ni infraestructura compleja. Incluye un frontend React con el catálogo de servicios, un backend Express/Prisma
 para cuentas y mensajes de contacto, y un asistente de chat local. **No es una tienda online**: no hay carrito ni
 pagos (esos endpoints responden `410 Gone`), y el catálogo es informativo; la contratación se canaliza por contacto.
 
@@ -38,7 +39,7 @@ Capturas reales del frontend en modo desarrollo (Chrome headless, 1280x800).
 
 | Característica | Detalle |
 |---|---|
-| Catálogo de servicios | 8 categorías y 35 servicios definidos en `src/data/serviciosData.js` (estudiantes 6, emprendedores 6, empleo 6, diseño 5, web 5, software 3, IA 3, a medida 1). Es la fuente única de datos del frontend. |
+| Catálogo de servicios | 7 categorías y 33 servicios definidos en `src/data/serviciosData.js` (académico 9, emprendedores 5, empleo 6, diseño 5, web 5, software 2, a medida 1). El Catálogo Maestro es la fuente editorial. |
 | Páginas | Inicio, Qué hacemos, Servicios (8 páginas), Cómo trabajamos, Sobre nosotros, Promociones, Novedades, Contacto, páginas legales, errores 401/403/404/419/500. Rutas con `HashRouter` y carga diferida. |
 | Contacto | `POST /api/contacto` guarda el mensaje en MySQL y notifica por correo (SMTP con nodemailer) sin bloquear la respuesta. |
 | Cuentas | Registro con código de verificación por correo, login, recuperación y restablecimiento de contraseña. Contraseñas con `scrypt`. Token firmado HMAC-SHA256 de 7 días (implementación propia, sin librería JWT). |

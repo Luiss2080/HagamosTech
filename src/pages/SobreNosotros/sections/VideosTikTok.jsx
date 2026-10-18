@@ -1,226 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import CircuitBackground from '../../../components/fondos/FondoTech';
-import useModalStore from '../../../store/useModalStore';
+import React from 'react';
+import { Link } from 'react-router-dom';
+import FondoTech from '../../../components/fondos/FondoTech';
+import EncabezadoInstitucional from './EncabezadoInstitucional';
 
-const initialVideos = [
-  {
-    id: 1,
-    tiktokId: '7659877880071015701',
-    title: 'HagamosTech',
-    views: 'Nuevo',
-    desc: 'La marca que convierte problemas, necesidades e ideas en soluciones reales.',
-    thumb: 'bg-[#A3E635]',
-  },
-  {
-    id: 2,
-    tiktokId: '7657645476270853396',
-    title: 'Soluciones Digitales',
-    views: 'Popular',
-    desc: 'Tecnología, creatividad y conocimiento para cualquier tipo de cliente.',
-    thumb: 'bg-[#111827]',
-  },
-  {
-    id: 3,
-    tiktokId: '7658450020575759637',
-    title: 'Atención de Primera',
-    views: 'Tendencia',
-    desc: 'Contanos qué necesitás y nosotros vemos cómo hacerlo realidad.',
-    thumb: 'bg-[#0A0A0A]',
-  },
-  {
-    id: 4,
-    tiktokId: '7657244089661951252',
-    title: 'Nuestra Calidad',
-    views: 'Nuevo',
-    desc: 'Trabajamos desde tu necesidad real, sin catálogos rígidos.',
-    thumb: 'bg-[#A3E635]',
-  },
-  {
-    id: 5,
-    tiktokId: '7657627736713809172',
-    title: 'Hacelo juntos',
-    views: 'Destacado',
-    desc: '“Hagamos” es una invitación: vos tenés la necesidad, la hacemos juntos.',
-    thumb: 'bg-[#171717]',
-  },
+const areas = [
+    { title: 'Tecnología y desarrollo digital', desc: 'Conocé las opciones de desarrollo web y software que revisamos según cada proyecto.', to: '/que-hacemos/tecnologia', icon: 'fa-laptop-code' },
+    { title: 'Acompañamiento académico', desc: 'Explorá el apoyo formativo disponible por nivel, materia y alcance.', to: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
+    { title: 'Diseño y emprendimientos', desc: 'Revisá recursos de diseño y presencia digital para proyectos y negocios.', to: '/que-hacemos/negocios', icon: 'fa-pen-nib' },
+    { title: 'Solicitud personalizada', desc: 'Contanos una necesidad que no encuentres en estas áreas; evaluaremos si podemos abordarla.', to: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
 ];
 
-const VideosTikTok = () => {
-    const openModal = useModalStore((state) => state.openModal);
-    const [orderedVideos, setOrderedVideos] = useState(initialVideos);
-    const [unmutedVideoId, setUnmutedVideoId] = useState(null);
-    const [lastSelectedId, setLastSelectedId] = useState(null);
-    const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-
-    useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth);
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
-
-    const isMobile = windowWidth < 640;
-    const isTablet = windowWidth >= 640 && windowWidth < 1024;
-
-    const cardWidth = isMobile ? 190 : (isTablet ? 320 : 360);
-    const cardMarginLeft = -cardWidth / 2;
-    const xSpacing = isMobile ? 30 : (isTablet ? 130 : 230);
-    const ySpacing = isMobile ? 6 : (isTablet ? 16 : 24);
-
-    const handleVideoSelection = (newOrder, newCenterId) => {
-        setOrderedVideos(newOrder);
-        setLastSelectedId(newCenterId);
-        newOrder.forEach((video) => {
-            const iframe = document.getElementById(`tiktok-iframe-${video.id}`);
-            if (iframe && iframe.contentWindow) {
-                if (video.id === newCenterId) {
-                    iframe.contentWindow.postMessage({ "x-tiktok-player": true, "type": "unMute" }, '*');
-                    setUnmutedVideoId(newCenterId);
-                } else {
-                    iframe.contentWindow.postMessage({ "x-tiktok-player": true, "type": "mute" }, '*');
-                }
-            }
-        });
-    };
-
-    return (
-        <div className="relative">
-            <section className="relative z-10 py-16 overflow-hidden bg-[#050505] text-white border-t border-white/5">
-                <CircuitBackground hideWaves={true} />
-                <style dangerouslySetInnerHTML={{__html: `
-                    @keyframes spinLeftToRight {
-                        0%   { transform: rotateY(0deg); }
-                        100% { transform: rotateY(360deg); }
-                    }
-                    .animate-spin-lr {
-                        animation: spinLeftToRight 0.8s cubic-bezier(0.25, 0.8, 0.25, 1);
-                    }
-                `}} />
-                
-                <div className="w-full px-4 md:px-8 relative z-20">
-                    {/* --- SECTION TITLE AND DESCRIPTION --- */}
-                    <div className="text-center mb-4">
-                        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-6 leading-tight">
-                            Nuestra esencia <br/>
-                            <span className="text-[#84CC16] relative inline-block">
-                                en Video.
-                                <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"  />
-                                </svg>
-                            </span>
-                        </h2>
-                        <p className="text-slate-400 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Conoce más sobre HagamosTech: nuestra forma de trabajar, ejemplos de soluciones y el trabajo diario para llevar tu idea a la realidad.
-                        </p>
-                    </div>
-
-                    <div className="relative min-h-[500px] sm:min-h-[640px] md:min-h-[780px] lg:min-h-[800px] pt-6 max-w-6xl mx-auto flex items-start justify-center group/deck px-4 [perspective:1200px] [transform-style:preserve-3d]">
-                        {orderedVideos.map((video, index) => {
-                            const center = 2;
-                            const offset = index - center;
-                            const rotateDeg = offset * (isMobile ? 2 : 4);
-                            const translateX = offset * xSpacing;
-                            const translateY = Math.abs(offset) * ySpacing;
-                            const baseZ = 40 - Math.abs(offset);
-                            const isActive = index === 2;
-                            const scale = isActive ? 1 : 0.88;
-
-                            return (
-                                <div
-                                    key={video.id}
-                                    onClick={() => {
-                                        if (index !== 2) {
-                                            const newOrder = [...orderedVideos];
-                                            const temp = newOrder[2];
-                                            newOrder[2] = newOrder[index];
-                                            newOrder[index] = temp;
-                                            handleVideoSelection(newOrder, newOrder[2].id);
-                                        } else {
-                                            const activeIframe = document.getElementById(`tiktok-iframe-${video.id}`);
-                                            if (activeIframe && activeIframe.contentWindow) {
-                                                activeIframe.contentWindow.postMessage({ "x-tiktok-player": true, "type": "mute" }, '*');
-                                            }
-                                            setUnmutedVideoId(null);
-                                            openModal('videoModal', video);
-                                        }
-                                    }}
-                                    className="absolute outline-none cursor-pointer"
-                                    style={{
-                                        zIndex: 100 - Math.abs(offset),
-                                        left: '50%',
-                                        marginLeft: `${cardMarginLeft}px`,
-                                        width: `${cardWidth}px`,
-                                        transition: 'all 0.7s cubic-bezier(0.25, 0.8, 0.25, 1)',
-                                    }}
-                                >
-                                    <div
-                                        className="transform-gpu will-change-transform [backface-visibility:hidden] transition-[transform] duration-700 ease-[cubic-bezier(0.25,0.8,0.25,1)]"
-                                        style={{
-                                            transform: `translateX(${translateX}px) translateY(${translateY}px) rotate(${rotateDeg}deg) scale(${scale}) translateZ(${baseZ}px)`,
-                                        }}
-                                    >
-                                        <div className={isActive && lastSelectedId === video.id ? 'animate-spin-lr' : ''} style={{ transformStyle: 'preserve-3d' }}>
-                                            <div className={`w-full bg-white rounded-[2.5rem] p-4.5 shadow-2xl transition-all duration-300 ${isActive ? 'border-2 border-[#A3E635] shadow-[0_0_25px_rgba(163,230,53,0.35)]' : 'border border-gray-100 hover:border-[#A3E635]/40'}`}>
-                                                <div className="aspect-[9/16] w-full rounded-[2rem] overflow-hidden relative shadow-inner flex items-center justify-center border border-white/10">
-                                                <iframe
-                                                    id={`tiktok-iframe-${video.id}`}
-                                                    src={`https://www.tiktok.com/player/v1/${video.tiktokId}?autoplay=1&mute=${unmutedVideoId === video.id ? 0 : 1}&loop=1&music_info=0&description=0`}
-                                                    className="w-full h-full border-0 absolute inset-0 z-20"
-                                                    allow="autoplay; encrypted-media; picture-in-picture"
-                                                    title={video.title}
-                                                    loading="lazy"
-                                                    allowFullScreen
-                                                ></iframe>
-                                                <div className="absolute inset-0 bg-gradient-to-b from-black/5 via-transparent to-black/20 pointer-events-none z-10"></div>
-                                                <div className="absolute left-4 top-4 z-30 bg-[#A3E635] text-[#0A0A0A] px-3 py-1 rounded-full text-[9px] font-black uppercase tracking-wider shadow-md flex items-center gap-2">
-                                                    <i className="fa-solid fa-play text-[8px]"></i> {video.views}
-                                                </div>
-                                                <div className="absolute right-4 top-4 z-30 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md flex items-center justify-center text-white">
-                                                    <i className="fab fa-tiktok text-sm"></i>
-                                                </div>
-                                                <div className="absolute left-4 bottom-4 z-30 right-4 flex items-end justify-between">
-                                                    <button
-                                                        type="button"
-                                                        onClick={(e) => {
-                                                            e.stopPropagation();
-                                                            setUnmutedVideoId(unmutedVideoId === video.id ? null : video.id);
-                                                        }}
-                                                        className="inline-flex items-center gap-2 rounded-full bg-white/25 hover:bg-white/40 active:scale-95 transition-all backdrop-blur-md text-white text-[10px] font-black uppercase tracking-widest px-3 py-1.5 border border-white/15 cursor-pointer relative z-40"
-                                                    >
-                                                        {unmutedVideoId === video.id ? (
-                                                            <>
-                                                                <i className="fa-solid fa-volume-high"></i> Con sonido
-                                                            </>
-                                                        ) : (
-                                                            <>
-                                                                <i className="fa-solid fa-volume-xmark"></i> Sin sonido
-                                                            </>
-                                                        )}
-                                                    </button>
-                                                    <div className="w-8 h-8 rounded-full bg-[#0A0A0A]/90 text-white flex items-center justify-center border border-white/10 shadow-md">
-                                                        <i className="fa-solid fa-bolt text-[11px]"></i>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div className="mt-4 px-1">
-                                                <div className="flex items-center justify-between gap-2 mb-2">
-                                                    <span className="inline-flex items-center gap-2 rounded-full bg-[#A3E635]/10 text-[#84CC16] px-3 py-1 text-[10px] font-black uppercase tracking-widest">
-                                                        <i className="fa-solid fa-bolt"></i> {video.views}
-                                                    </span>
-                                                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">Muestra en video</span>
-                                                </div>
-                                                <p className="text-slate-700 text-sm font-semibold leading-relaxed">{video.desc}</p>
-                                            </div>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        })}
-                    </div>
+const AreasTrabajo = ({ standalone = false }) => (
+    <div id="areas-institucionales" className="relative bg-[#050505] text-white">
+        {standalone && (
+            <EncabezadoInstitucional
+                title="Áreas que acompañamos"
+                description="Conocé los caminos de orientación hacia los servicios vigentes de HagamosTech."
+                icon="fa-layer-group"
+            />
+        )}
+        <section aria-labelledby="areas-institucionales-title" className="relative overflow-hidden border-t border-white/5 py-14 sm:py-20">
+            <FondoTech hideWaves />
+            <div className="container relative z-10 mx-auto max-w-7xl px-6">
+                <div className="mx-auto mb-9 max-w-3xl text-center sm:mb-12">
+                    <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.18em] text-[#A3E635]">
+                        <i className="fas fa-layer-group" aria-hidden="true" /> Nuestras áreas
+                    </span>
+                    <h2 id="areas-institucionales-title" className="text-3xl font-black leading-tight text-white sm:text-4xl">Explorá lo que hacemos</h2>
+                    <p className="mt-4 text-sm font-medium leading-relaxed text-slate-400 sm:text-base">Estas áreas orientan la consulta; cada solicitud se evalúa antes de acordar alcance y condiciones.</p>
                 </div>
-            </section>
-        </div>
-    );
-};
 
-export default VideosTikTok;
+                <div className="grid gap-4 sm:grid-cols-2">
+                    {areas.map((area, index) => (
+                        <Link key={area.to} to={area.to} className="group flex h-full items-start gap-4 rounded-3xl border border-white/10 bg-[#111111] p-6 transition-all hover:-translate-y-1 hover:border-[#A3E635]/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635] sm:p-7">
+                            <span aria-hidden="true" className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl text-lg ${index === 0 ? 'bg-[#A3E635] text-[#0A0A0A]' : 'bg-[#A3E635]/10 text-[#A3E635]'}`}>
+                                <i className={`fas ${area.icon}`} />
+                            </span>
+                            <span className="min-w-0">
+                                <span className="block text-lg font-black text-white transition-colors group-hover:text-[#A3E635]">{area.title}</span>
+                                <span className="mt-2 block text-sm font-medium leading-relaxed text-slate-400">{area.desc}</span>
+                                <span className="mt-4 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[0.16em] text-[#A3E635]">Conocer el área <i className="fas fa-arrow-right transition-transform group-hover:translate-x-1" aria-hidden="true" /></span>
+                            </span>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
+    </div>
+);
+
+export default AreasTrabajo;

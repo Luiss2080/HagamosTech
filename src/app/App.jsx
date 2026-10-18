@@ -1,7 +1,6 @@
-import React, { lazy, Suspense, useCallback, useEffect, useState } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
-import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
 import useAuthStore from '../store/useAutenticacionStore';
 import InicioSesionModal from '../components/Modales/InicioSesionModal';
@@ -11,6 +10,7 @@ import ContactoModal from '../components/Modales/ContactoModal';
 import VideoPlayerModal from '../components/Modales/VideoPlayerModal';
 import useModalStore from '../store/useModalStore';
 import { tituloParaRuta } from './seo';
+import RutaCuentaProtegida, { RutaComprasHeredada } from './RutaCuentaProtegida';
 
 // Páginas cargadas de forma diferida (code-splitting) para reducir el bundle inicial.
 const Inicio = lazy(() => import('../pages/Inicio/Inicio'));
@@ -30,7 +30,6 @@ const MisionVision = lazy(() => import('../pages/SobreNosotros/sections/MisionVi
 const Valores = lazy(() => import('../pages/SobreNosotros/sections/Valores'));
 const VideosTikTok = lazy(() => import('../pages/SobreNosotros/sections/VideosTikTok'));
 const PromocionesPagina = lazy(() => import('../pages/Promociones/PromocionesPagina'));
-const NovedadesPagina = lazy(() => import('../pages/Novedades/NovedadesPagina'));
 const ContactoPagina = lazy(() => import('../pages/Contacto/Contacto'));
 const HeroContacto = lazy(() => import('../pages/Contacto/sections/HeroContacto'));
 const FormularioContacto = lazy(() => import('../pages/Contacto/sections/FormularioContacto'));
@@ -38,8 +37,6 @@ const Recursos = lazy(() => import('../pages/Contacto/sections/Recursos'));
 const Ubicacion = lazy(() => import('../pages/Contacto/sections/Ubicacion'));
 const PaginasWeb = lazy(() => import('../pages/Servicios/DesarrolloWeb/PaginasWeb'));
 const SistemasApps = lazy(() => import('../pages/Servicios/SistemasApps/SistemasApps'));
-const Automatizacion = lazy(() => import('../pages/Servicios/Automatizacion/Automatizacion'));
-const InteligenciaArtificial = lazy(() => import('../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial'));
 const Negocio = lazy(() => import('../pages/Servicios/Negocio/Negocio'));
 const Academico = lazy(() => import('../pages/Servicios/Academico/Academico'));
 const Empleo = lazy(() => import('../pages/Servicios/Empleo/Empleo'));
@@ -47,7 +44,6 @@ const DisenoGrafico = lazy(() => import('../pages/Servicios/DisenoGrafico/Diseno
 const RecuperarContrasena = lazy(() => import('../components/func/RecuperarContrasena'));
 const PerfilPagina = lazy(() => import('../pages/Perfil/PerfilPagina'));
 const ConfiguracionPagina = lazy(() => import('../pages/Perfil/ConfiguracionPagina'));
-const HistorialComprasPagina = lazy(() => import('../pages/Perfil/HistorialComprasPagina'));
 const Error401 = lazy(() => import('../pages/Errores/Error401'));
 const Error403 = lazy(() => import('../pages/Errores/Error403'));
 const Error404 = lazy(() => import('../pages/Errores/Error404'));
@@ -59,9 +55,6 @@ const REGISTER_MODAL_KEYS = new Set(['modal_register', 'startTrialModal', 'regis
 const CONTACT_MODAL_KEYS = new Set(['modal_contact', 'contactModal', 'contactarModal', 'contactoModal']);
 
 const App = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  const [contentVisible, setContentVisible] = useState(false);
-
   const initSession = useAuthStore((s) => s.initSession);
 
   useEffect(() => {
@@ -78,11 +71,6 @@ const App = () => {
     openModal,
     closeModal
   } = useModalStore();
-
-  const handleLoadComplete = useCallback(() => {
-    setIsLoading(false);
-    setTimeout(() => setContentVisible(true), 50);
-  }, []);
 
   useEffect(() => {
     window.openModal = (modalName) => {
@@ -137,10 +125,8 @@ const App = () => {
     <Router>
       <ScrollToTop />
       <SeoRuta />
-      {isLoading && <LoadingScreen onComplete={handleLoadComplete} />}
-      <div className={`transition-opacity duration-700 ease-out ${contentVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <AppLayout>
-            <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
+      <AppLayout>
+        <Suspense fallback={<div className="min-h-[60vh]" aria-hidden="true" />}>
             <Routes>
           {/* Rutas Principales */}
           <Route path="/" element={<Inicio />} />
@@ -151,8 +137,6 @@ const App = () => {
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
-              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
-              <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
               <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
               <Route path="/servicios/apoyo-academico" element={<Academico />} />
               <Route path="/servicios/empleo" element={<Empleo />} />
@@ -162,13 +146,12 @@ const App = () => {
               <Route path="/terminos" element={<TerminosPagina />} />
               <Route path="/cookies" element={<CookiesPagina />} />
               <Route path="/sobre-nosotros" element={<SobreNosotrosIndex />} />
-              <Route path="/sobre-nosotros/historia" element={<Historia />} />
-              <Route path="/sobre-nosotros/mision-vision" element={<MisionVision />} />
-              <Route path="/sobre-nosotros/valores" element={<Valores />} />
-              <Route path="/sobre-nosotros/videos" element={<VideosTikTok />} />
+              <Route path="/sobre-nosotros/historia" element={<Historia standalone />} />
+              <Route path="/sobre-nosotros/mision-vision" element={<MisionVision standalone />} />
+              <Route path="/sobre-nosotros/valores" element={<Valores standalone />} />
+              <Route path="/sobre-nosotros/videos" element={<VideosTikTok standalone />} />
               <Route path="/promociones" element={<PromocionesPagina />} />
               <Route path="/como-trabajamos" element={<ComoTrabajamos />} />
-              <Route path="/novedades" element={<NovedadesPagina />} />
               <Route path="/contactanos" element={<ContactoPagina />} />
               <Route path="/contacto/hero" element={<HeroContacto />} />
               <Route path="/contacto/formulario" element={<FormularioContacto />} />
@@ -177,9 +160,9 @@ const App = () => {
               <Route path="/recuperar-contrasena" element={<RecuperarContrasena />} />
 
               {/* Rutas del Perfil de Usuario */}
-              <Route path="/perfil" element={<PerfilPagina />} />
-              <Route path="/configuracion" element={<ConfiguracionPagina />} />
-              <Route path="/perfil/compras" element={<HistorialComprasPagina />} />
+              <Route path="/perfil" element={<RutaCuentaProtegida><PerfilPagina /></RutaCuentaProtegida>} />
+              <Route path="/configuracion" element={<RutaCuentaProtegida><ConfiguracionPagina /></RutaCuentaProtegida>} />
+              <Route path="/perfil/compras" element={<RutaComprasHeredada />} />
 
               {/* Error Pages Routing */}
               <Route path="/errors/401" element={<Error401 />} />
@@ -191,9 +174,8 @@ const App = () => {
               {/* Fallback Route */}
               <Route path="*" element={<Error404 />} />
             </Routes>
-            </Suspense>
-
-          </AppLayout>
+        </Suspense>
+      </AppLayout>
 
           {/* Renderizado Centralizado de Modales - fuera del AppLayout para estar por encima del Header */}
           <InicioSesionModal
@@ -222,7 +204,6 @@ const App = () => {
             video={videoData}
           />
           <RastreadorActividad />
-      </div>
     </Router>
   )
 }

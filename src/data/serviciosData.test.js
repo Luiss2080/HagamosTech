@@ -1,4 +1,7 @@
 import { describe, it, expect } from 'vitest';
+import { readFileSync } from 'node:fs';
+import { cwd } from 'node:process';
+import { resolve } from 'node:path';
 import { CATEGORIES, SERVICIOS_DATA } from './serviciosData';
 
 // Integridad de la oferta respecto al Catálogo Maestro (Spec 002).
@@ -11,19 +14,17 @@ const CATEGORIAS_ESPERADAS = [
   'diseno',
   'web',
   'software',
-  'ia',
   'personalizado',
 ];
 
-// Conteos del Catálogo Maestro: 6/6/6/5/5/3/3/1
+// Conteos del Catálogo Maestro: 9/5/6/5/5/2/1
 const CONTEOS_ESPERADOS = {
-  estudiantes: 6,
-  emprendedores: 6,
+  estudiantes: 9,
+  emprendedores: 5,
   empleo: 6,
   diseno: 5,
   web: 5,
-  software: 3,
-  ia: 3,
+  software: 2,
   personalizado: 1,
 };
 
@@ -38,14 +39,16 @@ const NOMBRES_ESPERADOS = {
     'Mapas Conceptuales y Portadas Académicas',
     'Simuladores Educativos y Proyectos de Redes',
     'Apoyo en Proyectos de Programación',
+    'Mentorías Académicas y Apoyo en Tareas',
+    'Acompañamiento en Informes y Monografías',
+    'Proyectos Socioformativos',
   ],
   emprendedores: [
     'Creación de Marca y Branding Básico',
     'Manual de Identidad Visual',
-    'Menús QR y Catálogos de Productos',
+    'Catálogos Digitales para Emprendimientos',
     'Publicidad para Promociones y Ofertas',
     'Publicidad para Fechas Especiales',
-    'Gestión de Clientes Inicial',
   ],
   empleo: [
     'Currículum Profesional y CV Optimizado ATS',
@@ -72,12 +75,6 @@ const NOMBRES_ESPERADOS = {
   software: [
     'Desarrollo de Sistemas Web y Software',
     'Diseño y Gestión de Bases de Datos',
-    'Soporte Tecnológico y DevOps',
-  ],
-  ia: [
-    'Integración de Soluciones con Inteligencia Artificial',
-    'Automatización de Procesos Empresariales',
-    'Gestión de Herramientas de Productividad',
   ],
   personalizado: ['Soluciones Personalizadas'],
 };
@@ -96,13 +93,21 @@ const TERMINOS_PROHIBIDOS = [
   'tomos',
   'modo invitado',
   'primer pedido',
-  'mentoría',
   'headhunting',
   'ciberseguridad',
+  'automatización',
+  'n8n',
+  'devops',
+  'infraestructura',
+  'respuestas automáticas',
+  'mantenimiento de servidores',
+  'inteligencia artificial',
 ];
 
+const CATALOGO_MAESTRO = readFileSync(resolve(cwd(), 'docs/catalogo-servicios.md'), 'utf8');
+
 describe('Integridad de la oferta (serviciosData)', () => {
-  it('declara exactamente las 8 categorías del catálogo', () => {
+  it('declara exactamente las 7 categorías del catálogo', () => {
     expect(Object.keys(SERVICIOS_DATA).sort()).toEqual([...CATEGORIAS_ESPERADAS].sort());
     expect(CATEGORIES.map((c) => c.id)).toEqual(CATEGORIAS_ESPERADAS);
   });
@@ -123,6 +128,16 @@ describe('Integridad de la oferta (serviciosData)', () => {
     }
   });
 
+  it('cada resumen publicado coincide con la aplicación práctica del catálogo', () => {
+    const filas = CATALOGO_MAESTRO.split(/\r?\n/);
+    for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {
+      for (const servicio of servicios) {
+        const filaCanonica = `| ${servicio.name} | ${servicio.shortDesc} |`;
+        expect(filas, `${categoria}/${servicio.id}: descripción diferente del Catálogo Maestro`).toContain(filaCanonica);
+      }
+    }
+  });
+
   it('todos los servicios tienen los campos obligatorios', () => {
     for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {
       for (const servicio of servicios) {
@@ -140,10 +155,41 @@ describe('Integridad de la oferta (serviciosData)', () => {
     }
   });
 
+  it('incluye ejemplos de alcance web, software y acompañamiento académico', () => {
+    const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
+    for (const ejemplo of [
+      'aplicaciones web',
+      'presentaciones académicas',
+      'inventario',
+      'facturación',
+      'crm',
+      'directorios',
+      'monografías',
+      'proyectos socioformativos',
+    ]) {
+      expect(texto.includes(ejemplo), `falta el ejemplo "${ejemplo}"`).toBe(true);
+    }
+  });
+
   it('no contiene términos del vertical restaurante', () => {
     const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
     for (const termino of TERMINOS_PROHIBIDOS) {
       expect(texto.includes(termino), `término prohibido encontrado: "${termino}"`).toBe(false);
+    }
+  });
+
+  it('no ofrece automatización, IA aplicada ni operación de infraestructura', () => {
+    const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
+    for (const termino of [
+      'automatización',
+      'n8n',
+      'devops',
+      'infraestructura',
+      'respuestas automáticas',
+      'mantenimiento de servidores',
+      'inteligencia artificial',
+    ]) {
+      expect(texto.includes(termino), `servicio fuera de alcance: "${termino}"`).toBe(false);
     }
   });
 });
