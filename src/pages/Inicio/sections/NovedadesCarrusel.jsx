@@ -43,8 +43,6 @@ const NewsCard = ({ noticia, icon }) => {
           src={noticia.img}
           alt={noticia.title}
           className="absolute inset-0 w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
-          onError={(e) => {
-          }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-80"></div>
 
