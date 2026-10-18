@@ -43,6 +43,9 @@ const DerechosUsuarios = () => {
                             {DERECHOS.map((d, i) => (
                                 <button
                                     key={i}
+                                    type="button"
+                                    aria-pressed={active === i}
+                                    aria-controls="detalle-derecho-usuario"
                                     onClick={() => setActive(i)}
                                     className={`relative flex items-center gap-3 p-4 rounded-2xl text-left transition-all duration-300 overflow-hidden ${
                                         active === i ? 'bg-white text-[#111827] shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 text-[#111827] border border-orange-50 hover:bg-white hover:shadow-md'
@@ -66,7 +69,7 @@ const DerechosUsuarios = () => {
                         </div>
 
                         {/* Detalle */}
-                        <div className="lg:col-span-3 relative rounded-[2rem] overflow-hidden ring-4 ring-white shadow-2xl group border border-orange-50">
+                        <div id="detalle-derecho-usuario" aria-live="polite" className="lg:col-span-3 relative rounded-[2rem] overflow-hidden ring-4 ring-white shadow-2xl group border border-orange-50">
                             <div className={`absolute inset-0 bg-gradient-to-br ${active % 2 === 0 ? 'from-[#A3E635] to-[#84CC16]' : 'from-[#0A0A0A] to-[#171717]'} transition-colors duration-500`}></div>
                             <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/15 blur-3xl animate-float-slow pointer-events-none"></div>

@@ -12,7 +12,7 @@ const Error401 = () => (
       { type: 'error', text: 'Autenticación fallida: sesión no encontrada o expirada.' },
       { type: 'warn', text: 'Por favor inicia sesión para continuar con tu pedido.' },
     ]}
-    action={{ to: '/login', label: 'Iniciar Sesión', icon: 'fa-right-to-bracket' }}
+    action={{ to: '/', label: 'Iniciar Sesión', icon: 'fa-right-to-bracket', onClick: () => window.openModal?.('loginModal') }}
   />
 );
 

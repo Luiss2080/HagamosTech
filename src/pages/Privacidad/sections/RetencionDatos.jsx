@@ -40,6 +40,9 @@ const RetencionDatos = () => {
                                 return (
                                     <button
                                         key={i}
+                                        type="button"
+                                        aria-pressed={isActive}
+                                        aria-controls="detalle-retencion-datos"
                                         onClick={() => setActive(i)}
                                         className={`relative flex items-center gap-3 p-3.5 rounded-2xl text-left transition-all duration-300 ${
                                             isActive ? 'bg-white shadow-lg shadow-orange-950/10 ring-2 ring-[#A3E635]/40 scale-[1.01]' : 'bg-white/60 border border-orange-50 hover:bg-white hover:shadow-md'
@@ -62,7 +65,7 @@ const RetencionDatos = () => {
                         </div>
 
                         {/* Detalle (7 cols) */}
-                        <div className="lg:col-span-7 bg-white rounded-[2rem] ring-1 ring-orange-100 shadow-xl shadow-orange-950/5 relative overflow-hidden flex flex-col">
+                        <div id="detalle-retencion-datos" aria-live="polite" className="lg:col-span-7 bg-white rounded-[2rem] ring-1 ring-orange-100 shadow-xl shadow-orange-950/5 relative overflow-hidden flex flex-col">
                             <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#A3E635] via-[#171717] to-[#A3E635]"></div>
                             <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-[#A3E635]/10 blur-3xl animate-float-slow pointer-events-none"></div>
                             <div className="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-[#0A0A0A]/10 blur-3xl animate-float-medium pointer-events-none"></div>

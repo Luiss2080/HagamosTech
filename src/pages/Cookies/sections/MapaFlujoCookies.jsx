@@ -87,6 +87,9 @@ const MapaFlujoCookies = () => {
                                         return (
                                             <button
                                                 key={i}
+                                                type="button"
+                                                aria-pressed={isActive}
+                                                aria-controls="detalle-flujo-cookie"
                                                 onClick={() => setActivo(i)}
                                                 className="relative flex flex-col items-center gap-2 group"
                                             >
@@ -104,7 +107,7 @@ const MapaFlujoCookies = () => {
                             </div>
 
                             {/* Panel de detalle del paso activo */}
-                            <div key={activo} className={`relative mt-6 rounded-[1.5rem] overflow-hidden ${nodo.color} text-white shadow-lg animate-fade-in`}>
+                            <div id="detalle-flujo-cookie" key={activo} aria-live="polite" className={`relative mt-6 rounded-[1.5rem] overflow-hidden ${nodo.color} text-white shadow-lg animate-fade-in`}>
                                 <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                                 <div className="absolute -top-10 -right-10 w-40 h-40 rounded-full bg-white/15 blur-3xl animate-float-slow pointer-events-none"></div>
                                 <div className="absolute -bottom-12 -left-8 w-44 h-44 rounded-full bg-black/10 blur-3xl animate-float-medium pointer-events-none"></div>

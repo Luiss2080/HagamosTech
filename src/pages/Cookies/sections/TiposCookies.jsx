@@ -35,10 +35,13 @@ const TiposCookies = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" style={{ perspective: '1200px' }}>
                         {TIPOS.map((tipo, i) => (
-                            <div
+                            <button
                                 key={i}
+                                type="button"
+                                aria-pressed={Boolean(flipped[i])}
+                                aria-label={`${tipo.titulo}: ${flipped[i] ? 'ocultar detalle' : 'mostrar detalle'}`}
                                 onClick={() => toggleFlip(i)}
-                                className="relative h-64 cursor-pointer"
+                                className="relative h-64 w-full cursor-pointer rounded-[2rem] text-left focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#84CC16]"
                                 style={{ transformStyle: 'preserve-3d', transition: 'transform 0.7s cubic-bezier(0.4,0,0.2,1)', transform: flipped[i] ? 'rotateY(180deg)' : 'rotateY(0deg)' }}
                             >
                                 {/* Frente */}
@@ -71,7 +74,7 @@ const TiposCookies = () => {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </button>
                         ))}
                     </div>
                 </div>

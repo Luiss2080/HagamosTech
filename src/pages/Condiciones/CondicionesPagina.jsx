@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import CircuitBackground from '../../components/fondos/FondoTech';
 import Breadcrumb from '../../components/func/MigasPan';
+import NavigationDocumentosLegales from '../Legal/NavigationDocumentosLegales';
 
 const TERMS_SECTIONS = [
     {
@@ -51,6 +52,8 @@ const Condiciones = () => {
             </div>
 
             <CircuitBackground />
+
+            <NavigationDocumentosLegales />
 
             <section className="relative mx-auto flex min-h-screen w-full max-w-7xl items-center px-4 py-8 sm:px-6 lg:px-8">
                 <div className="grid w-full gap-6 lg:grid-cols-[1.05fr_1.35fr]">

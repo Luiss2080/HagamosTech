@@ -48,6 +48,9 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
       }
 
       .err-card-in    { animation:errCardIn .55s cubic-bezier(.34,1.56,.64,1) both; }
+      @media (prefers-reduced-motion: reduce) {
+        .err-card-in, .err-log-row, .err-code::before, .err-code::after { animation: none !important; }
+      }
 
       /* Glitch layers on the number */
       .err-code { position:relative; display:inline-block; }
@@ -99,7 +102,7 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
         </span>
         <i className={`fas ${icon} text-[#A3E635] text-[12px]`} />
         <span className="text-[11px] font-black uppercase tracking-widest text-white/95">
-          ERROR DE ENTORNO
+          {code === 500 ? 'ERROR DEL SERVIDOR' : code === 404 ? 'RUTA NO ENCONTRADA' : code === 419 ? 'SESIÓN EXPIRADA' : 'ERROR DE ACCESO'}
         </span>
       </div>
 
@@ -108,6 +111,7 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
         <h1
           className="err-code font-heading font-black leading-none"
           data-text={String(code)}
+          aria-hidden="true"
           style={{
             fontSize: 'clamp(8rem, 24vw, 12rem)',
             color: '#111111',
@@ -122,9 +126,9 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
 
       {/* ── Error title ── */}
       <div className="err-card-in mb-3" style={{ animationDelay:'.2s' }}>
-        <h2 className="font-heading font-black text-2xl sm:text-3xl uppercase tracking-widest text-[#A3E635]">
+        <h1 className="font-heading font-black text-2xl sm:text-3xl uppercase tracking-widest text-[#A3E635]">
           {title}
-        </h2>
+        </h1>
         {/* Underline */}
         <svg className="mx-auto mt-2 mb-6" width="160" height="8" viewBox="0 0 140 8">
           <path d="M2,5 C25,2 70,7 138,4" stroke="#A3E635" strokeWidth="4" strokeLinecap="round" fill="none" opacity="0.5" />
@@ -167,6 +171,7 @@ const ErrorBase = ({ code, title, description, logs, icon = 'fa-triangle-exclama
       <div className="err-card-in" style={{ animationDelay:'.35s' }}>
         <Link
           to={action.to}
+          onClick={action.onClick}
           className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-2xl font-heading font-black uppercase tracking-widest text-[#0A0A0A] bg-[#A3E635] hover:bg-[#84CC16] text-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-[#A3E635]/20 cursor-pointer"
         >
           <i className={`fas ${action.icon || 'fa-house'} text-xs`} />
