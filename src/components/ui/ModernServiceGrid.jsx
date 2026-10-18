@@ -41,45 +41,35 @@ const ModernServiceGrid = ({ projects = [] }) => {
         >
           {projects.map((project, index) => (
             <div key={`${project.num || project.title || 'solucion'}-${index}`} className="h-full px-2 sm:px-3" style={{ width: `${cardWidth}%` }}>
-              <article className="group relative flex min-h-[380px] h-full flex-col overflow-hidden rounded-[2rem] border border-neutral-800 bg-neutral-900/40 shadow-[0_0_30px_rgba(0,0,0,0.5)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/50 hover:shadow-[#A3E635]/15">
-                <div className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
-                  <div className="absolute inset-0 z-10 bg-gradient-to-t from-[#0A0A0A]/80 via-[#0A0A0A]/72 to-transparent" />
-                  <div className="absolute inset-0 z-10 bg-gradient-to-b from-[#0A0A0A]/45 via-transparent to-transparent" />
-                  {project.images?.length > 0 && (
+              <article className="group relative flex min-h-[430px] h-full flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#10120E] shadow-[0_18px_55px_rgba(0,0,0,0.32)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/55 hover:shadow-[0_20px_60px_rgba(163,230,53,0.14)]">
+                <div className="relative h-48 shrink-0 overflow-hidden bg-[#171A13] sm:h-52">
+                  {(project.image || project.images?.[0]) && (
                     <img
-                      src={project.images[index % project.images.length]}
-                      alt=""
-                      aria-hidden="true"
-                      className="h-full w-full object-cover opacity-[0.30] mix-blend-screen transition-all duration-700 group-hover:scale-110 group-hover:opacity-[0.44]"
+                      src={project.image || project.images[0]}
+                      alt={`Imagen relacionada con ${project.firstPart || project.title || project.category}`}
+                      loading="lazy"
+                      decoding="async"
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   )}
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#10120E] via-transparent to-black/15" />
+                  <span className="absolute left-4 top-4 rounded-full border border-[#A3E635]/45 bg-[#0A0A0A]/80 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#A3E635] backdrop-blur-md">
+                    {project.category || (project.title ? project.title.split(':')[0] : '')}
+                  </span>
                 </div>
 
-                <div className="relative z-10 flex h-full flex-col justify-between p-6 sm:p-8">
+                <div className="relative z-10 flex h-full flex-1 flex-col justify-between p-5 sm:p-6">
                   <div>
-                    <div className="mb-8 flex items-start justify-between">
-                      <span className="select-none bg-gradient-to-b from-white/20 to-transparent bg-clip-text text-5xl font-black text-transparent">
-                        {project.num || `0${index + 1}`}
-                      </span>
-                      <span className="rounded-xl border border-white/10 bg-black/40 px-3 py-1.5 text-[10px] font-black uppercase tracking-widest text-[#A3E635] backdrop-blur-md">
-                        {project.category || (project.title ? project.title.split(':')[0] : '')}
-                      </span>
-                    </div>
-
-                    <div className="mb-4">
-                      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl border border-[#A3E635] bg-[#A3E635] text-black shadow-[0_0_15px_rgba(163,230,53,0.3)] transition-all duration-300 group-hover:rotate-3 group-hover:scale-110">
+                    <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-2xl border border-[#A3E635]/45 bg-[#A3E635] text-black shadow-[0_8px_24px_rgba(163,230,53,0.2)] transition-all duration-300 group-hover:rotate-3 group-hover:scale-105">
                         <i className={`fa-solid ${project.icon || 'fa-star'} text-2xl`} aria-hidden="true" />
-                      </div>
-                      <h3 className="text-xl font-black uppercase leading-tight tracking-tight text-white sm:text-2xl">
+                    </div>
+                    <h3 className="mb-3 text-xl font-extrabold leading-tight tracking-tight text-white transition-colors group-hover:text-[#A3E635] sm:text-2xl">
                         {project.firstPart || (project.title ? project.title.split(':')[0] : '')}
-                        <br className="hidden sm:block" />
                         <span className="text-[#A3E635]">
                           {project.highlightPart || (project.title ? project.title.split(':')[1] : '')}
                         </span>
-                      </h3>
-                    </div>
-
-                    <p className="mb-8 text-sm font-medium leading-relaxed text-slate-400">{project.desc}</p>
+                    </h3>
+                    <p className="mb-6 text-sm leading-relaxed text-slate-300/80">{project.desc}</p>
                   </div>
 
                   <div className="mt-auto border-t border-neutral-800/60 pt-5">

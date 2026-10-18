@@ -1,12 +1,5 @@
 import React, { useEffect, useState } from 'react';
 
-const PROCESS_IMAGES = [
-  'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
-  'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80',
-];
-
 const DEFAULT_ICONS = ['fa-magnifying-glass', 'fa-palette', 'fa-code', 'fa-rocket'];
 
 const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', badgePrefix = 'Etapa' }) => {
@@ -48,7 +41,7 @@ const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', bad
         >
           {items.map((item, index) => {
             const icon = item.icon || DEFAULT_ICONS[index % DEFAULT_ICONS.length];
-            const image = item.image || PROCESS_IMAGES[index % PROCESS_IMAGES.length];
+            const image = item.image;
             const title = item.title || item.name || `Etapa ${index + 1}`;
 
             return (
@@ -57,29 +50,33 @@ const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', bad
                 className="h-full px-2 sm:px-3"
                 style={{ width: `${cardWidth}%` }}
               >
-                <article className="group relative flex h-full min-h-[370px] flex-col overflow-hidden rounded-[2rem] border border-neutral-800 bg-[#111111] shadow-[0_0_30px_rgba(0,0,0,0.35)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/50 hover:shadow-[0_15px_40px_rgba(163,230,53,0.14)]">
-                  <div className="relative h-48 shrink-0 overflow-hidden bg-neutral-900 sm:h-52">
-                    <img
-                      src={image}
-                      alt={`Imagen relacionada con ${title}`}
-                      loading="lazy"
-                      decoding="async"
-                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A0A] via-black/10 to-transparent" />
-                    <span className="absolute left-4 top-4 rounded-full border border-[#A3E635]/40 bg-black/70 px-3 py-1 text-[9px] font-black uppercase tracking-[0.16em] text-[#A3E635] backdrop-blur">
+                <article className="group relative flex h-full min-h-[390px] flex-col overflow-hidden rounded-[1.75rem] border border-white/10 bg-[#10120E] shadow-[0_18px_55px_rgba(0,0,0,0.3)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/55 hover:shadow-[0_20px_60px_rgba(163,230,53,0.14)]">
+                  <div className="relative h-52 shrink-0 overflow-hidden bg-[#171A13] sm:h-56">
+                    {image ? (
+                      <img
+                        src={image}
+                        alt={`Imagen relacionada con ${title}`}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                    ) : (
+                      <div role="img" aria-label={`Imagen relacionada con ${title}`} className="h-full w-full bg-[radial-gradient(ellipse_at_70%_30%,rgba(163,230,53,.36),transparent_40%),linear-gradient(135deg,#22291a,#090a08)]" />
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#10120E] via-black/5 to-black/15" />
+                    <span className="absolute left-4 top-4 rounded-full border border-[#A3E635]/45 bg-[#0A0A0A]/80 px-3 py-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#A3E635] backdrop-blur">
                       {item.category || `${badgePrefix} 0${index + 1}`}
                     </span>
                   </div>
 
-                  <div className="relative flex flex-1 flex-col p-6 sm:p-7">
-                    <div className="-mt-11 mb-4 flex h-14 w-14 items-center justify-center rounded-2xl border-4 border-[#111111] bg-[#A3E635] text-xl text-black shadow-[0_0_20px_rgba(163,230,53,0.28)] transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105">
+                  <div className="relative flex flex-1 flex-col p-5 sm:p-6">
+                    <div className="-mt-10 mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border-[3px] border-[#10120E] bg-[#A3E635] text-lg text-black shadow-[0_8px_24px_rgba(163,230,53,0.22)] transition-transform duration-300 group-hover:rotate-3 group-hover:scale-105">
                       {typeof icon === 'string' ? <i className={`fa-solid ${icon}`} aria-hidden="true" /> : icon}
                     </div>
-                    <h3 className="mb-3 text-lg font-black uppercase leading-tight tracking-tight text-white transition-colors group-hover:text-[#A3E635] sm:text-xl">
+                    <h3 className="mb-2 text-lg font-extrabold leading-snug tracking-tight text-white transition-colors group-hover:text-[#A3E635] sm:text-xl">
                       {title}
                     </h3>
-                    <p className="text-sm font-medium leading-relaxed text-slate-400">
+                    <p className="text-sm leading-relaxed text-slate-300/80">
                       {item.desc || item.description}
                     </p>
                     {item.tags?.length > 0 && (
