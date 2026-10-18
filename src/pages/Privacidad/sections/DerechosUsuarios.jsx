@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const DERECHOS = [
-    { icon: 'fa-eye', titulo: 'Acceso', desc: 'Pedí una copia de todos los datos personales que tenemos sobre vos. Te la entregamos en un formato simple y legible.', tiempo: '10 días hábiles' },
-    { icon: 'fa-pen-to-square', titulo: 'Rectificación', desc: 'Si algún dato está desactualizado o es incorrecto, podés pedirnos que lo corrijamos de inmediato.', tiempo: '5 días hábiles' },
-    { icon: 'fa-trash-can', titulo: 'Eliminación', desc: 'Podés solicitar la eliminación total de tus datos personales de nuestros sistemas en cualquier momento.', tiempo: '15 días hábiles' },
-    { icon: 'fa-file-export', titulo: 'Portabilidad', desc: 'Tenés derecho a recibir tus datos en un formato que puedas llevar a otro proveedor de servicio.', tiempo: '10 días hábiles' },
+    { icon: 'fa-eye', titulo: 'Consulta', desc: 'Escribinos para consultar qué información de tu cuenta o solicitud está registrada.', tiempo: 'A coordinar' },
+    { icon: 'fa-pen-to-square', titulo: 'Corrección', desc: 'Indicá qué dato está desactualizado o es incorrecto para que podamos revisarlo contigo.', tiempo: 'A coordinar' },
+    { icon: 'fa-trash-can', titulo: 'Cuenta y eliminación', desc: 'Podés pedir la desactivación de tu cuenta o consultar la eliminación de datos. Revisaremos qué puede borrarse y qué debe conservarse.', tiempo: 'Según revisión' },
+    { icon: 'fa-file-export', titulo: 'Copia de datos', desc: 'Podés solicitar una copia de los datos asociados a tu cuenta o consulta. Coordinaremos el alcance y el formato de entrega.', tiempo: 'A coordinar' },
 ];
 
 const PASOS = [
     { icon: 'fa-pen', label: 'Solicitud', desc: 'Escribinos por WhatsApp o email indicando tu derecho.' },
-    { icon: 'fa-id-card', label: 'Verificación', desc: 'Confirmamos tu identidad para proteger tus datos.' },
-    { icon: 'fa-circle-check', label: 'Respuesta', desc: `Te respondemos en ${DERECHOS[0].tiempo} máximo.` },
+    { icon: 'fa-id-card', label: 'Verificación', desc: 'Podemos confirmar algunos datos para ubicar tu cuenta o solicitud.' },
+    { icon: 'fa-circle-check', label: 'Revisión', desc: 'Revisamos qué información tenemos y coordinamos una respuesta contigo.' },
 ];
 
 const DerechosUsuarios = () => {

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RETENCION = [
-    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Mientras tu cuenta esté activa', dias: 100, color: 'from-[#A3E635] to-[#84CC16]', nota: 'Se eliminan al cerrar tu cuenta.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
-    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Servicios y facturas', duracion: '5 años (obligación fiscal)', dias: 75, color: 'from-[#0A0A0A] to-[#171717]', nota: 'Por requisito legal de facturación.', items: ['Servicios', 'Facturas', 'NIT'] },
-    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Emails y WhatsApp', duracion: '2 años', dias: 50, color: 'from-[#171717] to-[#0A0A0A]', nota: 'Se purgan automáticamente.', items: ['Emails', 'Chats', 'Alertas'] },
-    { icon: 'fa-cookie-bite', titulo: 'Cookies', detalle: 'Preferencias de navegación', duracion: '30 días', dias: 25, color: 'from-[#84CC16] to-[#AA3000]', nota: 'Renovables con cada visita.', items: ['Preferencias', 'Sesión', 'Analítica'] },
+    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Datos de acceso y perfil', duracion: 'Mientras se use la cuenta', color: 'from-[#A3E635] to-[#84CC16]', nota: 'Desactivar la cuenta impide su uso, pero no equivale a borrar de inmediato todos los registros. Escribinos si querés revisar o solicitar cambios.', items: ['Nombre y correo', 'Perfil', 'Estado de la cuenta'] },
+    { icon: 'fa-inbox', titulo: 'Consultas', detalle: 'Mensajes enviados por formularios', duracion: 'Según seguimiento necesario', color: 'from-[#0A0A0A] to-[#171717]', nota: 'La consulta se guarda para responderla y darle seguimiento. No se publica un plazo automático de borrado.', items: ['Asunto y mensaje', 'Datos de contacto', 'Seguimiento'] },
+    { icon: 'fa-handshake', titulo: 'Proyectos', detalle: 'Alcance y acuerdos de servicio', duracion: 'Según cada propuesta', color: 'from-[#171717] to-[#0A0A0A]', nota: 'Los datos y documentos de cada proyecto se coordinan según lo acordado con el cliente y cualquier obligación aplicable.', items: ['Propuesta', 'Entregables', 'Acuerdos'] },
+    { icon: 'fa-cookie-bite', titulo: 'Navegador', detalle: 'Sesión y preferencias locales', duracion: 'Depende de cada tecnología', color: 'from-[#84CC16] to-[#AA3000]', nota: 'La cookie de autenticación no define una fecha de vencimiento desde la interfaz. El almacenamiento local puede permanecer hasta que se borre desde el navegador.', items: ['Cookie de autenticación', 'Almacenamiento de sesión', 'Preferencias locales'] },
 ];
 
 const RetencionDatos = () => {
@@ -28,7 +28,7 @@ const RetencionDatos = () => {
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Tocá cada tipo de dato para ver por cuánto tiempo lo conservamos.
+                            Revisá para qué se conserva cada tipo de información y cómo pedir una revisión.
                         </p>
                     </div>
 
@@ -56,8 +56,8 @@ const RetencionDatos = () => {
                                             <p className="text-[10px] text-slate-500 font-semibold truncate">{r.detalle}</p>
                                         </div>
                                         <div className="text-right shrink-0">
-                                            <p className={`text-sm font-black font-heading ${isActive ? 'text-[#A3E635]' : 'text-[#171717]'}`}>{r.dias}%</p>
-                                            <p className="text-[8px] font-black uppercase tracking-wider text-slate-400">duración</p>
+                                            <p className={`text-xs font-black font-heading ${isActive ? 'text-[#A3E635]' : 'text-[#171717]'}`}>Ver detalle</p>
+                                            <p className="text-[8px] font-black uppercase tracking-wider text-slate-400">conservación</p>
                                         </div>
                                     </button>
                                 );
@@ -84,17 +84,9 @@ const RetencionDatos = () => {
                                     </span>
                                 </div>
 
-                                {/* Barra de duración */}
-                                <div className="mb-5">
-                                    <div className="flex items-center justify-between text-[9px] font-black uppercase tracking-widest text-slate-400 mb-1.5">
-                                        <span><i className="fas fa-hourglass-start text-[#A3E635] mr-1"></i>Inicio</span>
-                                        <span><i className="fas fa-hourglass-end text-[#A3E635] mr-1"></i>Purgado</span>
-                                    </div>
-                                    <div className="h-4 rounded-full bg-gray-100 overflow-hidden border border-orange-50">
-                                        <div className={`h-full rounded-full bg-gradient-to-r ${actual.color} transition-all duration-700 relative`} style={{ width: `${actual.dias}%` }}>
-                                            <span className="absolute inset-y-0 right-1 flex items-center text-[8px] font-black text-white">{actual.dias}%</span>
-                                        </div>
-                                    </div>
+                                <div className="mb-5 rounded-2xl border border-orange-100 bg-[#FFFFFF] p-4">
+                                    <p className="text-[9px] font-black uppercase tracking-widest text-slate-400"><i className="fas fa-calendar-check text-[#A3E635] mr-1"></i>Referencia de conservación</p>
+                                    <p className="mt-1 text-sm font-bold text-[#171717]">{actual.duracion}</p>
                                 </div>
 
                                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 mb-4">
