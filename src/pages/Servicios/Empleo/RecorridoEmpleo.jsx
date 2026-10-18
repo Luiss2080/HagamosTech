@@ -18,10 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"CV & ATS","firstPart":"Currículum","highlightPart":"Optimizado ATS","desc":"Estructuración de perfiles técnicos que superan los filtros de reclutamiento.","tags":["ATS","Keywords","PDF"],"icon":"fa-file-user","image":"/img/08_Cards/proyecto-empleo-cv.webp","images":["/img/08_Cards/proyecto-empleo-cv.webp"]},
-  {"num":"02","category":"LINKEDIN","firstPart":"Perfil de","highlightPart":"LinkedIn","desc":"Titulares, extractos y networking estratégico para atraer reclutadores.","tags":["LinkedIn","Networking","Extracto"],"icon":"fa-linkedin","image":"/img/08_Cards/proyecto-empleo-perfil.webp","images":["/img/08_Cards/proyecto-empleo-perfil.webp"]},
-  {"num":"03","category":"REDACCIÓN","firstPart":"Cartas y","highlightPart":"Traducción","desc":"Redacción persuasiva adaptada a vacantes y traducción técnica al inglés.","tags":["Cartas","Inglés","Redacción"],"icon":"fa-envelope-open-text","image":"/img/08_Cards/proyecto-empleo-documentos.webp","images":["/img/08_Cards/proyecto-empleo-documentos.webp"]},
-  {"num":"04","category":"PORTAFOLIO","firstPart":"Entrevistas","highlightPart":"y Certificados","desc":"Práctica orientativa de entrevistas, portafolios digitales y diseño de certificados o constancias.","tags":["Entrevistas","Portafolio","Certificados"],"icon":"fa-certificate","image":"/img/08_Cards/proyecto-empleo-entrevista.webp","images":["/img/08_Cards/proyecto-empleo-entrevista.webp"]}
+  {"num":"01","category":"CV & ATS","firstPart":"Currículum","highlightPart":"Optimizado ATS","desc":"Estructuración de perfiles técnicos que superan los filtros de reclutamiento.","tags":["ATS","Keywords","PDF"],"icon":"fa-file-user","image":"/img/08_Cards/proyecto-empleo-cv.webp"},
+  {"num":"02","category":"LINKEDIN","firstPart":"Perfil de","highlightPart":"LinkedIn","desc":"Titulares, extractos y networking estratégico para atraer reclutadores.","tags":["LinkedIn","Networking","Extracto"],"icon":"fa-linkedin","image":"/img/08_Cards/proyecto-empleo-perfil.webp"},
+  {"num":"03","category":"REDACCIÓN","firstPart":"Cartas y","highlightPart":"Traducción","desc":"Redacción persuasiva adaptada a vacantes y traducción técnica al inglés.","tags":["Cartas","Inglés","Redacción"],"icon":"fa-envelope-open-text","image":"/img/08_Cards/proyecto-empleo-documentos.webp"},
+  {"num":"04","category":"PORTAFOLIO","firstPart":"Entrevistas","highlightPart":"y Certificados","desc":"Práctica orientativa de entrevistas, portafolios digitales y diseño de certificados o constancias.","tags":["Entrevistas","Portafolio","Certificados"],"icon":"fa-certificate","image":"/img/08_Cards/proyecto-empleo-entrevista.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {

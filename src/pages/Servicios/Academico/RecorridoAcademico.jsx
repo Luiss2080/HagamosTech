@@ -18,10 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"TESIS Y MONOGRAFÍAS","firstPart":"Monografías","highlightPart":"y Tesis","desc":"Estructuración de monografías, tesis y documentos bajo formato APA 7 con rigor académico.","tags":["APA 7","Documentación","Word"],"icon":"fa-book","image":"/img/08_Cards/proyecto-academico-tesis.webp","images":["/img/08_Cards/proyecto-academico-tesis.webp"]},
-  {"num":"02","category":"PRESENTACIONES","firstPart":"Presentaciones","highlightPart":"Interactivas","desc":"Defensas de tesis y exposiciones con presentaciones dinámicas y visualmente impactantes.","tags":["PowerPoint","Interactivo","Diseño"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp","images":["/img/08_Cards/proyecto-academico-presentaciones.webp"]},
-  {"num":"03","category":"DIAGRAMAS","firstPart":"Infografías","highlightPart":"y Diagramas","desc":"Esquemas anatómicos, flujos de bases de datos y líneas de tiempo para visualizar tu investigación.","tags":["Infografías","Diagramas","Esquemas"],"icon":"fa-project-diagram","image":"/img/08_Cards/proyecto-academico-infografias.webp","images":["/img/08_Cards/proyecto-academico-infografias.webp"]},
-  {"num":"04","category":"SIMULACIÓN","firstPart":"Simuladores","highlightPart":"y Programación","desc":"Simuladores educativos, proyectos de redes y apoyo en lógica de programación.","tags":["Simuladores","Redes","Código"],"icon":"fa-code","image":"/img/08_Cards/proyecto-academico-programacion.webp","images":["/img/08_Cards/proyecto-academico-programacion.webp"]}
+  {"num":"01","category":"TESIS Y MONOGRAFÍAS","firstPart":"Monografías","highlightPart":"y Tesis","desc":"Estructuración de monografías, tesis y documentos bajo formato APA 7 con rigor académico.","tags":["APA 7","Documentación","Word"],"icon":"fa-book","image":"/img/08_Cards/proyecto-academico-tesis.webp"},
+  {"num":"02","category":"PRESENTACIONES","firstPart":"Presentaciones","highlightPart":"Interactivas","desc":"Defensas de tesis y exposiciones con presentaciones dinámicas y visualmente impactantes.","tags":["PowerPoint","Interactivo","Diseño"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp"},
+  {"num":"03","category":"DIAGRAMAS","firstPart":"Infografías","highlightPart":"y Diagramas","desc":"Esquemas anatómicos, flujos de bases de datos y líneas de tiempo para visualizar tu investigación.","tags":["Infografías","Diagramas","Esquemas"],"icon":"fa-project-diagram","image":"/img/08_Cards/proyecto-academico-infografias.webp"},
+  {"num":"04","category":"SIMULACIÓN","firstPart":"Simuladores","highlightPart":"y Programación","desc":"Simuladores educativos, proyectos de redes y apoyo en lógica de programación.","tags":["Simuladores","Redes","Código"],"icon":"fa-code","image":"/img/08_Cards/proyecto-academico-programacion.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {

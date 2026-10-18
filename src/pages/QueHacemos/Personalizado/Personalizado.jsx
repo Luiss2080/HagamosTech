@@ -139,7 +139,7 @@ const PROJECTS = [
     highlightPart: 'y aplicaciones',
     desc: 'Evaluamos interfaces y aplicaciones web según las funciones, los datos y los perfiles de usuario que necesitás.',
     icon: 'fa-lightbulb',
-    images: ['/img/08_Cards/proyecto-personalizado-app.webp']
+    images: ['/img/08_Cards/proyecto-personalizado-app-web.webp']
   },
   {
     num: '03',

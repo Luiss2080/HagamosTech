@@ -18,10 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"EMPRESARIALES","firstPart":"Páginas Web","highlightPart":"Empresariales","desc":"Sitios corporativos completos que transmiten confianza y autoridad.","tags":["React","Next.js","Tailwind"],"icon":"fa-building","image":"/img/08_Cards/proyecto-web-corporativo.webp","images":["/img/08_Cards/proyecto-web-corporativo.webp"]},
-  {"num":"02","category":"LANDING PAGE","firstPart":"Landing Pages","highlightPart":"y Portafolios","desc":"Páginas para presentar una propuesta, campaña o colección de trabajos.","tags":["Landing","Contenido","CTA"],"icon":"fa-rocket","image":"/img/08_Cards/proyecto-web-landing.webp","images":["/img/08_Cards/proyecto-web-landing.webp"]},
-  {"num":"03","category":"E-COMMERCE","firstPart":"Tiendas Online","highlightPart":"y Pedidos","desc":"E-commerce con carritos de compra e integración de pagos locales.","tags":["E-commerce","Pagos","Carrito"],"icon":"fa-cart-shopping","image":"/img/08_Cards/proyecto-web-tienda.webp","images":["/img/08_Cards/proyecto-web-tienda.webp"]},
-  {"num":"04","category":"UI/UX","firstPart":"Diseño UI/UX","highlightPart":"y Responsive","desc":"Prototipado interactivo y adaptación perfecta a todas las pantallas.","tags":["Figma","Mobile","UX"],"icon":"fa-mobile-screen-button","image":"/img/08_Cards/proyecto-web-uiux.webp","images":["/img/08_Cards/proyecto-web-uiux.webp"]}
+  {"num":"01","category":"EMPRESARIALES","firstPart":"Páginas Web","highlightPart":"Empresariales","desc":"Sitios corporativos completos que transmiten confianza y autoridad.","tags":["React","Next.js","Tailwind"],"icon":"fa-building","image":"/img/08_Cards/proyecto-web-corporativo.webp"},
+  {"num":"02","category":"LANDING PAGE","firstPart":"Landing Pages","highlightPart":"y Portafolios","desc":"Páginas para presentar una propuesta, campaña o colección de trabajos.","tags":["Landing","Contenido","CTA"],"icon":"fa-rocket","image":"/img/08_Cards/proyecto-web-landing.webp"},
+  {"num":"03","category":"E-COMMERCE","firstPart":"Tiendas Online","highlightPart":"y Pedidos","desc":"E-commerce con carritos de compra e integración de pagos locales.","tags":["E-commerce","Pagos","Carrito"],"icon":"fa-cart-shopping","image":"/img/08_Cards/proyecto-web-tienda.webp"},
+  {"num":"04","category":"UI/UX","firstPart":"Diseño UI/UX","highlightPart":"y Responsive","desc":"Prototipado interactivo y adaptación perfecta a todas las pantallas.","tags":["Figma","Mobile","UX"],"icon":"fa-mobile-screen-button","image":"/img/08_Cards/proyecto-web-uiux.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {
