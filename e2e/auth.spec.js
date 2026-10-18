@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-const BACKEND = process.env.E2E_BACKEND_URL || 'http://localhost:4321';
+const BACKEND = process.env.E2E_BACKEND_URL || `http://localhost:${process.env.E2E_BACKEND_PORT || '44321'}`;
 const USUARIO = { correo: 'cliente@hagamostech.bo', contrasena: 'Cliente123' };
 
 // Spec 013: el login debe funcionar de punta a punta.
