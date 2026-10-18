@@ -4,6 +4,7 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import { Link } from 'react-router-dom';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 
 const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
@@ -25,25 +26,33 @@ const VERTICALS = [
     title: 'Desarrollo web',
     desc: 'Sitios y aplicaciones web planteados según objetivos, contenido, funciones y requisitos acordados.',
     icon: <Code size={32} className="text-[#A3E635]" />,
-    tags: ['React', 'Tailwind', 'UX/UI']
+    tags: ['React', 'Tailwind', 'UX/UI'],
+    image: '/img/07_Servicios/soluciones/hero-web-v2.webp',
+    category: 'WEB'
   },
   {
     title: 'Sistemas y software',
     desc: 'Sistemas a medida y estructuras de datos revisados según necesidades y viabilidad.',
     icon: <Database size={32} className="text-[#84CC16]" />,
-    tags: ['Node.js', 'MySQL', 'APIs']
+    tags: ['Node.js', 'MySQL', 'APIs'],
+    image: '/img/07_Servicios/soluciones/hero-sistemas-v2.webp',
+    category: 'SOFTWARE'
   },
   {
     title: 'Interfaces y aplicaciones web',
     desc: 'Diseño de interfaces y herramientas digitales; alojamiento y operación de servidores no forman parte de la oferta.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
-    tags: ['Diseño', 'Interfaces', 'Web']
+    tags: ['Diseño', 'Interfaces', 'Web'],
+    image: '/img/07_Servicios/soluciones/hero-ia-v2.webp',
+    category: 'INTERFACES'
   },
   {
     title: 'Soluciones personalizadas',
     desc: 'Evaluamos necesidades digitales para proponer un alcance posible y conversarlo antes de iniciar.',
     icon: <Cpu size={32} className="text-[#84CC16]" />,
-    tags: ['Requisitos', 'Propuesta', 'Desarrollo']
+    tags: ['Requisitos', 'Propuesta', 'Desarrollo'],
+    image: '/img/07_Servicios/soluciones/hero-soluciones-v2.webp',
+    category: 'A MEDIDA'
   }
 ];
 
@@ -161,29 +170,7 @@ const Tecnologia = () => {
             Nuestras <span className="text-[#A3E635]">Verticales</span>
           </h2>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {VERTICALS.map((v, idx) => (
-              <div key={idx} className="p-8 md:p-10 rounded-[2rem] bg-neutral-900/50 border border-neutral-800 hover:bg-neutral-900 transition-all group overflow-hidden relative">
-                <div className="absolute -right-10 -top-10 w-40 h-40 bg-[#A3E635]/5 rounded-full blur-3xl group-hover:bg-[#A3E635]/10 transition-colors"></div>
-                <div className="flex flex-col md:flex-row gap-6 items-start relative z-10">
-                  <div className="w-16 h-16 shrink-0 rounded-2xl bg-neutral-950 border border-neutral-800 flex items-center justify-center shadow-lg group-hover:border-[#A3E635]/30 transition-colors">
-                    {v.icon}
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-black text-white mb-3">{v.title}</h3>
-                    <p className="text-slate-400 font-medium leading-relaxed mb-6">{v.desc}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {v.tags.map(tag => (
-                        <span key={tag} className="px-3 py-1 rounded-lg bg-neutral-950 border border-neutral-800 text-[10px] font-black uppercase tracking-wider text-slate-300">
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+          <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
         </div>
       </section>
 
