@@ -21,7 +21,7 @@ const ModernServiceGrid = ({ projects = [] }) => {
   const lastIndex = Math.max(0, itemCount - cardsPerView);
   const trackWidth = itemCount ? (itemCount * 100) / cardsPerView : 100;
   const cardWidth = itemCount ? 100 / itemCount : 100;
-  const offset = (currentIndex * 100) / cardsPerView;
+  const offset = currentIndex * cardWidth;
 
   useEffect(() => {
     setCurrentIndex((index) => Math.min(index, lastIndex));

@@ -3,7 +3,7 @@ import { Lightbulb, Quote } from 'lucide-react';
 
 const TestimonialCarousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(testimonials.length); // Start at the middle set
-  const [visibleCards, setVisibleCards] = useState(4);
+  const [visibleCards, setVisibleCards] = useState(3);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(0);
@@ -19,7 +19,7 @@ const TestimonialCarousel = ({ testimonials }) => {
       } else if (width < 1200) {
         setVisibleCards(3);
       } else {
-        setVisibleCards(4);
+        setVisibleCards(3);
       }
     };
     handleResize();
@@ -93,7 +93,7 @@ const TestimonialCarousel = ({ testimonials }) => {
 
   return (
     <div 
-      className="relative w-full overflow-hidden py-8 px-1 sm:px-4"
+      className="relative w-full overflow-hidden py-12 px-1 sm:px-4"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -120,27 +120,34 @@ const TestimonialCarousel = ({ testimonials }) => {
                   style={{ width: `${cardPercent}%` }}
                   className="px-3"
                 >
-                  <div className="bg-white dark:bg-[#0A0A0A] p-6 sm:p-7 rounded-[2rem] shadow-[0_10px_35px_rgba(0,0,0,0.04)] border border-slate-100/80 dark:border-neutral-800 flex flex-col justify-between h-full min-h-[300px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.12)] hover:-translate-y-1.5 hover:border-[#84CC16]/30 dark:hover:border-[#84CC16]/30 transition-all duration-500 relative group">
+                  <div className="bg-gradient-to-br from-[#A3E635]/[0.08] via-[#0A0A0A] to-[#0A0A0A] p-6 sm:p-7 rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.3)] border border-[#A3E635]/25 flex flex-col justify-between h-full min-h-[320px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.18)] hover:-translate-y-1.5 hover:border-[#A3E635]/60 transition-all duration-500 relative group">
                     
                     {/* Glowing Accent Border on Hover */}
-                    <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[#A3E635] to-[#84CC16] rounded-b-[2rem] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
+                    <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-transparent rounded-t-[2rem]"></div>
+                    <div className="absolute -right-12 -top-14 h-36 w-36 rounded-full bg-[#A3E635]/[0.08] blur-3xl pointer-events-none"></div>
 
                     {/* Indicador visual para ejemplos orientativos */}
                     <div className="flex justify-between items-center mb-4">
                       <Lightbulb size={15} className="text-[#A3E635]" aria-hidden="true" />
-                      <div className="w-8 h-8 rounded-full bg-[#A3E635]/5 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
+                      <div className="w-9 h-9 rounded-full bg-[#A3E635]/15 ring-1 ring-[#A3E635]/30 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
                         <Quote size={14} className="transform rotate-185" />
                       </div>
                     </div>
 
                     {/* Example text */}
-                    <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-[13px] font-bold leading-relaxed mb-6 flex-grow text-left italic">
+                    <p className="text-slate-200 text-sm sm:text-[15px] font-semibold leading-relaxed mb-5 flex-grow text-left italic">
                       "{t.text}"
                     </p>
 
+                    <div className="mb-5 rounded-xl border border-[#A3E635]/15 bg-[#A3E635]/[0.06] px-3.5 py-3 text-left">
+                      <p className="text-[10px] font-semibold leading-relaxed text-slate-300">
+                        Revisamos alcance, entregables y alternativas según cada situación.
+                      </p>
+                    </div>
+
                     {/* Tipo de solicitud */}
-                    <div className="flex items-center gap-3.5 border-t border-slate-100 pt-4 mt-auto">
-                      <div className="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-md flex-shrink-0">
+                    <div className="flex items-center gap-3.5 border-t border-[#A3E635]/20 pt-4 mt-auto">
+                      <div className="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
                         <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
                           <i className="fas fa-lightbulb" aria-hidden="true"></i>
                         </div>
@@ -166,14 +173,14 @@ const TestimonialCarousel = ({ testimonials }) => {
           <>
             <button
               onClick={handlePrev}
-              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute left-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-[#A3E635]/40 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#A3E635] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Anterior"
             >
               <i className="fa-solid fa-chevron-left text-xs"></i>
             </button>
             <button
               onClick={handleNext}
-              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-neutral-200/60 dark:border-neutral-800 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#0A0A0A] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
+              className="absolute right-0 top-1/2 -translate-y-1/2 w-11 h-11 rounded-2xl bg-white/95 dark:bg-neutral-900/90 border border-[#A3E635]/40 shadow-xl flex items-center justify-center text-[#111827] dark:text-[#A3E635] transition-all z-20 hover:scale-110 active:scale-95 hover:bg-[#A3E635] hover:text-[#0A0A0A] dark:hover:bg-[#A3E635] hover:border-transparent"
               aria-label="Siguiente"
             >
               <i className="fa-solid fa-chevron-right text-xs"></i>

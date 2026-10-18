@@ -125,11 +125,7 @@ const DisenoGrafico = () => {
 
               {/* Trust badges */}
               <div className="flex flex-wrap itemás-center justify-center gap-x-3 gap-y-1.5 pt-4">
-                <div className="flex gap-0.5 text-[#A3E635]">
-                  {[...Array(5)].map((_, i) => (
-                    <i key={i} className="fas fa-star text-xs" />
-                  ))}
-                </div>
+                <i className="fas fa-comments text-[#A3E635] text-base" aria-hidden="true" />
                 <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widestá leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
@@ -147,7 +143,7 @@ const DisenoGrafico = () => {
                 </svg>
               </div>
 
-              <div className="relative z-10 w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] 2xl:max-w-[820px] ml-auto animate-fade-in-up delay-200 group/hero flex itemás-center justify-center mt-6 sm:mt-8">
+              <div className="relative z-10 w-full max-w-[420px] sm:max-w-[540px] md:max-w-[620px] lg:max-w-[680px] xl:max-w-[740px] 2xl:max-w-[820px] mx-auto animate-fade-in-up delay-200 group/hero flex itemás-center justify-center mt-6 sm:mt-8">
                 <div className="absolute -inset-[8%] -z-10 pointer-events-none bg-[radial-gradient(circle_at_center,rgba(197,160,89,0.25)_0%,rgba(164,30,34,0.12)_45%,transparent_75%)] blur-xl"></div>
                 <div
                   className="transition-transform duration-700 ease-out group-hover/hero:scale-[1.03] flex itemás-center justify-center"
