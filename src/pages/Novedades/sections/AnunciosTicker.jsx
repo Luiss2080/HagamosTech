@@ -2,12 +2,12 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
-    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'WEB' },
-    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&auto=format&fit=crop&q=60', tag: 'SOFTWARE' },
-    { titulo: 'Acompañamiento académico', desc: 'Mentorías, ejercicios guiados e informes, sujeto a materia y disponibilidad.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'ACADEMIA' },
-    { titulo: 'Diseño gráfico', desc: 'Identidad visual, piezas gráficas y catálogos según tu necesidad.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60', tag: 'DISEÑO' },
-    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&auto=format&fit=crop&q=60', tag: 'EMPLEO' },
-    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60', tag: 'CONSULTA' },
+    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB' },
+    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE' },
+    { titulo: 'Acompañamiento académico', desc: 'Mentorías, ejercicios guiados e informes, sujeto a materia y disponibilidad.', img: '/img/08_Cards/novedad-ticker-academia.webp', tag: 'ACADEMIA' },
+    { titulo: 'Diseño gráfico', desc: 'Identidad visual, piezas gráficas y catálogos según tu necesidad.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO' },
+    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO' },
+    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA' },
 ];
 
 const TAG_STYLES = {
