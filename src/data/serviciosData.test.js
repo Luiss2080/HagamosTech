@@ -151,7 +151,16 @@ describe('Integridad de la oferta (serviciosData)', () => {
   it('cada servicio del catálogo tiene una imagen utilizable', () => {
     for (const [categoria, servicios] of Object.entries(SERVICIOS_DATA)) {
       for (const servicio of servicios) {
-        expect(servicio.img, `${categoria}/${servicio.id} sin imagen`).toMatch(/^https:\/\//);
+        expect(servicio.img, `${categoria}/${servicio.id} sin imagen`).toMatch(
+          /^(https:\/\/|\/img\/[\w/-]+\.(webp|png|jpe?g))$/
+        );
+
+        if (servicio.img.startsWith('/img/')) {
+          expect(
+            () => readFileSync(resolve(cwd(), 'public', servicio.img.slice(1))),
+            `${categoria}/${servicio.id} apunta a un archivo inexistente`
+          ).not.toThrow();
+        }
       }
     }
   });
