@@ -346,7 +346,7 @@ Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y S
                 <div className="p-5 font-mono text-[10.5px] sm:text-[11.5px] leading-relaxed text-slate-300 overflow-x-auto select-none space-y-1">
                   <div>import React from "react";</div>
                   <div>import &#123; MetaTags &#125; from "./seo";</div>
-                  <div className="mt-2">export const Automatizacion = () =&gt; &#123;</div>
+                  <div className="mt-2">export const SistemasAMedida = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
                   <div className="pl-12">&lt;MetaTags title="HagamosTech — Sistemas a medida" /&gt;</div>

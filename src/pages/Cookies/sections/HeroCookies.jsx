@@ -9,7 +9,7 @@ const HeroCookies = () => {
             <PageHero
                 title="Política de"
                 highlight="Cookies."
-                description="Las cookies nos ayudan a que tu experiencia sea más rápida y personalizada. Elegí cuáles querés aceptar: todo está en tus manos."
+                description="La aplicación puede utilizar una cookie para mantener la sesión de tu cuenta. También puede guardar algunas preferencias en el navegador. Podés revisar o borrar estos datos desde la configuración de tu navegador."
             />
         </div>
     );

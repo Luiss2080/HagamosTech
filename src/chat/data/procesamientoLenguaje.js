@@ -45,7 +45,7 @@ export const BANCO_CONOCIMIENTO = [
     id: 'servicios',
     keywords: ['servicios', 'soluciones', 'que hacen', 'que ofrecen', 'portafolio', 'catalogo de servicios', 'areas', 'categorias'],
     answer:
-      'Estas son nuestras áreas de trabajo:\n' +
+      'Estas son nuestras áreas de solución:\n' +
       '1. **Acompañamiento académico** → mentorías, tareas guiadas, informes, monografías y proyectos socioformativos.\n' +
       '2. **Emprendedores y negocios** → marca, manual de identidad, catálogos digitales y piezas gráficas.\n' +
       '3. **Empleo** → CV optimizado ATS, LinkedIn, cartas, portafolios, entrevistas y certificados.\n' +

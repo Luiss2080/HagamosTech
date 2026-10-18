@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const TIPOS = [
-    { icon: 'fa-lock', titulo: 'Esenciales', frontal: 'Las que hacen funcionar el sitio', detalle: 'Permiten el carrito, tu sesión y la seguridad. Sin ellas el sitio no funciona.', ejemplos: ['Carrito', 'Inicio de sesión', 'Seguridad'], color: 'from-[#A3E635] to-[#84CC16]' },
-    { icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', frontal: 'Recuerdan lo que te gusta', detalle: 'Guardan tus preferencias para que cada visita sea más cómoda y personalizada.',     ejemplos: ['Idioma', 'Zona', 'Preferencias'], color: 'from-[#0A0A0A] to-[#171717]' },
-    { icon: 'fa-chart-line', titulo: 'Analíticas', frontal: 'Nos ayudan a mejorar', detalle: 'Miden cómo usás el sitio de forma anónima para que podamos optimizarlo.', ejemplos: ['Páginas vistas', 'Tiempo de uso', 'Navegación'], color: 'from-[#171717] to-[#0A0A0A]' },
-    { icon: 'fa-bullhorn', titulo: 'Publicidad', frontal: 'Te mostramos lo que te interesa', detalle: 'Personalizan las promociones y ofertas que ves según tus intereses y hábitos.', ejemplos: ['Promos', 'Ofertas', 'Contenido relevante'], color: 'from-[#84CC16] to-[#AA3000]' },
+    { icon: 'fa-lock', titulo: 'Sesión', frontal: 'Puede mantener tu inicio de sesión', detalle: 'La aplicación usa una cookie de sesión para reconocer la autenticación mientras utilizás tu cuenta.', ejemplos: ['Cuenta', 'Sesión', 'Autenticación'], color: 'from-[#A3E635] to-[#84CC16]' },
+    { icon: 'fa-magic-wand-sparkles', titulo: 'Almacenamiento local', frontal: 'Datos guardados en el navegador', detalle: 'Algunas preferencias del perfil pueden guardarse en el almacenamiento local del navegador.', ejemplos: ['Preferencias', 'Perfil', 'Navegador'], color: 'from-[#0A0A0A] to-[#171717]' },
+    { icon: 'fa-chart-line', titulo: 'Analítica', frontal: 'No se declara un uso analítico', detalle: 'Esta página no afirma que el sitio mida navegación o visitas con cookies analíticas.', ejemplos: ['Uso por confirmar', 'Sin métricas publicadas'], color: 'from-[#171717] to-[#0A0A0A]' },
+    { icon: 'fa-bullhorn', titulo: 'Publicidad', frontal: 'No se declara publicidad personalizada', detalle: 'No se afirma que el sitio personalice anuncios o promociones según hábitos de navegación.', ejemplos: ['Sin segmentación declarada', 'Control del navegador'], color: 'from-[#84CC16] to-[#AA3000]' },
 ];
 
 const TiposCookies = () => {

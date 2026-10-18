@@ -31,6 +31,6 @@ describe('Contenido comercial veraz', () => {
   it('las promociones no publican precios, descuentos ni tiempos universales', () => {
     const promociones = leer('../../src/pages/Promociones/sections/PromoDestacada.jsx');
     expect(promociones).not.toMatch(/bs\.\s*[0-9]|-[0-9]+%|por tiempo limitado/);
-    expect(promociones).toContain('se conversa');
+    expect(promociones).toContain('alternativas de alcance');
   });
 });

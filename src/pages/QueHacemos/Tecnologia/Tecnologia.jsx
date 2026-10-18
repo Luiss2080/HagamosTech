@@ -9,8 +9,6 @@ const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
   { name: 'Python', icon: 'fa-brands fa-python', color: 'text-yellow-400' },
   { name: 'Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
-  { name: 'AWS', icon: 'fa-brands fa-aws', color: 'text-orange-400' },
-  { name: 'Docker', icon: 'fa-brands fa-docker', color: 'text-blue-500' },
   { name: 'MySQL', icon: 'fa-solid fa-database', color: 'text-indigo-400' },
   { name: 'GitHub', icon: 'fa-brands fa-github', color: 'text-white' },
   { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' }
@@ -39,13 +37,13 @@ const VERTICALS = [
     title: 'Interfaces y aplicaciones web',
     desc: 'Diseño de interfaces y herramientas digitales; alojamiento y operación de servidores no forman parte de la oferta.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
-    tags: ['AWS', 'Docker', 'Webhooks']
+    tags: ['Diseño', 'Interfaces', 'Web']
   },
   {
     title: 'Soluciones personalizadas',
     desc: 'Evaluamos necesidades digitales para proponer un alcance posible y conversarlo antes de iniciar.',
     icon: <Cpu size={32} className="text-[#84CC16]" />,
-    tags: ['Python', 'OpenAI', 'ML']
+    tags: ['Requisitos', 'Propuesta', 'Desarrollo']
   }
 ];
 

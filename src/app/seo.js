@@ -46,12 +46,12 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/servicios/automatizacion'),
     title: 'Soluciones digitales a medida | HagamosTech',
-    description: 'Automatizamos procesos y conectamos tus herramientas.',
+    description: 'Desarrollo de sistemas y aplicaciones web según el alcance acordado.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/inteligencia-artificial'),
-    title: 'Inteligencia Artificial | HagamosTech',
-    description: 'Asistentes, análisis predictivo e integración de IA.',
+    title: 'Soluciones digitales a medida | HagamosTech',
+    description: 'Evaluación de soluciones web, software y herramientas digitales a medida.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/para-tu-negocio'),
