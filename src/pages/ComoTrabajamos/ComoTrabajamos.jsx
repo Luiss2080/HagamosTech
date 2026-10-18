@@ -183,7 +183,7 @@ const ComoTrabajamos = () => {
                 <div className="container mx-auto px-6 max-w-4xl text-center relative z-20">
                     <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Vos ponés la necesidad. Nosotros el camino.</h2>
                     <p className="text-xs sm:text-sm text-slate-400 font-medium mb-8 max-w-lg mx-auto">
-                        HagamosTech es un espacio multidisciplinario creado para resolver de forma cercana y profesional. Escribinos sin compromiso.
+                        HagamosTech es un espacio multidisciplinario creado para resolver de forma cercana y profesional. Escribinos con alternativas según tus posibilidades.
                     </p>
                     <button
                         onClick={() => navigate('/contactanos')}

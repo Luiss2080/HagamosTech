@@ -25,9 +25,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Laura Méndez","role":"Fundadora, tienda de accesorios","text":"El branding y el catálogo QR cambiaron por completo la imagen de mi emprendimiento; ahora mis clientes encuentran todo más fácil."},
-  {"name":"Hugo Rojas","role":"Tienda de ropa","text":"Las campañas de ofertas que diseñaron impulsaron mis ventas durante el mes de inauguración."},
-  {"name":"Carla Suárez","role":"Emprendedora","text":"Configuraron mi WhatsApp Business con respuestas automáticas y ordenaron todos mis contactos. Genial."}
+  {"name":"Marca","role":"Ejemplo de proyecto","text":"Quiero desarrollar una identidad visual inicial para mi emprendimiento."},
+  {"name":"Catálogo digital","role":"Ejemplo de proyecto","text":"Necesito presentar mis productos o servicios en formato digital."},
+  {"name":"Piezas de difusión","role":"Ejemplo de proyecto","text":"Busco comunicar una promoción o fecha especial con recursos gráficos."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -180,7 +180,7 @@ const Negocio = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -270,7 +270,7 @@ const Negocio = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -378,12 +378,12 @@ Creación de Marca y Branding Básico, Manual de Identidad Visual, Menús QR y C
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

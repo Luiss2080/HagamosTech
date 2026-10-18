@@ -10,23 +10,23 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
 
 const BRANDS = [
-  {"name":"Asistentes Virtuales","tag":"Atención y soporte 24/7","icon":"fa-robot"},
-  {"name":"Repositorios de Prompts","tag":"Buenas prácticas para equipos","icon":"fa-comment-dots"},
-  {"name":"Análisis Predictivo","tag":"Decisiones basadas en datos","icon":"fa-chart-pie"},
-  {"name":"APIs de IA","tag":"Integración con tus sistemas","icon":"fa-code"}
+  {"name":"Aplicaciones web","tag":"Funciones según requisitos","icon":"fa-globe"},
+  {"name":"Paneles administrativos","tag":"Datos y permisos a definir","icon":"fa-table-columns"},
+  {"name":"Herramientas internas","tag":"Alcance sujeto a evaluación","icon":"fa-laptop-code"},
+  {"name":"Diseño de interfaces","tag":"Experiencia de uso a conversar","icon":"fa-pen-ruler"}
 ];
 
 const PROCESO = [
-  {"title":"Diagnóstico","desc":"Identificamos dónde la IA puede aportar mayor valor en tu operación."},
-  {"title":"Diseño","desc":"Definimos el asistente, modelo o repositorio de prompts adecuado."},
-  {"title":"Desarrollo","desc":"Entrenamos y probamos la solución con datos reales de tu negocio."},
-  {"title":"Despliegue","desc":"Implementamos la IA y la mantenemos evolucionando con soporte continuo."}
+  {"title":"Necesidad","desc":"Conversamos qué problema querés resolver y quiénes usarían la herramienta."},
+  {"title":"Requisitos","desc":"Revisamos funciones, datos, permisos, integraciones y viabilidad."},
+  {"title":"Propuesta","desc":"Acordamos alcance, entregables, etapas, presupuesto y fechas posibles."},
+  {"title":"Desarrollo","desc":"Trabajamos sobre lo acordado y presentamos el resultado para su revisión."}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Diego Arce","role":"Gerente Comercial","text":"El asistente virtual responde a nuestros clientes al instante y califica los leads automáticamente."},
-  {"name":"Natalia Vera","role":"Analista de Datos","text":"El análisis predictivo nos anticipa la demanda y mejora la toma de decisiones."},
-  {"name":"Roberto Vargas","role":"CEO","text":"Integrar la IA a nuestro sistema redujo tiempos y elevó la calidad del servicio."}
+  {"name":"Aplicación web","role":"Ejemplo de proyecto","text":"Quiero evaluar una herramienta web con funciones definidas para mis usuarios."},
+  {"name":"Panel administrativo","role":"Ejemplo de proyecto","text":"Necesito revisar qué información y permisos debería gestionar un panel."},
+  {"name":"Diseño de interfaz","role":"Ejemplo de proyecto","text":"Busco ordenar la experiencia y navegación de una solución digital."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -84,10 +84,10 @@ const FLOATING_CARDS = [
 ];
 
 const VALUE_POINTS = [
-  {"icon":"fa-brain","label":"IA Aplicada"},
-  {"icon":"fa-robot","label":"Asistentes 24/7"},
-  {"icon":"fa-chart-line","label":"Datos Predictivos"},
-  {"icon":"fa-rocket","label":"Escalable"}
+  {"icon":"fa-globe","label":"Aplicaciones web"},
+  {"icon":"fa-table-columns","label":"Paneles a medida"},
+  {"icon":"fa-database","label":"Gestión de datos"},
+  {"icon":"fa-comments","label":"Requisitos conversados"}
 ];
 
 const InteligenciaArtificial = () => {
@@ -128,7 +128,7 @@ const InteligenciaArtificial = () => {
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Inteligencia Artificial — HagamosTech
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Soluciones digitales — HagamosTech
               </span>
           </div>
 
@@ -138,18 +138,18 @@ const InteligenciaArtificial = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-<span className="block">Inteligencia Artificial</span>
+<span className="block">Soluciones digitales</span>
 <span className="block whitespace-nowrap">aplicada a. <span className="text-[#A3E635] relative inline-block z-10">tu negocio.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Integración de soluciones con IA de nueva generación: asistentes virtuales, repositorios de prompts y análisis de datos predictivos.
+                Desarrollo web y de software para necesidades específicas, sujeto a revisión de requisitos, alcance y viabilidad.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20implementar%20una%20solución%20con%20IA"
+                  href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20sobre%20una%20solución%20digital"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -160,7 +160,7 @@ const InteligenciaArtificial = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20inteligencia%20artificial"
+                  href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20sobre%20desarrollo%20web%20o%20software"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#A3E635] text-[#0A0A0A] hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -179,7 +179,7 @@ const InteligenciaArtificial = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -209,7 +209,7 @@ const InteligenciaArtificial = () => {
                 >
                   <img
                     src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
-                    alt="Inteligencia Artificial"
+                    alt="Diseño de aplicaciones y paneles"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -269,7 +269,7 @@ const InteligenciaArtificial = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -315,16 +315,16 @@ const InteligenciaArtificial = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES LA INTELIGENCIA ARTIFICIAL Y CÓMO IMPULSA TU NEGOCIO?
+                ¿CÓMO SE PLANTEA UNA SOLUCIÓN DIGITAL PERSONALIZADA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Integramos soluciones con IA de nueva generación —asistentes virtuales, repositorios de prompts y análisis predictivo— para automatizar la atención y mejorar las decisiones.
+Podemos evaluar aplicaciones web, paneles administrativos, herramientas internas y diseño de interfaces. Las funciones y entregables se definen según la necesidad y el alcance acordado.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Integración de Soluciones con Inteligencia Artificial, Automatización de Procesos Empresariales, y Gestión de Herramientas de Productividad.
+Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y Soluciones Personalizadas.
 </p>
 </div>
             </div>
@@ -349,7 +349,7 @@ Integración de Soluciones con Inteligencia Artificial, Automatización de Proce
                   <div className="mt-2">export const InteligenciaArtificial = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
-                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Inteligencia Artificial" /&gt;</div>
+                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Soluciones digitales" /&gt;</div>
                   <div className="pl-12">&lt;HeroSection theme="premium" /&gt;</div>
                   <div className="pl-12">&lt;ServicesGrid items=&#123;10&#125; /&gt;</div>
                   <div className="pl-8">&lt;/div&gt;</div>
@@ -377,12 +377,12 @@ Integración de Soluciones con Inteligencia Artificial, Automatización de Proce
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

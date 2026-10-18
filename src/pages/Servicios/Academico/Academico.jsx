@@ -26,9 +26,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Esteban Ramírez","role":"Estudiante de Medicina","text":"La presentación interactiva y los esquemas anatómicos que me diseñaron fueron la clave para sacar la máxima nota en mi defensa de tesis."},
-  {"name":"Prof. Ana Torres","role":"Docente Universitaria","text":"Los simuladores educativos y los diagramas de procesos mejoraron muchísimo la comprensión de mis alumnos."},
-  {"name":"Felipe Guzmán","role":"Tesista de Ingeniería","text":"Su asesoría en formato APA 7 y lógica de programación estructurada me salvó el proyecto de grado. Muy rigurosos."}
+  {"name":"Mentoría académica","role":"Ejemplo de acompañamiento","text":"Quiero comprender un tema, resolver dudas y planificar mi estudio."},
+  {"name":"Tarea guiada","role":"Ejemplo de acompañamiento","text":"Necesito orientación para resolver ejercicios y entender el procedimiento."},
+  {"name":"Proyecto socioformativo","role":"Ejemplo de acompañamiento","text":"Busco ordenar objetivos, actividades y evidencias de mi propio proyecto."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -181,7 +181,7 @@ const Academico = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -271,7 +271,7 @@ const Academico = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -379,12 +379,12 @@ Presentaciones PowerPoint e Interactivas, Formato APA 7 y Documentación Técnic
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

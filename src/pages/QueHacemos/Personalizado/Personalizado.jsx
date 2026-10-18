@@ -156,7 +156,7 @@ const PROJECTS = [
     category: 'SOPORTE',
     firstPart: 'Mantenimiento',
     highlightPart: 'Continuo',
-    desc: 'Soporte continuo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y estén actualizados.',
+    desc: 'Soporte según acuerdo y mantenimiento evolutivo para asegurar que tus sistemas actuales nunca fallen y estén actualizados.',
     icon: 'fa-server',
     images: ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80']
   },

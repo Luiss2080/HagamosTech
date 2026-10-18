@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const LOGROS = [
-    { year: '2026', icon: 'fa-trophy', titulo: 'Reconocimiento a la innovación', desc: 'Premiados a nivel regional por nuestros proyectos de IA y automatización para pymes.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', badge: 'bg-[#A3E635]', feats: [{ icon: 'fa-award', label: 'Premio regional', chip: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' }, { icon: 'fa-users', label: 'Votación del sector', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '2024', icon: 'fa-rocket', titulo: '+120 proyectos entregados', desc: 'Cinco años construyendo soluciones web, sistemas y automatizaciones para clientes de toda Bolivia.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25', badge: 'bg-[#171717]', feats: [{ icon: 'fa-diagram-project', label: '120+ proyectos', chip: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25' }, { icon: 'fa-calendar', label: '5 años', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '2022', icon: 'fa-graduation-cap', titulo: 'Acompañamiento académico', desc: 'Acompañamos a más de 300 estudiantes en sus proyectos de desarrollo web, lógica y uso de IA.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25', badge: 'bg-[#0A0A0A]', feats: [{ icon: 'fa-user-graduate', label: '300+ estudiantes', chip: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25' }, { icon: 'fa-diagram-project', label: 'Proyectos', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '2020', icon: 'fa-certificate', titulo: 'Nace HagamosTech', desc: 'Arrancamos con una idea simple: resolver necesidades reales con tecnología, sin vueltas.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', badge: 'bg-[#84CC16]', feats: [{ icon: 'fa-seedling', label: 'Fundación', chip: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' }, { icon: 'fa-handshake', label: 'Primeros clientes', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '01', icon: 'fa-globe', titulo: 'Desarrollo web', desc: 'Sitios y experiencias digitales sujetos a evaluación de contenidos, funciones y viabilidad.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', badge: 'bg-[#A3E635]', feats: [{ icon: 'fa-window-maximize', label: 'Sitios y portafolios', chip: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' }, { icon: 'fa-list-check', label: 'Alcance a acordar', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '02', icon: 'fa-code', titulo: 'Software a medida', desc: 'Sistemas, aplicaciones y bases de datos según requisitos y alcance acordados.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25', badge: 'bg-[#171717]', feats: [{ icon: 'fa-database', label: 'Datos y sistemas', chip: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25' }, { icon: 'fa-clipboard-list', label: 'Requisitos a revisar', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '03', icon: 'fa-graduation-cap', titulo: 'Acompañamiento académico', desc: 'Mentorías y orientación para que cada estudiante desarrolle su propio trabajo.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25', badge: 'bg-[#0A0A0A]', feats: [{ icon: 'fa-user-graduate', label: 'Según materia', chip: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25' }, { icon: 'fa-book-open', label: 'Avances propios', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '04', icon: 'fa-palette', titulo: 'Diseño gráfico', desc: 'Identidad visual y recursos gráficos para proyectos, emprendimientos y profesionales.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', badge: 'bg-[#84CC16]', feats: [{ icon: 'fa-pen-nib', label: 'Identidad visual', chip: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' }, { icon: 'fa-image', label: 'Piezas gráficas', chip: 'bg-white/5 text-white border-white/10' }] },
 ];
 
 const LogrosNovedades = () => {
@@ -16,18 +16,18 @@ const LogrosNovedades = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-5 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#171717]/10 text-slate-300 text-[10px] font-black tracking-widest uppercase mb-4 border border-[#171717]/20">
-                            <i className="fas fa-medal text-slate-300 mr-1"></i> Nuestros Logros
+                            <i className="fas fa-medal text-slate-300 mr-1"></i> Áreas de trabajo
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-3 leading-tight">
-                            Hitos que nos <span className="relative inline-block text-[#A3E635]">
-                                enorgullecen
+                            Soluciones para <span className="relative inline-block text-[#A3E635]">
+                                conversar
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
                                     <path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/>
                                 </svg>
                             </span>
                         </h2>
                         <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Un recorrido por los momentos que marcaron nuestra historia.
+                            Estos ejemplos orientan la conversación; cada solicitud se revisa según su alcance y viabilidad.
                         </p>
                     </div>
 

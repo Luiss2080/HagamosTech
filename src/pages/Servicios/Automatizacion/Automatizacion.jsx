@@ -10,23 +10,23 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Rintisa', 'La Calera', 'Texfina', 'Tai Loy', 'Auna', 'Daryza', 'Nexa'];
 
 const BRANDS = [
-  {"name":"Automatización de Procesos","tag":"CRMs y facturación conectados","icon":"fa-gears"},
-  {"name":"Soluciones con IA","tag":"Asistentes y análisis predictivo","icon":"fa-brain"},
-  {"name":"Correos Automáticos","tag":"Notificaciones y seguimiento","icon":"fa-envelope-open-text"},
-  {"name":"Herramientas de Productividad","tag":"Entornos colaborativos y Git","icon":"fa-toolbox"}
+  {"name":"Aplicaciones web","tag":"Funciones según requisitos","icon":"fa-globe"},
+  {"name":"Paneles administrativos","tag":"Datos y permisos a definir","icon":"fa-table-columns"},
+  {"name":"Herramientas internas","tag":"Alcance sujeto a evaluación","icon":"fa-laptop-code"},
+  {"name":"Diseño de interfaces","tag":"Experiencia de uso a conversar","icon":"fa-pen-ruler"}
 ];
 
 const PROCESO = [
-  {"title":"Diagnóstico","desc":"Identificamos las tareas manuales y repetitivas que más tiempo consumen."},
-  {"title":"Flujo","desc":"Diseñamos el recorrido del proceso conectando tus sistemas actuales."},
-  {"title":"Integración","desc":"Conectamos CRMs, sistemas de facturación y correos automáticos."},
-  {"title":"Productividad","desc":"Configuramos entornos colaborativos y repositorios de código para tu equipo."}
+  {"title":"Necesidad","desc":"Conversamos qué problema querés resolver y quiénes usarían la herramienta."},
+  {"title":"Requisitos","desc":"Revisamos funciones, datos, permisos, integraciones y viabilidad."},
+  {"title":"Propuesta","desc":"Acordamos alcance, entregables, etapas, presupuesto y fechas posibles."},
+  {"title":"Desarrollo","desc":"Trabajamos sobre lo acordado y presentamos el resultado para su revisión."}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Carla Rojas","role":"Administradora","text":"Lo que hacía en dos horas ahora ocurre solo: nuestros correos y facturas se generan automáticamente."},
-  {"name":"Paulo Méndez","role":"Jefe de Operaciones","text":"Conectaron nuestro CRM con la facturación y ahorramos semanas de trabajo manual."},
-  {"name":"Julia Salazar","role":"Startup","text":"Configuraron las herramientas del equipo; ahora coordinamos todo desde un solo lugar."}
+  {"name":"Sitio web","role":"Ejemplo de proyecto","text":"Quiero presentar mi empresa y facilitar el acceso a la información."},
+  {"name":"Sistema a medida","role":"Ejemplo de proyecto","text":"Necesito evaluar una herramienta digital según mis procesos y requisitos."},
+  {"name":"Integración técnica","role":"Ejemplo de proyecto","text":"Quiero revisar la viabilidad de conectar plataformas mediante una API."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -84,10 +84,10 @@ const FLOATING_CARDS = [
 ];
 
 const VALUE_POINTS = [
-  {"icon":"fa-gears","label":"Procesos Automáticos"},
-  {"icon":"fa-plug","label":"Sistemas Conectados"},
-  {"icon":"fa-bolt","label":"Tiempo Ahorrado"},
-  {"icon":"fa-users","label":"Equipos Conectados"}
+  {"icon":"fa-laptop-code","label":"Desarrollo digital"},
+  {"icon":"fa-list-check","label":"Alcance acordado"},
+  {"icon":"fa-database","label":"Datos según requisitos"},
+  {"icon":"fa-comments","label":"Revisión por etapas"}
 ];
 
 const Automatizacion = () => {
@@ -128,7 +128,7 @@ const Automatizacion = () => {
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
               <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
-                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Automatización — HagamosTech
+                  <i className="fa-solid fa-laptop-code mr-1.5"></i> Sistemas a medida — HagamosTech
               </span>
           </div>
 
@@ -138,18 +138,18 @@ const Automatizacion = () => {
             <div className="w-full xl:w-[35%] flex flex-col gap-5 text-center items-center xl:justify-center animate-slide-down">
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
-<span className="block">Automatización</span>
-<span className="block whitespace-nowrap">de procesos. <span className="text-[#A3E635] relative inline-block z-10">eficientes.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+<span className="block">Sistemas digitales</span>
+<span className="block whitespace-nowrap">a medida. <span className="text-[#A3E635] relative inline-block z-10">según tus necesidades.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Optimización de procesos repetitivos mediante herramientas de nueva generación para ahorrar tiempo y recursos.
+                Desarrollo de sistemas y herramientas web según los requisitos, alcance y viabilidad de cada proyecto.
               </p>
 
               {/* Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center">
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20automatizar%20procesos%20de%20mi%20empresa"
+                  href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20sobre%20un%20sistema%20a%20medida"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-full shadow-lg shadow-[#A3E635]/20 hover:shadow-[#A3E635]/35 hover:-translate-y-0.5 transition-all duration-300 border border-[#A3E635]/20 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -160,7 +160,7 @@ const Automatizacion = () => {
                   <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 ease-in-out"></div>
                 </a>
                 <a
-                  href="https://wa.me/59161320004?text=Hola,%20quisiera%20asesoría%20sobre%20automatización%20de%20procesos"
+                  href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20sobre%20una%20solución%20digital"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group relative overflow-hidden flex items-center justify-center gap-3 min-w-0 sm:min-w-[220px] w-full sm:w-auto h-12 px-6 bg-[#84CC16] border-2 border-[#84CC16] hover:bg-[#A3E635] text-[#0A0A0A] hover:text-white rounded-full shadow-lg shadow-[#84CC16]/30 hover:-translate-y-0.5 transition-all duration-300 active:scale-95 text-[11px] font-black uppercase tracking-[0.14em]"
@@ -179,7 +179,7 @@ const Automatizacion = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -209,7 +209,7 @@ const Automatizacion = () => {
                 >
                   <img
                     src="/img/07_Servicios/soluciones/desarrollo-web.jpg"
-                    alt="Automatización de Procesos"
+                    alt="Desarrollo de sistemas a medida"
                     loading="eager"
                     fetchPriority="high"
                     decoding="async"
@@ -269,7 +269,7 @@ const Automatizacion = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -315,16 +315,16 @@ const Automatizacion = () => {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
               <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-white dark:text-white uppercase leading-tight mb-6 tracking-tighter">
-                ¿QUÉ ES LA AUTOMATIZACIÓN DE PROCESOS Y CÓMO AHORRA TIEMPO A TU EMPRESA?
+                ¿CÓMO SE EVALÚA EL DESARROLLO DE UN SISTEMA A MEDIDA?
               </h2>
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Convertimos tareas repetitivas en flujos automáticos que conectan tu CRM, tu facturación y tus correos, reduciendo el trabajo manual y los errores.
+Revisamos qué funciones necesitás, quiénes usarían el sistema, qué datos requiere y qué integraciones son viables antes de definir una propuesta.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Automatización de Procesos Empresariales, Integración de Soluciones con Inteligencia Artificial, y Gestión de Herramientas de Productividad.
+Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y Soluciones Personalizadas.
 </p>
 </div>
             </div>
@@ -338,7 +338,7 @@ Automatización de Procesos Empresariales, Integración de Soluciones con Inteli
                     <span className="w-3 h-3 rounded-full bg-[#A3E635]/100"></span>
                     <span className="w-3 h-3 rounded-full bg-yellow-500"></span>
                     <span className="w-3 h-3 rounded-full bg-green-500"></span>
-                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">automatizacion.js</span>
+                    <span className="text-[10px] text-slate-400 font-bold ml-2 font-mono">sistemas.js</span>
                   </div>
                   <Terminal size={14} className="text-slate-500" />
                 </div>
@@ -349,7 +349,7 @@ Automatización de Procesos Empresariales, Integración de Soluciones con Inteli
                   <div className="mt-2">export const Automatizacion = () =&gt; &#123;</div>
                   <div className="pl-4">return (</div>
                   <div className="pl-8">&lt;div className="corporate-layout"&gt;</div>
-                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Automatización" /&gt;</div>
+                  <div className="pl-12">&lt;MetaTags title="HagamosTech — Sistemas a medida" /&gt;</div>
                   <div className="pl-12">&lt;HeroSection theme="premium" /&gt;</div>
                   <div className="pl-12">&lt;ServicesGrid items=&#123;10&#125; /&gt;</div>
                   <div className="pl-8">&lt;/div&gt;</div>
@@ -377,12 +377,12 @@ Automatización de Procesos Empresariales, Integración de Soluciones con Inteli
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

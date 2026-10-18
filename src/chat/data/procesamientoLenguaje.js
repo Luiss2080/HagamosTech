@@ -19,7 +19,7 @@ export const RESPUESTA_DESCONOCIDA =
   '• **Apoyo Académico** (presentaciones, APA 7, simuladores).\n' +
   '• **Emprendedores y Negocios** (marca, catálogos, publicidad).\n' +
   '• **Empleo** (CV ATS, LinkedIn, portafolios).\n' +
-  '• **Diseño Gráfico**, **Automatización e IA** y **soluciones a medida**.\n\n' +
+  '• **Diseño gráfico**, **acompañamiento académico** y **soluciones digitales a medida**.\n\n' +
   'Si preferís hablar con un asesor, escribí **"asesor"** o **"whatsapp"**.';
 
 export const BANCO_CONOCIMIENTO = [
@@ -28,7 +28,7 @@ export const BANCO_CONOCIMIENTO = [
     keywords: ['hola', 'buenos dias', 'buenas tardes', 'buenas noches', 'saludos', 'que tal', 'hey', 'niko'],
     answer:
       '¡Hola! 👋 Bienvenido a HagamosTech. Soy **Niko**, tu asistente virtual.\n\n' +
-      'Puedo contarte sobre nuestras **soluciones tecnológicas**, **apoyo académico**, servicios para **emprendedores**, **empleo**, **diseño**, **automatización e IA** y **soluciones a medida**.\n\n' +
+      'Puedo contarte sobre **desarrollo web y de software**, **diseño gráfico**, **acompañamiento académico**, servicios para **emprendedores y profesionales**, y **soluciones a medida**. El alcance y las condiciones se conversan para cada caso.\n\n' +
       '¿En qué te ayudo hoy?'
   },
   {
@@ -45,9 +45,9 @@ export const BANCO_CONOCIMIENTO = [
     id: 'servicios',
     keywords: ['servicios', 'soluciones', 'que hacen', 'que ofrecen', 'portafolio', 'catalogo de servicios', 'areas', 'categorias'],
     answer:
-      'Estas son nuestras áreas de solución:\n' +
-      '1. **Estudiantes y sector académico** → presentaciones, APA 7, infografías, mapas, simuladores y apoyo en programación.\n' +
-      '2. **Emprendedores y negocios** → marca, manual de identidad, menús QR, publicidad y gestión de clientes.\n' +
+      'Estas son nuestras áreas de trabajo:\n' +
+      '1. **Acompañamiento académico** → mentorías, tareas guiadas, informes, monografías y proyectos socioformativos.\n' +
+      '2. **Emprendedores y negocios** → marca, manual de identidad, catálogos digitales y piezas gráficas.\n' +
       '3. **Empleo** → CV optimizado ATS, LinkedIn, cartas, portafolios, entrevistas y certificados.\n' +
       '4. **Diseño gráfico** → logos, flyers, packaging, tarjetas y retoque fotográfico.\n' +
       '5. **Desarrollo web y e-commerce** → páginas, landing, tiendas online, catálogos y UI/UX.\n' +
@@ -66,8 +66,9 @@ export const BANCO_CONOCIMIENTO = [
       '• **Infografías, diagramas y líneas de tiempo** (esquemas anatómicos, flujos de datos).\n' +
       '• **Mapas conceptuales y portadas académicas**.\n' +
       '• **Simuladores educativos y proyectos de redes** (entornos virtuales, robótica educativa).\n' +
-      '• **Apoyo en proyectos de programación** (algoritmos y lógica).\n\n' +
-      'Contanos tu tema y te pasamos una propuesta.'
+      '• **Mentorías y apoyo en tareas** con ejercicios guiados.\n' +
+      '• **Orientación en informes, monografías y proyectos socioformativos**.\n\n' +
+      'El estudiante desarrolla y presenta su propio trabajo. La disponibilidad depende de la materia y el nivel; consultanos tu caso.'
   },
   {
     id: 'emprendedores',
@@ -75,11 +76,11 @@ export const BANCO_CONOCIMIENTO = [
     answer:
       'Para emprendedores y negocios ofrecemos:\n' +
       '• **Creación de marca y branding básico**.\n' +
-      '• **Manual de identidad visual** (paletas, tipografías, reglas 4x4).\n' +
-      '• **Menús QR y catálogos de productos**.\n' +
-      '• **Publicidad para promociones y ofertas** (flash sale, 2x1).\n' +
+      '• **Manual de identidad visual** (colores, tipografías y pautas de uso).\n' +
+      '• **Catálogos digitales de productos o servicios**.\n' +
+      '• **Publicidad para promociones y ofertas**.\n' +
       '• **Publicidad para fechas especiales** (Navidad, Black Friday).\n' +
-      '• **Gestión de clientes inicial** (WhatsApp Business y contactos).\n\n' +
+      '\n' +
       '¿Querés que veamos tu caso en particular?'
   },
   {
@@ -101,11 +102,11 @@ export const BANCO_CONOCIMIENTO = [
     answer:
       'En diseño gráfico integral hacemos:\n' +
       '• **Logos e identidad visual (isologotipos)**.\n' +
-      '• **Flyers, banners, pancartas y piezas para redes** (formato 4x4 y gran formato).\n' +
+      '• **Flyers, banners, pancartas y piezas para redes**.\n' +
       '• **Packaging, etiquetas y catálogos físicos**.\n' +
       '• **Tarjetas de presentación e invitaciones** (con QR).\n' +
       '• **Edición y retoque fotográfico**.\n\n' +
-      'Contame qué necesitás y te cotizamos.'
+      'Contame qué necesitás; conversamos alcance y presupuesto según el proyecto.'
   },
   {
     id: 'web',
@@ -113,7 +114,7 @@ export const BANCO_CONOCIMIENTO = [
     answer:
       'En desarrollo web y e-commerce ofrecemos:\n' +
       '• **Páginas web empresariales** y sitios corporativos.\n' +
-      '• **Landing pages y portafolios personales** de alta conversión.\n' +
+      '• **Landing pages y portafolios personales**.\n' +
       '• **Tiendas online básicas y sistemas de pedidos**.\n' +
       '• **Catálogos digitales online y blogs**.\n' +
       '• **Diseño UI/UX, formularios y web responsive**.\n\n' +
@@ -125,67 +126,55 @@ export const BANCO_CONOCIMIENTO = [
     answer:
       'Construimos soluciones tecnológicas a medida:\n' +
       '• **Desarrollo de sistemas web y software** (React, backends, Laravel/Blade).\n' +
-      '• **Diseño y gestión de bases de datos** (normalización, mantenimiento).\n' +
-      '• **Soporte tecnológico y DevOps** (despliegue, servidores, monitoreo).\n\n' +
-      'Contanos tu necesidad y te proponemos la arquitectura.'
+      '• **Diseño y gestión de bases de datos** según los requisitos del sistema.\n\n' +
+      'No ofrecemos operación de servidores, DevOps ni infraestructura compleja. Contanos tu necesidad para revisar el alcance.'
   },
   {
     id: 'ia',
     keywords: ['ia', 'inteligencia artificial', 'chatbot', 'chatbots', 'asistente', 'asistentes', 'automatizacion', 'automatizar', 'automatico', 'crm', 'facturacion', 'correos', 'prompts', 'github', 'productividad', 'integracion', 'integraciones', 'predictivo'],
     answer:
-      'Optimizamos procesos con automatización e IA:\n' +
-      '• **Integración de soluciones con IA** (prompts, asistentes virtuales, análisis predictivo).\n' +
-      '• **Automatización de procesos empresariales** (CRM, facturación, correos).\n' +
-      '• **Gestión de herramientas de productividad** (entornos colaborativos y GitHub).\n\n' +
-      '¿Qué tarea repetitiva querés automatizar?'
+      'No ofrecemos automatización de procesos, n8n ni servicios de inteligencia artificial aplicada. Podemos revisar si tu necesidad se resuelve con desarrollo web, software a medida, diseño de interfaces o una base de datos.'
   },
   {
     id: 'personalizadas',
     keywords: ['medida', 'personalizada', 'personalizado', 'idea', 'problema', 'necesidad', 'no encaja', 'especial', 'diferente', 'desde cero'],
     answer:
-      '¡Es nuestra especialidad! Aplicamos la filosofía **"Contanos tu problema, nosotros vemos cómo hacerlo"**:\n' +
+      'Cada solicitud se evalúa antes de confirmar el trabajo:\n' +
       '1. **Contanos** tu idea o frustración.\n' +
       '2. **Analizamos** viabilidad y tecnologías.\n' +
-      '3. **Proponemos** un plan con tiempos.\n' +
+      '3. **Proponemos** alcance, entregables, presupuesto y tiempos para conversar.\n' +
       '4. **Hacemos** la solución.\n' +
-      '5. **Entregamos** con soporte y confidencialidad.\n\n' +
+      '5. **Entregamos** lo acordado y explicamos el resultado.\n\n' +
       'Describime tu caso y lo evaluamos.'
   },
   {
     id: 'precios',
     keywords: ['precio', 'precios', 'costo', 'costos', 'cuanto cuesta', 'cuanto sale', 'presupuesto', 'cotizacion', 'cotizar', 'tarifa', 'tarifas', 'packs', 'pack', 'plan', 'planes', 'suscripcion', 'inversion'],
     answer:
-      'Cada proyecto se cotiza según su alcance. Te damos **presupuesto sin cargo** y, para mantenimiento, tenemos **planes de soporte** (Esencial, Profesional y Empresa).\n\n' +
-      'Contanos qué necesitás y te pasamos un número concreto. También podés ver los packs en la sección **Promociones**.'
+      'El presupuesto, las etapas y la modalidad de pago se conversan según tu proyecto y tus posibilidades. No tenemos precios universales publicados. Contanos qué necesitás para revisar alternativas.'
   },
   {
     id: 'como_trabajamos',
     keywords: ['como trabajan', 'proceso', 'metodologia', 'flujo', 'pasos', 'como es el proceso', 'plazos', 'tiempos', 'entrega', 'entregas', 'tiempo de entrega'],
     answer:
-      'Trabajamos con un modelo transparente de 5 pasos:\n' +
+      'El proceso se acuerda para cada solicitud:\n' +
       '1. **Contanos:** nos explicás tu idea o problema.\n' +
       '2. **Analizamos:** evaluamos viabilidad y tecnologías.\n' +
       '3. **Proponemos:** plan de acción, tiempos y presupuesto.\n' +
       '4. **Hacemos:** construimos el software, la identidad o el proyecto.\n' +
-      '5. **Entregamos:** despliegue con resultados y soporte continuo.'
+      '5. **Entregamos:** presentamos lo acordado y conversamos las opciones de seguimiento si las necesitás.'
   },
   {
     id: 'pagos',
     keywords: ['pago', 'pagos', 'pagar', 'transferencia', 'qr', 'efectivo', 'tarjeta', 'factura', 'nit', 'banco', 'comprobante'],
     answer:
-      'Métodos de pago disponibles:\n' +
-      '• **Transferencia bancaria** a cuentas oficiales.\n' +
-      '• **QR Simple**.\n' +
-      '• **Efectivo** (para entregas locales).\n' +
-      '• **Tarjeta** de débito/crédito.\n\n' +
-      'Emitimos **factura** por todas las soluciones; solo danos tu NIT o CI.'
+      'Las opciones de pago, anticipos y facturación se conversan y confirman antes de comenzar, de acuerdo con el servicio y la situación de cada cliente. Escribinos para revisar alternativas.'
   },
   {
     id: 'soporte',
     keywords: ['soporte', 'mantenimiento', 'actualizacion', 'actualizaciones', 'monitoreo', 'backup', 'ayuda tecnica', 'falla', 'error'],
     answer:
-      'Ofrecemos **soporte tecnológico continuo**: mantenimiento, actualizaciones, monitoreo y despliegue (DevOps).\n\n' +
-      'Si tu proyecto ya está en marcha, contanos qué falla y lo revisamos.'
+      'Podemos revisar mantenimiento, correcciones o mejoras de sistemas existentes. El alcance, la disponibilidad y la modalidad se acuerdan por separado. No ofrecemos operación de servidores ni DevOps.'
   },
   {
     id: 'contacto_humano',
@@ -200,8 +189,7 @@ export const BANCO_CONOCIMIENTO = [
     id: 'ubicacion',
     keywords: ['donde', 'ubicacion', 'direccion', 'oficina', 'santa cruz', 'horario', 'horarios', 'atencion', 'donde estan'],
     answer:
-      'Nuestra oficina principal está en **Av. San Martín y 2do Anillo, Equipetrol, Santa Cruz**.\n\n' +
-      'Horarios: **Lunes a viernes de 09:00 a 18:00**. También atendemos online.'
+      'Podés escribirnos por WhatsApp al **+591 61320004** o al correo **contacto@hagamostech.bo**. Los tiempos de respuesta se coordinan según disponibilidad.'
   },
   {
     id: 'redes',
@@ -216,8 +204,7 @@ export const BANCO_CONOCIMIENTO = [
     id: 'garantia',
     keywords: ['garantia', 'confidencial', 'confidencialidad', 'privacidad', 'reembolso', 'devolucion', 'seguridad'],
     answer:
-      'Trabajamos con **100% de confidencialidad** y garantía sobre lo entregado dentro del alcance acordado.\n\n' +
-      'Podés ver detalles en **Términos** y **Privacidad** (pie de página).'
+      'No publicamos una garantía universal: cualquier garantía o ajuste se conversa y se especifica en la propuesta del proyecto. Para información sobre datos personales, consultá la Política de Privacidad.'
   }
 ];
 

@@ -20,14 +20,14 @@ const BRANDS = [
 const PROCESO = [
   {"title":"Planificación","desc":"Analizamos tu negocio, competidores y metas de negocio para estructurar el sitemap óptimo."},
   {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una usabilidad excepcional."},
-  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS para lograr velocidad extrema y SEO óptimo."},
+  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS para lograr un rendimiento y una estructura SEO que se definen según el alcance."},
   {"title":"Lanzamiento","desc":"Desplegamos en la nube, optimizamos caché y realizamos indexación en Google."}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Juan Pérez","role":"CEO, TechStart","text":"Excelente servicio, muy profesionales y rápidos en la entrega de nuestra plataforma web."},
-  {"name":"Ana Gómez","role":"Directora, EduKids","text":"La página web superó nuestras expectativas; ahora nuestros alumnos pueden inscribirse sin problemas."},
-  {"name":"Carlos Díaz","role":"Fundador, tienda de tecnología","text":"El sistema de pedidos online que nos hicieron aumentó nuestras ventas significativamente."}
+  {"name":"Sitio corporativo","role":"Ejemplo de proyecto","text":"Quiero presentar mi empresa, sus servicios y formas de contacto."},
+  {"name":"Tienda o pedidos","role":"Ejemplo de proyecto","text":"Necesito mostrar productos y revisar las opciones de pedido que requiere mi negocio."},
+  {"name":"Portafolio digital","role":"Ejemplo de proyecto","text":"Busco reunir proyectos y trabajos en una página fácil de recorrer."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -86,9 +86,9 @@ const FLOATING_CARDS = [
 
 const VALUE_POINTS = [
   {"icon":"fa-globe","label":"Páginas Modernas"},
-  {"icon":"fa-gauge-high","label":"Velocidad de Carga <1s"},
-  {"icon":"fa-magnifying-glass","label":"SEO Google Ready"},
-  {"icon":"fa-shield","label":"Certificado SSL Incluido"}
+  {"icon":"fa-gauge-high","label":"Rendimiento a evaluar"},
+  {"icon":"fa-magnifying-glass","label":"Estructura SEO a definir"},
+  {"icon":"fa-shield","label":"Certificado SSL sujeto al servicio contratado"}
 ];
 
 const PaginasWeb = () => {
@@ -144,7 +144,7 @@ const PaginasWeb = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), carga rápida y máxima compatibilidad móvil.
+                Soluciones para digitalizar la presencia comercial mediante interfaces intuitivas (UI/UX), diseño adaptable a distintos tamaños de pantalla.
               </p>
 
               {/* Action Buttons */}
@@ -180,7 +180,7 @@ const PaginasWeb = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">+500 estudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widest leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -270,7 +270,7 @@ const PaginasWeb = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -378,12 +378,12 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

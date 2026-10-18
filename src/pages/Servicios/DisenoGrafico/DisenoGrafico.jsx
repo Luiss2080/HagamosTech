@@ -25,9 +25,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Ricardo Núñez","role":"Emprendedor","text":"El logo y el packaging ecológico de mi marca quedaron espectaculares; ahora mi producto se ve premium."},
-  {"name":"Sofía Linares","role":"Community Manager","text":"Los banners para redes y el retoque fotográfico mejoraron muchísimo la presentación de la marca."},
-  {"name":"Teo Vargas","role":"Organizador de eventos","text":"Las invitaciones y tarjetas con QR integrado fueron un éxito total en la presentación."}
+  {"name":"Identidad visual","role":"Ejemplo de proyecto","text":"Quiero definir una imagen coherente para presentar mi marca."},
+  {"name":"Piezas gráficas","role":"Ejemplo de proyecto","text":"Necesito piezas para redes, impresión o difusión de un evento."},
+  {"name":"Catálogo","role":"Ejemplo de proyecto","text":"Busco organizar visualmente los productos o servicios de mi emprendimiento."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -144,7 +144,7 @@ const DisenoGrafico = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Producción visual de alto impacto con garantía de calidad técnica, fondos transparentes y adaptabilidad para medios impresos y digitales.
+                Producción visual de alto impacto con revisión técnica según el alcance acordado, fondos transparentes y adaptabilidad para medios impresos y digitales.
               </p>
 
               {/* Action Buttons */}
@@ -180,7 +180,7 @@ const DisenoGrafico = () => {
                     <i key={i} className="fas fa-star text-xs" />
                   ))}
                 </div>
-                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widestá leading-none">+500 estáudiantes y clientes confían en HagamosTech</span>
+                <span className="text-[10px] font-black text-slate-400 dark:text-slate-450 uppercase tracking-widestá leading-none">Acompañamiento y soluciones según cada proyecto</span>
               </div>
 
               <div className="inline-flex itemás-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
@@ -270,7 +270,7 @@ const DisenoGrafico = () => {
               </span>
             </h2>
             <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto text-center">
-              Construimos y optimizamos tu plataforma digital a través de etapas ágiles y orientadas a resultados de alto nivel.
+              Definimos objetivos, alcance y entregables contigo antes de comenzar.
             </p>
           </div>
 
@@ -378,12 +378,12 @@ Logos e Identidad Visual (Isologotipos), Flyers, Banners, Pancartas y Redes Soci
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
             Casos reales, <br />
             <span className="text-[#A3E635] relative inline-block">
-              resultados comprobados.
+              soluciones definidas según el alcance acordado.
               <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Opiniones y valoraciones reales de clientes y profesionales que ya confiaron en HagamosTech.</p>
+            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
         </div>
 
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {

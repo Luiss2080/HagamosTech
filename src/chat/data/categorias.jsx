@@ -8,9 +8,9 @@ export const categories = [
     icon: <Wrench size={16} />,
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
-      { q: '¿Qué soluciones ofrecen?', a: '**Desarrollo web y e-commerce, sistemas y software a medida, bases de datos, soporte y DevOps, automatización e inteligencia artificial.** Contanos qué necesitás y te armamos una propuesta.' },
-      { q: '¿Integran inteligencia artificial?', a: '**Sí.** Asistentes virtuales, repositorios de prompts, automatización de procesos y análisis predictivo aplicados a tu negocio.' },
-      { q: '¿Hacen soluciones a medida?', a: '**Sí, es nuestra especialidad.** "Contanos tu problema, nosotros vemos cómo hacerlo": analizamos, proponemos y construimos.' }
+      { q: '¿Qué soluciones ofrecen?', a: '**Desarrollo web y de software, diseño gráfico y soluciones digitales a medida.** Contanos qué necesitás; revisamos el alcance y conversamos alternativas.' },
+      { q: '¿Ofrecen automatizaciones, n8n o servidores?', a: '**No ofrecemos automatización de procesos, n8n, operación de servidores ni infraestructura compleja.** Sí podemos evaluar desarrollo web, software, bases de datos y soluciones digitales dentro de nuestro alcance.' },
+      { q: '¿Hacen soluciones a medida?', a: '**Evaluamos cada solicitud.** Revisamos los requisitos y te contamos qué opciones son viables, con alcance y condiciones conversadas antes de comenzar.' }
     ]
   },
   {
@@ -19,7 +19,7 @@ export const categories = [
     icon: <BookOpen size={16} />,
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
-      { q: '¿Ayudan con trabajos académicos?', a: '**Presentaciones PowerPoint e interactivas, formato APA 7, infografías, diagramas, líneas de tiempo, mapas conceptuales y portadas académicas.**' },
+      { q: '¿Ayudan con trabajos académicos?', a: '**Brindamos mentorías, tareas guiadas y orientación para informes, monografías y proyectos socioformativos**, además de presentaciones, formato APA 7 y recursos visuales. El estudiante desarrolla y presenta su propio trabajo.' },
       { q: '¿Hacen simuladores y proyectos de redes?', a: '**Sí.** Entornos virtuales para pruebas de redes, robótica educativa y simulación de sistemas informáticos.' },
       { q: '¿Dan apoyo en programación?', a: '**Sí.** Asesoría en código estructurado, algoritmos y lógica computacional para tus proyectos.' }
     ]
@@ -30,9 +30,9 @@ export const categories = [
     icon: <Truck size={16} />,
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
-      { q: '¿Ayudan a empezar un negocio?', a: '**Creación de marca, manual de identidad visual, menús QR y catálogos, publicidad para promociones y fechas especiales, y gestión de clientes.**' },
+      { q: '¿Ayudan a empezar un negocio?', a: '**Creación de marca, manual de identidad visual, catálogos digitales y piezas gráficas** para promociones o fechas especiales. El alcance se conversa según lo que necesites.' },
       { q: '¿Mejoran mi perfil profesional?', a: '**CV optimizado ATS, perfil de LinkedIn, cartas de presentación, portafolios, preparación de entrevistas y certificados digitales.**' },
-      { q: '¿Cómo contrato un servicio?', a: '**Por WhatsApp al +591 61320004.** Te damos una propuesta a medida, sin compromiso.' }
+      { q: '¿Cómo contrato un servicio?', a: '**Escribinos por WhatsApp al +591 61320004.** Conversamos sobre tu necesidad, posibilidades, presupuesto y modalidad antes de confirmar una propuesta.' }
     ]
   },
   {

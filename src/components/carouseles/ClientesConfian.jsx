@@ -2,15 +2,15 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ROW1 = [
-  { name: 'FitCenter', logoIcon: 'fa-dumbbell', industry: 'Software de gimnasios', icon: 'fa-laptop-code', metric: 'Gestión: 100%' },
-  { name: 'Termeco', logoIcon: 'fa-screwdriver-wrench', industry: 'Servicios técnicos', icon: 'fa-gears', metric: 'Procesos: +95%' },
-  { name: 'EcoPlast', logoIcon: 'fa-recycle', industry: 'Soluciones industriales', icon: 'fa-industry', metric: 'Eficiencia: +90%' }
+  { name: 'Sitio web', logoIcon: 'fa-globe', industry: 'Presencia digital', icon: 'fa-code', metric: 'A evaluar' },
+  { name: 'Sistema a medida', logoIcon: 'fa-window-maximize', industry: 'Gestión de información', icon: 'fa-database', metric: 'Según alcance' },
+  { name: 'Base de datos', logoIcon: 'fa-database', industry: 'Organización de datos', icon: 'fa-table', metric: 'Según requisitos' }
 ];
 
 const ROW2 = [
-  { name: 'ZoofiPets', logoIcon: 'fa-paw', industry: 'Clínicas', icon: 'fa-heart-pulse', metric: 'Atención: +99%' },
-  { name: 'Pyme local', logoIcon: 'fa-store', industry: 'Comercio y retail', icon: 'fa-bag-shopping', metric: 'Ventas: +80%' },
-  { name: 'Startup', logoIcon: 'fa-rocket', industry: 'Tecnología', icon: 'fa-lightbulb', metric: 'Lanzamiento: 100%' }
+  { name: 'Mentoría académica', logoIcon: 'fa-book-open', industry: 'Acompañamiento', icon: 'fa-user-graduate', metric: 'Según materia' },
+  { name: 'Diseño gráfico', logoIcon: 'fa-pen-nib', industry: 'Identidad y piezas', icon: 'fa-palette', metric: 'A conversar' },
+  { name: 'Portafolio digital', logoIcon: 'fa-briefcase', industry: 'Presentación profesional', icon: 'fa-id-card', metric: 'Según alcance' }
 ];
 
 const TrustedClients = () => {
@@ -52,14 +52,14 @@ const TrustedClients = () => {
         {/* Title */}
         <div className="text-center mb-4 px-6">
           <h2 className="text-2xl sm:text-3xl md:text-3xl lg:text-4xl font-black text-white leading-none">
-            Ejemplos de soluciones que <span className="text-[#A3E635] relative inline-block">construimos<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
+            Tipos de soluciones que <span className="text-[#A3E635] relative inline-block">podemos evaluar<svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-[#A3E635] drop-shadow-[0_0_8px_rgba(163,230,53,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round" /></svg></span>
           </h2>
         </div>
 
         {/* Description */}
         <div className="text-center max-w-3xl mx-auto mb-10 px-6">
           <p className="text-sm font-semibold text-white/60 leading-relaxed">
-            Tipos de proyectos y sectores donde aplicamos nuestras soluciones: software, automatización, web y diseño.
+            Son ejemplos orientativos, no casos de clientes ni resultados publicados. La viabilidad y el alcance se conversan para cada solicitud.
           </p>
         </div>
 
@@ -126,11 +126,7 @@ const TrustedClients = () => {
                         
                         <div className="flex items-center justify-center gap-1 mt-0.5 leading-tight">
                           <div className="flex text-[#A3E635] text-[8px]">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-lightbulb"></i>
                           </div>
                           <span className="text-[8px] font-black text-[#A3E635] uppercase tracking-wider">
                             {client.metric}
@@ -142,7 +138,7 @@ const TrustedClients = () => {
                         onClick={() => window.openModal?.('contactModal')}
                         className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
-                        <span>Ver detalles</span>
+                        <span>Consultar opciones</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
                       </button>
                     </div>
@@ -193,11 +189,7 @@ const TrustedClients = () => {
                         
                         <div className="flex items-center justify-center gap-1 mt-0.5 leading-tight">
                           <div className="flex text-[#A3E635] text-[8px]">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
+                            <i className="fa-solid fa-lightbulb"></i>
                           </div>
                           <span className="text-[8px] font-black text-[#A3E635] uppercase tracking-wider">
                             {client.metric}
@@ -209,7 +201,7 @@ const TrustedClients = () => {
                         onClick={() => window.openModal?.('contactModal')}
                         className="w-full py-1.5 rounded-lg bg-[#A3E635] text-[#0A0A0A] hover:bg-[#84CC16] border border-transparent text-[8.5px] font-black uppercase tracking-wider transition-all duration-300 flex items-center justify-center gap-2 shadow-md shadow-[#A3E635]/15 hover:-translate-y-0.5 active:scale-95 cursor-pointer"
                       >
-                        <span>Ver detalles</span>
+                        <span>Consultar opciones</span>
                         <i className="fa-solid fa-arrow-up-right-from-square text-[7.5px]"></i>
                       </button>
                     </div>

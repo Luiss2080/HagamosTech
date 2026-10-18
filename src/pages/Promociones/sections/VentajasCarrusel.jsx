@@ -7,9 +7,9 @@ const originalHighlights = [
         id: 'medida',
         title: 'Soluciones',
         highlight: 'A Medida',
-        desc: 'Desarrollamos web, sistemas y automatizaciones adaptadas a tu necesidad real: "Contanos tu problema, nosotros vemos cómo hacerlo".',
+        desc: 'Revisamos la necesidad, explicamos qué opciones son viables y conversamos el alcance según tus posibilidades.',
         icon: 'fa-microchip',
-        badge: 'Soluciones reales',
+        badge: 'Alcance conversado',
         color: "bg-[#171717]",
         textColor: "text-white",
         iconColor: "text-[#A3E635] bg-[#111827]",
@@ -17,36 +17,36 @@ const originalHighlights = [
         features: [
             { icon: 'fa-globe', text: 'Desarrollo Web' },
             { icon: 'fa-laptop-code', text: 'Sistemas' },
-            { icon: 'fa-gears', text: 'Automatización' },
-            { icon: 'fa-robot', text: 'IA' }
+            { icon: 'fa-graduation-cap', text: 'Acompañamiento académico' },
+            { icon: 'fa-palette', text: 'Diseño' }
         ]
     },
     {
         id: 'agil',
         title: 'Entregas',
-        highlight: 'Ágiles',
-        desc: 'Trabajamos en sprints cortos con entregas parciales para que veas avances desde la primera semana y ajustemos sobre la marcha.',
+        highlight: 'Acordadas',
+        desc: 'Definimos etapas y fechas de entrega en la propuesta, de acuerdo con el alcance y la disponibilidad.',
         icon: 'fa-bolt',
-        badge: 'Entregas rápidas',
+        badge: 'Fechas conversadas',
         color: "bg-[#171717]",
         textColor: "text-white",
         iconColor: "text-slate-300 bg-[#A3E635]",
         badgeColor: "bg-white/10 text-[#A3E635] border-[#A3E635]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
-            { icon: 'fa-list-check', text: 'Sprints' },
-            { icon: 'fa-desktop', text: 'Demos' },
-            { icon: 'fa-comments', text: 'Feedback' },
-            { icon: 'fa-wand-magic-sparkles', text: 'Ajustes' }
+            { icon: 'fa-list-check', text: 'Etapas' },
+            { icon: 'fa-file-lines', text: 'Entregables' },
+            { icon: 'fa-comments', text: 'Revisión' },
+            { icon: 'fa-pen', text: 'Ajustes acordados' }
         ]
     },
     {
         id: 'soporte',
         title: 'Soporte',
         highlight: 'Continuo',
-        desc: 'Acompañamos tu proyecto después del lanzamiento: mantenimiento, mejoras y ayuda directa por WhatsApp cuando lo necesites.',
+        desc: 'Podemos conversar sobre mantenimiento o mejoras después de la entrega. La disponibilidad, el alcance y el canal de atención se acuerdan por separado.',
         icon: 'fa-headset',
-        badge: 'Soporte 24/7',
+        badge: 'Según acuerdo',
         color: "bg-[#171717]",
         textColor: "text-white",
         iconColor: "text-[#A3E635] bg-[#111827]",
@@ -54,17 +54,17 @@ const originalHighlights = [
         features: [
             { icon: 'fa-wrench', text: 'Mantenimiento' },
             { icon: 'fa-arrow-trend-up', text: 'Mejoras' },
-            { icon: 'fa-signal', text: 'Monitoreo' },
+            { icon: 'fa-file-contract', text: 'Alcance definido' },
             { icon: 'fa-circle-question', text: 'Ayuda' }
         ]
     },
     {
         id: 'calidad',
         title: 'Calidad',
-        highlight: 'Garantizada',
-        desc: 'Código limpio, buenas prácticas y pruebas automatizadas en cada entrega para que tu solución sea estable y mantenible.',
+        highlight: 'Conversada',
+        desc: 'Los criterios de revisión, documentación y pruebas se detallan según las características de cada proyecto.',
         icon: 'fa-shield-halved',
-        badge: 'Confianza Total',
+        badge: 'Criterios acordados',
         color: "bg-[#111827]",
         textColor: "text-white",
         iconColor: "text-[#A3E635] bg-[#171717]",
@@ -79,21 +79,21 @@ const originalHighlights = [
     },
     {
         id: 'formacion',
-        title: 'Formación',
-        highlight: 'Cercana',
-        desc: 'Explicamos cada solución en lenguaje claro y capacitamos a tu equipo para que la use sin depender de nadie.',
+        title: 'Acompañamiento',
+        highlight: 'Académico',
+        desc: 'Ofrecemos orientación para comprender temas, resolver ejercicios y avanzar en trabajos propios, según materia y disponibilidad.',
         icon: 'fa-graduation-cap',
-        badge: 'Aprendé con nosotros',
+        badge: 'El estudiante desarrolla su trabajo',
         color: "bg-[#0A0A0A]",
         textColor: "text-white",
         iconColor: "text-[#0A0A0A] bg-[#A3E635]",
         badgeColor: "bg-white/10 text-[#A3E635] border-[#A3E635]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
-            { icon: 'fa-chalkboard-user', text: 'Capacitación' },
-            { icon: 'fa-book-open', text: 'Guías' },
-            { icon: 'fa-users', text: 'Talleres' },
-            { icon: 'fa-file-lines', text: 'Material' }
+            { icon: 'fa-chalkboard-user', text: 'Mentorías' },
+            { icon: 'fa-book-open', text: 'Ejercicios guiados' },
+            { icon: 'fa-list-check', text: 'Avances' },
+            { icon: 'fa-file-lines', text: 'Informes y monografías' }
         ]
     }
 ];
@@ -233,7 +233,7 @@ const VentajasCarrusel = () => {
                         </span>
                     </h2>
                     <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                        Descubrí por qué elegir HagamosTech: soluciones a medida, entregas ágiles, soporte continuo, calidad garantizada y un equipo que te explica todo en lenguaje claro.
+                        Conocé nuestras áreas de trabajo y conversemos qué alcance, condiciones y alternativas se ajustan a tu proyecto.
                     </p>
                 </div>
 

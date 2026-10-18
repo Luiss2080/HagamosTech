@@ -17,7 +17,7 @@ const TECH_STACK = [
 ];
 
 const METRICS = [
-  { label: 'Uptime Garantizado', value: '99.9%', icon: <Zap size={24} /> },
+  { label: 'Disponibilidad según proveedor', value: '99.9%', icon: <Zap size={24} /> },
   { label: 'Proyectos Escalables', value: '+50', icon: <Server size={24} /> },
   { label: 'Seguridad en Datos', value: 'Nivel 1', icon: <ShieldCheck size={24} /> }
 ];

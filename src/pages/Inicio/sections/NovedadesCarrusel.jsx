@@ -22,91 +22,11 @@ const getIconForInclude = (text) => {
 
 // Datos de Novedades alineados al Catálogo Maestro
 const noticias = [
-  {
-    id: 'n1',
-    title: 'Nueva línea de Landing Pages',
-    desc: 'Lanzamos packs de landing pages de alta conversión para captar clientes, con formulario de contacto y hosting incluido.',
-    category: 'Lanzamiento',
-    status: 'Activo',
-    date: '25 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-rocket',
-    specs: {
-      col1: { label: 'Entrega', value: 'Rápida', icon: 'fa-bolt' },
-      col2: { label: 'Diseño', value: 'Responsive', icon: 'fa-mobile-screen' },
-      col3: { label: 'Acceso', value: 'Hosting 1 año', icon: 'fa-server' }
-    },
-    includes: ['Diseño', 'Web', 'SEO'],
-    link: '/servicios/desarrollo-web'
-  },
-  {
-    id: 'n2',
-    title: 'Asistentes con IA para tu web',
-    desc: 'Mostramos asistentes virtuales y automatizaciones que atienden consultas de tus clientes 24/7.',
-    category: 'IA',
-    status: 'Demo',
-    date: '20 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-brain',
-    specs: {
-      col1: { label: 'Modelo', value: 'A medida', icon: 'fa-microchip' },
-      col2: { label: 'Canal', value: 'Web / WhatsApp', icon: 'fa-comments' },
-      col3: { label: 'Integración', value: 'API', icon: 'fa-plug' }
-    },
-    includes: ['IA', 'Chatbot', 'API'],
-    link: '/servicios/inteligencia-artificial'
-  },
-  {
-    id: 'n3',
-    title: 'Convenio de Digitalización',
-    desc: 'Firmamos alianzas para digitalizar más de 20 emprendimientos locales con catálogos web y contacto directo a WhatsApp.',
-    category: 'Alianza',
-    status: 'Éxito',
-    date: '15 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-handshake',
-    specs: {
-      col1: { label: 'Negocios', value: '20+ PYMES', icon: 'fa-briefcase' },
-      col2: { label: 'Solución', value: 'Catálogos', icon: 'fa-list-check' },
-      col3: { label: 'Línea', value: 'WhatsApp', icon: 'fa-message' }
-    },
-    includes: ['Proyecto', 'Diseño', 'Soporte'],
-    link: '/servicios/para-tu-negocio'
-  },
-  {
-    id: 'n4',
-    title: 'Apoyo académico ampliado',
-    desc: 'Presentaciones interactivas, formato APA 7, infografías y simuladores para proyectos académicos.',
-    category: 'Academia',
-    status: 'Nuevo',
-    date: '10 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-graduation-cap',
-    specs: {
-      col1: { label: 'Formato', value: 'PPT / PDF', icon: 'fa-file-powerpoint' },
-      col2: { label: 'Norma', value: 'APA 7', icon: 'fa-quote-right' },
-      col3: { label: 'Nivel', value: 'Universitario', icon: 'fa-graduation-cap' }
-    },
-    includes: ['Presentaciones', 'APA 7', 'Simuladores'],
-    link: '/servicios/apoyo-academico'
-  },
-  {
-    id: 'n5',
-    title: 'Automatización para pymes',
-    desc: 'Conectamos CRMs, sistemas de facturación y correos automáticos para reducir el trabajo manual.',
-    category: 'Automatización',
-    status: 'Activo',
-    date: '05 de Junio, 2026',
-    img: 'https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=600&auto=format&fit=crop&q=60',
-    icon: 'fa-gears',
-    specs: {
-      col1: { label: 'Alcance', value: 'A medida', icon: 'fa-sliders' },
-      col2: { label: 'Procesos', value: 'CRM / Facturación', icon: 'fa-diagram-project' },
-      col3: { label: 'Soporte', value: 'Continuo', icon: 'fa-headset' }
-    },
-    includes: ['Automatización', 'Integraciones', 'Soporte'],
-    link: '/servicios/automatizacion'
-  }
+  { id: 'n1', title: 'Páginas web para distintos objetivos', desc: 'Landing pages, sitios institucionales, catálogos y portafolios. Las funciones y entregas se acuerdan según el proyecto.', category: 'Desarrollo web', status: 'Guía', date: 'Información de servicio', img: 'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?w=600&auto=format&fit=crop&q=60', icon: 'fa-globe', specs: { col1: { label: 'Tipo', value: 'A evaluar', icon: 'fa-window-maximize' }, col2: { label: 'Diseño', value: 'Según alcance', icon: 'fa-mobile-screen' }, col3: { label: 'Contenido', value: 'A definir', icon: 'fa-file-lines' } }, includes: ['Diseño', 'Web', 'Contenido'], link: '/servicios/desarrollo-web' },
+  { id: 'n2', title: 'Sistemas y software a medida', desc: 'Revisamos requisitos, perfiles de usuario y datos antes de acordar el alcance y la viabilidad.', category: 'Software', status: 'Guía', date: 'Información de servicio', img: 'https://images.unsplash.com/photo-1677442136019-21780efad99a?w=600&auto=format&fit=crop&q=60', icon: 'fa-code', specs: { col1: { label: 'Requisitos', value: 'A revisar', icon: 'fa-list-check' }, col2: { label: 'Funciones', value: 'A definir', icon: 'fa-sliders' }, col3: { label: 'Etapas', value: 'A acordar', icon: 'fa-diagram-project' } }, includes: ['Sistemas', 'Software', 'Datos'], link: '/servicios/sistemas-apps' },
+  { id: 'n3', title: 'Diseño gráfico para marcas y proyectos', desc: 'Identidad visual, piezas de difusión y catálogos según los usos y formatos que necesites.', category: 'Diseño', status: 'Guía', date: 'Información de servicio', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&auto=format&fit=crop&q=60', icon: 'fa-palette', specs: { col1: { label: 'Identidad', value: 'A conversar', icon: 'fa-pen-nib' }, col2: { label: 'Piezas', value: 'Según necesidad', icon: 'fa-image' }, col3: { label: 'Formatos', value: 'A acordar', icon: 'fa-file-image' } }, includes: ['Proyecto', 'Diseño', 'Piezas'], link: '/servicios/diseno-grafico' },
+  { id: 'n4', title: 'Acompañamiento académico', desc: 'Mentorías y orientación para tareas guiadas, informes, monografías y proyectos socioformativos. El estudiante realiza su propio trabajo.', category: 'Academia', status: 'Según disponibilidad', date: 'Información de servicio', img: 'https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?w=600&auto=format&fit=crop&q=60', icon: 'fa-graduation-cap', specs: { col1: { label: 'Materia', value: 'A consultar', icon: 'fa-book' }, col2: { label: 'Nivel', value: 'A consultar', icon: 'fa-graduation-cap' }, col3: { label: 'Modalidad', value: 'A coordinar', icon: 'fa-comments' } }, includes: ['Mentorías', 'Orientación', 'Avances'], link: '/servicios/apoyo-academico' },
+  { id: 'n5', title: 'Mantenimiento y mejoras', desc: 'Podemos revisar correcciones y nuevas funciones para sistemas existentes. Alcance, disponibilidad y modalidad se conversan.', category: 'Soporte', status: 'A consultar', date: 'Información de servicio', img: 'https://images.unsplash.com/photo-1600132806608-231446b2e7af?w=600&auto=format&fit=crop&q=60', icon: 'fa-screwdriver-wrench', specs: { col1: { label: 'Sistema', value: 'A revisar', icon: 'fa-laptop-code' }, col2: { label: 'Alcance', value: 'A definir', icon: 'fa-sliders' }, col3: { label: 'Atención', value: 'A coordinar', icon: 'fa-comments' } }, includes: ['Revisión', 'Mejoras', 'Acuerdo'], link: '/servicios/sistemas-apps' }
 ];
 
 // Componente Tarjeta de Noticia (Mismo diseño exacto que Servicios)
@@ -340,7 +260,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
             </span>
           </h2>
           <p className="text-lg text-slate-400 font-medium leading-relaxed">
-            Mantente al tanto de nuestros eventos, lanzamientos de productos, convenios educativos y los logros más recientes de nuestra comunidad.
+            Explorá información sobre nuestras áreas de trabajo. La disponibilidad y las condiciones de cada servicio se confirman al consultar.
           </p>
         </div>
 

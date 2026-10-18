@@ -2,12 +2,12 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
-    { titulo: 'Asistentes con IA', desc: 'Atención al cliente 24/7 para tu web o negocio.', img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&auto=format&fit=crop&q=60', tag: 'IA' },
-    { titulo: 'Soporte ampliado', desc: 'Te atendemos por WhatsApp de lunes a sábado.', img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&auto=format&fit=crop&q=60', tag: 'SOPORTE' },
-    { titulo: 'Taller de React', desc: 'Cupos abiertos para el próximo grupo.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'ACADEMIA' },
-    { titulo: 'Hosting y dominio', desc: 'Incluidos en los packs de páginas web.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60', tag: 'WEB' },
-    { titulo: 'Automatización de procesos', desc: 'Conectá tus herramientas y ahorrá tiempo.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&auto=format&fit=crop&q=60', tag: 'PRODUCTO' },
-    { titulo: 'Estamos contratando', desc: 'Buscamos desarrolladores frontend y backend.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60', tag: 'TRABAJO' },
+    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'WEB' },
+    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: 'https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&auto=format&fit=crop&q=60', tag: 'SOFTWARE' },
+    { titulo: 'Acompañamiento académico', desc: 'Mentorías, ejercicios guiados e informes, sujeto a materia y disponibilidad.', img: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=400&auto=format&fit=crop&q=60', tag: 'ACADEMIA' },
+    { titulo: 'Diseño gráfico', desc: 'Identidad visual, piezas gráficas y catálogos según tu necesidad.', img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&auto=format&fit=crop&q=60', tag: 'DISEÑO' },
+    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&auto=format&fit=crop&q=60', tag: 'EMPLEO' },
+    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=400&auto=format&fit=crop&q=60', tag: 'CONSULTA' },
 ];
 
 const TAG_STYLES = {

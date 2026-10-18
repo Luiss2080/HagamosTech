@@ -10,10 +10,10 @@ const NAV_ITEMS = [
         icon: 'fa-layer-group',
         type: 'dropdown',
         subItems: [
-            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo, sistemas, automatización e IA.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
-            { id: 'cat-academia', label: 'Academia', desc: 'Proyectos, simulaciones y recursos educativos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
-            { id: 'cat-negocios', label: 'Negocios', desc: 'Digitalización, páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-store' },
-            { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: '¿No sabés qué necesitás? Contanos el problema.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
+            { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo web, sistemas y soluciones digitales a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
+            { id: 'cat-academia', label: 'Academia', desc: 'Mentorías y orientación para avanzar en tus proyectos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
+            { id: 'cat-negocios', label: 'Negocios', desc: 'Identidad visual, diseño y presencia web.', target: '/que-hacemos/negocios', icon: 'fa-store' },
+            { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: 'Revisamos tu necesidad y conversamos alternativas viables.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
     },
     {
@@ -24,8 +24,8 @@ const NAV_ITEMS = [
         subItems: [
             { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
             { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
-            { id: 'srv-auto', label: 'Automatización', desc: 'Procesos y tareas automatizadas.', target: '/servicios/automatizacion', icon: 'fa-gear' },
-            { id: 'srv-ia', label: 'Inteligencia Artificial', desc: 'Soluciones inteligentes a medida.', target: '/servicios/inteligencia-artificial', icon: 'fa-robot' },
+            { id: 'srv-auto', label: 'Sistemas a medida', desc: 'Evaluación de herramientas digitales según tus requisitos.', target: '/servicios/automatizacion', icon: 'fa-gear' },
+            { id: 'srv-ia', label: 'Aplicaciones y paneles', desc: 'Diseño de interfaces para productos digitales.', target: '/servicios/inteligencia-artificial', icon: 'fa-window-maximize' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
             { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
             { id: 'srv-empleo', label: 'Empleo', desc: 'CVs y preparación profesional.', target: '/servicios/empleo', icon: 'fa-user-tie' },
@@ -38,9 +38,9 @@ const NAV_ITEMS = [
         icon: 'fa-users',
         type: 'dropdown',
         subItems: [
-            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Proyectos, herramientas y recursos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
+            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Mentorías, tareas guiadas e informes académicos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
             { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Páginas web y automatización.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
+            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Sitios web, catálogos y recursos gráficos.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
             { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
             { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
@@ -55,7 +55,7 @@ const NAV_ITEMS = [
             { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
             { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
             { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: '¿Para quién?', desc: 'Cualquier cliente y cualquier proyecto.', target: '/#que-hacemos', icon: 'fa-users' },
+            { id: 'sn-publico', label: '¿Para quién?', desc: 'Servicios para estudiantes, profesionales y organizaciones.', target: '/#que-hacemos', icon: 'fa-users' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },

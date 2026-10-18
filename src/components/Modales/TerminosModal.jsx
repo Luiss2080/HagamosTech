@@ -4,15 +4,15 @@ import CircleParticles from '../fondos/ParticulasCirculares';
 const TERMS_SECTIONS = [
     {
         title: '1. Servicios y soluciones',
-        text: 'HAGAMOSTECH ofrece soluciones digitales y tecnológicas: apoyo académico, servicios para emprendedores y negocios, empleo y desarrollo profesional, diseño gráfico, desarrollo web y e-commerce, software y hardware, automatización e inteligencia artificial, y soluciones a medida. Al contratar cualquiera de estos servicios, el cliente acepta las condiciones aquí descritas.',
+        text: 'HagamosTech ofrece acompañamiento académico, servicios para emprendedores y profesionales, diseño gráfico, desarrollo web y software a medida. El alcance, los entregables, los tiempos y las condiciones de pago se conversan y acuerdan para cada solicitud antes de iniciar.',
     },
     {
         title: '2. Contratación y acceso a servicios',
-        text: 'La contratación de un servicio se confirma una vez acordado el alcance y realizado el pago o la primera cuota. El inicio del trabajo o el acceso a la entrega se habilita en un plazo máximo de 24 horas hábiles tras la confirmación.',
+        text: 'Antes de comenzar, se conversa y confirma la propuesta del proyecto. La forma de pago, el inicio, las etapas y la entrega se acuerdan de acuerdo con el alcance y la situación de cada cliente.',
     },
     {
         title: '3. Entregables y propiedad intelectual',
-        text: 'Los entregables (diseños, documentos, sitios, software, material académico) son para uso del cliente según el alcance acordado. No está permitida su reproducción, distribución o comercialización no autorizada. La propiedad intelectual del código fuente se transfiere al cliente una vez completado el pago del proyecto, salvo acuerdo distinto.',
+        text: 'Los entregables y los derechos de uso o titularidad se detallan en la propuesta acordada para cada servicio. En el acompañamiento académico, la orientación apoya el trabajo propio del estudiante y no sustituye su autoría.',
     },
     {
         title: '4. Desarrollo de software y páginas web',
@@ -20,19 +20,19 @@ const TERMS_SECTIONS = [
     },
     {
         title: '5. Pagos y facturación',
-        text: 'Se aceptan pagos en efectivo, transferencia bancaria, QR y tarjeta de débito/crédito. La facturación se realiza con los datos fiscales proporcionados por el cliente. Los precios pueden variar sin previo aviso, respetando el valor confirmado al momento de la contratación.',
+        text: 'El presupuesto y las alternativas de pago se conversan según el proyecto y las posibilidades del cliente. La modalidad acordada, los anticipos si corresponden y los datos de facturación se confirman antes de iniciar.',
     },
     {
         title: '6. Política de reembolsos y cambios',
-        text: 'Los servicios de consultoría tienen un período de retractación de 3 días hábiles después de la contratación. El desarrollo de software a medida no tiene reembolso una vez iniciado el trabajo.',
+        text: 'Si necesitás pausar, cambiar o cancelar un servicio, conversamos la situación y el trabajo realizado hasta ese momento. Las condiciones específicas se establecen en la propuesta aceptada antes de iniciar.',
     },
     {
         title: '7. Datos personales y privacidad',
-        text: 'Los datos proporcionados por el cliente se utilizan exclusivamente para fines comerciales y de soporte relacionados con los servicios contratados. No compartimos información personal con terceros sin consentimiento explícito.',
+        text: 'El tratamiento de la información personal se describe en la Política de Privacidad del sitio. Evitá enviar por formularios información sensible que no sea necesaria para tu consulta.',
     },
     {
         title: '8. Contacto y soporte',
-        text: 'Para consultas sobre términos, pagos, soporte técnico o garantías, contáctanos al WhatsApp +591 61320004 o al correo contacto@hagamostech.bo. Nuestro horario de atención es lunes a sábado de 9:00 a 19:00.',
+        text: 'Para conversar sobre alcance, presupuesto o condiciones de un proyecto, contáctanos al WhatsApp +591 61320004 o al correo contacto@hagamostech.bo. Los horarios y tiempos de respuesta se coordinan según disponibilidad.',
     },
 ];
 

@@ -19,19 +19,19 @@ const CtaContacto = () => {
                             </div>
 
                             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/15 text-white px-4 py-1.5 text-[10px] font-black tracking-[0.2em] uppercase border border-white/25 backdrop-blur-sm mb-3">
-                                <i className="fas fa-bolt mr-1.5 text-lime-300"></i> Aprovechá hoy
+                                <i className="fas fa-bolt mr-1.5 text-lime-300"></i> Conversemos tu idea
                             </span>
 
                             <h2 className="text-4xl sm:text-5xl md:text-6xl font-black font-heading text-white mb-4 leading-[1.05] tracking-tight drop-shadow-lg">
-                                TU PROYECTO <br />
+                                TU IDEA <br />
                                 <span className="relative inline-block text-lime-300">
-                                    EN MARCHA.
+                                    A EVALUAR.
                                     <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-300/60 drop-shadow-[0_0_8px_rgba(245,158,11,0.4)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                                 </span>
                             </h2>
 
                             <p className="text-white/90 text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto font-semibold leading-relaxed">
-                                Web, sistemas, automatización e IA. Contanos tu idea o tu problema y te armamos una propuesta a medida, sin compromiso.
+                                Desarrollo web y de software, diseño gráfico y acompañamiento académico. Contanos qué necesitás y revisamos alternativas según tus posibilidades.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-3">
@@ -44,9 +44,9 @@ const CtaContacto = () => {
                             </div>
 
                             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/70">
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-bolt text-lime-300 text-lg"></i> Respuesta en el día</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-certificate text-lime-300 text-lg"></i> Presupuesto sin cargo</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-shield-alt text-lime-300 text-lg"></i> Soporte continuo</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-bolt text-lime-300 text-lg"></i> Tiempo de respuesta a coordinar</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-certificate text-lime-300 text-lg"></i> Propuesta según el proyecto</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-scale-balanced text-lime-300 text-lg"></i> Modalidad conversable</div>
                             </div>
                         </div>
                     </div>

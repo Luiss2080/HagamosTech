@@ -7,14 +7,7 @@ const DIAS_POR_MES = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
 const OFFSET_INICIO = [1, 4, 4, 0, 2, 5, 0, 3, 6, 1, 4, 6];
 
-const EVENTOS_AGENDA = [
-    { dia: 5, tipo: 'promo', titulo: 'Clínica de Proyectos', hora: 'Todo el día', lugar: 'Online / WhatsApp', icon: 'fa-tags', desc: 'Revisamos tu idea y te damos un presupuesto sin cargo.', extra: 'Cupos limitados por semana; agendá tu turno.' },
-    { dia: 9, tipo: 'evento', titulo: 'Taller de React', hora: '18:00 – 20:00', lugar: 'Modalidad online', icon: 'fa-code', desc: 'Introducción práctica a React construyendo un proyecto real.', extra: 'Requisito: lógica de programación básica.' },
-    { dia: 12, tipo: 'aniv', titulo: 'Aniversario HagamosTech', hora: '9:00 – 18:00', lugar: 'Online / presencial', icon: 'fa-birthday-cake', desc: 'Descuentos en packs, sorteos y consultoría gratuita.', extra: 'Promociones válidas únicamente por el día.' },
-    { dia: 18, tipo: 'evento', titulo: 'Demo Day IA', hora: '16:00 – 18:00', lugar: 'Online', icon: 'fa-robot', desc: 'Mostramos asistentes y automatizaciones funcionando en vivo.', extra: 'Inscripción previa por WhatsApp.' },
-    { dia: 20, tipo: 'evento', titulo: 'Hackathon Académico', hora: '10:00 – 17:00', lugar: 'Universidad aliada', icon: 'fa-trophy', desc: 'Equipos de estudiantes compiten resolviendo un reto tecnológico.', extra: 'Premios para los tres mejores equipos.' },
-    { dia: 26, tipo: 'promo', titulo: 'Día del Cliente', hora: 'Todo el día', lugar: 'Online / WhatsApp', icon: 'fa-heart', desc: 'Descuentos y soporte prioritario para clientes activos.', extra: 'Beneficio exclusivo para clientes con soporte vigente.' },
-];
+const EVENTOS_AGENDA = [];
 
 const TIPO_INFO = {
     promo: { label: 'Promoción', bg: 'bg-[#A3E635]', text: 'text-[#A3E635]', soft: 'bg-[#A3E635]/10 border-[#A3E635]/25', gradient: 'from-[#A3E635] to-[#84CC16]', ring: 'ring-[#A3E635]/40', glow: 'shadow-[0_6px_20px_rgba(255,77,0,0.25)]' },
@@ -50,10 +43,10 @@ const AgendaNovedades = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-3 border border-[#A3E635]/20">
-                            <i className="fas fa-calendar-star text-[#A3E635] mr-1"></i> Agenda
+                            <i className="fas fa-calendar-star text-[#A3E635] mr-1"></i> Consultas y disponibilidad
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-2 leading-tight">
-                            Agenda de <span className="relative inline-block text-[#A3E635]">
+                            Consultas y disponibilidad de <span className="relative inline-block text-[#A3E635]">
                                 {mes}
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
                                     <path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/>
@@ -277,7 +270,7 @@ const AgendaNovedades = () => {
                                         <i className="fas fa-calendar-xmark text-2xl text-[#A3E635]"></i>
                                     </div>
                                     <p className="font-black uppercase tracking-widest text-sm text-white">Seleccioná un día</p>
-                                    <p className="text-xs font-semibold mt-1">para ver el evento programado</p>
+                                    <p className="text-xs font-semibold mt-1">para consultar disponibilidad</p>
                                     {hayEventos && (
                                         <span className="inline-flex items-center gap-1.5 mt-4 px-3 py-1.5 rounded-full bg-[#111111] border border-white/10 text-[9px] font-black uppercase tracking-widest text-slate-300">
                                             <i className="fas fa-bolt text-[#A3E635]"></i> {diasConEvento.size} días con eventos
