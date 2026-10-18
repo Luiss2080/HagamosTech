@@ -40,7 +40,7 @@ const NAV_ITEMS = [
         subItems: [
             { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Mentorías, tareas guiadas e informes académicos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
             { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-negocios', label: 'Pequeños negocios', desc: 'Sitios web, catálogos y recursos gráficos.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
+            { id: 'pq-negocios', label: 'Negocios y emprendimientos', desc: 'Sitios web, catálogos y recursos gráficos.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
             { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
             { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
@@ -55,7 +55,6 @@ const NAV_ITEMS = [
             { id: 'sn-origen', label: 'Nuestra historia', desc: 'De una idea a una marca de soluciones.', target: '/sobre-nosotros#origen', icon: 'fa-seedling' },
             { id: 'sn-mision', label: 'Misión y Visión', desc: 'Transformar necesidades en soluciones.', target: '/sobre-nosotros#mision', icon: 'fa-bullseye' },
             { id: 'sn-valores', label: 'Personalidad y Valores', desc: 'Cercanos, creativos y resolutivos.', target: '/sobre-nosotros#valores', icon: 'fa-heart' },
-            { id: 'sn-publico', label: '¿Para quién?', desc: 'Servicios para estudiantes, profesionales y organizaciones.', target: '/#que-hacemos', icon: 'fa-users' },
         ]
     },
     { id: 'contacto', label: 'Contactanos', icon: 'fa-headset', type: 'route', target: '/contactanos' },
