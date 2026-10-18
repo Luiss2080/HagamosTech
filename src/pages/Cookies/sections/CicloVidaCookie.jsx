@@ -4,8 +4,8 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 const FASES = [
     { icon: 'fa-cookie-bite', titulo: 'Se crea', desc: 'Cuando visitás el sitio por primera vez, el navegador guarda una cookie pequeña.', duracion: 'Milisegundos', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' },
     { icon: 'fa-person-walking', titulo: 'Viaja contigo', desc: 'Cada vez que navegás, la cookie viaja con tus peticiones para identificarte.', duracion: 'Mientras navegás', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-[#0A0A0A] border-[#0A0A0A]/25' },
-    { icon: 'fa-rotate', titulo: 'Se renueva', desc: 'Con cada visita se actualiza la fecha de expiración. Sigue vigente mientras vuelvas.', duracion: '30 días', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-[#171717] border-[#171717]/25' },
-    { icon: 'fa-hourglass-end', titulo: 'Expira', desc: 'Si no visitás el sitio en mucho tiempo, la cookie se borra automáticamente.', duracion: 'Automático', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' },
+    { icon: 'fa-rotate', titulo: 'Su duración varía', desc: 'La duración depende de la cookie y del comportamiento de la aplicación o del navegador.', duracion: 'Variable', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-[#171717] border-[#171717]/25' },
+    { icon: 'fa-hourglass-end', titulo: 'Podés borrarla', desc: 'Podés revisar o borrar cookies y datos del sitio desde la configuración de tu navegador.', duracion: 'Desde el navegador', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' },
 ];
 
 const CicloVidaCookie = () => {

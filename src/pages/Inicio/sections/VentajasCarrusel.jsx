@@ -16,9 +16,9 @@ const originalHighlights = [
         borderColor: "border-[#A3E635]/20",
         features: [
             { icon: 'fa-code', text: 'Código Limpio' },
-            { icon: 'fa-screwdriver-wrench', text: 'Soporte Continuo' },
+            { icon: 'fa-screwdriver-wrench', text: 'Mantenimiento a coordinar' },
             { icon: 'fa-paint-brush', text: 'Diseño Premium' },
-            { icon: 'fa-cloud', text: 'Escalable en la Nube' }
+            { icon: 'fa-cloud', text: 'Alcance según proyecto' }
         ]
     },
     {
@@ -72,7 +72,7 @@ const originalHighlights = [
         features: [
             { icon: 'fa-comments', text: 'Análisis Sin Costo' },
             { icon: 'fa-file-signature', text: 'Propuesta Clara' },
-            { icon: 'fa-code-branch', text: 'Desarrollo Rápido' },
+            { icon: 'fa-code-branch', text: 'Etapas acordadas' },
             { icon: 'fa-circle-check', text: 'Entrega Llave en Mano' }
         ]
     }

@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const TIPOS_COOKIES = [
-    { id: 'esenciales', icon: 'fa-lock', titulo: 'Esenciales', desc: 'Necesarias para que el sitio funcione: carrito, sesión y seguridad.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', obligatoria: true },
-    { id: 'funcionales', icon: 'fa-magic-wand-sparkles', titulo: 'Funcionales', desc: 'Recuerdan tus preferencias: idioma, zona y configuración.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/5 text-[#0A0A0A] border-[#0A0A0A]/15', obligatoria: false },
-    { id: 'analiticas', icon: 'fa-chart-line', titulo: 'Analíticas', desc: 'Nos ayudan a entender cómo usás el sitio para mejorarlo.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-[#171717] border-[#171717]/25', obligatoria: false },
-    { id: 'publicidad', icon: 'fa-bullhorn', titulo: 'Publicidad', desc: 'Muestran promociones relevantes según tus gustos.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', obligatoria: false },
+    { id: 'esenciales', icon: 'fa-lock', titulo: 'Sesión', desc: 'La aplicación puede usar una cookie para mantener la sesión de tu cuenta.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', obligatoria: true },
+    { id: 'funcionales', icon: 'fa-magic-wand-sparkles', titulo: 'Preferencias locales', desc: 'Algunas preferencias del perfil pueden guardarse en el navegador.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/5 text-[#0A0A0A] border-[#0A0A0A]/15', obligatoria: false },
+    { id: 'analiticas', icon: 'fa-chart-line', titulo: 'Analítica', desc: 'No declaramos el uso de cookies analíticas en este sitio.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-[#171717] border-[#171717]/25', obligatoria: false },
+    { id: 'publicidad', icon: 'fa-bullhorn', titulo: 'Publicidad', desc: 'No declaramos el uso de cookies para publicidad personalizada.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', obligatoria: false },
 ];
 
 const GestorConsentimiento = () => {
@@ -43,7 +43,7 @@ const GestorConsentimiento = () => {
                             </span>
                         </h2>
                         <p className="text-[#1F2937] font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Activá o desactivá cada tipo con un toque. Las esenciales no se pueden desactivar porque el sitio las necesita.
+                            Vista ilustrativa de preferencias. Estos controles no guardan consentimientos ni activan o desactivan cookies del navegador.
                         </p>
                     </div>
 
@@ -94,17 +94,17 @@ const GestorConsentimiento = () => {
 
                                     <div className="mt-auto pt-4 border-t border-dashed border-orange-100 grid grid-cols-2 gap-2.5">
                                         <button onClick={guardar} className="inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] font-black text-[9px] uppercase tracking-[0.15em] shadow-lg shadow-orange-500/20 hover:shadow-xl hover:-translate-y-0.5 active:scale-95 transition-all">
-                                            <i className="fas fa-check text-xs"></i> Guardar
+                                            <i className="fas fa-check text-xs"></i> Ver selección
                                         </button>
                                         <button onClick={() => setEstados({ esenciales: true, funcionales: false, analiticas: false, publicidad: false })} className="inline-flex items-center justify-center gap-2 py-3 rounded-full bg-[#0A0A0A] hover:bg-[#171717] text-white font-black text-[9px] uppercase tracking-[0.15em] shadow-lg transition-all hover:-translate-y-0.5 active:scale-95">
-                                            <i className="fas fa-shield-halved text-xs"></i> Solo esenciales
+                                            <i className="fas fa-shield-halved text-xs"></i> Mostrar solo sesión
                                         </button>
                                     </div>
 
                                     {guardado && (
                                         <div className="mt-3">
                                             <div className="flex items-center gap-2 p-3 rounded-xl bg-green-50 border border-green-200 text-green-700 text-xs font-bold animate-fade-in">
-                                                <i className="fas fa-circle-check"></i> ¡Preferencias guardadas!
+                                                <i className="fas fa-circle-info"></i> Vista actualizada; no cambia datos del navegador.
                                             </div>
                                         </div>
                                     )}

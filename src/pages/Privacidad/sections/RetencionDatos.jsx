@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RETENCION = [
-    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Mientras tu cuenta esté activa', dias: 100, color: 'from-[#A3E635] to-[#84CC16]', nota: 'Se eliminan al cerrar tu cuenta.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
-    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Servicios y facturas', duracion: '5 años (obligación fiscal)', dias: 75, color: 'from-[#0A0A0A] to-[#171717]', nota: 'Por requisito legal de facturación.', items: ['Servicios', 'Facturas', 'NIT'] },
-    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Emails y WhatsApp', duracion: '2 años', dias: 50, color: 'from-[#171717] to-[#0A0A0A]', nota: 'Se purgan automáticamente.', items: ['Emails', 'Chats', 'Alertas'] },
-    { icon: 'fa-cookie-bite', titulo: 'Cookies', detalle: 'Preferencias de navegación', duracion: '30 días', dias: 25, color: 'from-[#84CC16] to-[#AA3000]', nota: 'Renovables con cada visita.', items: ['Preferencias', 'Sesión', 'Analítica'] },
+    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Según el estado de la cuenta', dias: 0, color: 'from-[#A3E635] to-[#84CC16]', nota: 'No se publica un plazo fijo de conservación.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
+    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Información de servicios coordinados', duracion: 'Según cada caso', dias: 0, color: 'from-[#0A0A0A] to-[#171717]', nota: 'El plazo depende de la relación y de las obligaciones aplicables.', items: ['Servicios', 'Solicitudes', 'Datos de coordinación'] },
+    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Mensajes relacionados con consultas', duracion: 'Según cada caso', dias: 0, color: 'from-[#171717] to-[#0A0A0A]', nota: 'No se afirma un borrado automático ni un plazo universal.', items: ['Consultas', 'Seguimiento'] },
+    { icon: 'fa-cookie-bite', titulo: 'Cookies y navegador', detalle: 'La duración depende del tipo de dato y de la configuración del navegador.', duracion: 'Variable', dias: 0, color: 'from-[#84CC16] to-[#AA3000]', nota: 'Podés revisar y borrar datos desde tu navegador.', items: ['Sesión', 'Preferencias locales'] },
 ];
 
 const RetencionDatos = () => {

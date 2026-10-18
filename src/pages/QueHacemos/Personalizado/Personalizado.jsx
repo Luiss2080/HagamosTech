@@ -10,7 +10,6 @@ const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
   { name: '¿Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
   { name: 'AWS', icon: 'fa-brands fa-aws', color: 'text-orange-400' },
-  { name: 'Docker', icon: 'fa-brands fa-docker', color: 'text-blue-500' },
   { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' },
   { name: 'MySQL', icon: 'fa-solid fa-database', color: 'text-indigo-400' },
   { name: 'TypeScript', icon: 'fa-solid fa-code', color: 'text-blue-400' }
