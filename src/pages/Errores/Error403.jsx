@@ -12,7 +12,7 @@ const Error403 = () => (
       { type: 'error', text: 'Acceso denegado: privilegios insuficientes para esta ruta.' },
       { type: 'warn', text: 'Comunícate con soporte si necesitas acceder a esta sección.' },
     ]}
-    action={{ to: '/', label: 'Volver al Inicio', icon: 'fa-house' }}
+    action={{ to: '/contactanos', label: 'Contactar soporte', icon: 'fa-headset' }}
   />
 );
 
