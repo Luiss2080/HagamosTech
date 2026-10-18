@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Star, Quote } from 'lucide-react';
+import { Lightbulb, Quote } from 'lucide-react';
 
 const TestimonialCarousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(testimonials.length); // Start at the middle set
@@ -125,33 +125,24 @@ const TestimonialCarousel = ({ testimonials }) => {
                     {/* Glowing Accent Border on Hover */}
                     <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-[#A3E635] to-[#84CC16] rounded-b-[2rem] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500"></div>
 
-                    {/* Top Decor: Quote & Stars */}
+                    {/* Indicador visual para ejemplos orientativos */}
                     <div className="flex justify-between items-center mb-4">
-                      <div className="flex gap-0.5">
-                        {[...Array(5)].map((_, i) => (
-                          <Star key={i} size={13} fill="currentColor" className="text-[#A3E635]" />
-                        ))}
-                      </div>
+                      <Lightbulb size={15} className="text-[#A3E635]" aria-hidden="true" />
                       <div className="w-8 h-8 rounded-full bg-[#A3E635]/5 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
                         <Quote size={14} className="transform rotate-185" />
                       </div>
                     </div>
 
-                    {/* Review text */}
+                    {/* Example text */}
                     <p className="text-slate-600 dark:text-slate-300 text-xs sm:text-[13px] font-bold leading-relaxed mb-6 flex-grow text-left italic">
                       "{t.text}"
                     </p>
 
-                    {/* Person Metadata */}
+                    {/* Tipo de solicitud */}
                     <div className="flex items-center gap-3.5 border-t border-slate-100 pt-4 mt-auto">
                       <div className="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-md flex-shrink-0">
-                        <div className="w-full h-full rounded-full overflow-hidden bg-white">
-                          <img 
-                            src={t.image || `https://ui-avatars.com/api/?name=${encodeURIComponent(t.name)}&background=A3E635&color=fff`} 
-                            alt={t.name}
-                            className="w-full h-full object-cover"
-                            loading="lazy"
-                          />
+                        <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
+                          <i className="fas fa-lightbulb" aria-hidden="true"></i>
                         </div>
                       </div>
                       <div className="text-left leading-tight">

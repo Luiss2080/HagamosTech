@@ -57,7 +57,7 @@ const TESTIMONIOS = [
 
 const TerminalWindow = () => {
   const [text, setText] = useState('');
-  const fullText = `> Iniciando sistema HagamosTech...\n> Conectando a nodos globales... OK\n> Desplegando arquitectura cloud... OK\n> Entrenando modelo IA local... 100%\n> Sistema listo. ¿Qué vamos a construir hoy?\n$ `;
+  const fullText = `> Ejemplo de flujo de trabajo\n> Conversando requisitos\n> Revisando alcance y viabilidad\n> Definiendo etapas y entregables\n> Este ejemplo no representa una ejecución ni resultado real\n$ `;
   
   useEffect(() => {
     let i = 0;
@@ -109,7 +109,7 @@ const Tecnologia = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Construimos ecosistemas digitales de alto rendimiento. Desde arquitecturas web robustas hasta agentes de inteligencia artificial y automatización empresarial avanzada.
+            Desarrollamos sitios web y software a medida, además de recursos de diseño y acompañamiento académico. Revisamos cada solicitud según su alcance y viabilidad.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -137,7 +137,7 @@ const Tecnologia = () => {
         </div>
       </section>
 
-      {/* METRICAS Y RENDIMIENTO */}
+      {/* ALCANCE Y REQUISITOS */}
       <section className="py-24 z-10 relative px-6">
         <div className="container mx-auto max-w-7xl">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -201,11 +201,11 @@ const Tecnologia = () => {
               El futuro de tu empresa se escribe en código.
             </h2>
             <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
-              Desarrollemos la solución tecnológica que tu negocio necesita para liderar el mercado mañana.
+              Contanos qué necesitás y conversemos las alternativas que se ajustan a tu proyecto.
             </p>
             
             <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-sm md:text-lg uppercase tracking-widest hover:scale-110 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] group/btn overflow-hidden">
-              <span className="relative z-20">Hablar con un Ingeniero</span>
+              <span className="relative z-20">Consultar un proyecto</span>
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
                 <Terminal size={20} className="md:w-6 md:h-6" />
               </div>

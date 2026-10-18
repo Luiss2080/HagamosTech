@@ -8,36 +8,29 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 
 const DynamicDashboard = () => {
-  const [revenue, setRevenue] = useState(12450);
-  const [users, setUsers] = useState(842);
-  const [conversion, setConversion] = useState(3.2);
+  const revenue = "A definir";
+  const users = "A definir";
+  const conversion = "A evaluar";
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRevenue(prev => prev + Math.floor(Math.random() * 50));
-      setUsers(prev => prev + (Math.random() > 0.7 ? 1 : 0));
-      setConversion(prev => +(prev + (Math.random() * 0.1 - 0.05)).toFixed(2));
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
 
   return (
     <div className="relative w-full max-w-4xl mx-auto mt-16 p-1 rounded-[2rem] bg-gradient-to-br from-[#A3E635]/30 via-neutral-800 to-[#84CC16]/10 shadow-[0_0_50px_rgba(163,230,53,0.15)] animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
       <div className="bg-[#050505] rounded-[1.8rem] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center justify-between border border-neutral-900 overflow-hidden relative">
+        <p className="absolute top-2 left-4 z-10 text-[9px] font-bold uppercase tracking-wider text-slate-500">Vista ilustrativa: indicadores ficticios, no son resultados de clientes.</p>
         <div className="absolute top-0 right-0 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-[80px] pointer-events-none"></div>
         
         {/* Metric 1 */}
         <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
           <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <TrendingUp size={14} className="text-[#A3E635]" /> Ingresos (Mensual)
+            <TrendingUp size={14} className="text-[#A3E635]" /> Indicador a definir
           </p>
-          <p className="text-3xl md:text-4xl font-black text-white font-mono">${revenue.toLocaleString()}</p>
+          <p className="text-3xl md:text-4xl font-black text-white font-mono">{revenue}</p>
         </div>
 
         {/* Metric 2 */}
         <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
           <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <Users size={14} className="text-[#A3E635]" /> Tráfico Activo
+            <Users size={14} className="text-[#A3E635]" /> Dato a definir
           </p>
           <p className="text-3xl md:text-4xl font-black text-white font-mono">{users}</p>
         </div>
@@ -45,9 +38,9 @@ const DynamicDashboard = () => {
         {/* Metric 3 */}
         <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
           <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <Zap size={14} className="text-[#A3E635]" /> Conversión Web
+            <Zap size={14} className="text-[#A3E635]" /> Métrica por acordar
           </p>
-          <p className="text-3xl md:text-4xl font-black text-[#A3E635] font-mono">{conversion}%</p>
+          <p className="text-3xl md:text-4xl font-black text-[#A3E635] font-mono">{conversion}</p>
         </div>
       </div>
     </div>
@@ -55,42 +48,10 @@ const DynamicDashboard = () => {
 };
 
 const SOLUCIONES = [
-  {
-    title: 'E-Commerce & Ventas',
-    desc: 'Tiendas virtuales de alto rendimiento. Conectamos pasarelas de pago, inventarios y logística.',
-    icon: <ShoppingCart size={20} />,
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Catálogos Digitales',
-    desc: 'Muestrarios de productos dinámicos y blogs optimizados para búsqueda orgánica.',
-    icon: <BarChart size={20} />,
-    image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Menús QR y Catálogos',
-    desc: 'Digitalizamos tu local o tienda con menús QR, catálogos de productos y contacto directo.',
-    icon: <Store size={20} />,
-    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Automatización de Procesos',
-    desc: 'Conectamos CRMs, sistemas de facturación y correos automáticos para reducir el trabajo manual.',
-    icon: <Cpu size={20} />,
-    image: 'https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Gestión de Clientes',
-    desc: 'Configuramos WhatsApp Business, respuestas automáticas y organización de contactos.',
-    icon: <Users size={20} />,
-    image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80'
-  },
-  {
-    title: 'Publicidad y Promociones',
-    desc: 'Campañas para promociones, ofertas y fechas especiales que impulsan tus ventas.',
-    icon: <ShieldCheck size={20} />,
-    image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=800&q=80'
-  }
+  { title: 'Sitios web y catálogos', desc: 'Presencia digital para empresas, profesionales y emprendimientos.', icon: <Globe size={24} /> },
+  { title: 'Software a medida', desc: 'Sistemas que se evalúan según requisitos, usuarios y datos.', icon: <Cpu size={24} /> },
+  { title: 'Identidad visual', desc: 'Recursos gráficos para presentar una marca o proyecto.', icon: <Store size={24} /> },
+  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación de acuerdo con materia y disponibilidad.', icon: <Users size={24} /> }
 ];
 
 const SolucionesGrid = () => {
@@ -120,7 +81,7 @@ const ProcessTimeline = () => {
     { title: 'Auditoría Digital', desc: 'Analizamos tus cuellos de botella actuales y fugas de capital.', icon: <BarChart size={20} /> },
     { title: 'Arquitectura de Solución', desc: 'Diseñamos la plataforma web o el sistema de automatización.', icon: <Store size={20} /> },
     { title: 'Desarrollo e Integración', desc: 'Programamos y conectamos pasarelas de pago, inventarios y CRMs.', icon: <Cpu size={20} /> },
-    { title: 'Escalamiento y Soporte', desc: 'Tu negocio crece, nuestro sistema lo soporta 24/7 sin caídas.', icon: <TrendingUp size={20} /> },
+    { title: 'Escalamiento y Soporte', desc: 'Tu negocio crece, nuestro sistema lo soporta A coordinar sin caídas.', icon: <TrendingUp size={20} /> },
   ];
 
   return (
@@ -144,9 +105,9 @@ const ProcessTimeline = () => {
 };
 
 const TESTIMONIOS = [
-  { name: 'FitCenter', role: 'Software de gimnasios', text: 'El CRM a medida y la web interactiva que construyeron triplicó nuestra captación de clientes. Una inversión que se pagó sola en 2 meses.' },
-  { name: 'EcoPlast', role: 'Soluciones industriales', text: 'Migrar a una plataforma robusta con HagamosTech eliminó nuestros problemas de pedidos. Transacciones fluidas y un panel increíble.' },
-  { name: 'ZoofiPets', role: 'Clínica', text: 'Automatizar las citas y el cobro nos ahorró 4 horas diarias de trabajo administrativo. La tecnología es de primer nivel.' }
+  { name: 'Sitio web', role: 'Ejemplo orientativo', text: 'Quiero presentar mis servicios y recibir consultas desde una página web.' },
+  { name: 'Catálogo digital', role: 'Ejemplo orientativo', text: 'Necesito organizar información de productos o servicios en un catálogo.' },
+  { name: 'Sistema a medida', role: 'Ejemplo orientativo', text: 'Busco evaluar una herramienta digital según los requisitos de mi negocio.' }
 ];
 
 const Negocios = () => {
@@ -158,7 +119,7 @@ const Negocios = () => {
       {/* Dynamic Grid Background for Tech feel */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:60px_60px] pointer-events-none opacity-20"></div>
       
-      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[100%] h-[60%] bg-[#A3E635]/5 rounded-[100%] blur-[150px] pointer-events-none"></div>
+      <div className="absolute top-[-20%] left-1/2 -translate-x-1/2 w-[Según alcance] h-[60%] bg-[#A3E635]/5 rounded-[Según alcance] blur-[150px] pointer-events-none"></div>
 
       {/* HERO SECTION - IMMERSIVE DASHBOARD */}
       <section className="relative pt-32 pb-10 z-10 px-6">
@@ -169,17 +130,17 @@ const Negocios = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
-            Tu Negocio en <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] via-yellow-300 to-[#84CC16]">Piloto Automático</span>
+            Soluciones para <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] via-yellow-300 to-[#84CC16]">Tu Proyecto</span>
           </h1>
           
           <p className="text-slate-400 text-base md:text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollamos tecnología que reemplaza el trabajo manual. Desde tiendas en línea de conversión extrema hasta sistemas de gestión que manejan tus datos en tiempo real.
+            Desarrollamos sitios web, software y recursos gráficos para emprendimientos y empresas. El alcance, las funciones y las condiciones se conversan según cada caso.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <a href="https://wa.me/59161320004?text=Hola,%20quiero%20digitalizar%20mi%20empresa" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center justify-center gap-2">
-              Analizar mi Modelo de Negocio <ArrowRight size={16} />
+              Consultar opciones <ArrowRight size={16} />
             </a>
           </div>
 
@@ -192,20 +153,20 @@ const Negocios = () => {
         <div className="container mx-auto max-w-7xl">
            <div className="flex flex-wrap justify-center gap-10 md:gap-24 opacity-80">
               <div className="text-center">
-                <h4 className="text-3xl font-black text-white">x3</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Ventas Promedio</p>
+                <h4 className="text-3xl font-black text-white">A medida</h4>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Ejemplo de solución</p>
               </div>
               <div className="text-center">
-                <h4 className="text-3xl font-black text-white">-40%</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Costos Operativos</p>
+                <h4 className="text-3xl font-black text-white">A revisar</h4>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Alcance a definir</p>
               </div>
               <div className="text-center">
-                <h4 className="text-3xl font-black text-white">24/7</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Operación Continua</p>
+                <h4 className="text-3xl font-black text-white">A coordinar</h4>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Atención a coordinar</p>
               </div>
               <div className="text-center">
-                <h4 className="text-3xl font-black text-white">100%</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Medible y Escalable</p>
+                <h4 className="text-3xl font-black text-white">Según alcance</h4>
+                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Sujeto a evaluación</p>
               </div>
            </div>
         </div>
@@ -219,7 +180,7 @@ const Negocios = () => {
               Soluciones <span className="text-[#A3E635]">Integrales</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Un ecosistema digital donde cada pieza de software trabaja para ti, reduciendo márgenes de error e impulsando tus KPIs al límite.
+              Podemos evaluar los componentes que necesitás y acordar cuáles forman parte del proyecto.
             </p>
           </div>
 
@@ -240,8 +201,8 @@ const Negocios = () => {
                 No vendemos código genérico. Construimos estrategias tangibles y sistemas que se acoplan perfectamente al ADN de tu empresa.
               </p>
               <div className="p-6 rounded-2xl bg-[#A3E635]/10 border border-[#A3E635]/30">
-                <h4 className="font-black text-white mb-2 flex items-center gap-2"><ShieldCheck className="text-[#A3E635]" size={20}/> Garantía de Éxito</h4>
-                <p className="text-sm text-slate-400">Todo desarrollo viene con acompañamiento y escalabilidad garantizada por contrato.</p>
+                <h4 className="font-black text-white mb-2 flex items-center gap-2"><ShieldCheck className="text-[#A3E635]" size={20}/> Condiciones acordadas</h4>
+                <p className="text-sm text-slate-400">Alcance, entregables, tiempos, ajustes y modalidad de seguimiento se conversan en la propuesta.</p>
               </div>
             </div>
 
@@ -275,7 +236,7 @@ const Negocios = () => {
             <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80')] opacity-[0.03] mix-blend-overlay object-cover pointer-events-none group-hover/cta:opacity-[0.08] transition-opacity duration-700"></div>
             
             <h2 className="text-5xl md:text-7xl font-black mb-6 relative z-10 uppercase tracking-tighter drop-shadow-lg leading-none">
-              El mercado no te <br className="hidden md:block" /> va a esperar.
+              Contanos qué <br className="hidden md:block" /> necesitás.
             </h2>
             <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
               Cada día sin digitalizar es un cliente que le regalas a la competencia. Moderniza tu empresa hoy mismo.
