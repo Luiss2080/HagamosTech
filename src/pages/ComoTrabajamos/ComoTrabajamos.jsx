@@ -9,7 +9,7 @@ const stepsData = [
         title: "Contanos",
         desc: "Explicamos tu necesidad, dificultad, problema o la idea que querés llevar a cabo. No necesitás tecnicismos, solo contanos tu objetivo.",
         icon: "fa-comments",
-        image: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80',
+        image: '/img/08_Cards/metodo-conversamos.webp',
         category: 'PASO 01',
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -27,7 +27,7 @@ const stepsData = [
         title: "Analizamos",
         desc: "Estudiamos a fondo tu caso, determinamos qué herramientas tecnológicas y metodologías se adaptan mejor a tu necesidad real y definimos el camino.",
         icon: "fa-magnifying-glass-chart",
-        image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?auto=format&fit=crop&w=900&q=80',
+        image: '/img/08_Cards/metodo-analizamos.webp',
         category: 'PASO 02',
         theme: {
             cardBg: "bg-white",
@@ -45,7 +45,7 @@ const stepsData = [
         title: "Proponemos",
         desc: "Planteamos una propuesta clara con el alcance, tecnologías recomendadas, tiempos de entrega estimados y presupuesto transparente sin sorpresas.",
         icon: "fa-file-signature",
-        image: 'https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80',
+        image: '/img/08_Cards/metodo-proponemos.webp',
         category: 'PASO 03',
         theme: {
             cardBg: "bg-[#111111]",
@@ -63,7 +63,7 @@ const stepsData = [
         title: "Hacemos",
         desc: "Nuestro equipo se encarga del desarrollo, diseño y la construcción de tu solución, manteniéndote informado de los avances de manera constante.",
         icon: "fa-code",
-        image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=900&q=80',
+        image: '/img/08_Cards/metodo-desarrollamos.webp',
         category: 'PASO 04',
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -81,7 +81,7 @@ const stepsData = [
         title: "Entregamos",
         desc: "Te entregamos la solución completamente funcional, lista para usar y con las pautas necesarias para que puedas gestionarla sin depender de nadie.",
         icon: "fa-circle-check",
-        image: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=900&q=80',
+        image: '/img/08_Cards/metodo-entregamos.webp',
         category: 'PASO 05',
         theme: {
             cardBg: "bg-white",
