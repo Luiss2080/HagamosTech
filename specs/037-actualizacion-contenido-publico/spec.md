@@ -134,7 +134,7 @@ Este mapa organiza el mensaje. No agrega categorías ni amplía la oferta canón
 - **Fase 3 — Desarrollo digital:** ajustados metadatos y descripciones de navegación para comunicar desarrollo web, software, bases de datos y funciones con IA sujetas a evaluación. Se mantienen ejemplos de posibilidades bajo requisitos, alcance y viabilidad.
 - **Fase 4 — Límites y rutas:** `/servicios/automatizacion` conserva compatibilidad y redirige a `/servicios/sistemas-apps`; el menú ya no ofrece automatización. El chat aclara que se pueden evaluar funciones con IA y que no se ofrecen automatizaciones de procesos ni n8n. No se modificó el diseño ni el contenido restaurado del footer.
 - **Fase 5 — Copy:** actualizados el menú, metadatos, preguntas frecuentes, respuesta del chat y alternativas de trabajo en Promociones. La vista no presenta suscripciones, tarifas periódicas ni precios universales.
-- **Fase 6 — Validación:** pendiente ejecutar lint, pruebas y build después de los cambios.
+- **Fase 6 — Validación:** `npm run lint` sin errores (4 advertencias preexistentes de dependencias de efectos); `npm run test:run` con 18 archivos y 56 pruebas aprobadas; `npm run build` completado.
 
 ## Fuera de alcance de este SDD
 
@@ -143,8 +143,11 @@ Este mapa organiza el mensaje. No agrega categorías ni amplía la oferta canón
 - Rediseñar componentes, navegación o el footer.
 - Publicar testimonios, clientes, resultados o garantías no verificables.
 
-## Validación de esta planificación
+## Validación de esta ejecución
 
 - Revisión del Catálogo Maestro, la Constitución y las specs de contenido y vistas vigentes.
 - Extracción textual del Word y clasificación de sus propuestas frente a las exclusiones confirmadas.
-- La ejecución de lint, pruebas y build corresponde a la Fase 6, cuando se implemente el contenido; este SDD no cambia código de la aplicación.
+- Revisión de rutas, enlaces de navegación, metadatos, mensajes del chat, promoción de servicios y ejemplos del alcance académico y digital.
+- `npm run lint`: pasa sin errores; deja 4 advertencias de dependencias de efectos en páginas existentes.
+- `npm run test:run`: 18 archivos y 56 pruebas aprobadas.
+- `npm run build`: compilación de producción aprobada.
