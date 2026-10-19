@@ -5,6 +5,7 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ToolsMarquee from '../../../components/ui/ToolsMarquee';
+import FeatureTimeline from '../../../components/ui/FeatureTimeline';
 import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const ACADEMIC_TOOLS = [
@@ -157,28 +158,16 @@ const Academia = () => {
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="z-10 relative">
         <div className="container mx-auto px-6">
-          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos que pueden usarse según la materia y el proyecto" />
+          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
         </div>
       </section>
 
       {/* METRICAS Y RENDIMIENTO */}
-      <section className="py-24 z-10 relative px-6">
-        <div className="container mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {METRICS.map((m, i) => (
-              <div key={i} className="p-8 rounded-3xl bg-neutral-900/40 border border-neutral-800 flex flex-col items-center text-center gap-4 hover:border-[#A3E635]/40 transition-colors group">
-                <div className="w-16 h-16 rounded-2xl bg-[#A3E635]/10 flex items-center justify-center text-[#A3E635] group-hover:scale-110 transition-transform">
-                  {m.icon}
-                </div>
-                <div>
-                  <h3 className="text-4xl font-black text-white mb-2">{m.value}</h3>
-                  <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest">{m.label}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <FeatureTimeline
+        items={METRICS}
+        title="Cómo acordamos el acompañamiento"
+        description="Definimos la modalidad y disponibilidad en función de la materia, la consigna y el alcance conversado."
+      />
 
       {/* BENTO BOX GRID SECTION */}
       <section className="py-24 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">

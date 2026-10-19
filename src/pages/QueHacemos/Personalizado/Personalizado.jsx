@@ -220,7 +220,7 @@ const Personalizado = () => {
       <section className="z-10 relative">
         <div className="container mx-auto px-6">
           <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
-          <ToolsMarquee items={TECH_STACK} label="Tecnologías que pueden evaluarse para una solución a medida" />
+          <ToolsMarquee items={TECH_STACK} label="Tecnologías para soluciones a medida" description="Cada recurso se considera según los requisitos, la viabilidad y el alcance acordado." />
         </div>
       </section>
 
