@@ -26,6 +26,9 @@ const usuarioBase = {
 describe('Perfil — gestión de cuenta', () => {
   beforeEach(() => {
     espiarModelo('usuario', ['findUnique', 'update']);
+    espiarModelo('proyectoPersonal', ['findMany']);
+    espiarModelo('notaPersonal', ['findMany']);
+    espiarModelo('eventoPersonal', ['findMany']);
   });
 
   afterEach(() => {
@@ -59,6 +62,9 @@ describe('Perfil — gestión de cuenta', () => {
 
   it('exporta los datos sin la contraseña ni el secreto 2FA', async () => {
     prisma.usuario.findUnique.mockResolvedValue(usuarioBase);
+    prisma.proyectoPersonal.findMany.mockResolvedValue([]);
+    prisma.notaPersonal.findMany.mockResolvedValue([]);
+    prisma.eventoPersonal.findMany.mockResolvedValue([]);
 
     const res = await request(app)
       .get('/api/perfil/exportar')

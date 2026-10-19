@@ -21,7 +21,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 ## Requisitos funcionales (criterios de aceptación en EARS)
 - RF-1: CUANDO el usuario envíe `PUT /api/perfil/password` con la contraseña actual correcta, una nueva de al menos 6 caracteres y su confirmación coincidente, EL SISTEMA actualizará la contraseña y responderá `200`.
 - RF-2: SI la contraseña actual es incorrecta, la nueva es corta o la confirmación no coincide, ENTONCES EL SISTEMA responderá `400` con un mensaje y no modificará nada.
-- RF-3: CUANDO el usuario envíe `GET /api/perfil/exportar`, EL SISTEMA devolverá sus datos **sin** la contraseña ni el secreto 2FA.
+- RF-3: CUANDO el usuario envíe `GET /api/perfil/exportar`, EL SISTEMA devolverá sus datos y su contenido personal **sin** la contraseña ni el secreto 2FA.
 - RF-4: CUANDO el usuario envíe `DELETE /api/perfil/cuenta`, EL SISTEMA marcará la cuenta como inactiva (`activo=false`).
 - RF-5: CUANDO el usuario envíe `GET /api/perfil/sessions`, EL SISTEMA devolverá una lista vacía y el campo `alcance: "sin_registro_multisesion"`, sin inventar sesiones.
 - RF-6: SI el usuario intenta revocar una sesión, ENTONCES EL SISTEMA responderá `404` explicando que no existe.

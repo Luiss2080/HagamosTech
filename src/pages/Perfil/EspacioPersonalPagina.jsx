@@ -31,10 +31,10 @@ const Icono = ({ children, className = '' }) => (
   <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#A3E635]/20 bg-[#A3E635]/10 text-[#A3E635] ${className}`}>{children}</span>
 );
 
-const Campo = ({ label, ...props }) => (
+const Campo = ({ label, as: fieldAs, className = '', ...props }) => (
   <label className="grid gap-2 text-sm font-bold text-slate-200">
     {label}
-    {props.as === 'textarea' ? <textarea {...props} className={`min-h-28 resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${props.className || ''}`} /> : <input {...props} className={`rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${props.className || ''}`} />}
+    {fieldAs === 'textarea' ? <textarea {...props} className={`min-h-28 resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${className}`} /> : <input {...props} className={`rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${className}`} />}
   </label>
 );
 
