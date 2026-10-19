@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.2.2",
-    "axios": "^1.15.0",
+    "axios": "^1.20.0",
     "framer-motion": "^12.38.0",
     "js-cookie": "^3.0.5",
     "lucide-react": "^0.475.0",
