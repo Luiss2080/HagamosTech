@@ -183,7 +183,7 @@ const VentajasCarrusel = () => {
         isTransitioning,
         currentIndex,
         highlights.length,
-        originalHighlights.length,
+        CLONE_COUNT,
     ]);
 
     // CSS-Driven Autoplay Control

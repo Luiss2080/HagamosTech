@@ -13,6 +13,6 @@ describe('ComoTrabajamos', () => {
     const steps = screen.getByRole('list', { name: 'Pasos de nuestra metodología' });
     expect(within(steps).getAllByRole('listitem')).toHaveLength(4);
     expect(within(steps).getByRole('heading', { name: 'Contanos qué necesitás' })).toBeInTheDocument();
-    expect(within(steps).getByRole('heading', { name: 'Desarrollamos y entregamos' })).toBeInTheDocument();
+    expect(within(steps).getByRole('heading', { name: 'Avanzamos según lo acordado' })).toBeInTheDocument();
   });
 });

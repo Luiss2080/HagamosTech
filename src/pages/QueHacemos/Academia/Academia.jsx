@@ -21,16 +21,17 @@ const TESTIMONIOS = [
   { name: 'Proyecto socioformativo', role: 'Ejemplo orientativo', text: 'Quiero planificar objetivos, actividades y evidencias para desarrollar mi proyecto.' }
 ];
 
+const FULL_TEXT = `[ejemplo] Conversamos sobre la materia y la consigna\n[guía] Organizamos los temas que requieren repaso\n[práctica] Resolvemos ejercicios de forma guiada\n[revisión] Contrastamos el avance con la pauta compartida\n> El estudiante desarrolla y presenta su propio trabajo.`;
+
 const CompilerWindow = () => {
   const [text, setText] = useState('');
-  const fullText = `[ejemplo] Conversamos sobre la materia y la consigna\n[guía] Organizamos los temas que requieren repaso\n[práctica] Resolvemos ejercicios de forma guiada\n[revisión] Contrastamos el avance con la pauta compartida\n> El estudiante desarrolla y presenta su propio trabajo.`;
   
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
-      setText(fullText.substring(0, i));
+      setText(FULL_TEXT.substring(0, i));
       i++;
-      if (i > fullText.length) clearInterval(timer);
+      if (i > FULL_TEXT.length) clearInterval(timer);
     }, 35);
     return () => clearInterval(timer);
   }, []);

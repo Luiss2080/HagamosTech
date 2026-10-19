@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
-import { Terminal, Code, Cpu, Database, Zap, ArrowRight, ShieldCheck, Server, ChevronRight } from 'lucide-react';
+import { Terminal, Code, Cpu, Database, Zap, ArrowRight, ShieldCheck, Laptop, ChevronRight } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import { Link } from 'react-router-dom';
@@ -12,7 +12,7 @@ import { HERRAMIENTAS_DESARROLLO } from '../../../data/herramientasCarruselData'
 
 const METRICS = [
   { label: 'Alcance', value: 'Según necesidad', icon: <Zap size={24} /> },
-  { label: 'Modalidad', value: 'A conversar', icon: <Server size={24} /> },
+  { label: 'Modalidad', value: 'A conversar', icon: <Laptop size={24} /> },
   { label: 'Viabilidad', value: 'A revisar contigo', icon: <ShieldCheck size={24} /> }
 ];
 
@@ -57,16 +57,17 @@ const TESTIMONIOS = [
   { name: 'Herramienta web', role: 'Ejemplo orientativo', text: 'Busco orientación para definir las funcionalidades y el contenido de una herramienta web.' }
 ];
 
+const FULL_TEXT = `> Ejemplo de flujo de trabajo\n> Conversando requisitos\n> Revisando alcance y viabilidad\n> Definiendo etapas y entregables\n> Este ejemplo no representa una ejecución ni resultado real\n$ `;
+
 const TerminalWindow = () => {
   const [text, setText] = useState('');
-  const fullText = `> Ejemplo de flujo de trabajo\n> Conversando requisitos\n> Revisando alcance y viabilidad\n> Definiendo etapas y entregables\n> Este ejemplo no representa una ejecución ni resultado real\n$ `;
   
   useEffect(() => {
     let i = 0;
     const timer = setInterval(() => {
-      setText(fullText.substring(0, i));
+      setText(FULL_TEXT.substring(0, i));
       i++;
-      if (i > fullText.length) clearInterval(timer);
+      if (i > FULL_TEXT.length) clearInterval(timer);
     }, 40);
     return () => clearInterval(timer);
   }, []);
@@ -77,7 +78,7 @@ const TerminalWindow = () => {
         <div className="w-3 h-3 rounded-full bg-red-500"></div>
         <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
         <div className="w-3 h-3 rounded-full bg-green-500"></div>
-        <span className="ml-2 text-[10px] text-neutral-500 font-mono">hagamostech@server:~</span>
+        <span className="ml-2 text-[10px] text-neutral-500 font-mono">proyecto@hagamostech:~</span>
       </div>
       <div className="p-6 font-mono text-sm md:text-base text-[#A3E635] whitespace-pre-wrap h-[180px] text-left">
         {text}
@@ -116,7 +117,7 @@ const Tecnologia = () => {
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="https://wa.me/59161320004?text=Hola,%20busco%20una%20solución%20tecnológica%20avanzada" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
+              <a href="https://wa.me/59161320004?text=Hola,%20busco%20una%20solución%20digital" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
               Consultar una solución <ChevronRight size={16} />
             </a>
           </div>

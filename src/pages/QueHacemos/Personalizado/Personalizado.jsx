@@ -15,24 +15,25 @@ const TESTIMONIOS = [
   { name: 'Mejora de sistema', role: 'Ejemplo orientativo', text: 'Busco revisar qué cambios son posibles en una aplicación existente según su estado y alcance.' }
 ];
 
+const FULL_CONVERSATION = [
+  { role: 'user', text: 'Hola, necesito una herramienta web para registrar solicitudes y consultar su estado.' },
+  { role: 'assistant', text: 'Podemos revisar quiénes la usarían y qué información necesitarían registrar.' },
+  { role: 'user', text: 'También quisiera consultar el historial y filtrar la información.' },
+  { role: 'assistant', text: 'Anotamos esas funciones para evaluar requisitos, alcance y viabilidad antes de conversar una propuesta.' }
+];
+
 const ChatAssistantWindow = () => {
   const [messages, setMessages] = useState([]);
-  const fullConversation = [
-    { role: 'user', text: 'Hola, necesito una herramienta web para registrar solicitudes y consultar su estado.' },
-    { role: 'assistant', text: 'Podemos revisar quiénes la usarían y qué información necesitarían registrar.' },
-    { role: 'user', text: 'También quisiera consultar el historial y filtrar la información.' },
-    { role: 'assistant', text: 'Anotamos esas funciones para evaluar requisitos, alcance y viabilidad antes de conversar una propuesta.' }
-  ];
 
   useEffect(() => {
     let timeoutId;
     let currentIndex = 0;
     
     const showNextMessage = () => {
-      if (currentIndex < fullConversation.length) {
+      if (currentIndex < FULL_CONVERSATION.length) {
         setMessages(prev => {
           if (prev.length > currentIndex) return prev;
-          return [...prev, fullConversation[currentIndex]];
+          return [...prev, FULL_CONVERSATION[currentIndex]];
         });
         currentIndex++;
         timeoutId = setTimeout(showNextMessage, 1500 + Math.random() * 1000);
@@ -69,7 +70,7 @@ const ChatAssistantWindow = () => {
             </div>
           );
         })}
-        {messages.length < fullConversation.length && messages.length > 0 && (
+        {messages.length < FULL_CONVERSATION.length && messages.length > 0 && (
           <div className="self-start text-neutral-500 flex gap-1 p-2">
             <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '0más' }}></span>
             <span className="w-1.5 h-1.5 bg-neutral-500 rounded-full animate-bounce" style={{ animationDelay: '150más' }}></span>

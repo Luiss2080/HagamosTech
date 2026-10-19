@@ -134,7 +134,8 @@ Este mapa organiza el mensaje. No agrega categorías ni amplía la oferta canón
 - **Fase 3 — Desarrollo digital:** ajustados metadatos y descripciones de navegación para comunicar desarrollo web, software, bases de datos y funciones con IA sujetas a evaluación. Se mantienen ejemplos de posibilidades bajo requisitos, alcance y viabilidad.
 - **Fase 4 — Límites y rutas:** `/servicios/automatizacion` conserva compatibilidad y redirige a `/servicios/sistemas-apps`; el menú ya no ofrece automatización. El chat aclara que se pueden evaluar funciones con IA y que no se ofrecen automatizaciones de procesos ni n8n. No se modificó el diseño ni el contenido restaurado del footer.
 - **Fase 5 — Copy:** actualizados el menú, metadatos, preguntas frecuentes, respuesta del chat y alternativas de trabajo en Promociones. La vista no presenta suscripciones, tarifas periódicas ni precios universales.
-- **Fase 6 — Validación:** `npm run lint` sin errores (4 advertencias preexistentes de dependencias de efectos); `npm run test:run` con 18 archivos y 56 pruebas aprobadas; `npm run build` completado.
+- **Fase 5 — Auditoría complementaria:** unificados los carruseles de herramientas de Inicio, Tecnología, Academia y Soluciones personalizadas con `TechToolsCarousel` y logotipos; se separaron recursos de desarrollo y académicos. Corregidos los rótulos de guías, áreas y disponibilidad en Novedades para no sugerir eventos, logros o promociones publicados cuando no existen. Actualizada la descripción del proceso de trabajo para incluir academia, diseño gráfico, desarrollo web y software. Se conservan el footer y su contenido.
+- **Fase 6 — Validación:** `npm run lint` completado sin errores ni advertencias; `npm run test:run` con 18 archivos y 56 pruebas aprobadas; `npm run build` completado.
 
 ## Fuera de alcance de este SDD
 
@@ -148,6 +149,8 @@ Este mapa organiza el mensaje. No agrega categorías ni amplía la oferta canón
 - Revisión del Catálogo Maestro, la Constitución y las specs de contenido y vistas vigentes.
 - Extracción textual del Word y clasificación de sus propuestas frente a las exclusiones confirmadas.
 - Revisión de rutas, enlaces de navegación, metadatos, mensajes del chat, promoción de servicios y ejemplos del alcance académico y digital.
-- `npm run lint`: pasa sin errores; deja 4 advertencias de dependencias de efectos en páginas existentes.
+- `npm run lint`: completado sin errores ni advertencias.
 - `npm run test:run`: 18 archivos y 56 pruebas aprobadas.
 - `npm run build`: compilación de producción aprobada.
+- Auditoría de rutas con testimonios: las 11 instancias encontradas incluyen título y descripción; las vistas compuestas mantienen la imagen representativa de la llamada a la acción.
+- Auditoría de carruseles: Inicio, Tecnología, Academia y Soluciones personalizadas reutilizan `TechToolsCarousel`; cada vista conserva recursos pertinentes a su temática.
