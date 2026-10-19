@@ -152,6 +152,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                       <div className="w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
                         <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
                           <UserRound size={17} aria-hidden="true" />
+                        </div>
                       </div>
                       <div className="text-left leading-tight">
                         <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
