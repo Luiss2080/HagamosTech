@@ -1,0 +1,59 @@
+.legal-page {
+  min-height: 100vh;
+  overflow: hidden;
+  background: #050505;
+  color: #f8fafc;
+}
+
+.legal-page section[class~="py-4"] {
+  padding-block: clamp(3rem, 5vw, 4rem);
+}
+
+.legal-page h2[class*="text-[#0A0A0A]"],
+.legal-page h2[class*="text-[#171717]"],
+.legal-page h3[class*="text-[#0A0A0A]"],
+.legal-page h3[class*="text-[#171717]"] {
+  color: #f8fafc !important;
+}
+
+.legal-page [class~="text-slate-600"],
+.legal-page [class~="text-[#1F2937]"] {
+  color: #cbd5e1 !important;
+}
+
+.legal-page [class~="bg-white"] {
+  background-color: #0b0e09 !important;
+}
+
+.legal-page [class~="bg-white"] h3,
+.legal-page [class~="bg-white"] h4,
+.legal-page [class~="bg-white"] p,
+.legal-page [class~="bg-white"] summary {
+  color: #f8fafc;
+}
+
+.legal-page [class*="border-orange-"],
+.legal-page [class*="ring-orange-"] {
+  --tw-ring-color: rgb(163 230 53 / 0.2);
+  border-color: rgb(163 230 53 / 0.2) !important;
+}
+
+.legal-page [class*="shadow-orange-"] {
+  --tw-shadow-color: rgb(0 0 0 / 0.25);
+}
+
+.legal-page [class~="bg-[#FFFDF9]"],
+.legal-page [class~="bg-[#F8FAF5]"] {
+  background-color: #11150d !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .legal-page *,
+  .legal-page *::before,
+  .legal-page *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
