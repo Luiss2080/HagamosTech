@@ -18,8 +18,8 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"TESIS Y MONOGRAFÍAS","firstPart":"Monografías","highlightPart":"y Tesis","desc":"Estructuración de monografías, tesis y documentos bajo formato APA 7 con rigor académico.","tags":["APA 7","Documentación","Word"],"icon":"fa-book","image":"/img/08_Cards/proyecto-academico-tesis.webp"},
-  {"num":"02","category":"PRESENTACIONES","firstPart":"Presentaciones","highlightPart":"Interactivas","desc":"Defensas de tesis y exposiciones con presentaciones dinámicas y visualmente impactantes.","tags":["PowerPoint","Interactivo","Diseño"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp"},
+  {"num":"01","category":"INFORMES Y MONOGRAFÍAS","firstPart":"Informes","highlightPart":"y Monografías","desc":"Orientación para organizar tema, secciones, citas y referencias según la consigna. El estudiante escribe y presenta su propio trabajo.","tags":["APA 7","Documentación","Word"],"icon":"fa-book","image":"/img/08_Cards/proyecto-academico-tesis.webp"},
+  {"num":"02","category":"PRESENTACIONES","firstPart":"Presentaciones","highlightPart":"y exposiciones","desc":"Organización visual de exposiciones, proyectos, clases y defensas académicas a partir del contenido del estudiante.","tags":["PowerPoint","Exposición","Diseño"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp"},
   {"num":"03","category":"DIAGRAMAS","firstPart":"Infografías","highlightPart":"y Diagramas","desc":"Esquemas anatómicos, flujos de bases de datos y líneas de tiempo para visualizar tu investigación.","tags":["Infografías","Diagramas","Esquemas"],"icon":"fa-project-diagram","image":"/img/08_Cards/proyecto-academico-infografias.webp"},
   {"num":"04","category":"SIMULACIÓN","firstPart":"Simuladores","highlightPart":"y Programación","desc":"Simuladores educativos, proyectos de redes y apoyo en lógica de programación.","tags":["Simuladores","Redes","Código"],"icon":"fa-code","image":"/img/08_Cards/proyecto-academico-programacion.webp"}
 ];
@@ -97,7 +97,7 @@ const RecorridoAcademico = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Proyectos académicos estructurados con rigor: monografías, presentaciones, infografías, simuladores y programación.
+            Orientación para tareas, informes, monografías, proyectos socioformativos, presentaciones y ejercicios de programación, según la consigna y disponibilidad.
           </p>
         </div>
 

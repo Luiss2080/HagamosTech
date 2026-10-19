@@ -62,7 +62,7 @@ const originalHighlights = [
         id: 'personalizadas',
         title: 'Soluciones',
         highlight: 'Personalizadas',
-        desc: 'Trabajamos bajo el flujo: Contanos → Analizamos → Proponemos → Hacemos → Entregamos.',
+        desc: 'Conversamos la necesidad, revisamos viabilidad y acordamos alcance, entregables y etapas.',
         icon: 'fa-gears',
         badge: 'Metodología Ágil',
         color: "bg-[#A3E635]",
@@ -70,10 +70,10 @@ const originalHighlights = [
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-comments', text: 'Análisis Sin Costo' },
+            { icon: 'fa-comments', text: 'Análisis inicial' },
             { icon: 'fa-file-signature', text: 'Propuesta Clara' },
             { icon: 'fa-code-branch', text: 'Etapas acordadas' },
-            { icon: 'fa-circle-check', text: 'Entrega Llave en Mano' }
+            { icon: 'fa-circle-check', text: 'Entrega acordada' }
         ]
     }
 ];

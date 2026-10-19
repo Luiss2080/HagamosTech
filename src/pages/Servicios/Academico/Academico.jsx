@@ -11,7 +11,7 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
-  {"name":"Monografías y Tesis","tag":"Formato APA 7 y documentación","icon":"fa-book"},
+  {"name":"Informes y Monografías","tag":"Orientación de estructura y APA 7","icon":"fa-book"},
   {"name":"Presentaciones","tag":"PowerPoint e interactivas","icon":"fa-file-powerpoint"},
   {"name":"Infografías y Diagramas","tag":"Esquemas y líneas de tiempo","icon":"fa-project-diagram"},
   {"name":"Simuladores y Robótica","tag":"Entornos virtuales educativos","icon":"fa-shapes"},
@@ -22,7 +22,7 @@ const BRANDS = [
 const PROCESO = [
   {"title":"Planificación","desc":"Conversamos sobre la consigna, la materia y el tipo de acompañamiento que necesitás.","image":"/img/08_Cards/proceso-academico-planificacion.webp"},
   {"title":"Contenido y Diseño","desc":"Orientamos la organización de secciones, recursos visuales y referencias según la pauta académica.","image":"/img/08_Cards/proceso-academico-recursos.webp"},
-  {"title":"Desarrollo y Simulación","desc":"Construimos simuladores, proyectos de redes o código estructurado cuando la tarea lo requiere.","image":"/img/08_Cards/proceso-academico-simulacion.webp"},
+  {"title":"Orientación en proyectos tecnológicos","desc":"Acompañamos ejercicios de simulación, redes o programación según la consigna. El estudiante desarrolla su propio trabajo.","image":"/img/08_Cards/proceso-academico-simulacion.webp"},
   {"title":"Entrega y Ajustes","desc":"Revisamos avances y dudas según lo acordado; el estudiante desarrolla y presenta su propio trabajo.","image":"/img/08_Cards/proceso-academico-revision.webp"}
 ];
 
@@ -211,7 +211,7 @@ const Academico = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Brindamos orientación académica para comprender contenidos y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
+Ofrecemos mentorías y orientación académica para comprender contenidos y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>

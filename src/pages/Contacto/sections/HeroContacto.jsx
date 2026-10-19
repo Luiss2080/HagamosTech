@@ -29,7 +29,7 @@ const HeroContacto = () => {
                 </h1>
 
                 <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed mb-8 sm:mb-10">
-                    No hace falta que sepas de tecnología. Explicanos tu idea, problema o necesidad y nosotros encontramos la mejor forma de resolverla. Esta sección te brinda asistencia directa para consultas, proyectos y soporte.
+                    No hace falta que sepas de tecnología. Explicanos tu idea o necesidad y revisaremos contigo qué servicio, alcance y alternativas podrían ajustarse a tu caso.
                 </p>
 
                 {/* ---- Chips de categorías (misma estructura que antes) ---- */}
@@ -37,7 +37,7 @@ const HeroContacto = () => {
                     {[
                         { label: 'Consultas', icon: 'fa-message' },
                         { label: 'Proyectos', icon: 'fa-diagram-project' },
-                        { label: 'Soporte', icon: 'fa-headset' },
+                        { label: 'Servicios', icon: 'fa-laptop-code' },
                         { label: 'Contacto', icon: 'fa-phone-volume' }
                     ].map((item, i) => (
                         <div key={i} className="group px-6 py-3 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] font-black text-[11px] uppercase tracking-[0.15em] transition-all shadow-lg shadow-[#A3E635]/10 hover:bg-[#A3E635] hover:text-[#0A0A0A] hover:-translate-y-0.5 flex items-center gap-2 cursor-pointer">
