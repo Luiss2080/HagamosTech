@@ -1,4 +1,5 @@
 import React from 'react';
+import TechToolCard from './TechToolCard';
 
 const ToolsMarquee = ({
   items = [],
@@ -27,29 +28,7 @@ const ToolsMarquee = ({
               aria-hidden={group === 1 ? 'true' : undefined}
             >
               {items.map((tool, index) => (
-                <article
-                  key={`${tool.name}-${index}`}
-                  className="flex min-h-[132px] w-[min(310px,84vw)] shrink-0 items-center gap-4 rounded-[20px] border border-neutral-100 border-b-[5px] border-b-[#A3E635] bg-white p-4 text-left shadow-[0_8px_30px_rgba(0,0,0,.16)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,.24)] sm:w-[340px] sm:p-5"
-                >
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-[14px] border border-gray-100 bg-gray-50 p-3 sm:h-[72px] sm:w-[72px]">
-                    <i className={`${tool.icon} ${tool.color || 'text-[#84CC16]'} text-3xl`} aria-hidden="true" />
-                  </div>
-                  <div className="h-20 w-px shrink-0 bg-gradient-to-b from-transparent via-[#A3E635]/50 to-transparent" />
-                  <div className="min-w-0 flex-1">
-                    <div className="mb-2 flex items-start gap-2">
-                      <span className="text-xs font-black text-[#84CC16]">{String(index + 1).padStart(2, '0')}</span>
-                      <h3 className="line-clamp-2 text-sm font-extrabold leading-tight text-gray-800 sm:text-base">
-                        {tool.name}
-                      </h3>
-                    </div>
-                    <p className="text-[10px] font-bold uppercase tracking-[.14em] text-gray-500">
-                      {tool.tag || 'Recurso tecnológico'}
-                    </p>
-                    <p className="mt-2 text-[10px] font-bold text-gray-400">
-                      A evaluar según el proyecto
-                    </p>
-                  </div>
-                </article>
+                <TechToolCard key={`${tool.name}-${index}`} item={tool} index={index} />
               ))}
             </div>
           ))}

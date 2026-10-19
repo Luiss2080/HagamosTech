@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, Lightbulb, Quote, UserRound } from 'lucide-react';
+import { ArrowUpRight, CalendarDays, Clock3, Lightbulb, MapPin, Quote, UserRound } from 'lucide-react';
 
-const TestimonialCarousel = ({ testimonials }) => {
+const TestimonialCarousel = ({
+  testimonials,
+  title = 'Ideas para tu proyecto',
+  description = 'Ejemplos orientativos; el alcance y la propuesta se definen para cada caso.',
+}) => {
   const [currentIndex, setCurrentIndex] = useState(testimonials.length); // Start at the middle set
   const [visibleCards, setVisibleCards] = useState(3);
   const [transitionEnabled, setTransitionEnabled] = useState(true);
@@ -92,6 +96,15 @@ const TestimonialCarousel = ({ testimonials }) => {
   const trackWidthPercent = (tripledItems.length * 100) / visibleCards;
 
   return (
+    <div className="mx-auto w-full max-w-7xl">
+      <header className="mx-auto mb-3 max-w-3xl px-6 text-center">
+        <h2 className="text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+          {title}
+        </h2>
+        <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
+          {description}
+        </p>
+      </header>
     <div 
       className="relative w-full overflow-hidden py-8 px-1 sm:px-4"
       onMouseEnter={() => setIsPaused(true)}
@@ -148,9 +161,14 @@ const TestimonialCarousel = ({ testimonials }) => {
                     </div>
 
                     {/* Tipo de solicitud */}
+                    <div className="mb-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[9px] font-bold text-slate-400" aria-label="Datos orientativos del proyecto">
+                      <span className="inline-flex items-center gap-1" aria-label={`Fecha: ${t.date || 'a coordinar'}`} title={`Fecha: ${t.date || 'a coordinar'}`}><CalendarDays size={12} className="text-[#A3E635]" aria-hidden="true" />{t.date || 'A coordinar'}</span>
+                      <span className="inline-flex items-center gap-1" aria-label={`Hora: ${t.time || 'a coordinar'}`} title={`Hora: ${t.time || 'a coordinar'}`}><Clock3 size={12} className="text-[#A3E635]" aria-hidden="true" />{t.time || 'A coordinar'}</span>
+                      <span className="inline-flex items-center gap-1" aria-label={`Lugar o modalidad: ${t.place || 'a definir'}`} title={`Lugar o modalidad: ${t.place || 'a definir'}`}><MapPin size={12} className="text-[#A3E635]" aria-hidden="true" />{t.place || 'A definir'}</span>
+                    </div>
                     <div className="flex w-full items-center justify-center gap-2.5 border-t border-[#A3E635]/20 pt-4">
                       <div className="w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
-                        <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
+                        <div role="img" aria-label="Usuario del proyecto" className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
                           <UserRound size={17} aria-hidden="true" />
                         </div>
                       </div>
@@ -214,6 +232,7 @@ const TestimonialCarousel = ({ testimonials }) => {
           })}
         </div>
       )}
+    </div>
     </div>
   );
 };

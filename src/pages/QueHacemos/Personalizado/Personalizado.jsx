@@ -267,13 +267,7 @@ const Personalizado = () => {
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
         <FondoTech />
-        <div className="container mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-            Ideas de <span className="text-[#A3E635]">proyectos</span>
-          </h2>
-          <p className="mt-4 text-slate-400">Son ejemplos orientativos, no testimonios ni resultados de clientes.</p>
-        </div>
-        <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ideas de proyectos a medida" description="Ejemplos orientativos para definir objetivos, funciones y alcance. No representan testimonios ni resultados de clientes." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',

@@ -176,15 +176,7 @@ const Tecnologia = () => {
 
       <section className="py-20 relative z-10">
         <FondoTech />
-        <div className="container mx-auto max-w-4xl px-6 text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
-            Ejemplos de <span className="text-[#A3E635]">soluciones tecnológicas</span>
-          </h2>
-          <p className="mt-4 text-slate-400 font-medium leading-relaxed">
-            Casos ilustrativos, no testimonios ni resultados de clientes. El alcance y la viabilidad se revisan para cada proyecto.
-          </p>
-        </div>
-        <TestimonialCarousel testimonials={TESTIMONIOS} />
+          <TestimonialCarousel title="Soluciones tecnológicas para cada necesidad" description="Exploramos ejemplos de desarrollo web, software y herramientas digitales. Los requisitos, el alcance y la viabilidad se revisan en cada proyecto." testimonials={TESTIMONIOS} />
       </section>
 
       <CenteredProjectCTA title="Tu próxima solución digital empieza con una conversación." description="Contanos qué necesitás. Revisamos alternativas, alcance y condiciones para tu proyecto." />

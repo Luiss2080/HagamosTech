@@ -267,20 +267,7 @@ Logos e Identidad Visual (Isologotipos), Flyers, Banners, Pancartas y Redes Soci
       {/* SECCI�N 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">
         <FondoTech />
-        <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
-          
-          <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">
-            Ejemplos orientativos, <br />
-            <span className="text-[#A3E635] relative inline-block">
-              soluciones definidas según el alcance acordado.
-              <svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
-            </span>
-          </h2>
-          <p className="text-xs sm:text-sm text-neutral-300 dark:text-neutral-300 font-bold leading-relaxed max-w-2xl mx-auto mb-10 text-center">
-            Revisamos cada proyecto según sus objetivos, alcance y posibilidades.</p>
-        </div>
-
-        <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de diseño gráfico" description="Revisamos cada pedido según sus objetivos, piezas necesarias y alcance acordado." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

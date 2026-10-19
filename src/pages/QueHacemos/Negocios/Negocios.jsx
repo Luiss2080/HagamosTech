@@ -131,18 +131,7 @@ const Negocios = () => {
         <FondoTech />
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-[min(900px,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A3E635]/[0.06] blur-[100px]" />
         <div className="relative mx-auto max-w-7xl">
-          <header className="mx-auto mb-4 max-w-3xl text-center">
-            <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
-              Necesidades que podemos evaluar
-            </span>
-            <h2 className="text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
-              Ideas reales para <span className="text-[#A3E635]">empezar</span>
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
-              Estos ejemplos son puntos de partida, no testimonios de clientes. Cada propuesta se adapta al objetivo, las funciones y las posibilidades de cada proyecto.
-            </p>
-          </header>
-          <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ideas de soluciones para empezar" description="Puntos de partida para adaptar cada propuesta al objetivo, las funciones y las posibilidades del proyecto. No son testimonios de clientes." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&h=150&q=80',

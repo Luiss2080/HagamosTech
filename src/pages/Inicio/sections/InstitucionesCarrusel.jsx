@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import ModalColegio from './modalesColegios/ModalColegio';
 import FondoTech from '../../../components/fondos/FondoTech';
+import TechToolCard from '../../../components/ui/TechToolCard';
 
 export const INSTITUTIONS = [
     {
@@ -183,59 +184,6 @@ const InstitucionesCarrusel = () => {
         event.currentTarget.releasePointerCapture?.(event.pointerId);
     };
 
-    const renderCard = (inst, index, globalIndex) => (
-        <article
-            key={`${inst.id}-${globalIndex}`}
-            className="bg-white rounded-[20px] shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-3.5 flex items-center gap-3 sm:gap-4 border-b-[5px] border-[#A3E635] w-[min(290px,86vw)] sm:w-[320px] shrink-0 transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_15px_40px_rgba(0,0,0,0.2)]"
-        >
-            {/* Logo */}
-            <div className="w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center bg-gray-50/50 rounded-[14px] p-2 shrink-0 border border-gray-100">
-                <img src={inst.logo} alt={inst.name} loading="lazy" decoding="async" className="max-w-full max-h-full object-contain" />
-            </div>
-
-            {/* Divider */}
-            <div className="w-px h-20 bg-gradient-to-b from-transparent via-[#A3E635]/30 to-transparent"></div>
-
-            {/* Content */}
-            <div className="flex flex-col flex-1 justify-between py-1">
-                <div className="mb-2">
-                    <div className="flex items-center gap-1.5 mb-1">
-                        <span className="text-[#A3E635] font-black text-[11px] sm:text-xs">0{index + 1}</span>
-                        <h3 className="font-extrabold text-gray-800 text-[11px] sm:text-xs leading-tight truncate uppercase w-32" title={inst.name}>
-                            {inst.name}
-                        </h3>
-                    </div>
-                    
-                    <div className="flex items-center gap-1.5 mb-1.5">
-                        <i className="fa-solid fa-code text-[#84CC16] text-[9px] sm:text-[10px]"></i>
-                        <span className="text-gray-500 font-bold text-[8px] sm:text-[9px] tracking-widest uppercase truncate">{inst.tag}</span>
-                    </div>
-
-                    <div className="flex items-center gap-1.5">
-                        <div className="flex text-[#facc15] text-[8px] sm:text-[9px] gap-[1px]">
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                            <i className="fa-solid fa-star"></i>
-                        </div>
-                        <span className="text-gray-400 font-bold text-[8px] uppercase tracking-wider">
-                            PROYECTOS A MEDIDA
-                        </span>
-                    </div>
-                </div>
-
-                <button 
-                    onClick={() => setSelectedInst(inst)}
-                    className="w-full bg-[#A3E635] hover:bg-[#0a0a0a] text-[#0A0A0A] hover:text-white font-bold text-[9px] sm:text-[10px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm mt-auto cursor-pointer"
-                >
-                    VER DETALLES
-                    <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </button>
-            </div>
-        </article>
-    );
-
     return (
         <section id="instituciones" className="w-full bg-[#050505] py-10 sm:py-12 overflow-hidden relative z-10 min-h-[220px]">
             <FondoTech />
@@ -291,7 +239,14 @@ const InstitucionesCarrusel = () => {
                     onPointerEnter={() => { isPausedRef.current = true; }}
                     onPointerLeave={() => { if (!isDraggingRef.current) isPausedRef.current = false; }}
                 >
-                    {row1.map((inst, i) => renderCard(inst, i % base.length, `r1-${i}`))}
+                    {row1.map((inst, i) => (
+                        <TechToolCard
+                            key={`${inst.id}-r1-${i}`}
+                            item={inst}
+                            index={i % base.length}
+                            onDetails={setSelectedInst}
+                        />
+                    ))}
                 </div>
             </div>
 
