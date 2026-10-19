@@ -33,6 +33,9 @@ model Usuario {
   verificacionCorreos     VerificacionCorreo[]
   recuperacionPasswords   RecuperacionPassword[]
   suscripcion             Suscripcion?
+  proyectosPersonales     ProyectoPersonal[]
+  notasPersonales         NotaPersonal[]
+  eventosPersonales       EventoPersonal[]
 
   @@index([rolId], map: "fk_usuarios_rol")
   @@map("usuarios")
@@ -50,6 +53,57 @@ model Suscripcion {
   usuario           Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
 
   @@map("suscripciones")
+}
+
+model ProyectoPersonal {
+  id          Int             @id @default(autoincrement())
+  usuarioId   Int             @map("usuario_id")
+  titulo      String          @db.VarChar(120)
+  categoria   String          @default("Personal") @db.VarChar(60)
+  descripcion String?         @db.Text
+  etapa       String          @default("idea") @db.VarChar(30)
+  creadoEn    DateTime        @default(now()) @map("creado_en") @db.DateTime(0)
+  actualizadoEn DateTime      @updatedAt @map("actualizado_en") @db.DateTime(0)
+  usuario     Usuario         @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  notas       NotaPersonal[]
+  eventos     EventoPersonal[]
+
+  @@index([usuarioId, actualizadoEn])
+  @@map("proyectos_personales")
+}
+
+model NotaPersonal {
+  id          Int                @id @default(autoincrement())
+  usuarioId   Int                @map("usuario_id")
+  proyectoId  Int?               @map("proyecto_id")
+  titulo      String             @db.VarChar(120)
+  contenido   String             @db.Text
+  creadoEn    DateTime           @default(now()) @map("creado_en") @db.DateTime(0)
+  actualizadoEn DateTime         @updatedAt @map("actualizado_en") @db.DateTime(0)
+  usuario     Usuario            @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  proyecto    ProyectoPersonal?  @relation(fields: [proyectoId], references: [id], onDelete: SetNull)
+
+  @@index([usuarioId, actualizadoEn])
+  @@index([proyectoId])
+  @@map("notas_personales")
+}
+
+model EventoPersonal {
+  id          Int                @id @default(autoincrement())
+  usuarioId   Int                @map("usuario_id")
+  proyectoId  Int?               @map("proyecto_id")
+  titulo      String             @db.VarChar(120)
+  descripcion String?            @db.VarChar(500)
+  inicio      DateTime           @map("inicio") @db.DateTime(0)
+  fin         DateTime?          @map("fin") @db.DateTime(0)
+  creadoEn    DateTime           @default(now()) @map("creado_en") @db.DateTime(0)
+  actualizadoEn DateTime         @updatedAt @map("actualizado_en") @db.DateTime(0)
+  usuario     Usuario            @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  proyecto    ProyectoPersonal?  @relation(fields: [proyectoId], references: [id], onDelete: SetNull)
+
+  @@index([usuarioId, inicio])
+  @@index([proyectoId])
+  @@map("eventos_personales")
 }
 
 model VerificacionCorreo {
