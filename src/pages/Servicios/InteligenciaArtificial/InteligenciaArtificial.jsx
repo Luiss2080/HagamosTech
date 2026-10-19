@@ -131,7 +131,7 @@ const InteligenciaArtificial = () => {
 
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#A3E635] to-[#0A0A0A] text-white border border-[#84CC16]/40 shadow-md">
                 <i className="fas fa-tag text-[#84CC16]"></i>
-                <span className="text-[9px] font-black uppercase tracking-wider">Pago único o por fases + Mantenimiento mensual</span>
+                <span className="text-[9px] font-black uppercase tracking-wider">Modalidad y presupuesto a conversar</span>
               </div>
             </div>
 
