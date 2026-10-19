@@ -2,7 +2,7 @@ import React from 'react';
 import HeroPromociones from './sections/HeroPromociones';
 import VentajasCarrusel from './sections/VentajasCarrusel';
 import PromoDestacada from './sections/PromoDestacada';
-import PlanesSuscripcion from './sections/PlanesSuscripcion';
+import AlternativasProyecto from './sections/AlternativasProyecto';
 import CtaContacto from './sections/CtaContacto';
 
 const PromocionesPagina = () => {
@@ -15,7 +15,7 @@ const PromocionesPagina = () => {
             <HeroPromociones />
             <VentajasCarrusel />
             <PromoDestacada />
-            <PlanesSuscripcion />
+            <AlternativasProyecto />
             <CtaContacto />
         </div>
     );

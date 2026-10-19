@@ -44,7 +44,7 @@ describe('Contenido comercial veraz', () => {
   });
 
   it('las alternativas de proyecto no se presentan como suscripciones o planes de precio', () => {
-    const alternativas = leer('../../src/pages/Promociones/sections/PlanesSuscripcion.jsx');
+    const alternativas = leer('../../src/pages/Promociones/sections/AlternativasProyecto.jsx');
     expect(alternativas).not.toMatch(/suscripci[oó]n|precio mensual|precio anual|priceMonthly|priceAnnual/);
     expect(alternativas).toContain('una propuesta para');
     expect(alternativas).toContain('condiciones a conversar');

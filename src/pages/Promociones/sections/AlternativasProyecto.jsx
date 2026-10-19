@@ -76,7 +76,7 @@ const ALTERNATIVAS = [
     },
 ];
 
-const PlanesSuscripcion = () => {
+const AlternativasProyecto = () => {
     return (
         <div className="relative">
             <section className="relative z-10 py-4">
@@ -143,4 +143,4 @@ const PlanesSuscripcion = () => {
     );
 };
 
-export default PlanesSuscripcion;
+export default AlternativasProyecto;
