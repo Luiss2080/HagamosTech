@@ -14,7 +14,7 @@ const BRANDS = [
   {"name":"Informes y Monografías","tag":"Orientación de estructura y APA 7","icon":"fa-book"},
   {"name":"Presentaciones","tag":"PowerPoint e interactivas","icon":"fa-file-powerpoint"},
   {"name":"Infografías y Diagramas","tag":"Esquemas y líneas de tiempo","icon":"fa-project-diagram"},
-  {"name":"Simuladores y Robótica","tag":"Entornos virtuales educativos","icon":"fa-shapes"},
+  {"name":"Simuladores educativos","tag":"Orientación según consigna","icon":"fa-shapes"},
   {"name":"Proyectos de Redes","tag":"Topologías y pruebas","icon":"fa-network-wired"},
   {"name":"Programación","tag":"Apoyo en código y lógica","icon":"fa-code"}
 ];
@@ -80,7 +80,7 @@ const Academico = () => {
           
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
           <div className="flex items-center gap-2 mb-5">
-              <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
+            <span className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#A3E635]/45 bg-[#A3E635]/10 text-[9.5px] font-black uppercase tracking-widest text-[#A3E635] shadow-sm leading-none">
                   <i className="fa-solid fa-laptop-code mr-1.5"></i> Apoyo Académico — HagamosTech
               </span>
           </div>

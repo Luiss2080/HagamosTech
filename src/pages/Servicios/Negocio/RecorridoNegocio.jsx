@@ -97,7 +97,7 @@ const RecorridoNegocio = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Identidad, catálogos y campañas para lanzar y hacer crecer tu emprendimiento.
+              Identidad visual, catálogos digitales y piezas gráficas para presentar tu emprendimiento y sus ofertas.
           </p>
         </div>
 

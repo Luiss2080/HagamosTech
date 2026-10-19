@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Terminal, Code, Cpu, Database, Cloud, Zap, ArrowRight, ShieldCheck, Server, ChevronRight } from 'lucide-react';
+import { Terminal, Code, Cpu, Database, Zap, ArrowRight, ShieldCheck, Server, ChevronRight } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import { Link } from 'react-router-dom';
@@ -33,7 +33,7 @@ const TECH_STACK = [
 const METRICS = [
   { label: 'Alcance', value: 'Según necesidad', icon: <Zap size={24} /> },
   { label: 'Modalidad', value: 'A conversar', icon: <Server size={24} /> },
-  { label: 'Viabilidad', value: 'Revisada contigo', icon: <ShieldCheck size={24} /> }
+  { label: 'Viabilidad', value: 'A revisar contigo', icon: <ShieldCheck size={24} /> }
 ];
 
 const VERTICALS = [

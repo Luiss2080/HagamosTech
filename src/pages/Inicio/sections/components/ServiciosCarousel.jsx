@@ -171,7 +171,7 @@ const ServiciosCarousel = ({ items }) => {
                                         {/* Fila inferior de Precio & CTAs */}
                                         <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between gap-3 w-full">
                                             <div className="flex flex-col items-start">
-                                                <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-widest leading-none">PRECIO</span>
+                                                <span className="text-[7.5px] text-slate-500 font-black uppercase tracking-widest leading-none">PRESUPUESTO</span>
                                                 <span className="text-sm font-black mt-1 leading-none text-white">{module.price}</span>
                                             </div>
 
