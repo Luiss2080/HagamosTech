@@ -1,5 +1,5 @@
 import React, { lazy, Suspense, useCallback, useEffect, useState } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import AppLayout from '../components/Layout/AppLayout';
 import LoadingScreen from '../components/fondos/PantallaCarga';
 import RastreadorActividad from '../components/func/RastreadorActividad';
@@ -38,7 +38,6 @@ const Recursos = lazy(() => import('../pages/Contacto/sections/Recursos'));
 const Ubicacion = lazy(() => import('../pages/Contacto/sections/Ubicacion'));
 const PaginasWeb = lazy(() => import('../pages/Servicios/DesarrolloWeb/PaginasWeb'));
 const SistemasApps = lazy(() => import('../pages/Servicios/SistemasApps/SistemasApps'));
-const Automatizacion = lazy(() => import('../pages/Servicios/Automatizacion/Automatizacion'));
 const InteligenciaArtificial = lazy(() => import('../pages/Servicios/InteligenciaArtificial/InteligenciaArtificial'));
 const Negocio = lazy(() => import('../pages/Servicios/Negocio/Negocio'));
 const Academico = lazy(() => import('../pages/Servicios/Academico/Academico'));
@@ -151,7 +150,7 @@ const App = () => {
                 <Route path="/inicio/hero" element={<HeroHagamosTech />} />
               <Route path="/servicios/desarrollo-web" element={<PaginasWeb />} />
               <Route path="/servicios/sistemas-apps" element={<SistemasApps />} />
-              <Route path="/servicios/automatizacion" element={<Automatizacion />} />
+              <Route path="/servicios/automatizacion" element={<Navigate to="/servicios/sistemas-apps" replace />} />
               <Route path="/servicios/inteligencia-artificial" element={<InteligenciaArtificial />} />
               <Route path="/servicios/para-tu-negocio" element={<Negocio />} />
               <Route path="/servicios/apoyo-academico" element={<Academico />} />

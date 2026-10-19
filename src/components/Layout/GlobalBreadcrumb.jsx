@@ -10,7 +10,6 @@ const LABELS = {
   servicios: 'Servicios',
   'desarrollo-web': 'Desarrollo web',
   'sistemas-apps': 'Sistemas y aplicaciones',
-  automatizacion: 'Automatización',
   'inteligencia-artificial': 'Inteligencia artificial',
   'para-tu-negocio': 'Soluciones para tu negocio',
   'apoyo-academico': 'Apoyo académico',

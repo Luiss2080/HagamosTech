@@ -20,7 +20,7 @@ export const categories = [
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
       { q: '¿Ayudan con trabajos académicos?', a: '**Brindamos mentorías, tareas guiadas y orientación para informes, monografías y proyectos socioformativos**, además de presentaciones, formato APA 7 y recursos visuales. El estudiante desarrolla y presenta su propio trabajo.' },
-      { q: '¿Hacen simuladores y proyectos de redes?', a: '**Sí.** Entornos virtuales para pruebas de redes, robótica educativa y simulación de sistemas informáticos.' },
+      { q: '¿Hacen simuladores y proyectos de redes?', a: '**Podemos orientar en simuladores educativos y proyectos de redes**, según la consigna, el nivel y el alcance.' },
       { q: '¿Dan apoyo en programación?', a: '**Sí.** Asesoría en código estructurado, algoritmos y lógica computacional para tus proyectos.' }
     ]
   },

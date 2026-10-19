@@ -23,8 +23,7 @@ const NAV_ITEMS = [
         type: 'dropdown',
         subItems: [
             { id: 'srv-web', label: 'Desarrollo Web', desc: 'Páginas y sistemas a medida.', target: '/servicios/desarrollo-web', icon: 'fa-globe' },
-            { id: 'srv-apps', label: 'Sistemas y Apps', desc: 'Aplicaciones y plataformas.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
-            { id: 'srv-auto', label: 'Sistemas a medida', desc: 'Evaluación de herramientas digitales según tus requisitos.', target: '/servicios/automatizacion', icon: 'fa-gear' },
+            { id: 'srv-apps', label: 'Sistemas y software a medida', desc: 'Aplicaciones, plataformas y herramientas según requisitos y alcance.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
             { id: 'srv-ia', label: 'Aplicaciones y paneles', desc: 'Diseño de interfaces para productos digitales.', target: '/servicios/inteligencia-artificial', icon: 'fa-window-maximize' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
             { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },

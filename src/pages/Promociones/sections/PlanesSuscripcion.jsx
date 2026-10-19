@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
-const MEMBRESIAS = [
+const ALTERNATIVAS = [
     {
-        name: 'Proyecto puntual',
-        desc: 'Para una necesidad con alcance definido',
-        priceMonthly: 'A conversar',
-        priceAnnual: 'Según el caso',
-        badge: 'Según alcance',
+        name: 'Proyecto definido',
+        desc: 'Para una necesidad concreta que podamos delimitar juntos.',
+        badge: 'Alcance por conversar',
         active: false,
         icon: 'fa-medal',
         benefits: [
@@ -29,11 +27,9 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Desarrollo por etapas',
-        desc: 'Para proyectos que se pueden organizar por fases',
-        priceMonthly: 'A conversar',
-        priceAnnual: 'Según el caso',
-        badge: 'Modalidad a acordar',
+        name: 'Trabajo por etapas',
+        desc: 'Para organizar el trabajo en entregables y revisiones acordadas.',
+        badge: 'Etapas acordadas',
         active: true,
         icon: 'fa-crown',
         benefits: [
@@ -55,11 +51,9 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Mejoras a un sistema',
-        desc: 'Para evaluar cambios en un producto existente',
-        priceMonthly: 'A conversar',
-        priceAnnual: 'Según el caso',
-        badge: 'Sujeto a evaluación',
+        name: 'Revisión de un sistema',
+        desc: 'Para evaluar correcciones o mejoras en un producto existente.',
+        badge: 'Sujeto a revisión',
         active: false,
         icon: 'fa-gem',
         benefits: [
@@ -83,8 +77,6 @@ const MEMBRESIAS = [
 ];
 
 const PlanesSuscripcion = () => {
-    const [isAnnual, setIsAnnual] = useState(false);
-
     return (
         <div className="relative">
             <section className="relative z-10 py-4">
@@ -92,26 +84,21 @@ const PlanesSuscripcion = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
-                            <i className="fas fa-user-check text-[#A3E635] mr-1"></i> Modalidades de trabajo
+                            <i className="fas fa-user-check text-[#A3E635] mr-1"></i> Alternativas de trabajo
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-3 leading-tight">
-                            Elegí tu <span className="relative inline-block text-[#A3E635]">
-                                alternativas
+                            Una propuesta para <span className="relative inline-block text-[#A3E635]">
+                                tu necesidad
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            No hay paquetes universales. Conversamos el alcance, el presupuesto y la modalidad de cada solicitud según tu proyecto y tus posibilidades.
+                            Revisamos cada solicitud antes de proponer una forma de trabajo. Alcance, entregables, disponibilidad y presupuesto se conversan según el proyecto.
                         </p>
-
-                        <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
-                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Proyecto</button>
-                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Por etapas</button>
-                        </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                        {MEMBRESIAS.map((plan, i) => (
+                        {ALTERNATIVAS.map((plan, i) => (
                             <div key={i} className={`relative rounded-[2rem] p-6 sm:p-8 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${plan.active ? 'scale-105 shadow-2xl' : ''} ${plan.theme.cardBg} text-white ${plan.theme.borderColor} ${plan.theme.shadow}`}>
                                 <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
                                 <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/15 blur-2xl animate-float-slow pointer-events-none"></div>
@@ -129,10 +116,9 @@ const PlanesSuscripcion = () => {
                                     <h4 className="text-2xl font-black font-heading mb-1">{plan.name}</h4>
                                     <p className="text-xs font-medium opacity-80 mb-4">{plan.desc}</p>
 
-                                    <div className="flex items-end justify-center gap-1 mb-4">
-                                        <span className="text-lg font-black opacity-60">Modalidad</span>
-                                        <span className="text-5xl font-black font-heading leading-none">{isAnnual ? plan.priceAnnual : plan.priceMonthly}</span>
-                                        <span className="text-xs font-black opacity-60 mb-1">según alcance</span>
+                                    <div className="flex items-center justify-center gap-2 mb-4 rounded-full border border-white/10 bg-black/20 px-4 py-3">
+                                        <i className="fas fa-comments text-[#A3E635]" aria-hidden="true"></i>
+                                        <span className="text-sm font-bold">Condiciones a conversar</span>
                                     </div>
 
                                     <div className="space-y-2 mb-6 text-left">
@@ -145,7 +131,7 @@ const PlanesSuscripcion = () => {
                                     </div>
 
                                     <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className={`w-full py-3.5 rounded-full font-black text-[11px] uppercase tracking-[0.15em] flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all ${plan.theme.buttonBg} ${plan.theme.buttonText} ${plan.theme.buttonHover}`}>
-                                        Consultar alternativa <i className="fas fa-arrow-right text-[10px]"></i>
+                                        Conversar mi necesidad <i className="fas fa-arrow-right text-[10px]"></i>
                                     </a>
                                 </div>
                             </div>

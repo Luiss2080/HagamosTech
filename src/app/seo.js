@@ -44,11 +44,6 @@ const REGLAS = [
     description: 'Sistemas de gestión y aplicaciones a medida para tu negocio.',
   },
   {
-    coincide: (p) => p.startsWith('/servicios/automatizacion'),
-    title: 'Soluciones digitales a medida | HagamosTech',
-    description: 'Desarrollo de sistemas y aplicaciones web según el alcance acordado.',
-  },
-  {
     coincide: (p) => p.startsWith('/servicios/inteligencia-artificial'),
     title: 'Soluciones digitales a medida | HagamosTech',
     description: 'Evaluación de soluciones web, software y herramientas digitales a medida.',
@@ -75,8 +70,8 @@ const REGLAS = [
   },
   {
     coincide: (p) => p.startsWith('/promociones'),
-    title: 'Promociones y planes | HagamosTech',
-    description: 'Packs y planes de soporte para potenciar tu proyecto.',
+    title: 'Alternativas para tu proyecto | HagamosTech',
+    description: 'Conversemos sobre acompañamiento académico, diseño y desarrollo digital según tu necesidad.',
   },
   {
     coincide: (p) => p.startsWith('/novedades'),

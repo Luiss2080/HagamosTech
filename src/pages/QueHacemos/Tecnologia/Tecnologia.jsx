@@ -58,7 +58,7 @@ const VERTICALS = [
     title: 'Aplicaciones y herramientas digitales',
     desc: 'Aplicaciones web o móviles, paneles, dashboards y funciones con IA. También evaluamos mejoras de software existente y definimos cada entrega por alcance.',
     icon: <Code size={32} className="text-[#A3E635]" />,
-    tags: ['Web y móvil', 'Paneles', 'IA aplicada'],
+    tags: ['Web y móvil', 'Paneles', 'IA a evaluar'],
     image: '/img/08_Cards/tecnologia-interfaces.webp',
     category: 'INTERFACES'
   },

@@ -133,7 +133,7 @@ export const BANCO_CONOCIMIENTO = [
     id: 'ia',
     keywords: ['ia', 'inteligencia artificial', 'chatbot', 'chatbots', 'asistente', 'asistentes', 'automatizacion', 'automatizar', 'automatico', 'crm', 'facturacion', 'correos', 'prompts', 'github', 'productividad', 'integracion', 'integraciones', 'predictivo'],
     answer:
-      'No ofrecemos automatización de procesos, n8n ni servicios de inteligencia artificial aplicada. Podemos revisar si tu necesidad se resuelve con desarrollo web, software a medida, diseño de interfaces o una base de datos.'
+      'No ofrecemos automatización de procesos ni n8n. Podemos evaluar funciones con inteligencia artificial dentro de una aplicación o sistema, si encajan con los requisitos, el alcance y la viabilidad del proyecto.'
   },
   {
     id: 'personalizadas',
