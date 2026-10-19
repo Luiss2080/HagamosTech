@@ -131,7 +131,7 @@ const TestimonialCarousel = ({ testimonials }) => {
                       <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#A3E635]/35 bg-[#A3E635]/10 text-[#A3E635] shadow-[0_0_28px_rgba(163,230,53,.12)] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
                         <Quote size={25} aria-hidden="true" />
                       </div>
-                      <span className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#C9F88D]"><Lightbulb size={12} aria-hidden="true" /> Ejemplo orientativo</span>
+                      <span className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#C9F88D]"><Lightbulb size={12} aria-hidden="true" /> {t.role || 'Caso ilustrativo'}</span>
                     </div>
 
                     {/* Example text */}
@@ -156,10 +156,10 @@ const TestimonialCarousel = ({ testimonials }) => {
                       </div>
                       <div className="text-left leading-tight">
                         <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
-                          {t.role}
+                          Contexto del proyecto
                         </h4>
                         <p className="text-[9px] font-bold text-gray-500 dark:text-neutral-400">
-                          Idea inicial
+                          Ejemplo · sin datos de cliente
                         </p>
                       </div>
                     </div>
