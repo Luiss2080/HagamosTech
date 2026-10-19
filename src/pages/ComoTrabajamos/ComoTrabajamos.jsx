@@ -25,7 +25,7 @@ const stepsData = [
     {
         num: "02",
         title: "Analizamos",
-        desc: "Estudiamos a fondo tu caso, determinamos qué herramientas tecnológicas y metodologías se adaptan mejor a tu necesidad real y definimos el camino.",
+        desc: "Revisamos requisitos, funciones y viabilidad para identificar opciones que puedan responder a tu necesidad.",
         icon: "fa-magnifying-glass-chart",
         image: '/img/08_Cards/metodo-analizamos.webp',
         category: 'PASO 02',
@@ -43,7 +43,7 @@ const stepsData = [
     {
         num: "03",
         title: "Proponemos",
-        desc: "Planteamos una propuesta clara con el alcance, tecnologías recomendadas, tiempos de entrega estimados y presupuesto transparente sin sorpresas.",
+        desc: "Acordamos alcance, entregables, etapas, tiempos estimados y presupuesto, conversando alternativas según tu situación.",
         icon: "fa-file-signature",
         image: '/img/08_Cards/metodo-proponemos.webp',
         category: 'PASO 03',
@@ -61,7 +61,7 @@ const stepsData = [
     {
         num: "04",
         title: "Hacemos",
-        desc: "Nuestro equipo se encarga del desarrollo, diseño y la construcción de tu solución, manteniéndote informado de los avances de manera constante.",
+        desc: "Trabajamos sobre los entregables acordados y coordinamos las revisiones definidas para el proyecto.",
         icon: "fa-code",
         image: '/img/08_Cards/metodo-desarrollamos.webp',
         category: 'PASO 04',
@@ -79,7 +79,7 @@ const stepsData = [
     {
         num: "05",
         title: "Entregamos",
-        desc: "Te entregamos la solución completamente funcional, lista para usar y con las pautas necesarias para que puedas gestionarla sin depender de nadie.",
+        desc: "Presentamos los entregables acordados y las indicaciones de uso incluidas en la propuesta.",
         icon: "fa-circle-check",
         image: '/img/08_Cards/metodo-entregamos.webp',
         category: 'PASO 05',
@@ -123,46 +123,38 @@ const ComoTrabajamos = () => {
                         </span>
                     </h1>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed max-w-2xl mx-auto">
-                        No necesitás saber de programación ni qué herramientas implementar. Simplemente contanos tu objetivo o problema, y nosotros nos encargamos de trazar el camino y construir la solución.
+                        No necesitás llegar con una solución técnica definida. Contanos qué querés conseguir y revisamos opciones, alcance y etapas para avanzar.
                     </p>
                 </div>
             </section>
 
             {/* --- TIMELINE/CARDS SECTION --- */}
-            <section className="relative z-10 py-20">
+            <section className="relative z-10 overflow-hidden py-20">
+                <FondoTech hideWaves />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
-                    
+                    <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+                        <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
+                            Un proceso claro y conversado
+                        </span>
+                        <h2 className="text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+                            De la idea a una <span className="text-[#A3E635]">propuesta concreta</span>
+                        </h2>
+                        <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
+                            Avanzamos paso a paso: revisamos lo que necesitás, definimos qué incluye el trabajo y coordinamos cada entrega.
+                        </p>
+                    </header>
                     <ProcessStepsCarousel items={stepsData} label="Nuestra metodología de trabajo" />
-
-                    <div className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#111111] p-7 text-center sm:p-9">
-                        <img src="/img/07_Servicios/soluciones/hero-soluciones-v2.webp" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-20" />
-                        <div className="absolute inset-0 bg-gradient-to-r from-[#050505]/95 via-[#050505]/85 to-[#050505]/60" />
-                        <div className="relative z-10 mx-auto max-w-2xl">
-                            <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 text-xl text-[#A3E635]">
-                                <i className="fas fa-circle-question" aria-hidden="true"></i>
-                            </div>
-                            <h3 className="mb-3 text-xl font-black tracking-tight text-white">¿Tenés una idea?</h3>
-                            <p className="mb-6 text-sm font-medium leading-relaxed text-slate-300">
-                                Empecemos hoy mismo a trabajar en tu propuesta personalizada.
-                            </p>
-                            <button
-                                onClick={() => navigate('/contactanos')}
-                                className="rounded-full bg-[#A3E635] px-6 py-3 text-[10px] font-black uppercase tracking-wider text-[#0A0A0A] shadow-lg shadow-[#A3E635]/15 transition-all duration-300 hover:scale-105 hover:bg-[#84CC16]"
-                            >
-                                Contanos qué necesitás
-                            </button>
-                        </div>
-                    </div>
-
                 </div>
             </section>
 
             {/* --- CTA BOTTOM SECTION --- */}
-            <section className="relative z-10 py-16 bg-[#111111]/45 border-t border-white/5">
+            <section className="relative z-10 overflow-hidden border-t border-white/5 py-16">
+                <FondoTech hideWaves />
                 <div className="container mx-auto px-6 max-w-4xl text-center relative z-20">
-                    <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Vos ponés la necesidad. Nosotros el camino.</h2>
+                    <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">Siguiente paso</span>
+                    <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Conversemos sobre lo que necesitás.</h2>
                     <p className="text-xs sm:text-sm text-slate-400 font-medium mb-8 max-w-lg mx-auto">
-                        HagamosTech es un espacio multidisciplinario creado para resolver de forma cercana y profesional. Escribinos con alternativas según tus posibilidades.
+                        Contanos tu objetivo y revisamos alternativas, alcance y condiciones de acuerdo con tu proyecto y tus posibilidades.
                     </p>
                     <button
                         onClick={() => navigate('/contactanos')}

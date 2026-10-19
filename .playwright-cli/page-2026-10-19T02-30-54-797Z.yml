@@ -1,0 +1,196 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e9]: 
+      - generic [ref=e10]: INICIANDO ENTORNO
+    - img "HagamosTech" [ref=e12]
+    - generic [ref=e13]:
+      - paragraph [ref=e14]: Desarrollo a medida, robótica educativa y soluciones digitales con el estándar más alto de calidad y soporte.
+      - generic [ref=e15]:
+        - generic [ref=e16]:
+          - generic [ref=e17]: 
+          - text: Software Pro
+        - generic [ref=e19]:
+          - generic [ref=e20]: 
+          - text: Simuladores
+        - generic [ref=e22]:
+          - generic [ref=e23]: 
+          - text: Atención a coordinar
+    - generic [ref=e34]:
+      - generic [ref=e35]: "0"
+      - generic [ref=e36]: "% cargando"
+    - generic [ref=e39]:
+      - generic [ref=e40]:
+        - generic [ref=e41]: 
+        - generic [ref=e43]: Código
+      - generic [ref=e45]:
+        - generic [ref=e46]: 
+        - generic [ref=e48]: Red
+      - generic [ref=e50]:
+        - generic [ref=e51]: 
+        - generic [ref=e53]: Servidor
+      - generic [ref=e55]:
+        - generic [ref=e56]: 
+        - generic [ref=e58]: Seguridad
+      - generic [ref=e60]:
+        - generic [ref=e61]: 
+        - generic [ref=e63]: ¡Listo!
+    - generic [ref=e64]:
+      - link " Facebook" [ref=e65] [cursor=pointer]:
+        - /url: https://www.facebook.com/HagamosTech
+        - generic [ref=e66]: 
+        - generic [ref=e68]: Facebook
+      - link " Instagram" [ref=e69] [cursor=pointer]:
+        - /url: https://www.instagram.com/hagamostech/
+        - generic [ref=e70]: 
+        - generic [ref=e72]: Instagram
+      - link " TikTok" [ref=e73] [cursor=pointer]:
+        - /url: https://www.tiktok.com/@hagamostech
+        - generic [ref=e74]: 
+        - generic [ref=e76]: TikTok
+      - link " WhatsApp" [ref=e77] [cursor=pointer]:
+        - /url: https://wa.me/59161320004
+        - generic [ref=e78]: 
+        - generic [ref=e80]: WhatsApp
+  - generic [ref=e82]:
+    - banner [ref=e83]:
+      - generic [ref=e85]:
+        - link "Ir al inicio de HagamosTech" [ref=e86] [cursor=pointer]:
+          - /url: "#/"
+          - img "Logo HagamosTech" [ref=e87]
+        - navigation [ref=e88]:
+          - generic [ref=e89]:
+            - button "¿Qué hacemos? " [ref=e91] [cursor=pointer]:
+              - generic [ref=e92]: ¿Qué hacemos?
+              - generic [ref=e93]: 
+            - button "Servicios " [ref=e95] [cursor=pointer]:
+              - generic [ref=e96]: Servicios
+              - generic [ref=e97]: 
+            - button "¿Para quién? " [ref=e99] [cursor=pointer]:
+              - generic [ref=e100]: ¿Para quién?
+              - generic [ref=e101]: 
+            - button "Cómo trabajamos" [ref=e103] [cursor=pointer]
+            - button "Sobre Nosotros " [ref=e105] [cursor=pointer]:
+              - generic [ref=e106]: Sobre Nosotros
+              - generic [ref=e107]: 
+            - button "Contactanos" [ref=e109] [cursor=pointer]
+        - generic [ref=e110]:
+          - button " Iniciar Sesion" [ref=e111]:
+            - generic [ref=e112]: 
+            - generic [ref=e113]: Iniciar Sesion
+          - button " Crear Cuenta " [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]:
+              - generic [ref=e116]: 
+              - text: Crear Cuenta
+              - generic [ref=e117]: 
+    - text:                                  
+    - main [ref=e119]
+    - contentinfo [ref=e121]:
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - link [ref=e125] [cursor=pointer]:
+              - /url: "#/"
+              - img "Logo HagamosTech" [ref=e126]
+            - paragraph [ref=e127]: Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+            - generic [ref=e128]:
+              - link "" [ref=e129] [cursor=pointer]:
+                - /url: https://www.facebook.com/HagamosTech
+              - link "" [ref=e131] [cursor=pointer]:
+                - /url: https://www.instagram.com/hagamostech/
+              - link "" [ref=e133] [cursor=pointer]:
+                - /url: https://www.tiktok.com/@hagamostech
+              - link "" [ref=e135] [cursor=pointer]:
+                - /url: https://wa.me/59161320004
+          - generic [ref=e137]:
+            - heading "SOLUCIONES" [level=3] [ref=e138]
+            - list [ref=e140]:
+              - listitem [ref=e141]:
+                - link " Tecnología" [ref=e142] [cursor=pointer]:
+                  - /url: "#/que-hacemos/tecnologia"
+                  - generic [ref=e143]: 
+                  - generic [ref=e145]: Tecnología
+              - listitem [ref=e146]:
+                - link " Academia" [ref=e147] [cursor=pointer]:
+                  - /url: "#/que-hacemos/academia"
+                  - generic [ref=e148]: 
+                  - generic [ref=e150]: Academia
+              - listitem [ref=e151]:
+                - link " Negocios" [ref=e152] [cursor=pointer]:
+                  - /url: "#/que-hacemos/negocios"
+                  - generic [ref=e153]: 
+                  - generic [ref=e155]: Negocios
+              - listitem [ref=e156]:
+                - link " Soluciones personalizadas" [ref=e157] [cursor=pointer]:
+                  - /url: "#/que-hacemos/personalizado"
+                  - generic [ref=e158]: 
+                  - generic [ref=e160]: Soluciones personalizadas
+              - listitem [ref=e161]:
+                - link " Cómo trabajamos" [ref=e162] [cursor=pointer]:
+                  - /url: "#/como-trabajamos"
+                  - generic [ref=e163]: 
+                  - generic [ref=e165]: Cómo trabajamos
+          - generic [ref=e166]:
+            - heading "NOSOTROS" [level=3] [ref=e167]
+            - list [ref=e169]:
+              - listitem [ref=e170]:
+                - link " Cómo trabajamos" [ref=e171] [cursor=pointer]:
+                  - /url: "#/como-trabajamos"
+                  - generic [ref=e172]: 
+                  - generic [ref=e174]: Cómo trabajamos
+              - listitem [ref=e175]:
+                - link " Nuestras soluciones" [ref=e176] [cursor=pointer]:
+                  - /url: "#/servicios/desarrollo-web"
+                  - generic [ref=e177]: 
+                  - generic [ref=e179]: Nuestras soluciones
+              - listitem [ref=e180]:
+                - link " Contanos tu idea" [ref=e181] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e182]: 
+                  - generic [ref=e184]: Contanos tu idea
+              - listitem [ref=e185]:
+                - link " Apoyo y soporte" [ref=e186] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e187]: 
+                  - generic [ref=e189]: Apoyo y soporte
+              - listitem [ref=e190]:
+                - link " Trabajá con nosotros" [ref=e191] [cursor=pointer]:
+                  - /url: "#/contactanos"
+                  - generic [ref=e192]: 
+                  - generic [ref=e194]: Trabajá con nosotros
+          - generic [ref=e195]:
+            - heading "CONTACTO" [level=3] [ref=e196]
+            - list [ref=e198]:
+              - listitem [ref=e199]:
+                - generic [ref=e200]: 
+                - generic [ref=e202]:
+                  - generic [ref=e203]: Oficina principal
+                  - generic [ref=e204]: Av. San Martín y 2do AnilloEquipetrol, Santa Cruz
+              - listitem [ref=e205]:
+                - generic [ref=e206]: 
+                - generic [ref=e208]:
+                  - generic [ref=e209]: Email
+                  - link "contacto@hagamostech.bo" [ref=e210] [cursor=pointer]:
+                    - /url: mailto:contacto@hagamostech.bo
+              - listitem [ref=e211]:
+                - generic [ref=e212]: 
+                - generic [ref=e214]:
+                  - generic [ref=e215]: Teléfono / WhatsApp
+                  - link "+591 61320004" [ref=e216] [cursor=pointer]:
+                    - /url: tel:+59161320004
+              - listitem [ref=e217]:
+                - generic [ref=e218]: 
+                - generic [ref=e220]:
+                  - generic [ref=e221]: Horarios
+                  - generic [ref=e222]: "Lun - Vie: 09:00 - 18:00"
+        - generic [ref=e223]:
+          - paragraph [ref=e224]: © 2026 HagamosTech. Todos los derechos reservados.
+          - generic [ref=e225]:
+            - link "Política de Privacidad" [ref=e226] [cursor=pointer]:
+              - /url: "#/privacidad"
+            - link "Términos de Servicio" [ref=e227] [cursor=pointer]:
+              - /url: "#/terminos"
+            - link "Cookies" [ref=e228] [cursor=pointer]:
+              - /url: "#/cookies"
+    - button "" [ref=e230] [cursor=pointer]
+    - button "" [ref=e237] [cursor=pointer]
