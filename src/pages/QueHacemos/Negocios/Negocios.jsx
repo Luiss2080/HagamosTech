@@ -10,6 +10,7 @@ import TestimonialCarousel from '../../../components/carouseles/CarruselTestimon
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
+import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const SOLUCIONES = [
   { title: 'Sitios, plataformas y tiendas online', desc: 'Sitios corporativos, portales educativos e institucionales, landing pages, catálogos, blogs, cursos, reservas, comunidades y tiendas con pedidos. Funciones y pagos se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
@@ -142,36 +143,14 @@ const Negocios = () => {
         </div>
       </section>
 
-      <section className="relative z-10 px-6 pb-24 pt-8 sm:pb-32">
-        <FondoTech />
-        <div className="group relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0B0D09] shadow-[0_28px_100px_rgba(0,0,0,.4)] sm:rounded-[2.5rem]">
-          <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(163,230,53,.09),transparent_48%,rgba(163,230,53,.035))]" />
-          <div className="pointer-events-none absolute -right-20 -top-36 h-96 w-96 rounded-full border border-[#A3E635]/10 transition-transform duration-700 group-hover:translate-x-4 group-hover:translate-y-4" />
-          <div className="pointer-events-none absolute -right-4 -top-20 h-72 w-72 rounded-full border border-[#A3E635]/10" />
-          <div className="relative grid items-center gap-10 px-7 py-10 sm:px-12 sm:py-14 lg:grid-cols-[1fr_auto] lg:px-16 lg:py-16">
-            <div className="max-w-3xl">
-              <span className="mb-5 inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">
-                <span className="h-2 w-2 rounded-full bg-[#A3E635] shadow-[0_0_14px_rgba(163,230,53,.8)]" /> Hablemos de tu idea
-              </span>
-              <h2 className="text-3xl font-black uppercase leading-[1.05] tracking-tight text-white sm:text-5xl">
-                ¿Qué necesitás <span className="text-[#A3E635]">resolver?</span>
-              </h2>
-              <p className="mt-5 max-w-2xl text-sm font-medium leading-relaxed text-slate-300 sm:text-base">
-                Contanos tu objetivo. Revisamos alternativas de desarrollo, diseño o acompañamiento y conversamos alcance, etapas y presupuesto de acuerdo con tu situación.
-              </p>
-              <div className="mt-7 flex flex-wrap gap-2 text-[9px] font-extrabold uppercase tracking-wider text-slate-300 sm:text-[10px]">
-                {['Desarrollo web', 'Software a medida', 'Diseño gráfico', 'Apoyo académico'].map((item) => (
-                  <span key={item} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2">{item}</span>
-                ))}
-              </div>
-            </div>
-            <a href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto" target="_blank" rel="noopener noreferrer" className="inline-flex min-h-14 items-center justify-center gap-3 self-center rounded-full bg-[#A3E635] px-7 py-4 text-xs font-black uppercase tracking-[.12em] text-black shadow-[0_12px_36px_rgba(163,230,53,.2)] transition-all hover:-translate-y-1 hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#A3E635] sm:px-9">
-              Consultar proyecto <ArrowRight size={17} aria-hidden="true" />
-            </a>
-          </div>
-          <div className="h-1 w-full bg-gradient-to-r from-transparent via-[#A3E635] to-transparent opacity-70" />
-        </div>
-      </section>
+      <CenteredProjectCTA
+        title={<>¿Qué necesitás <span className="text-[#A3E635]">resolver?</span></>}
+        description="Contanos tu objetivo. Revisamos alternativas de desarrollo, diseño o acompañamiento y conversamos alcance, etapas y presupuesto de acuerdo con tu situación."
+        buttonLabel="Consultar proyecto"
+        href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto"
+        eyebrow="HABLEMOS DE TU IDEA"
+        chips={['Desarrollo web', 'Software a medida', 'Diseño gráfico', 'Apoyo académico']}
+      />
 
     </div>
   );

@@ -8,6 +8,7 @@ const CenteredProjectCTA = ({
   buttonLabel = 'Consultar mi proyecto',
   href = 'https://wa.me/59161320004',
   eyebrow = 'HAGAMOSTECH · CONVERSEMOS',
+  chips = [],
 }) => (
   <section className="relative z-10 overflow-hidden px-6 py-20 pb-28">
     <FondoTech />
@@ -21,6 +22,13 @@ const CenteredProjectCTA = ({
         </span>
         <h2 className="mb-5 text-3xl font-black uppercase leading-[1.04] tracking-[-.04em] text-white sm:text-5xl md:text-6xl">{title}</h2>
         <p className="mx-auto mb-9 max-w-2xl text-base font-semibold leading-relaxed text-slate-300 sm:text-lg md:text-xl">{description}</p>
+        {chips.length > 0 && (
+          <ul className="mx-auto mb-9 flex max-w-2xl flex-wrap justify-center gap-2">
+            {chips.map((chip) => (
+              <li key={chip} className="rounded-full border border-white/10 bg-white/[0.04] px-3 py-2 text-[9px] font-extrabold uppercase tracking-wider text-slate-300 sm:text-[10px]">{chip}</li>
+            ))}
+          </ul>
+        )}
         <a href={href} target="_blank" rel="noopener noreferrer" className="group/btn inline-flex min-h-16 items-center gap-5 rounded-full bg-black px-7 py-3 text-xs font-black uppercase tracking-[.13em] text-[#A3E635] shadow-[0_18px_38px_rgba(0,0,0,.3)] transition-all duration-300 hover:-translate-y-1 hover:scale-[1.025] hover:bg-[#10140A] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-black sm:px-12 sm:text-sm">
           <span>{buttonLabel}</span>
           <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#A3E635]/15 transition-all group-hover/btn:translate-x-1 group-hover/btn:bg-[#A3E635]/25">
