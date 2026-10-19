@@ -19,7 +19,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'EXPOSICIONES',
             shortDesc: 'Organización visual de exposiciones, defensas, proyectos, clases y presentaciones académicas.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-graduation-cap', label: 'Foco', value: 'Universitario' }
             ],
@@ -30,7 +30,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'formato-apa',
@@ -41,7 +41,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'RIGOR ACADÉMICO',
             shortDesc: 'Orientación de estructura, formato, citas, referencias, tablas, figuras y documentación técnica según pauta.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-spell-check', label: 'Calidad', value: 'Ortografía' }
             ],
@@ -52,7 +52,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'infografias-diagramas',
@@ -63,7 +63,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'ESQUEMAS',
             shortDesc: 'Recursos visuales para explicar temas, procesos y contenidos de estudio.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-image', label: 'Formato', value: 'Alta Res' }
             ],
@@ -74,7 +74,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'mapas-conceptuales',
@@ -85,7 +85,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'MARCO TEÓRICO',
             shortDesc: 'Síntesis visual de temas y preparación de portadas para trabajos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-book-open', label: 'Teoría', value: 'Precisa' }
             ],
@@ -96,7 +96,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'simuladores-educativos',
@@ -107,7 +107,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'ENTORNOS VIRTUALES',
             shortDesc: 'Orientación en simulaciones y proyectos tecnológicos educativos, según alcance.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
                 { icon: 'fa-server', label: 'Redes', value: 'Cisco/Otros' }
             ],
@@ -118,7 +118,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'apoyo-programacion',
@@ -129,7 +129,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CÓDIGO',
             shortDesc: 'Tutoría de algoritmos, lógica y comprensión de código.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'A Medida' },
                 { icon: 'fa-bug', label: 'Debug', value: 'Efectivo' }
             ],
@@ -140,7 +140,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'mentoria-apoyo-tareas',
@@ -162,7 +162,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'informes-monografias',
@@ -184,7 +184,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'proyectos-socioformativos',
@@ -206,7 +206,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         }
     ],
     emprendedores: [
@@ -219,7 +219,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'IDENTIDAD',
             shortDesc: 'Desarrollo de identidad visual inicial para un negocio o proyecto.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-star', label: 'Impacto', value: 'Visual' }
             ],
@@ -230,7 +230,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'manual-identidad',
@@ -241,7 +241,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'REGLAS VISUALES',
             shortDesc: 'Reglas de uso para logotipo, colores y tipografía.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-palette', label: 'Color', value: 'Exacto' }
             ],
@@ -252,7 +252,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'menus-qr',
@@ -263,7 +263,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'AGILIDAD',
             shortDesc: 'Presentación digital de productos o servicios.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-mobile-screen', label: 'Móvil', value: 'Optimizado' }
             ],
@@ -274,7 +274,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'publicidad-ofertas',
@@ -285,9 +285,9 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PROMOCIONES',
             shortDesc: 'Piezas gráficas para comunicar campañas y ofertas.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-bolt', label: 'Ventas', value: 'Rápidas' }
+                { icon: 'fa-bolt', label: 'Pedidos', value: 'Según alcance' }
             ],
             includes: [
                 { icon: 'fa-tag', label: 'Campañas' },
@@ -296,7 +296,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'publicidad-fechas',
@@ -307,7 +307,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'TEMÁTICAS',
             shortDesc: 'Diseño de piezas para fechas y eventos comerciales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-calendar-days', label: 'Eventos', value: 'Clave' }
             ],
@@ -318,7 +318,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
     ],
     empleo: [
@@ -331,7 +331,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CURRÍCULUM',
             shortDesc: 'Estructuración y presentación clara de experiencia y formación.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-robot', label: 'Filtros', value: 'ATS' }
             ],
@@ -342,7 +342,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'perfil-linkedin',
@@ -353,7 +353,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PERFIL DIGITAL',
             shortDesc: 'Mejora de titulares, extracto y presentación profesional.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Ajuste', value: 'A Medida' },
                 { icon: 'fa-globe', label: 'Alcance', value: 'Global' }
             ],
@@ -364,7 +364,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'cartas-presentacion',
@@ -375,7 +375,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PERSUASIÓN',
             shortDesc: 'Preparación de documentos para postulaciones laborales.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Redacción', value: 'A Medida' },
                 { icon: 'fa-language', label: 'Idiomas', value: 'ES/EN' }
             ],
@@ -386,7 +386,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'portafolios-digitales',
@@ -397,7 +397,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PROYECTOS',
             shortDesc: 'Organización de proyectos y trabajos en un portafolio digital.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-github', label: 'Plataformas', value: 'Integradas' }
             ],
@@ -408,7 +408,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'entrevistas',
@@ -419,7 +419,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'SIMULACIONES',
             shortDesc: 'Práctica y orientación para procesos de selección.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Guía', value: 'A Medida' },
                 { icon: 'fa-comments', label: 'Práctica', value: 'En Vivo' }
             ],
@@ -430,7 +430,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'certificados',
@@ -441,9 +441,9 @@ export const SERVICIOS_DATA = {
             pillLabel: 'DIPLOMAS',
             shortDesc: 'Diseño de certificados, constancias y reconocimientos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-check-double', label: 'Validación', value: 'Digital' }
+                { icon: 'fa-check-double', label: 'Formato', value: 'Digital' }
             ],
             includes: [
                 { icon: 'fa-award', label: 'Elegancia' },
@@ -452,7 +452,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         }
     ],
     diseno: [
@@ -465,7 +465,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'MARCAS',
             shortDesc: 'Diseño de marca y sus versiones gráficas.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-vector-square', label: 'Vectores', value: 'Originales' }
             ],
@@ -476,7 +476,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'flyers-banners',
@@ -487,7 +487,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'REDES Y PRINT',
             shortDesc: 'Piezas para difusión digital, eventos e impresión.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-expand', label: 'Tamaño', value: 'Adaptable' }
             ],
@@ -498,7 +498,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'packaging-catalogos',
@@ -509,7 +509,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'EMPAQUES',
             shortDesc: 'Diseño y maquetación de materiales de producto.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-leaf', label: 'Estilo', value: 'Sostenible' }
             ],
@@ -520,7 +520,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'tarjetas-invitaciones',
@@ -531,7 +531,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'PRESENTACIÓN',
             shortDesc: 'Material gráfico para contactos y eventos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-qrcode', label: 'Extras', value: 'QR Integrado' }
             ],
@@ -542,7 +542,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'edicion-fotografica',
@@ -553,7 +553,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'FOTOGRAFÍA',
             shortDesc: 'Ajuste de color, limpieza y preparación de imágenes.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Edición', value: 'A Medida' },
                 { icon: 'fa-palette', label: 'Color', value: 'Corrección' }
             ],
@@ -564,7 +564,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         }
     ],
     web: [
@@ -577,9 +577,9 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CORPORATIVO',
             shortDesc: 'Sitios corporativos, institucionales, educativos, inmobiliarios, de noticias, restaurantes u organizaciones; portales con secciones públicas o privadas según alcance.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
-                { icon: 'fa-bolt', label: 'Carga', value: 'Rápida' }
+                { icon: 'fa-bolt', label: 'Carga', value: 'Según desarrollo' }
             ],
             includes: [
                 { icon: 'fa-sitemap', label: 'Secciones' },
@@ -588,7 +588,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'landing-pages',
@@ -599,9 +599,9 @@ export const SERVICIOS_DATA = {
             pillLabel: 'LEADS',
             shortDesc: 'Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-bullseye', label: 'Foco', value: 'Conversión' }
+                { icon: 'fa-bullseye', label: 'Foco', value: 'A definir' }
             ],
             includes: [
                 { icon: 'fa-bullseye', label: 'Objetivo' },
@@ -610,7 +610,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'tiendas-online',
@@ -621,7 +621,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'VENTAS',
             shortDesc: 'Catálogos con carrito o pedidos; pagos en línea y sus proveedores se evalúan por separado antes de comprometerlos.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
                 { icon: 'fa-credit-card', label: 'Pagos', value: 'A evaluar' }
             ],
@@ -632,7 +632,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'catalogos-blogs',
@@ -643,7 +643,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'DINÁMICO',
             shortDesc: 'Catálogos, blogs, plataformas de cursos, directorios y comunidades con publicación organizada de contenido.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-pen-nib', label: 'Contenido', value: 'Gestionable' }
             ],
@@ -654,7 +654,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'ui-ux-responsive',
@@ -665,7 +665,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'RESPONSIVE',
             shortDesc: 'Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
                 { icon: 'fa-mobile', label: 'Mobile', value: 'First' }
             ],
@@ -676,7 +676,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         }
     ],
     software: [
@@ -689,7 +689,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'A MEDIDA',
             shortDesc: 'Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Código', value: 'A Medida' },
                 { icon: 'fa-layer-group', label: 'Alcance', value: 'Por fases' }
             ],
@@ -700,7 +700,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
         {
             id: 'bases-datos',
@@ -711,9 +711,9 @@ export const SERVICIOS_DATA = {
             pillLabel: 'ESTRUCTURA',
             shortDesc: 'Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-server', label: 'Rendimiento', value: 'Óptimo' }
+                { icon: 'fa-server', label: 'Rendimiento', value: 'Por evaluar' }
             ],
             includes: [
                 { icon: 'fa-table', label: 'Tablas' },
@@ -722,7 +722,7 @@ export const SERVICIOS_DATA = {
             ],
             cta: 'Consultar',
             ctaLink: '/contactanos',
-            price: 'A Medida'
+            price: 'A conversar'
         },
     ],
     personalizado: [
@@ -735,7 +735,7 @@ export const SERVICIOS_DATA = {
             pillLabel: 'CONTANOS TU PROBLEMA',
             shortDesc: 'Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance.',
             stats: [
-                { icon: 'fa-headset', label: 'Soporte', value: 'A Coordinar' },
+                { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'Según alcance' },
                 { icon: 'fa-lock', label: 'Privacidad', value: 'Confidencial' }
             ],
