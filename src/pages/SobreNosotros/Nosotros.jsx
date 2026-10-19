@@ -14,6 +14,7 @@ const SobreNosotrosPagina = () => {
                 <FondoTech />
                 <div className="relative z-10">
                     <PageHero
+                        embedded
                         className="!pb-5 sm:!pb-7"
                         title="Somos"
                         highlight="HagamosTech"

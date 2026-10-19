@@ -39,12 +39,13 @@ const LABELS = {
   compras: 'Mis compras',
   'recuperar-contrasena': 'Recuperar contraseña',
 };
+const NON_LINK_PARENTS = new Set(['que-hacemos', 'servicios']);
 
 const getSegments = (pathname) => {
   const segments = pathname.split('/').filter(Boolean);
   const crumbs = segments.map((segment, index) => ({
     label: LABELS[segment] || segment.replace(/-/g, ' ').replace(/\b\w/g, (letter) => letter.toUpperCase()),
-    url: index < segments.length - 1 ? `/${segments.slice(0, index + 1).join('/')}` : null,
+    url: index < segments.length - 1 && !NON_LINK_PARENTS.has(segment) ? `/${segments.slice(0, index + 1).join('/')}` : null,
   }));
 
   if (segments[0] === 'contacto' && crumbs.length > 1) {
