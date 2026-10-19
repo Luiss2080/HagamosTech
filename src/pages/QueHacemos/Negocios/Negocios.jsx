@@ -57,7 +57,7 @@ const Negocios = () => {
       {/* HERO SECTION - IMMERSIVE DASHBOARD */}
       <section className="relative pt-32 pb-10 z-10 px-6">
         <FondoTech />
-        <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
+        <div className="container relative z-10 mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
             <Globe size={16} /> Ecosistema Corporativo
@@ -85,7 +85,7 @@ const Negocios = () => {
       {/* BENTO BOX GRID SECTION */}
       <section className="py-24 z-10 relative px-6">
         <FondoTech />
-        <div className="container mx-auto max-w-6xl">
+        <div className="container relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
               Soluciones <span className="text-[#A3E635]">Integrales</span>
@@ -102,7 +102,7 @@ const Negocios = () => {
       {/* TIMELINE SECTION */}
       <section className="py-24 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
         <FondoTech />
-        <div className="container mx-auto max-w-7xl">
+        <div className="container relative z-10 mx-auto max-w-7xl">
           <div className="mb-8 grid items-end gap-6 lg:mb-10 lg:grid-cols-[1fr_1fr]">
             <div>
               <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">

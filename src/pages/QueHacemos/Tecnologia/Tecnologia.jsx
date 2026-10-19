@@ -121,7 +121,7 @@ const Tecnologia = () => {
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
         <FondoTech />
-        <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
+        <div className="container relative z-10 mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
             <i className="fa-solid fa-microchip"></i> Núcleo Tecnológico
@@ -149,7 +149,9 @@ const Tecnologia = () => {
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
-        <ToolsMarquee items={TECH_STACK} label="Tecnologías para tu solución" description="Revisamos qué herramientas pueden responder a los requisitos de cada proyecto." />
+        <div className="relative z-10">
+          <ToolsMarquee items={TECH_STACK} label="Tecnologías para tu solución" description="Revisamos qué herramientas pueden responder a los requisitos de cada proyecto." />
+        </div>
       </section>
 
       {/* ALCANCE Y REQUISITOS */}

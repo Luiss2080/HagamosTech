@@ -131,7 +131,7 @@ const Academia = () => {
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
         <FondoTech />
-        <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
+        <div className="container relative z-10 mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
             <GraduationCap size={16} /> Excelencia Académica
@@ -159,7 +159,9 @@ const Academia = () => {
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
-        <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
+        <div className="relative z-10">
+          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
+        </div>
       </section>
 
       {/* METRICAS Y RENDIMIENTO */}
@@ -167,24 +169,17 @@ const Academia = () => {
         items={METRICS}
         title="Cómo acordamos el acompañamiento"
         description="Definimos la modalidad y disponibilidad en función de la materia, la consigna y el alcance conversado."
-      />
-
-      {/* BENTO BOX GRID SECTION */}
-      <section className="py-24 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
-        <FondoTech />
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
-              Áreas de <span className="text-[#A3E635]">Especialidad</span>
-            </h2>
-            <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Revisamos cada necesidad según la materia, el nivel, la consigna y la disponibilidad. La modalidad y el alcance se conversan antes de comenzar.
-            </p>
-          </div>
-
-          <EspecialidadesGrid />
-        </div>
-      </section>
+      >
+        <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+          <h2 className="text-3xl font-black uppercase tracking-tight text-white md:text-5xl">
+            Áreas de <span className="text-[#A3E635]">especialidad</span>
+          </h2>
+          <p className="mt-4 text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
+            Revisamos cada necesidad según la materia, el nivel, la consigna y la disponibilidad. La modalidad y el alcance se conversan antes de comenzar.
+          </p>
+        </header>
+        <EspecialidadesGrid />
+      </FeatureTimeline>
 
       {/* TESTIMONIALS */}
       <TestimonialCTASection
