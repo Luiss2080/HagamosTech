@@ -24,7 +24,7 @@ const LABELS = {
   'mision-vision': 'Misión y visión',
   valores: 'Valores',
   videos: 'Videos',
-  promociones: 'Promociones',
+  promociones: 'Opciones de servicio',
   'como-trabajamos': 'Cómo trabajamos',
   novedades: 'Novedades',
   contactanos: 'Contacto',

@@ -1,13 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
-    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB' },
-    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE' },
-    { titulo: 'Acompañamiento académico', desc: 'Mentorías, ejercicios guiados e informes, sujeto a materia y disponibilidad.', img: '/img/08_Cards/novedad-ticker-academia.webp', tag: 'ACADEMIA' },
-    { titulo: 'Diseño gráfico', desc: 'Identidad visual, piezas gráficas y catálogos según tu necesidad.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO' },
-    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO' },
-    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA' },
+    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB', link: '/que-hacemos/tecnologia' },
+    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE', link: '/servicios/sistemas-apps' },
+    { titulo: 'Acompañamiento académico', desc: 'Mentorías, ejercicios guiados e informes, sujeto a materia y disponibilidad.', img: '/img/08_Cards/novedad-ticker-academia.webp', tag: 'ACADEMIA', link: '/que-hacemos/academia' },
+    { titulo: 'Diseño gráfico', desc: 'Identidad visual, piezas gráficas y catálogos según tu necesidad.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO', link: '/servicios/diseno-grafico' },
+    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO', link: '/servicios/empleo' },
+    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA', link: '/contactanos' },
 ];
 
 const TAG_STYLES = {
@@ -55,10 +56,10 @@ const AnunciosTicker = ({ compact = false }) => {
                         {anuncio.desc}
                     </p>
                 </div>
-                <button className="w-full bg-[#A3E635] hover:bg-[#0A0A0A] hover:text-white text-[#0A0A0A] font-bold text-[9px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm">
+                <Link to={anuncio.link} className="w-full bg-[#A3E635] hover:bg-[#0A0A0A] hover:text-white text-[#0A0A0A] font-bold text-[9px] py-1.5 rounded-lg flex items-center justify-center gap-1.5 transition-colors shadow-sm">
                     SABER MÁS
                     <i className="fa-solid fa-arrow-up-right-from-square text-[9px]"></i>
-                </button>
+                </Link>
             </div>
         </article>
     );
