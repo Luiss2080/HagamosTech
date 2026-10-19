@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RESUMEN = [
-    { icon: 'fa-shield-halved', titulo: 'Compromiso con tu privacidad', desc: 'La información que compartís se utiliza para gestionar consultas y servicios, según el contexto de cada contacto.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-lock', titulo: 'Transparencia total', desc: 'Esta página resume el tratamiento de datos descrito en la política de privacidad.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-user-shield', titulo: 'Control en tus manos', desc: 'Podés contactarnos para consultar o solicitar la revisión de tus datos personales.', color: 'bg-[#171717]' },
-    { icon: 'fa-file-shield', titulo: 'Actualización 2026', desc: 'Revisá esta política para conocer la información vigente sobre el tratamiento de datos.', color: 'bg-[#84CC16]' },
+    { icon: 'fa-shield-halved', titulo: 'Privacidad cuidada', desc: 'Usamos la información que compartís para atender consultas y coordinar servicios.', dato: 'TRATAMIENTO RESPONSABLE' },
+    { icon: 'fa-lock', titulo: 'Información clara', desc: 'La política explica qué datos pueden intervenir y en qué contexto.', dato: 'TRANSPARENCIA' },
+    { icon: 'fa-user-shield', titulo: 'Control personal', desc: 'Podés consultarnos o pedir la revisión de tus datos personales.', dato: 'TUS DERECHOS' },
+    { icon: 'fa-file-shield', titulo: 'Política vigente', desc: 'Esta página reúne la información actual sobre el tratamiento de datos.', dato: 'DOCUMENTO LEGAL' },
 ];
 
 const ResumenPrivacidad = () => {
@@ -31,23 +31,20 @@ const ResumenPrivacidad = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {RESUMEN.map((item, i) => (
-                            <div key={i} className={`relative rounded-[2rem] p-6 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${item.color} text-white shadow-xl shadow-orange-950/10`}>
-                                <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
-                                {/* Orbes decorativos */}
-                                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/15 blur-2xl animate-float-slow pointer-events-none"></div>
-                                <div className="absolute -bottom-12 -left-8 w-36 h-36 rounded-full bg-black/10 blur-2xl animate-float-medium pointer-events-none"></div>
-
+                            <article key={i} className="relative rounded-[1.75rem] min-h-64 p-6 transition-all duration-300 group overflow-hidden border border-[#A3E635]/20 hover:border-[#A3E635]/50 hover:-translate-y-1 z-10 text-center bg-[#0c100a] text-white shadow-xl shadow-black/30">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-[#A3E635]"></div>
+                                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#A3E635]/10 blur-2xl pointer-events-none"></div>
                                 <div className="relative z-10">
-                                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4 mx-auto bg-white/20 ring-1 ring-white/40 shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300">
+                                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 mx-auto bg-[#A3E635]/10 text-[#A3E635] ring-1 ring-[#A3E635]/30 shadow-lg group-hover:scale-110 transition-transform duration-300">
                                         <i className={`fas ${item.icon}`}></i>
                                     </div>
-                                    <h3 className="text-lg font-black mb-2 leading-tight">{item.titulo}</h3>
-                                    <p className="text-xs font-medium opacity-90 leading-relaxed">{item.desc}</p>
-                                    <div className="mt-4 pt-3 border-t border-white/25 inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest opacity-80">
-                                        <i className="fas fa-shield-halved text-[9px]"></i> HagamosTech
+                                    <h3 className="text-lg font-black mb-2 leading-tight text-white">{item.titulo}</h3>
+                                    <p className="text-sm font-medium text-slate-300 leading-relaxed">{item.desc}</p>
+                                    <div className="mt-4 pt-3 border-t border-[#A3E635]/20 inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest text-[#B7F34B]">
+                                        <i className="fas fa-circle-check text-[9px]"></i> {item.dato}
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
