@@ -599,9 +599,14 @@ const AuthController = {
                 return res.status(401).json({ mensaje: 'No autorizado' });
             }
             const { contrasena, twoFactorSecret, ...datosSeguros } = usuario;
+            const [proyectosPersonales, notasPersonales, eventosPersonales] = await Promise.all([
+                prisma.proyectoPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { creadoEn: 'asc' } }),
+                prisma.notaPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { creadoEn: 'asc' } }),
+                prisma.eventoPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { inicio: 'asc' } }),
+            ]);
             res.json({
                 success: true,
-                data: { ...datosSeguros, exportadoEn: new Date().toISOString() }
+                data: { ...datosSeguros, proyectosPersonales, notasPersonales, eventosPersonales, exportadoEn: new Date().toISOString() }
             });
         } catch (error) {
             console.error(error);
