@@ -11,7 +11,7 @@ const FLUJO = [
         chips: ['Navegación', 'Aceptación', 'Local'],
         stat: 'Local',
         statIcon: 'fa-laptop',
-        color: 'bg-[#A3E635]'
+        color: 'bg-[#17240d]'
     },
     {
         icon: 'fa-globe',
@@ -22,7 +22,7 @@ const FLUJO = [
         chips: ['Cuenta', 'Sesión', 'Autenticación'],
         stat: 'Sesión',
         statIcon: 'fa-lock',
-        color: 'bg-[#0A0A0A]'
+        color: 'bg-[#11150d]'
     },
     {
         icon: 'fa-database',
@@ -33,7 +33,7 @@ const FLUJO = [
         chips: ['Preferencias', 'Almacenamiento local', 'Navegador'],
         stat: 'Local',
         statIcon: 'fa-shield-halved',
-        color: 'bg-[#171717]'
+        color: 'bg-[#11150d]'
     },
     {
         icon: 'fa-chart-simple',
@@ -44,7 +44,7 @@ const FLUJO = [
         chips: ['Uso no declarado', 'Información vigente', 'Revisable'],
         stat: 'No declarado',
         statIcon: 'fa-user-secret',
-        color: 'bg-[#84CC16]'
+        color: 'bg-[#17240d]'
     },
 ];
 
@@ -90,7 +90,7 @@ const MapaFlujoCookies = () => {
                                                 onClick={() => setActivo(i)}
                                                 className="relative flex flex-col items-center gap-2 group"
                                             >
-                                                <div className={`relative z-10 w-16 h-16 rounded-full ${n.color} text-white flex items-center justify-center shadow-xl ring-4 ring-white transition-all duration-300 group-hover:scale-110 ${isActive ? 'scale-110 ring-[#A3E635]/40 shadow-orange-500/30' : 'opacity-70 group-hover:opacity-100'}`}>
+                                                <div className={`relative z-10 w-16 h-16 rounded-full ${n.color} text-[#B7F34B] flex items-center justify-center shadow-xl ring-1 ring-[#A3E635]/30 transition-all duration-300 group-hover:scale-110 ${isActive ? 'scale-110 ring-[#A3E635]/60 shadow-black/30' : 'opacity-70 group-hover:opacity-100'}`}>
                                                     <i className={`fas ${n.icon} text-xl`}></i>
                                                     <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">{i + 1}</span>
                                                 </div>

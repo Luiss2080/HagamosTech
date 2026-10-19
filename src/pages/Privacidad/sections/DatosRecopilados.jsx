@@ -8,7 +8,7 @@ const CATEGORIAS = [
         ejemplo: 'Nombre, apellido, correo electrónico y número de celular.',
         detalles: 'Los solicitamos al registrarte, al enviar una solicitud o al contactarnos. Son necesarios para coordinar tus proyectos y mantenerte informado.',
         items: ['Nombre y apellido', 'Correo electrónico', 'Número de celular', 'Preferencias de proyecto'],
-        color: 'from-[#A3E635] to-[#84CC16]',
+        color: 'from-[#17240d] to-[#0b0e09]',
         badge: 'bg-[#A3E635]'
     },
     {
@@ -17,7 +17,7 @@ const CATEGORIAS = [
         ejemplo: 'Ciudad, empresa o institución y datos para coordinar la atención.',
         detalles: 'Podemos usar estos datos para responder consultas y coordinar servicios. El tratamiento y cualquier comunicación con terceros depende de las herramientas utilizadas y del caso.',
         items: ['Ciudad o zona', 'Empresa o institución', 'Referencias de contacto'],
-        color: 'from-[#0A0A0A] to-[#171717]',
+        color: 'from-[#17240d] to-[#0b0e09]',
         badge: 'bg-[#0A0A0A]'
     },
     {
@@ -26,7 +26,7 @@ const CATEGORIAS = [
         ejemplo: 'Información de facturación y métodos de pago utilizados.',
         detalles: 'La información de pago que eventualmente se solicite dependerá del medio acordado. No se ofrece pago con tarjeta desde este formulario.',
         items: ['Historial de servicios', 'Método de pago utilizado', 'NIT para facturación'],
-        color: 'from-[#84CC16] to-[#A3E635]',
+        color: 'from-[#17240d] to-[#0b0e09]',
         badge: 'bg-[#84CC16]'
     },
     {
@@ -35,7 +35,7 @@ const CATEGORIAS = [
         ejemplo: 'Cómo interactuás con nuestro sitio y tus preferencias.',
         detalles: 'El sitio puede registrar datos técnicos necesarios para su funcionamiento. No afirmamos utilizar analítica o personalización que no haya sido configurada.',
         items: ['Páginas visitadas', 'Proyectos de interés', 'Tiempo de visita'],
-        color: 'from-[#171717] to-[#0A0A0A]',
+        color: 'from-[#17240d] to-[#0b0e09]',
         badge: 'bg-[#171717]'
     },
 ];

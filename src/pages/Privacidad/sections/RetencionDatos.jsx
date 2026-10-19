@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const RETENCION = [
-    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Según el estado de la cuenta', dias: 0, color: 'from-[#A3E635] to-[#84CC16]', nota: 'No se publica un plazo fijo de conservación.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
-    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Información de servicios coordinados', duracion: 'Según cada caso', dias: 0, color: 'from-[#0A0A0A] to-[#171717]', nota: 'El plazo depende de la relación y de las obligaciones aplicables.', items: ['Servicios', 'Solicitudes', 'Datos de coordinación'] },
-    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Mensajes relacionados con consultas', duracion: 'Según cada caso', dias: 0, color: 'from-[#171717] to-[#0A0A0A]', nota: 'No se afirma un borrado automático ni un plazo universal.', items: ['Consultas', 'Seguimiento'] },
-    { icon: 'fa-cookie-bite', titulo: 'Cookies y navegador', detalle: 'La duración depende del tipo de dato y de la configuración del navegador.', duracion: 'Variable', dias: 0, color: 'from-[#84CC16] to-[#AA3000]', nota: 'Podés revisar y borrar datos desde tu navegador.', items: ['Sesión', 'Preferencias locales'] },
+    { icon: 'fa-id-card', titulo: 'Datos de cuenta', detalle: 'Nombre, email y preferencias', duracion: 'Según el estado de la cuenta', dias: 0, color: 'from-[#17240d] to-[#0b0e09]', nota: 'No se publica un plazo fijo de conservación.', items: ['Nombre y email', 'Preferencias', 'Configuración'] },
+    { icon: 'fa-receipt', titulo: 'Historial de servicios', detalle: 'Información de servicios coordinados', duracion: 'Según cada caso', dias: 0, color: 'from-[#17240d] to-[#0b0e09]', nota: 'El plazo depende de la relación y de las obligaciones aplicables.', items: ['Servicios', 'Solicitudes', 'Datos de coordinación'] },
+    { icon: 'fa-envelope', titulo: 'Comunicaciones', detalle: 'Mensajes relacionados con consultas', duracion: 'Según cada caso', dias: 0, color: 'from-[#17240d] to-[#0b0e09]', nota: 'No se afirma un borrado automático ni un plazo universal.', items: ['Consultas', 'Seguimiento'] },
+    { icon: 'fa-cookie-bite', titulo: 'Cookies y navegador', detalle: 'La duración depende del tipo de dato y de la configuración del navegador.', duracion: 'Variable', dias: 0, color: 'from-[#17240d] to-[#0b0e09]', nota: 'Podés revisar y borrar datos desde tu navegador.', items: ['Sesión', 'Preferencias locales'] },
 ];
 
 const RetencionDatos = () => {
@@ -49,11 +49,11 @@ const RetencionDatos = () => {
                                             <i className={`fas ${r.icon}`}></i>
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <p className={`font-black text-sm ${isActive ? 'text-[#A3E635]' : 'text-[#111827]'}`}>{r.titulo}</p>
+                            <p className={`font-black text-sm ${isActive ? 'text-[#B7F34B]' : 'text-white'}`}>{r.titulo}</p>
                                             <p className="text-[10px] text-slate-500 font-semibold truncate">{r.detalle}</p>
                                         </div>
                                         <div className="text-right shrink-0">
-                                            <p className={`text-sm font-black font-heading ${isActive ? 'text-[#A3E635]' : 'text-[#171717]'}`}>{r.dias}%</p>
+                                            <p className="text-sm font-black font-heading text-[#B7F34B]">{r.dias}%</p>
                                             <p className="text-[8px] font-black uppercase tracking-wider text-slate-400">duración</p>
                                         </div>
                                     </button>

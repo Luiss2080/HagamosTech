@@ -21,7 +21,7 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-13: La página de metodología presenta una sección titulada “En 4 simples pasos”, con descripción centrada, cuatro etapas conectadas visualmente mediante iconos y tarjetas, y una adaptación de una a cuatro columnas según el ancho disponible.
 - RF-14: Todas las vistas muestran una miga de pan accesible al inicio del contenido. La miga es global y no se duplica en los encabezados de página que también la usaban. La vista principal muestra “Inicio” como ubicación actual.
 - RF-15: En la portada de Sobre Nosotros, el hero de presentación y las tarjetas de misión y visión aparecen unidos en una sola sección y comparten el mismo fondo tecnológico.
-- RF-16: Las vistas de Privacidad, Términos de Servicio y Cookies comparten la identidad visual negra y verde de HagamosTech, con contraste legible, títulos y descripciones visibles, secciones diferenciadas y controles accesibles, conservando su contenido legal vigente.
+- RF-16: Las vistas de Privacidad, Términos de Servicio y Cookies comparten la identidad visual negra y verde de HagamosTech: cada sección presenta título y descripción centrados, superficies oscuras con texto de alto contraste, acentos e iconos verdes, contenido agrupado en tarjetas compactas y controles accesibles, conservando su contenido legal vigente.
 
 ## Alcance
 
@@ -48,4 +48,4 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-13: `ComoTrabajamos.test.jsx` valida el título, la descripción y las cuatro etapas de la metodología.
 - RF-14: `GlobalBreadcrumb.test.jsx` valida la miga global, la ruta actual y la vista principal.
 - RF-15: `Nosotros.test.jsx` valida que la presentación y las tarjetas de misión y visión forman una sección integrada en Sobre Nosotros.
-- RF-16: `LegalPages.test.jsx` valida el estilo, encabezados, descripciones y controles existentes de Privacidad, Términos de Servicio y Cookies.
+- RF-16: `LegalPages.test.jsx` valida la identidad visual, encabezados, descripciones y controles existentes de Privacidad, Términos de Servicio y Cookies; la revisión visual confirma el centrado de las cabeceras y el contraste de las tarjetas.
