@@ -39,7 +39,7 @@ const ProcesoTrabajo = () => {
 
     return (
         <section id="origen" className="pt-16 pb-12 relative overflow-hidden reveal scroll-mt-24 bg-[#050505] text-white border-t border-white/5">
-            <FondoTech hideWaves={true} />
+            <FondoTech />
 
             <div className="absolute left-[50%] top-0 bottom-0 w-px bg-white/10 hidden lg:block"></div>
 

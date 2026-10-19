@@ -24,12 +24,16 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - Tres tarjetas visibles en escritorio para el carrusel existente de novedades.
 - Carruseles de herramientas y tecnologías en las interfaces públicas que los presentan.
 - Secciones de características de las páginas de servicios y páginas públicas de soluciones.
-- Tratamiento del fondo tecnológico en las secciones públicas de contenido, tomando Contacto como referencia visual.
+- Tratamiento del fondo tecnológico en secciones públicas de Inicio, Contacto, servicios, metodología, novedades, promociones y Sobre Nosotros.
 
 ## Validación
 
 - `npm run lint`: correcto, 0 errores y cinco advertencias preexistentes en componentes fuera de este cambio.
-- `npm run test:run -- --maxWorkers=1`: correcto, 7 archivos y 39 pruebas aprobados.
+- `npm run test:run -- --maxWorkers=1`: correcto, 11 archivos y 44 pruebas aprobados.
 - `npm run build`: correcto.
 - Las cuatro imágenes externas usadas en las etapas del proceso respondieron HTTP 200.
-- RF-6 a RF-10: pendiente de implementación y validación en esta actualización.
+- RF-6: `ToolsMarquee.test.jsx` valida la presentación del carrusel, su título y su descripción accesibles.
+- RF-7: las secciones públicas de contenido intervenidas incluyen títulos y descripciones; Contacto conserva su encabezado por sección. Fondos, separadores y vistas estructurales de cuenta quedan excluidos.
+- RF-8: `FeatureTimeline.test.jsx` valida encabezado, descripción, icono y línea discontinua de características.
+- RF-9: `FondoTech` con olas se aplica a la mayoría de secciones públicas de Inicio, Contacto, servicios, soluciones, metodología, novedades, promociones y Sobre Nosotros.
+- RF-10: se reutiliza contenido existente de cada interfaz y se conserva el lenguaje de evaluación según alcance; no se agregan testimonios ni resultados de clientes.

@@ -11,6 +11,7 @@ const PromoDestacada = () => {
     return (
         <div className="relative">
             <section className="relative z-10 py-4">
+                <CircuitBackground />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">

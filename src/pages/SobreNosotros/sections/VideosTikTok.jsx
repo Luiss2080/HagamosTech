@@ -85,7 +85,7 @@ const VideosTikTok = () => {
     return (
         <div className="relative">
             <section className="relative z-10 py-16 overflow-hidden bg-[#050505] text-white border-t border-white/5">
-                <CircuitBackground hideWaves={true} />
+                <CircuitBackground />
                 <style dangerouslySetInnerHTML={{__html: `
                     @keyframes spinLeftToRight {
                         0%   { transform: rotateY(0deg); }

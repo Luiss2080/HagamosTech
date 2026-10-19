@@ -61,7 +61,7 @@ const Valores = () => {
     return (
         <div id="valores" className="relative scroll-mt-24">
             <section className="relative z-10 py-16 reveal bg-[#050505] text-white border-t border-white/5">
-                <FondoTech hideWaves={true} />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-screen-2xl relative z-20">
                     <div className="text-center mb-4">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-6 leading-tight">

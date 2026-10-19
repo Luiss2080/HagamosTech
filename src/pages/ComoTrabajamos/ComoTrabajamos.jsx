@@ -108,7 +108,7 @@ const ComoTrabajamos = () => {
 
             {/* --- HERO SECTION --- */}
             <section className="relative z-10 pt-24 pb-16 border-b border-white/5">
-                <FondoTech hideWaves={true} />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-5xl text-center relative z-20">
                     <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[10px] font-black uppercase tracking-[0.2em] text-[#A3E635] mb-6">
                         NUESTRA METODOLOGÍA
@@ -130,7 +130,7 @@ const ComoTrabajamos = () => {
 
             {/* --- TIMELINE/CARDS SECTION --- */}
             <section className="relative z-10 overflow-hidden py-20">
-                <FondoTech hideWaves />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
                         <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
@@ -149,7 +149,7 @@ const ComoTrabajamos = () => {
 
             {/* --- CTA BOTTOM SECTION --- */}
             <section className="relative z-10 overflow-hidden border-t border-white/5 py-16">
-                <FondoTech hideWaves />
+                <FondoTech />
                 <div className="container mx-auto px-6 max-w-4xl text-center relative z-20">
                     <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">Siguiente paso</span>
                     <h2 className="text-2xl sm:text-3xl font-black text-white mb-4">Conversemos sobre lo que necesitás.</h2>
