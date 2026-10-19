@@ -133,6 +133,8 @@ const TechToolsCarousel = ({
       <div
         ref={trackRef}
         className="tech-tools-carousel__track flex w-max cursor-grab gap-5 px-4 [touch-action:pan-y] [user-select:none] active:cursor-grabbing sm:gap-6"
+        role="group"
+        aria-label={`Carrusel: ${label}`}
         onPointerDown={handlePointerDown}
         onPointerMove={handlePointerMove}
         onPointerUp={handlePointerUp}
