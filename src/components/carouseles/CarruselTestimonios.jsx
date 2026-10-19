@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Lightbulb, Quote } from 'lucide-react';
+import { ArrowUpRight, Lightbulb, Quote } from 'lucide-react';
 
 const TestimonialCarousel = ({ testimonials }) => {
   const [currentIndex, setCurrentIndex] = useState(testimonials.length); // Start at the middle set
@@ -93,7 +93,7 @@ const TestimonialCarousel = ({ testimonials }) => {
 
   return (
     <div 
-      className="relative w-full overflow-hidden py-12 px-1 sm:px-4"
+      className="relative w-full overflow-hidden py-8 px-1 sm:px-4"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -120,48 +120,45 @@ const TestimonialCarousel = ({ testimonials }) => {
                   style={{ width: `${cardPercent}%` }}
                   className="px-3"
                 >
-                  <div className="bg-gradient-to-br from-[#A3E635]/[0.08] via-[#0A0A0A] to-[#0A0A0A] p-6 sm:p-7 rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.3)] border border-[#A3E635]/25 flex flex-col justify-between h-full min-h-[320px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.18)] hover:-translate-y-1.5 hover:border-[#A3E635]/60 transition-all duration-500 relative group">
+                  <article className="bg-gradient-to-br from-[#A3E635]/[0.12] via-[#11140d] to-[#090a08] p-6 sm:p-7 rounded-[2rem] shadow-[0_12px_40px_rgba(0,0,0,0.3)] border border-[#A3E635]/25 flex flex-col items-center justify-center text-center h-full min-h-[320px] hover:shadow-[0_20px_50px_rgba(163,230,53,0.18)] hover:-translate-y-1.5 hover:border-[#A3E635]/60 transition-all duration-500 relative group">
                     
                     {/* Glowing Accent Border on Hover */}
                     <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#A3E635] via-[#84CC16] to-transparent rounded-t-[2rem]"></div>
                     <div className="absolute -right-12 -top-14 h-36 w-36 rounded-full bg-[#A3E635]/[0.08] blur-3xl pointer-events-none"></div>
 
                     {/* Indicador visual para ejemplos orientativos */}
-                    <div className="flex justify-between items-center mb-4">
-                      <Lightbulb size={15} className="text-[#A3E635]" aria-hidden="true" />
-                      <div className="w-9 h-9 rounded-full bg-[#A3E635]/15 ring-1 ring-[#A3E635]/30 flex items-center justify-center text-[#A3E635] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
-                        <Quote size={14} className="transform rotate-185" />
+                    <div className="mb-5 flex flex-col items-center gap-3">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#A3E635]/35 bg-[#A3E635]/10 text-[#A3E635] shadow-[0_0_28px_rgba(163,230,53,.12)] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
+                        <Quote size={25} aria-hidden="true" />
                       </div>
+                      <span className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#C9F88D]"><Lightbulb size={12} aria-hidden="true" /> Ejemplo orientativo</span>
                     </div>
 
                     {/* Example text */}
-                    <p className="text-slate-200 text-sm sm:text-[15px] font-semibold leading-relaxed mb-5 flex-grow text-left italic">
-                      "{t.text}"
-                    </p>
+                    <h3 className="text-white text-lg sm:text-xl font-black leading-snug">{t.name}</h3>
+                    <p className="mt-3 mb-5 max-w-sm text-slate-200 text-sm sm:text-[15px] font-medium leading-relaxed">{t.text}</p>
 
-                    <div className="mb-5 rounded-xl border border-[#A3E635]/15 bg-[#A3E635]/[0.06] px-3.5 py-3 text-left">
-                      <p className="text-[10px] font-semibold leading-relaxed text-slate-300">
-                        Revisamos alcance, entregables y alternativas según cada situación.
-                      </p>
+                    <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/15 bg-[#A3E635]/[0.06] px-3.5 py-2 text-[10px] font-semibold text-slate-300">
+                      <ArrowUpRight size={13} className="text-[#A3E635]" aria-hidden="true" /> Alcance a definir en conjunto
                     </div>
 
                     {/* Tipo de solicitud */}
-                    <div className="flex items-center gap-3.5 border-t border-[#A3E635]/20 pt-4 mt-auto">
-                      <div className="w-11 h-11 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
+                    <div className="flex w-full items-center justify-center gap-2.5 border-t border-[#A3E635]/20 pt-4">
+                      <div className="w-8 h-8 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
                         <div className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
                           <i className="fas fa-lightbulb" aria-hidden="true"></i>
                         </div>
                       </div>
                       <div className="text-left leading-tight">
-                        <h4 className="text-[12px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
-                          {t.name}
+                        <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
+                          {t.role}
                         </h4>
                         <p className="text-[9px] font-bold text-gray-500 dark:text-neutral-400">
-                          {t.role}
+                          Idea inicial
                         </p>
                       </div>
                     </div>
-                  </div>
+                  </article>
                 </div>
               );
             })}

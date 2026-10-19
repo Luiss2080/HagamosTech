@@ -198,6 +198,14 @@ const Academia = () => {
 
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
+        <div className="container mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+            Ejemplos de <span className="text-[#A3E635]">acompañamiento</span>
+          </h2>
+          <p className="mt-4 text-slate-400 font-medium leading-relaxed">
+            Son situaciones orientativas, no testimonios ni resultados de clientes. Cada acompañamiento se conversa según la materia, la consigna y el alcance acordado.
+          </p>
+        </div>
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
