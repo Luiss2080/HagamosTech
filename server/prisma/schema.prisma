@@ -37,7 +37,7 @@ model Usuario {
   notasPersonales       NotaPersonal[]
   eventosPersonales     EventoPersonal[]
 
-  @@index([rolId], map: "fk_usuarios_rol")
+  @@index([rolId], map: "usuarios_rol_id_idx")
   @@map("usuarios")
 }
 
@@ -117,7 +117,7 @@ model VerificacionCorreo {
   usadoEn   DateTime? @map("usado_en") @db.Timestamp(0)
   usuario   Usuario   @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_verif_usuario")
 
-  @@index([usuarioId], map: "fk_verif_usuario")
+  @@index([usuarioId], map: "verificacion_correos_usuario_id_idx")
   @@map("verificacion_correos")
 }
 
@@ -132,7 +132,7 @@ model RecuperacionPassword {
   ipSolicitud String?   @map("ip_solicitud") @db.VarChar(45)
   usuario     Usuario   @relation(fields: [usuarioId], references: [id], onDelete: Cascade, map: "fk_recup_usuario")
 
-  @@index([usuarioId], map: "fk_recup_usuario")
+  @@index([usuarioId], map: "recuperacion_password_usuario_id_idx")
   @@map("recuperacion_password")
 }
 
@@ -177,8 +177,8 @@ model DetalleRolPermisos {
   permiso Permiso @relation(fields: [fkIdP], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_permiso")
   rol     Rol     @relation(fields: [fkIdR], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_detalle_rol")
 
-  @@index([fkIdP], map: "fk_detalle_permiso")
-  @@index([fkIdR], map: "fk_detalle_rol")
+  @@index([fkIdP], map: "detalle_rol_permisos_fk_id_p_idx")
+  @@index([fkIdR], map: "detalle_rol_permisos_fk_id_r_idx")
   @@map("detalle_rol_permisos")
 }
 
