@@ -11,6 +11,8 @@
   <img src="https://img.shields.io/badge/licencia-MIT-yellow?style=for-the-badge" alt="Licencia MIT" />
   <br/>
   <a href="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml"><img src="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <img src="https://img.shields.io/github/last-commit/Luiss2080/HagamosTech?style=flat-square" alt="Último commit" />
+  <img src="https://img.shields.io/badge/PRs-bienvenidos-brightgreen?style=flat-square" alt="PRs bienvenidos" />
   <p>
     <a href="#-inicio-rápido">Inicio rápido</a> ·
     <a href="#-características">Características</a> ·
@@ -200,4 +202,3 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 <div align="center">
   <sub>Hecho por Luiss2080 · React + Express + Prisma</sub>
 </div>
-
