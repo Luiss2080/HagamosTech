@@ -67,11 +67,11 @@ Desarrollo web para personas, emprendimientos, empresas e instituciones, desde p
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Páginas Web Empresariales | Sitios corporativos e institucionales, portales educativos, inmobiliarios, de noticias y para organizaciones; páginas informativas o con secciones privadas según alcance. |
-| Landing Pages y Portafolios Personales | Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos. |
-| Tiendas Online Básicas y Sistemas de Pedidos | Catálogos con carrito, pedidos y opciones de pago; pasarelas y sus proveedores se evalúan por separado antes de comprometerlos. |
-| Catálogos Digitales Online y Blogs | Catálogos, blogs, plataformas de cursos, directorios, foros y comunidades con publicación organizada de contenido. |
-| Diseño UI/UX, Formularios y Web Responsive | Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web, reservas y agendas según alcance. |
+| Páginas Web Empresariales | Sitios corporativos e institucionales, portales educativos, inmobiliarios y de noticias, páginas para organizaciones y secciones públicas o privadas según alcance. |
+| Landing Pages y Portafolios Personales | Landing pages para campañas y presentación; portafolios para mostrar trabajos, proyectos y experiencia. |
+| Tiendas Online Básicas y Sistemas de Pedidos | Tiendas con catálogo, carrito y pedidos. Pasarelas de pago y sus proveedores se revisan por separado según viabilidad. |
+| Catálogos Digitales Online y Blogs | Catálogos, blogs, plataformas de cursos, portales de noticias, directorios, foros y comunidades para publicar contenido organizado. |
+| Diseño UI/UX, Formularios y Web Responsive | Diseño UI/UX, prototipos, formularios y adaptación a pantallas; aplicable a aplicaciones web, reservas y agendas según alcance. |
 
 También se pueden evaluar portales para colegios, universidades, academias y centros de capacitación con funciones como acceso de estudiantes y docentes, paneles administrativos, calificaciones, inscripciones, pagos, comunicados, bibliotecas y aulas virtuales. Cada función depende de requisitos, alcance y viabilidad.
 
@@ -81,8 +81,8 @@ Desarrollo de software a medida para necesidades personales, comerciales e insti
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Desarrollo de Sistemas Web y Software | Sistemas empresariales como ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica y soluciones para distintos rubros; aplicaciones web y móviles según alcance y viabilidad. |
-| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica con plataformas, pagos, correo o facturación electrónica cuando sea viable. |
+| Desarrollo de Sistemas Web y Software | ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, documentos, asistencia, citas y producción; también sistemas para clínicas, hoteles, gimnasios, talleres, transporte, logística y finanzas, y portales académicos con perfiles, notas, inscripciones, pagos y aulas virtuales. Aplicaciones web o móviles según alcance. |
+| Diseño y Gestión de Bases de Datos | Modelado de bases de datos, consultas, reportes y estructura para sistemas; integraciones técnicas por API con plataformas, pagos, correo o facturación electrónica cuando sean viables. |
 
 Los proyectos para instituciones educativas pueden contemplar perfiles de estudiantes, docentes y administración, gestión de calificaciones, inscripciones, pagos, comunicados, bibliotecas, aulas virtuales y documentación. La selección de funciones se acuerda para cada proyecto.
 
@@ -92,7 +92,7 @@ Para una necesidad digital o académica que no encaje en una categoría, Hagamos
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Soluciones Personalizadas | Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance. |
+| Soluciones Personalizadas | Evaluación de necesidades digitales o académicas. Podemos analizar portales institucionales, paneles, dashboards, aplicaciones web o móviles, funciones con IA y mejoras de software existente como correcciones, nuevas funciones y documentación, según alcance y viabilidad. |
 
 1. **Contanos:** explicá tu idea o necesidad.
 2. **Analizamos:** revisamos alcance y viabilidad.

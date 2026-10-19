@@ -101,7 +101,6 @@ const TERMINOS_PROHIBIDOS = [
   'infraestructura',
   'respuestas automáticas',
   'mantenimiento de servidores',
-  'inteligencia artificial',
 ];
 
 const CATALOGO_MAESTRO = readFileSync(resolve(cwd(), 'docs/catalogo-servicios.md'), 'utf8');
@@ -195,7 +194,7 @@ describe('Integridad de la oferta (serviciosData)', () => {
     }
   });
 
-  it('no ofrece automatización, IA aplicada ni operación de infraestructura', () => {
+  it('incluye funciones con IA sujetas a evaluación y excluye flujos automáticos e infraestructura', () => {
     const texto = JSON.stringify(SERVICIOS_DATA).toLowerCase();
     for (const termino of [
       'automatización',
@@ -204,9 +203,9 @@ describe('Integridad de la oferta (serviciosData)', () => {
       'infraestructura',
       'respuestas automáticas',
       'mantenimiento de servidores',
-      'inteligencia artificial',
     ]) {
       expect(texto.includes(termino), `servicio fuera de alcance: "${termino}"`).toBe(false);
     }
+    expect(texto.includes('funciones con ia')).toBe(true);
   });
 });

@@ -94,7 +94,7 @@ const InteligenciaArtificial = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Desarrollo web y de software para necesidades específicas, sujeto a revisión de requisitos, alcance y viabilidad.
+                Desarrollo web y de software para necesidades específicas. Las funciones con inteligencia artificial se revisan según requisitos, alcance y viabilidad.
               </p>
 
               {/* Action Buttons */}

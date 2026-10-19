@@ -18,7 +18,7 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"APLICACIONES","firstPart":"Herramientas","highlightPart":"Web","desc":"Aplicaciones web con funciones y perfiles de usuario definidos según los requisitos acordados.","tags":["Aplicación web","Usuarios","Funciones"],"icon":"fa-window-maximize","image":"/img/08_Cards/proyecto-ia-aplicacion.webp"},
+  {"num":"01","category":"APLICACIONES","firstPart":"Herramientas","highlightPart":"Web","desc":"Aplicaciones con funciones y perfiles de usuario definidos según requisitos; las funciones con IA se evalúan por separado según alcance y viabilidad.","tags":["Aplicación web","Usuarios","Funciones"],"icon":"fa-window-maximize","image":"/img/08_Cards/proyecto-ia-aplicacion.webp"},
   {"num":"02","category":"PANELES","firstPart":"Paneles","highlightPart":"Administrativos","desc":"Interfaces para consultar y organizar información según los datos y permisos que se definan.","tags":["Paneles","Datos","Permisos"],"icon":"fa-table-columns","image":"/img/08_Cards/proyecto-ia-panel.webp"},
   {"num":"03","category":"DATOS","firstPart":"Bases","highlightPart":"de Datos","desc":"Diseño y organización de datos según el funcionamiento requerido por el sistema.","tags":["Datos","Consultas","Reportes"],"icon":"fa-database","image":"/img/08_Cards/proyecto-ia-datos.webp"},
   {"num":"04","category":"INTERFACES","firstPart":"Diseño","highlightPart":"UI/UX","desc":"Prototipos y diseño de experiencia para revisar recorridos y pantallas antes del desarrollo.","tags":["Prototipos","UI/UX","Responsive"],"icon":"fa-pen-ruler","image":"/img/08_Cards/proyecto-ia-interfaz.webp"}

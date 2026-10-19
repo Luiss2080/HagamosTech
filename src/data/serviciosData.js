@@ -687,7 +687,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-software-sistema.webp',
             category: 'Desarrollo',
             pillLabel: 'A MEDIDA',
-            shortDesc: 'Software empresarial como ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica y sistemas para distintos rubros; aplicaciones web y móviles según alcance y viabilidad.',
+            shortDesc: 'ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, documentos, asistencia, citas y producción; también sistemas para clínicas, hoteles, gimnasios, talleres, transporte, logística y finanzas, y portales académicos con perfiles, notas, inscripciones, pagos y aulas virtuales. Aplicaciones web o móviles según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Código', value: 'A Medida' },
@@ -733,16 +733,16 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-personalizado.webp',
             category: 'Exclusivo',
             pillLabel: 'CONTANOS TU PROBLEMA',
-            shortDesc: 'Evaluación de necesidades digitales o académicas. Podemos analizar prototipos, portales institucionales, paneles, dashboards, aplicaciones web o móviles, funciones con IA y mejoras a software existente según alcance y viabilidad.',
+            shortDesc: 'Evaluación de necesidades digitales o académicas. Podemos analizar portales institucionales, paneles, dashboards, aplicaciones web o móviles, funciones con IA y mejoras de software existente como correcciones, nuevas funciones y documentación, según alcance y viabilidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'Según alcance' },
-                { icon: 'fa-lock', label: 'Privacidad', value: 'Confidencial' }
+                { icon: 'fa-lock', label: 'Datos', value: 'A conversar' }
             ],
             includes: [
                 { icon: 'fa-magnifying-glass', label: 'Análisis' },
                 { icon: 'fa-clipboard-check', label: 'Propuesta' },
-                { icon: 'fa-rocket', label: 'Despliegue' }
+                { icon: 'fa-rocket', label: 'Entrega acordada' }
             ],
             cta: 'Cuéntanos tu idea',
             ctaLink: '/contactanos',
