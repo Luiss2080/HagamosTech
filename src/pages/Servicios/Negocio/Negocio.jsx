@@ -13,9 +13,9 @@ const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo 
 const BRANDS = [
   {"name":"Marca y Branding","tag":"Identidad para nuevos negocios","icon":"fa-lightbulb"},
   {"name":"Manual de Identidad","tag":"Paletas, tipografías y reglas","icon":"fa-book-open-reader"},
-  {"name":"Menús QR y Catálogos","tag":"Digitalización para vender","icon":"fa-qrcode"},
-  {"name":"Campañas y Ofertas","tag":"Promociones, 2x1 y fechas","icon":"fa-bullhorn"},
-  {"name":"WhatsApp Business","tag":"Gestión de clientes inicial","icon":"fa-users-gear"}
+  {"name":"Catálogos Digitales","tag":"Productos y servicios","icon":"fa-book-open"},
+  {"name":"Promociones y Ofertas","tag":"Piezas para campañas","icon":"fa-bullhorn"},
+  {"name":"Fechas Especiales","tag":"Diseño para eventos comerciales","icon":"fa-calendar-days"}
 ];
 
 const PROCESO = [

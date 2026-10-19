@@ -31,15 +31,15 @@ const TECH_STACK = [
 ];
 
 const METRICS = [
-  { label: 'Alcance', value: 'A definir', icon: <Zap size={24} /> },
-  { label: 'Etapas', value: 'A acordar', icon: <Server size={24} /> },
-  { label: 'Requisitos', value: 'A revisar', icon: <ShieldCheck size={24} /> }
+  { label: 'Alcance', value: 'Según necesidad', icon: <Zap size={24} /> },
+  { label: 'Modalidad', value: 'A conversar', icon: <Server size={24} /> },
+  { label: 'Viabilidad', value: 'Revisada contigo', icon: <ShieldCheck size={24} /> }
 ];
 
 const VERTICALS = [
   {
     title: 'Desarrollo web',
-    desc: 'Sitios y aplicaciones web planteados según objetivos, contenido, funciones y requisitos acordados.',
+    desc: 'Sitios corporativos e institucionales, landing pages, tiendas, catálogos, blogs, portafolios, portales y aplicaciones web según objetivos y alcance.',
     icon: <Code size={32} className="text-[#A3E635]" />,
     tags: ['React', 'Tailwind', 'UX/UI'],
     image: '/img/08_Cards/tecnologia-web.webp',
@@ -47,7 +47,7 @@ const VERTICALS = [
   },
   {
     title: 'Sistemas y software',
-    desc: 'Sistemas a medida y estructuras de datos revisados según necesidades y viabilidad.',
+    desc: 'Sistemas para inventario, ventas, facturación, citas, asistencia, gestión académica y otras necesidades; alcance y viabilidad se revisan por proyecto.',
     icon: <Database size={32} className="text-[#84CC16]" />,
     tags: ['Node.js', 'MySQL', 'APIs'],
     image: '/img/08_Cards/tecnologia-sistemas.webp',
@@ -55,7 +55,7 @@ const VERTICALS = [
   },
   {
     title: 'Interfaces y aplicaciones web',
-    desc: 'Diseño de interfaces y herramientas digitales; alojamiento y operación de servidores no forman parte de la oferta.',
+    desc: 'Diseño UI/UX, formularios, prototipos, bases de datos y herramientas digitales. El trabajo se limita a los entregables acordados para cada proyecto.',
     icon: <Cloud size={32} className="text-[#A3E635]" />,
     tags: ['Diseño', 'Interfaces', 'Web'],
     image: '/img/08_Cards/tecnologia-interfaces.webp',
@@ -126,8 +126,8 @@ const Tecnologia = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
-            Innovación en <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">Código Puro</span>
+            Desarrollo web <br/>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">y software a medida</span>
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -136,7 +136,7 @@ const Tecnologia = () => {
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <a href="https://wa.me/59161320004?text=Hola,%20busco%20una%20solución%20tecnológica%20avanzada" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
-              Iniciar Proyecto <ChevronRight size={16} />
+              Consultar una solución <ChevronRight size={16} />
             </a>
           </div>
 
@@ -174,7 +174,7 @@ const Tecnologia = () => {
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tight">
-            Nuestras <span className="text-[#A3E635]">Verticales</span>
+            Qué podemos <span className="text-[#A3E635]">desarrollar</span>
           </h2>
           
           <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
