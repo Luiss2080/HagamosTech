@@ -6,9 +6,9 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 
 ## Requisitos
 
-- RF-1: Las colecciones de cuatro o más tarjetas de servicios o etapas muestran hasta tres tarjetas a la vez en escritorio y permiten recorrer las restantes con controles accesibles.
-- RF-2: Los carruseles responden a pantalla: tres tarjetas en escritorio, dos en tablet y una en móvil.
-- RF-3: Cada tarjeta de servicios y cada etapa de proceso incluida en este alcance muestra una imagen pertinente, con texto legible sobre la imagen.
+- RF-1: Las colecciones de cuatro o más tarjetas que se presentan como carrusel muestran hasta tres tarjetas a la vez en escritorio y permiten recorrer las restantes con controles accesibles. La metodología de trabajo muestra sus cuatro pasos juntos en escritorio.
+- RF-2: Los carruseles responden a pantalla: tres tarjetas en escritorio, dos en tablet y una en móvil. La metodología de cuatro pasos se adapta a cuatro columnas en escritorio, dos en tablet y una columna en móvil.
+- RF-3: Las tarjetas de servicios muestran una imagen pertinente y las etapas de proceso muestran una imagen o un icono asociado, con texto legible.
 - RF-4: Se conservan el contenido, el estilo negro/verde, los enlaces y las rutas existentes.
 - RF-5: Las tarjetas informativas legales, de formularios y de datos de cuenta conservan sus diseños compactos; no se convierten en galerías.
 - RF-6: Los carruseles de herramientas de las interfaces públicas reutilizan el mismo componente y estilo de tarjeta del carrusel de tecnologías del Inicio, muestran logotipos oficiales disponibles, divisor visual y un botón funcional de detalles, se extienden a todo el ancho sin flechas ni máscaras laterales, dejan separación clara entre encabezado y tarjetas, y conservan navegación por arrastre, teclado y adaptación móvil con contenido propio de cada interfaz. Su desplazamiento continuo es pausado, con partículas de FondoTech, y respeta la preferencia de movimiento reducido.
@@ -18,6 +18,7 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-10: Se conserva el contenido veraz específico de cada interfaz; no se inventan capacidades, datos de clientes, resultados ni servicios para completar tarjetas.
 - RF-11: Las tarjetas de ejemplos o testimonios muestran un icono de usuario y datos contextuales con iconos para fecha, hora y lugar o modalidad. Los datos no confirmados se indican como pendientes de coordinación.
 - RF-12: El CTA final compartido mantiene título y descripción, presenta un panel verde compacto de alto contraste con una imagen representativa a la derecha y el botón de consulta junto al texto, y aplica el mismo diseño en todas sus interfaces de uso.
+- RF-13: La página de metodología presenta una sección titulada “En 4 simples pasos”, con descripción centrada, cuatro etapas conectadas visualmente mediante iconos y tarjetas, y una adaptación de una a cuatro columnas según el ancho disponible.
 
 ## Alcance
 
@@ -41,3 +42,4 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-10: se reutiliza contenido existente de cada interfaz y se conserva el lenguaje de evaluación según alcance; no se agregan testimonios ni resultados de clientes.
 - RF-11: `CarruselTestimonios.test.jsx` valida los iconos/datos contextuales y el icono de usuario; los campos sin dato real muestran “A coordinar” o “A definir”.
 - RF-12: `TestimonialCTASection.test.jsx` valida la imagen representativa y el botón junto al CTA; `CenteredProjectCTA.test.jsx` valida el panel verde compacto.
+- RF-13: `ComoTrabajamos.test.jsx` valida el título, la descripción y las cuatro etapas de la metodología.
