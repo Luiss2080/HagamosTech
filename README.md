@@ -11,12 +11,15 @@
   <img src="https://img.shields.io/badge/licencia-MIT-yellow?style=for-the-badge" alt="Licencia MIT" />
   <br/>
   <a href="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml"><img src="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
+  <img src="https://img.shields.io/github/last-commit/Luiss2080/HagamosTech?style=flat-square" alt="Último commit" />
+  <img src="https://img.shields.io/badge/PRs-bienvenidos-brightgreen?style=flat-square" alt="PRs bienvenidos" />
   <p>
     <a href="#-inicio-rápido">Inicio rápido</a> ·
     <a href="#-características">Características</a> ·
     <a href="#-arquitectura">Arquitectura</a> ·
     <a href="#-pruebas">Pruebas</a> ·
-    <a href="#-lo-que-todavía-no-existe">Limitaciones</a>
+    <a href="#-lo-que-todavía-no-existe">Limitaciones</a> ·
+    <a href="#-contribuir">Contribuir</a>
   </p>
 </div>
 
@@ -186,7 +189,11 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 - El README anterior citaba `public/img/01_Layout/logo.png`, que no existe en el repositorio (imagen rota); corregido aquí.
 - `public/` versiona solo 4 imágenes; no se auditó si otras páginas referencian imágenes que faltan en un clon limpio.
 - El catálogo "Personalizado" tiene un solo servicio y las cifras de marketing de la web (p. ej. "+500 estudiantes") no provienen de datos del sistema.
-- `.playwright-mcp/` (volcados de páginas) está versionado por descuido.
+- Los volcados de `.playwright-mcp/`, `.playwright-cli/` y `test-results/` ya no se versionan (están en `.gitignore`).
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Leé la [guía de contribución](CONTRIBUTING.md) y el [código de conducta](CODE_OF_CONDUCT.md) antes de abrir un PR. Para bugs o ideas usá las [plantillas de issues](../../issues/new/choose); los problemas de seguridad se reportan según la [política de seguridad](SECURITY.md).
 
 ## 📄 Licencia
 
@@ -195,4 +202,3 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 <div align="center">
   <sub>Hecho por Luiss2080 · React + Express + Prisma</sub>
 </div>
-
