@@ -3,7 +3,7 @@ import ModalColegio from './modalesColegios/ModalColegio';
 import FondoTech from '../../../components/fondos/FondoTech';
 import TechToolsCarousel from '../../../components/ui/TechToolsCarousel';
 
-export const INSTITUTIONS = [
+const INSTITUTIONS = [
   {
     id: 'react',
     name: 'React',

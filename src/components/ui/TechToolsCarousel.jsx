@@ -34,14 +34,21 @@ const TechToolsCarousel = ({
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return undefined;
+    const motionPreference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
+    if (motionPreference) isPausedRef.current = motionPreference.matches;
+    const updateMotionPreference = () => {
+      if (motionPreference) isPausedRef.current = motionPreference.matches;
+    };
+    motionPreference?.addEventListener?.('change', updateMotionPreference);
 
     const measure = () => {
       halfWidthRef.current = track.scrollWidth / 2;
       applyOffset(normalizeOffset(offsetRef.current));
     };
     measure();
-    const resizeObserver = new ResizeObserver(measure);
-    resizeObserver.observe(track);
+    const resizeObserver = typeof ResizeObserver === 'undefined' ? null : new ResizeObserver(measure);
+    resizeObserver?.observe(track);
+    if (!resizeObserver) window.addEventListener('resize', measure);
 
     const animate = (timestamp) => {
       const elapsed = lastFrameRef.current ? timestamp - lastFrameRef.current : 0;
@@ -69,10 +76,12 @@ const TechToolsCarousel = ({
       animationFrameRef.current = requestAnimationFrame(animate);
     };
 
-    animationFrameRef.current = requestAnimationFrame(animate);
+    if (typeof requestAnimationFrame === 'function') animationFrameRef.current = requestAnimationFrame(animate);
     return () => {
-      cancelAnimationFrame(animationFrameRef.current);
-      resizeObserver.disconnect();
+      if (typeof cancelAnimationFrame === 'function') cancelAnimationFrame(animationFrameRef.current);
+      resizeObserver?.disconnect();
+      if (!resizeObserver) window.removeEventListener('resize', measure);
+      motionPreference?.removeEventListener?.('change', updateMotionPreference);
     };
   }, []);
 
