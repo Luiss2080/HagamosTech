@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const FASES = [
-    { icon: 'fa-cookie-bite', titulo: 'Se crea', desc: 'Cuando visitás el sitio por primera vez, el navegador guarda una cookie pequeña.', duracion: 'Milisegundos', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' },
-    { icon: 'fa-person-walking', titulo: 'Viaja contigo', desc: 'Cada vez que navegás, la cookie viaja con tus peticiones para identificarte.', duracion: 'Mientras navegás', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-[#0A0A0A] border-[#0A0A0A]/25' },
-    { icon: 'fa-rotate', titulo: 'Su duración varía', desc: 'La duración depende de la cookie y del comportamiento de la aplicación o del navegador.', duracion: 'Variable', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-[#171717] border-[#171717]/25' },
-    { icon: 'fa-hourglass-end', titulo: 'Podés borrarla', desc: 'Podés revisar o borrar cookies y datos del sitio desde la configuración de tu navegador.', duracion: 'Desde el navegador', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' },
+    { icon: 'fa-cookie-bite', titulo: 'Se crea', desc: 'Cuando visitás el sitio por primera vez, el navegador guarda una cookie pequeña.', duracion: 'Milisegundos', color: 'bg-[#17240d]', soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25' },
+    { icon: 'fa-person-walking', titulo: 'Viaja contigo', desc: 'Cada vez que navegás, la cookie viaja con tus peticiones para identificarte.', duracion: 'Mientras navegás', color: 'bg-[#11150d]', soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25' },
+    { icon: 'fa-rotate', titulo: 'Su duración varía', desc: 'La duración depende de la cookie y del comportamiento de la aplicación o del navegador.', duracion: 'Variable', color: 'bg-[#11150d]', soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25' },
+    { icon: 'fa-hourglass-end', titulo: 'Podés borrarla', desc: 'Podés revisar o borrar cookies y datos del sitio desde la configuración de tu navegador.', duracion: 'Desde el navegador', color: 'bg-[#17240d]', soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25' },
 ];
 
 const CicloVidaCookie = () => {
@@ -37,7 +37,7 @@ const CicloVidaCookie = () => {
                             {FASES.map((fase, i) => (
                                 <div key={i} className="relative text-center group">
                                     {/* Número */}
-                                    <div className={`relative z-10 w-[72px] h-[72px] rounded-full ${fase.color} text-white flex items-center justify-center mx-auto mb-4 shadow-xl ring-4 ring-white transition-transform duration-300 group-hover:scale-110`}>
+                                    <div className={`relative z-10 w-[72px] h-[72px] rounded-full ${fase.color} text-[#B7F34B] flex items-center justify-center mx-auto mb-4 shadow-xl ring-1 ring-[#A3E635]/30 transition-transform duration-300 group-hover:scale-110`}>
                                         <i className={`fas ${fase.icon} text-2xl`}></i>
                                         <span className="absolute -top-1 -right-1 w-6 h-6 rounded-full bg-[#111827] text-white text-[10px] font-black flex items-center justify-center border-2 border-white">{i + 1}</span>
                                     </div>

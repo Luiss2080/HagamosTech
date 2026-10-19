@@ -17,8 +17,8 @@ const ACUERDOS = [
         ejemplo: 'Cómo funcionan los proyectos.',
         detalles: 'Las solicitudes se confirman según el alcance acordado y la disponibilidad de agendas. Cada proyecto se analiza y propone junto con vos, por lo que los tiempos pueden variar según la complejidad.',
         items: ['Confirmación previa', 'Análisis conjunto', 'Alcance definido', 'Tiempo variable'],
-        color: 'bg-[#84CC16]',
-        soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25'
+        color: 'bg-[#A3E635]',
+        soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25'
     },
     {
         icon: 'fa-headset',
@@ -26,8 +26,8 @@ const ACUERDOS = [
         ejemplo: 'Condiciones de la atención.',
         detalles: 'Atendemos de forma remota y presencial en Santa Cruz. Los tiempos estimados son orientativos. La solución debe ser recibida por quien contrató el servicio para la respectiva capacitación.',
         items: ['Cobertura remota', 'Tiempo estimado', 'Entrega y capacitación', 'Recepción responsable'],
-        color: 'bg-[#0A0A0A]',
-        soft: 'bg-[#0A0A0A]/5 text-[#0A0A0A] border-[#0A0A0A]/15'
+        color: 'bg-[#A3E635]',
+        soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25'
     },
     {
         icon: 'fa-mobile-screen-button',
@@ -35,8 +35,8 @@ const ACUERDOS = [
         ejemplo: 'Responsabilidades de tu cuenta.',
         detalles: 'Sos responsable de mantener la confidencialidad de tus credenciales de acceso. Cualquier actividad realizada con tu cuenta es tu responsabilidad. Podés eliminar tu cuenta cuando quieras.',
         items: ['Credenciales seguras', 'Responsabilidad propia', 'Eliminación libre', 'Atención a coordinar'],
-        color: 'bg-[#171717]',
-        soft: 'bg-[#171717]/5 text-[#171717] border-[#171717]/15'
+        color: 'bg-[#A3E635]',
+        soft: 'bg-[#A3E635]/10 text-[#B7F34B] border-[#A3E635]/25'
     },
 ];
 
@@ -76,7 +76,7 @@ const AcuerdosUso = () => {
                                             <i className="fas fa-file-contract text-lg"></i>
                                         </div>
                                         <div>
-                                            <p className="text-sm font-black font-heading text-[#0A0A0A] leading-tight">Contrato de Servicio</p>
+                                            <p className="text-sm font-black font-heading text-white leading-tight">Contrato de Servicio</p>
                                             <p className="text-[9px] font-black uppercase tracking-widest text-slate-400">4 cláusulas vigentes</p>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@ const AcuerdosUso = () => {
                                                     onClick={() => setAbierta(isOpen ? null : i)}
                                                     className={`w-full flex items-center gap-3 p-3 rounded-xl border text-left transition-all duration-300 ${isOpen ? `${cl.soft} shadow-sm scale-[1.01]` : 'bg-white border-gray-100 hover:border-gray-200 hover:bg-[#F8FAF5]'}`}
                                                 >
-                                                    <span className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-xs shrink-0 ${isOpen ? `${cl.color} text-white shadow-md` : 'bg-[#A3E635]/10 text-[#84CC16]'}`}>
+                                                    <span className={`w-8 h-8 rounded-lg flex items-center justify-center font-black text-xs shrink-0 ${isOpen ? `${cl.color} text-[#0A0A0A] shadow-md` : 'bg-[#A3E635]/10 text-[#84CC16]'}`}>
                                                         {i + 1}
                                                     </span>
                                                     <div className="flex-1 min-w-0">
@@ -118,19 +118,19 @@ const AcuerdosUso = () => {
                                         <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#A3E635]/10 blur-3xl animate-float-slow pointer-events-none"></div>
 
                                         <button onClick={() => setAbierta(isOpen ? null : i)} className="relative w-full flex items-center gap-4 p-5 text-left cursor-pointer">
-                                            <div className={`w-12 h-12 rounded-2xl ${cl.color} text-white flex items-center justify-center text-lg shrink-0 shadow-lg transition-transform ${isOpen ? 'scale-110 -rotate-6' : ''}`}>
+                                            <div className={`w-12 h-12 rounded-2xl ${cl.color} text-[#0A0A0A] flex items-center justify-center text-lg shrink-0 shadow-lg transition-transform ${isOpen ? 'scale-110 -rotate-6' : ''}`}>
                                                 <i className={`fas ${cl.icon}`}></i>
                                             </div>
                                             <div className="flex-1">
                                                 <div className="flex items-center gap-2 flex-wrap">
                                                     <h3 className="font-black text-[#111827] text-sm sm:text-base">{cl.titulo}</h3>
-                                                    <span className={`px-2 py-0.5 rounded-full text-[7px] font-black uppercase tracking-widest ${isOpen ? `${cl.color} text-white` : cl.soft}`}>
+                                                    <span className={`px-2 py-0.5 rounded-full text-[7px] font-black uppercase tracking-widest ${isOpen ? `${cl.color} text-[#0A0A0A]` : cl.soft}`}>
                                                         {isOpen ? 'Abierta' : 'Cláusula ' + (i + 1)}
                                                     </span>
                                                 </div>
                                                 <p className="text-[11px] text-slate-600 font-semibold">{cl.ejemplo}</p>
                                             </div>
-                                            <span className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all ${isOpen ? `${cl.color} text-white border-transparent rotate-180` : 'border-gray-100 text-[#84CC16]'}`}>
+                                            <span className={`w-8 h-8 rounded-full flex items-center justify-center border transition-all ${isOpen ? `${cl.color} text-[#0A0A0A] border-transparent rotate-180` : 'border-gray-100 text-[#84CC16]'}`}>
                                                 <i className="fas fa-chevron-down text-[10px]"></i>
                                             </span>
                                         </button>

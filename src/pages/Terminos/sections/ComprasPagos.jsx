@@ -2,10 +2,10 @@ import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const POLITICAS = [
-    { icon: 'fa-credit-card', titulo: 'Métodos de Pago', desc: 'Los medios de pago, anticipos y etapas se conversan para cada propuesta antes de iniciar.', color: 'bg-[#A3E635]' },
-    { icon: 'fa-rotate-left', titulo: 'Pausas o cancelaciones', desc: 'Si necesitás pausar o cancelar un proyecto, escribinos para revisar el estado del trabajo y las condiciones acordadas.', color: 'bg-[#84CC16]' },
-    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'La información de facturación y la documentación correspondiente se coordinan al preparar la propuesta.', color: 'bg-[#0A0A0A]' },
-    { icon: 'fa-shield', titulo: 'Canal de pago', desc: 'El medio y el canal de pago se definen en la propuesta. No ingreses datos de tarjeta en formularios que no indiquen expresamente esa función.', color: 'bg-[#171717]' },
+    { icon: 'fa-credit-card', titulo: 'Métodos de pago', desc: 'Los medios de pago, anticipos y etapas se conversan para cada propuesta antes de iniciar.', dato: 'ACUERDO PREVIO' },
+    { icon: 'fa-rotate-left', titulo: 'Pausas o cancelaciones', desc: 'Si necesitás pausar o cancelar, revisamos el estado del trabajo y las condiciones acordadas.', dato: 'REVISIÓN DEL PROYECTO' },
+    { icon: 'fa-receipt', titulo: 'Facturación', desc: 'La información de facturación se coordina al preparar la propuesta.', dato: 'DATOS COORDINADOS' },
+    { icon: 'fa-shield', titulo: 'Canal de pago', desc: 'El canal de pago se define en la propuesta. No ingreses datos de tarjeta en formularios que no indiquen esa función.', dato: 'CANAL DEFINIDO' },
 ];
 
 const ComprasPagos = () => {
@@ -31,23 +31,20 @@ const ComprasPagos = () => {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {POLITICAS.map((item, i) => (
-                            <div key={i} className={`relative rounded-[2rem] p-6 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${item.color} text-white shadow-xl shadow-black/10`}>
-                                <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>
-                                {/* Orbes decorativos */}
-                                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-white/15 blur-2xl animate-float-slow pointer-events-none"></div>
-                                <div className="absolute -bottom-12 -left-8 w-36 h-36 rounded-full bg-black/10 blur-2xl animate-float-medium pointer-events-none"></div>
-
+                            <article key={i} className="relative rounded-[1.75rem] min-h-64 p-6 transition-all duration-300 group overflow-hidden border border-[#A3E635]/20 hover:border-[#A3E635]/50 hover:-translate-y-1 z-10 text-center bg-[#0c100a] text-white shadow-xl shadow-black/30">
+                                <div className="absolute top-0 left-1/2 -translate-x-1/2 w-20 h-1 rounded-full bg-[#A3E635]"></div>
+                                <div className="absolute -top-10 -right-10 w-32 h-32 rounded-full bg-[#A3E635]/10 blur-2xl pointer-events-none"></div>
                                 <div className="relative z-10">
-                                    <div className="w-16 h-16 rounded-2xl flex items-center justify-center text-3xl mb-4 mx-auto bg-white/20 ring-1 ring-white/40 shadow-lg group-hover:scale-110 group-hover:-rotate-6 transition-transform duration-300">
+                                    <div className="w-14 h-14 rounded-2xl flex items-center justify-center text-2xl mb-4 mx-auto bg-[#A3E635]/10 text-[#A3E635] ring-1 ring-[#A3E635]/30 shadow-lg group-hover:scale-110 transition-transform duration-300">
                                         <i className={`fas ${item.icon}`}></i>
                                     </div>
-                                    <h3 className="text-lg font-black mb-2 leading-tight">{item.titulo}</h3>
-                                    <p className="text-xs font-medium opacity-90 leading-relaxed">{item.desc}</p>
-                                    <div className="mt-4 pt-3 border-t border-white/25 inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest opacity-80">
-                                        <i className="fas fa-hand-holding-dollar text-[9px]"></i> HagamosTech
+                                    <h3 className="text-lg font-black mb-2 leading-tight text-white">{item.titulo}</h3>
+                                    <p className="text-sm font-medium text-slate-300 leading-relaxed">{item.desc}</p>
+                                    <div className="mt-4 pt-3 border-t border-[#A3E635]/20 inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-widest text-[#B7F34B]">
+                                        <i className="fas fa-circle-check text-[9px]"></i> {item.dato}
                                     </div>
                                 </div>
-                            </div>
+                            </article>
                         ))}
                     </div>
                 </div>
