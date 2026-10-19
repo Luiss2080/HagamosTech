@@ -12,7 +12,7 @@ describe('ToolsMarquee', () => {
     expect(screen.getByRole('group', { name: 'Carrusel de herramientas' })).toBeInTheDocument();
     expect(groups).toHaveLength(2);
     expect(groups[1]).toHaveAttribute('aria-hidden', 'true');
-    expect(screen.getAllByText('React')).toHaveLength(1);
+    expect(screen.getAllByText('React')).toHaveLength(2);
     expect(container.querySelector('.tools-marquee__track').textContent).toContain('Figma');
   });
 });

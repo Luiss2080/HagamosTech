@@ -21,7 +21,7 @@ describe('ProcessStepsCarousel', () => {
 
     expect(screen.getByRole('region', { name: 'Camino del proyecto' })).toBeInTheDocument();
     expect(container.querySelector('polyline').getAttribute('points')).toBe('16.666666666666664,21 50,79 83.33333333333334,21');
-    expect(screen.getAllByRole('img')).toHaveLength(3);
+    expect(screen.getAllByRole('img')).toHaveLength(4);
 
     fireEvent.click(screen.getByRole('button', { name: 'Ver más pasos' }));
 
@@ -33,7 +33,7 @@ describe('ProcessStepsCarousel', () => {
     Object.defineProperty(window, 'innerWidth', { configurable: true, value: 375 });
     const { container } = render(<ProcessStepsCarousel items={items} />);
 
-    expect(screen.getAllByRole('img')).toHaveLength(1);
+    expect(screen.getAllByRole('img')).toHaveLength(4);
     expect(screen.getByRole('button', { name: 'Ver más pasos' })).toBeEnabled();
     expect(container.querySelector('.flex.items-stretch.transition-transform').style.width).toBe('400%');
   });
