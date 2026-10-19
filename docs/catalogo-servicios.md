@@ -63,28 +63,32 @@ Piezas gráficas para uso digital e impreso.
 
 ## 5. Desarrollo web y e-commerce
 
-Sitios y experiencias web para personas, emprendimientos, empresas e instituciones. Las posibilidades se confirman según objetivos, contenido disponible, integraciones necesarias y viabilidad; no se incluyen hosting ni operación de servidores.
+Desarrollo web para personas, emprendimientos, empresas e instituciones, desde páginas informativas hasta plataformas y aplicaciones. Las funciones, integraciones, etapas y entregables se confirman según objetivos, contenido disponible y viabilidad; el servicio no incluye hosting ni operación de servidores.
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Páginas Web Empresariales | Sitios corporativos, institucionales, educativos, inmobiliarios, de noticias, restaurantes u organizaciones; portales con secciones públicas o privadas según alcance. |
+| Páginas Web Empresariales | Sitios corporativos e institucionales, portales educativos, inmobiliarios, de noticias y para organizaciones; páginas informativas o con secciones privadas según alcance. |
 | Landing Pages y Portafolios Personales | Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos. |
-| Tiendas Online Básicas y Sistemas de Pedidos | Catálogos con carrito o pedidos; pagos en línea y sus proveedores se evalúan por separado antes de comprometerlos. |
-| Catálogos Digitales Online y Blogs | Catálogos, blogs, plataformas de cursos, directorios y comunidades con publicación organizada de contenido. |
-| Diseño UI/UX, Formularios y Web Responsive | Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web. |
+| Tiendas Online Básicas y Sistemas de Pedidos | Catálogos con carrito, pedidos y opciones de pago; pasarelas y sus proveedores se evalúan por separado antes de comprometerlos. |
+| Catálogos Digitales Online y Blogs | Catálogos, blogs, plataformas de cursos, directorios, foros y comunidades con publicación organizada de contenido. |
+| Diseño UI/UX, Formularios y Web Responsive | Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web, reservas y agendas según alcance. |
+
+También se pueden evaluar portales para colegios, universidades, academias y centros de capacitación con funciones como acceso de estudiantes y docentes, paneles administrativos, calificaciones, inscripciones, pagos, comunicados, bibliotecas y aulas virtuales. Cada función depende de requisitos, alcance y viabilidad.
 
 ## 6. Software y soluciones digitales
 
-Desarrollo de software a medida para digitalizar y gestionar operaciones acordadas con el cliente. Los ejemplos orientan el tipo de proyecto, no son paquetes listos ni funciones garantizadas: se descubren requisitos, perfiles de usuario, permisos, datos, reportes e integraciones; luego se acuerdan alcance, fases y viabilidad. No incluye automatizaciones de procesos, n8n, operación/migración de servidores, DevOps ni infraestructura compleja.
+Desarrollo de software a medida para necesidades personales, comerciales e institucionales. Los ejemplos orientan tipos de proyecto, no son paquetes listos ni funciones garantizadas: se revisan requisitos, perfiles, permisos, datos, reportes e integraciones y se acuerdan alcance, fases y viabilidad. No incluye n8n, operación o migración de servidores, DevOps ni infraestructura compleja.
 
 | Servicio | Aplicación práctica |
 |---|---|
-| Desarrollo de Sistemas Web y Software | Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad. |
-| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable. |
+| Desarrollo de Sistemas Web y Software | Sistemas empresariales como ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica y soluciones para distintos rubros; aplicaciones web y móviles según alcance y viabilidad. |
+| Diseño y Gestión de Bases de Datos | Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica con plataformas, pagos, correo o facturación electrónica cuando sea viable. |
+
+Los proyectos para instituciones educativas pueden contemplar perfiles de estudiantes, docentes y administración, gestión de calificaciones, inscripciones, pagos, comunicados, bibliotecas, aulas virtuales y documentación. La selección de funciones se acuerda para cada proyecto.
 
 ## 7. Soluciones personalizadas
 
-Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. También se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles y modernización de productos existentes; cada entrega queda limitada a lo acordado.
+Para una necesidad digital o académica que no encaje en una categoría, HagamosTech analiza el pedido y confirma si está dentro de su alcance de desarrollo, diseño o acompañamiento. Se pueden evaluar prototipos, paneles administrativos, dashboards, herramientas internas, aplicaciones web o móviles, funciones con IA y mejoras de software existente, como revisión de interfaz, corrección de errores, nuevas funciones, optimización de código o documentación. Cada entrega queda limitada a lo acordado; no incluye operación de servidores ni infraestructura compleja.
 
 | Servicio | Aplicación práctica |
 |---|---|

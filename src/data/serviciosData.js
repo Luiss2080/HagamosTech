@@ -575,7 +575,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-web-corporativo.webp',
             category: 'Desarrollo Web',
             pillLabel: 'CORPORATIVO',
-            shortDesc: 'Sitios corporativos, institucionales, educativos, inmobiliarios, de noticias, restaurantes u organizaciones; portales con secciones públicas o privadas según alcance.',
+            shortDesc: 'Sitios corporativos e institucionales, portales educativos, inmobiliarios y de noticias, páginas para organizaciones y secciones públicas o privadas según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
@@ -597,7 +597,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-web-landing.webp',
             category: 'Conversión',
             pillLabel: 'LEADS',
-            shortDesc: 'Páginas de campaña, presentación, captación de consultas o muestra de trabajos y proyectos.',
+            shortDesc: 'Landing pages para campañas y presentación; portafolios para mostrar trabajos, proyectos y experiencia.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -619,7 +619,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-web-tienda.webp',
             category: 'E-commerce',
             pillLabel: 'VENTAS',
-            shortDesc: 'Catálogos con carrito o pedidos; pagos en línea y sus proveedores se evalúan por separado antes de comprometerlos.',
+            shortDesc: 'Tiendas con catálogo, carrito y pedidos. Pasarelas de pago y sus proveedores se revisan por separado según viabilidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Desarrollo', value: 'A Medida' },
@@ -641,7 +641,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-web-catalogo.webp',
             category: 'Contenido',
             pillLabel: 'DINÁMICO',
-            shortDesc: 'Catálogos, blogs, plataformas de cursos, directorios y comunidades con publicación organizada de contenido.',
+            shortDesc: 'Catálogos, blogs, plataformas de cursos, portales de noticias, directorios, foros y comunidades para publicar contenido organizado.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -663,7 +663,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-web-uiux.webp',
             category: 'Interfaces',
             pillLabel: 'RESPONSIVE',
-            shortDesc: 'Investigación y diseño de experiencia, prototipos, formularios y adaptación a pantallas; puede aplicarse a aplicaciones web.',
+            shortDesc: 'Diseño UI/UX, prototipos, formularios y adaptación a pantallas; aplicable a aplicaciones web, reservas y agendas según alcance.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -687,7 +687,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-software-sistema.webp',
             category: 'Desarrollo',
             pillLabel: 'A MEDIDA',
-            shortDesc: 'Sistemas de inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica, clínicas, hoteles, gimnasios, talleres, transporte, logística, finanzas y producción; aplicaciones web y móviles según alcance y viabilidad.',
+            shortDesc: 'Software empresarial como ERP, inventario, ventas/POS, facturación, contabilidad, CRM, recursos humanos, gestión documental, asistencia, citas, gestión académica y sistemas para distintos rubros; aplicaciones web y móviles según alcance y viabilidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Código', value: 'A Medida' },
@@ -709,7 +709,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-software-datos.webp',
             category: 'Datos',
             pillLabel: 'ESTRUCTURA',
-            shortDesc: 'Modelado de datos, consultas, reportes y estructura para sistemas; análisis de APIs e integración técnica entre plataformas cuando sea viable.',
+            shortDesc: 'Modelado de bases de datos, consultas, reportes y estructura para sistemas; integraciones técnicas por API con plataformas, pagos, correo o facturación electrónica cuando sean viables.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -733,7 +733,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-personalizado.webp',
             category: 'Exclusivo',
             pillLabel: 'CONTANOS TU PROBLEMA',
-            shortDesc: 'Evaluación de necesidades digitales o académicas; se pueden analizar prototipos, paneles, dashboards, herramientas internas y aplicaciones web o móviles según alcance.',
+            shortDesc: 'Evaluación de necesidades digitales o académicas. Podemos analizar prototipos, portales institucionales, paneles, dashboards, aplicaciones web o móviles, funciones con IA y mejoras a software existente según alcance y viabilidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Solución', value: 'Según alcance' },

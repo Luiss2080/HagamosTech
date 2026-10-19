@@ -12,8 +12,8 @@ import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
 
 const SOLUCIONES = [
-  { title: 'Sitios web y tiendas online', desc: 'Páginas corporativas e institucionales, landing pages, portafolios, catálogos, blogs y tiendas con pedidos. Pagos y funciones especiales se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
-  { title: 'Sistemas y software a medida', desc: 'Podemos evaluar sistemas de inventario, ventas, facturación, CRM, gestión académica, citas, asistencia y otras herramientas según requisitos y alcance.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
+  { title: 'Sitios, plataformas y tiendas online', desc: 'Sitios corporativos, portales educativos e institucionales, landing pages, catálogos, blogs, cursos, reservas, comunidades y tiendas con pedidos. Funciones y pagos se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
+  { title: 'Sistemas y software a medida', desc: 'Desde ERP, inventario, ventas/POS y facturación hasta CRM, gestión documental, citas y sistemas académicos. Portales con perfiles, calificaciones, inscripciones y otros módulos se definen por alcance.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
   { title: 'Diseño gráfico e identidad', desc: 'Logos, identidad visual, flyers, banners, catálogos, tarjetas y piezas para difusión digital o impresión.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
   { title: 'Acompañamiento académico', desc: 'Mentorías y orientación en tareas guiadas, informes, monografías y proyectos socioformativos, según materia y disponibilidad. Cada estudiante desarrolla su propio trabajo.', icon: <Users size={24} />, image: '/img/08_Cards/negocios-academico.webp', category: 'ACOMPAÑAMIENTO' }
 ];
@@ -68,7 +68,7 @@ const Negocios = () => {
           </h1>
           
           <p className="text-slate-400 text-base md:text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Acompañamos a estudiantes y desarrollamos soluciones web, software y diseño para personas, emprendimientos, empresas e instituciones. Revisamos el alcance y conversamos alternativas según cada necesidad y posibilidades.
+            Desarrollamos páginas, tiendas, portales institucionales, aplicaciones y sistemas empresariales; también ofrecemos diseño gráfico y acompañamiento académico. Revisamos el alcance y conversamos alternativas según cada necesidad y posibilidades.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -89,7 +89,7 @@ const Negocios = () => {
               Soluciones <span className="text-[#A3E635]">Integrales</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Desde acompañamiento académico y diseño gráfico hasta páginas web y software: revisamos cada solicitud y conversamos alcance, etapas y alternativas.
+              Desde recursos académicos y diseño gráfico hasta plataformas web, aplicaciones móviles, sistemas de gestión, bases de datos e integraciones técnicas viables.
             </p>
           </div>
 
