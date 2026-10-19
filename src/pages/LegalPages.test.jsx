@@ -25,7 +25,7 @@ describe('Vistas legales', () => {
     expect(container.querySelector('#terminos-page')).toHaveClass('legal-page');
     expect(screen.getByRole('heading', { level: 1, name: /Términos de Servicio/i })).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: /Condiciones generales/i })).toBeInTheDocument();
-    expect(screen.getByRole('button', { name: /Uso del sitio web/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('button', { name: /Uso del sitio web/i })).toHaveLength(2);
   });
 
   it('presenta Cookies con su identidad y mantiene los controles de preferencias', () => {
