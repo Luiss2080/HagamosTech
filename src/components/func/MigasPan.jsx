@@ -42,7 +42,7 @@ const getBreadcrumbsAndBadge = (pathname) => {
   return null;
 };
 
-const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight, description, className = '', children }) => {
+const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight, description, className = '', children, embedded = false }) => {
   const location = useLocation();
   const globalBreadcrumb = useContext(BreadcrumbContext);
   const isCenter = align === 'center';
@@ -106,14 +106,15 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
   );
 
   if (title || description || children) {
+    const HeroWrapper = embedded ? 'div' : 'section';
     return (
-      <section className={`relative overflow-hidden pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-12 ${className}`}>
+      <HeroWrapper className={`relative overflow-hidden pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-12 ${className}`}>
         <div className="container mx-auto px-6 relative z-10 max-w-5xl text-center flex flex-col items-center">
           {!globalBreadcrumb && breadcrumbPill}
           {badgePill}
           {heroContent}
         </div>
-      </section>
+      </HeroWrapper>
     );
   }
 

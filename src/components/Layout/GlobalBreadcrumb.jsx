@@ -58,18 +58,20 @@ const getSegments = (pathname) => {
 
 const GlobalBreadcrumb = () => {
   const { pathname } = useLocation();
-  if (pathname === '/') return null;
-
-  const crumbs = getSegments(pathname);
+  const crumbs = pathname === '/' ? [] : getSegments(pathname);
 
   return (
     <nav aria-label="Migas de pan" className="relative z-20 px-4 py-2 sm:px-6">
       <ol className="mx-auto flex w-fit max-w-full items-center gap-2 overflow-x-auto rounded-full border border-white/10 bg-[#0a0d09]/85 px-2 py-1.5 shadow-[0_8px_26px_rgba(0,0,0,.2)] backdrop-blur-md">
         <li className="flex shrink-0 items-center gap-2">
-          <Link to="/" aria-label="Ir al inicio" className="flex h-7 w-7 items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] transition hover:bg-[#84CC16]">
-            <i className="fa-solid fa-house text-[10px]" aria-hidden="true" />
-          </Link>
-          <span className="text-[9px] font-black uppercase tracking-wider text-slate-400 sm:text-[10px]">Inicio</span>
+          {crumbs.length ? (
+            <Link to="/" aria-label="Ir al inicio" className="flex h-7 w-7 items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] transition hover:bg-[#84CC16]">
+              <i className="fa-solid fa-house text-[10px]" aria-hidden="true" />
+            </Link>
+          ) : (
+            <span aria-hidden="true" className="flex h-7 w-7 items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A]"><i className="fa-solid fa-house text-[10px]" /></span>
+          )}
+          {crumbs.length ? <span className="text-[9px] font-black uppercase tracking-wider text-slate-400 sm:text-[10px]">Inicio</span> : <span aria-current="page" className="text-[9px] font-black uppercase tracking-wider text-slate-200 sm:text-[10px]">Inicio</span>}
         </li>
         {crumbs.map((crumb, index) => (
           <li key={`${crumb.label}-${index}`} className="flex shrink-0 items-center gap-2">

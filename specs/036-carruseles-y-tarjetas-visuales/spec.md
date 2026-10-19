@@ -19,6 +19,8 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-11: Las tarjetas de ejemplos o testimonios muestran un icono de usuario y datos contextuales con iconos para fecha, hora y lugar o modalidad. Los datos no confirmados se indican como pendientes de coordinación.
 - RF-12: El CTA final compartido mantiene título y descripción, presenta un panel verde compacto de alto contraste con una imagen representativa a la derecha y el botón de consulta junto al texto, y aplica el mismo diseño en todas sus interfaces de uso.
 - RF-13: La página de metodología presenta una sección titulada “En 4 simples pasos”, con descripción centrada, cuatro etapas conectadas visualmente mediante iconos y tarjetas, y una adaptación de una a cuatro columnas según el ancho disponible.
+- RF-14: Todas las vistas muestran una miga de pan accesible al inicio del contenido. La miga es global y no se duplica en los encabezados de página que también la usaban. La vista principal muestra “Inicio” como ubicación actual.
+- RF-15: En la portada de Sobre Nosotros, el hero de presentación y las tarjetas de misión y visión aparecen unidos en una sola sección y comparten el mismo fondo tecnológico.
 
 ## Alcance
 
@@ -43,3 +45,5 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-11: `CarruselTestimonios.test.jsx` valida los iconos/datos contextuales y el icono de usuario; los campos sin dato real muestran “A coordinar” o “A definir”.
 - RF-12: `TestimonialCTASection.test.jsx` valida la imagen representativa y el botón junto al CTA; `CenteredProjectCTA.test.jsx` valida el panel verde compacto.
 - RF-13: `ComoTrabajamos.test.jsx` valida el título, la descripción y las cuatro etapas de la metodología.
+- RF-14: `GlobalBreadcrumb.test.jsx` valida la miga global, la ruta actual y la vista principal.
+- RF-15: `MisionVision.test.jsx` valida que la presentación y las tarjetas de misión y visión forman una sección integrada en Sobre Nosotros.
