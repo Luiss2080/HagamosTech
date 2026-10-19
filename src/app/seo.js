@@ -21,7 +21,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/academia'),
     title: 'Academia | HagamosTech',
-    description: 'Apoyo académico: proyectos, simuladores y recursos para estudiantes e instituciones.',
+    description: 'Mentorías y orientación para estudiantes de colegio, secundaria e instituto o universidad: tareas guiadas, informes, monografías y proyectos propios.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/negocios'),
@@ -31,17 +31,17 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/personalizado'),
     title: 'Soluciones personalizadas | HagamosTech',
-    description: 'Contanos tu problema y lo resolvemos con tecnología a medida.',
+    description: 'Evaluamos soluciones digitales, académicas o de diseño según requisitos, viabilidad y alcance.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/desarrollo-web'),
     title: 'Desarrollo Web | HagamosTech',
-    description: 'Páginas web empresariales, landing pages y tiendas online.',
+    description: 'Sitios, portales, tiendas online, catálogos, plataformas y aplicaciones web definidos según cada proyecto.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/sistemas-apps'),
     title: 'Sistemas y Apps | HagamosTech',
-    description: 'Sistemas de gestión y aplicaciones a medida para tu negocio.',
+    description: 'Desarrollo de sistemas, software y bases de datos para necesidades comerciales e institucionales, según alcance y viabilidad.',
   },
   {
     coincide: (p) => p.startsWith('/servicios/inteligencia-artificial'),

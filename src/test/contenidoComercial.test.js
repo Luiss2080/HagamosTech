@@ -25,12 +25,28 @@ describe('Contenido comercial veraz', () => {
     expect(mensajes).not.toMatch(/soporte.{0,10}24\/7|24\/7.{0,10}soporte/);
     expect(mensajes).toContain('no ofrecemos automatización de procesos');
     expect(mensajes).toContain('no ofrecemos operación de servidores');
+    expect(mensajes).toContain('podemos evaluar funciones con inteligencia artificial');
     expect(mensajes).toContain('acompañamiento académico');
+  });
+
+  it('la ruta heredada de automatización redirige a sistemas y no se ofrece desde el menú', () => {
+    const rutas = leer('../../src/app/App.jsx');
+    const menu = leer('../../src/components/Layout/Header.jsx');
+    expect(rutas).toContain('<navigate to="/servicios/sistemas-apps" replace />');
+    expect(menu).not.toContain("target: '/servicios/automatizacion'");
+    expect(menu).toContain("target: '/servicios/sistemas-apps'");
   });
 
   it('las promociones no publican precios, descuentos ni tiempos universales', () => {
     const promociones = leer('../../src/pages/Promociones/sections/PromoDestacada.jsx');
     expect(promociones).not.toMatch(/bs\.\s*[0-9]|-[0-9]+%|por tiempo limitado/);
     expect(promociones).toContain('alternativas de alcance');
+  });
+
+  it('las alternativas de proyecto no se presentan como suscripciones o planes de precio', () => {
+    const alternativas = leer('../../src/pages/Promociones/sections/PlanesSuscripcion.jsx');
+    expect(alternativas).not.toMatch(/suscripci[oó]n|precio mensual|precio anual|priceMonthly|priceAnnual/);
+    expect(alternativas).toContain('una propuesta para');
+    expect(alternativas).toContain('condiciones a conversar');
   });
 });
