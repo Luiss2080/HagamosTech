@@ -2,7 +2,7 @@
 
 ## Propósito
 
-Ordenar por fases la actualización del texto de las interfaces públicas de HagamosTech para que una persona entienda qué ofrecemos, para quién, qué puede esperar y qué queda fuera del alcance. Este documento define el plan de trabajo; no cambia todavía las páginas ni publica nuevas ofertas.
+Actualizar por fases el texto de las interfaces públicas de HagamosTech para que una persona entienda qué ofrecemos, para quién, qué puede esperar y qué queda fuera del alcance. Esta spec registra el plan y su ejecución; no habilita ofertas fuera del Catálogo Maestro.
 
 ## Fuentes y prioridad
 
@@ -126,9 +126,18 @@ Este mapa organiza el mensaje. No agrega categorías ni amplía la oferta canón
 - **RF-8:** Las pruebas detectan discrepancias con el catálogo, servicios fuera de alcance y copy repetido que se aparte de la fuente canónica.
 - **RF-9:** Se preservan rutas y diseño salvo que una decisión posterior autorice un cambio separado.
 
+## Registro de ejecución
+
+- **Fase 0 — Inventario:** revisados los puntos públicos de navegación, SEO, páginas de servicios, promociones, datos comerciales compartidos y respuestas del chat relacionados con el alcance. Se identificaron la ruta heredada de automatización, el enlace del menú que la presentaba como sistemas y la falsa periodicidad de los planes.
+- **Fase 1 — Catálogo:** confirmado el Catálogo Maestro y `serviciosData.js` como fuente canónica y espejo. Conservadas las 7 categorías y 33 servicios existentes; el catálogo ya incluye la variedad académica y digital solicitada y excluye infraestructura compleja.
+- **Fase 2 — Academia:** la fuente canónica, Academia, Apoyo Académico y chat mantienen mentorías, tareas guiadas, informes, monografías y proyectos socioformativos; se aclara que el estudiante desarrolla y presenta su trabajo. Quitada una mención ajena al catálogo sobre robótica educativa.
+- **Fase 3 — Desarrollo digital:** ajustados metadatos y descripciones de navegación para comunicar desarrollo web, software, bases de datos y funciones con IA sujetas a evaluación. Se mantienen ejemplos de posibilidades bajo requisitos, alcance y viabilidad.
+- **Fase 4 — Límites y rutas:** `/servicios/automatizacion` conserva compatibilidad y redirige a `/servicios/sistemas-apps`; el menú ya no ofrece automatización. El chat aclara que se pueden evaluar funciones con IA y que no se ofrecen automatizaciones de procesos ni n8n. No se modificó el diseño ni el contenido restaurado del footer.
+- **Fase 5 — Copy:** actualizados el menú, metadatos, preguntas frecuentes, respuesta del chat y alternativas de trabajo en Promociones. La vista no presenta suscripciones, tarifas periódicas ni precios universales.
+- **Fase 6 — Validación:** pendiente ejecutar lint, pruebas y build después de los cambios.
+
 ## Fuera de alcance de este SDD
 
-- Implementar ahora los cambios de copy en la web.
 - Añadir funcionalidades, integraciones, automatizaciones o infraestructura.
 - Definir precios o un modelo de cobro sin datos y confirmación del negocio.
 - Rediseñar componentes, navegación o el footer.
