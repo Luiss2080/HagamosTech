@@ -145,7 +145,7 @@ const Tecnologia = () => {
       </section>
 
       {/* STACK TECNOLÓGICO INFINITO */}
-      <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
+      <section className="z-10 relative">
         <div className="container mx-auto px-6">
           <ToolsMarquee items={TECH_STACK} label="Tecnologías que pueden aplicarse según el proyecto" />
         </div>

@@ -34,7 +34,7 @@ const ProcessStepsCarousel = ({ items = [], label = 'Etapas del proceso', badgeP
   return (
     <section className="mx-auto w-full max-w-7xl" aria-label={label}>
       <div className="relative overflow-hidden px-1 py-4 sm:px-3 sm:py-6">
-        <svg className="pointer-events-none absolute inset-x-0 top-0 z-0 h-full w-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+        <svg className="pointer-events-none absolute inset-x-0 top-2 z-0 h-12 w-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
           <polyline points={pathPoints} fill="none" stroke="rgba(163,230,53,.58)" strokeWidth="0.6" strokeDasharray="1.5 1.2" vectorEffect="non-scaling-stroke" />
         </svg>
         <div
@@ -48,8 +48,8 @@ const ProcessStepsCarousel = ({ items = [], label = 'Etapas del proceso', badgeP
             const raised = !isSingle && (index % 2 === 1);
 
             return (
-              <div key={`${title}-${index}`} className="relative flex px-2 py-3 sm:px-3 sm:py-5" style={{ width: `${cardWidth}%` }}>
-                <article className={`group relative flex min-h-[320px] w-full flex-col overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#10120E] shadow-[0_18px_50px_rgba(0,0,0,.3)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/60 hover:shadow-[0_20px_55px_rgba(163,230,53,.12)] ${raised ? 'sm:translate-y-8' : 'sm:-translate-y-3'}`}>
+              <div key={`${title}-${index}`} className="relative flex px-2 pb-3 pt-16 sm:px-3 sm:pb-5 sm:pt-16" style={{ width: `${cardWidth}%` }}>
+                <article className={`group relative flex min-h-[320px] w-full flex-col overflow-hidden rounded-[1.6rem] border border-white/10 bg-[#10120E] shadow-[0_18px_50px_rgba(0,0,0,.3)] transition-all duration-500 hover:-translate-y-1 hover:border-[#A3E635]/60 hover:shadow-[0_20px_55px_rgba(163,230,53,.12)] ${raised ? 'sm:translate-y-8' : ''}`}>
                   <div className="relative h-36 shrink-0 overflow-hidden bg-[#171A13] sm:h-40">
                     {item.image ? <img src={item.image} alt={`Imagen relacionada con ${title}`} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /> : <div role="img" aria-label={`Imagen relacionada con ${title}`} className="h-full w-full bg-[radial-gradient(ellipse_at_70%_30%,rgba(163,230,53,.36),transparent_40%),linear-gradient(135deg,#22291a,#090a08)]" />}
                     <div className="absolute inset-0 bg-gradient-to-t from-[#10120E] via-black/10 to-black/20" />
@@ -68,8 +68,8 @@ const ProcessStepsCarousel = ({ items = [], label = 'Etapas del proceso', badgeP
             );
           })}
         </div>
-        <div className="pointer-events-none absolute inset-0 z-20">
-          {visibleItems.map((item, index) => <span key={`${item.title || item.name}-${index}`} className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#050505] bg-[#A3E635] shadow-[0_0_18px_rgba(163,230,53,.8)]" style={{ left: `${((index + 0.5) / cardsPerView) * 100}%`, top: `${cardsPerView === 1 ? 48 : index % 2 === 0 ? 21 : 79}%` }} />)}
+        <div className="pointer-events-none absolute inset-x-0 top-2 z-20 h-12">
+          {visibleItems.map((item, index) => <span key={`${item.title || item.name}-${index}`} className="absolute h-4 w-4 -translate-x-1/2 -translate-y-1/2 rounded-full border-[3px] border-[#050505] bg-[#A3E635] shadow-[0_0_18px_rgba(163,230,53,.8)]" style={{ left: `${((index + 0.5) / cardsPerView) * 100}%`, top: `${cardsPerView === 1 ? 50 : index % 2 === 0 ? 22 : 78}%` }} />)}
         </div>
       </div>
       {lastIndex > 0 && <div className="mt-6 flex items-center justify-center gap-3" aria-label="Navegación de etapas">

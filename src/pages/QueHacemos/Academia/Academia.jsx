@@ -155,7 +155,7 @@ const Academia = () => {
       </section>
 
       {/* STACK TECNOLÓGICO INFINITO */}
-      <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
+      <section className="z-10 relative">
         <div className="container mx-auto px-6">
           <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos que pueden usarse según la materia y el proyecto" />
         </div>
