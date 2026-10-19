@@ -26,3 +26,9 @@ dist-ssr
 # Variables de entorno reales del backend (nunca se versionan; plantilla: server/.env.example)
 server/.env
 server/.env.production
+
+# Artefactos generados por Playwright / herramientas de IA
+.playwright-mcp/
+.playwright-cli/
+test-results/
+playwright-report/
