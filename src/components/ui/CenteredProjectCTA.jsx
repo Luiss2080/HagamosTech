@@ -21,7 +21,7 @@ const CenteredProjectCTA = ({
           <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-black/15 bg-black/[0.06] px-3 py-1.5 text-[9px] font-black uppercase tracking-[.19em] text-black/70 sm:mb-4 sm:text-[10px]">
             <Sparkles size={13} aria-hidden="true" />{eyebrow}
           </span>
-          <h2 className="text-3xl font-black uppercase leading-[1.02] tracking-[-.045em] text-[#111407] sm:text-4xl md:text-5xl">{title}</h2>
+          <h2 className="text-3xl font-black uppercase leading-[1.02] tracking-[-.045em] text-[#111407] [&_span]:text-[#111407] sm:text-4xl md:text-5xl">{title}</h2>
           <p className="mt-3 max-w-2xl text-sm font-semibold leading-relaxed text-[#26320F]/85 sm:mt-4 sm:text-base">{description}</p>
           {chips.length > 0 && (
             <ul className="mt-4 flex flex-wrap gap-2 sm:mt-5">
