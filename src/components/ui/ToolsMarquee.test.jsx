@@ -1,6 +1,6 @@
 import React from 'react';
 import { describe, expect, it } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, within } from '@testing-library/react';
 import ToolsMarquee from './ToolsMarquee';
 
 describe('ToolsMarquee', () => {
@@ -16,11 +16,12 @@ describe('ToolsMarquee', () => {
     expect(screen.getByText('Recursos que pueden evaluarse según los objetivos y el alcance acordado.')).toBeInTheDocument();
     expect(groups).toHaveLength(2);
     expect(groups[1]).toHaveAttribute('aria-hidden', 'true');
-    fireEvent.click(groups[0].querySelector('button'));
-    expect(screen.getByRole('dialog')).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'React' })).toBeInTheDocument();
-    expect(screen.getByText('Su uso se define según los requisitos, el alcance y la viabilidad del proyecto.')).toBeInTheDocument();
     expect(screen.getAllByText('React')).toHaveLength(2);
+    fireEvent.click(groups[0].querySelector('button'));
+    const dialog = screen.getByRole('dialog');
+    expect(dialog).toBeInTheDocument();
+    expect(within(dialog).getByRole('heading', { name: 'React' })).toBeInTheDocument();
+    expect(within(dialog).getByText('Su uso se define según los requisitos, el alcance y la viabilidad del proyecto.')).toBeInTheDocument();
     expect(container.querySelectorAll('img[alt="React logo"]')).toHaveLength(2);
     expect(container.querySelector('.tech-tools-carousel__track').textContent).toContain('Figma');
   });
