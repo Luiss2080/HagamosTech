@@ -208,32 +208,7 @@ const Academia = () => {
         })} />
       </section>
 
-      {/* ACADEMIC CTA */}
-      <section className="py-24 z-10 relative px-6 pb-32">
-        <div className="container mx-auto max-w-5xl">
-          <div className="p-12 md:p-24 rounded-[3rem] bg-[#A3E635] text-black text-center relative overflow-hidden group/cta hover:scale-[1.01] transition-all duration-500 shadow-[0_0_40px_rgba(163,230,53,0.15)] hover:shadow-[0_0_80px_rgba(163,230,53,0.3)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-black/60 opacity-50 group-hover/cta:scale-110 transition-transform duration-1000"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 group-hover/cta:-translate-x-10 transition-transform duration-1000"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 group-hover/cta:translate-x-10 transition-transform duration-1000"></div>
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80')] opacity-[0.03] mix-blend-overlay object-cover pointer-events-none group-hover/cta:opacity-[0.08] transition-opacity duration-700"></div>
-            
-            <h2 className="text-5xl md:text-7xl font-black mb-6 relative z-10 uppercase tracking-tighter drop-shadow-lg leading-none">
-              Avancemos con tu proyecto académico
-            </h2>
-            <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
-              Contanos qué necesitás comprender o preparar. Conversamos alternativas de acompañamiento según tu situación y posibilidades.
-            </p>
-            
-            <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-sm md:text-lg uppercase tracking-widest hover:scale-110 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] group/btn overflow-hidden">
-              <span className="relative z-20">Solicitar Asesoría Gratuita</span>
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
-                <ArrowRight size={20} className="md:w-6 md:h-6" />
-              </div>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <CenteredProjectCTA title="Avancemos con tu proyecto académico." description="Contanos la materia o consigna. Revisamos una modalidad de orientación adecuada y disponible." buttonLabel="Consultar acompañamiento" href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20por%20acompañamiento%20académico" eyebrow="ACOMPAÑAMIENTO ACADÉMICO" />
 
     </div>
   );
