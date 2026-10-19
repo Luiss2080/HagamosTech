@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AlarmClock, ArrowLeft, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
+import { AlarmClock, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
 import useAuthStore from '../../store/useAutenticacionStore';
 import apiClient from '../../servicios/clienteApi';
+import FondoTech from '../../components/fondos/FondoTech';
 
 const ETAPAS = [
   { id: 'idea', label: 'Idea', icon: Lightbulb },
@@ -50,8 +50,6 @@ const EspacioPersonalPagina = () => {
   const [modal, setModal] = useState(null);
   const [saving, setSaving] = useState(false);
   const [month, setMonth] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
-  const navigate = useNavigate();
-
   const cargar = useCallback(async () => {
     setLoading(true);
     setError('');
@@ -137,36 +135,95 @@ const EspacioPersonalPagina = () => {
   const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
 
   if (!user) return (
-    <main className="relative flex min-h-[70vh] items-center justify-center overflow-hidden bg-[#070907] px-4 py-20 text-center text-white">
-      <div className="max-w-xl rounded-[2rem] border border-[#A3E635]/25 bg-[#10140d] p-8 shadow-2xl sm:p-12">
-        <Icono className="mx-auto mb-5 h-14 w-14"><UserRound /></Icono>
-        <p className="mb-3 text-xs font-black uppercase tracking-[.22em] text-[#A3E635]">Tu espacio HagamosTech</p>
-        <h1 className="text-3xl font-black sm:text-4xl">Organizá tus proyectos</h1>
-        <p className="mx-auto mt-4 max-w-md text-slate-300">Iniciá sesión para guardar ideas, notas y recordatorios personales en un espacio privado.</p>
-        <button onClick={() => window.openModal?.('modal_login')} className="mt-7 rounded-full bg-[#A3E635] px-7 py-3 font-black text-black transition hover:bg-lime-300">Iniciar sesión</button>
-      </div>
+    <main className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
+      <FondoTech />
+      <section className="relative z-10 border-b border-[#A3E635]/15 px-4 pb-12 pt-10 text-center sm:px-6 sm:pb-14 lg:pt-14">
+        <div className="mx-auto flex max-w-5xl flex-col items-center">
+          <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/35 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
+          <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Tus ideas, proyectos y fechas<br className="hidden sm:block" /> <span className="relative inline-block text-[#A3E635]">en un solo lugar.
+            <svg aria-hidden="true" className="absolute -bottom-2 left-0 -z-10 h-3 w-full text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2 7C48 2 137 2 198 5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" /></svg>
+          </span></h1>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">Creá una cuenta para organizar tus proyectos, guardar notas privadas y planificar recordatorios con el estilo HagamosTech.</p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">
+            {[{ label: 'Proyectos', icon: ClipboardList }, { label: 'Notas privadas', icon: NotebookPen }, { label: 'Calendario', icon: CalendarDays }].map(({ label, icon: FeatureIcon }) => <span key={label} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><FeatureIcon size={14} />{label}</span>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="relative z-10 px-4 py-12 sm:px-6 lg:py-16" aria-labelledby="espacio-acceso-titulo">
+        <FondoTech hideWaves />
+        <div className="relative z-10 mx-auto max-w-6xl">
+          <div className="mx-auto mb-8 max-w-3xl text-center">
+            <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Empezá en minutos</span>
+            <h2 id="espacio-acceso-titulo" className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Tu espacio empieza con una cuenta</h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/65 sm:text-base">Iniciá sesión o registrate para que tus proyectos, apuntes y recordatorios queden guardados en tu perfil.</p>
+          </div>
+
+          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-white/[0.04] text-left shadow-2xl backdrop-blur-md sm:rounded-[2.5rem]">
+            <div className="grid lg:grid-cols-2">
+              <div className="relative flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A0A0A] to-[#171717] p-7 text-center sm:p-10 lg:p-12">
+                <div aria-hidden="true" className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#A3E635]/10 blur-3xl" />
+                <div className="relative z-10 mb-5 flex h-28 w-28 items-center justify-center rounded-[2rem] border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] shadow-[0_0_50px_rgba(163,230,53,.12)]"><UserRound size={54} strokeWidth={1.5} /></div>
+                <h3 className="relative z-10 text-2xl font-black leading-tight sm:text-3xl">Un lugar para avanzar<br /><span className="text-[#A3E635]">a tu manera.</span></h3>
+                <p className="relative z-10 mt-4 max-w-md text-sm leading-6 text-white/70">Anotá ideas, organizá iniciativas académicas o digitales, y definí tus propias fechas importantes.</p>
+                <div className="relative z-10 mt-7 grid w-full max-w-md grid-cols-1 gap-2 sm:grid-cols-3">
+                  {[{ icon: ClipboardList, label: 'Seguimiento', text: 'Tus proyectos' }, { icon: NotebookPen, label: 'Apuntes', text: 'Notas privadas' }, { icon: CalendarDays, label: 'Planificación', text: 'Fechas y tareas' }].map(({ icon: FeatureIcon, label, text }) => <div key={label} className="rounded-2xl border border-white/10 bg-black/25 px-3 py-4"><FeatureIcon className="mx-auto mb-2 text-[#A3E635]" size={19} /><p className="text-[9px] font-black uppercase tracking-wider text-white/55">{label}</p><p className="mt-1 text-xs font-bold text-white">{text}</p></div>)}
+                </div>
+                <span className="relative z-10 mt-7 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2 text-[9px] font-black uppercase tracking-[.16em] text-[#A3E635]"><i className="h-2 w-2 rounded-full bg-[#A3E635]" /> Privado y asociado a tu cuenta</span>
+              </div>
+
+              <div className="relative flex flex-col justify-center bg-white/[0.025] p-6 sm:p-9 lg:p-12">
+                <div aria-hidden="true" className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[#A3E635]/10 blur-3xl" />
+                <div className="relative z-10 mx-auto w-full max-w-md">
+                  <div className="mb-6 border-b border-white/10 pb-5 text-center">
+                    <span className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl border border-[#A3E635]/20 bg-[#A3E635]/10 text-[#A3E635]"><UserRound size={19} /></span>
+                    <h3 className="text-2xl font-black">Accedé a tu espacio</h3>
+                    <p className="mt-2 text-sm leading-6 text-white/60">Tu cuenta mantiene reunida tu organización personal en un solo lugar.</p>
+                  </div>
+                  <div className="grid gap-3">
+                    <button onClick={() => window.openModal?.('modal_register')} className="group flex w-full items-center justify-between gap-4 rounded-2xl bg-[#A3E635] px-5 py-4 text-left text-[#0A0A0A] shadow-lg shadow-[#A3E635]/15 transition hover:-translate-y-0.5 hover:bg-[#84CC16]">
+                      <span><span className="block text-sm font-black uppercase tracking-wide">Crear cuenta</span><span className="mt-1 block text-xs font-semibold text-black/65">Registrate y empezá a organizarte</span></span><span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/10"><Plus size={20} /></span>
+                    </button>
+                    <button onClick={() => window.openModal?.('modal_login')} className="group flex w-full items-center justify-between gap-4 rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#A3E635]/40 hover:bg-[#A3E635]/5">
+                      <span><span className="block text-sm font-black uppercase tracking-wide text-white">Iniciar sesión</span><span className="mt-1 block text-xs font-semibold text-white/55">Continuá donde lo dejaste</span></span><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[#A3E635]"><ArrowRight size={18} /></span>
+                    </button>
+                  </div>
+                  <p className="mt-5 text-center text-[11px] leading-5 text-white/45">Tus recordatorios son personales y no reservan citas con el equipo HagamosTech.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div className="relative z-10 h-px bg-gradient-to-r from-transparent via-[#A3E635]/60 to-transparent" />
     </main>
   );
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#070907] px-4 py-12 text-white sm:px-6 lg:py-16">
-      <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-35" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(163,230,53,.2) 1px, transparent 0)', backgroundSize: '38px 38px' }} />
-      <div className="relative mx-auto max-w-7xl">
-        <button onClick={() => navigate('/')} className="mb-6 inline-flex items-center gap-2 text-sm font-bold text-slate-400 transition hover:text-[#A3E635]"><ArrowLeft size={16} /> Volver al inicio</button>
-        <header className="mb-9 text-center">
-          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[11px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal</span>
-          <h1 className="text-3xl font-black tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.</h1>
-          <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-slate-300 sm:text-base">Un lugar privado para ordenar tus proyectos, guardar apuntes y planificar fechas importantes.</p>
-          <p className="mx-auto mt-3 max-w-2xl text-xs text-slate-500">Las etapas son para tu organización personal. Los recordatorios no reservan citas ni actualizan proyectos internos.</p>
+    <main className="relative min-h-screen overflow-hidden bg-[#050505] px-4 pb-12 text-white sm:px-6 lg:pb-16">
+      <FondoTech />
+      <div className="relative z-10 mx-auto max-w-7xl">
+        <header className="mx-auto max-w-5xl pb-9 pt-10 text-center sm:pb-12 lg:pt-14">
+          <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
+          <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">Proyectos, notas privadas y recordatorios organizados desde tu cuenta.</p>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            {[{ label: 'Mis proyectos', icon: ClipboardList }, { label: 'Notas', icon: NotebookPen }, { label: 'Calendario', icon: CalendarDays }].map(({ label, icon: FeatureIcon }) => <span key={label} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><FeatureIcon size={14} />{label}</span>)}
+          </div>
         </header>
 
         {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
         {notice && <div role="status" className="mb-5 flex items-center gap-2 rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-3 text-sm font-semibold text-lime-100"><Check size={16} className="text-[#A3E635]" />{notice}</div>}
 
-        <section className="overflow-hidden rounded-[2rem] border border-white/10 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.35)]">
+        <section aria-labelledby="espacio-tablero-titulo" className="relative overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:rounded-[2.5rem]">
+          <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7">
+            <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span>
+            <h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Proyectos, notas y calendario</h2>
+            <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-white/60">Las etapas de proyecto las definís vos. Los recordatorios no son citas ni actualizan tareas internas del equipo.</p>
+          </div>
           <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-5 sm:px-7">
             <div>
-              <h2 className="text-lg font-black sm:text-xl">Tu tablero</h2>
+              <h3 className="text-lg font-black sm:text-xl">Tu tablero</h3>
               <p className="mt-1 text-xs text-slate-400">Tus datos son privados y se guardan en tu cuenta.</p>
             </div>
             <div className="flex flex-wrap gap-2">

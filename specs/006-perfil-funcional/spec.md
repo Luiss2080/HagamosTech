@@ -17,6 +17,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - H5: Como usuario autenticado quiero organizar mis proyectos en un espacio privado.
 - H6: Como usuario quiero crear notas personales y asociarlas opcionalmente a un proyecto.
 - H7: Como usuario quiero registrar recordatorios en un calendario personal.
+- H8: Como usuario quiero que el registro, la verificación y los datos de mi cuenta funcionen sobre PostgreSQL.
 
 ## Requisitos funcionales (criterios de aceptación en EARS)
 - RF-1: CUANDO el usuario envíe `PUT /api/perfil/password` con la contraseña actual correcta, una nueva de al menos 6 caracteres y su confirmación coincidente, EL SISTEMA actualizará la contraseña y responderá `200`.
@@ -33,6 +34,10 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-12: CUANDO el usuario cree, actualice o elimine un evento, EL SISTEMA validará título y fecha de inicio, y guardará el evento en su calendario personal.
 - RF-13: SI un registro solicitado no pertenece al usuario autenticado, EL SISTEMA responderá `404` sin revelar su existencia.
 - RF-14: EL SISTEMA presentará el espacio como seguimiento personal; no afirmará que sus etapas son estados oficiales de HagamosTech ni permitirá administrar solicitudes de otros usuarios.
+- RF-15: EL SISTEMA persistirá las tablas activas de autenticación, contacto y espacio personal en PostgreSQL usando `DATABASE_URL`; ningún endpoint en ejecución dependerá de MySQL.
+- RF-16: CUANDO una persona complete el registro y la verificación de correo, EL SISTEMA guardará el usuario en PostgreSQL, asignará el rol Invitado si aún no existe e iniciará sesión con un token válido.
+- RF-17: LA MIGRACIÓN desde MySQL conservará los registros activos de usuarios, roles, permisos, mensajes, verificaciones, recuperaciones, registros pendientes y espacio personal, incluidos sus identificadores y relaciones; las tablas del vertical retirado no se activarán.
+- RF-18: EL ESPACIO PERSONAL compartirá la composición visual de Contáctanos: hero centrado con título y descripción, seguido de una sección centrada y un panel principal en dos columnas, con fondo, contraste, tarjetas e iconografía de HagamosTech.
 
 ## Requisitos no funcionales
 - Mensajes en español; JSON consistente.
@@ -44,6 +49,8 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Token con id inexistente → 401 (RF-8).
 - Un usuario intenta leer, modificar o eliminar un registro ajeno → 404, sin modificar datos (RF-9, RF-13).
 - Evento sin fecha válida o título vacío → 400, sin persistir (RF-12).
+- Registro duplicado → 400; registro nuevo crea un pendiente y la verificación correcta persiste la cuenta en PostgreSQL (RF-16).
+- Inicio de sesión contra PostgreSQL rechaza contraseña incorrecta y emite token con credenciales válidas.
 - jsPDF/html2canvas no disponibles → mensaje claro en cliente (RF-7).
 
 ## Fuera de alcance
@@ -54,7 +61,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Reserva de citas con disponibilidad de HagamosTech; el calendario es personal y sus recordatorios no crean una cita.
 
 ## Criterios de finalización
-- Endpoints implementados y con tests en verde (RF-1..RF-14).
+- Endpoints implementados y con tests en verde (RF-1..RF-18).
 - `npm run lint`, `npm run test:run` (raíz y server) y `npm run build` en verde.
 
 ## Dudas abiertas

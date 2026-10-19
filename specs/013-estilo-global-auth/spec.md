@@ -18,6 +18,8 @@ Visitantes y usuarios autenticados.
 - RF-5: CUANDO un usuario complete el registro y el código de verificación, EL SISTEMA creará la cuenta e iniciará sesión.
 - RF-6: SI el backend recibe un JSON malformado, ENTONCES EL SISTEMA responderá `400` sin caerse.
 - RF-7: EL SISTEMA usará el puerto `4321` para el backend en desarrollo (evita otros proyectos).
+- RF-8: EL ESPACIO PERSONAL usará el hero, encabezados, fondo y panel de dos columnas de la estructura de Contáctanos, respetando el tema oscuro, acento lima, contraste e iconografía del sitio.
+- RF-9: EL REGISTRO y el inicio de sesión usarán la base PostgreSQL configurada en el backend; el frontend mostrará errores reales cuando la API o la base no estén disponibles.
 
 ## Requisitos no funcionales
 - Sin dependencias nuevas.
