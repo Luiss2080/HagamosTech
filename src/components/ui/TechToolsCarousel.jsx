@@ -152,7 +152,7 @@ const TechToolsCarousel = ({
         onPointerLeave={() => { if (!isDraggingRef.current) isPausedRef.current = false; }}
       >
         {[0, 1].map((copy) => (
-          <div key={copy} className="flex shrink-0 gap-5 sm:gap-6" aria-hidden={copy === 1 ? 'true' : undefined}>
+          <div key={copy} className="flex shrink-0 gap-5 sm:gap-6" aria-hidden={copy === 1 ? 'true' : undefined} inert={copy === 1}>
             {items.map((item, index) => (
               <TechToolCard key={`${item.id || item.name}-${copy}-${index}`} item={item} index={index} onDetails={onDetails} />
             ))}
