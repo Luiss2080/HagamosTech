@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { AlarmClock, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
+import { AlarmClock, ArrowRight, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
 import useAuthStore from '../../store/useAutenticacionStore';
 import apiClient from '../../servicios/clienteApi';
 import FondoTech from '../../components/fondos/FondoTech';
