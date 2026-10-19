@@ -20,8 +20,8 @@ const TECH_DETAILS = {
 const PROJECTS = [
   {"num":"01","category":"BRANDING","firstPart":"Marca","highlightPart":"y Branding","desc":"Identidad visual para nuevos negocios: logos, colores y personalidad de marca.","tags":["Branding","Logo","Identidad"],"icon":"fa-lightbulb","image":"/img/08_Cards/proyecto-negocio-branding.webp"},
   {"num":"02","category":"IDENTIDAD","firstPart":"Manual de","highlightPart":"Identidad","desc":"Paletas de color, tipografías y reglas de uso en proporciones 4x4.","tags":["Manual","Paletas","Tipografía"],"icon":"fa-book-open-reader","image":"/img/08_Cards/proyecto-negocio-manual.webp"},
-  {"num":"03","category":"DIGITALIZACIÓN","firstPart":"Menús QR","highlightPart":"y Catálogos","desc":"Digitalización ágil de tu oferta: menús QR y catálogos de productos.","tags":["QR","Catálogo","Digital"],"icon":"fa-qrcode","image":"/img/08_Cards/proyecto-negocio-catalogo.webp"},
-  {"num":"04","category":"VENTAS","firstPart":"Campañas","highlightPart":"y WhatsApp","desc":"Publicidad de ofertas y gestión de clientes inicial con WhatsApp Business.","tags":["Campañas","WhatsApp","Clientes"],"icon":"fa-bullhorn","image":"/img/08_Cards/proyecto-negocio-campana.webp"}
+  {"num":"03","category":"CATÁLOGOS DIGITALES","firstPart":"Catálogos","highlightPart":"para tu negocio","desc":"Presentación digital de productos o servicios, organizada según la información disponible.","tags":["Catálogo","Productos","Servicios"],"icon":"fa-book-open","image":"/img/08_Cards/proyecto-negocio-catalogo.webp"},
+  {"num":"04","category":"DIFUSIÓN","firstPart":"Campañas","highlightPart":"y promociones","desc":"Piezas gráficas para comunicar ofertas, promociones y fechas especiales.","tags":["Campañas","Promociones","Diseño"],"icon":"fa-bullhorn","image":"/img/08_Cards/proyecto-negocio-campana.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {

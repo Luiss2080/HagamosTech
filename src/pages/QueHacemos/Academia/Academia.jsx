@@ -78,7 +78,7 @@ const CompilerWindow = () => {
 const ESPECIALIDADES = [
   {
     title: 'Apoyo por materia',
-    desc: 'Orientación académica según la materia, el nivel y la disponibilidad para acompañamiento.',
+    desc: 'Mentorías y orientación en tareas, informes, monografías y proyectos socioformativos, según nivel, materia y disponibilidad. El estudiante realiza su propio trabajo.',
     icon: <Stethoscope size={20} />,
     image: '/img/08_Cards/academico-mentorias.webp'
   },

@@ -89,7 +89,7 @@ const Negocios = () => {
               Soluciones <span className="text-[#A3E635]">Integrales</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Podemos evaluar los componentes que necesitás y acordar cuáles forman parte del proyecto.
+              Desde acompañamiento académico y diseño gráfico hasta páginas web y software: revisamos cada solicitud y conversamos alcance, etapas y alternativas.
             </p>
           </div>
 

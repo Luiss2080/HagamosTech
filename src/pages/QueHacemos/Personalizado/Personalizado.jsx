@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
-import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
+import { Lightbulb, Code, ArrowRight, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
@@ -198,7 +198,7 @@ const Personalizado = () => {
           </div>
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
-            Desarrollamos <br/>
+            Soluciones digitales <br/>
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">para lo que necesitás</span>
           </h1>
           
@@ -232,7 +232,7 @@ const Personalizado = () => {
               Soluciones <span className="text-[#A3E635]">a medida</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Revisamos tu necesidad y proponemos un alcance viable que podamos conversar y ajustar a tus posibilidades.
+              Evaluamos herramientas internas, paneles, bases de datos y aplicaciones web o móviles según la necesidad, el alcance y la viabilidad.
             </p>
           </div>
 
@@ -262,6 +262,12 @@ const Personalizado = () => {
 
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
+        <div className="container mx-auto max-w-4xl px-6 text-center">
+          <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
+            Ideas de <span className="text-[#A3E635]">proyectos</span>
+          </h2>
+          <p className="mt-4 text-slate-400">Son ejemplos orientativos, no testimonios ni resultados de clientes.</p>
+        </div>
         <TestimonialCarousel testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80',
