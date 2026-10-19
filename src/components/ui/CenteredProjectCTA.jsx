@@ -9,15 +9,19 @@ const CenteredProjectCTA = ({
   href = 'https://wa.me/59161320004',
   eyebrow = 'HAGAMOSTECH · CONVERSEMOS',
   chips = [],
-}) => (
-  <section className="relative z-10 overflow-hidden px-5 py-10 sm:px-6 sm:py-14">
-    <FondoTech />
-    <div className="group/cta relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/40 bg-gradient-to-br from-[#B8F34D] via-[#A3E635] to-[#8FD322] px-6 py-8 text-[#101407] shadow-[0_18px_65px_rgba(163,230,53,.2)] transition-shadow duration-300 hover:shadow-[0_24px_80px_rgba(163,230,53,.3)] sm:rounded-[2.5rem] sm:px-10 sm:py-10 lg:px-14">
+  image,
+  imageAlt = 'Vista representativa de una solución digital',
+  embedded = false,
+}) => {
+  const SectionWrapper = embedded ? 'div' : 'section';
+
+  return (
+  <SectionWrapper className={`${embedded ? 'mt-10 sm:mt-12' : 'relative z-10 overflow-hidden px-5 py-10 sm:px-6 sm:py-14'}`}>
+    {!embedded && <FondoTech />}
+    <div className="group/cta relative mx-auto grid max-w-6xl items-center gap-6 overflow-hidden rounded-[2rem] border border-white/40 bg-gradient-to-br from-[#B8F34D] via-[#A3E635] to-[#8FD322] px-6 py-7 text-[#101407] shadow-[0_18px_65px_rgba(163,230,53,.2)] transition-shadow duration-300 hover:shadow-[0_24px_80px_rgba(163,230,53,.3)] sm:gap-8 sm:rounded-[2.5rem] sm:px-10 sm:py-9 lg:grid-cols-[1.1fr_.9fr] lg:px-12">
       <div aria-hidden="true" className="pointer-events-none absolute inset-0 opacity-25 [background-image:linear-gradient(rgba(16,20,7,.12)_1px,transparent_1px),linear-gradient(90deg,rgba(16,20,7,.12)_1px,transparent_1px)] [background-size:34px_34px]" />
       <div aria-hidden="true" className="pointer-events-none absolute -right-16 -top-28 h-64 w-64 rounded-full border border-black/10 transition-transform duration-700 group-hover/cta:translate-x-3 group-hover/cta:translate-y-3 sm:h-80 sm:w-80" />
-      <div aria-hidden="true" className="pointer-events-none absolute -right-5 -top-16 h-48 w-48 rounded-full border border-black/10 sm:h-64 sm:w-64" />
-      <div className="relative z-10 grid items-center gap-6 lg:grid-cols-[1fr_auto] lg:gap-10">
-        <div className="max-w-3xl">
+      <div className="relative z-10 max-w-3xl">
           <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-black/15 bg-black/[0.06] px-3 py-1.5 text-[9px] font-black uppercase tracking-[.19em] text-black/70 sm:mb-4 sm:text-[10px]">
             <Sparkles size={13} aria-hidden="true" />{eyebrow}
           </span>
@@ -30,16 +34,22 @@ const CenteredProjectCTA = ({
               ))}
             </ul>
           )}
-        </div>
-        <a href={href} target="_blank" rel="noopener noreferrer" className="group/btn inline-flex min-h-14 items-center justify-center gap-4 self-center rounded-full bg-[#090B06] px-6 py-3 text-[10px] font-black uppercase tracking-[.12em] text-[#B7F34D] shadow-[0_12px_30px_rgba(0,0,0,.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#171C0D] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-black sm:min-h-16 sm:px-8 sm:text-xs">
+          <a href={href} target="_blank" rel="noopener noreferrer" className="group/btn mt-5 inline-flex min-h-14 items-center justify-center gap-4 rounded-full bg-[#090B06] px-6 py-3 text-[10px] font-black uppercase tracking-[.12em] text-[#B7F34D] shadow-[0_12px_30px_rgba(0,0,0,.22)] transition-all duration-300 hover:-translate-y-1 hover:bg-[#171C0D] focus-visible:outline focus-visible:outline-4 focus-visible:outline-offset-4 focus-visible:outline-black sm:min-h-16 sm:px-8 sm:text-xs">
           <span>{buttonLabel}</span>
           <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#A3E635]/15 transition-transform group-hover/btn:translate-x-1 sm:h-10 sm:w-10">
             <ArrowRight size={18} aria-hidden="true" />
           </span>
         </a>
       </div>
+      {image && (
+        <div className="relative z-10 h-48 overflow-hidden rounded-[1.5rem] border border-black/15 bg-[#26320F] shadow-[0_14px_32px_rgba(0,0,0,.18)] sm:h-56 lg:h-full lg:min-h-64">
+          <img src={image} alt={imageAlt} loading="lazy" decoding="async" className="h-full w-full object-cover transition-transform duration-700 group-hover/cta:scale-[1.03]" />
+          <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-black/5" />
+        </div>
+      )}
     </div>
-  </section>
-);
+  </SectionWrapper>
+  );
+};
 
 export default CenteredProjectCTA;

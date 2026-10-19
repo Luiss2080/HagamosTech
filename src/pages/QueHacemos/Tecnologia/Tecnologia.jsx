@@ -4,11 +4,10 @@ import { Terminal, Code, Cpu, Database, Zap, ArrowRight, ShieldCheck, Server, Ch
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import { Link } from 'react-router-dom';
-import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ToolsMarquee from '../../../components/ui/ToolsMarquee';
 import FeatureTimeline from '../../../components/ui/FeatureTimeline';
-import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
@@ -170,12 +169,17 @@ const Tecnologia = () => {
         <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
       </FeatureTimeline>
 
-      <section className="py-20 relative z-10">
-        <FondoTech />
-          <TestimonialCarousel title="Soluciones tecnológicas para cada necesidad" description="Exploramos ejemplos de desarrollo web, software y herramientas digitales. Los requisitos, el alcance y la viabilidad se revisan en cada proyecto." testimonials={TESTIMONIOS} />
-      </section>
-
-      <CenteredProjectCTA title="Tu próxima solución digital empieza con una conversación." description="Contanos qué necesitás. Revisamos alternativas, alcance y condiciones para tu proyecto." />
+      <TestimonialCTASection
+        testimonialTitle="Soluciones tecnológicas para cada necesidad"
+        testimonialDescription="Exploramos ejemplos de desarrollo web, software y herramientas digitales. Los requisitos, el alcance y la viabilidad se revisan en cada proyecto."
+        testimonials={TESTIMONIOS}
+        cta={{
+          title: 'Tu próxima solución digital empieza con una conversación.',
+          description: 'Contanos qué necesitás. Revisamos alternativas, alcance y condiciones para tu proyecto.',
+          image: '/img/08_Cards/tecnologia-web.webp',
+          imageAlt: 'Ejemplo visual de desarrollo de un sitio web',
+        }}
+      />
 
     </div>
   );

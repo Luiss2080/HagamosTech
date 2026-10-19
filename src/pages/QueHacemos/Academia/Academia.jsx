@@ -3,11 +3,10 @@ import FondoTech from '../../../components/fondos/FondoTech';
 import { BookOpen, Stethoscope, Laptop, Microscope, ArrowRight, CheckCircle2, Award, GraduationCap, ChevronRight, Binary, LineChart } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ToolsMarquee from '../../../components/ui/ToolsMarquee';
 import FeatureTimeline from '../../../components/ui/FeatureTimeline';
-import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const ACADEMIC_TOOLS = [
   { name: 'SPSS', icon: 'fa-solid fa-chart-pie', color: 'text-blue-500' },
@@ -188,19 +187,27 @@ const Academia = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 relative z-10">
-        <FondoTech />
-          <TestimonialCarousel title="Ejemplos de acompañamiento académico" description="Situaciones orientativas para conversar sobre materia, consigna y modalidad. No representan testimonios ni resultados de clientes." testimonials={TESTIMONIOS.map((t, idx) => {
+      <TestimonialCTASection
+        testimonialTitle="Ejemplos de acompañamiento académico"
+        testimonialDescription="Situaciones orientativas para conversar sobre materia, consigna y modalidad. No representan testimonios ni resultados de clientes."
+        testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80'
           ];
           return { ...t, image: photos[idx % photos.length] };
-        })} />
-      </section>
-
-      <CenteredProjectCTA title="Avancemos con tu proyecto académico." description="Contanos la materia o consigna. Revisamos una modalidad de orientación adecuada y disponible." buttonLabel="Consultar acompañamiento" href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20por%20acompañamiento%20académico" eyebrow="ACOMPAÑAMIENTO ACADÉMICO" />
+        })}
+        cta={{
+          title: 'Avancemos con tu proyecto académico.',
+          description: 'Contanos la materia o consigna. Revisamos una modalidad de orientación adecuada y disponible.',
+          buttonLabel: 'Consultar acompañamiento',
+          href: 'https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20por%20acompañamiento%20académico',
+          eyebrow: 'ACOMPAÑAMIENTO ACADÉMICO',
+          image: '/img/08_Cards/academico-mentorias.webp',
+          imageAlt: 'Sesión de orientación académica',
+        }}
+      />
 
     </div>
   );

@@ -6,11 +6,10 @@ import {
 } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
-import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const SOLUCIONES = [
   { title: 'Sitios, plataformas y tiendas online', desc: 'Sitios corporativos, portales educativos e institucionales, landing pages, catálogos, blogs, cursos, reservas, comunidades y tiendas con pedidos. Funciones y pagos se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
@@ -128,28 +127,27 @@ const Negocios = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="relative z-10 overflow-hidden px-6 py-20 sm:py-24">
-        <FondoTech />
-        <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-[min(900px,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A3E635]/[0.06] blur-[100px]" />
-        <div className="relative mx-auto max-w-7xl">
-          <TestimonialCarousel title="Ideas de soluciones para empezar" description="Puntos de partida para adaptar cada propuesta al objetivo, las funciones y las posibilidades del proyecto. No son testimonios de clientes." testimonials={TESTIMONIOS.map((t, idx) => {
+      <TestimonialCTASection
+        testimonialTitle="Ideas de soluciones para empezar"
+        testimonialDescription="Puntos de partida para adaptar cada propuesta al objetivo, las funciones y las posibilidades del proyecto. No son testimonios de clientes."
+        testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80'
           ];
           return { ...t, image: photos[idx % photos.length] };
-          })} />
-        </div>
-      </section>
-
-      <CenteredProjectCTA
-        title={<>¿Qué necesitás <span className="text-[#A3E635]">resolver?</span></>}
-        description="Contanos tu objetivo. Revisamos alternativas de desarrollo, diseño o acompañamiento y conversamos alcance, etapas y presupuesto de acuerdo con tu situación."
-        buttonLabel="Consultar proyecto"
-        href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto"
-        eyebrow="HABLEMOS DE TU IDEA"
-        chips={['Desarrollo web', 'Software a medida', 'Diseño gráfico', 'Apoyo académico']}
+        })}
+        cta={{
+          title: <>¿Qué necesitás <span>resolver?</span></>,
+          description: 'Contanos tu objetivo. Revisamos alternativas de desarrollo, diseño o acompañamiento y conversamos alcance, etapas y presupuesto de acuerdo con tu situación.',
+          buttonLabel: 'Consultar proyecto',
+          href: 'https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto',
+          eyebrow: 'HABLEMOS DE TU IDEA',
+          chips: ['Desarrollo web', 'Software a medida', 'Diseño gráfico', 'Apoyo académico'],
+          image: '/img/08_Cards/negocios-web.webp',
+          imageAlt: 'Tienda en línea vista desde una computadora',
+        }}
       />
 
     </div>

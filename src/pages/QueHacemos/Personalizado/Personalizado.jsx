@@ -4,10 +4,9 @@ import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, ArrowRight, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
-import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import ToolsMarquee from '../../../components/ui/ToolsMarquee';
-import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
@@ -263,19 +262,27 @@ const Personalizado = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-20 relative z-10">
-        <FondoTech />
-          <TestimonialCarousel title="Ideas de proyectos a medida" description="Ejemplos orientativos para definir objetivos, funciones y alcance. No representan testimonios ni resultados de clientes." testimonials={TESTIMONIOS.map((t, idx) => {
+      <TestimonialCTASection
+        testimonialTitle="Ideas de proyectos a medida"
+        testimonialDescription="Ejemplos orientativos para definir objetivos, funciones y alcance. No representan testimonios ni resultados de clientes."
+        testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=150&h=150&q=80'
           ];
           return { ...t, image: photos[idx % photos.length] };
-        })} />
-      </section>
-
-      <CenteredProjectCTA title="Conversemos sobre una solución a tu medida." description="Revisamos el objetivo, las funciones y el alcance para explorar una propuesta ajustada a tus posibilidades." buttonLabel="Hablar del proyecto" href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20una%20solución%20a%20medida" eyebrow="SOLUCIONES PERSONALIZADAS" />
+        })}
+        cta={{
+          title: 'Conversemos sobre una solución a tu medida.',
+          description: 'Revisamos el objetivo, las funciones y el alcance para explorar una propuesta ajustada a tus posibilidades.',
+          buttonLabel: 'Hablar del proyecto',
+          href: 'https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20una%20solución%20a%20medida',
+          eyebrow: 'SOLUCIONES PERSONALIZADAS',
+          image: '/img/08_Cards/proyecto-personalizado-app-web.webp',
+          imageAlt: 'Interfaz de una aplicación web a medida',
+        }}
+      />
 
     </div>
   );
