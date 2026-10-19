@@ -6,29 +6,8 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
-import ToolsMarquee from '../../../components/ui/ToolsMarquee';
-
-const TECH_STACK = [
-  { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
-  { name: 'JavaScript', icon: 'fa-brands fa-js', color: 'text-yellow-400' },
-  { name: 'TypeScript', icon: 'fa-solid fa-code', color: 'text-blue-400' },
-  { name: 'Vite', icon: 'fa-solid fa-bolt', color: 'text-violet-400' },
-  { name: 'HTML5', icon: 'fa-brands fa-html5', color: 'text-orange-400' },
-  { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: 'text-blue-400' },
-  { name: 'Tailwind CSS', icon: 'fa-solid fa-wind', color: 'text-cyan-300' },
-  { name: 'Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
-  { name: 'Express', icon: 'fa-solid fa-route', color: 'text-slate-300' },
-  { name: 'PostgreSQL', icon: 'fa-solid fa-database', color: 'text-blue-300' },
-  { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' },
-  { name: 'MySQL', icon: 'fa-solid fa-database', color: 'text-indigo-400' },
-  { name: 'Prisma', icon: 'fa-solid fa-diagram-project', color: 'text-teal-300' },
-  { name: 'Zustand', icon: 'fa-solid fa-cubes', color: 'text-amber-300' },
-  { name: 'REST API', icon: 'fa-solid fa-plug', color: 'text-emerald-300' },
-  { name: 'Git', icon: 'fa-brands fa-git-alt', color: 'text-orange-400' },
-  { name: 'GitHub', icon: 'fa-brands fa-github', color: 'text-white' },
-  { name: 'Chart.js', icon: 'fa-solid fa-chart-line', color: 'text-pink-300' },
-  { name: 'Vitest', icon: 'fa-solid fa-vial', color: 'text-lime-300' }
-];
+import TechToolsCarousel from '../../../components/ui/TechToolsCarousel';
+import { HERRAMIENTAS_DESARROLLO } from '../../../data/herramientasCarruselData';
 
 const TESTIMONIOS = [
   { name: 'Panel de gestión', role: 'Ejemplo orientativo', text: 'Necesito organizar información y consultar los datos que son importantes para mi proyecto.' },
@@ -221,7 +200,7 @@ const Personalizado = () => {
       <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
         <div className="relative z-10">
-          <ToolsMarquee items={TECH_STACK} label="Tecnologías para soluciones a medida" description="Cada recurso se considera según los requisitos, la viabilidad y el alcance acordado." />
+          <TechToolsCarousel items={HERRAMIENTAS_DESARROLLO} label="Tecnologías y herramientas" description="Conocé recursos que pueden evaluarse para las funciones y el alcance de tu solución." />
         </div>
       </section>
 
