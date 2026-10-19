@@ -26,7 +26,7 @@ const recursosData = [
         ]
     },
     {
-        title: "Atención y Soporte",
+        title: "Consultas sobre servicios",
         desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
         icon: "fa-headset",
         theme: {
@@ -45,12 +45,12 @@ const recursosData = [
         tags: [
             { label: "Tecnología", icon: "fa-microchip" },
             { label: "Academia", icon: "fa-graduation-cap" },
-            { label: "Soporte", icon: "fa-circle-question" }
+            { label: "Orientación", icon: "fa-circle-question" }
         ]
     },
     {
-        title: "Soluciones Rápidas",
-        desc: "Desde una página web hasta un sistema digital evaluado según las necesidades de tu negocio.",
+        title: "Soluciones según alcance",
+        desc: "Desde páginas web y diseño gráfico hasta sistemas digitales, revisamos cada solicitud según sus requisitos y viabilidad.",
         icon: "fa-bolt",
         theme: {
             cardBg: "bg-[#171717]",

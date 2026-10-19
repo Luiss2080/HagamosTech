@@ -22,7 +22,7 @@ const SobreNosotrosPagina = () => {
                     highlight="HagamosTech"
                     description={(
                         <>
-                            <strong>HagamosTech</strong> es una iniciativa de soluciones digitales, tecnológicas, académicas y empresariales. Trabajamos con <strong>cualquier tipo de cliente</strong> para resolver <strong>cualquier tipo de necesidad</strong> mediante tecnología, creatividad y conocimiento.
+                            <strong>HagamosTech</strong> ofrece acompañamiento académico, diseño gráfico y desarrollo web y de software para personas, profesionales, emprendimientos, empresas e instituciones. Cada solicitud se revisa según el servicio, el alcance y la viabilidad.
                         </>
                     )}
                 />

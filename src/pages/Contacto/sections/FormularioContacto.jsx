@@ -158,7 +158,7 @@ const FormularioContacto = () => {
                                             <i className="fas fa-clock text-[11px]"></i>
                                         </div>
                                         <p className="text-[10px] font-black uppercase tracking-widest text-white/50">Atención</p>
-                                        <p className="text-[13px] font-extrabold text-white">Rápida</p>
+                                        <p className="text-[13px] font-extrabold text-white">A coordinar</p>
                                     </div>
                                 </div>
 

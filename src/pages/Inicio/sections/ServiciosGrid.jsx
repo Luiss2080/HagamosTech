@@ -36,7 +36,7 @@ const ServiciosGrid = () => {
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-                        Desarrollamos sitios web, sistemas y recursos de diseño, y brindamos acompañamiento académico. Alcance, tiempos y modalidad se conversan para cada caso.
+                        Ofrecemos acompañamiento académico, diseño gráfico, desarrollo web y software a medida. Alcance, tiempos, presupuesto y modalidad se conversan para cada caso.
                     </p>
                 </div>
 

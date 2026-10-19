@@ -22,7 +22,7 @@ const PROCESO = [
   {"title":"Diagnóstico","desc":"Analizamos tu propuesta, público y mercado para definir la estrategia de marca y de venta.","image":"/img/08_Cards/proceso-negocio-diagnostico.webp"},
   {"title":"Identidad","desc":"Creamos branding, manual de identidad y catálogo inicial alineado a tu negocio.","image":"/img/08_Cards/proceso-negocio-identidad.webp"},
   {"title":"Publicidad","desc":"Diseñamos campañas de promociones, ofertas y fechas especiales listas para publicar.","image":"/img/08_Cards/proceso-negocio-campana.webp"},
-  {"title":"Lanzamiento","desc":"Configuramos menús QR, WhatsApp Business y las herramientas para vender desde el día uno.","image":"/img/08_Cards/proceso-negocio-lanzamiento.webp"}
+  {"title":"Presentación del negocio","desc":"Organizamos la identidad visual, el catálogo y las piezas gráficas según los materiales acordados.","image":"/img/08_Cards/proceso-negocio-lanzamiento.webp"}
 ];
 
 const TESTIMONIOS = [
@@ -36,7 +36,7 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-lightbulb","label":"Identidad Rápida"},
+  {"icon":"fa-lightbulb","label":"Identidad visual"},
   {"icon":"fa-qrcode","label":"Catálogos QR"},
   {"icon":"fa-bullhorn","label":"Campañas Listas"},
   {"icon":"fa-message","label":"WhatsApp Configurado"}
