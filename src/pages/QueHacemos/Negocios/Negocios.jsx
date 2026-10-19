@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Store, ShoppingCart, TrendingUp, BarChart, ArrowRight, 
   CheckCircle2, Globe, Cpu, Users, Zap, ShieldCheck 
@@ -8,39 +8,7 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
-
-const PLANNING_OPTIONS = [
-  { title: 'Alcance', subtitle: 'Qué necesitás resolver', icon: <Globe size={19} />, description: 'Aterrizamos el objetivo y las personas que usarán la solución para entender qué conviene incluir.', details: ['Objetivo del proyecto', 'Contenido y funciones', 'Personas usuarias'] },
-  { title: 'Etapas', subtitle: 'Cómo organizar el trabajo', icon: <TrendingUp size={19} />, description: 'Ordenamos el trabajo en entregables que tengan sentido para el proyecto y para tu disponibilidad.', details: ['Prioridades iniciales', 'Entregas parciales', 'Revisiones coordinadas'] },
-  { title: 'Requisitos', subtitle: 'Qué revisar antes de iniciar', icon: <ShieldCheck size={19} />, description: 'Revisamos los recursos y condiciones que pueden influir en la propuesta antes de confirmar su alcance.', details: ['Material disponible', 'Integraciones necesarias', 'Condiciones y presupuesto'] },
-];
-
-const ProjectPlanningSelector = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const selected = PLANNING_OPTIONS[activeIndex];
-
-  return (
-    <section className="relative mx-auto mt-14 w-full max-w-5xl rounded-[2rem] border border-[#A3E635]/25 bg-[#070907]/95 p-5 text-left shadow-[0_0_55px_rgba(163,230,53,.1)] sm:mt-16 sm:p-8" aria-label="Cómo definimos cada proyecto">
-      <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#A3E635]/80 to-transparent" />
-      <div className="mb-6 flex flex-col gap-2 text-center sm:mb-7">
-        <span className="text-[9px] font-black uppercase tracking-[.2em] text-[#A3E635]">Cada proyecto se conversa</span>
-        <h2 className="text-xl font-black text-white sm:text-2xl">¿Qué definimos juntos?</h2>
-      </div>
-      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3" role="tablist" aria-label="Aspectos del proyecto">
-        {PLANNING_OPTIONS.map((option, index) => (
-          <button key={option.title} type="button" role="tab" id={`planning-tab-${index}`} aria-selected={activeIndex === index} aria-controls="planning-panel" onClick={() => setActiveIndex(index)} className={`group flex min-h-20 items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635] ${activeIndex === index ? 'border-[#A3E635]/70 bg-[#A3E635] text-[#080A06] shadow-[0_12px_30px_rgba(163,230,53,.16)]' : 'border-white/10 bg-white/[.035] text-white hover:border-[#A3E635]/45 hover:bg-[#A3E635]/[.07]'}`}>
-            <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${activeIndex === index ? 'bg-black/10 text-black' : 'bg-[#A3E635]/10 text-[#A3E635]'}`}>{option.icon}</span>
-            <span><span className="block text-sm font-black">{option.title}</span><span className={`mt-1 block text-[10px] font-semibold ${activeIndex === index ? 'text-black/65' : 'text-slate-400'}`}>{option.subtitle}</span></span>
-          </button>
-        ))}
-      </div>
-      <div id="planning-panel" role="tabpanel" aria-labelledby={`planning-tab-${activeIndex}`} className="mt-4 grid gap-5 rounded-2xl border border-white/[.08] bg-[#10120E] p-5 sm:grid-cols-[1fr_auto] sm:items-center sm:p-6">
-        <div><h3 className="mb-2 text-lg font-black text-white">{selected.title}</h3><p className="max-w-2xl text-sm leading-relaxed text-slate-300">{selected.description}</p></div>
-        <ul className="flex flex-wrap gap-2 sm:max-w-[360px] sm:justify-end">{selected.details.map((detail) => <li key={detail} className="rounded-full border border-[#A3E635]/20 bg-[#A3E635]/[.07] px-3 py-2 text-[10px] font-bold text-[#D7F7A8]">{detail}</li>)}</ul>
-      </div>
-    </section>
-  );
-};
+import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
 
 const SOLUCIONES = [
   { title: 'Sitios web y catálogos', desc: 'Presencia digital para empresas, profesionales y emprendimientos.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
