@@ -240,7 +240,7 @@ const Header = () => {
 
                 <div className="mx-auto max-w-[1280px] px-4 lg:px-6 relative z-10">
                         <div
-                            className={`h-[60px] flex items-center transition-all duration-300 lg:h-[70px] xl:justify-center xl:gap-2.5`}
+                            className={`h-[60px] flex items-center justify-between transition-all duration-300 gap-2 lg:h-[70px] xl:gap-2.5`}
                             id="header-container"
                         >
                         <Link
@@ -257,7 +257,7 @@ const Header = () => {
                             <img
                                 src="/img/02_Logos/LogoHeader.png"
                                 alt="Logo HagamosTech"
-                                className="h-[54px] lg:h-[64px] w-auto object-contain transition-all duration-300 group-hover:scale-[1.03] select-none"
+                                className="h-[54px] lg:h-[64px] w-auto max-w-[168px] object-contain transition-all duration-300 group-hover:scale-[1.03] select-none"
                             />
                         </Link>
 
@@ -298,7 +298,7 @@ const Header = () => {
                                     item.type === 'dropdown' ? (
                                         <div key={item.id} className="nav-item-container h-full flex items-center group">
                                             <button
-                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
+                                                className="text-[11px] xl:text-[10px] 2xl:text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 flex items-center gap-1.5 cursor-pointer px-3 xl:px-2 2xl:px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105"
                                             >
                                                 <span>{item.label}</span>
                                                 <i className="fas fa-chevron-down text-[8px] transition-transform duration-300 group-hover:rotate-180"></i>
@@ -329,7 +329,7 @@ const Header = () => {
                                         <div key={item.id} className="nav-item-container h-full flex items-center">
                                             <button
                                                 onClick={() => handleNavItemClick(item)}
-                                                className="text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
+                                                className="text-[11px] xl:text-[10px] 2xl:text-[11px] font-black uppercase tracking-wider text-white/80 hover:text-[#A3E635] dark:hover:text-[#A3E635] transition-all duration-300 px-3 xl:px-2 2xl:px-3 py-1.5 h-[32px] rounded-full hover:bg-[#A3E635]/10 dark:hover:bg-[#A3E635]/10 hover:-translate-y-0.5 hover:scale-105 cursor-pointer"
                                             >
                                                 {item.label}
                                             </button>
