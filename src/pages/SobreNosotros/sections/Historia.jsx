@@ -1,7 +1,10 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import FondoTech from '../../../components/fondos/FondoTech';
 
 const ProcesoTrabajo = () => {
+    const { pathname } = useLocation();
+    const isStandaloneView = pathname === '/sobre-nosotros/historia';
     const steps = [
         {
             num: "1",
@@ -38,7 +41,7 @@ const ProcesoTrabajo = () => {
     ];
 
     return (
-        <section id="origen" className="pt-16 pb-12 relative overflow-hidden reveal scroll-mt-24 bg-[#050505] text-white border-t border-white/5">
+        <section id="origen" className={`relative overflow-hidden reveal scroll-mt-24 bg-[#050505] text-white border-t border-white/5 ${isStandaloneView ? 'pt-28 pb-12 sm:pt-32' : 'pt-16 pb-12'}`}>
             <FondoTech />
 
             <div className="absolute left-[50%] top-0 bottom-0 w-px bg-white/10 hidden lg:block"></div>

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import FondoTech from '../../../components/fondos/FondoTech';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
@@ -36,6 +37,8 @@ const teamValues = [
 ];
 
 const Valores = () => {
+    const { pathname } = useLocation();
+    const isStandaloneView = pathname === '/sobre-nosotros/valores';
     const [currentCard, setCurrentCard] = useState(0);
     const [isSnapping, setIsSnapping] = useState(false);
     const cardRef = useRef(0);
@@ -60,7 +63,7 @@ const Valores = () => {
 
     return (
         <div id="valores" className="relative scroll-mt-24">
-            <section className="relative z-10 py-16 reveal bg-[#050505] text-white border-t border-white/5">
+            <section className={`relative z-10 reveal bg-[#050505] text-white border-t border-white/5 ${isStandaloneView ? 'pt-28 pb-16 sm:pt-32' : 'py-16'}`}>
                 <FondoTech />
                 <div className="container mx-auto px-6 max-w-screen-2xl relative z-20">
                     <div className="text-center mb-4">

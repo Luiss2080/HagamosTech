@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 import useModalStore from '../../../store/useModalStore';
 
@@ -46,6 +47,8 @@ const initialVideos = [
 ];
 
 const VideosTikTok = () => {
+    const { pathname } = useLocation();
+    const isStandaloneView = pathname === '/sobre-nosotros/videos';
     const openModal = useModalStore((state) => state.openModal);
     const [orderedVideos, setOrderedVideos] = useState(initialVideos);
     const [unmutedVideoId, setUnmutedVideoId] = useState(null);
@@ -84,7 +87,7 @@ const VideosTikTok = () => {
 
     return (
         <div className="relative">
-            <section className="relative z-10 py-16 overflow-hidden bg-[#050505] text-white border-t border-white/5">
+            <section className={`relative z-10 overflow-hidden bg-[#050505] text-white border-t border-white/5 ${isStandaloneView ? 'pt-28 pb-16 sm:pt-32' : 'py-16'}`}>
                 <CircuitBackground />
                 <style dangerouslySetInnerHTML={{__html: `
                     @keyframes spinLeftToRight {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import FondoTech from '../../../components/fondos/FondoTech';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 
@@ -22,6 +23,8 @@ const VALUES = [
 ];
 
 const MisionVision = ({ embedded = false }) => {
+  const { pathname } = useLocation();
+  const isStandaloneView = pathname === '/sobre-nosotros/mision-vision';
   const cards = (
     <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6">
       {VALUES.map((item) => (
@@ -55,7 +58,7 @@ const MisionVision = ({ embedded = false }) => {
   }
 
   return (
-    <section id="mision" className="relative isolate overflow-hidden px-6 py-14 text-white sm:py-16">
+    <section id="mision" className={`relative isolate overflow-hidden px-6 ${isStandaloneView ? 'pt-28 pb-14 sm:pt-32 sm:pb-16' : 'py-14 sm:py-16'} text-white`}>
       <FondoTech />
       <div className="relative z-10 mx-auto max-w-7xl">
         <header className="mx-auto mb-8 max-w-3xl text-center">

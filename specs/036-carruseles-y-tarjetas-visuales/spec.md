@@ -46,4 +46,4 @@ Unificar la presentación de tarjetas de servicios y etapas en las páginas púb
 - RF-12: `TestimonialCTASection.test.jsx` valida la imagen representativa y el botón junto al CTA; `CenteredProjectCTA.test.jsx` valida el panel verde compacto.
 - RF-13: `ComoTrabajamos.test.jsx` valida el título, la descripción y las cuatro etapas de la metodología.
 - RF-14: `GlobalBreadcrumb.test.jsx` valida la miga global, la ruta actual y la vista principal.
-- RF-15: `MisionVision.test.jsx` valida que la presentación y las tarjetas de misión y visión forman una sección integrada en Sobre Nosotros.
+- RF-15: `Nosotros.test.jsx` valida que la presentación y las tarjetas de misión y visión forman una sección integrada en Sobre Nosotros.

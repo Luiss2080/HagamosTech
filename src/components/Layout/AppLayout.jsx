@@ -15,7 +15,7 @@ const AppLayout = ({ children }) => {
     }, [fetchProfile]);
     
     return (
-        <BreadcrumbContext.Provider value>
+        <BreadcrumbContext.Provider value={true}>
         <div className="flex flex-col min-h-screen relative bg-slate-50">
             {/* Fondo tecnológico global: rejilla + nodos verde lima */}
             <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden bg-white">
