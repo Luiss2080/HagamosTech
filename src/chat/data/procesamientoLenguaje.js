@@ -58,14 +58,14 @@ export const BANCO_CONOCIMIENTO = [
   },
   {
     id: 'estudiantes',
-    keywords: ['estudiante', 'estudiantes', 'academico', 'universidad', 'colegio', 'escuela', 'docente', 'institucion', 'tesis', 'monografia', 'presentacion', 'powerpoint', 'diapositivas', 'apa', 'apa 7', 'infografia', 'diagrama', 'linea de tiempo', 'mapa conceptual', 'portada', 'simulador', 'simuladores', 'redes', 'robótica educativa', 'robotica', 'programacion', 'algoritmo', 'medicina', 'salud', 'enfermeria'],
+    keywords: ['estudiante', 'estudiantes', 'academico', 'universidad', 'colegio', 'escuela', 'docente', 'institucion', 'tesis', 'monografia', 'presentacion', 'powerpoint', 'diapositivas', 'apa', 'apa 7', 'infografia', 'diagrama', 'linea de tiempo', 'mapa conceptual', 'portada', 'simulador', 'simuladores', 'redes', 'programacion', 'algoritmo', 'medicina', 'salud', 'enfermeria'],
     answer:
       'Apoyamos a estudiantes, docentes e instituciones con:\n' +
       '• **Presentaciones PowerPoint e Interactivas** (defensas de tesis, ciencias de la salud).\n' +
       '• **Formato APA 7 y documentación técnica** (monografías, citas, corrección de estilo).\n' +
       '• **Infografías, diagramas y líneas de tiempo** (esquemas anatómicos, flujos de datos).\n' +
       '• **Mapas conceptuales y portadas académicas**.\n' +
-      '• **Simuladores educativos y proyectos de redes** (entornos virtuales, robótica educativa).\n' +
+      '• **Simuladores educativos y proyectos de redes**, según consigna y alcance.\n' +
       '• **Mentorías y apoyo en tareas** con ejercicios guiados.\n' +
       '• **Orientación en informes, monografías y proyectos socioformativos**.\n\n' +
       'El estudiante desarrolla y presenta su propio trabajo. La disponibilidad depende de la materia y el nivel; consultanos tu caso.'

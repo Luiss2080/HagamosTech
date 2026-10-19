@@ -17,7 +17,7 @@ const originalHighlights = [
         features: [
             { icon: 'fa-code', text: 'Código Limpio' },
             { icon: 'fa-screwdriver-wrench', text: 'Mantenimiento a coordinar' },
-            { icon: 'fa-paint-brush', text: 'Diseño Premium' },
+            { icon: 'fa-paint-brush', text: 'Diseño gráfico' },
             { icon: 'fa-cloud', text: 'Alcance según proyecto' }
         ]
     },

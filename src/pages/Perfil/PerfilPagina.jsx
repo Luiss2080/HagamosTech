@@ -659,7 +659,7 @@ const PerfilPagina = () => {
                                             name="bio"
                                             value={formData.bio}
                                             onChange={handleChange}
-                                            placeholder="Ej. Estudiante apasionado por la robótica educativa y la inteligencia artificial"
+                                            placeholder="Ej. Estudiante interesado en desarrollo web y software"
                                             className="w-full pl-9 pr-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 text-slate-800 text-xs focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-slate-400/50"
                                         />
                                     </div>

@@ -213,13 +213,11 @@ const LoadingScreen = ({ onComplete }) => {
         {/* Descripción ampliada */}
         <div className="lc-card-in mb-6 px-2" style={{ animationDelay:'.16s' }}>
           <p className="text-[14px] font-bold text-slate-300 leading-relaxed">
-            Desarrollo a medida, robótica educativa y soluciones digitales con el
-            <span className="text-[#A3E635] font-black"> estándar más alto </span>
-            de calidad y soporte.
+            Acompañamiento académico, diseño y desarrollo digital según cada necesidad.
           </p>
           <div className="flex items-center justify-center gap-4 mt-3">
             <span className="flex items-center gap-1.5 text-[10px] font-black text-slate-400 uppercase tracking-wider">
-              <i className="fas fa-laptop-code text-[#A3E635] text-[9px]" /> Software Pro
+              <i className="fas fa-laptop-code text-[#A3E635] text-[9px]" /> Desarrollo digital
             </span>
             <span className="w-1 h-1 rounded-full bg-[#A3E635]/30" />
             <span className="flex items-center gap-1.5 text-[10px] font-black text-slate-400 uppercase tracking-wider">

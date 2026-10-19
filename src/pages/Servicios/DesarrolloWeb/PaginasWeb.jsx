@@ -94,7 +94,7 @@ const PaginasWeb = () => {
               
               <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-4xl font-black text-white dark:text-white leading-[1.1] tracking-tight uppercase">
 <span className="block">Desarrollo Web</span>
-<span className="block whitespace-nowrap">y E-commerce <span className="text-[#A3E635] relative inline-block z-10">premium.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
+<span className="block whitespace-nowrap">y tiendas <span className="text-[#A3E635] relative inline-block z-10">online.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg></span></span>
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
