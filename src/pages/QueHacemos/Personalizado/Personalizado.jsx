@@ -245,21 +245,19 @@ const Personalizado = () => {
       {/* TIMELINE SECTION */}
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
         <FondoTech />
-         <div className="container relative z-10 mx-auto max-w-5xl">
-          <div className="flex flex-col lg:flex-row gap-16 items-start">
-            <div className="w-full lg:w-1/3 sticky top-32">
-              <h2 className="text-3xl md:text-4xl font-black text-white uppercase tracking-tight mb-6">
-                El Proceso de <br/> <span className="text-[#A3E635]">Creación</span>
-              </h2>
-              <p className="text-slate-400 font-medium mb-8">
+         <div className="container relative z-10 mx-auto max-w-7xl">
+          <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
+            <span className="mb-3 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
+              <Puzzle size={13} aria-hidden="true" /> Proceso a medida
+            </span>
+            <h2 className="text-3xl font-black uppercase tracking-tight text-white sm:text-4xl md:text-5xl">
+              El proceso de <span className="text-[#A3E635]">creación</span>
+            </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm font-medium leading-relaxed text-slate-300 sm:text-base">
                 Conversamos sobre requisitos y alternativas antes de definir las etapas y entregables del desarrollo.
-              </p>
-            </div>
-
-            <div className="w-full lg:w-2/3">
-              <ProcessTimeline />
-            </div>
-          </div>
+            </p>
+          </header>
+          <ProcessTimeline />
         </div>
       </section>
 

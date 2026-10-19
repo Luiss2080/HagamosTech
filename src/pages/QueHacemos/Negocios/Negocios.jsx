@@ -103,25 +103,25 @@ const Negocios = () => {
       <section className="py-24 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
         <FondoTech />
         <div className="container relative z-10 mx-auto max-w-7xl">
-          <div className="mb-8 grid items-end gap-6 lg:mb-10 lg:grid-cols-[1fr_1fr]">
+          <header className="mx-auto mb-8 max-w-3xl text-center sm:mb-10">
             <div>
               <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#A3E635]" /> Así trabajamos
               </span>
-              <h2 className="text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl">
+              <h2 className="text-3xl font-black uppercase leading-tight tracking-tight text-white sm:text-4xl md:text-5xl">
                 Tu camino a la <span className="text-[#A3E635]">digitalización</span>
               </h2>
             </div>
-            <div className="lg:justify-self-end lg:max-w-xl">
+            <div className="mx-auto mt-3 max-w-2xl">
               <p className="text-sm font-medium leading-relaxed text-slate-300 sm:text-base">
                 Conversamos sobre tus prioridades y revisamos opciones que puedan ajustarse al alcance y a los recursos disponibles.
               </p>
-              <div className="mt-4 flex items-start gap-3 border-l-2 border-[#A3E635]/70 pl-4 text-sm leading-relaxed text-slate-400">
-                <ShieldCheck className="mt-0.5 shrink-0 text-[#A3E635]" size={18} aria-hidden="true" />
+              <div className="mx-auto mt-3 inline-flex max-w-full items-center justify-center gap-2 rounded-full border border-white/[.08] bg-black/25 px-3.5 py-2 text-xs leading-relaxed text-slate-400 sm:text-sm">
+                <ShieldCheck className="shrink-0 text-[#A3E635]" size={16} aria-hidden="true" />
                 <span>Entregables, etapas, tiempos, ajustes y modalidad de seguimiento se acuerdan en la propuesta.</span>
               </div>
             </div>
-          </div>
+          </header>
           <ProcessTimeline />
         </div>
       </section>
