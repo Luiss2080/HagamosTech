@@ -248,9 +248,9 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
         
         <div className="text-center mb-4 max-w-3xl mx-auto">
           <h2 className="text-4xl lg:text-5xl font-black text-white mb-6 leading-tight">
-            Últimas{' '}
+            Guías para{' '}
             <span className="relative inline-block px-2 text-[#A3E635]">
-              novedades y noticias
+              tu proyecto
               <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635]/60 opacity-80" viewBox="0 0 200 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
               </svg>

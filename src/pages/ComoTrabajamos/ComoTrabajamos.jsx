@@ -25,8 +25,8 @@ const STEPS = [
     accent: '03',
   },
   {
-    title: 'Desarrollamos y entregamos',
-    description: 'Trabajamos sobre lo acordado, coordinamos revisiones y compartimos los entregables.',
+    title: 'Avanzamos según lo acordado',
+    description: 'En desarrollo y diseño, trabajamos sobre los entregables definidos. En el acompañamiento académico, orientamos el proceso para que desarrolles tu propio trabajo.',
     icon: Code2,
     accent: '04',
   },
@@ -39,19 +39,21 @@ const ComoTrabajamos = () => (
     <div aria-hidden="true" className="pointer-events-none absolute inset-0 -z-0 bg-[linear-gradient(to_right,#8080800d_1px,transparent_1px),linear-gradient(to_bottom,#8080800d_1px,transparent_1px)] bg-[size:52px_52px]" />
 
     <section className="relative z-10 px-6 pb-16 pt-28 sm:pb-20 sm:pt-36">
-      <FondoTech hideWaves />
+      <FondoTech />
       <div className="relative z-10 mx-auto flex max-w-5xl flex-col items-center text-center">
         <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/[.08] px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">
           <Sparkles size={14} aria-hidden="true" /> Nuestra metodología
         </span>
         <h1 className="max-w-4xl text-4xl font-black uppercase leading-[1.03] tracking-[-.045em] text-white sm:text-6xl md:text-7xl">
-          De tu idea a una <span className="text-[#A3E635]">solución digital</span>
+          De tu necesidad a una <span className="text-[#A3E635]">propuesta clara</span>
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-sm font-medium leading-relaxed text-slate-300 sm:mt-6 sm:text-lg">
-          Conversamos sobre lo que necesitás, definimos un alcance posible y coordinamos cada etapa contigo.
+          Acompañamiento académico, diseño gráfico y desarrollo web y de software. Conversamos sobre tu necesidad, revisamos el alcance y coordinamos los siguientes pasos contigo.
         </p>
         <div className="mt-7 flex flex-wrap items-center justify-center gap-2.5 text-[10px] font-bold text-slate-300 sm:gap-3 sm:text-xs">
-          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><MessageCircle size={14} className="text-[#A3E635]" aria-hidden="true" /> Sin tecnicismos</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><MessageCircle size={14} className="text-[#A3E635]" aria-hidden="true" /> Academia</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><Sparkles size={14} className="text-[#A3E635]" aria-hidden="true" /> Diseño gráfico</span>
+          <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><Code2 size={14} className="text-[#A3E635]" aria-hidden="true" /> Desarrollo web y software</span>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><ShieldCheck size={14} className="text-[#A3E635]" aria-hidden="true" /> Alcance conversado</span>
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/[.04] px-3 py-2"><BadgeCheck size={14} className="text-[#A3E635]" aria-hidden="true" /> Etapas claras</span>
         </div>
@@ -113,7 +115,7 @@ const ComoTrabajamos = () => (
         buttonLabel="Conversemos"
         href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto"
         eyebrow="HAGAMOSTECH · CONVERSEMOS"
-        chips={['Desarrollo web', 'Software a medida', 'Diseño y tecnología']}
+          chips={['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida']}
         image="/img/08_Cards/metodo-desarrollamos.webp"
         imageAlt="Equipo revisando una solución digital en desarrollo"
       />

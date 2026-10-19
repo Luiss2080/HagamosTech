@@ -38,7 +38,7 @@ const HeroNovedades = () => {
             <PageHero
                 title="Novedades de"
                 highlight="HagamosTech."
-                description="Enterate de lo nuevo: lanzamientos, talleres, logros y avisos de nuestros servicios de tecnología. Siempre hay algo nuevo para aprender o implementar."
+                description="Encontrá guías breves sobre acompañamiento académico, diseño gráfico y desarrollo web y de software. Cada solicitud se revisa según su alcance y disponibilidad."
                 className="!pb-0"
             />
 
@@ -85,7 +85,7 @@ const HeroNovedades = () => {
                                         <span className="w-6 h-6 rounded-full bg-[#A3E635] flex items-center justify-center">
                                             <i className="fas fa-bullhorn text-[9px] text-white"></i>
                                         </span>
-                                        <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-300">Aviso Rápido</span>
+                                    <span className="text-[10px] font-black uppercase tracking-[0.2em] text-lime-300">Guía práctica</span>
                                     </div>
 
                                     <h2 className="text-2xl sm:text-3xl md:text-4xl font-black font-heading text-white leading-[1.15] drop-shadow-lg mb-3">

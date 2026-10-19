@@ -1,7 +1,7 @@
 import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
-const LOGROS = [
+const AREAS_TRABAJO = [
     { year: '01', icon: 'fa-globe', titulo: 'Desarrollo web', desc: 'Sitios y experiencias digitales sujetos a evaluación de contenidos, funciones y viabilidad.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', badge: 'bg-[#A3E635]', feats: [{ icon: 'fa-window-maximize', label: 'Sitios y portafolios', chip: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' }, { icon: 'fa-list-check', label: 'Alcance a acordar', chip: 'bg-white/5 text-white border-white/10' }] },
     { year: '02', icon: 'fa-code', titulo: 'Software a medida', desc: 'Sistemas, aplicaciones y bases de datos según requisitos y alcance acordados.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25', badge: 'bg-[#171717]', feats: [{ icon: 'fa-database', label: 'Datos y sistemas', chip: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25' }, { icon: 'fa-clipboard-list', label: 'Requisitos a revisar', chip: 'bg-white/5 text-white border-white/10' }] },
     { year: '03', icon: 'fa-graduation-cap', titulo: 'Acompañamiento académico', desc: 'Mentorías y orientación para que cada estudiante desarrolle su propio trabajo.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25', badge: 'bg-[#0A0A0A]', feats: [{ icon: 'fa-user-graduate', label: 'Según materia', chip: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25' }, { icon: 'fa-book-open', label: 'Avances propios', chip: 'bg-white/5 text-white border-white/10' }] },
@@ -37,7 +37,7 @@ const LogrosNovedades = () => {
                         <div className="hidden md:block absolute top-[22px] left-[10%] right-[10%] h-0.5 bg-gradient-to-r from-[#A3E635]/30 via-[#0A0A0A]/40 to-[#A3E635]/30"></div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                            {LOGROS.map((l, i) => (
+                            {AREAS_TRABAJO.map((l, i) => (
                                 <div key={i} className="relative group">
                                     {/* Nodo */}
                                     <div className="relative z-10 mb-3 flex justify-center">
@@ -57,10 +57,10 @@ const LogrosNovedades = () => {
                                         <div className="relative z-10">
                                             <div className="flex items-center justify-center gap-1.5 mb-2">
                                                 <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[9px] font-black tracking-widest ${l.soft}`}>
-                                                    <i className="fas fa-calendar-days mr-0.5"></i>{l.year}
+                                                    <i className="fas fa-hashtag mr-0.5"></i>{l.year}
                                                 </span>
                                                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#111111] text-white text-[9px] font-black tracking-widest border border-white/10">
-                                                    <i className="fas fa-medal mr-0.5"></i>Logro #{i + 1}
+                                                    <i className="fas fa-layer-group mr-0.5"></i>Área {l.year}
                                                 </span>
                                             </div>
                                             <h3 className="text-sm font-black font-heading text-white leading-tight mb-1.5">{l.titulo}</h3>

@@ -10,13 +10,13 @@ const getBreadcrumbsAndBadge = (pathname) => {
     return { paths: [{ label: 'Contacto' }], badgeText: 'Contacto Oficial HAGAMOSTECH', icon: 'fa-solid fa-headset' };
   }
   if (pathname.includes('/opiniones')) {
-    return { paths: [{ label: 'Opiniones' }], badgeText: 'Opiniones de Clientes HAGAMOSTECH', icon: 'fa-solid fa-comments' };
+    return { paths: [{ label: 'Ejemplos orientativos' }], badgeText: 'Ideas para tu proyecto', icon: 'fa-solid fa-comments' };
   }
   if (pathname.includes('/promociones')) {
-    return { paths: [{ label: 'Promociones' }], badgeText: 'Promociones Oficiales HAGAMOSTECH', icon: 'fa-solid fa-tags' };
+    return { paths: [{ label: 'Opciones de servicio' }], badgeText: 'Alternativas para tu proyecto', icon: 'fa-solid fa-tags' };
   }
   if (pathname.includes('/novedades')) {
-    return { paths: [{ label: 'Novedades' }], badgeText: 'Novedades Oficiales HAGAMOSTECH', icon: 'fa-solid fa-star' };
+    return { paths: [{ label: 'Guías y novedades' }], badgeText: 'Ideas para tus proyectos', icon: 'fa-solid fa-star' };
   }
   if (pathname.includes('/condiciones')) {
     return { paths: [{ label: 'Condiciones de Uso' }], badgeText: 'Condiciones Oficiales HAGAMOSTECH', icon: 'fa-solid fa-file-contract' };
