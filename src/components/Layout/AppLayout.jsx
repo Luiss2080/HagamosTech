@@ -4,6 +4,8 @@ import Footer from './Footer';
 import useAuthStore from '../../store/useAutenticacionStore';
 import ChatWhatsApp from '../Widgets/ChatWhatsApp';
 import ChatAssistant from '../../chat/AsistenteChat';
+import GlobalBreadcrumb from './GlobalBreadcrumb';
+import BreadcrumbContext from '../func/BreadcrumbContext';
 
 const AppLayout = ({ children }) => {
     const fetchProfile = useAuthStore((state) => state.fetchProfile);
@@ -13,6 +15,7 @@ const AppLayout = ({ children }) => {
     }, [fetchProfile]);
     
     return (
+        <BreadcrumbContext.Provider value>
         <div className="flex flex-col min-h-screen relative bg-slate-50">
             {/* Fondo tecnológico global: rejilla + nodos verde lima */}
             <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden bg-white">
@@ -21,6 +24,7 @@ const AppLayout = ({ children }) => {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-[#84CC16]/5 rounded-full blur-[100px] pointer-events-none"></div>
             </div>
             <Header />
+            <GlobalBreadcrumb />
             <main className="flex-grow relative z-10">
                 {children}
             </main>
@@ -30,6 +34,7 @@ const AppLayout = ({ children }) => {
             <ChatWhatsApp />
             <ChatAssistant />
         </div>
+        </BreadcrumbContext.Provider>
     );
 };
 

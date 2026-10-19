@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import BreadcrumbContext from './BreadcrumbContext';
 
 const getBreadcrumbsAndBadge = (pathname) => {
   if (pathname.includes('/sobre-nosotros')) {
@@ -43,6 +44,7 @@ const getBreadcrumbsAndBadge = (pathname) => {
 
 const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight, description, className = '', children }) => {
   const location = useLocation();
+  const globalBreadcrumb = useContext(BreadcrumbContext);
   const isCenter = align === 'center';
 
   const detected = !paths && !badgeText ? getBreadcrumbsAndBadge(location.pathname) : null;
@@ -107,7 +109,7 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
     return (
       <section className={`relative overflow-hidden pt-24 sm:pt-28 lg:pt-32 pb-10 sm:pb-12 ${className}`}>
         <div className="container mx-auto px-6 relative z-10 max-w-5xl text-center flex flex-col items-center">
-          {breadcrumbPill}
+          {!globalBreadcrumb && breadcrumbPill}
           {badgePill}
           {heroContent}
         </div>
@@ -117,7 +119,7 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
 
   return (
     <div className={`${className}`}>
-      {breadcrumbPill}
+      {!globalBreadcrumb && breadcrumbPill}
       {badgePill}
     </div>
   );
