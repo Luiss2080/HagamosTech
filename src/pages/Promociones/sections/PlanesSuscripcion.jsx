@@ -3,18 +3,17 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const MEMBRESIAS = [
     {
-        name: 'Soporte Esencial',
-        desc: 'Para mantener tu web al día',
-        priceMonthly: '250',
-        priceAnnual: '200',
-        badge: 'Básico',
+        name: 'Proyecto puntual',
+        desc: 'Para una necesidad con alcance definido',
+        priceMonthly: 'A conversar',
+        priceAnnual: 'A conversar',
+        badge: 'Según alcance',
         active: false,
         icon: 'fa-medal',
         benefits: [
-            'Soporte por WhatsApp',
-            'Actualizaciones de contenido',
-            'Monitoreo mensual',
-            'Backup semanal',
+            'Revisión de la necesidad',
+            'Entregables por acordar',
+            'Presupuesto según alcance',
         ],
         theme: {
             cardBg: 'bg-[#111827]',
@@ -30,19 +29,17 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Soporte Profesional',
-        desc: 'Ideal para negocios en crecimiento',
-        priceMonthly: '650',
-        priceAnnual: '520',
-        badge: 'Más Popular',
+        name: 'Desarrollo por etapas',
+        desc: 'Para proyectos que se pueden organizar por fases',
+        priceMonthly: 'A conversar',
+        priceAnnual: 'A conversar',
+        badge: 'Modalidad a acordar',
         active: true,
         icon: 'fa-crown',
         benefits: [
-            'Todo lo del plan Esencial',
-            'Hasta 8 h de cambios al mes',
-            'Optimización de rendimiento',
-            'Informe mensual',
-            'Prioridad de respuesta',
+            'Etapas y entregables conversados',
+            'Revisiones según propuesta',
+            'Presupuesto según alcance',
         ],
         theme: {
             cardBg: 'bg-[#171717]',
@@ -58,20 +55,17 @@ const MEMBRESIAS = [
         }
     },
     {
-        name: 'Soporte Empresa',
-        desc: 'Para operaciones críticas',
-        priceMonthly: '1200',
-        priceAnnual: '960',
-        badge: 'Premium',
+        name: 'Mejoras a un sistema',
+        desc: 'Para evaluar cambios en un producto existente',
+        priceMonthly: 'A conversar',
+        priceAnnual: 'A conversar',
+        badge: 'Sujeto a evaluación',
         active: false,
         icon: 'fa-gem',
         benefits: [
-            'Todo lo del plan Profesional',
-            'Bolsa de 30 h de desarrollo',
-            'Nuevas funcionalidades',
-            'SLA de respuesta 4 h',
-            'Asesoría estratégica',
-            'Dashboard a medida',
+            'Revisión previa del sistema',
+            'Mejoras posibles por acordar',
+            'Alcance y disponibilidad a revisar',
         ],
         theme: {
             cardBg: 'bg-[#0A0A0A]',
@@ -98,21 +92,21 @@ const PlanesSuscripcion = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#A3E635]/10 text-[#A3E635] text-[10px] font-black tracking-widest uppercase mb-4 border border-[#A3E635]/20">
-                            <i className="fas fa-user-check text-[#A3E635] mr-1"></i> Membresía HagamosTech
+                            <i className="fas fa-user-check text-[#A3E635] mr-1"></i> Modalidades de trabajo
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-3 leading-tight">
                             Elegí tu <span className="relative inline-block text-[#A3E635]">
-                                plan
+                                alternativas
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none"><path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/></svg>
                             </span>
                         </h2>
                         <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Planes de soporte y evolución continua para que tu sitio o sistema esté siempre actualizado, seguro y funcionando. Elegí tu nivel y olvidate del mantenimiento.
+                            No hay paquetes universales. Conversamos el alcance, el presupuesto y la modalidad de cada solicitud según tu proyecto y tus posibilidades.
                         </p>
 
                         <div className="inline-flex items-center gap-3 bg-[#111827] rounded-full p-1.5 border border-gray-100 shadow-sm mt-4">
-                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Mensual</button>
-                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Anual <span className="ml-1 text-[9px] bg-green-100 text-green-700 px-2 py-0.5 rounded-full">-20%</span></button>
+                            <button onClick={() => setIsAnnual(false)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${!isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Proyecto</button>
+                            <button onClick={() => setIsAnnual(true)} className={`px-5 py-2.5 rounded-full text-[11px] font-black uppercase tracking-wider transition-all ${isAnnual ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:text-[#A3E635]'}`}>Por etapas</button>
                         </div>
                     </div>
 
@@ -136,9 +130,9 @@ const PlanesSuscripcion = () => {
                                     <p className="text-xs font-medium opacity-80 mb-4">{plan.desc}</p>
 
                                     <div className="flex items-end justify-center gap-1 mb-4">
-                                        <span className="text-lg font-black opacity-60">Bs.</span>
+                                        <span className="text-lg font-black opacity-60">Modalidad</span>
                                         <span className="text-5xl font-black font-heading leading-none">{isAnnual ? plan.priceAnnual : plan.priceMonthly}</span>
-                                        <span className="text-xs font-black opacity-60 mb-1">/mes</span>
+                                        <span className="text-xs font-black opacity-60 mb-1">según alcance</span>
                                     </div>
 
                                     <div className="space-y-2 mb-6 text-left">
@@ -151,7 +145,7 @@ const PlanesSuscripcion = () => {
                                     </div>
 
                                     <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className={`w-full py-3.5 rounded-full font-black text-[11px] uppercase tracking-[0.15em] flex items-center justify-center gap-2 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all ${plan.theme.buttonBg} ${plan.theme.buttonText} ${plan.theme.buttonHover}`}>
-                                        Elegir {plan.name} <i className="fas fa-arrow-right text-[10px]"></i>
+                                        Consultar alternativa <i className="fas fa-arrow-right text-[10px]"></i>
                                     </a>
                                 </div>
                             </div>
