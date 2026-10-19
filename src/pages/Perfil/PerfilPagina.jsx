@@ -388,7 +388,7 @@ const PerfilPagina = () => {
 
     const navItemsMobile = [
         { path: '/perfil', label: 'Mi Perfil', icon: 'fa-user' },
-        { path: '/perfil/compras', label: 'Compras', icon: 'fa-receipt' },
+        { path: '/perfil/espacio', label: 'Mi espacio', icon: 'fa-calendar-days' },
         { path: '/configuracion', label: 'Config', icon: 'fa-gear' },
     ];
 

@@ -46,7 +46,7 @@ const DisenoGrafico = lazy(() => import('../pages/Servicios/DisenoGrafico/Diseno
 const RecuperarContrasena = lazy(() => import('../components/func/RecuperarContrasena'));
 const PerfilPagina = lazy(() => import('../pages/Perfil/PerfilPagina'));
 const ConfiguracionPagina = lazy(() => import('../pages/Perfil/ConfiguracionPagina'));
-const HistorialComprasPagina = lazy(() => import('../pages/Perfil/HistorialComprasPagina'));
+const EspacioPersonalPagina = lazy(() => import('../pages/Perfil/EspacioPersonalPagina'));
 const Error401 = lazy(() => import('../pages/Errores/Error401'));
 const Error403 = lazy(() => import('../pages/Errores/Error403'));
 const Error404 = lazy(() => import('../pages/Errores/Error404'));
@@ -178,7 +178,8 @@ const App = () => {
               {/* Rutas del Perfil de Usuario */}
               <Route path="/perfil" element={<PerfilPagina />} />
               <Route path="/configuracion" element={<ConfiguracionPagina />} />
-              <Route path="/perfil/compras" element={<HistorialComprasPagina />} />
+              <Route path="/perfil/espacio" element={<EspacioPersonalPagina />} />
+              <Route path="/perfil/compras" element={<Navigate to="/perfil/espacio" replace />} />
 
               {/* Error Pages Routing */}
               <Route path="/errors/401" element={<Error401 />} />

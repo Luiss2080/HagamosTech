@@ -35,7 +35,8 @@ const LABELS = {
   ubicacion: 'Ubicación',
   perfil: 'Mi perfil',
   configuracion: 'Configuración',
-  compras: 'Mis compras',
+  compras: 'Mi espacio',
+  espacio: 'Mi espacio',
   'recuperar-contrasena': 'Recuperar contraseña',
 };
 const NON_LINK_PARENTS = new Set(['que-hacemos', 'servicios']);
@@ -50,7 +51,7 @@ const getSegments = (pathname) => {
   if (segments[0] === 'contacto' && crumbs.length > 1) {
     crumbs[0] = { label: 'Contacto', url: '/contactanos' };
   }
-  if (segments[0] === 'perfil' && segments[1] === 'compras') {
+  if (segments[0] === 'perfil' && ['compras', 'espacio'].includes(segments[1])) {
     crumbs[0] = { label: 'Mi perfil', url: '/perfil' };
   }
   return crumbs;

@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { AlarmClock, ArrowLeft, ArrowRight, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
+import { AlarmClock, ArrowLeft, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
 import useAuthStore from '../../store/useAutenticacionStore';
 import apiClient from '../../servicios/clienteApi';
 

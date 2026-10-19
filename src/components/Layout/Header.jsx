@@ -388,15 +388,15 @@ const Header = () => {
                                                           </div>
                                                       </button>
 
-                                                      <button onClick={() => { setIsUserMenuOpen(false); handleUserNavigate('/perfil/compras'); }} className="flex items-start gap-3 w-full text-left p-2.5 rounded-lg hover:bg-[#A3E635]/10 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:translate-x-1.5 hover:shadow-md group/sub cursor-pointer">
+                                                      <button onClick={() => { setIsUserMenuOpen(false); handleUserNavigate('/perfil/espacio'); }} className="flex items-start gap-3 w-full text-left p-2.5 rounded-lg hover:bg-[#A3E635]/10 transition-all duration-300 hover:scale-[1.02] hover:-translate-y-1 hover:translate-x-1.5 hover:shadow-md group/sub cursor-pointer">
                                                           <div className="w-7 h-7 rounded-lg bg-[#A3E635]/10 flex items-center justify-center text-[#A3E635] text-xs flex-shrink-0 transition-colors group-hover/sub:bg-[#A3E635] group-hover/sub:text-[#0A0A0A]">
                                                               <i className="fas fa-receipt"></i>
                                                           </div>
                                                           <div className="flex-grow">
                                                               <div className="flex items-center justify-between gap-2">
-                                                                 <p className="text-xs font-black text-white leading-none group-hover/sub:text-[#A3E635] transition-colors">Mis Compras</p>
+                                                                 <p className="text-xs font-black text-white leading-none group-hover/sub:text-[#A3E635] transition-colors">Mi espacio</p>
                                                               </div>
-                                                              <p className="text-[9px] text-white/50 mt-1 font-bold leading-tight">Pedidos y facturas</p>
+                                                              <p className="text-[9px] text-white/50 mt-1 font-bold leading-tight">Proyectos, notas y calendario</p>
                                                           </div>
                                                       </button>
 
@@ -548,14 +548,14 @@ const Header = () => {
                                 <button
                                     onClick={() => {
                                         closeMenu();
-                                        handleUserNavigate('/perfil/compras');
+                                        handleUserNavigate('/perfil/espacio');
                                     }}
                                     className="w-full px-4 py-2 text-left text-xs font-black uppercase text-white hover:bg-[#A3E635]/10 flex items-center justify-center gap-3 transition-colors rounded-xl"
                                 >
                                     <span className="w-8 h-8 rounded-xl bg-[#A3E635]/10 border border-[#A3E635]/20 text-[#A3E635] flex items-center justify-center shrink-0">
                                         <i className="fas fa-receipt text-xs"></i>
                                     </span>
-                                    Mis Compras
+                                    Mi espacio
                                 </button>
                                 <button
                                     onClick={() => {

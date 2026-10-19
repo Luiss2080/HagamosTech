@@ -31,7 +31,10 @@ const getBreadcrumbsAndBadge = (pathname) => {
     return { paths: [{ label: 'Cookies' }], badgeText: 'Política de Cookies — HAGAMOSTECH', icon: 'fa-solid fa-cookie-bite' };
   }
   if (pathname.includes('/perfil/compras')) {
-    return { paths: [{ label: 'Perfil', url: '/perfil' }, { label: 'Mis Compras' }], badgeText: 'Historial de Compras — HAGAMOSTECH', icon: 'fa-solid fa-receipt' };
+    return { paths: [{ label: 'Perfil', url: '/perfil' }, { label: 'Mi espacio' }], badgeText: 'Proyectos, notas y calendario — HAGAMOSTECH', icon: 'fa-solid fa-calendar-days' };
+  }
+  if (pathname.includes('/perfil/espacio')) {
+    return { paths: [{ label: 'Perfil', url: '/perfil' }, { label: 'Mi espacio' }], badgeText: 'Proyectos, notas y calendario — HAGAMOSTECH', icon: 'fa-solid fa-calendar-days' };
   }
   if (pathname.includes('/perfil') && !pathname.includes('/soporte')) {
     return { paths: [{ label: 'Perfil' }], badgeText: 'Mi Perfil — HAGAMOSTECH', icon: 'fa-solid fa-user' };

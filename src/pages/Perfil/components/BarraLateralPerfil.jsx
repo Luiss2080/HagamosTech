@@ -23,7 +23,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
     
     const navItems = [
         { path: '/perfil', label: 'Mi Perfil', sub: 'Datos personales y foto', icon: 'fa-user' },
-        { path: '/perfil/compras', label: 'Mis Compras', sub: 'Pedidos y facturas', icon: 'fa-receipt' },
+        { path: '/perfil/espacio', label: 'Mi espacio', sub: 'Proyectos, notas y calendario', icon: 'fa-calendar-days' },
         { path: '/configuracion', label: 'Configuración', sub: 'Preferencias y seguridad', icon: 'fa-gear' },
     ];
 

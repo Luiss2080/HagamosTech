@@ -94,6 +94,11 @@ const REGLAS = [
     description: 'Historia, misión, visión y valores de HagamosTech.',
   },
   {
+    coincide: (p) => p.startsWith('/perfil/espacio'),
+    title: 'Mi espacio personal | HagamosTech',
+    description: 'Organizá proyectos, notas y recordatorios en tu cuenta privada.',
+  },
+  {
     coincide: (p) => p.startsWith('/perfil') || p.startsWith('/configuracion'),
     title: 'Mi cuenta | HagamosTech',
     description: 'Gestioná tu perfil, preferencias y seguridad.',
