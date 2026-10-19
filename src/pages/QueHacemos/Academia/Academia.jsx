@@ -158,11 +158,9 @@ const Academia = () => {
       </section>
 
       {/* STACK TECNOLÓGICO INFINITO */}
-      <section className="z-10 relative">
+      <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
-        <div className="container mx-auto px-6">
-          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
-        </div>
+        <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
       </section>
 
       {/* METRICAS Y RENDIMIENTO */}

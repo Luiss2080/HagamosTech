@@ -148,11 +148,9 @@ const Tecnologia = () => {
       </section>
 
       {/* STACK TECNOLÓGICO INFINITO */}
-      <section className="z-10 relative">
+      <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
-        <div className="container mx-auto px-6">
-          <ToolsMarquee items={TECH_STACK} label="Tecnologías para tu solución" description="Revisamos qué herramientas pueden responder a los requisitos de cada proyecto." />
-        </div>
+        <ToolsMarquee items={TECH_STACK} label="Tecnologías para tu solución" description="Revisamos qué herramientas pueden responder a los requisitos de cada proyecto." />
       </section>
 
       {/* ALCANCE Y REQUISITOS */}
@@ -169,6 +167,9 @@ const Tecnologia = () => {
           <h2 className="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tight">
             Qué podemos <span className="text-[#A3E635]">desarrollar</span>
           </h2>
+          <p className="mx-auto -mt-10 mb-12 max-w-2xl text-center text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
+            Revisamos cada alternativa según las funciones necesarias, el alcance y la viabilidad del proyecto.
+          </p>
           
           <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
         </div>

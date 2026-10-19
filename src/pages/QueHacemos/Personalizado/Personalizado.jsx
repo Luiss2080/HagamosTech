@@ -219,11 +219,9 @@ const Personalizado = () => {
       </section>
 
       {/* STACK TECNOL�GICO INFINITO */}
-      <section className="z-10 relative">
+      <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
-        <div className="container mx-auto px-6">
-          <ToolsMarquee items={TECH_STACK} label="Tecnologías para soluciones a medida" description="Cada recurso se considera según los requisitos, la viabilidad y el alcance acordado." />
-        </div>
+        <ToolsMarquee items={TECH_STACK} label="Tecnologías para soluciones a medida" description="Cada recurso se considera según los requisitos, la viabilidad y el alcance acordado." />
       </section>
 
       {/* BENTO BOX GRID SECTION */}
