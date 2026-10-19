@@ -5,33 +5,9 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
-import ToolsMarquee from '../../../components/ui/ToolsMarquee';
+import TechToolsCarousel from '../../../components/ui/TechToolsCarousel';
 import FeatureTimeline from '../../../components/ui/FeatureTimeline';
-
-const ACADEMIC_TOOLS = [
-  { name: 'SPSS', icon: 'fa-solid fa-chart-pie', color: 'text-blue-500' },
-  { name: 'MATLAB', icon: 'fa-solid fa-calculator', color: 'text-orange-500' },
-  { name: 'LaTeX', icon: 'fa-solid fa-file-code', color: 'text-gray-400' },
-  { name: 'Mendeley', icon: 'fa-solid fa-book-open', color: 'text-red-500' },
-  { name: 'Python', icon: 'fa-brands fa-python', color: 'text-yellow-400' },
-  { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
-  { name: 'R', icon: 'fa-solid fa-chart-line', color: 'text-indigo-400' },
-  { name: 'APA 7', icon: 'fa-solid fa-book', color: 'text-orange-400' },
-  { name: 'Microsoft Word', icon: 'fa-solid fa-file-word', color: 'text-blue-400' },
-  { name: 'PowerPoint', icon: 'fa-solid fa-file-powerpoint', color: 'text-orange-400' },
-  { name: 'Excel', icon: 'fa-solid fa-table', color: 'text-green-400' },
-  { name: 'Google Docs', icon: 'fa-brands fa-google', color: 'text-blue-300' },
-  { name: 'Google Sheets', icon: 'fa-solid fa-table-cells', color: 'text-green-300' },
-  { name: 'Canva', icon: 'fa-solid fa-palette', color: 'text-cyan-300' },
-  { name: 'Zotero', icon: 'fa-solid fa-book-bookmark', color: 'text-red-400' },
-  { name: 'RStudio', icon: 'fa-solid fa-chart-line', color: 'text-sky-300' },
-  { name: 'JASP', icon: 'fa-solid fa-chart-column', color: 'text-purple-300' },
-  { name: 'GeoGebra', icon: 'fa-solid fa-square-root-variable', color: 'text-green-300' },
-  { name: 'Desmos', icon: 'fa-solid fa-chart-line', color: 'text-orange-300' },
-  { name: 'Cisco Packet Tracer', icon: 'fa-solid fa-network-wired', color: 'text-cyan-300' },
-  { name: 'draw.io', icon: 'fa-solid fa-diagram-project', color: 'text-amber-300' },
-  { name: 'Visual Studio Code', icon: 'fa-solid fa-code', color: 'text-blue-400' }
-];
+import { HERRAMIENTAS_ACADEMICAS } from '../../../data/herramientasCarruselData';
 
 const METRICS = [
   { label: 'Alcance', value: 'Acordado', icon: <Award size={24} /> },
@@ -160,7 +136,7 @@ const Academia = () => {
       <section className="relative z-10 py-10 sm:py-14">
         <FondoTech />
         <div className="relative z-10">
-          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos para el acompañamiento académico" description="La selección de herramientas depende de la materia, la consigna y el tipo de orientación." />
+          <TechToolsCarousel items={HERRAMIENTAS_ACADEMICAS} label="Herramientas para el acompañamiento académico" description="La selección depende de la materia, la consigna y el tipo de orientación que necesites." />
         </div>
       </section>
 
