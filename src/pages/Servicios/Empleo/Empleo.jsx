@@ -1,7 +1,7 @@
 import RecorridoEmpleo from './RecorridoEmpleo';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
-import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
+import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
@@ -194,7 +194,7 @@ const Empleo = () => {
 
           <div className="relative py-8">
 
-            <ServiceCardsCarousel items={PROCESO} label="Etapas del proceso" />
+            <ProcessStepsCarousel items={PROCESO} label="Etapas del proceso" />
           </div>
         </div>
       </section>
@@ -291,3 +291,4 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
 };
 
 export default Empleo;
+

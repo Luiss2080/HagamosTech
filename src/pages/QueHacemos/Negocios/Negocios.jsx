@@ -7,6 +7,7 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
+import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 
 const DynamicDashboard = () => {
   const revenue = "A definir";
@@ -67,24 +68,11 @@ const ProcessTimeline = () => {
     { title: 'Desarrollamos lo acordado', desc: 'Avanzamos con revisiones coordinadas y presentamos los entregables definidos.', icon: <TrendingUp size={20} /> },
   ];
 
-  return (
-    <div className="relative border-l-2 border-neutral-800 ml-6 md:ml-10 py-10">
-      {steps.map((step, idx) => (
-        <div key={idx} className="mb-16 relative pl-10 md:pl-16 group">
-          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex items-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
-            {step.icon}
-          </div>
-          <div className="bg-neutral-900/30 p-6 rounded-2xl border border-neutral-800/50 hover:bg-neutral-900/60 transition-colors duration-300">
-            <h4 className="text-xl font-black text-white mb-2 flex items-center gap-3">
-              <span className="text-[#A3E635] text-xs font-mono">STEP 0{idx + 1}</span> {step.title}
-            </h4>
-            <p className="text-slate-400 font-medium">{step.desc}</p>
-          </div>
-        </div>
-      ))}
-      <div className="absolute bottom-0 left-[-6px] w-3 h-3 rounded-full bg-[#A3E635] animate-ping"></div>
-    </div>
-  );
+  return <ProcessStepsCarousel items={steps.map((step, index) => ({
+    ...step,
+    category: `Paso ${String(index + 1).padStart(2, '0')}`,
+    image: ['/img/08_Cards/metodo-conversamos.webp', '/img/08_Cards/metodo-analizamos.webp', '/img/08_Cards/metodo-proponemos.webp', '/img/08_Cards/metodo-desarrollamos.webp'][index],
+  }))} label="Camino para desarrollar tu proyecto" />;
 };
 
 const TESTIMONIOS = [

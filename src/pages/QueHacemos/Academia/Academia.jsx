@@ -4,6 +4,8 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
+import ToolsMarquee from '../../../components/ui/ToolsMarquee';
+import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const ACADEMIC_TOOLS = [
   { name: 'SPSS', icon: 'fa-solid fa-chart-pie', color: 'text-blue-500' },
@@ -13,7 +15,21 @@ const ACADEMIC_TOOLS = [
   { name: 'Python', icon: 'fa-brands fa-python', color: 'text-yellow-400' },
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
   { name: 'R', icon: 'fa-solid fa-chart-line', color: 'text-indigo-400' },
-  { name: 'APA 7', icon: 'fa-solid fa-book', color: 'text-orange-400' }
+  { name: 'APA 7', icon: 'fa-solid fa-book', color: 'text-orange-400' },
+  { name: 'Microsoft Word', icon: 'fa-solid fa-file-word', color: 'text-blue-400' },
+  { name: 'PowerPoint', icon: 'fa-solid fa-file-powerpoint', color: 'text-orange-400' },
+  { name: 'Excel', icon: 'fa-solid fa-table', color: 'text-green-400' },
+  { name: 'Google Docs', icon: 'fa-brands fa-google', color: 'text-blue-300' },
+  { name: 'Google Sheets', icon: 'fa-solid fa-table-cells', color: 'text-green-300' },
+  { name: 'Canva', icon: 'fa-solid fa-palette', color: 'text-cyan-300' },
+  { name: 'Zotero', icon: 'fa-solid fa-book-bookmark', color: 'text-red-400' },
+  { name: 'RStudio', icon: 'fa-solid fa-chart-line', color: 'text-sky-300' },
+  { name: 'JASP', icon: 'fa-solid fa-chart-column', color: 'text-purple-300' },
+  { name: 'GeoGebra', icon: 'fa-solid fa-square-root-variable', color: 'text-green-300' },
+  { name: 'Desmos', icon: 'fa-solid fa-chart-line', color: 'text-orange-300' },
+  { name: 'Cisco Packet Tracer', icon: 'fa-solid fa-network-wired', color: 'text-cyan-300' },
+  { name: 'draw.io', icon: 'fa-solid fa-diagram-project', color: 'text-amber-300' },
+  { name: 'Visual Studio Code', icon: 'fa-solid fa-code', color: 'text-blue-400' }
 ];
 
 const METRICS = [
@@ -141,15 +157,7 @@ const Academia = () => {
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Herramientas Académicas y Software</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-            {ACADEMIC_TOOLS.map((tech, i) => (
-              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
-                <i className={tech.icon}></i>
-                <span className="text-sm tracking-wider">{tech.name}</span>
-              </div>
-            ))}
-          </div>
+          <ToolsMarquee items={ACADEMIC_TOOLS} label="Recursos que pueden usarse según la materia y el proyecto" />
         </div>
       </section>
 

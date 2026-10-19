@@ -1,7 +1,7 @@
 import RecorridoSistemasApps from './RecorridoSistemasApps';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
-import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
+import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
@@ -193,7 +193,7 @@ const SistemasApps = () => {
 
           <div className="relative py-8">
 
-            <ServiceCardsCarousel items={PROCESO} label="Etapas del proceso" />
+            <ProcessStepsCarousel items={PROCESO} label="Etapas del proceso" />
           </div>
         </div>
       </section>
@@ -290,3 +290,4 @@ Desarrollo de sistemas web y software, diseño de interfaces y gestión de bases
 };
 
 export default SistemasApps;
+

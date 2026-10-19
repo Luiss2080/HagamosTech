@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import FondoTech from '../../components/fondos/FondoTech';
-import ServiceCardsCarousel from '../../components/ui/ServiceCardsCarousel';
+import ProcessStepsCarousel from '../../components/ui/ProcessStepsCarousel';
 
 const stepsData = [
     {
@@ -132,7 +132,7 @@ const ComoTrabajamos = () => {
             <section className="relative z-10 py-20">
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     
-                    <ServiceCardsCarousel items={stepsData} label="Nuestra metodología de trabajo" />
+                    <ProcessStepsCarousel items={stepsData} label="Nuestra metodología de trabajo" />
 
                     <div className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#111111] p-7 text-center sm:p-9">
                         <img src="/img/07_Servicios/soluciones/hero-soluciones-v2.webp" alt="" aria-hidden="true" className="absolute inset-0 h-full w-full object-cover opacity-20" />
@@ -177,3 +177,4 @@ const ComoTrabajamos = () => {
 };
 
 export default ComoTrabajamos;
+

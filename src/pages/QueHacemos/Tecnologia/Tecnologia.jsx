@@ -5,14 +5,29 @@ import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import { Link } from 'react-router-dom';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
+import ToolsMarquee from '../../../components/ui/ToolsMarquee';
+import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
 const TECH_STACK = [
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
-  { name: 'Python', icon: 'fa-brands fa-python', color: 'text-yellow-400' },
+  { name: 'JavaScript', icon: 'fa-brands fa-js', color: 'text-yellow-400' },
+  { name: 'TypeScript', icon: 'fa-solid fa-code', color: 'text-blue-400' },
+  { name: 'Vite', icon: 'fa-solid fa-bolt', color: 'text-violet-400' },
+  { name: 'HTML5', icon: 'fa-brands fa-html5', color: 'text-orange-400' },
+  { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: 'text-blue-400' },
+  { name: 'Tailwind CSS', icon: 'fa-solid fa-wind', color: 'text-cyan-300' },
   { name: 'Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
+  { name: 'Express', icon: 'fa-solid fa-route', color: 'text-slate-300' },
   { name: 'MySQL', icon: 'fa-solid fa-database', color: 'text-indigo-400' },
+  { name: 'Prisma', icon: 'fa-solid fa-diagram-project', color: 'text-teal-300' },
+  { name: 'Zustand', icon: 'fa-solid fa-cubes', color: 'text-amber-300' },
+  { name: 'REST API', icon: 'fa-solid fa-plug', color: 'text-emerald-300' },
+  { name: 'Git', icon: 'fa-brands fa-git-alt', color: 'text-orange-400' },
   { name: 'GitHub', icon: 'fa-brands fa-github', color: 'text-white' },
-  { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' }
+  { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' },
+  { name: 'Postman', icon: 'fa-solid fa-paper-plane', color: 'text-orange-300' },
+  { name: 'Vitest', icon: 'fa-solid fa-vial', color: 'text-lime-300' },
+  { name: 'Playwright', icon: 'fa-solid fa-globe', color: 'text-green-300' }
 ];
 
 const METRICS = [
@@ -132,15 +147,7 @@ const Tecnologia = () => {
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Tecnológico y Herramientas</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-            {TECH_STACK.map((tech, i) => (
-              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
-                <i className={tech.icon}></i>
-                <span className="text-sm tracking-wider">{tech.name}</span>
-              </div>
-            ))}
-          </div>
+          <ToolsMarquee items={TECH_STACK} label="Tecnologías que pueden aplicarse según el proyecto" />
         </div>
       </section>
 
@@ -174,31 +181,7 @@ const Tecnologia = () => {
         </div>
       </section>
 
-      {/* CTA GIGANTE */}
-      <section className="py-24 z-10 relative px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="p-12 md:p-24 rounded-[3rem] bg-[#A3E635] text-black text-center relative overflow-hidden group/cta hover:scale-[1.01] transition-all duration-500 shadow-[0_0_40px_rgba(163,230,53,0.15)] hover:shadow-[0_0_80px_rgba(163,230,53,0.3)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-black/60 opacity-50 group-hover/cta:scale-110 transition-transform duration-1000"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 group-hover/cta:-translate-x-10 transition-transform duration-1000"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 group-hover/cta:translate-x-10 transition-transform duration-1000"></div>
-            
-            <h2 className="text-5xl md:text-7xl font-black mb-6 relative z-10 uppercase tracking-tighter drop-shadow-lg leading-none">
-              El futuro de tu empresa se escribe en código.
-            </h2>
-            <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
-              Contanos qué necesitás y conversemos las alternativas que se ajustan a tu proyecto.
-            </p>
-            
-            <a href="https://wa.me/59161320004" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-sm md:text-lg uppercase tracking-widest hover:scale-110 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] group/btn overflow-hidden">
-              <span className="relative z-20">Consultar un proyecto</span>
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
-                <Terminal size={20} className="md:w-6 md:h-6" />
-              </div>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <CenteredProjectCTA title="Tu próxima solución digital empieza con una conversación." description="Contanos qué necesitás. Revisamos alternativas, alcance y condiciones para tu proyecto." />
 
     </div>
   );

@@ -4,15 +4,29 @@ import { Lightbulb, Code, Server, Zap, ArrowRight, CheckCircle2, MessageSquare, 
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
+import ToolsMarquee from '../../../components/ui/ToolsMarquee';
 
 const TECH_STACK = [
-  { name: 'OpenAI', icon: 'fa-solid fa-robot', color: 'text-emerald-400' },
   { name: 'React', icon: 'fa-brands fa-react', color: 'text-cyan-400' },
-  { name: '¿Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
-  { name: 'AWS', icon: 'fa-brands fa-aws', color: 'text-orange-400' },
+  { name: 'JavaScript', icon: 'fa-brands fa-js', color: 'text-yellow-400' },
+  { name: 'TypeScript', icon: 'fa-solid fa-code', color: 'text-blue-400' },
+  { name: 'Vite', icon: 'fa-solid fa-bolt', color: 'text-violet-400' },
+  { name: 'HTML5', icon: 'fa-brands fa-html5', color: 'text-orange-400' },
+  { name: 'CSS3', icon: 'fa-brands fa-css3-alt', color: 'text-blue-400' },
+  { name: 'Tailwind CSS', icon: 'fa-solid fa-wind', color: 'text-cyan-300' },
+  { name: 'Node.js', icon: 'fa-brands fa-node-js', color: 'text-green-500' },
+  { name: 'Express', icon: 'fa-solid fa-route', color: 'text-slate-300' },
+  { name: 'PostgreSQL', icon: 'fa-solid fa-database', color: 'text-blue-300' },
   { name: 'Figma', icon: 'fa-brands fa-figma', color: 'text-pink-400' },
   { name: 'MySQL', icon: 'fa-solid fa-database', color: 'text-indigo-400' },
-  { name: 'TypeScript', icon: 'fa-solid fa-code', color: 'text-blue-400' }
+  { name: 'Prisma', icon: 'fa-solid fa-diagram-project', color: 'text-teal-300' },
+  { name: 'Zustand', icon: 'fa-solid fa-cubes', color: 'text-amber-300' },
+  { name: 'REST API', icon: 'fa-solid fa-plug', color: 'text-emerald-300' },
+  { name: 'Git', icon: 'fa-brands fa-git-alt', color: 'text-orange-400' },
+  { name: 'GitHub', icon: 'fa-brands fa-github', color: 'text-white' },
+  { name: 'Chart.js', icon: 'fa-solid fa-chart-line', color: 'text-pink-300' },
+  { name: 'Vitest', icon: 'fa-solid fa-vial', color: 'text-lime-300' }
 ];
 
 const TESTIMONIOS = [
@@ -102,24 +116,11 @@ const ProcessTimeline = () => {
     { title: 'Implementación & Soporte', desc: 'Lanzamos el sistema en tu entorno y monitoreamos. Tu problema queda resuelto definitivamente.', icon: <Server size={20} /> },
   ];
 
-  return (
-    <div className="relative border-l-2 border-neutral-800 ml-6 md:ml-10 py-10 mt-16">
-      {steps.map((step, idx) => (
-        <div key={idx} className="mb-16 relative pl-10 md:pl-16 group">
-          <div className="absolute left-[-21px] top-0 w-10 h-10 rounded-full bg-black border-2 border-neutral-800 flex items-center justify-center text-[#A3E635] group-hover:border-[#A3E635] group-hover:bg-[#A3E635]/10 transition-colors duration-500 shadow-lg">
-            {step.icon}
-          </div>
-          <div className="bg-neutral-900/30 p-6 rounded-2xl border border-neutral-800/50 hover:bg-neutral-900/60 transition-colors duration-300">
-            <h4 className="text-xl font-black text-white mb-2 flex items-center gap-3">
-              <span className="text-[#A3E635] text-xs font-mono">FASE 0{idx + 1}</span> {step.title}
-            </h4>
-            <p className="text-slate-400 font-medium">{step.desc}</p>
-          </div>
-        </div>
-      ))}
-      <div className="absolute bottom-0 left-[-6px] w-3 h-3 rounded-full bg-[#A3E635] animate-ping"></div>
-    </div>
-  );
+  return <ProcessStepsCarousel items={steps.map((step, index) => ({
+    ...step,
+    category: `Fase ${String(index + 1).padStart(2, '0')}`,
+    image: ['/img/08_Cards/metodo-conversamos.webp', '/img/08_Cards/metodo-analizamos.webp', '/img/08_Cards/metodo-proponemos.webp', '/img/08_Cards/metodo-desarrollamos.webp'][index],
+  }))} label="Proceso de desarrollo personalizado" />;
 };
 
 const PROJECTS = [
@@ -218,14 +219,7 @@ const Personalizado = () => {
       <section className="py-10 border-y border-neutral-900 bg-neutral-950/50 z-10 relative">
         <div className="container mx-auto px-6">
           <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
-          <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70">
-            {TECH_STACK.map((tech, i) => (
-              <div key={i} className={`flex items-center gap-2 text-xl md:text-2xl font-bold ${tech.color} grayscale hover:grayscale-0 transition-all cursor-default`}>
-                <i className={tech.icon}></i>
-                <span className="text-sm tracking-wider">{tech.name}</span>
-              </div>
-            ))}
-          </div>
+          <ToolsMarquee items={TECH_STACK} label="Tecnologías que pueden evaluarse para una solución a medida" />
         </div>
       </section>
 
