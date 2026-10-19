@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { 
   Store, ShoppingCart, TrendingUp, BarChart, ArrowRight, 
   CheckCircle2, Globe, Cpu, Users, Zap, ShieldCheck 
@@ -6,46 +6,39 @@ import {
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
-import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
+import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 
-const DynamicDashboard = () => {
-  const revenue = "A definir";
-  const users = "A definir";
-  const conversion = "A evaluar";
+const PLANNING_OPTIONS = [
+  { title: 'Alcance', subtitle: 'Qué necesitás resolver', icon: <Globe size={19} />, description: 'Aterrizamos el objetivo y las personas que usarán la solución para entender qué conviene incluir.', details: ['Objetivo del proyecto', 'Contenido y funciones', 'Personas usuarias'] },
+  { title: 'Etapas', subtitle: 'Cómo organizar el trabajo', icon: <TrendingUp size={19} />, description: 'Ordenamos el trabajo en entregables que tengan sentido para el proyecto y para tu disponibilidad.', details: ['Prioridades iniciales', 'Entregas parciales', 'Revisiones coordinadas'] },
+  { title: 'Requisitos', subtitle: 'Qué revisar antes de iniciar', icon: <ShieldCheck size={19} />, description: 'Revisamos los recursos y condiciones que pueden influir en la propuesta antes de confirmar su alcance.', details: ['Material disponible', 'Integraciones necesarias', 'Condiciones y presupuesto'] },
+];
 
+const ProjectPlanningSelector = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const selected = PLANNING_OPTIONS[activeIndex];
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto mt-16 p-1 rounded-[2rem] bg-gradient-to-br from-[#A3E635]/30 via-neutral-800 to-[#84CC16]/10 shadow-[0_0_50px_rgba(163,230,53,0.15)] animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-      <div className="bg-[#050505] rounded-[1.8rem] p-6 md:p-8 flex flex-col md:flex-row gap-6 items-center justify-between border border-neutral-900 overflow-hidden relative">
-        <p className="absolute top-2 left-4 z-10 text-[9px] font-bold uppercase tracking-wider text-slate-500">Vista ilustrativa: indicadores ficticios, no son resultados de clientes.</p>
-        <div className="absolute top-0 right-0 w-64 h-64 bg-[#A3E635]/10 rounded-full blur-[80px] pointer-events-none"></div>
-        
-        {/* Metric 1 */}
-        <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
-          <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <TrendingUp size={14} className="text-[#A3E635]" /> Indicador a definir
-          </p>
-          <p className="text-3xl md:text-4xl font-black text-white font-mono">{revenue}</p>
-        </div>
-
-        {/* Metric 2 */}
-        <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
-          <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <Users size={14} className="text-[#A3E635]" /> Dato a definir
-          </p>
-          <p className="text-3xl md:text-4xl font-black text-white font-mono">{users}</p>
-        </div>
-
-        {/* Metric 3 */}
-        <div className="flex-1 text-center md:text-left z-10 w-full md:w-auto p-4 rounded-2xl bg-neutral-900/50 border border-neutral-800/50 hover:bg-neutral-900 hover:border-[#A3E635]/30 transition-all">
-          <p className="text-slate-400 text-xs font-black uppercase tracking-widest mb-2 flex items-center justify-center md:justify-start gap-2">
-            <Zap size={14} className="text-[#A3E635]" /> Métrica por acordar
-          </p>
-          <p className="text-3xl md:text-4xl font-black text-[#A3E635] font-mono">{conversion}</p>
-        </div>
+    <section className="relative mx-auto mt-14 w-full max-w-5xl rounded-[2rem] border border-[#A3E635]/25 bg-[#070907]/95 p-5 text-left shadow-[0_0_55px_rgba(163,230,53,.1)] sm:mt-16 sm:p-8" aria-label="Cómo definimos cada proyecto">
+      <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#A3E635]/80 to-transparent" />
+      <div className="mb-6 flex flex-col gap-2 text-center sm:mb-7">
+        <span className="text-[9px] font-black uppercase tracking-[.2em] text-[#A3E635]">Cada proyecto se conversa</span>
+        <h2 className="text-xl font-black text-white sm:text-2xl">¿Qué definimos juntos?</h2>
       </div>
-    </div>
+      <div className="grid grid-cols-1 gap-3 sm:grid-cols-3" role="tablist" aria-label="Aspectos del proyecto">
+        {PLANNING_OPTIONS.map((option, index) => (
+          <button key={option.title} type="button" role="tab" id={`planning-tab-${index}`} aria-selected={activeIndex === index} aria-controls="planning-panel" onClick={() => setActiveIndex(index)} className={`group flex min-h-20 items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-all duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#A3E635] ${activeIndex === index ? 'border-[#A3E635]/70 bg-[#A3E635] text-[#080A06] shadow-[0_12px_30px_rgba(163,230,53,.16)]' : 'border-white/10 bg-white/[.035] text-white hover:border-[#A3E635]/45 hover:bg-[#A3E635]/[.07]'}`}>
+            <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-xl ${activeIndex === index ? 'bg-black/10 text-black' : 'bg-[#A3E635]/10 text-[#A3E635]'}`}>{option.icon}</span>
+            <span><span className="block text-sm font-black">{option.title}</span><span className={`mt-1 block text-[10px] font-semibold ${activeIndex === index ? 'text-black/65' : 'text-slate-400'}`}>{option.subtitle}</span></span>
+          </button>
+        ))}
+      </div>
+      <div id="planning-panel" role="tabpanel" aria-labelledby={`planning-tab-${activeIndex}`} className="mt-4 grid gap-5 rounded-2xl border border-white/[.08] bg-[#10120E] p-5 sm:grid-cols-[1fr_auto] sm:items-center sm:p-6">
+        <div><h3 className="mb-2 text-lg font-black text-white">{selected.title}</h3><p className="max-w-2xl text-sm leading-relaxed text-slate-300">{selected.description}</p></div>
+        <ul className="flex flex-wrap gap-2 sm:max-w-[360px] sm:justify-end">{selected.details.map((detail) => <li key={detail} className="rounded-full border border-[#A3E635]/20 bg-[#A3E635]/[.07] px-3 py-2 text-[10px] font-bold text-[#D7F7A8]">{detail}</li>)}</ul>
+      </div>
+    </section>
   );
 };
 
@@ -115,31 +108,7 @@ const Negocios = () => {
             </a>
           </div>
 
-          <DynamicDashboard />
-        </div>
-      </section>
-
-      {/* METRICS ASIDE */}
-      <section className="py-12 z-10 relative px-6 border-b border-neutral-900 bg-neutral-950/50">
-        <div className="container mx-auto max-w-7xl">
-           <div className="flex flex-wrap justify-center gap-10 md:gap-24 opacity-80">
-              <div className="text-center">
-                <h4 className="text-3xl font-black text-white">A medida</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Ejemplo de solución</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-3xl font-black text-white">A revisar</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Alcance a definir</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-3xl font-black text-white">A coordinar</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Atención a coordinar</p>
-              </div>
-              <div className="text-center">
-                <h4 className="text-3xl font-black text-white">Según alcance</h4>
-                <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mt-1">Sujeto a evaluación</p>
-              </div>
-           </div>
+          <ProjectPlanningSelector />
         </div>
       </section>
 
@@ -169,7 +138,7 @@ const Negocios = () => {
                 Tu Camino a la <br/> <span className="text-[#A3E635]">Digitalización</span>
               </h2>
               <p className="text-slate-400 font-medium mb-8">
-                No vendemos código genérico. Construimos estrategias tangibles y sistemas que se acoplan perfectamente al ADN de tu empresa.
+              Conversamos sobre tus prioridades y revisamos soluciones digitales que puedan ajustarse al alcance y a los recursos disponibles.
               </p>
               <div className="p-6 rounded-2xl bg-[#A3E635]/10 border border-[#A3E635]/30">
                 <h4 className="font-black text-white mb-2 flex items-center gap-2"><ShieldCheck className="text-[#A3E635]" size={20}/> Condiciones acordadas</h4>
@@ -197,32 +166,7 @@ const Negocios = () => {
         })} />
       </section>
 
-      {/* BUSINESS CTA */}
-      <section className="py-20 z-10 relative px-6 pb-32">
-        <div className="container mx-auto max-w-5xl">
-          <div className="p-12 md:p-24 rounded-[3rem] bg-[#A3E635] text-black text-center relative overflow-hidden group/cta hover:scale-[1.01] transition-all duration-500 shadow-[0_0_40px_rgba(163,230,53,0.15)] hover:shadow-[0_0_80px_rgba(163,230,53,0.3)]">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/40 via-transparent to-black/60 opacity-50 group-hover/cta:scale-110 transition-transform duration-1000"></div>
-            <div className="absolute top-0 right-0 w-64 h-64 bg-white/30 rounded-full blur-[80px] -translate-y-1/2 translate-x-1/2 group-hover/cta:-translate-x-10 transition-transform duration-1000"></div>
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 group-hover/cta:translate-x-10 transition-transform duration-1000"></div>
-            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80')] opacity-[0.03] mix-blend-overlay object-cover pointer-events-none group-hover/cta:opacity-[0.08] transition-opacity duration-700"></div>
-            
-            <h2 className="text-5xl md:text-7xl font-black mb-6 relative z-10 uppercase tracking-tighter drop-shadow-lg leading-none">
-              Contanos qué <br className="hidden md:block" /> necesitás.
-            </h2>
-            <p className="text-lg md:text-2xl font-bold opacity-80 mb-12 max-w-3xl mx-auto relative z-10 leading-relaxed">
-              Cada día sin digitalizar es un cliente que le regalas a la competencia. Moderniza tu empresa hoy mismo.
-            </p>
-            
-            <a href="https://wa.me/59161320004?text=Hola,%20es%20hora%20de%20digitalizar%20mi%20negocio" target="_blank" rel="noopener noreferrer" className="relative z-10 inline-flex items-center gap-4 px-10 md:px-14 py-6 bg-black text-[#A3E635] rounded-full font-black text-sm md:text-lg uppercase tracking-widest hover:scale-110 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_50px_rgba(0,0,0,0.7)] group/btn overflow-hidden">
-              <span className="relative z-20">Solicitar Presupuesto</span>
-              <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-[#A3E635]/20 flex items-center justify-center group-hover/btn:translate-x-2 transition-transform relative z-20">
-                <Zap size={20} className="md:w-6 md:h-6" />
-              </div>
-              <div className="absolute inset-0 bg-white opacity-0 group-hover/btn:opacity-10 transition-opacity z-10"></div>
-            </a>
-          </div>
-        </div>
-      </section>
+      <CenteredProjectCTA title="Tu proyecto digital empieza con una conversación." description="Contanos qué querés resolver y revisemos alternativas, alcance y condiciones según tus posibilidades." buttonLabel="Consultar opciones" href="https://wa.me/59161320004?text=Hola,%20quiero%20conversar%20sobre%20mi%20proyecto" />
 
     </div>
   );
