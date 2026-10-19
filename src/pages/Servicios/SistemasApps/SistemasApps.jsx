@@ -94,7 +94,7 @@ const SistemasApps = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Desarrollo profundo y arquitectura de sistemas para empresas que requieren soluciones operativas a medida, bases de datos y soporte tecnológico.
+                Desarrollamos sistemas empresariales e institucionales, desde gestión de inventario y ventas hasta plataformas académicas, bases de datos e integraciones técnicas viables.
               </p>
 
               {/* Action Buttons */}

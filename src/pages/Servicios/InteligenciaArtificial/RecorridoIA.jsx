@@ -97,7 +97,7 @@ const RecorridoIA = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Soluciones con IA que atienden, predicen y aceleran tu negocio.
+            Podemos evaluar funciones con inteligencia artificial dentro de una aplicación o herramienta digital, según requisitos, alcance y viabilidad.
           </p>
         </div>
 

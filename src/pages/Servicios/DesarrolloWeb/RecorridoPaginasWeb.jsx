@@ -18,10 +18,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"EMPRESARIALES","firstPart":"Páginas Web","highlightPart":"Empresariales","desc":"Sitios corporativos completos que transmiten confianza y autoridad.","tags":["React","Next.js","Tailwind"],"icon":"fa-building","image":"/img/08_Cards/proyecto-web-corporativo.webp"},
-  {"num":"02","category":"LANDING PAGE","firstPart":"Landing Pages","highlightPart":"y Portafolios","desc":"Páginas para presentar una propuesta, campaña o colección de trabajos.","tags":["Landing","Contenido","CTA"],"icon":"fa-rocket","image":"/img/08_Cards/proyecto-web-landing.webp"},
-  {"num":"03","category":"E-COMMERCE","firstPart":"Tiendas Online","highlightPart":"y Pedidos","desc":"E-commerce con carritos de compra e integración de pagos locales.","tags":["E-commerce","Pagos","Carrito"],"icon":"fa-cart-shopping","image":"/img/08_Cards/proyecto-web-tienda.webp"},
-  {"num":"04","category":"UI/UX","firstPart":"Diseño UI/UX","highlightPart":"y Responsive","desc":"Prototipado interactivo y adaptación perfecta a todas las pantallas.","tags":["Figma","Mobile","UX"],"icon":"fa-mobile-screen-button","image":"/img/08_Cards/proyecto-web-uiux.webp"}
+  {"num":"01","category":"EMPRESARIALES E INSTITUCIONALES","firstPart":"Páginas Web","highlightPart":"y Portales","desc":"Sitios para empresas, organizaciones e instituciones; pueden incluir áreas públicas y privadas según alcance.","tags":["Corporativo","Institucional","Portales"],"icon":"fa-building","image":"/img/08_Cards/proyecto-web-corporativo.webp"},
+  {"num":"02","category":"LANDING PAGE","firstPart":"Landing Pages","highlightPart":"y Portafolios","desc":"Páginas para presentar servicios, campañas, cursos, perfiles profesionales o colecciones de trabajos.","tags":["Landing","Contenido","Portafolio"],"icon":"fa-rocket","image":"/img/08_Cards/proyecto-web-landing.webp"},
+  {"num":"03","category":"TIENDAS Y PEDIDOS","firstPart":"Tiendas Online","highlightPart":"y Catálogos","desc":"Catálogos con carrito y opciones de pedido; los pagos y sus proveedores se revisan según compatibilidad y viabilidad.","tags":["Catálogo","Pedidos","Pagos a evaluar"],"icon":"fa-cart-shopping","image":"/img/08_Cards/proyecto-web-tienda.webp"},
+  {"num":"04","category":"UI/UX Y APLICACIONES","firstPart":"Diseño UI/UX","highlightPart":"y Aplicaciones","desc":"Prototipos, formularios y experiencias adaptables para aplicaciones, reservas, agendas, directorios o comunidades según alcance.","tags":["Figma","Responsive","UX"],"icon":"fa-mobile-screen-button","image":"/img/08_Cards/proyecto-web-uiux.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {

@@ -39,7 +39,7 @@ const METRICS = [
 const VERTICALS = [
   {
     title: 'Desarrollo web',
-    desc: 'Sitios corporativos e institucionales, landing pages, tiendas, catálogos, blogs, portafolios, portales y aplicaciones web según objetivos y alcance.',
+    desc: 'Sitios corporativos e institucionales, landing pages, tiendas, catálogos, blogs, reservas, cursos, portales, directorios, comunidades y aplicaciones web según alcance.',
     icon: <Code size={32} className="text-[#A3E635]" />,
     tags: ['React', 'Tailwind', 'UX/UI'],
     image: '/img/08_Cards/tecnologia-web.webp',
@@ -47,23 +47,23 @@ const VERTICALS = [
   },
   {
     title: 'Sistemas y software',
-    desc: 'Sistemas para inventario, ventas, facturación, citas, asistencia, gestión académica y otras necesidades; alcance y viabilidad se revisan por proyecto.',
+    desc: 'ERP, inventario, ventas/POS, facturación, CRM, gestión académica, citas, asistencia, bases de datos e integraciones por API sujetas a requisitos y viabilidad.',
     icon: <Database size={32} className="text-[#84CC16]" />,
     tags: ['Node.js', 'MySQL', 'APIs'],
     image: '/img/08_Cards/tecnologia-sistemas.webp',
     category: 'SOFTWARE'
   },
   {
-    title: 'Interfaces y aplicaciones web',
-    desc: 'Diseño UI/UX, formularios, prototipos, bases de datos y herramientas digitales. El trabajo se limita a los entregables acordados para cada proyecto.',
-    icon: <Cloud size={32} className="text-[#A3E635]" />,
-    tags: ['Diseño', 'Interfaces', 'Web'],
+    title: 'Aplicaciones y herramientas digitales',
+    desc: 'Aplicaciones web o móviles, paneles, dashboards y funciones con IA. También evaluamos mejoras de software existente y definimos cada entrega por alcance.',
+    icon: <Code size={32} className="text-[#A3E635]" />,
+    tags: ['Web y móvil', 'Paneles', 'IA aplicada'],
     image: '/img/08_Cards/tecnologia-interfaces.webp',
     category: 'INTERFACES'
   },
   {
     title: 'Soluciones personalizadas',
-    desc: 'Evaluamos necesidades digitales para proponer un alcance posible y conversarlo antes de iniciar.',
+    desc: 'Evaluamos integraciones técnicas y mantenimiento de software existente, además de nuevas soluciones digitales, según requisitos y viabilidad.',
     icon: <Cpu size={32} className="text-[#84CC16]" />,
     tags: ['Requisitos', 'Propuesta', 'Desarrollo'],
     image: '/img/08_Cards/tecnologia-personalizadas.webp',
