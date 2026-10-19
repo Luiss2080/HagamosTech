@@ -47,7 +47,7 @@ const HeroHagamosTech = () => {
                         </h1>
 
                         <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Soluciones <strong className="text-white">tecnológicas</strong>, <strong className="text-white">digitales</strong> y <strong className="text-white">académicas</strong> para <strong className="text-white">cualquier tipo de cliente</strong> y <strong className="text-white">cualquier necesidad</strong>. No necesitás saber qué tecnología usar: contanos qué querés lograr.
+                            Acompañamiento <strong className="text-white">académico</strong>, <strong className="text-white">diseño gráfico</strong> y desarrollo <strong className="text-white">web y de software</strong> para personas, profesionales, emprendimientos e instituciones. Contanos qué necesitás y revisamos el alcance contigo.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center lg:justify-start">

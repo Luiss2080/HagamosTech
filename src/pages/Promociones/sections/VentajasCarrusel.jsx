@@ -42,9 +42,9 @@ const originalHighlights = [
     },
     {
         id: 'soporte',
-        title: 'Soporte',
-        highlight: 'Continuo',
-        desc: 'Podemos conversar sobre mantenimiento o mejoras después de la entrega. La disponibilidad, el alcance y el canal de atención se acuerdan por separado.',
+        title: 'Mejoras',
+        highlight: 'por evaluar',
+        desc: 'Podemos revisar correcciones o mejoras para un sistema existente; la disponibilidad, el alcance y la modalidad se conversan por separado.',
         icon: 'fa-headset',
         badge: 'Según acuerdo',
         color: "bg-[#171717]",

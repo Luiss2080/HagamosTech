@@ -16,7 +16,7 @@ const initialVideos = [
     tiktokId: '7657645476270853396',
     title: 'Soluciones Digitales',
     views: 'Popular',
-    desc: 'Tecnología, creatividad y conocimiento para cualquier tipo de cliente.',
+    desc: 'Diseño, desarrollo digital y acompañamiento académico para personas, emprendimientos e instituciones.',
     thumb: 'bg-[#111827]',
   },
   {

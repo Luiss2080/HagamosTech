@@ -142,7 +142,7 @@ const ChatWhatsApp = ({ onOpen, onClose }) => {
                           <span className="font-semibold text-[#008069] text-[12.5px] block mb-1">HagamosTech</span>
                           ¡Hola! 👋 Bienvenido al canal oficial de HAGAMOSTECH.
                           <br/><br/>
-                          Escríbenos tu consulta y un asesor te atenderá al instante. 👇
+                          Escribinos tu consulta para conversar sobre tu proyecto. 👇
                           
                           <div className="flex items-center justify-end gap-1 mt-1 float-right ml-3">
                             <span className="text-[10px] font-medium text-slate-500">

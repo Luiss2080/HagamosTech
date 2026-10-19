@@ -123,7 +123,7 @@ const AnunciosTicker = ({ compact = false }) => {
                     </span>
                 </h2>
                 <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                    Novedades y anuncios del momento: servicios nuevos, talleres, soporte y promociones al instante.
+                    Información sobre servicios, recursos, proyectos y anuncios de HagamosTech.
                 </p>
             </div>
 

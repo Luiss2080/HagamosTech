@@ -6,7 +6,7 @@ const ProcesoTrabajo = () => {
         {
             num: "1",
             title: "Una idea simple",
-            desc: "HagamosTech nace de una idea sencilla: ¿tenés una necesidad? Hagámosla realidad. Sin catálogos rígidos, empezando siempre por el problema de la persona.",
+            desc: "HagamosTech parte de escuchar cada necesidad y revisar si podemos acompañarla con los servicios de diseño, desarrollo digital o apoyo académico que ofrecemos.",
             icon: "fa-lightbulb",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"

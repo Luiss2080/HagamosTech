@@ -12,7 +12,7 @@ const teamValues = [
     {
         name: 'Creatividad',
         role: 'Nuestra energía',
-        desc: 'Buscamos la mejor forma de resolver tu necesidad, combinando tecnología, diseño e ideas nuevas.',
+        desc: 'Revisamos cada necesidad y conversamos alternativas de diseño o desarrollo que se ajusten al alcance del proyecto.',
         icon: 'fa-paintbrush'
     },
     {

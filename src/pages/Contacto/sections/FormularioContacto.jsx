@@ -44,7 +44,7 @@ const FormularioContacto = () => {
                         </span>
                     </h2>
                     <p className="text-white/70 font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">
-                        Escríbenos para consultas sobre proyectos, soluciones académicas o dudas sobre cómo digitalizar tu negocio. Te responderemos a la brevedad.
+                        Escribinos para consultas sobre desarrollo web y de software, diseño gráfico, recursos profesionales o acompañamiento académico. Contanos qué necesitás para revisar las alternativas posibles.
                     </p>
                 </div>
 
@@ -208,7 +208,7 @@ const FormularioContacto = () => {
                                     <div className="rounded-xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-[11px] text-white/60 font-semibold leading-relaxed text-center">
                                         <div className="flex items-center justify-center gap-2">
                                             <i className="fas fa-lightbulb text-[#84CC16] flex-shrink-0"></i>
-                                            <span>Te responderemos a la brevedad posible a través de WhatsApp.</span>
+                                            <span>Podés dejarnos tu consulta; la disponibilidad y el canal de respuesta se coordinan según el caso.</span>
                                         </div>
                                     </div>
                                 </form>
