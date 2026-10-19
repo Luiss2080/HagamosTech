@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from 'react';
-import TechToolCard from './TechToolCard';
+import React, { useEffect, useRef, useState } from 'react';
+import TechToolCard, { BRAND_LOGOS } from './TechToolCard';
 
 const TechToolsCarousel = ({
   items = [],
@@ -7,6 +7,7 @@ const TechToolsCarousel = ({
   description = 'Recursos que pueden evaluarse según los objetivos y el alcance acordado.',
   onDetails,
 }) => {
+  const [selectedTool, setSelectedTool] = useState(null);
   const trackRef = useRef(null);
   const animationFrameRef = useRef(null);
   const offsetRef = useRef(0);
@@ -59,7 +60,7 @@ const TechToolsCarousel = ({
         return;
       }
       if (!isPausedRef.current && halfWidth) {
-        applyOffset(normalizeOffset(offsetRef.current - (elapsed * halfWidth) / 40000));
+        applyOffset(normalizeOffset(offsetRef.current - (elapsed * halfWidth) / 65000));
       }
       animationFrameRef.current = requestAnimationFrame(animate);
     };
@@ -72,6 +73,15 @@ const TechToolsCarousel = ({
       motionPreference?.removeEventListener?.('change', updateMotionPreference);
     };
   }, []);
+
+  useEffect(() => {
+    if (!selectedTool) return undefined;
+    const closeOnEscape = (event) => {
+      if (event.key === 'Escape') setSelectedTool(null);
+    };
+    window.addEventListener('keydown', closeOnEscape);
+    return () => window.removeEventListener('keydown', closeOnEscape);
+  }, [selectedTool]);
 
   const handlePointerDown = (event) => {
     if (event.pointerType === 'mouse' && event.button !== 0) return;
@@ -102,6 +112,11 @@ const TechToolsCarousel = ({
     isPausedRef.current = false;
   };
 
+  const showDetails = (item) => {
+    if (onDetails) onDetails(item);
+    else setSelectedTool(item);
+  };
+
   if (!items.length) return null;
 
   return (
@@ -127,11 +142,27 @@ const TechToolsCarousel = ({
         {[0, 1].map((copy) => (
           <div key={copy} className="flex shrink-0 gap-5 sm:gap-6" aria-hidden={copy === 1 ? 'true' : undefined} inert={copy === 1}>
             {items.map((item, index) => (
-              <TechToolCard key={`${item.id || item.name}-${copy}-${index}`} item={item} index={index} onDetails={onDetails} />
+              <TechToolCard key={`${item.id || item.name}-${copy}-${index}`} item={item} index={index} onDetails={showDetails} />
             ))}
           </div>
         ))}
       </div>
+      {selectedTool && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/75 p-4 backdrop-blur-sm" onClick={() => setSelectedTool(null)}>
+          <div role="dialog" aria-modal="true" aria-labelledby="tool-details-title" className="relative w-full max-w-md rounded-3xl border border-[#A3E635]/35 bg-[#0B0D09] p-7 text-center shadow-[0_24px_80px_rgba(0,0,0,.55)]" onClick={(event) => event.stopPropagation()}>
+            <button type="button" aria-label="Cerrar detalles" onClick={() => setSelectedTool(null)} className="absolute right-4 top-4 flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-[#A3E635] hover:text-black">
+              <i className="fa-solid fa-xmark" aria-hidden="true" />
+            </button>
+            <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl border border-white/10 bg-white p-3">
+              {(selectedTool.logo || BRAND_LOGOS[selectedTool.name]) && <img src={selectedTool.logo || BRAND_LOGOS[selectedTool.name]} alt="" className="max-h-full max-w-full object-contain" onError={(event) => { event.currentTarget.hidden = true; event.currentTarget.nextElementSibling.hidden = false; }} />}
+              <span hidden={Boolean(selectedTool.logo || BRAND_LOGOS[selectedTool.name])} className="font-black text-slate-700">{selectedTool.name.slice(0, 3)}</span>
+            </div>
+            <p className="mb-2 text-[10px] font-black uppercase tracking-[.18em] text-[#A3E635]">{selectedTool.tag || 'Recurso tecnológico'}</p>
+            <h3 id="tool-details-title" className="text-2xl font-black text-white">{selectedTool.name}</h3>
+            <p className="mt-3 text-sm leading-relaxed text-slate-300">{selectedTool.desc || selectedTool.cardDescription || 'Su uso se define según los requisitos, el alcance y la viabilidad del proyecto.'}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

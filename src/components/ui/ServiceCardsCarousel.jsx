@@ -30,7 +30,7 @@ const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', bad
   if (!items.length) return null;
 
   return (
-    <section className="mx-auto w-full max-w-6xl" aria-label={label}>
+    <div className="mx-auto w-full max-w-6xl" role="region" aria-label={label}>
       <div className="relative overflow-hidden px-1 sm:px-3">
         <div
           className="flex items-stretch transition-transform duration-500 ease-out"
@@ -130,7 +130,7 @@ const ServiceCardsCarousel = ({ items = [], label = 'Tarjetas de servicios', bad
           </button>
         </div>
       )}
-    </section>
+    </div>
   );
 };
 

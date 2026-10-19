@@ -1,8 +1,8 @@
 import React from 'react';
 import FondoTech from '../fondos/FondoTech';
 
-const FeatureTimeline = ({ title, description, items = [] }) => (
-  <section className="relative isolate overflow-hidden px-6 py-20">
+const FeatureTimeline = ({ title, description, items = [], children }) => (
+  <section className="relative isolate overflow-hidden px-6 py-16 sm:py-20">
     <FondoTech />
     <div className="relative z-10 mx-auto max-w-7xl">
       <header className="mx-auto mb-12 max-w-3xl text-center">
@@ -25,6 +25,7 @@ const FeatureTimeline = ({ title, description, items = [] }) => (
           </article>
         ))}
       </div>
+      {children && <div className="relative z-10 mt-16 sm:mt-20">{children}</div>}
     </div>
   </section>
 );

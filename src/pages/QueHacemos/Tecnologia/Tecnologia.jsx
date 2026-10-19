@@ -158,22 +158,17 @@ const Tecnologia = () => {
         items={METRICS}
         title="Condiciones de cada proyecto"
         description="Acordamos el alcance, la modalidad y la disponibilidad antes de definir el siguiente paso."
-      />
-
-      {/* VERTICALES DE TECNOLOGÍA */}
-      <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
-        <FondoTech />
-        <div className="container mx-auto max-w-7xl">
-          <h2 className="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tight">
+      >
+        <header className="mx-auto mb-10 max-w-3xl text-center">
+          <h2 className="text-3xl font-black uppercase tracking-tight text-white md:text-5xl">
             Qué podemos <span className="text-[#A3E635]">desarrollar</span>
           </h2>
-          <p className="mx-auto -mt-10 mb-12 max-w-2xl text-center text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
+          <p className="mt-4 text-sm font-medium leading-relaxed text-slate-400 sm:text-base">
             Revisamos cada alternativa según las funciones necesarias, el alcance y la viabilidad del proyecto.
           </p>
-          
-          <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
-        </div>
-      </section>
+        </header>
+        <ServiceCardsCarousel items={VERTICALS} label="Áreas de tecnología" />
+      </FeatureTimeline>
 
       <section className="py-20 relative z-10">
         <FondoTech />

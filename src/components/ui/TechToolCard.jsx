@@ -95,3 +95,4 @@ const TechToolCard = ({ item, index, onDetails }) => (
 );
 
 export default TechToolCard;
+export { BRAND_LOGOS };
