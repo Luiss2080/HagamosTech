@@ -15,6 +15,7 @@ describe('GlobalBreadcrumb', () => {
     renderAt('/sobre-nosotros/mision-vision');
 
     const navigation = screen.getByRole('navigation', { name: 'Migas de pan' });
+    expect(navigation).toHaveClass('border-b', 'h-[142px]', 'sm:h-[150px]', 'lg:h-[160px]');
     expect(within(navigation).getByRole('link', { name: 'Ir al inicio' })).toHaveAttribute('href', '/');
     expect(within(navigation).getByRole('link', { name: 'Sobre nosotros' })).toHaveAttribute('href', '/sobre-nosotros');
     expect(within(navigation).getByText('Misión y visión')).toHaveAttribute('aria-current', 'page');

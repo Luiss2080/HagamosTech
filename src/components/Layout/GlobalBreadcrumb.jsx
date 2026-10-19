@@ -62,8 +62,8 @@ const GlobalBreadcrumb = () => {
   const crumbs = pathname === '/' ? [] : getSegments(pathname);
 
   return (
-    <nav aria-label="Migas de pan" className="relative top-[84px] z-20 px-4 py-2 sm:top-[102px] sm:px-6">
-      <ol className="mx-auto flex w-fit max-w-full items-center gap-2 overflow-x-auto rounded-full border border-white/10 bg-[#0a0d09]/85 px-2 py-1.5 shadow-[0_8px_26px_rgba(0,0,0,.2)] backdrop-blur-md">
+    <nav aria-label="Migas de pan" className="relative z-20 h-[142px] border-b border-[#A3E635]/10 bg-[#050505]/95 px-4 pt-[84px] backdrop-blur-md sm:h-[150px] sm:px-6 sm:pt-[92px] lg:h-[160px] lg:pt-[102px]">
+      <ol className="mx-auto flex w-fit max-w-full items-center gap-2 overflow-x-auto rounded-full border border-white/10 bg-[#0a0d09]/85 px-2 py-1.5 shadow-[0_8px_26px_rgba(0,0,0,.2)]">
         <li className="flex shrink-0 items-center gap-2">
           {crumbs.length ? (
             <Link to="/" aria-label="Ir al inicio" className="flex h-7 w-7 items-center justify-center rounded-full bg-[#A3E635] text-[#0A0A0A] transition hover:bg-[#84CC16]">

@@ -25,7 +25,7 @@ const AppLayout = ({ children }) => {
             </div>
             <Header />
             <GlobalBreadcrumb />
-            <main className="flex-grow relative z-10">
+            <main className="-mt-[84px] flex-grow relative z-10 sm:-mt-[92px] lg:-mt-[102px]">
                 {children}
             </main>
             <Footer />

@@ -1,173 +1,128 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import ParticulasCirculares from "../fondos/ParticulasCirculares";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import FondoTech from '../fondos/FondoTech';
 
-const Footer = () => {
+const solutionsLinks = [
+  { name: 'Tecnología', path: '/que-hacemos/tecnologia' },
+  { name: 'Academia', path: '/que-hacemos/academia' },
+  { name: 'Negocios', path: '/que-hacemos/negocios' },
+  { name: 'Soluciones personalizadas', path: '/que-hacemos/personalizado' },
+  { name: 'Cómo trabajamos', path: '/como-trabajamos' },
+];
 
-  const menuLinks = [
-    { name: "Tecnología", path: "/que-hacemos/tecnologia", icon: "fa-microchip" },
-    { name: "Academia", path: "/que-hacemos/academia", icon: "fa-graduation-cap" },
-    { name: "Negocios", path: "/que-hacemos/negocios", icon: "fa-store" },
-    { name: "Soluciones personalizadas", path: "/que-hacemos/personalizado", icon: "fa-lightbulb" },
-    { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
-  ];
+const aboutLinks = [
+  { name: 'Cómo trabajamos', path: '/como-trabajamos' },
+  { name: 'Nuestras soluciones', path: '/servicios/desarrollo-web' },
+  { name: 'Contanos tu idea', path: '/contactanos' },
+  { name: 'Apoyo y soporte', path: '/contactanos' },
+  { name: 'Trabajá con nosotros', path: '/contactanos' },
+];
 
-  const nosotrosLinks = [
-    { name: "Cómo trabajamos", path: "/como-trabajamos", icon: "fa-diagram-project" },
-    { name: "Nuestras soluciones", path: "/servicios/desarrollo-web", icon: "fa-layer-group" },
-    { name: "Contanos tu idea", path: "/contactanos", icon: "fa-comment-dots" },
-    { name: "Apoyo y soporte", path: "/contactanos", icon: "fa-headset" },
-    { name: "Trabajá con nosotros", path: "/contactanos", icon: "fa-briefcase" },
-  ];
+const socialLinks = [
+  { name: 'Facebook', icon: 'fa-facebook-f', href: 'https://www.facebook.com/HagamosTech' },
+  { name: 'Instagram', icon: 'fa-instagram', href: 'https://www.instagram.com/hagamostech/' },
+  { name: 'TikTok', icon: 'fa-tiktok', href: 'https://www.tiktok.com/@hagamostech' },
+  { name: 'WhatsApp', icon: 'fa-whatsapp', href: 'https://wa.me/59161320004' },
+];
 
-  return (
-    <footer 
-      className="relative bg-[#0A0A0A] text-white/80 pt-16 pb-8 z-10 overflow-hidden shadow-[0_-10px_30px_rgba(0,0,0,0.4)]"
-      style={{ borderTop: '5px solid transparent', borderImage: 'linear-gradient(to right, #A3E635, #FFFFFF) 1' }}
-    >
+const FooterLinkList = ({ title, links }) => (
+  <section aria-labelledby={`footer-${title.toLowerCase().replace(/\s+/g, '-')}`}>
+    <h2 id={`footer-${title.toLowerCase().replace(/\s+/g, '-')}`} className="mb-5 flex items-center gap-2.5 text-xs font-black uppercase tracking-[.2em] text-white">
+      <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#A3E635] shadow-[0_0_12px_rgba(163,230,53,.85)]" />
+      {title}
+    </h2>
+    <ul className="space-y-3">
+      {links.map(({ name, path }) => (
+        <li key={name}>
+          <Link to={path} className="group inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition-colors hover:text-[#A3E635]">
+            <i aria-hidden="true" className="fa-solid fa-arrow-right text-[9px] text-[#A3E635]/60 transition-transform group-hover:translate-x-1 group-hover:text-[#A3E635]" />
+            {name}
+          </Link>
+        </li>
+      ))}
+    </ul>
+  </section>
+);
 
-      {/* Fondo de Partículas */}
-      <div className="absolute inset-0 pointer-events-none opacity-40 mix-blend-screen">
-        <ParticulasCirculares />
-      </div>
+const ContactItem = ({ icon, title, children }) => (
+  <li className="flex items-start gap-3">
+    <span aria-hidden="true" className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border border-[#A3E635]/20 bg-[#A3E635]/[.08] text-sm text-[#A3E635]">
+      <i className={`fa-solid ${icon}`} />
+    </span>
+    <span className="min-w-0">
+      <span className="block text-[10px] font-black uppercase tracking-[.16em] text-slate-500">{title}</span>
+      <span className="mt-1 block text-sm font-medium leading-relaxed text-slate-300">{children}</span>
+    </span>
+  </li>
+);
 
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        {/* Main Grid with Vertical Dividers */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-y-12 lg:gap-y-0 lg:divide-x lg:divide-white/10 mb-12">
-
-          {/* COLUMNA 1: BRAND (4 cols) */}
-          <div className="lg:col-span-4 flex flex-col items-center text-center px-4 lg:pr-10 space-y-6">
-            <Link to="/" className="group inline-block">
-              <img
-                src="/img/02_Logos/LogoHeader.png"
-                alt="Logo HagamosTech"
-                className="h-16 w-auto object-contain transition-transform duration-500 group-hover:scale-105 drop-shadow-xl select-none"
-              />
-            </Link>
-            <p className="text-white/70 text-[14px] leading-relaxed max-w-sm font-medium">
-              Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
-            </p>
-            <div className="flex items-center justify-center gap-4 pt-3">
-              {[
-                { icon: "fa-facebook-f", href: "https://www.facebook.com/HagamosTech", hover: "hover:bg-[#1877F2]" },
-                { icon: "fa-instagram", href: "https://www.instagram.com/hagamostech/", hover: "hover:bg-gradient-to-tr hover:from-[#F58529] hover:via-[#DD2A7B] hover:to-[#8134AF]" },
-                { icon: "fa-tiktok", href: "https://www.tiktok.com/@hagamostech", hover: "hover:bg-black" },
-                { icon: "fa-whatsapp", href: "https://wa.me/59161320004", hover: "hover:bg-[#25D366]" }
-              ].map((social, i) => (
+const Footer = () => (
+  <footer className="relative isolate z-10 overflow-hidden border-t border-[#A3E635]/25 bg-[#050505] text-white/80">
+    <FondoTech />
+    <div className="relative z-10 mx-auto max-w-7xl px-6 pb-7 pt-14 sm:px-8 sm:pt-16 lg:px-10">
+      <div className="grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 xl:grid-cols-12 xl:gap-x-10">
+        <section aria-label="HagamosTech" className="xl:col-span-4">
+          <Link to="/" aria-label="HagamosTech, ir al inicio" className="inline-flex rounded-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3E635]">
+            <img src="/img/02_Logos/LogoHeader.png" alt="HagamosTech" className="h-12 w-auto object-contain sm:h-14" />
+          </Link>
+          <p className="mt-5 max-w-md text-sm font-medium leading-relaxed text-slate-300">
+            Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+          </p>
+          <ul aria-label="Redes sociales" className="mt-6 flex flex-wrap gap-2.5">
+            {socialLinks.map((social) => (
+              <li key={social.name}>
                 <a
-                  key={i}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`w-11 h-11 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/80 ${social.hover} hover:text-white hover:border-transparent transition-all duration-300 group hover:-translate-y-2 shadow-lg hover:shadow-xl`}
+                  aria-label={social.name}
+                  className="flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-white/[.04] text-slate-300 transition hover:-translate-y-0.5 hover:border-[#A3E635]/50 hover:bg-[#A3E635] hover:text-[#0A0A0A] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3E635]"
                 >
-                  <i className={`fab ${social.icon} text-lg group-hover:-translate-y-1 transition-transform`}></i>
+                  <i aria-hidden="true" className={`fab ${social.icon}`} />
                 </a>
-              ))}
-            </div>
-          </div>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-          {/* COLUMNA 2: SOLUCIONES (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-12">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
-              SOLUCIONES
-            </h3>
-            <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
-              {menuLinks.map((link, i) => (
-                <li key={i} className="w-full max-w-[200px] lg:max-w-none transition-transform duration-300 hover:scale-[1.03] hover:translate-x-1.5">
-                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner shrink-0">
-                      <i className={`fas ${link.icon} text-[13px] text-[#A3E635] group-hover:text-[#0A0A0A] transition-colors`}></i>
-                    </div>
-                    <span className="text-[14px] font-semibold">{link.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* COLUMNA 3: NOSOTROS (2 cols) */}
-          <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-10">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
-              <span className="w-2.5 h-2.5 rounded-full bg-white shadow-[0_0_10px_rgba(255,255,255,1)]"></span>
-              NOSOTROS
-            </h3>
-            <ul className="space-y-5 w-full flex flex-col items-center lg:items-start">
-              {nosotrosLinks.map((link, i) => (
-                <li key={i} className="w-full max-w-[200px] lg:max-w-none transition-transform duration-300 hover:scale-[1.03] hover:translate-x-1.5">
-                  <Link to={link.path} className="group flex items-center justify-start gap-4 text-white/80 hover:text-white transition-colors duration-300 w-full">
-                    <div className="w-9 h-9 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-white transition-colors duration-300 shadow-inner shrink-0">
-                      <i className={`fas ${link.icon} text-[13px] text-white group-hover:text-[#0A0A0A] transition-colors`}></i>
-                    </div>
-                    <span className="text-[14px] font-semibold">{link.name}</span>
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* COLUMNA 4: CONTACTO (3 cols) */}
-          <div className="lg:col-span-3 flex flex-col items-center lg:items-start text-center lg:text-left px-4 lg:pl-12">
-            <h3 className="text-white font-black text-[15px] tracking-widest uppercase mb-8 flex items-center justify-center lg:justify-start gap-3 w-full animate-fade-in-up">
-              <span className="w-2.5 h-2.5 rounded-full bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,1)]"></span>
-              CONTACTO
-            </h3>
-            <ul className="space-y-6 w-full flex flex-col items-center lg:items-start">
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-location-dot text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Oficina principal</span>
-                  <span className="text-[14px] text-white/80 font-medium leading-snug group-hover:text-white transition-colors">Av. San Martín y 2do Anillo<br />Equipetrol, Santa Cruz</span>
-                </div>
-              </li>
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-envelope text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Email</span>
-                  <a href="mailto:contacto@hagamostech.bo" className="text-[14px] text-white/80 font-medium hover:text-white transition-colors">contacto@hagamostech.bo</a>
-                </div>
-              </li>
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-[#A3E635] transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-phone text-[#A3E635] text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Teléfono / WhatsApp</span>
-                  <a href="tel:+59161320004" className="text-[14px] text-white/80 font-medium hover:text-white transition-colors">+591 61320004</a>
-                </div>
-              </li>
-              <li className="flex items-center justify-start gap-4 group hover:translate-x-1 transition-transform duration-300 w-full max-w-[250px] lg:max-w-none">
-                <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 group-hover:bg-white transition-colors duration-300 shadow-inner">
-                  <i className="fas fa-clock text-white text-[15px] group-hover:text-[#0A0A0A] transition-colors"></i>
-                </div>
-                <div className="flex flex-col text-left">
-                  <span className="text-[11px] font-black text-white/50 uppercase tracking-widest mb-1">Horarios</span>
-                  <span className="text-[14px] text-white/80 font-medium group-hover:text-white transition-colors">Lun - Vie: 09:00 - 18:00</span>
-                </div>
-              </li>
-            </ul>
-          </div>
+        <div className="xl:col-span-2">
+          <FooterLinkList title="Soluciones" links={solutionsLinks} />
         </div>
 
-        {/* Footer Bottom */}
-        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-[13px] text-white/60 font-semibold tracking-wide">
-            &copy; {new Date().getFullYear()} HagamosTech. Todos los derechos reservados.
-          </p>
-          <div className="flex items-center gap-6">
-            <Link to="/privacidad" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Política de Privacidad</Link>
-            <Link to="/terminos" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Términos de Servicio</Link>
-            <Link to="/cookies" className="text-[13px] font-semibold text-white/60 hover:text-[#A3E635] transition-colors">Cookies</Link>
-          </div>
+        <div className="xl:col-span-2">
+          <FooterLinkList title="Nosotros" links={aboutLinks} />
         </div>
+
+        <section aria-labelledby="footer-contacto" className="xl:col-span-4">
+          <h2 id="footer-contacto" className="mb-5 flex items-center gap-2.5 text-xs font-black uppercase tracking-[.2em] text-white">
+            <span aria-hidden="true" className="h-2 w-2 rounded-full bg-[#A3E635] shadow-[0_0_12px_rgba(163,230,53,.85)]" />
+            Contacto
+          </h2>
+          <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
+            <ContactItem icon="fa-location-dot" title="Oficina principal">
+              Av. San Martín y 2do Anillo<br />Equipetrol, Santa Cruz
+            </ContactItem>
+            <ContactItem icon="fa-envelope" title="Email">
+              <a href="mailto:contacto@hagamostech.bo" className="break-all transition-colors hover:text-[#A3E635]">contacto@hagamostech.bo</a>
+            </ContactItem>
+            <ContactItem icon="fa-phone" title="Teléfono / WhatsApp">
+              <a href="tel:+59161320004" className="transition-colors hover:text-[#A3E635]">+591 61320004</a>
+            </ContactItem>
+            <ContactItem icon="fa-clock" title="Horarios">Lun - Vie: 09:00 - 18:00</ContactItem>
+          </ul>
+        </section>
       </div>
-    </footer>
-  );
-};
+
+      <div className="mt-12 flex flex-col gap-5 border-t border-white/10 pt-6 text-center sm:mt-14 md:flex-row md:items-center md:justify-between md:text-left">
+        <p className="text-xs font-medium tracking-wide text-slate-400">© {new Date().getFullYear()} HagamosTech. Todos los derechos reservados.</p>
+        <nav aria-label="Información legal" className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 md:justify-end">
+          <Link to="/privacidad" className="text-xs font-semibold text-slate-400 transition-colors hover:text-[#A3E635]">Política de Privacidad</Link>
+          <Link to="/terminos" className="text-xs font-semibold text-slate-400 transition-colors hover:text-[#A3E635]">Términos de Servicio</Link>
+          <Link to="/cookies" className="text-xs font-semibold text-slate-400 transition-colors hover:text-[#A3E635]">Cookies</Link>
+        </nav>
+      </div>
+    </div>
+  </footer>
+);
 
 export default Footer;
