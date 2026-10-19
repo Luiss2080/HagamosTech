@@ -16,6 +16,11 @@
   text-wrap: balance;
 }
 
+.legal-page h2[class*="text-[#0A0A0A]"],
+.legal-page h2[class*="text-[#171717]"] {
+  color: #f8fafc !important;
+}
+
 .legal-page section h2 + p {
   max-width: 48rem;
   margin-inline: auto;
@@ -32,9 +37,12 @@
 }
 
 .legal-page [class~="text-[#111827]"],
-.legal-page [class~="text-[#171717]"],
-.legal-page [class~="text-[#0A0A0A]"] {
+.legal-page [class~="text-[#171717]"] {
   color: #f8fafc !important;
+}
+
+.legal-page [class*="bg-[#A3E635]/10"][class*="text-[#0A0A0A]"] {
+  color: #d9f99d !important;
 }
 
 /* Neutraliza superficies claras heredadas de las antiguas plantillas legales. */
