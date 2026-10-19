@@ -17,8 +17,7 @@
     <a href="#-arquitectura">Arquitectura</a> ·
     <a href="#-pruebas">Pruebas</a> ·
     <a href="#-lo-que-todavía-no-existe">Limitaciones</a> ·
-    <a href="#-contribuir">Contribuir</a> ·
-    <a href="https://hagamos-tech.vercel.app">Demo</a>
+    <a href="#-contribuir">Contribuir</a>
   </p>
 </div>
 
