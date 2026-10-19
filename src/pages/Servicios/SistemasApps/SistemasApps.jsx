@@ -1,5 +1,6 @@
 import RecorridoSistemasApps from './RecorridoSistemasApps';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
@@ -264,8 +265,14 @@ Desarrollo de sistemas web y software, diseño de interfaces y gestión de bases
       <RecorridoSistemasApps />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
-      <section className="py-12 relative overflow-hidden reveal">
-        <FondoTech />
+      <TestimonialCTASection cta={{
+        title: "Diseñemos una solución para tu operación",
+        description: "Cuéntanos cómo trabajas y revisamos qué sistema o aplicación responde a tus necesidades.",
+        href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20un%20sistema%20o%20aplicaci%C3%B3n",
+        image: "/img/08_Cards/proyecto-sistemas-erp.webp",
+        imageAlt: "Diseñemos una solución para tu operación",
+      }}>
+
           <TestimonialCarousel title="Ejemplos de sistemas y aplicaciones" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
@@ -276,7 +283,7 @@ Desarrollo de sistemas web y software, diseño de interfaces y gestión de bases
           ];
           return { ...t, image: photos[idx % photos.length] };
         })} />
-      </section>
+      </TestimonialCTASection>
     </div>
   );
 };

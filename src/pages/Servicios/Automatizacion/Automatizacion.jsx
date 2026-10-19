@@ -1,5 +1,6 @@
 import RecorridoAutomatizacion from './RecorridoAutomatizacion';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
@@ -264,8 +265,14 @@ Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y S
       <RecorridoAutomatizacion />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
-      <section className="py-12 relative overflow-hidden reveal">
-        <FondoTech />
+      <TestimonialCTASection cta={{
+        title: "Conversemos sobre lo que quieres automatizar",
+        description: "Revisamos tus procesos y definimos juntos un alcance viable para tu solución.",
+        href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20automatizaci%C3%B3n%20de%20procesos",
+        image: "/img/08_Cards/proyecto-personalizado-integracion.webp",
+        imageAlt: "Conversemos sobre lo que quieres automatizar",
+      }}>
+
           <TestimonialCarousel title="Ejemplos de automatización" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
@@ -276,7 +283,7 @@ Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y S
           ];
           return { ...t, image: photos[idx % photos.length] };
         })} />
-      </section>
+      </TestimonialCTASection>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import RecorridoPaginasWeb from './RecorridoPaginasWeb';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
@@ -265,8 +266,14 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
       <RecorridoPaginasWeb />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
-      <section className="py-12 relative overflow-hidden reveal">
-        <FondoTech />
+      <TestimonialCTASection cta={{
+        title: "Hablemos de tu próximo sitio web",
+        description: "Cuéntanos qué necesitas mostrar o resolver y evaluamos contigo el alcance del sitio.",
+        href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20desarrollo%20de%20mi%20sitio%20web",
+        image: "/img/08_Cards/proyecto-web-corporativo.webp",
+        imageAlt: "Hablemos de tu próximo sitio web",
+      }}>
+
           <TestimonialCarousel title="Ejemplos de desarrollo web" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
@@ -277,7 +284,7 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
           ];
           return { ...t, image: photos[idx % photos.length] };
         })} />
-      </section>
+      </TestimonialCTASection>
     </div>
   );
 };

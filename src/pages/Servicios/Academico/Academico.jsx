@@ -1,5 +1,6 @@
 import RecorridoAcademico from './RecorridoAcademico';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
@@ -266,8 +267,14 @@ Mentorías académicas, apoyo guiado en tareas, informes, monografías, proyecto
       <RecorridoAcademico />
 
       {/* SECCIÓN 5: TESTIMONIOS */}
-      <section className="py-12 relative overflow-hidden reveal">
-        <FondoTech />
+      <TestimonialCTASection cta={{
+        title: "Tu proyecto académico, con orientación clara",
+        description: "Cuéntanos la materia o consigna y revisamos una modalidad adecuada para avanzar.",
+        href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20acompa%C3%B1amiento%20acad%C3%A9mico",
+        image: "/img/08_Cards/academico-mentorias.webp",
+        imageAlt: "Tu proyecto académico, con orientación clara",
+      }}>
+
           <TestimonialCarousel title="Ejemplos de acompañamiento académico" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades. El estudiante desarrolla su propio trabajo." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
@@ -278,7 +285,7 @@ Mentorías académicas, apoyo guiado en tareas, informes, monografías, proyecto
           ];
           return { ...t, image: photos[idx % photos.length] };
         })} />
-      </section>
+      </TestimonialCTASection>
     </div>
   );
 };

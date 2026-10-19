@@ -1,5 +1,6 @@
 import RecorridoEmpleo from './RecorridoEmpleo';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
+import TestimonialCTASection from '../../../components/ui/TestimonialCTASection';
 import React from 'react';
 import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
@@ -265,8 +266,14 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
       <RecorridoEmpleo />
 
       {/* SECCI�N 5: TESTIMONIOS */}
-      <section className="py-12 relative overflow-hidden reveal">
-        <FondoTech />
+      <TestimonialCTASection cta={{
+        title: "Prepara tu siguiente paso profesional",
+        description: "Revisamos tu perfil, tus objetivos y los recursos que pueden ayudarte a presentarte mejor.",
+        href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20orientaci%C3%B3n%20laboral",
+        image: "/img/08_Cards/proyecto-empleo-cv.webp",
+        imageAlt: "Prepara tu siguiente paso profesional",
+      }}>
+
           <TestimonialCarousel title="Ejemplos de orientación laboral" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
@@ -277,7 +284,7 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
           ];
           return { ...t, image: photos[idx % photos.length] };
         })} />
-      </section>
+      </TestimonialCTASection>
     </div>
   );
 };
