@@ -1,4 +1,5 @@
 import React from 'react';
+import FondoTech from '../../../components/fondos/FondoTech';
 import { 
   Store, TrendingUp, BarChart, ArrowRight,
   Globe, Cpu, Users, ShieldCheck
@@ -55,6 +56,7 @@ const Negocios = () => {
 
       {/* HERO SECTION - IMMERSIVE DASHBOARD */}
       <section className="relative pt-32 pb-10 z-10 px-6">
+        <FondoTech />
         <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
@@ -82,6 +84,7 @@ const Negocios = () => {
 
       {/* BENTO BOX GRID SECTION */}
       <section className="py-24 z-10 relative px-6">
+        <FondoTech />
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
@@ -98,6 +101,7 @@ const Negocios = () => {
 
       {/* TIMELINE SECTION */}
       <section className="py-24 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
+        <FondoTech />
         <div className="container mx-auto max-w-7xl">
           <div className="mb-8 grid items-end gap-6 lg:mb-10 lg:grid-cols-[1fr_1fr]">
             <div>
@@ -124,6 +128,7 @@ const Negocios = () => {
 
       {/* TESTIMONIALS */}
       <section className="relative z-10 overflow-hidden px-6 py-20 sm:py-24">
+        <FondoTech />
         <div className="pointer-events-none absolute left-1/2 top-1/2 h-80 w-[min(900px,90vw)] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#A3E635]/[0.06] blur-[100px]" />
         <div className="relative mx-auto max-w-7xl">
           <header className="mx-auto mb-4 max-w-3xl text-center">
@@ -149,6 +154,7 @@ const Negocios = () => {
       </section>
 
       <section className="relative z-10 px-6 pb-24 pt-8 sm:pb-32">
+        <FondoTech />
         <div className="group relative mx-auto max-w-7xl overflow-hidden rounded-[2rem] border border-white/10 bg-[#0B0D09] shadow-[0_28px_100px_rgba(0,0,0,.4)] sm:rounded-[2.5rem]">
           <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(115deg,rgba(163,230,53,.09),transparent_48%,rgba(163,230,53,.035))]" />
           <div className="pointer-events-none absolute -right-20 -top-36 h-96 w-96 rounded-full border border-[#A3E635]/10 transition-transform duration-700 group-hover:translate-x-4 group-hover:translate-y-4" />

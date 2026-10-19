@@ -8,7 +8,7 @@ const ToolsMarquee = ({
   if (!items.length) return null;
 
   return (
-    <div className="relative overflow-hidden py-12" aria-label={label}>
+    <div className="relative overflow-hidden py-12" role="region" aria-label={label}>
       <div className="mx-auto mb-8 max-w-3xl px-6 text-center">
         <h2 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">
           {label}

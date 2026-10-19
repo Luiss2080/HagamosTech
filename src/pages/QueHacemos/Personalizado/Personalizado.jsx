@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FondoTech from '../../../components/fondos/FondoTech';
 import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import { Lightbulb, Code, ArrowRight, MessageSquare, Puzzle, Search, Wrench } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
@@ -191,6 +192,7 @@ const Personalizado = () => {
 
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
+        <FondoTech />
         <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
@@ -218,14 +220,15 @@ const Personalizado = () => {
 
       {/* STACK TECNOL�GICO INFINITO */}
       <section className="z-10 relative">
+        <FondoTech />
         <div className="container mx-auto px-6">
-          <p className="text-center text-xs font-black text-neutral-500 uppercase tracking-widest mb-6">Stack Versátil y Adaptable</p>
           <ToolsMarquee items={TECH_STACK} label="Tecnologías para soluciones a medida" description="Cada recurso se considera según los requisitos, la viabilidad y el alcance acordado." />
         </div>
       </section>
 
       {/* BENTO BOX GRID SECTION */}
       <section className="py-24 z-10 relative px-6">
+        <FondoTech />
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
@@ -242,6 +245,7 @@ const Personalizado = () => {
       
       {/* TIMELINE SECTION */}
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
+        <FondoTech />
          <div className="container mx-auto max-w-5xl">
           <div className="flex flex-col lg:flex-row gap-16 items-start">
             <div className="w-full lg:w-1/3 sticky top-32">
@@ -262,6 +266,7 @@ const Personalizado = () => {
 
       {/* TESTIMONIALS */}
       <section className="py-20 relative z-10">
+        <FondoTech />
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
             Ideas de <span className="text-[#A3E635]">proyectos</span>

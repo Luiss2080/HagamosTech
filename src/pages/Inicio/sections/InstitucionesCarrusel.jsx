@@ -237,8 +237,8 @@ const InstitucionesCarrusel = () => {
     );
 
     return (
-        <section id="instituciones" className="w-full bg-[#050505] py-4 sm:py-6 overflow-hidden relative z-10 flex items-center min-h-[160px]">
-            <FondoTech hideWaves={true} />
+        <section id="instituciones" className="w-full bg-[#050505] py-10 sm:py-12 overflow-hidden relative z-10 min-h-[220px]">
+            <FondoTech />
 
             {/* Edge Fades */}
             <div className="absolute top-0 left-0 h-full w-16 sm:w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-20 pointer-events-none"></div>
@@ -259,6 +259,10 @@ const InstitucionesCarrusel = () => {
             `}</style>
 
             <div className="relative z-10 w-full flex flex-col">
+                <header className="mx-auto mb-6 max-w-3xl px-6 text-center">
+                    <h2 className="text-2xl font-black uppercase tracking-tight text-white sm:text-3xl">Tecnologías y herramientas</h2>
+                    <p className="mt-3 text-sm font-medium leading-relaxed text-slate-400 sm:text-base">Conocé recursos que pueden utilizarse según los requisitos y el alcance de cada proyecto.</p>
+                </header>
                 <button
                     type="button"
                     aria-label="Mostrar elemento anterior"

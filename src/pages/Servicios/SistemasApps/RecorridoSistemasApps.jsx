@@ -1,5 +1,6 @@
 import ModernServiceGrid from '../../../components/ui/ModernServiceGrid';
 import React, { useState, useEffect } from 'react';
+import FondoTech from '../../../components/fondos/FondoTech';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const TECH_DETAILS = {
@@ -86,6 +87,7 @@ const ProjectCarousel = ({ images }) => {
 const RecorridoSistemasApps = () => {
   return (
     <section className="py-20 relative overflow-hidden bg-transparent reveal">
+        <FondoTech />
       <div className="container mx-auto px-6 max-w-7xl relative z-10">
         
         {/* Header Section */}

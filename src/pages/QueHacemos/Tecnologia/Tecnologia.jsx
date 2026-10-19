@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import FondoTech from '../../../components/fondos/FondoTech';
 import { Terminal, Code, Cpu, Database, Zap, ArrowRight, ShieldCheck, Server, ChevronRight } from 'lucide-react';
 import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
@@ -120,6 +121,7 @@ const Tecnologia = () => {
 
       {/* HERO SECTION */}
       <section className="relative pt-32 pb-20 z-10 px-6">
+        <FondoTech />
         <div className="container mx-auto max-w-7xl text-center flex flex-col items-center">
           
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 text-xs font-black uppercase tracking-widest text-[#A3E635] mb-8 animate-fade-in-up">
@@ -147,6 +149,7 @@ const Tecnologia = () => {
 
       {/* STACK TECNOLÓGICO INFINITO */}
       <section className="z-10 relative">
+        <FondoTech />
         <div className="container mx-auto px-6">
           <ToolsMarquee items={TECH_STACK} label="Tecnologías para tu solución" description="Revisamos qué herramientas pueden responder a los requisitos de cada proyecto." />
         </div>
@@ -161,6 +164,7 @@ const Tecnologia = () => {
 
       {/* VERTICALES DE TECNOLOGÍA */}
       <section className="py-20 z-10 relative px-6 bg-gradient-to-b from-transparent to-[#0a0a0a]">
+        <FondoTech />
         <div className="container mx-auto max-w-7xl">
           <h2 className="text-3xl md:text-5xl font-black text-white text-center mb-16 uppercase tracking-tight">
             Qué podemos <span className="text-[#A3E635]">desarrollar</span>
@@ -171,6 +175,7 @@ const Tecnologia = () => {
       </section>
 
       <section className="py-20 relative z-10">
+        <FondoTech />
         <div className="container mx-auto max-w-4xl px-6 text-center">
           <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight">
             Ejemplos de <span className="text-[#A3E635]">soluciones tecnológicas</span>

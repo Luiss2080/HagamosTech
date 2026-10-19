@@ -242,7 +242,7 @@ const NovedadesCarrusel = ({ icon = 'fa-newspaper' }) => {
 
   return (
     <section id="noticias" className="py-16 relative overflow-hidden bg-[#050505] border-t border-white/5">
-      <FondoTech hideWaves={true} />
+      <FondoTech />
 
       <div className="container mx-auto px-4 lg:px-6 relative z-10 text-white">
         

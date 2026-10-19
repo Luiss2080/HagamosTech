@@ -13,7 +13,7 @@ const ServiciosGrid = () => {
 
     return (
         <section id="serviciosit" className="py-20 relative overflow-hidden bg-[#050505] border-t border-white/5">
-            <FondoTech hideWaves={true} />
+            <FondoTech />
 
             <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-8 relative z-10 text-white">
                 

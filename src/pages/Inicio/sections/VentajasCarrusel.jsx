@@ -198,7 +198,7 @@ const VentajasCarrusel = () => {
 
     return (
         <section id="promociones" className="py-16 relative overflow-hidden bg-[#050505]">
-            <FondoTech hideWaves={true} />
+            <FondoTech />
 
             <style>{`
                 .perspective-card { perspective: 1200px; }

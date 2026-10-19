@@ -1,6 +1,7 @@
 import RecorridoAcademico from './RecorridoAcademico';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import React from 'react';
+import FondoTech from '../../../components/fondos/FondoTech';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
 import { Link } from 'react-router-dom';
 import { Terminal, Code, Award, ArrowRight, Star, ChevronLeft } from 'lucide-react';
@@ -76,6 +77,7 @@ const Academico = () => {
 
       {/* SECCIÓN 1: HERO */}
       <section className="relative overflow-hidden pt-28 sm:pt-32 pb-12" id="home">
+        <FondoTech />
         <div className="container mx-auto px-6 max-w-7xl relative z-10 flex flex-col items-center">
           
           {/* ---- Migas de pan en estilo tech (discreto) ---- */}
@@ -177,6 +179,7 @@ const Academico = () => {
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
+        <FondoTech />
         <div className="container mx-auto px-6 max-w-7xl relative z-10 text-left">
           
           
@@ -202,6 +205,7 @@ const Academico = () => {
 
       {/* SECCIÓN 4: EXPLICACIÓN Y MOCKUP */}
       <section className="py-12 relative overflow-hidden reveal overflow-hidden">
+        <FondoTech />
         <div className="container mx-auto px-6 max-w-7xl relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <div className="lg:col-span-6 text-center flex flex-col items-center justify-center">
@@ -263,6 +267,7 @@ Mentorías académicas, apoyo guiado en tareas, informes, monografías, proyecto
 
       {/* SECCIÓN 5: TESTIMONIOS */}
       <section className="py-12 relative overflow-hidden reveal">
+        <FondoTech />
         <div className="container mx-auto px-6 max-w-4xl text-center relative z-10">
           
           <h2 className="text-4xl md:text-6xl font-black text-white dark:text-white mb-6">

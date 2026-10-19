@@ -11,7 +11,7 @@ const FeatureTimeline = ({ title, description, items = [] }) => (
       </header>
 
       <div className="relative grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-5">
-        <div aria-hidden="true" className="absolute bottom-8 left-[27px] top-8 border-l-2 border-dashed border-[#A3E635]/50 md:bottom-auto md:left-[16.66%] md:right-[16.66%] md:top-7 md:border-l-0 md:border-t-2" />
+        <div aria-hidden="true" className="absolute bottom-8 left-12 top-8 border-l-2 border-dashed border-[#A3E635]/50 md:bottom-auto md:left-[16.66%] md:right-[16.66%] md:top-7 md:border-l-0 md:border-t-2" />
         {items.map((item, index) => (
           <article key={`${item.label}-${index}`} className="relative flex items-center gap-5 rounded-2xl border border-white/10 bg-[#0b0d09]/90 p-5 shadow-[0_12px_36px_rgba(0,0,0,.2)] backdrop-blur-sm md:flex-col md:border-0 md:bg-transparent md:p-0 md:text-center md:shadow-none md:backdrop-blur-0">
             <div className="relative z-10 flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border-2 border-[#A3E635]/60 bg-[#11150d] text-[#A3E635] shadow-[0_0_24px_rgba(163,230,53,.14)] [&>svg]:h-6 [&>svg]:w-6">

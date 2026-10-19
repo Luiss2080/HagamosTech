@@ -9,7 +9,9 @@ describe('ToolsMarquee', () => {
     const groups = container.querySelectorAll('.tools-marquee__track > div');
 
     expect(screen.getByRole('region', { name: 'Herramientas web' })).toBeInTheDocument();
-    expect(screen.getByRole('group', { name: 'Carrusel de herramientas' })).toBeInTheDocument();
+    expect(screen.getByRole('group', { name: 'Carrusel: Herramientas web' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Herramientas web' })).toBeInTheDocument();
+    expect(screen.getByText('Recursos que pueden evaluarse según los objetivos y el alcance acordado.')).toBeInTheDocument();
     expect(groups).toHaveLength(2);
     expect(groups[1]).toHaveAttribute('aria-hidden', 'true');
     expect(screen.getAllByText('React')).toHaveLength(2);
