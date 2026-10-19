@@ -17,6 +17,7 @@ export default defineConfig(({ mode }) => {
       include: ['lucide-react'],
     },
     server: {
+      port: 0,
       proxy: {
         '/api': {
           target: apiTarget,
