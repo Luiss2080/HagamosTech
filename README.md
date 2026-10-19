@@ -16,7 +16,9 @@
     <a href="#-características">Características</a> ·
     <a href="#-arquitectura">Arquitectura</a> ·
     <a href="#-pruebas">Pruebas</a> ·
-    <a href="#-lo-que-todavía-no-existe">Limitaciones</a>
+    <a href="#-lo-que-todavía-no-existe">Limitaciones</a> ·
+    <a href="#-contribuir">Contribuir</a> ·
+    <a href="https://hagamos-tech.vercel.app">Demo</a>
   </p>
 </div>
 
@@ -186,7 +188,11 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 - El README anterior citaba `public/img/01_Layout/logo.png`, que no existe en el repositorio (imagen rota); corregido aquí.
 - `public/` versiona solo 4 imágenes; no se auditó si otras páginas referencian imágenes que faltan en un clon limpio.
 - El catálogo "Personalizado" tiene un solo servicio y las cifras de marketing de la web (p. ej. "+500 estudiantes") no provienen de datos del sistema.
-- `.playwright-mcp/` (volcados de páginas) está versionado por descuido.
+- Los volcados de `.playwright-mcp/`, `.playwright-cli/` y `test-results/` ya no se versionan (están en `.gitignore`).
+
+## 🤝 Contribuir
+
+¡Las contribuciones son bienvenidas! Leé la [guía de contribución](CONTRIBUTING.md) y el [código de conducta](CODE_OF_CONDUCT.md) antes de abrir un PR. Para bugs o ideas usá las [plantillas de issues](../../issues/new/choose); los problemas de seguridad se reportan según la [política de seguridad](SECURITY.md).
 
 ## 📄 Licencia
 
