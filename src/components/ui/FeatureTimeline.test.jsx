@@ -21,5 +21,6 @@ describe('FeatureTimeline', () => {
     expect(screen.getByText('Icono')).toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Soluciones disponibles' })).toBeInTheDocument();
     expect(container.querySelector('[aria-hidden="true"]')).toHaveClass('border-dashed');
+    expect(container.querySelectorAll('section')).toHaveLength(1);
   });
 });
