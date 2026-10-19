@@ -31,18 +31,18 @@ const TECH_STACK = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Roberto S.', role: 'Emprendedor', text: 'Tenía una idea muy específica para mi logística que ningún software comercial resolvía. HagamosTech entendió mi problema en 15 minutos y creó algo perfecto.' },
-  { name: 'Lucía P.', role: 'Directora de RRHH', text: 'Necesitábamos un sistema interno para medir el clima laboral de forma anónima y gamificada. Fue un desarrollo a medida increíble que los empleados aman usar.' },
-  { name: 'Miguel T.', role: 'Dueño de Fábrica', text: 'Desarrollaron un panel a medida que se integra con nuestros sistemas actuales. Algo que parecía imposible o costosísimo, lo hicieron viable.' }
+  { name: 'Panel de gestión', role: 'Ejemplo orientativo', text: 'Necesito organizar información y consultar los datos que son importantes para mi proyecto.' },
+  { name: 'Aplicación web', role: 'Ejemplo orientativo', text: 'Quiero conversar sobre una herramienta web y las funciones que podría incluir.' },
+  { name: 'Mejora de sistema', role: 'Ejemplo orientativo', text: 'Busco revisar qué cambios son posibles en una aplicación existente según su estado y alcance.' }
 ];
 
 const ChatAssistantWindow = () => {
   const [messages, setMessages] = useState([]);
   const fullConversation = [
-    { role: 'user', text: 'Hola, tengo un proceso manual que nos toma 5 horas diarias. Ningún sistema de mercado hace exactamente lo que necesito.' },
-    { role: 'assistant', text: 'Entendido. ¿El proceso involucra varias plataformas o documentos físicos?' },
-    { role: 'user', text: 'Sí, cruza datos de Excel con un sistema de facturación antiguo.' },
-    { role: 'assistant', text: 'Perfecto. Vamos a diseñar un microservicio a medida que lea los Excels, se conecte a la API de tu sistema y automatice ese cruce en 5 segundos. ¿Empezamos?' }
+    { role: 'user', text: 'Hola, necesito una herramienta web para registrar solicitudes y consultar su estado.' },
+    { role: 'assistant', text: 'Podemos revisar quiénes la usarían y qué información necesitarían registrar.' },
+    { role: 'user', text: 'También quisiera consultar el historial y filtrar la información.' },
+    { role: 'assistant', text: 'Anotamos esas funciones para evaluar requisitos, alcance y viabilidad antes de conversar una propuesta.' }
   ];
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const ChatAssistantWindow = () => {
           <div className="w-3 h-3 rounded-full bg-green-500"></div>
         </div>
         <span className="text-xs font-black text-neutral-400 uppercase tracking-widest flex items-center gap-2">
-          <MessageSquare size={14} className="text-[#A3E635]" /> Asistente de Arquitectura
+          <MessageSquare size={14} className="text-[#A3E635]" /> Ejemplo de conversación sobre un proyecto
         </span>
       </div>
       
@@ -111,10 +111,10 @@ const ChatAssistantWindow = () => {
 
 const ProcessTimeline = () => {
   const steps = [
-    { title: 'Diagnóstico Cero', desc: '¿Nos reunimos para entender tu dolor. ¿No asumimos nada, mapeamos tu proceso manual actual paso a paso.', icon: <Search size={20} /> },
-    { title: 'Arquitectura a Medida', desc: 'Diseñamos los planos del software. Elegimos la tecnología exacta (ni más ni menos de lo que necesitas).', icon: <Puzzle size={20} /> },
-    { title: 'Desarrollo Core', desc: 'Programamos la solución desde cero. Interfaces limpias y bases de datos preparadas para escalar.', icon: <Code size={20} /> },
-    { title: 'Implementación & Soporte', desc: 'Lanzamos el sistema en tu entorno y monitoreamos. Tu problema queda resuelto definitivamente.', icon: <Server size={20} /> },
+    { title: 'Conversamos la necesidad', desc: 'Revisamos el objetivo, las personas usuarias y el contexto de tu proyecto.', icon: <Search size={20} /> },
+    { title: 'Definimos requisitos', desc: 'Acordamos las funciones, los datos y los perfiles que podrían formar parte de la solución.', icon: <Puzzle size={20} /> },
+    { title: 'Desarrollamos lo acordado', desc: 'Trabajamos según el alcance, los entregables y las etapas definidos en la propuesta.', icon: <Code size={20} /> },
+    { title: 'Presentamos la entrega', desc: 'Compartimos el resultado y las indicaciones de uso incluidas en el alcance acordado.', icon: <Wrench size={20} /> },
   ];
 
   return <ProcessStepsCarousel items={steps.map((step, index) => ({
@@ -154,10 +154,10 @@ const PROJECTS = [
   },
   {
     num: '04',
-    category: 'SOPORTE',
-    firstPart: 'Mantenimiento',
-    highlightPart: 'Continuo',
-    desc: 'Podemos revisar correcciones o mejoras para sistemas existentes. La disponibilidad, el alcance y la modalidad se conversan por proyecto.',
+    category: 'SISTEMAS EXISTENTES',
+    firstPart: 'Revisión de',
+    highlightPart: 'sistemas',
+    desc: 'Evaluamos correcciones o mejoras posibles en sistemas existentes según su estado, disponibilidad y alcance.',
     icon: 'fa-server',
     images: ['/img/08_Cards/proyecto-personalizado-mantenimiento.webp']
   },
@@ -199,16 +199,16 @@ const Personalizado = () => {
 
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 animate-fade-in-up uppercase tracking-tighter" style={{ animationDelay: '0.1s' }}>
             Desarrollamos <br/>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">Lo ¿Quée ¿No Existe</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#A3E635] to-[#84CC16]">para lo que necesitás</span>
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            ¿¿Tienes un problema de negocio que el software convencional no puede resolver? Cuéntanosólo. Diseñamos la arquitectura y escribimos el código necesario desde cero.
+            Revisamos necesidades digitales que no encajan en una solución estándar. Conversamos sobre funciones, usuarios, datos y viabilidad para definir un alcance posible.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
             <a href="https://wa.me/59161320004?text=Hola,%20tengo%20un%20proyecto%20o%20problema%20específico%20y%20necesito%20software%20a%20medida" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center gap-2">
-              Contarnos tu Problema <ArrowRight size={16} />
+              Conversar sobre mi proyecto <ArrowRight size={16} />
             </a>
           </div>
 
@@ -228,8 +228,8 @@ const Personalizado = () => {
       <section className="py-24 z-10 relative px-6">
         <div className="container mx-auto max-w-6xl">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
-              Ingeniería de <span className="text-[#A3E635]">Precisión</span>
+                <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
+              Soluciones <span className="text-[#A3E635]">a medida</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
               Revisamos tu necesidad y proponemos un alcance viable que podamos conversar y ajustar a tus posibilidades.

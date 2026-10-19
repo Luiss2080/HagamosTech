@@ -7,14 +7,15 @@ import CircuitBackground from '../../../components/fondos/FondoParticulas';
 import CircleParticles from '../../../components/fondos/ParticulasCirculares';
 import TestimonialCarousel from '../../../components/carouseles/CarruselTestimonios';
 import ProcessStepsCarousel from '../../../components/ui/ProcessStepsCarousel';
+import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import CenteredProjectCTA from '../../../components/ui/CenteredProjectCTA';
 import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
 
 const SOLUCIONES = [
-  { title: 'Sitios web y catálogos', desc: 'Presencia digital para empresas, profesionales y emprendimientos.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
-  { title: 'Software a medida', desc: 'Sistemas que se evalúan según requisitos, usuarios y datos.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
-  { title: 'Identidad visual', desc: 'Recursos gráficos para presentar una marca o proyecto.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
-  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación de acuerdo con materia y disponibilidad.', icon: <Users size={24} />, image: '/img/08_Cards/negocios-academico.webp', category: 'ACOMPAÑAMIENTO' }
+  { title: 'Sitios web y tiendas online', desc: 'Páginas corporativas e institucionales, landing pages, portafolios, catálogos, blogs y tiendas con pedidos. Pagos y funciones especiales se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
+  { title: 'Sistemas y software a medida', desc: 'Podemos evaluar sistemas de inventario, ventas, facturación, CRM, gestión académica, citas, asistencia y otras herramientas según requisitos y alcance.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
+  { title: 'Diseño gráfico e identidad', desc: 'Logos, identidad visual, flyers, banners, catálogos, tarjetas y piezas para difusión digital o impresión.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
+  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación en tareas guiadas, informes, monografías y proyectos socioformativos, según materia y disponibilidad. Cada estudiante desarrolla su propio trabajo.', icon: <Users size={24} />, image: '/img/08_Cards/negocios-academico.webp', category: 'ACOMPAÑAMIENTO' }
 ];
 
 const SolucionesGrid = () => {
@@ -67,11 +68,11 @@ const Negocios = () => {
           </h1>
           
           <p className="text-slate-400 text-base md:text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollamos sitios web, software y recursos gráficos para emprendimientos y empresas. El alcance, las funciones y las condiciones se conversan según cada caso.
+            Acompañamos a estudiantes y desarrollamos soluciones web, software y diseño para personas, emprendimientos, empresas e instituciones. Revisamos el alcance y conversamos alternativas según cada necesidad y posibilidades.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <a href="https://wa.me/59161320004?text=Hola,%20quiero%20digitalizar%20mi%20empresa" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center justify-center gap-2">
+            <a href="https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20por%20un%20servicio%20de%20HagamosTech" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#A3E635] text-black font-black text-xs uppercase tracking-widest rounded-xl hover:bg-[#84CC16] transition-all hover:scale-105 shadow-lg shadow-[#A3E635]/20 flex items-center justify-center gap-2">
               Consultar opciones <ArrowRight size={16} />
             </a>
           </div>
