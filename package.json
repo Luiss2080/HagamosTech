@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite --host",
+    "dev": "node scripts/dev.mjs",
     "dev:server": "cd server && npm run dev",
     "dev:all": "npx concurrently \"npm run dev\" \"npm run dev:server\"",
     "build": "vite build",
@@ -49,3 +49,4 @@
     "vitest": "^5.0.0"
   }
 }
+

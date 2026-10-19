@@ -8,7 +8,7 @@ Prisma + MySQL. Agentes (chat) y modales centralizados con Zustand. El alcance e
 tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs/`).
 
 ## Comandos
-- Frontend (dev): `npm run dev` → `http://localhost:4000`
+- Frontend (dev): `npm run dev` → selecciona un puerto libre; abre la URL que muestra Vite en la terminal.
 - Backend (dev): `npm run dev:server` (o `cd server && npm run dev`) → `http://localhost:4321`
   (el frontend usa el proxy de Vite: llama a `/api`).
 - Ambos: `npm run dev:all`
@@ -39,3 +39,4 @@ tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs
 ## Al terminar cualquier tarea
 - Ejecutar `npm run lint` y `npm run test:run` (o `npm run build` mientras el harness no exista)
   y confirmar el resultado en la respuesta. No avanzar con tests en rojo.
+

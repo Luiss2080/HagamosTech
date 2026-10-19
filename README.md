@@ -51,7 +51,7 @@ Capturas reales del frontend en modo desarrollo (Chrome headless, 1280x800).
 
 ```mermaid
 flowchart LR
-    U["Navegador"] --> F["Frontend React 19 + Vite (puerto 4000)"]
+    U["Navegador"] --> F["Frontend React 19 + Vite (puerto libre automático)"]
     F -->|"proxy /api"| B["API Express 5 (puerto 4321)"]
     F --> S["Zustand: sesión y modales"]
     F --> C["Chat Niko (local)"]
@@ -125,7 +125,7 @@ HagamosTech/
    ```bash
    npm run dev:all
    ```
-   Frontend en `http://localhost:4000`. El frontend llama a `/api` mediante el proxy de Vite, que por defecto apunta a `http://localhost:4321` (el puerto por defecto del backend); solo define `VITE_API_PROXY_TARGET` si cambias `PORT`.
+   Vite elige un puerto libre y muestra la URL del frontend en la terminal. El frontend llama a `/api` mediante el proxy, que por defecto apunta a `http://localhost:4321`; define `VITE_API_PROXY_TARGET` si el backend usa otro puerto.
 
 <details>
 <summary>Variables de entorno del backend (nombres, sin valores)</summary>
@@ -141,7 +141,7 @@ HagamosTech/
 
 | Comando | Descripción |
 |---|---|
-| `npm run dev` | Frontend con Vite (puerto 4000) |
+| `npm run dev` | Frontend con Vite en un puerto libre automático (URL en terminal) |
 | `npm run dev:server` | Backend Express con nodemon |
 | `npm run dev:all` | Ambos en paralelo (`concurrently`) |
 | `npm run build` | Build de producción |
@@ -195,3 +195,4 @@ responde 400, CORS restringido a orígenes conocidos, endpoints inexistentes res
 <div align="center">
   <sub>Hecho por Luiss2080 · React + Express + Prisma</sub>
 </div>
+

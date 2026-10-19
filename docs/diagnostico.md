@@ -25,7 +25,7 @@ errores de consola. El "atasco" es de dos naturalezas:
 | Comando | Resultado |
 |---|---|
 | `npm run build` | ✅ OK — 2212 módulos, `dist/assets/index-*.js` = **1.569 kB** (335 kB gzip) |
-| `npm run dev` (frontend) | ✅ Vite 8.0.8 listo en ~1.1 s en `http://localhost:4000` |
+| `npm run dev` (frontend) | ✅ Vite 8.0.8 selecciona un puerto libre y muestra la URL en la terminal |
 | `cd server && npm run dev` | ✅ `[SERVIDOR MVC]` en `http://localhost:3000` + `[SMTP] OK` |
 | `npm run lint` | ❌ **11 errores, 5 warnings** |
 
@@ -81,7 +81,7 @@ escenarios donde sí llega. A esto se suma la deuda de contenido y tests.
 1. Liberar `127.0.0.1:3000` (detener ParqueoYa) **o** cambiar el puerto del backend HagamosTech y `VITE_API_BASE_URL`. Ver "Dudas abiertas".
 2. `cd server && npm install && npx prisma generate && npx prisma db push && npm run db:seed` (requiere MySQL y `server/.env`).
 3. `npm install` en raíz.
-4. `npm run dev:all` → frontend `http://localhost:4000`, backend `http://localhost:3000`.
+4. `npm run dev:all` → frontend en el puerto libre que indique Vite; backend en el puerto indicado por su configuración.
 5. Verificar `curl http://localhost:3000/api/perfil` → debe responder 401 (no 404).
 
 ## Acciones derivadas (por spec)
@@ -95,3 +95,4 @@ escenarios donde sí llega. A esto se suma la deuda de contenido y tests.
 - [NECESITA ACLARACIÓN] ¿Se detiene ParqueoYa o se cambia el puerto de HagamosTech a 3001
   (y `VITE_API_BASE_URL`)? Recomendación: cambiar HagamosTech a un puerto libre para no
   acoplarse a otros proyectos.
+
