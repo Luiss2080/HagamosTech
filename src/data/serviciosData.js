@@ -25,7 +25,7 @@ export const SERVICIOS_DATA = {
             ],
             includes: [
                 { icon: 'fa-desktop', label: 'Diseño Visual' },
-                { icon: 'fa-check-circle', label: 'Aprobación' },
+                { icon: 'fa-check-circle', label: 'Revisión' },
                 { icon: 'fa-file-pdf', label: 'Exportación' }
             ],
             cta: 'Consultar',
@@ -113,7 +113,7 @@ export const SERVICIOS_DATA = {
             ],
             includes: [
                 { icon: 'fa-code-branch', label: 'Topologías' },
-                { icon: 'fa-robot', label: 'Robótica' },
+                { icon: 'fa-robot', label: 'Proyectos tecnológicos' },
                 { icon: 'fa-vial', label: 'Pruebas' }
             ],
             cta: 'Consultar',
