@@ -7,6 +7,7 @@
     "start": "node server.js",
     "db:push": "prisma db push",
     "db:seed": "node prisma/seed.js",
+    "db:migrate:mysql-to-postgres": "node prisma/migrarMysqlPostgresql.js",
     "db:studio": "prisma studio",
     "test": "vitest",
     "test:run": "vitest run"
