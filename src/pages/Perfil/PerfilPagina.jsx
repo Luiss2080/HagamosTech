@@ -272,6 +272,7 @@ const PerfilPagina = () => {
     const [showSuccessModal, setShowSuccessModal] = useState(false);
     const [successMessage, setSuccessMessage] = useState('');
     const [isSaving, setIsSaving] = useState(false);
+    const [profileError, setProfileError] = useState('');
 
     // Cargar datos iniciales del usuario
     useEffect(() => {
@@ -304,6 +305,7 @@ const PerfilPagina = () => {
         if (!file) return;
 
         setPhotoError('');
+        setProfileError('');
 
         const allowedTypes = ['image/jpeg', 'image/png', 'image/webp', 'image/gif', 'image/bmp', 'image/tiff'];
         if (!allowedTypes.includes(file.type)) {
@@ -327,6 +329,8 @@ const PerfilPagina = () => {
             if (result.success) {
                 setSuccessMessage('¡Foto de perfil actualizada con éxito!');
                 setShowSuccessModal(true);
+            } else {
+                setPhotoError(result.message);
             }
         };
         reader.readAsDataURL(file);
@@ -343,6 +347,8 @@ const PerfilPagina = () => {
         if (result.success) {
             setSuccessMessage('¡Avatar preestablecido seleccionado!');
             setShowSuccessModal(true);
+        } else {
+            setPhotoError(result.message);
         }
     };
 
@@ -364,8 +370,11 @@ const PerfilPagina = () => {
         });
         setIsSaving(false);
         if (result.success) {
+            setProfileError('');
             setSuccessMessage('Tus datos de perfil han sido actualizados y sincronizados en tiempo real.');
             setShowSuccessModal(true);
+        } else {
+            setProfileError(result.message);
         }
     };
 
@@ -546,6 +555,7 @@ const PerfilPagina = () => {
                             </div>
 
                             <form onSubmit={handleSubmit} className="space-y-5">
+                                {profileError && <p role="alert" className="rounded-xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-xs font-bold text-rose-100">{profileError}</p>}
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {/* Nombre */}
                                     <div>
