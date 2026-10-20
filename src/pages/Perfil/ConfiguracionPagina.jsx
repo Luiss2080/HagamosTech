@@ -207,12 +207,12 @@ const ConfiguracionPagina = () => {
 
             {/* MAIN LAYOUT GRID (50/50 EQUAL COLUMNS ON DESKTOP) */}
             <div className="relative">
-            <section className="relative z-10 py-5 max-w-[95rem] mx-auto px-4 sm:px-6">
+            <section className="relative z-10 py-8 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(260px,0.72fr)_minmax(0,1.6fr)] gap-0 items-stretch overflow-hidden rounded-[2.5rem] border border-[#A3E635]/25 bg-[#090b08]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                     
                     {/* LEFT SIDE: SIDEBAR */}
-                    <div className="rounded-[2rem] overflow-hidden shadow-xl flex flex-col h-full">
+                    <div className="hidden lg:flex overflow-hidden border-r border-[#A3E635]/15">
                         <ProfileSidebar
                             preferences={preferences}
                             handleTogglePref={handleTogglePref}
@@ -222,7 +222,7 @@ const ConfiguracionPagina = () => {
                     </div>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
-                    <div className="flex flex-col gap-4">
+                    <div className="flex min-w-0 flex-col gap-0 p-5 sm:p-7 lg:p-9">
                         
                         {/* MOBILE TABS NAVIGATION */}
                         <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
@@ -242,8 +242,8 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PERSONALIZACIÓN VISUAL */}
-                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                        <div className="border-b border-white/10 py-6 first:pt-0">
+                            <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-palette"></i>
                                 </div>
@@ -277,8 +277,8 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PRIVACY METER */}
-                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                        <div className="border-b border-white/10 py-6">
+                            <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-user-shield"></i>
                                 </div>
@@ -314,8 +314,8 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PRIVACIDAD Y SEGURIDAD */}
-                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                        <div className="border-b border-white/10 py-6">
+                            <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-lock"></i>
                                 </div>
@@ -408,8 +408,8 @@ const ConfiguracionPagina = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             
                             {/* Active Sessions */}
-                            <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                                <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                            <div className="border-t border-white/10 pt-6">
+                                <div className="mb-4 flex items-center gap-3">
                                     <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                         <i className="fas fa-desktop"></i>
                                     </div>
@@ -449,7 +449,7 @@ const ConfiguracionPagina = () => {
                             </div>
 
                             {/* Data Export & Danger Zone */}
-                            <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635] flex flex-col justify-between">
+                            <div className="border-t border-white/10 pt-6 flex flex-col justify-between">
                                 <div>
                                     <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
                                         <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">

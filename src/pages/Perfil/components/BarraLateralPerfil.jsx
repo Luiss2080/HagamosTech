@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import CircuitBackground from '../../../components/fondos/FondoTech';
 import useAuthStore from '../../../store/useAutenticacionStore';
 
 const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref, isSavingPrefs, handleSavePreferences }) => {
@@ -21,11 +20,10 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
     ];
 
     return (
-        <div className="relative hidden lg:flex flex-col justify-start p-6 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full rounded-[2rem] shadow-xl border border-[#A3E635]/20">
+        <div className="relative hidden lg:flex flex-col justify-start p-6 lg:p-8 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-[#111827]/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
-                <CircuitBackground />
             </div>
 
             <div className="relative z-10 flex flex-col items-center w-full space-y-4">
