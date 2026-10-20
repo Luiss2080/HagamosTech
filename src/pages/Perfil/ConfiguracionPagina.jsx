@@ -14,8 +14,8 @@ import {
     useDosFA,
     useDesactivarCuenta,
     useExportarDatos
+    PREFERENCIAS_PERFIL_INICIALES,
 } from '../../hooks/usePerfilConfig';
-import { PREFERENCIAS_PERFIL_INICIALES } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
     { name: 'Rojo Robótico', value: '#ef4444', hover: '#dc2626', bg: 'bg-red-500', ring: 'ring-red-500' },
@@ -288,6 +288,31 @@ const ConfiguracionPagina = () => {
                             </div>
                         </div>
 
+                        <div className="border-b border-white/10 py-6">
+                            <div className="mb-4 flex items-center gap-3">
+                                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl bg-[#A3E635] text-[11px] text-[#0A0A0A]"><i className="fas fa-bell" /></div>
+                                <div>
+                                    <h3 className="m-0 text-[11px] font-black uppercase tracking-wider text-white">Notificaciones</h3>
+                                    <p className="m-0 mt-0.5 text-[9px] font-bold uppercase tracking-widest text-slate-500">Preferencias vinculadas a tu cuenta</p>
+                                </div>
+                            </div>
+                            <div className="grid gap-2 sm:grid-cols-3">
+                                {[
+                                    { key: 'email_promociones', label: 'Promociones por email' },
+                                    { key: 'email_pedidos', label: 'Novedades de cuenta' },
+                                    { key: 'sms_alertas', label: 'Alertas de seguridad' },
+                                ].map((item) => (
+                                    <button key={item.key} type="button" aria-pressed={preferences[item.key]} onClick={() => handleTogglePref(item.key)} className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 text-left text-[10px] font-bold text-slate-200 transition hover:border-[#A3E635]/40">
+                                        {item.label}<span className={`h-2.5 w-2.5 shrink-0 rounded-full ${preferences[item.key] ? 'bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,.65)]' : 'bg-slate-600'}`} />
+                                    </button>
+                                ))}
+                            </div>
+                            {prefError && <p role="alert" className="mt-3 rounded-lg border border-rose-400/25 bg-rose-950/30 px-3 py-2 text-xs font-semibold text-rose-100">{prefError}</p>}
+                            <button type="button" onClick={handleSavePreferences} disabled={prefLoading} className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-[10px] font-black uppercase tracking-wider text-[#0A0A0A] transition hover:bg-[#84CC16] disabled:cursor-wait disabled:opacity-60">
+                                <i className={`fas ${prefLoading ? 'fa-spinner fa-spin' : 'fa-floppy-disk'}`} />{prefLoading ? 'Guardando...' : 'Guardar preferencias'}
+                            </button>
+                        </div>
+
                         {/* INTERACTIVE PRIVACY METER */}
                         <div className="border-b border-white/10 py-6">
                             <div className="mb-4 flex items-center gap-3">
@@ -307,7 +332,8 @@ const ConfiguracionPagina = () => {
                                         return (
                                             <button
                                                 key={level.id}
-                                                onClick={() => setPrivacy(level.id)}
+                                                onClick={() => { setPrivacy(level.id); setPreferences(prev => ({ ...prev, privacidadPerfil: level.id })); setPrefError(''); }}
+                                                aria-pressed={isSelected}
                                                 className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#A3E635] bg-[#A3E635]/5 font-black shadow-md ring-2 ring-[#A3E635]/15' : 'border-slate-100 bg-slate-50/50 font-bold text-slate-700 dark:text-slate-300'}`}
                                             >
                                                 <div className="flex items-center justify-between w-full mb-3">
