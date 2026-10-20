@@ -22,6 +22,10 @@ Visitantes y usuarios autenticados.
 - RF-9: EL REGISTRO y el inicio de sesión usarán la base PostgreSQL configurada en el backend; el frontend mostrará errores reales cuando la API o la base no estén disponibles.
 - RF-10: CUANDO un usuario autenticado abra Mi perfil, Mi espacio o Configuración, EL SISTEMA mostrará una estructura visual coherente con la web: fondo tecnológico, hero centrado con título y descripción, secciones con encabezados claros, paneles legibles, iconografía de marca y acento lima.
 - RF-11: EL REDISEÑO de las vistas del módulo Perfil conservará sus formularios, navegación, preferencias y acciones existentes sin cambiar su alcance ni presentar controles visuales como persistidos si no lo están.
+- RF-12: CUANDO un usuario abra Mi perfil, Mi espacio o Configuración, EL SISTEMA mostrará la miga de pan dentro de la sección principal, antes del hero; título, descripción y contenido pertenecerán a una sola sección de página.
+- RF-13: CUANDO un usuario autenticado cambie sus datos de perfil, preferencias de apariencia, privacidad o notificaciones, EL SISTEMA guardará los cambios en PostgreSQL y mostrará confirmación solo tras una respuesta exitosa del backend.
+- RF-14: SI la API o PostgreSQL no están disponibles al leer o guardar datos del perfil, EL SISTEMA conservará el contenido anterior, mostrará un error explícito y no simulará una persistencia local exitosa.
+- RF-15: CUANDO el usuario gestione proyectos, notas y recordatorios desde Mi espacio, EL SISTEMA leerá y modificará sus registros asociados a la cuenta autenticada mediante los endpoints reales del backend.
 
 ## Requisitos no funcionales
 - Sin dependencias nuevas.
@@ -35,12 +39,14 @@ Visitantes y usuarios autenticados.
 ## Fuera de alcance
 - Rediseñar el estilo de las páginas que ya usan la marca (Promociones/Novedades/hero) más allá de lo aprobado.
 - Entrega real de correos a dominios inexistentes (depende del SMTP/dominio de producción).
-- Nuevas funciones de cuenta, cambios en backend o sustitución de preferencias cuyo soporte actual no exista.
+- Funcionalidades de multisesión: el backend no persiste sesiones por dispositivo y la interfaz debe declarar esa limitación.
 
 ## Criterios de finalización
 - Elementos blancos restaurados (verificado con capturas).
 - Las vistas Mi perfil, Mi espacio y Configuración comparten la composición de la web, conservan contraste y sus flujos actuales.
 - Login y registro verificados de punta a punta.
+- Preferencias de apariencia, privacidad y notificaciones persistidas por usuario en PostgreSQL y errores de API visibles.
+- La miga de pan aparece dentro de la única sección principal de Mi perfil, Mi espacio y Configuración, separada del hero.
 - `npm run lint`, `npm run test:run` (raíz y server), `npm run build` y `npm run test:e2e` en verde.
 
 ## Dudas abiertas
