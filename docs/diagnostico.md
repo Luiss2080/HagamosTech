@@ -1,7 +1,7 @@
 # Diagnóstico — Fase 0 (Spec-Driven Development)
 
 Fecha: 2026-09-14
-Alcance: plataforma HagamosTech (React 19 + Vite 8 / Node + Express 5 + Prisma + MySQL).
+Alcance: plataforma HagamosTech (React 19 + Vite 8 / Node + Express 5 + Prisma + PostgreSQL).
 Método: read-only. `npm run lint`, `npm run build`, arranque de `dev` frontend y backend,
 navegación real con navegador (Playwright) por rutas clave y sondeos HTTP a la API.
 
@@ -79,7 +79,7 @@ escenarios donde sí llega. A esto se suma la deuda de contenido y tests.
 
 ## Checklist de arranque (operativo)
 1. Liberar `127.0.0.1:3000` (detener ParqueoYa) **o** cambiar el puerto del backend HagamosTech y `VITE_API_BASE_URL`. Ver "Dudas abiertas".
-2. `cd server && npm install && npx prisma generate && npx prisma db push && npm run db:seed` (requiere MySQL y `server/.env`).
+2. `cd server && npm install && npx prisma generate && npm run db:push && npm run db:seed` (requiere PostgreSQL y `server/.env`).
 3. `npm install` en raíz.
 4. `npm run dev:all` → frontend en el puerto libre que indique Vite; backend en el puerto indicado por su configuración.
 5. Verificar `curl http://localhost:3000/api/perfil` → debe responder 401 (no 404).

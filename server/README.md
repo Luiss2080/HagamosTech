@@ -1,6 +1,6 @@
 # server/ - Backend Node.js
 
-Backend API de HagamosTech construido con **Node.js + Express 5 + Prisma ORM + MySQL**.
+Backend API de HagamosTech construido con **Node.js + Express 5 + Prisma ORM + PostgreSQL**.
 
 ## Estructura
 
@@ -16,7 +16,8 @@ server/
 ├── models/
 │   └── prisma.js        # Cliente Prisma
 ├── prisma/
-│   ├── schema.prisma    # Esquema de la base de datos
+│   ├── schema.prisma    # Esquema PostgreSQL
+│   ├── migrarMysqlPostgresql.js # Migración única desde la base anterior
 │   └── seed.js          # Datos semilla (roles, permisos, admin)
 ├── test/                # Tests (Vitest + Supertest)
 ├── package.json
@@ -60,13 +61,42 @@ Si el puerto está ocupado, el servidor prueba 4322 y 4323 y lo informa por cons
 Los modelos de e-commerce (`producto`, `categoria`, `carrito_item`, `compra`, `pago`,
 `sucursal`, etc.) fueron retirados en la Spec 003, sin alterar la base de datos.
 
+## PostgreSQL y migración de datos
+
+La aplicación en ejecución usa exclusivamente `DATABASE_URL` con PostgreSQL. La base MySQL
+anterior se conserva como respaldo; no se borra ni se consulta desde los endpoints. Para
+preparar una base nueva:
+
+```bash
+cd server
+npm install
+npx prisma generate
+npm run db:push
+npm run db:seed
+```
+
+La importación desde MySQL es un paso separado y de una sola vez. Configurá `DATABASE_URL` como
+destino PostgreSQL y, temporalmente, `MYSQL_SOURCE_URL` con la conexión a la base anterior. En
+PowerShell:
+
+```powershell
+$env:MYSQL_SOURCE_URL = 'mysql://usuario:clave@localhost:3306/HagamosTech'
+npm run db:migrate:mysql-to-postgres
+Remove-Item Env:MYSQL_SOURCE_URL
+```
+
+El migrador conserva IDs y relaciones de usuarios, roles, permisos, contacto, autenticación y
+espacio personal; no activa las tablas del vertical retirado. Cancela si ya hay cuentas o
+proyectos en PostgreSQL y nunca modifica el origen. `mysql2` queda como dependencia de desarrollo
+para esa operación, no como dependencia del servidor en producción.
+
 ## Comandos
 
 ```bash
 cd server && npm run dev          # Servidor con nodemon
-cd server && npm run test:run     # Tests (sin MySQL, Prisma espiado)
+cd server && npm run test:run     # Tests de API con Prisma espiado
 cd server && npx prisma generate  # Regenerar cliente Prisma
-cd server && npx prisma db push   # Sincronizar esquema con MySQL
+cd server && npm run db:push      # Sincronizar esquema con PostgreSQL
 cd server && npm run db:seed      # Datos semilla
 ```
 
@@ -74,7 +104,7 @@ cd server && npm run db:seed      # Datos semilla
 
 | Variable | Descripción |
 |----------|-------------|
-| `DATABASE_URL` | Conexión a MySQL |
+| `DATABASE_URL` | Conexión PostgreSQL (`postgresql://...`) |
 | `PORT` | Puerto del servidor (default 4321) |
 | `NODE_ENV` | Entorno |
 | `JWT_SECRET` | Secret para tokens (obligatorio en producción; el servidor no arranca sin él) |

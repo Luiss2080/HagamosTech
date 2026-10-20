@@ -4,7 +4,7 @@
 Plataforma web de **HagamosTech**, agencia de soluciones digitales y tecnológicas
 (estudiantes, emprendedores, empleo, diseño, web, software, IA/automatización y soluciones
 a medida). Frontend React 19 + Vite 8 + Tailwind 4 + Zustand; backend Node + Express 5 +
-Prisma + MySQL. Agentes (chat) y modales centralizados con Zustand. El alcance es **solo
+Prisma + PostgreSQL. Agentes (chat) y modales centralizados con Zustand. El alcance es **solo
 tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs/`).
 
 ## Comandos
@@ -16,8 +16,9 @@ tecnología**: el vertical de restaurante/e-commerce está en retiro (ver `specs
 - Lint: `npm run lint`
 - Tests (frontend/backend): `npm run test:run`  · E2E: `npm run test:e2e`
   _(el harness se habilita en la Spec 001; hasta entonces verificar con lint + build)_
-- Base de datos: `cd server && npx prisma db push` · seeds: `cd server && npm run db:seed`
+- Base de datos: `cd server && npm run db:push` · seeds: `cd server && npm run db:seed`
 
+> **Base de datos:** PostgreSQL mediante `DATABASE_URL`; MySQL queda solo como origen de migración puntual.
 > **Puerto del API:** en desarrollo el backend usa `4321` (propio, ver `server/.env`) y el
 > frontend llama a `/api` vía proxy de Vite (`VITE_API_PROXY_TARGET`). Ver `docs/diagnostico.md`.
 
