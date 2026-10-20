@@ -12,7 +12,7 @@ Fecha: 2026-10-19
 | RF-6 | Revocar sesión inexistente | `revocarSesion` → 404 | ✅ |
 | RF-7 | Certificado en cliente | `BarraLateralPerfil` usa `html2canvas` + `jsPDF`; build OK | ✅ |
 | RF-8 | 401 sin token | Test "responde 401 sin token" | ✅ |
-| RF-9..RF-14 | Privacidad, validación y alcance del espacio personal | `server/test/espacioPersonal.test.js` y `server/test/perfil.test.js` | ✅ |
+| RF-9..RF-14 | Privacidad, validación y alcance del espacio personal | `server/test/espacioPersonal.test.js` y `server/test/perfil.test.js`; smoke PostgreSQL creó proyecto, nota y evento, y leyó los tres por HTTP | ✅ |
 | RF-15 | PostgreSQL como única base activa | `DATABASE_URL` conecta como rol de aplicación a `hagamostech`; Prisma consulta las 12 tablas activas | ✅ |
 | RF-16 | Registro, verificación e inicio de sesión | `server/test/registroPostgresql.test.js` + smoke real HTTP contra PostgreSQL: 201 → 200 → 200, token válido; cuenta de prueba eliminada | ✅ |
 | RF-17 | Importación de datos activos y relaciones | Migrador ejecutado: roles=4, permisos=3, detalle_rol_permisos=3, usuarios=2, registros_pendientes=4, mensajes=2; tablas restantes=0; IDs conservados | ✅ |
