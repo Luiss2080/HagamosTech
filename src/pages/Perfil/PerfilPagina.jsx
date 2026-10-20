@@ -409,13 +409,13 @@ const PerfilPagina = () => {
             {/* Dots grid overlay */}
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
-            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-6 sm:px-6">
+            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-0 sm:px-6">
             <PageHero
                 title="Mi cuenta"
                 highlight="personalizable"
                 description="Gestiona tus datos personales, información de contacto y personaliza tu avatar institucional en HagamosTech."
                 embedded
-                className="!pt-0 !pb-8"
+                className="!pt-16 sm:!pt-16 lg:!pt-20 !pb-8"
             />
 
             {/* Todo el perfil comparte una única sección y un solo panel. */}

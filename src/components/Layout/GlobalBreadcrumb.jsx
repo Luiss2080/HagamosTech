@@ -74,7 +74,7 @@ const GlobalBreadcrumb = () => {
     let host = null;
     let root = null;
     let originalPosition = '';
-    const offset = pathname.startsWith('/perfil') || pathname === '/configuracion' ? 'top-0' : 'top-7';
+    const offset = pathname.startsWith('/perfil') || pathname === '/configuracion' ? 'top-3' : 'top-16';
     const placeBreadcrumb = () => {
       const target = main.querySelector('section') || main;
       if (target === host) return;
