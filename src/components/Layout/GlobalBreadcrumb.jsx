@@ -59,7 +59,8 @@ const getSegments = (pathname) => {
 
 const GlobalBreadcrumb = ({ embedded = false }) => {
   const { pathname } = useLocation();
-  const crumbs = pathname === '/' ? [] : getSegments(pathname);
+  if (pathname === '/') return null;
+  const crumbs = getSegments(pathname);
 
   return (
     <nav aria-label="Migas de pan" className={embedded ? 'relative z-20 mb-6 flex justify-center' : 'relative z-20 h-[142px] border-b border-[#A3E635]/10 bg-[#050505]/95 px-4 pt-[84px] backdrop-blur-md sm:h-[150px] sm:px-6 sm:pt-[92px] lg:h-[160px] lg:pt-[102px]'}>

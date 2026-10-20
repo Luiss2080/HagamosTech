@@ -28,7 +28,7 @@ const AppLayout = ({ children }) => {
             </div>
             <Header />
             {!perfilConMigaIntegrada && <GlobalBreadcrumb />}
-            <main className={`${perfilConMigaIntegrada ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : '-mt-[84px] sm:-mt-[92px] lg:-mt-[102px]'} flex-grow relative z-10`}>
+            <main className={`${perfilConMigaIntegrada ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : pathname === '/' ? 'mt-[58px]' : '-mt-[84px] sm:-mt-[92px] lg:-mt-[102px]'} flex-grow relative z-10`}>
                 {children}
             </main>
             <Footer />

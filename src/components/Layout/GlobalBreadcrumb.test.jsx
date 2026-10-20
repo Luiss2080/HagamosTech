@@ -21,10 +21,9 @@ describe('GlobalBreadcrumb', () => {
     expect(within(navigation).getByText('Misión y visión')).toHaveAttribute('aria-current', 'page');
   });
 
-  it('marca Inicio como ubicación actual en la portada', () => {
+  it('no muestra la miga de pan en la portada', () => {
     renderAt('/');
 
-    const navigation = screen.getByRole('navigation', { name: 'Migas de pan' });
-    expect(within(navigation).getByText('Inicio')).toHaveAttribute('aria-current', 'page');
+    expect(screen.queryByRole('navigation', { name: 'Migas de pan' })).not.toBeInTheDocument();
   });
 });
