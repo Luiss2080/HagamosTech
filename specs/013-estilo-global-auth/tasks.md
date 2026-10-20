@@ -8,3 +8,5 @@
 - [x] T6. Verificar registro UI de punta a punta (código de verificación). (RF-5)
 - [x] T7. Añadir `e2e/auth.spec.js`; corregir etiquetas "Catálogo/Pedidos" → "Web/Sistemas". (RF-4)
 - [x] T8. Verificación global y `validation.md`. (Todos)
+- [x] T9. Aplicar en Mi espacio la composición de Contáctanos y mantener sus flujos de acceso. (RF-8)
+- [x] T10. Configurar PostgreSQL como almacenamiento del registro y login, y mostrar errores reales de conexión. (RF-9)
