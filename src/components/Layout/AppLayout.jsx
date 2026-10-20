@@ -11,14 +11,14 @@ import { useLocation } from 'react-router-dom';
 const AppLayout = ({ children }) => {
     const fetchProfile = useAuthStore((state) => state.fetchProfile);
     const { pathname } = useLocation();
-    const perfilConMigaIntegrada = pathname === '/perfil' || pathname === '/configuracion';
+    const perfilConMigaIntegrada = pathname.startsWith('/perfil') || pathname === '/configuracion';
     
     useEffect(() => {
         fetchProfile();
     }, [fetchProfile]);
     
     return (
-        <BreadcrumbContext.Provider value={!perfilConMigaIntegrada}>
+        <BreadcrumbContext.Provider value={true}>
         <div className="flex flex-col min-h-screen relative bg-slate-50">
             {/* Fondo tecnológico global: rejilla + nodos verde lima */}
             <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden bg-white">

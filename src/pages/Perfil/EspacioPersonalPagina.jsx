@@ -3,6 +3,7 @@ import { AlarmClock, ArrowRight, BookOpenText, CalendarDays, Check, ChevronLeft,
 import useAuthStore from '../../store/useAutenticacionStore';
 import apiClient from '../../servicios/clienteApi';
 import FondoTech from '../../components/fondos/FondoTech';
+import GlobalBreadcrumb from '../../components/Layout/GlobalBreadcrumb';
 
 const ETAPAS = [
   { id: 'idea', label: 'Idea', icon: Lightbulb },

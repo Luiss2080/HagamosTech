@@ -3,6 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { QRCodeSVG } from 'qrcode.react';
 import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
+import GlobalBreadcrumb from '../../components/Layout/GlobalBreadcrumb';
 import ProfileSidebar from './components/BarraLateralPerfil';
 import useAuthStore from '../../store/useAutenticacionStore';
 import './perfil-theme.css';
@@ -200,6 +201,7 @@ const ConfiguracionPagina = () => {
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
             <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-6 sm:px-6">
+            <GlobalBreadcrumb embedded />
             <PageHero
                 title="Ajustes y"
                 highlight="preferencias"
