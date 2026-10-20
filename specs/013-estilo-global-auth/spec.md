@@ -20,6 +20,8 @@ Visitantes y usuarios autenticados.
 - RF-7: EL SISTEMA usará el puerto `4321` para el backend en desarrollo (evita otros proyectos).
 - RF-8: EL ESPACIO PERSONAL usará el hero, encabezados, fondo y panel de dos columnas de la estructura de Contáctanos, respetando el tema oscuro, acento lima, contraste e iconografía del sitio.
 - RF-9: EL REGISTRO y el inicio de sesión usarán la base PostgreSQL configurada en el backend; el frontend mostrará errores reales cuando la API o la base no estén disponibles.
+- RF-10: CUANDO un usuario autenticado abra Mi perfil, Mi espacio o Configuración, EL SISTEMA mostrará una estructura visual coherente con la web: fondo tecnológico, hero centrado con título y descripción, secciones con encabezados claros, paneles legibles, iconografía de marca y acento lima.
+- RF-11: EL REDISEÑO de las vistas del módulo Perfil conservará sus formularios, navegación, preferencias y acciones existentes sin cambiar su alcance ni presentar controles visuales como persistidos si no lo están.
 
 ## Requisitos no funcionales
 - Sin dependencias nuevas.
@@ -28,13 +30,16 @@ Visitantes y usuarios autenticados.
 ## Casos límite
 - Puertos 3000/3001 ocupados por terceros → backend en 4321 y proxy de Vite.
 - Un input blanco con texto oscuro no debe volverse oscuro.
+- El diseño debe adaptarse a escritorio y móvil; ninguna vista del módulo puede quedar sin título o descripción de contexto.
 
 ## Fuera de alcance
 - Rediseñar el estilo de las páginas que ya usan la marca (Promociones/Novedades/hero) más allá de lo aprobado.
 - Entrega real de correos a dominios inexistentes (depende del SMTP/dominio de producción).
+- Nuevas funciones de cuenta, cambios en backend o sustitución de preferencias cuyo soporte actual no exista.
 
 ## Criterios de finalización
 - Elementos blancos restaurados (verificado con capturas).
+- Las vistas Mi perfil, Mi espacio y Configuración comparten la composición de la web, conservan contraste y sus flujos actuales.
 - Login y registro verificados de punta a punta.
 - `npm run lint`, `npm run test:run` (raíz y server), `npm run build` y `npm run test:e2e` en verde.
 

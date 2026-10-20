@@ -10,3 +10,7 @@
 - [x] T8. Verificación global y `validation.md`. (Todos)
 - [x] T9. Aplicar en Mi espacio la composición de Contáctanos y mantener sus flujos de acceso. (RF-8)
 - [x] T10. Configurar PostgreSQL como almacenamiento del registro y login, y mostrar errores reales de conexión. (RF-9)
+- [ ] T11. Actualizar Mi perfil con hero, secciones y tarjetas consistentes con la web sin alterar su guardado. (RF-10, RF-11)
+- [ ] T12. Actualizar Configuración y su navegación lateral/móvil con jerarquía, contraste e iconos de marca. (RF-10, RF-11)
+- [ ] T13. Revisar Mi espacio junto a las otras vistas y comprobar responsive y navegación del módulo. (RF-8, RF-10, RF-11)
+- [ ] T14. Ejecutar validaciones y actualizar `validation.md`. (RF-10, RF-11)
