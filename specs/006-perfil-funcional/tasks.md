@@ -8,3 +8,7 @@
 - [x] T6. Generar el certificado en cliente con jsPDF/html2canvas. (RF-7)
 - [x] T7. Añadir `server/test/perfil.test.js`. (RF-8)
 - [x] T8. Verificación y `validation.md`. (Todos)
+- [x] T9. Cambiar Prisma a PostgreSQL y preparar/migrar las tablas activas conservando IDs y relaciones. (RF-15, RF-17)
+- [x] T10. Adaptar el espacio personal al hero y panel centrados de Contáctanos. (RF-18)
+- [x] T11. Probar registro, verificación e inicio de sesión en PostgreSQL, además de cubrir duplicados en tests. (RF-16)
+- [x] T12. Documentar PostgreSQL como base activa y dejar MySQL como herramienta de migración puntual. (RF-15, RF-17)
