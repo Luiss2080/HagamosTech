@@ -3,7 +3,6 @@ import { AlarmClock, ArrowRight, BookOpenText, CalendarDays, Check, ChevronLeft,
 import useAuthStore from '../../store/useAutenticacionStore';
 import apiClient from '../../servicios/clienteApi';
 import FondoTech from '../../components/fondos/FondoTech';
-import GlobalBreadcrumb from '../../components/Layout/GlobalBreadcrumb';
 
 const ETAPAS = [
   { id: 'idea', label: 'Idea', icon: Lightbulb },
@@ -139,7 +138,6 @@ const EspacioPersonalPagina = () => {
     <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
       <FondoTech />
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 text-center sm:px-6 sm:pb-14 lg:pt-8">
-        <GlobalBreadcrumb embedded />
         <header className="border-b border-[#A3E635]/15 pb-10 sm:pb-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/35 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
@@ -205,7 +203,6 @@ const EspacioPersonalPagina = () => {
     <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
       <FondoTech />
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:pb-16 lg:pt-8">
-        <GlobalBreadcrumb embedded />
         <header className="mx-auto max-w-5xl border-b border-[#A3E635]/15 pb-8 text-center sm:pb-10">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>

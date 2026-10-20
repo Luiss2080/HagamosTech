@@ -11,7 +11,7 @@ import { useLocation } from 'react-router-dom';
 const AppLayout = ({ children }) => {
     const fetchProfile = useAuthStore((state) => state.fetchProfile);
     const { pathname } = useLocation();
-    const perfilConMigaIntegrada = pathname.startsWith('/perfil') || pathname === '/configuracion';
+    const esPerfil = pathname.startsWith('/perfil') || pathname === '/configuracion';
     
     useEffect(() => {
         fetchProfile();
@@ -27,8 +27,8 @@ const AppLayout = ({ children }) => {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-[#84CC16]/5 rounded-full blur-[100px] pointer-events-none"></div>
             </div>
             <Header />
-            {!perfilConMigaIntegrada && <GlobalBreadcrumb />}
-            <main className={`${perfilConMigaIntegrada ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : pathname === '/' ? 'mt-[58px]' : '-mt-[84px] sm:-mt-[92px] lg:-mt-[102px]'} flex-grow relative z-10`}>
+            {pathname !== '/' && <GlobalBreadcrumb />}
+            <main className={`${esPerfil ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : 'mt-[58px]'} flex-grow relative z-10`}>
                 {children}
             </main>
             <Footer />

@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useLayoutEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Link, useLocation } from 'react-router-dom';
 
 const LABELS = {
@@ -57,13 +58,57 @@ const getSegments = (pathname) => {
   return crumbs;
 };
 
-const GlobalBreadcrumb = ({ embedded = false }) => {
+const GlobalBreadcrumb = () => {
   const { pathname } = useLocation();
-  if (pathname === '/') return null;
+  const [mountNode, setMountNode] = useState(null);
+
+  useLayoutEffect(() => {
+    if (pathname === '/') {
+      setMountNode(null);
+      return undefined;
+    }
+
+    const main = document.querySelector('main');
+    if (!main) return undefined;
+
+    let host = null;
+    let root = null;
+    let originalPosition = '';
+    const offset = pathname.startsWith('/perfil') || pathname === '/configuracion' ? 'top-0' : 'top-7';
+    const placeBreadcrumb = () => {
+      const target = main.querySelector('section') || main;
+      if (target === host) return;
+
+      if (host && host !== main) host.style.position = originalPosition;
+      root?.remove();
+      host = target;
+      originalPosition = host === main ? '' : host.style.position;
+      if (host !== main && window.getComputedStyle(host).position === 'static') {
+        host.style.position = 'relative';
+      }
+      root = document.createElement('div');
+      root.className = `pointer-events-none absolute inset-x-0 ${offset} z-20 flex justify-center px-4`;
+      host.prepend(root);
+      setMountNode(root);
+    };
+
+    placeBreadcrumb();
+    const observer = new MutationObserver(placeBreadcrumb);
+    observer.observe(main, { childList: true, subtree: true });
+
+    return () => {
+      observer.disconnect();
+      if (host && host !== main) host.style.position = originalPosition;
+      root?.remove();
+      setMountNode(null);
+    };
+  }, [pathname]);
+
+  if (pathname === '/' || !mountNode) return null;
   const crumbs = getSegments(pathname);
 
-  return (
-    <nav aria-label="Migas de pan" className={embedded ? 'relative z-20 mb-6 flex justify-center' : 'relative z-20 h-[142px] border-b border-[#A3E635]/10 bg-[#050505]/95 px-4 pt-[84px] backdrop-blur-md sm:h-[150px] sm:px-6 sm:pt-[92px] lg:h-[160px] lg:pt-[102px]'}>
+  return createPortal(
+    <nav aria-label="Migas de pan" className="pointer-events-auto">
       <ol className="mx-auto flex w-fit max-w-full items-center gap-2 overflow-x-auto rounded-full border border-white/10 bg-[#0a0d09]/85 px-2 py-1.5 shadow-[0_8px_26px_rgba(0,0,0,.2)]">
         <li className="flex shrink-0 items-center gap-2">
           {crumbs.length ? (
@@ -86,7 +131,8 @@ const GlobalBreadcrumb = ({ embedded = false }) => {
           </li>
         ))}
       </ol>
-    </nav>
+    </nav>,
+    mountNode,
   );
 };
 
