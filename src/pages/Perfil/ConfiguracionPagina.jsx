@@ -15,6 +15,7 @@ import {
     useDesactivarCuenta,
     useExportarDatos
 } from '../../hooks/usePerfilConfig';
+import { PREFERENCIAS_PERFIL_INICIALES } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
     { name: 'Rojo Robótico', value: '#ef4444', hover: '#dc2626', bg: 'bg-red-500', ring: 'ring-red-500' },
@@ -43,7 +44,7 @@ const ConfiguracionPagina = () => {
     const navigate = useNavigate();
 
     const { loading: passLoading, cambiar: cambiarPassword } = useCambioPassword();
-    const { loading: prefLoading, guardar: guardarPrefs } = usePreferencias();
+    const { preferences: preferenciasServidor, loading: prefLoading, error: prefApiError, guardar: guardarPrefs } = usePreferencias();
     const { sesiones, loading: sesLoading, listar: listarSesiones, revocar: revocarSesion } = useSesiones();
     const { loading: faLoading, toggle: toggle2FA, setup: setup2FA } = useDosFA();
     const { loading: desLoading, desactivar: desactivarCuenta } = useDesactivarCuenta();
@@ -51,17 +52,10 @@ const ConfiguracionPagina = () => {
     const { user } = useAuthStore();
 
     // --- Estados ---
-    const [accentColor, setAccentColor] = useState(() => {
-        return localStorage.getItem('hagamostech_accent_color') || '#A3E635';
-    });
-
-    const [privacy, setPrivacy] = useState('members');
-
-    const [preferences, setPreferences] = useState({
-        email_promociones: true,
-        email_pedidos: true,
-        sms_alertas: false,
-    });
+    const [accentColor, setAccentColor] = useState(PREFERENCIAS_PERFIL_INICIALES.colorAcento);
+    const [privacy, setPrivacy] = useState(PREFERENCIAS_PERFIL_INICIALES.privacidadPerfil);
+    const [preferences, setPreferences] = useState(PREFERENCIAS_PERFIL_INICIALES);
+    const [prefError, setPrefError] = useState('');
 
 
     const [successMessage, setSuccessMessage] = useState('');
@@ -89,27 +83,41 @@ const ConfiguracionPagina = () => {
     // --- Listar sesiones activas al cargar ---
     useEffect(() => { listarSesiones(); }, [listarSesiones]);
 
+    useEffect(() => {
+        setPreferences(preferenciasServidor);
+        setAccentColor(preferenciasServidor.colorAcento);
+        setPrivacy(preferenciasServidor.privacidadPerfil);
+    }, [preferenciasServidor]);
+
+    useEffect(() => { setPrefError(prefApiError); }, [prefApiError]);
+
     // --- Aplicar Acento al Cargar ---
     useEffect(() => {
         document.documentElement.style.setProperty('--color-primary', accentColor);
-        localStorage.setItem('hagamostech_accent_color', accentColor);
     }, [accentColor]);
 
     const handleAccentChange = (colorValue) => {
         setAccentColor(colorValue);
-        setSuccessMessage('¡Color de acento actualizado!');
-        setShowSuccessModal(true);
+        setPreferences(prev => ({ ...prev, colorAcento: colorValue }));
+        setPrefError('');
     };
 
     const handleTogglePref = (key) => {
         setPreferences(prev => ({ ...prev, [key]: !prev[key] }));
+        setPrefError('');
     };
 
     const handleSavePreferences = async () => {
-        const result = await guardarPrefs(preferences);
+        const result = await guardarPrefs({ ...preferences, colorAcento: accentColor, privacidadPerfil: privacy });
         if (result.success) {
+            setPreferences(result.data);
+            setAccentColor(result.data.colorAcento);
+            setPrivacy(result.data.privacidadPerfil);
+            setPrefError('');
             setSuccessMessage('Preferencias guardadas correctamente.');
             setShowSuccessModal(true);
+        } else {
+            setPrefError(result.message);
         }
     };
 
