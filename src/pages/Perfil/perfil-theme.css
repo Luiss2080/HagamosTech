@@ -6,16 +6,44 @@
   color-scheme: dark;
 }
 
-#perfil-page [class~='bg-white'],
-#config-page [class~='bg-white'] {
+#perfil-page div[class~='bg-white'],
+#config-page div[class~='bg-white'] {
   background-color: rgba(12, 15, 10, 0.94) !important;
   color: #f8fafc;
-  border-color: rgba(163, 230, 53, 0.2);
+  border-color: rgba(163, 230, 53, 0.22) !important;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, 0.24);
+}
+
+#perfil-page a[class~='bg-white'],
+#perfil-page button[class~='bg-white'],
+#config-page a[class~='bg-white'],
+#config-page button[class~='bg-white'] {
+  background-color: #a3e635 !important;
+  color: #0a0a0a !important;
 }
 
 #perfil-page [class~='bg-slate-50'],
 #config-page [class~='bg-slate-50'] {
   background-color: rgba(5, 5, 5, 0.58) !important;
+}
+
+#perfil-page [class~='bg-slate-100'],
+#config-page [class~='bg-slate-100'],
+#perfil-page [class~='bg-slate-200'],
+#config-page [class~='bg-slate-200'] {
+  background-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#perfil-page [class*='from-[#A3E635]'],
+#config-page [class*='from-[#A3E635]'] {
+  background-image: linear-gradient(100deg, rgba(163, 230, 53, 0.1), rgba(17, 21, 13, 0.88) 55%, transparent) !important;
+}
+
+#perfil-page [class*='bg-black/25'],
+#config-page [class*='bg-black/25'],
+#perfil-page [class*='bg-black/45'],
+#config-page [class*='bg-black/45'] {
+  color: #e2e8f0;
 }
 
 #perfil-page [class~='text-slate-900'],
@@ -58,6 +86,24 @@
 #perfil-page label,
 #config-page label {
   color: #e2e8f0;
+}
+
+#perfil-page section [class*='text-[8px]'],
+#config-page section [class*='text-[8px]'] {
+  font-size: 0.68rem !important;
+}
+
+#perfil-page section [class*='text-[9px]'],
+#config-page section [class*='text-[9px]'] {
+  font-size: 0.72rem !important;
+}
+
+#config-page section h3 {
+  font-size: 0.95rem !important;
+}
+
+#config-page section h4 {
+  font-size: 0.82rem !important;
 }
 
 @media (max-width: 640px) {

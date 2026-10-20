@@ -410,7 +410,7 @@ const PerfilPagina = () => {
             <div className="relative">
             <section className="relative z-10 py-10 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
-                <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-8 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
                     
                     {/* LEFT SIDEBAR (Red outline border) */}
                     <div className="rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col h-full">
@@ -421,7 +421,7 @@ const PerfilPagina = () => {
                     <div className="flex flex-col gap-8">
                         
                         {/* MOBILE TABS NAVIGATION */}
-                        <div className="flex lg:hidden gap-2 bg-[#f8fafc] p-2 rounded-2xl border border-slate-100 overflow-x-auto scrollbar-none">
+                        <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
                             {navItemsMobile.map((item) => {
                                 const isActive = location.pathname === item.path;
                                 return (
@@ -438,9 +438,9 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PROFILE COMPLETION PROGRESS (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3.5 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-chart-line"></i>
                                 </div>
                                 <div>
@@ -467,9 +467,9 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* PHOTO & AVATAR PICKER (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3.5 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-camera"></i>
                                 </div>
                                 <div>
@@ -512,7 +512,7 @@ const PerfilPagina = () => {
                                             <button
                                                 key={grad.id}
                                                 onClick={() => handlePresetSelect(grad)}
-                                                className="group relative flex flex-col items-center p-2 rounded-2xl border border-[#A3E635]/10 bg-[#fbfdff] hover:border-[#A3E635]/50 hover:bg-[#A3E635]/5 transition-all duration-300 cursor-pointer"
+                                                    className="group relative flex flex-col items-center p-2.5 rounded-2xl border border-white/10 bg-black/25 hover:border-[#A3E635]/50 hover:bg-[#A3E635]/5 transition-all duration-300 cursor-pointer"
                                                 title={grad.name}
                                             >
                                                 <div 
@@ -530,9 +530,9 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* PERSONAL INFORMATION FORM (Red outline border) */}
-                        <div className="bg-white rounded-2xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-xl border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3.5 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-id-card"></i>
                                 </div>
                                 <div>
@@ -687,7 +687,7 @@ const PerfilPagina = () => {
                                 <div className="pt-5 border-t border-slate-100 flex flex-col sm:flex-row items-center justify-between gap-4">
                                     <Link 
                                         to="/" 
-                                        className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-2 border-0"
+                                        className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer flex items-center gap-2 border-0"
                                     >
                                         <i className="fas fa-arrow-left"></i> Volver al Inicio
                                     </Link>
@@ -712,7 +712,7 @@ const PerfilPagina = () => {
                                                     });
                                                 }
                                             }}
-                                            className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
+                                            className="px-4 py-2.5 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
                                         >
                                             Restablecer
                                         </button>
@@ -720,7 +720,7 @@ const PerfilPagina = () => {
                                         <button 
                                             type="submit"
                                             disabled={isSaving || loading}
-                                            className="px-5 py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer disabled:opacity-50 border-0"
+                                            className="px-5 py-2.5 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-[#A3E635]/10 transition-all cursor-pointer disabled:opacity-50 border-0"
                                         >
                                             {isSaving ? (
                                                 <>
@@ -751,7 +751,7 @@ const PerfilPagina = () => {
                         </p>
                         <button 
                             onClick={() => setShowSuccessModal(false)}
-                            className="w-full py-2.5 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                            className="w-full py-2.5 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-[#A3E635]/10 transition-all cursor-pointer border-0"
                         >
                             Excelente
                         </button>

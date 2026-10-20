@@ -16,8 +16,8 @@ import {
 } from '../../hooks/usePerfilConfig';
 
 const ACCENT_COLORS = [
-    { name: 'Rojo Robótico', value: '#A3E635', hover: '#84CC16', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
-    { name: 'Dorado Tech', value: '#A3E635', hover: '#a88544', bg: 'bg-[#A3E635]', ring: 'ring-[#A3E635]' },
+    { name: 'Rojo Robótico', value: '#ef4444', hover: '#dc2626', bg: 'bg-red-500', ring: 'ring-red-500' },
+    { name: 'Dorado Tech', value: '#d4a72c', hover: '#b88914', bg: 'bg-amber-400', ring: 'ring-amber-400' },
     { name: 'Azul Espacial', value: '#1d4ed8', hover: '#1e40af', bg: 'bg-blue-700', ring: 'ring-blue-700' },
     { name: 'Verde Cyber', value: '#10b981', hover: '#059669', bg: 'bg-[#10b981]', ring: 'ring-[#10b981]' },
 ];
@@ -209,7 +209,7 @@ const ConfiguracionPagina = () => {
             <div className="relative">
             <section className="relative z-10 py-5 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
-                <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-4 items-stretch">
+                <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
                     
                     {/* LEFT SIDE: SIDEBAR */}
                     <div className="rounded-[2rem] overflow-hidden shadow-xl flex flex-col h-full">
@@ -225,7 +225,7 @@ const ConfiguracionPagina = () => {
                     <div className="flex flex-col gap-4">
                         
                         {/* MOBILE TABS NAVIGATION */}
-                        <div className="flex lg:hidden gap-2 bg-[#f8fafc] p-2 rounded-2xl border border-slate-100 overflow-x-auto scrollbar-none">
+                        <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
                             {navItemsMobile.map((item) => {
                                 const isActive = location.pathname === item.path;
                                 return (
@@ -242,9 +242,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PERSONALIZACIÓN VISUAL */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-palette"></i>
                                 </div>
                                 <div>
@@ -264,7 +264,7 @@ const ConfiguracionPagina = () => {
                                                 <button
                                                     key={color.value}
                                                     onClick={() => handleAccentChange(color.value)}
-                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-slate-100 bg-[#fbfdff] text-slate-700 hover:border-slate-200 dark:hover:border-slate-700'}`}
+                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-white/10 bg-black/25 text-slate-700 hover:border-[#A3E635]/40'}`}
                                                 >
                                                     <span className={`w-3 h-3 rounded-full shrink-0 ${color.bg} ${isSelected ? 'ring-2 ring-offset-2 ring-slate-800 dark:ring-offset-slate-900' : ''}`} />
                                                     <span className="truncate">{color.name.split(' ')[0]}</span>
@@ -277,9 +277,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PRIVACY METER */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-user-shield"></i>
                                 </div>
                                 <div>
@@ -314,9 +314,9 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PRIVACIDAD Y SEGURIDAD */}
-                        <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                            <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-2.5 rounded-xl border border-red-100/70 mb-2.5 flex items-center gap-2.5">
-                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-red-500/20 shrink-0">
+                        <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
+                            <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-lock"></i>
                                 </div>
                                 <div>
@@ -363,7 +363,7 @@ const ConfiguracionPagina = () => {
                                         <button 
                                             type="submit"
                                             disabled={passLoading}
-                                            className="w-full py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider shadow-sm shadow-red-500/30 transition-all cursor-pointer border-0 disabled:opacity-50"
+                                            className="w-full py-2 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider shadow-sm shadow-[#A3E635]/10 transition-all cursor-pointer border-0 disabled:opacity-50"
                                         >
                                             {passLoading ? 'Cambiando...' : 'Cambiar Contraseña'}
                                         </button>
@@ -384,7 +384,7 @@ const ConfiguracionPagina = () => {
                                         </p>
                                     </div>
                                     
-                                    <div className="bg-[#fbfdff] p-2.5 rounded-xl border border-slate-100 flex items-center justify-between gap-2">
+                                    <div className="bg-black/25 p-2.5 rounded-xl border border-white/10 flex items-center justify-between gap-2">
                                         <div className="flex gap-2 items-center">
                                             <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center text-sm"><i className="fas fa-mobile-screen"></i></div>
                                             <div>
@@ -408,9 +408,9 @@ const ConfiguracionPagina = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                             
                             {/* Active Sessions */}
-                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
-                                <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                    <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                            <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635]">
+                                <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                    <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                         <i className="fas fa-desktop"></i>
                                     </div>
                                     <div>
@@ -449,10 +449,10 @@ const ConfiguracionPagina = () => {
                             </div>
 
                             {/* Data Export & Danger Zone */}
-                            <div className="bg-white rounded-2xl p-3 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635] flex flex-col justify-between">
+                            <div className="bg-white rounded-3xl p-5 shadow-lg border border-slate-200 border-l-4 border-l-[#A3E635] flex flex-col justify-between">
                                 <div>
-                                    <div className="bg-gradient-to-r from-red-50/90 via-white to-transparent p-3.5 rounded-xl border border-red-100/70 mb-4 flex items-center gap-3">
-                                        <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-red-500/20 shrink-0">
+                                    <div className="bg-gradient-to-r from-[#A3E635]/10 via-[#11150d] to-transparent p-3 rounded-2xl border border-[#A3E635]/15 mb-4 flex items-center gap-3">
+                                        <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                             <i className="fas fa-gears"></i>
                                         </div>
                                         <div>
@@ -469,7 +469,7 @@ const ConfiguracionPagina = () => {
                                             </p>
                             <button 
                                 onClick={handleExportData}
-                                className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
+                                className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-colors cursor-pointer border-0"
                             >
                                 <i className="fas fa-download mr-2"></i> Exportar a JSON
                             </button>
@@ -485,7 +485,7 @@ const ConfiguracionPagina = () => {
                                     <button 
                                         onClick={() => setShowDangerModal(true)}
                                         disabled={desLoading}
-                                        className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0 disabled:opacity-50"
+                                        className="w-full mt-2 py-2 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[10px] font-black uppercase tracking-wider transition-all cursor-pointer border-0 disabled:opacity-50"
                                     >
                                         {desLoading ? 'Desactivando...' : 'Desactivar Cuenta'}
                                     </button>
@@ -542,7 +542,7 @@ const ConfiguracionPagina = () => {
                             )}
                             <button 
                                 type="submit"
-                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-[#A3E635]/10 transition-all cursor-pointer border-0"
                             >
                                 Activar 2FA
                             </button>
@@ -574,7 +574,7 @@ const ConfiguracionPagina = () => {
                                         setShowSuccessModal(true);
                                     }
                                 }}
-                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                                className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-[#A3E635]/10 transition-all cursor-pointer border-0"
                             >
                                 Confirmar Desactivación
                             </button>
@@ -602,7 +602,7 @@ const ConfiguracionPagina = () => {
                         </p>
                         <button 
                             onClick={() => setShowSuccessModal(false)}
-                            className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-red-500/30 transition-all cursor-pointer border-0"
+                            className="w-full py-3 rounded-xl bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-xs font-black uppercase tracking-wider shadow-md shadow-[#A3E635]/10 transition-all cursor-pointer border-0"
                         >
                             Aceptar
                         </button>
