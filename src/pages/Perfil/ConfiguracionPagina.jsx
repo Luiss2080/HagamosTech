@@ -209,7 +209,7 @@ const ConfiguracionPagina = () => {
             <div className="relative">
             <section className="relative z-10 py-5 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
-                <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
                     
                     {/* LEFT SIDE: SIDEBAR */}
                     <div className="rounded-[2rem] overflow-hidden shadow-xl flex flex-col h-full">

@@ -410,7 +410,7 @@ const PerfilPagina = () => {
             <div className="relative">
             <section className="relative z-10 py-10 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
-                <div className="grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
+                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[300px_minmax(0,1fr)] gap-6 items-stretch">
                     
                     {/* LEFT SIDEBAR (Red outline border) */}
                     <div className="rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col h-full">
