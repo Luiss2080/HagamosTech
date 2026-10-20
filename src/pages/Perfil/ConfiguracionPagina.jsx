@@ -199,15 +199,17 @@ const ConfiguracionPagina = () => {
             {/* Dots grid overlay */}
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
+            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-6 sm:px-6">
             <PageHero
                 title="Ajustes y"
                 highlight="preferencias"
                 description="Personaliza la apariencia del portal, administra tus preferencias de notificaciones, sesiones activas y seguridad."
+                embedded
+                className="!pt-0 !pb-8"
             />
 
-            {/* MAIN LAYOUT GRID (50/50 EQUAL COLUMNS ON DESKTOP) */}
+            {/* Todo el módulo comparte una única sección y un solo panel. */}
             <div className="relative">
-            <section className="relative z-10 py-8 max-w-[95rem] mx-auto px-4 sm:px-6">
                 <CircuitBackground />
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(260px,0.72fr)_minmax(0,1.6fr)] gap-0 items-stretch overflow-hidden rounded-[2.5rem] border border-[#A3E635]/25 bg-[#090b08]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
                     
@@ -495,8 +497,8 @@ const ConfiguracionPagina = () => {
 
                     </div>
                 </div>
-            </section>
             </div>
+            </section>
 
             {/* 2FA MODAL SETUP */}
             {show2FAModal && (

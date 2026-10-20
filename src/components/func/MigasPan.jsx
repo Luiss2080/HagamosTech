@@ -37,7 +37,7 @@ const getBreadcrumbsAndBadge = (pathname) => {
     return { paths: [{ label: 'Perfil', url: '/perfil' }, { label: 'Mi espacio' }], badgeText: 'Proyectos, notas y calendario — HAGAMOSTECH', icon: 'fa-solid fa-calendar-days' };
   }
   if (pathname.includes('/perfil') && !pathname.includes('/soporte')) {
-    return { paths: [{ label: 'Perfil' }], badgeText: 'Mi Perfil — HAGAMOSTECH', icon: 'fa-solid fa-user' };
+    return { paths: [{ label: 'Mi perfil' }], badgeText: 'Mi Perfil — HAGAMOSTECH', icon: 'fa-solid fa-user' };
   }
   if (pathname.includes('/configuracion')) {
     return { paths: [{ label: 'Configuración' }], badgeText: 'Preferencias y Seguridad — HAGAMOSTECH', icon: 'fa-solid fa-gear' };
@@ -57,7 +57,7 @@ const Breadcrumb = ({ paths, badgeText, icon, align = 'center', title, highlight
 
   const breadcrumbPill = (
     <div className={`flex ${isCenter ? 'justify-center' : 'justify-start'} mb-4`}>
-      <div className="inline-flex items-center gap-2 bg-[#111827] px-4 py-2 rounded-full border border-gray-100 shadow-md">
+      <div className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/20 bg-[#0a0d09]/90 px-4 py-2 shadow-md backdrop-blur-md">
         <Link to="/" className="w-8 h-8 rounded-full bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center hover:bg-[#84CC16] transition-all shrink-0 shadow-sm">
           <i className="fa-solid fa-house text-xs"></i>
         </Link>

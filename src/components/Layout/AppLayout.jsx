@@ -6,16 +6,19 @@ import ChatWhatsApp from '../Widgets/ChatWhatsApp';
 import ChatAssistant from '../../chat/AsistenteChat';
 import GlobalBreadcrumb from './GlobalBreadcrumb';
 import BreadcrumbContext from '../func/BreadcrumbContext';
+import { useLocation } from 'react-router-dom';
 
 const AppLayout = ({ children }) => {
     const fetchProfile = useAuthStore((state) => state.fetchProfile);
+    const { pathname } = useLocation();
+    const perfilConMigaIntegrada = pathname === '/perfil' || pathname === '/configuracion';
     
     useEffect(() => {
         fetchProfile();
     }, [fetchProfile]);
     
     return (
-        <BreadcrumbContext.Provider value={true}>
+        <BreadcrumbContext.Provider value={!perfilConMigaIntegrada}>
         <div className="flex flex-col min-h-screen relative bg-slate-50">
             {/* Fondo tecnológico global: rejilla + nodos verde lima */}
             <div className="fixed inset-0 z-[1] pointer-events-none overflow-hidden bg-white">
@@ -24,8 +27,8 @@ const AppLayout = ({ children }) => {
                 <div className="absolute bottom-[-10%] right-[-10%] w-[45%] h-[45%] bg-[#84CC16]/5 rounded-full blur-[100px] pointer-events-none"></div>
             </div>
             <Header />
-            <GlobalBreadcrumb />
-            <main className="-mt-[84px] flex-grow relative z-10 sm:-mt-[92px] lg:-mt-[102px]">
+            {!perfilConMigaIntegrada && <GlobalBreadcrumb />}
+            <main className={`${perfilConMigaIntegrada ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : '-mt-[84px] sm:-mt-[92px] lg:-mt-[102px]'} flex-grow relative z-10`}>
                 {children}
             </main>
             <Footer />
