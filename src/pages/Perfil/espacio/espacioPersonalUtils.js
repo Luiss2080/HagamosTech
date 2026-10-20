@@ -13,6 +13,15 @@ export const filtrarProyectos = (proyectos, busqueda, etapa) => {
   });
 };
 
+export const ordenarProyectos = (proyectos, criterio) => {
+  const etapas = ['idea', 'consulta', 'progreso', 'revision', 'finalizado'];
+  return [...proyectos].sort((a, b) => {
+    if (criterio === 'nombre') return a.titulo.localeCompare(b.titulo, 'es', { sensitivity: 'base' });
+    if (criterio === 'etapa') return etapas.indexOf(a.etapa) - etapas.indexOf(b.etapa);
+    return new Date(b.actualizadoEn || b.creadoEn || 0) - new Date(a.actualizadoEn || a.creadoEn || 0);
+  });
+};
+
 export const filtrarNotas = (notas, busqueda, proyectoId) => {
   const termino = normalizar(busqueda.trim());
   return notas.filter((nota) => {
@@ -21,6 +30,11 @@ export const filtrarNotas = (notas, busqueda, proyectoId) => {
     return coincideProyecto && coincideTexto;
   });
 };
+
+export const ordenarNotas = (notas, criterio) => [...notas].sort((a, b) => {
+  if (criterio === 'nombre') return a.titulo.localeCompare(b.titulo, 'es', { sensitivity: 'base' });
+  return new Date(b.actualizadoEn || b.creadoEn || 0) - new Date(a.actualizadoEn || a.creadoEn || 0);
+});
 
 export const filtrarEventos = (eventos, periodo, ahora = new Date()) => {
   const inicio = new Date(ahora);

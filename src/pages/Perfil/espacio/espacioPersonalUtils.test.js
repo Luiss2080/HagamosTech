@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { fechaLocal, filtrarEventos, filtrarNotas, filtrarProyectos, obtenerDiasDelCalendario } from './espacioPersonalUtils';
+import { fechaLocal, filtrarEventos, filtrarNotas, filtrarProyectos, obtenerDiasDelCalendario, ordenarNotas, ordenarProyectos } from './espacioPersonalUtils';
 
 describe('filtros del espacio personal', () => {
   it('busca proyectos por título, categoría o descripción sin distinguir acentos ni mayúsculas', () => {
@@ -20,6 +20,23 @@ describe('filtros del espacio personal', () => {
     expect(filtrarNotas(notes, 'academica', 'todas').map(({ id }) => id)).toEqual([1]);
     expect(filtrarNotas(notes, '', 'generales').map(({ id }) => id)).toEqual([2]);
     expect(filtrarNotas(notes, '', '7').map(({ id }) => id)).toEqual([1]);
+  });
+
+  it('ordena proyectos y notas sin cambiar el orden de los datos originales', () => {
+    const projects = [
+      { titulo: 'Zeta', etapa: 'progreso', actualizadoEn: '2026-05-01T12:00:00Z' },
+      { titulo: 'Alfa', etapa: 'idea', actualizadoEn: '2026-05-02T12:00:00Z' },
+    ];
+    const notes = [
+      { titulo: 'Zeta', actualizadoEn: '2026-05-01T12:00:00Z' },
+      { titulo: 'Alfa', actualizadoEn: '2026-05-02T12:00:00Z' },
+    ];
+    expect(ordenarProyectos(projects, 'nombre').map(({ titulo }) => titulo)).toEqual(['Alfa', 'Zeta']);
+    expect(ordenarProyectos(projects, 'etapa').map(({ titulo }) => titulo)).toEqual(['Alfa', 'Zeta']);
+    expect(ordenarNotas(notes, 'actualizadas').map(({ titulo }) => titulo)).toEqual(['Alfa', 'Zeta']);
+    expect(ordenarNotas(notes, 'nombre').map(({ titulo }) => titulo)).toEqual(['Alfa', 'Zeta']);
+    expect(projects[0].titulo).toBe('Zeta');
+    expect(notes[0].titulo).toBe('Zeta');
   });
 
   it('filtra recordatorios de hoy y siete días en orden cronológico', () => {

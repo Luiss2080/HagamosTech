@@ -44,6 +44,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-20: CUANDO el usuario consulte sus notas, EL SISTEMA permitirá buscar por título o contenido y filtrar por proyecto asociado, sin modificar los registros persistidos.
 - RF-21: CUANDO el usuario consulte sus recordatorios, EL SISTEMA permitirá ver la agenda de hoy, los próximos siete días o todos los eventos futuros, conservando la navegación mensual del calendario.
 - RF-22: EL ESPACIO PERSONAL organizará proyectos, notas, calendario, formularios y acceso a datos en módulos separados; todas las operaciones de creación, edición y eliminación seguirán usando los endpoints autenticados existentes y persistirán en PostgreSQL.
+- RF-23: CUANDO el usuario explore proyectos o notas, EL SISTEMA permitirá cambiar entre vista de tarjetas y lista y ordenar los registros disponibles sin duplicar acciones de creación; estas preferencias serán temporales y no cambiarán los registros de PostgreSQL.
 
 ## Requisitos no funcionales
 - Mensajes en español; JSON consistente.
@@ -67,12 +68,13 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Reserva de citas con disponibilidad de HagamosTech; el calendario es personal y sus recordatorios no crean una cita.
 
 ## Criterios de finalización
-- Endpoints implementados y con tests en verde (RF-1..RF-22).
+- Endpoints implementados y con tests en verde (RF-1..RF-23).
 - `npm run lint`, `npm run test:run` (raíz y server) y `npm run build` en verde.
 
-## Validación de RF-19..RF-22
+## Validación de RF-19..RF-23
 - RF-19..RF-21: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica búsqueda, filtros por etapa/proyecto, agenda temporal y calendario mensual.
 - RF-22: `src/servicios/espacioPersonalApi.test.js` verifica el uso de endpoints para lectura, alta, actualización y eliminación; `server/test/espacioPersonal.test.js` verifica autenticación, propiedad y escritura mediante Prisma.
+- RF-23: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica los criterios de orden; `ComponentesEspacio.test.jsx` valida el menú personalizado y `PanelesPersonalizacion.test.jsx` comprueba vista de lista y ausencia de acciones duplicadas.
 - PostgreSQL: comprobación transaccional de creación y relación de proyecto, nota y evento; la transacción de verificación se revierte.
 
 ## Dudas abiertas
