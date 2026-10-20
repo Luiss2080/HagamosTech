@@ -1,49 +1,28 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
-import { AlarmClock, ArrowRight, BookOpenText, CalendarDays, Check, ChevronLeft, ChevronRight, CircleHelp, ClipboardList, Lightbulb, NotebookPen, Plus, Trash2, UserRound, X } from 'lucide-react';
+import { AlarmClock, ArrowRight, CalendarDays, Check, ClipboardList, NotebookPen, Plus, UserRound, X } from 'lucide-react';
 import useAuthStore from '../../store/useAutenticacionStore';
-import apiClient from '../../servicios/clienteApi';
 import FondoTech from '../../components/fondos/FondoTech';
+import { actualizarEtapaProyecto, eliminarRegistroPersonal, guardarRegistroPersonal, listarEspacioPersonal } from '../../servicios/espacioPersonalApi';
+import CalendarioPanel from './espacio/CalendarioPanel';
+import FormularioEspacioPersonal from './espacio/FormularioEspacioPersonal';
+import NotasPanel from './espacio/NotasPanel';
+import ProyectosPanel from './espacio/ProyectosPanel';
+import { IconoEspacio } from './espacio/ComponentesEspacio';
+import { estilosBoton } from './espacio/estilosEspacio';
+import { fechaHoraLocal, fechaLocal, filtrarEventos } from './espacio/espacioPersonalUtils';
 
-const ETAPAS = [
-  { id: 'idea', label: 'Idea', icon: Lightbulb },
-  { id: 'consulta', label: 'En consulta', icon: CircleHelp },
-  { id: 'progreso', label: 'En progreso', icon: ClipboardList },
-  { id: 'revision', label: 'Revisión', icon: BookOpenText },
-  { id: 'finalizado', label: 'Finalizado', icon: Check },
+const secciones = [
+  { id: 'proyectos', label: 'Proyectos', acceso: 'Mis proyectos', singular: 'proyecto', icon: ClipboardList },
+  { id: 'notas', label: 'Notas', acceso: 'Mis notas', singular: 'nota', icon: NotebookPen },
+  { id: 'calendario', label: 'Calendario', acceso: 'Calendario', singular: 'recordatorio', icon: CalendarDays },
 ];
-const TABS = [
-  { id: 'proyectos', label: 'Proyectos', icon: ClipboardList },
-  { id: 'notas', label: 'Notas', icon: NotebookPen },
-  { id: 'calendario', label: 'Calendario', icon: CalendarDays },
-];
-const API = '/perfil/espacio';
-const fechaLocal = (date) => {
-  const pad = (value) => String(value).padStart(2, '0');
-  return `${date.getFullYear()}-${pad(date.getMonth() + 1)}-${pad(date.getDate())}`;
-};
-const horaLocal = (date) => `${String(date.getHours()).padStart(2, '0')}:${String(date.getMinutes()).padStart(2, '0')}`;
-const fechaHoraLocal = (value) => {
-  const date = new Date(value);
-  return `${fechaLocal(date)}T${horaLocal(date)}`;
-};
 
-const Icono = ({ children, className = '' }) => (
-  <span className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-[#A3E635]/20 bg-[#A3E635]/10 text-[#A3E635] ${className}`}>{children}</span>
-);
-
-const Campo = ({ label, as: fieldAs, className = '', ...props }) => (
-  <label className="grid gap-2 text-sm font-bold text-slate-200">
-    {label}
-    {fieldAs === 'textarea' ? <textarea {...props} className={`min-h-28 resize-y rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${className}`} /> : <input {...props} className={`rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white outline-none transition placeholder:text-slate-500 focus:border-[#A3E635]/60 ${className}`} />}
-  </label>
-);
+const mensajeError = (error, fallback) => error.response?.data?.mensaje || error.response?.data?.error || fallback;
 
 const EspacioPersonalPagina = () => {
   const user = useAuthStore((state) => state.user);
   const [tab, setTab] = useState('proyectos');
-  const [proyectos, setProyectos] = useState([]);
-  const [notas, setNotas] = useState([]);
-  const [eventos, setEventos] = useState([]);
+  const [datos, setDatos] = useState({ proyectos: [], notas: [], eventos: [] });
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [notice, setNotice] = useState('');
@@ -51,18 +30,15 @@ const EspacioPersonalPagina = () => {
   const [saving, setSaving] = useState(false);
   const [month, setMonth] = useState(() => new Date(new Date().getFullYear(), new Date().getMonth(), 1));
   const [agendaRange, setAgendaRange] = useState('semana');
+  const { proyectos, notas, eventos } = datos;
+
   const cargar = useCallback(async () => {
     setLoading(true);
     setError('');
     try {
-      const [projectResponse, noteResponse, eventResponse] = await Promise.all([
-        apiClient.get(`${API}/proyectos`), apiClient.get(`${API}/notas`), apiClient.get(`${API}/eventos`),
-      ]);
-      setProyectos(projectResponse.data.data);
-      setNotas(noteResponse.data.data);
-      setEventos(eventResponse.data.data);
+      setDatos(await listarEspacioPersonal());
     } catch (apiError) {
-      setError(apiError.response?.data?.mensaje || apiError.response?.data?.error || 'No pudimos cargar tu espacio personal. Intentá nuevamente.');
+      setError(mensajeError(apiError, 'No pudimos cargar tu espacio personal. Intentá nuevamente.'));
     } finally {
       setLoading(false);
     }
@@ -75,25 +51,34 @@ const EspacioPersonalPagina = () => {
     return () => clearTimeout(timer);
   }, [notice]);
 
+  const eventosSemana = useMemo(() => filtrarEventos(eventos, 'semana'), [eventos]);
+  const abrirModal = (tipo, initial = {}) => setModal({ tipo, ...initial });
+  const abrirProyecto = (project) => abrirModal('proyecto', project ? {
+    id: project.id, titulo: project.titulo, categoria: project.categoria || '', descripcion: project.descripcion || '', etapa: project.etapa,
+  } : { titulo: '', categoria: '', descripcion: '', etapa: 'idea' });
+  const abrirNota = (note) => abrirModal('nota', note ? {
+    id: note.id, titulo: note.titulo, contenido: note.contenido, proyectoId: note.proyectoId || '',
+  } : { titulo: '', contenido: '', proyectoId: '' });
+  const abrirEvento = (event) => abrirModal('evento', event ? {
+    id: event.id, titulo: event.titulo, descripcion: event.descripcion || '', proyectoId: event.proyectoId || '',
+    inicio: fechaHoraLocal(event.inicio),
+    fin: event.fin ? fechaHoraLocal(event.fin) : '',
+  } : { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(new Date())}T09:00`, fin: '' });
+  const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
+
   const guardar = async (event) => {
     event.preventDefault();
     if (!modal) return;
     const { tipo, id, ...values } = modal;
-    const endpoint = tipo === 'proyecto' ? 'proyectos' : tipo === 'nota' ? 'notas' : 'eventos';
-    const payload = { ...values };
-    if (payload.proyectoId === '') payload.proyectoId = null;
-    if (payload.inicio) payload.inicio = new Date(payload.inicio).toISOString();
-    if (payload.fin) payload.fin = new Date(payload.fin).toISOString();
     setSaving(true);
     setError('');
     try {
-      if (id) await apiClient.put(`${API}/${endpoint}/${id}`, payload);
-      else await apiClient.post(`${API}/${endpoint}`, payload);
+      await guardarRegistroPersonal({ tipo, id, values });
       setModal(null);
-      setNotice(tipo === 'proyecto' ? 'Proyecto guardado en tu espacio.' : tipo === 'nota' ? 'Nota guardada.' : 'Recordatorio guardado en tu calendario.');
+      setNotice(tipo === 'proyecto' ? 'Proyecto guardado en tu cuenta.' : tipo === 'nota' ? 'Nota guardada en tu cuenta.' : 'Recordatorio guardado en tu calendario.');
       await cargar();
     } catch (apiError) {
-      setError(apiError.response?.data?.mensaje || apiError.response?.data?.error || 'No se pudo guardar. Revisá los datos e intentá de nuevo.');
+      setError(mensajeError(apiError, 'No se pudo guardar. Revisá los datos e intentá de nuevo.'));
     } finally {
       setSaving(false);
     }
@@ -102,225 +87,81 @@ const EspacioPersonalPagina = () => {
   const eliminar = async (tipo, item) => {
     const nombre = tipo === 'proyectos' ? 'proyecto' : tipo === 'notas' ? 'nota' : 'recordatorio';
     if (!window.confirm(`¿Eliminar este ${nombre}? Esta acción no se puede deshacer.`)) return;
+    setError('');
     try {
-      await apiClient.delete(`${API}/${tipo}/${item.id}`);
-      setNotice(`${nombre[0].toUpperCase()}${nombre.slice(1)} eliminado.`);
+      await eliminarRegistroPersonal(tipo, item.id);
+      setNotice(`${nombre[0].toUpperCase()}${nombre.slice(1)} eliminado de tu cuenta.`);
       await cargar();
     } catch (apiError) {
-      setError(apiError.response?.data?.error || `No se pudo eliminar el ${nombre}.`);
+      setError(mensajeError(apiError, `No se pudo eliminar el ${nombre}.`));
     }
   };
 
   const cambiarEtapa = async (project, etapa) => {
+    setError('');
     try {
-      await apiClient.put(`${API}/proyectos/${project.id}`, { etapa });
+      await actualizarEtapaProyecto(project.id, etapa);
+      setNotice('Etapa del proyecto actualizada.');
       await cargar();
     } catch (apiError) {
-      setError(apiError.response?.data?.error || 'No se pudo actualizar la etapa.');
+      setError(mensajeError(apiError, 'No se pudo actualizar la etapa.'));
     }
   };
 
-  const calendario = useMemo(() => {
-    const firstDay = new Date(month.getFullYear(), month.getMonth(), 1);
-    const offset = firstDay.getDay();
-    const start = new Date(firstDay);
-    start.setDate(1 - offset);
-    return Array.from({ length: 42 }, (_, index) => {
-      const day = new Date(start);
-      day.setDate(start.getDate() + index);
-      return day;
-    });
-  }, [month]);
-
-  const recordatoriosSemana = useMemo(() => {
-    const inicio = new Date();
-    inicio.setHours(0, 0, 0, 0);
-    const fin = new Date(inicio);
-    fin.setDate(fin.getDate() + 7);
-    return eventos.filter((item) => {
-      const fecha = new Date(item.inicio);
-      return fecha >= inicio && fecha < fin;
-    }).length;
-  }, [eventos]);
-
-  const agendaEventos = useMemo(() => {
-    const inicio = new Date();
-    inicio.setHours(0, 0, 0, 0);
-    const fin = new Date(inicio);
-    if (agendaRange === 'hoy') fin.setDate(fin.getDate() + 1);
-    if (agendaRange === 'semana') fin.setDate(fin.getDate() + 7);
-    return eventos
-      .filter((item) => {
-        const fecha = new Date(item.inicio);
-        return fecha >= inicio && (agendaRange === 'todos' || fecha < fin);
-      })
-      .sort((a, b) => new Date(a.inicio) - new Date(b.inicio));
-  }, [agendaRange, eventos]);
-
-  const abrirModal = (tipo, initial = {}) => setModal({ tipo, ...initial });
-  const irATablero = (nextTab) => {
+  const irASeccion = (nextTab) => {
     setTab(nextTab);
     requestAnimationFrame(() => document.getElementById('espacio-tablero')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
   };
-  const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
+  const cambiarCampo = (campo, valor) => setModal((actual) => ({ ...actual, [campo]: valor }));
 
   if (!user) return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
-      <FondoTech />
-      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 text-center sm:px-6 sm:pb-14 lg:pt-8">
-        <header className="border-b border-[#A3E635]/15 pb-10 sm:pb-12">
-        <div className="mx-auto flex max-w-5xl flex-col items-center">
+    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white"><FondoTech />
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 text-center sm:px-6 lg:pt-8">
+        <header className="mx-auto max-w-5xl border-b border-[#A3E635]/15 pb-10 sm:pb-12">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/35 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
-          <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Tus ideas, proyectos y fechas<br className="hidden sm:block" /> <span className="relative inline-block text-[#A3E635]">en un solo lugar.
-            <svg aria-hidden="true" className="absolute -bottom-2 left-0 -z-10 h-3 w-full text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2 7C48 2 137 2 198 5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" /></svg>
-          </span></h1>
-          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">Creá una cuenta para organizar tus proyectos, guardar notas privadas y planificar recordatorios con el estilo HagamosTech.</p>
-          <div className="mt-7 flex flex-wrap justify-center gap-3">
-            {[{ label: 'Proyectos', icon: ClipboardList }, { label: 'Notas privadas', icon: NotebookPen }, { label: 'Calendario', icon: CalendarDays }].map(({ label, icon: FeatureIcon }) => <span key={label} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><FeatureIcon size={14} />{label}</span>)}
-          </div>
-        </div>
+          <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Tus ideas, proyectos y fechas<br className="hidden sm:block" /> <span className="text-[#A3E635]">en un solo lugar.</span></h1>
+          <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/70 sm:text-lg">Organizá proyectos, guardá notas y planificá tus recordatorios. Todo queda asociado a tu cuenta.</p>
+          <div className="mt-7 flex flex-wrap justify-center gap-3">{secciones.map(({ id, label, icon: SectionIcon }) => <span key={id} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><SectionIcon size={14} />{label}</span>)}</div>
         </header>
-
-      <div className="relative z-10 py-10 sm:py-12 lg:py-14" aria-labelledby="espacio-acceso-titulo">
-        <div className="relative z-10 mx-auto max-w-6xl">
-          <div className="mx-auto mb-8 max-w-3xl text-center">
-            <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Empezá en minutos</span>
-            <h2 id="espacio-acceso-titulo" className="mt-2 text-3xl font-black tracking-tight sm:text-4xl">Tu espacio empieza con una cuenta</h2>
-            <p className="mx-auto mt-3 max-w-2xl text-sm leading-6 text-white/65 sm:text-base">Iniciá sesión o registrate para que tus proyectos, apuntes y recordatorios queden guardados en tu perfil.</p>
-          </div>
-
-          <div className="relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-white/[0.04] text-left shadow-2xl backdrop-blur-md sm:rounded-[2.5rem]">
-            <div className="grid lg:grid-cols-2">
-              <div className="relative flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-[#0A0A0A] to-[#171717] p-7 text-center sm:p-10 lg:p-12">
-                <div aria-hidden="true" className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-[#A3E635]/10 blur-3xl" />
-                <div className="relative z-10 mb-5 flex h-28 w-28 items-center justify-center rounded-[2rem] border border-[#A3E635]/30 bg-[#A3E635]/10 text-[#A3E635] shadow-[0_0_50px_rgba(163,230,53,.12)]"><UserRound size={54} strokeWidth={1.5} /></div>
-                <h3 className="relative z-10 text-2xl font-black leading-tight sm:text-3xl">Un lugar para avanzar<br /><span className="text-[#A3E635]">a tu manera.</span></h3>
-                <p className="relative z-10 mt-4 max-w-md text-sm leading-6 text-white/70">Anotá ideas, organizá iniciativas académicas o digitales, y definí tus propias fechas importantes.</p>
-                <div className="relative z-10 mt-7 grid w-full max-w-md grid-cols-1 gap-2 sm:grid-cols-3">
-                  {[{ icon: ClipboardList, label: 'Seguimiento', text: 'Tus proyectos' }, { icon: NotebookPen, label: 'Apuntes', text: 'Notas privadas' }, { icon: CalendarDays, label: 'Planificación', text: 'Fechas y tareas' }].map(({ icon: FeatureIcon, label, text }) => <div key={label} className="rounded-2xl border border-white/10 bg-black/25 px-3 py-4"><FeatureIcon className="mx-auto mb-2 text-[#A3E635]" size={19} /><p className="text-[9px] font-black uppercase tracking-wider text-white/55">{label}</p><p className="mt-1 text-xs font-bold text-white">{text}</p></div>)}
-                </div>
-                <span className="relative z-10 mt-7 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2 text-[9px] font-black uppercase tracking-[.16em] text-[#A3E635]"><i className="h-2 w-2 rounded-full bg-[#A3E635]" /> Privado y asociado a tu cuenta</span>
-              </div>
-
-              <div className="relative flex flex-col justify-center bg-white/[0.025] p-6 sm:p-9 lg:p-12">
-                <div aria-hidden="true" className="absolute -bottom-20 -left-20 h-64 w-64 rounded-full bg-[#A3E635]/10 blur-3xl" />
-                <div className="relative z-10 mx-auto w-full max-w-md">
-                  <div className="mb-6 border-b border-white/10 pb-5 text-center">
-                    <span className="mx-auto mb-3 flex h-11 w-11 items-center justify-center rounded-xl border border-[#A3E635]/20 bg-[#A3E635]/10 text-[#A3E635]"><UserRound size={19} /></span>
-                    <h3 className="text-2xl font-black">Accedé a tu espacio</h3>
-                    <p className="mt-2 text-sm leading-6 text-white/60">Tu cuenta mantiene reunida tu organización personal en un solo lugar.</p>
-                  </div>
-                  <div className="grid gap-3">
-                    <button onClick={() => window.openModal?.('modal_register')} className="group flex w-full items-center justify-between gap-4 rounded-2xl bg-[#A3E635] px-5 py-4 text-left text-[#0A0A0A] shadow-lg shadow-[#A3E635]/15 transition hover:-translate-y-0.5 hover:bg-[#84CC16]">
-                      <span><span className="block text-sm font-black uppercase tracking-wide">Crear cuenta</span><span className="mt-1 block text-xs font-semibold text-black/65">Registrate y empezá a organizarte</span></span><span className="flex h-10 w-10 items-center justify-center rounded-full bg-black/10"><Plus size={20} /></span>
-                    </button>
-                    <button onClick={() => window.openModal?.('modal_login')} className="group flex w-full items-center justify-between gap-4 rounded-2xl border border-white/15 bg-white/[0.04] px-5 py-4 text-left transition hover:-translate-y-0.5 hover:border-[#A3E635]/40 hover:bg-[#A3E635]/5">
-                      <span><span className="block text-sm font-black uppercase tracking-wide text-white">Iniciar sesión</span><span className="mt-1 block text-xs font-semibold text-white/55">Continuá donde lo dejaste</span></span><span className="flex h-10 w-10 items-center justify-center rounded-full border border-white/10 text-[#A3E635]"><ArrowRight size={18} /></span>
-                    </button>
-                  </div>
-                  <p className="mt-5 text-center text-[11px] leading-5 text-white/45">Tus recordatorios son personales y no reservan citas con el equipo HagamosTech.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <div className="mx-auto grid max-w-5xl gap-4 py-10 text-left sm:grid-cols-3">{secciones.map(({ id, label, singular, icon: SectionIcon }) => <article key={id} className="rounded-2xl border border-white/10 bg-[#0e110d]/85 p-5"><IconoEspacio><SectionIcon size={20} /></IconoEspacio><h2 className="mt-4 font-black">{label}</h2><p className="mt-1 text-sm text-slate-400">Tu {singular} se guarda de forma privada en tu cuenta.</p></article>)}</div>
+        <div className="mx-auto flex max-w-xl flex-col justify-center gap-3 sm:flex-row"><button type="button" onClick={() => window.openModal?.('modal_register')} className={estilosBoton.principal}>Crear cuenta <Plus size={16} /></button><button type="button" onClick={() => window.openModal?.('modal_login')} className={estilosBoton.secundario}>Iniciar sesión <ArrowRight size={16} /></button></div>
+        <p className="mt-5 text-center text-[11px] text-white/45">Los recordatorios son personales y no reservan citas con HagamosTech.</p>
       </section>
     </div>
   );
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
-      <FondoTech />
+    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white"><FondoTech />
       <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:pb-16 lg:pt-8">
         <header className="mx-auto max-w-5xl border-b border-[#A3E635]/15 pb-8 text-center sm:pb-10">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">Proyectos, notas privadas y recordatorios organizados desde tu cuenta.</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">
-            {[{ id: 'proyectos', label: 'Mis proyectos', icon: ClipboardList }, { id: 'notas', label: 'Notas', icon: NotebookPen }, { id: 'calendario', label: 'Calendario', icon: CalendarDays }].map(({ id, label, icon: FeatureIcon }) => <button key={id} type="button" onClick={() => irATablero(id)} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635] transition hover:border-[#A3E635]/60 hover:bg-[#A3E635]/20"><FeatureIcon size={14} />{label}</button>)}
-          </div>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">{secciones.map(({ id, acceso, icon: SectionIcon }) => <button key={id} type="button" onClick={() => irASeccion(id)} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635] transition hover:border-[#A3E635]/60 hover:bg-[#A3E635]/20"><SectionIcon size={14} /> {acceso}</button>)}</div>
         </header>
 
-        {!loading && !error && <div aria-label="Resumen de tu espacio personal" className="my-6 grid gap-3 sm:grid-cols-3">
-          {[
-            { id: 'proyectos', label: 'Proyectos', detalle: 'Ideas en seguimiento', cantidad: proyectos.length, icon: ClipboardList },
-            { id: 'notas', label: 'Notas privadas', detalle: 'Apuntes guardados', cantidad: notas.length, icon: NotebookPen },
-            { id: 'calendario', label: 'Esta semana', detalle: 'Recordatorios próximos', cantidad: recordatoriosSemana, icon: CalendarDays },
-          ].map(({ id, label, detalle, cantidad, icon: SummaryIcon }) => (
-            <button key={id} type="button" onClick={() => irATablero(id)} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4 text-left transition hover:border-[#A3E635]/40 hover:bg-[#151912]">
-              <Icono><SummaryIcon size={20} /></Icono>
-              <span className="min-w-0 flex-1"><span className="block text-xs font-black uppercase tracking-wide">{label}</span><span className="mt-1 block text-[11px] text-slate-400">{detalle}</span></span>
-              <span className="text-2xl font-black text-[#A3E635]">{cantidad}</span>
-            </button>
-          ))}
-        </div>}
+        {!loading && !error && <div aria-label="Resumen de tu espacio personal" className="my-6 grid gap-3 sm:grid-cols-3">{[
+          { id: 'proyectos', label: 'Proyectos', detalle: 'Ideas en seguimiento', cantidad: proyectos.length, icon: ClipboardList },
+          { id: 'notas', label: 'Notas privadas', detalle: 'Apuntes guardados', cantidad: notas.length, icon: NotebookPen },
+          { id: 'calendario', label: 'Próximos 7 días', detalle: 'Recordatorios próximos', cantidad: eventosSemana.length, icon: CalendarDays },
+        ].map(({ id, label, detalle, cantidad, icon: SummaryIcon }) => <button key={id} type="button" onClick={() => irASeccion(id)} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4 text-left transition hover:border-[#A3E635]/40 hover:bg-[#151912]"><IconoEspacio><SummaryIcon size={20} /></IconoEspacio><span className="min-w-0 flex-1"><span className="block text-xs font-black uppercase tracking-wide">{label}</span><span className="mt-1 block text-[11px] text-slate-400">{detalle}</span></span><span className="text-2xl font-black text-[#A3E635]">{cantidad}</span></button>)}</div>}
 
-        {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
+        {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button type="button" aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
         {notice && <div role="status" className="mb-5 flex items-center gap-2 rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-3 text-sm font-semibold text-lime-100"><Check size={16} className="text-[#A3E635]" />{notice}</div>}
 
         <div id="espacio-tablero" aria-labelledby="espacio-tablero-titulo" className="relative mt-8 scroll-mt-24 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:mt-10 sm:rounded-[2.5rem]">
-          <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7">
-            <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span>
-            <h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Proyectos, notas y calendario</h2>
-            <p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-white/60">Las etapas de proyecto las definís vos. Los recordatorios no son citas ni actualizan tareas internas del equipo.</p>
-          </div>
-          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-5 sm:px-7">
-            <div>
-              <h3 className="text-lg font-black sm:text-xl">Tu tablero</h3>
-              <p className="mt-1 text-xs text-slate-400">Tus datos son privados y se guardan en tu cuenta.</p>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <button onClick={() => abrirModal('proyecto', { titulo: '', categoria: '', descripcion: '', etapa: 'idea' })} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-4 py-2.5 text-xs font-black text-black transition hover:bg-lime-300"><Plus size={15} /> Nuevo proyecto</button>
-              <button onClick={() => abrirModal('nota', { titulo: '', contenido: '', proyectoId: '' })} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold transition hover:border-[#A3E635]/40"><NotebookPen size={15} /> Anotar</button>
-              <button onClick={() => abrirEventoDia(new Date())} className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2.5 text-xs font-bold transition hover:border-[#A3E635]/40"><AlarmClock size={15} /> Recordatorio</button>
-            </div>
-          </div>
+          <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7"><span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span><h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Todo lo que estás organizando</h2><p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-white/60">Cada elemento es privado y se guarda en tu cuenta. Las etapas son personales; los recordatorios no crean citas con el equipo.</p></div>
+          <div className="flex flex-wrap items-center justify-between gap-4 border-b border-white/10 px-5 py-5 sm:px-7"><div><h3 className="text-lg font-black sm:text-xl">Tu espacio</h3><p className="mt-1 text-xs text-slate-400">Elegí una sección o creá un elemento nuevo.</p></div><div className="flex flex-wrap gap-2"><button type="button" onClick={() => abrirProyecto()} className={estilosBoton.principal}><Plus size={15} /> Nuevo proyecto</button><button type="button" onClick={() => abrirNota()} className={estilosBoton.secundario}><NotebookPen size={15} /> Anotar</button><button type="button" onClick={() => abrirEventoDia(new Date())} className={estilosBoton.secundario}><AlarmClock size={15} /> Recordatorio</button></div></div>
 
-          <div role="tablist" aria-label="Secciones de tu espacio" className="flex gap-2 overflow-x-auto border-b border-white/10 px-4 py-3 sm:px-7">
-            {TABS.map(({ id, label, icon: TabIcon }) => <button key={id} role="tab" aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-xs font-black transition ${tab === id ? 'bg-[#A3E635] text-black' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}><TabIcon size={15} />{label}{id === 'proyectos' && proyectos.length > 0 ? ` · ${proyectos.length}` : ''}{id === 'notas' && notas.length > 0 ? ` · ${notas.length}` : ''}</button>)}
-          </div>
-
-          <div className="p-4 sm:p-7">
-            {loading ? <div className="grid min-h-56 place-items-center text-sm font-bold text-slate-400"><span className="flex items-center gap-3"><span className="h-5 w-5 animate-spin rounded-full border-2 border-[#A3E635]/30 border-t-[#A3E635]" />Cargando tu espacio…</span></div> : <>
-              {tab === 'proyectos' && <div>
-                <div className="mb-5 flex items-center gap-3"><Icono><ClipboardList size={21} /></Icono><div><h3 className="font-black">Proyectos personales</h3><p className="text-xs text-slate-400">Registrá ideas o seguí por tu cuenta el avance de una iniciativa.</p></div></div>
-                {proyectos.length === 0 ? <div className="rounded-2xl border border-dashed border-white/15 bg-black/15 px-5 py-12 text-center"><Icono className="mx-auto mb-4"><Lightbulb size={20} /></Icono><h4 className="font-black">Todavía no agregaste proyectos</h4><p className="mx-auto mt-2 max-w-md text-sm text-slate-400">Creá uno para tener a mano el objetivo, las notas y las fechas relacionadas.</p><button onClick={() => abrirModal('proyecto', { titulo: '', categoria: '', descripcion: '', etapa: 'idea' })} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-xs font-black text-black"><Plus size={15} /> Crear proyecto</button></div> : <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{proyectos.map((project) => { const stage = ETAPAS.find((item) => item.id === project.etapa) || ETAPAS[0]; const StageIcon = stage.icon; return <article key={project.id} className="rounded-2xl border border-white/10 bg-[#151912] p-5 transition hover:border-[#A3E635]/35"><div className="mb-4 flex items-start justify-between gap-3"><Icono><StageIcon size={20} /></Icono><div className="flex gap-1"><button aria-label={`Editar ${project.titulo}`} onClick={() => abrirModal('proyecto', { id: project.id, titulo: project.titulo, categoria: project.categoria, descripcion: project.descripcion || '', etapa: project.etapa })} className="rounded-lg p-2 text-slate-400 hover:bg-white/5 hover:text-white"><i className="fas fa-pen text-xs" /></button><button aria-label={`Eliminar ${project.titulo}`} onClick={() => eliminar('proyectos', project)} className="rounded-lg p-2 text-slate-400 hover:bg-rose-500/10 hover:text-rose-300"><Trash2 size={15} /></button></div></div><p className="text-[10px] font-black uppercase tracking-[.18em] text-[#A3E635]">{project.categoria}</p><h4 className="mt-1 text-lg font-black">{project.titulo}</h4>{project.descripcion && <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-400">{project.descripcion}</p>}<label className="mt-5 grid gap-2 text-[10px] font-black uppercase tracking-wider text-slate-500">Mi etapa personal<select value={project.etapa} onChange={(event) => cambiarEtapa(project, event.target.value)} className="rounded-lg border border-white/10 bg-[#0b0e09] px-3 py-2 text-xs font-bold normal-case tracking-normal text-slate-200">{ETAPAS.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label><div className="mt-4 flex gap-3 border-t border-white/10 pt-3 text-[11px] text-slate-400"><span>{project._count?.notas || 0} notas</span><span>{project._count?.eventos || 0} fechas</span></div></article>; })}</div>}
-              </div>}
-
-              {tab === 'notas' && <div>
-                <div className="mb-5 flex items-center gap-3"><Icono><NotebookPen size={21} /></Icono><div><h3 className="font-black">Notas privadas</h3><p className="text-xs text-slate-400">Guardá ideas, pendientes, requisitos o apuntes de estudio.</p></div></div>
-                {notas.length === 0 ? <div className="rounded-2xl border border-dashed border-white/15 bg-black/15 px-5 py-12 text-center"><h4 className="font-black">Tu cuaderno está vacío</h4><p className="mt-2 text-sm text-slate-400">Tus notas son visibles solo desde tu cuenta.</p><button onClick={() => abrirModal('nota', { titulo: '', contenido: '', proyectoId: '' })} className="mt-5 inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-xs font-black text-black"><Plus size={15} /> Nueva nota</button></div> : <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">{notas.map((note) => { const project = proyectos.find((item) => item.id === note.proyectoId); return <article key={note.id} className="rounded-2xl border border-white/10 bg-[#151912] p-5"><div className="flex items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[.16em] text-[#A3E635]">{project?.titulo || 'Nota general'}</p><h4 className="mt-1 font-black">{note.titulo}</h4></div><div className="flex"><button aria-label={`Editar ${note.titulo}`} onClick={() => abrirModal('nota', { id: note.id, titulo: note.titulo, contenido: note.contenido, proyectoId: note.proyectoId || '' })} className="rounded-lg p-2 text-slate-400 hover:bg-white/5 hover:text-white"><i className="fas fa-pen text-xs" /></button><button aria-label={`Eliminar ${note.titulo}`} onClick={() => eliminar('notas', note)} className="rounded-lg p-2 text-slate-400 hover:text-rose-300"><Trash2 size={15} /></button></div></div><p className="mt-4 whitespace-pre-wrap break-words text-sm leading-6 text-slate-300">{note.contenido}</p><p className="mt-4 text-[10px] text-slate-500">Actualizada {new Date(note.actualizadoEn).toLocaleDateString('es-BO')}</p></article>; })}</div>}
-              </div>}
-
-              {tab === 'calendario' && <div>
-                <div className="mb-5 flex flex-wrap items-center justify-between gap-3"><div className="flex items-center gap-3"><Icono><CalendarDays size={21} /></Icono><div><h3 className="font-black">Calendario personal</h3><p className="text-xs text-slate-400">Organizá entregas, reuniones y recordatorios propios.</p></div></div><button onClick={() => abrirEventoDia(new Date())} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-4 py-2.5 text-xs font-black text-black"><Plus size={15} /> Añadir fecha</button></div>
-                <div className="grid gap-5 lg:grid-cols-[1.4fr_.8fr]">
-                  <section className="rounded-2xl border border-white/10 bg-[#151912] p-4 sm:p-5"><div className="mb-4 flex items-center justify-between"><button aria-label="Mes anterior" onClick={() => setMonth(new Date(month.getFullYear(), month.getMonth() - 1, 1))} className="rounded-lg p-2 text-slate-300 hover:bg-white/5"><ChevronLeft size={19} /></button><h4 className="font-black capitalize">{month.toLocaleDateString('es-BO', { month: 'long', year: 'numeric' })}</h4><button aria-label="Mes siguiente" onClick={() => setMonth(new Date(month.getFullYear(), month.getMonth() + 1, 1))} className="rounded-lg p-2 text-slate-300 hover:bg-white/5"><ChevronRight size={19} /></button></div><div className="grid grid-cols-7 gap-1 text-center">{['Do', 'Lu', 'Ma', 'Mi', 'Ju', 'Vi', 'Sá'].map((day) => <div key={day} className="py-2 text-[10px] font-black uppercase text-slate-500">{day}</div>)}{calendario.map((day) => { const dayEvents = eventos.filter((item) => fechaLocal(new Date(item.inicio)) === fechaLocal(day)); const isMonth = day.getMonth() === month.getMonth(); const isToday = fechaLocal(day) === fechaLocal(new Date()); return <button key={fechaLocal(day)} onClick={() => abrirEventoDia(day)} className={`relative min-h-12 rounded-xl border p-1 text-xs transition sm:min-h-16 ${isMonth ? 'border-white/5 text-slate-200 hover:border-[#A3E635]/50 hover:bg-[#A3E635]/5' : 'border-transparent text-slate-600'} ${isToday ? 'border-[#A3E635]/50 bg-[#A3E635]/10 text-[#A3E635]' : ''}`}><span className="font-bold">{day.getDate()}</span>{dayEvents.length > 0 && <span className="mt-1 flex justify-center gap-0.5">{dayEvents.slice(0, 3).map((item) => <span key={item.id} className="h-1.5 w-1.5 rounded-full bg-[#A3E635]" />)}</span>}</button>; })}</div><p className="mt-3 text-center text-[10px] text-slate-500">Seleccioná un día para crear un recordatorio.</p></section>
-                  <section className="rounded-2xl border border-white/10 bg-[#151912] p-4 sm:p-5">
-                    <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-                      <h4 className="flex items-center gap-2 font-black"><AlarmClock size={17} className="text-[#A3E635]" /> Agenda</h4>
-                      <div role="group" aria-label="Filtrar recordatorios" className="flex flex-wrap gap-1 rounded-xl border border-white/10 bg-black/20 p-1">
-                        {[{ id: 'hoy', label: 'Hoy' }, { id: 'semana', label: '7 días' }, { id: 'todos', label: 'Todos' }].map((range) => (
-                          <button key={range.id} type="button" aria-pressed={agendaRange === range.id} onClick={() => setAgendaRange(range.id)} className={`rounded-lg px-2.5 py-1.5 text-[10px] font-black transition ${agendaRange === range.id ? 'bg-[#A3E635] text-black' : 'text-slate-400 hover:text-white'}`}>{range.label}</button>
-                        ))}
-                      </div>
-                    </div>
-                    {agendaEventos.length === 0 ? <p className="rounded-xl border border-dashed border-white/10 px-4 py-8 text-center text-sm text-slate-500">No hay recordatorios en este período.</p> : <div className="grid gap-2">{agendaEventos.slice(0, agendaRange === 'todos' ? 12 : 8).map((event) => { const project = proyectos.find((item) => item.id === event.proyectoId); return <article key={event.id} className="flex items-start justify-between gap-3 rounded-xl border border-white/5 bg-black/20 p-3"><button className="min-w-0 flex-1 text-left" onClick={() => abrirModal('evento', { id: event.id, titulo: event.titulo, descripcion: event.descripcion || '', proyectoId: event.proyectoId || '', inicio: fechaHoraLocal(event.inicio), fin: event.fin ? fechaHoraLocal(event.fin) : '' })}><p className="truncate text-sm font-bold">{event.titulo}</p><p className="mt-1 text-[10px] text-[#A3E635]">{new Date(event.inicio).toLocaleString('es-BO', { dateStyle: 'medium', timeStyle: 'short' })}</p>{project && <p className="mt-1 truncate text-[10px] text-slate-500">{project.titulo}</p>}</button><button aria-label={`Eliminar ${event.titulo}`} onClick={() => eliminar('eventos', event)} className="rounded-lg p-2 text-slate-500 hover:bg-rose-500/10 hover:text-rose-300"><Trash2 size={14} /></button></article>; })}</div>}
-                  </section>
-                </div>
-              </div>}
-            </>}
-          </div>
+          <div role="tablist" aria-label="Secciones de tu espacio" className="flex gap-2 overflow-x-auto border-b border-white/10 px-4 py-3 sm:px-7">{secciones.map(({ id, label, icon: SectionIcon }) => <button key={id} id={`tab-${id}`} type="button" role="tab" aria-controls={`panel-${id}`} aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-xs font-black transition ${tab === id ? 'bg-[#A3E635] text-black' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}><SectionIcon size={15} />{label}{id === 'proyectos' && proyectos.length > 0 ? ` · ${proyectos.length}` : ''}{id === 'notas' && notas.length > 0 ? ` · ${notas.length}` : ''}</button>)}</div>
+          <div className="p-4 sm:p-7">{loading ? <div className="grid min-h-56 place-items-center text-sm font-bold text-slate-400"><span className="flex items-center gap-3"><span className="h-5 w-5 animate-spin rounded-full border-2 border-[#A3E635]/30 border-t-[#A3E635]" />Cargando tus datos guardados…</span></div> : <>
+            <ProyectosPanel proyectos={proyectos} onCrear={() => abrirProyecto()} onEditar={abrirProyecto} onEliminar={eliminar} onCambiarEtapa={cambiarEtapa} hidden={tab !== 'proyectos'} />
+            <NotasPanel notas={notas} proyectos={proyectos} onCrear={() => abrirNota()} onEditar={abrirNota} onEliminar={eliminar} hidden={tab !== 'notas'} />
+            <CalendarioPanel eventos={eventos} proyectos={proyectos} month={month} setMonth={setMonth} range={agendaRange} setRange={setAgendaRange} onCrear={abrirEventoDia} onEditar={abrirEvento} onEliminar={eliminar} hidden={tab !== 'calendario'} />
+          </>}</div>
         </div>
       </section>
-
-      {modal && <div className="fixed inset-0 z-[300] grid place-items-center overflow-y-auto bg-black/75 p-4 backdrop-blur-sm" onMouseDown={(event) => { if (event.target === event.currentTarget) setModal(null); }}><form onSubmit={guardar} className="my-8 w-full max-w-xl rounded-[1.75rem] border border-[#A3E635]/20 bg-[#10140e] p-5 shadow-2xl sm:p-7"><div className="mb-6 flex items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">Espacio privado</p><h3 className="mt-1 text-xl font-black">{modal.tipo === 'proyecto' ? (modal.id ? 'Editar proyecto' : 'Nuevo proyecto') : modal.tipo === 'nota' ? (modal.id ? 'Editar nota' : 'Nueva nota') : (modal.id ? 'Editar recordatorio' : 'Nuevo recordatorio')}</h3></div><button type="button" aria-label="Cerrar" onClick={() => setModal(null)} className="rounded-xl p-2 text-slate-400 hover:bg-white/5 hover:text-white"><X size={18} /></button></div>
-        {modal.tipo === 'proyecto' && <div className="grid gap-4"><Campo label="Nombre" name="titulo" maxLength={120} value={modal.titulo} onChange={(event) => setModal({ ...modal, titulo: event.target.value })} placeholder="Ej. Monografía de biología" required /><Campo label="Categoría" name="categoria" maxLength={60} value={modal.categoria} onChange={(event) => setModal({ ...modal, categoria: event.target.value })} placeholder="Académico, web, diseño…" /><Campo as="textarea" label="Descripción u objetivo" name="descripcion" maxLength={4000} value={modal.descripcion} onChange={(event) => setModal({ ...modal, descripcion: event.target.value })} placeholder="Anotá qué querés organizar" /><label className="grid gap-2 text-sm font-bold text-slate-200">Etapa personal<select value={modal.etapa} onChange={(event) => setModal({ ...modal, etapa: event.target.value })} className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white">{ETAPAS.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label></div>}
-        {modal.tipo === 'nota' && <div className="grid gap-4"><Campo label="Título" name="titulo" maxLength={120} value={modal.titulo} onChange={(event) => setModal({ ...modal, titulo: event.target.value })} placeholder="Ej. Ideas para el proyecto" required /><Campo as="textarea" label="Apunte" name="contenido" maxLength={10000} value={modal.contenido} onChange={(event) => setModal({ ...modal, contenido: event.target.value })} placeholder="Escribí lo que quieras recordar…" required /><label className="grid gap-2 text-sm font-bold text-slate-200">Asociar a un proyecto<select value={modal.proyectoId} onChange={(event) => setModal({ ...modal, proyectoId: event.target.value })} className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white"><option value="">Nota general</option>{proyectos.map((project) => <option key={project.id} value={project.id}>{project.titulo}</option>)}</select></label></div>}
-        {modal.tipo === 'evento' && <div className="grid gap-4"><Campo label="Qué querés recordar" name="titulo" maxLength={120} value={modal.titulo} onChange={(event) => setModal({ ...modal, titulo: event.target.value })} placeholder="Ej. Entregar avance" required /><Campo label="Fecha y hora" name="inicio" type="datetime-local" value={modal.inicio} onChange={(event) => setModal({ ...modal, inicio: event.target.value })} required /><Campo label="Hasta (opcional)" name="fin" type="datetime-local" value={modal.fin} onChange={(event) => setModal({ ...modal, fin: event.target.value })} /><Campo label="Detalle" name="descripcion" maxLength={500} value={modal.descripcion} onChange={(event) => setModal({ ...modal, descripcion: event.target.value })} placeholder="Un detalle breve" /><label className="grid gap-2 text-sm font-bold text-slate-200">Proyecto asociado<select value={modal.proyectoId} onChange={(event) => setModal({ ...modal, proyectoId: event.target.value })} className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white"><option value="">Sin proyecto</option>{proyectos.map((project) => <option key={project.id} value={project.id}>{project.titulo}</option>)}</select></label></div>}
-        <div className="mt-7 flex justify-end gap-3"><button type="button" onClick={() => setModal(null)} className="rounded-full border border-white/15 px-5 py-2.5 text-xs font-bold text-slate-300 hover:bg-white/5">Cancelar</button><button disabled={saving} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-xs font-black text-black disabled:opacity-60">{saving ? 'Guardando…' : <><Check size={14} /> Guardar</>}</button></div>
-      </form></div>}
+      {modal && <FormularioEspacioPersonal modal={modal} proyectos={proyectos} saving={saving} onChange={cambiarCampo} onClose={() => setModal(null)} onSubmit={guardar} />}
     </div>
   );
 };

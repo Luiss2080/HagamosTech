@@ -18,6 +18,8 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - H6: Como usuario quiero crear notas personales y asociarlas opcionalmente a un proyecto.
 - H7: Como usuario quiero registrar recordatorios en un calendario personal.
 - H8: Como usuario quiero que el registro, la verificación y los datos de mi cuenta funcionen sobre PostgreSQL.
+- H9: Como usuario quiero encontrar rápidamente mis proyectos y notas usando búsquedas y filtros.
+- H10: Como usuario quiero consultar mis recordatorios por período sin perderlos al cambiar de sección.
 
 ## Requisitos funcionales (criterios de aceptación en EARS)
 - RF-1: CUANDO el usuario envíe `PUT /api/perfil/password` con la contraseña actual correcta, una nueva de al menos 6 caracteres y su confirmación coincidente, EL SISTEMA actualizará la contraseña y responderá `200`.
@@ -38,6 +40,10 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-16: CUANDO una persona complete el registro y la verificación de correo, EL SISTEMA guardará el usuario en PostgreSQL, asignará el rol Invitado si aún no existe e iniciará sesión con un token válido.
 - RF-17: LA MIGRACIÓN desde MySQL conservará los registros activos de usuarios, roles, permisos, mensajes, verificaciones, recuperaciones, registros pendientes y espacio personal, incluidos sus identificadores y relaciones; las tablas del vertical retirado no se activarán.
 - RF-18: EL ESPACIO PERSONAL compartirá la composición visual de Contáctanos: hero centrado con título y descripción, seguido de una sección centrada y un panel principal en dos columnas, con fondo, contraste, tarjetas e iconografía de HagamosTech.
+- RF-19: CUANDO el usuario consulte sus proyectos, EL SISTEMA permitirá buscar por título, categoría o descripción y filtrar por etapa, sin modificar los registros persistidos.
+- RF-20: CUANDO el usuario consulte sus notas, EL SISTEMA permitirá buscar por título o contenido y filtrar por proyecto asociado, sin modificar los registros persistidos.
+- RF-21: CUANDO el usuario consulte sus recordatorios, EL SISTEMA permitirá ver la agenda de hoy, los próximos siete días o todos los eventos futuros, conservando la navegación mensual del calendario.
+- RF-22: EL ESPACIO PERSONAL organizará proyectos, notas, calendario, formularios y acceso a datos en módulos separados; todas las operaciones de creación, edición y eliminación seguirán usando los endpoints autenticados existentes y persistirán en PostgreSQL.
 
 ## Requisitos no funcionales
 - Mensajes en español; JSON consistente.
@@ -61,8 +67,13 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Reserva de citas con disponibilidad de HagamosTech; el calendario es personal y sus recordatorios no crean una cita.
 
 ## Criterios de finalización
-- Endpoints implementados y con tests en verde (RF-1..RF-18).
+- Endpoints implementados y con tests en verde (RF-1..RF-22).
 - `npm run lint`, `npm run test:run` (raíz y server) y `npm run build` en verde.
+
+## Validación de RF-19..RF-22
+- RF-19..RF-21: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica búsqueda, filtros por etapa/proyecto, agenda temporal y calendario mensual.
+- RF-22: `src/servicios/espacioPersonalApi.test.js` verifica el uso de endpoints para lectura, alta, actualización y eliminación; `server/test/espacioPersonal.test.js` verifica autenticación, propiedad y escritura mediante Prisma.
+- PostgreSQL: comprobación transaccional de creación y relación de proyecto, nota y evento; la transacción de verificación se revierte.
 
 ## Dudas abiertas
 - [NECESITA ACLARACIÓN] ¿Cuándo migramos las contraseñas a hash (bcrypt/argon2)? Es un riesgo de seguridad independiente de esta spec.
