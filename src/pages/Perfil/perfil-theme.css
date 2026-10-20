@@ -1,0 +1,68 @@
+#perfil-page,
+#config-page {
+  min-height: 100vh;
+  background: #050505 !important;
+  color: #f8fafc;
+  color-scheme: dark;
+}
+
+#perfil-page [class~='bg-white'],
+#config-page [class~='bg-white'] {
+  background-color: rgba(12, 15, 10, 0.94) !important;
+  color: #f8fafc;
+  border-color: rgba(163, 230, 53, 0.2);
+}
+
+#perfil-page [class~='bg-slate-50'],
+#config-page [class~='bg-slate-50'] {
+  background-color: rgba(5, 5, 5, 0.58) !important;
+}
+
+#perfil-page [class~='text-slate-900'],
+#perfil-page [class~='text-slate-850'],
+#perfil-page [class~='text-slate-800'],
+#perfil-page [class~='text-slate-700'],
+#perfil-page [class~='text-slate-600'],
+#config-page [class~='text-slate-900'],
+#config-page [class~='text-slate-850'],
+#config-page [class~='text-slate-800'],
+#config-page [class~='text-slate-700'],
+#config-page [class~='text-slate-600'] {
+  color: #e2e8f0 !important;
+}
+
+#perfil-page [class~='border-slate-200'],
+#perfil-page [class~='border-slate-100'],
+#config-page [class~='border-slate-200'],
+#config-page [class~='border-slate-100'] {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+#perfil-page input,
+#perfil-page select,
+#perfil-page textarea,
+#config-page input,
+#config-page select,
+#config-page textarea {
+  color: #f8fafc;
+  color-scheme: dark;
+}
+
+#perfil-page input::placeholder,
+#perfil-page textarea::placeholder,
+#config-page input::placeholder,
+#config-page textarea::placeholder {
+  color: #94a3b8;
+}
+
+#perfil-page label,
+#config-page label {
+  color: #e2e8f0;
+}
+
+@media (max-width: 640px) {
+  #perfil-page > section,
+  #config-page > section {
+    padding-inline: 1rem;
+  }
+}

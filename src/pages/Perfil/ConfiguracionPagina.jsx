@@ -5,6 +5,7 @@ import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
 import useAuthStore from '../../store/useAutenticacionStore';
+import './perfil-theme.css';
 import {
     useCambioPassword,
     usePreferencias,

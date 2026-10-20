@@ -4,6 +4,7 @@ import useAuthStore from '../../store/useAutenticacionStore';
 import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
+import './perfil-theme.css';
 
 const GRADIENTS = [
     { id: 'g-red', name: 'Rojo Robótico', from: '#A3E635', to: '#f56565' },
