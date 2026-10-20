@@ -136,9 +136,11 @@ const EspacioPersonalPagina = () => {
   const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
 
   if (!user) return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
+    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
       <FondoTech />
-      <section className="relative z-10 border-b border-[#A3E635]/15 px-4 pb-12 pt-10 text-center sm:px-6 sm:pb-14 lg:pt-14">
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 text-center sm:px-6 sm:pb-14 lg:pt-8">
+        <GlobalBreadcrumb embedded />
+        <header className="border-b border-[#A3E635]/15 pb-10 sm:pb-12">
         <div className="mx-auto flex max-w-5xl flex-col items-center">
           <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/35 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
           <h1 className="text-4xl font-black leading-[1.08] tracking-tight sm:text-5xl lg:text-6xl">Tus ideas, proyectos y fechas<br className="hidden sm:block" /> <span className="relative inline-block text-[#A3E635]">en un solo lugar.
@@ -149,10 +151,9 @@ const EspacioPersonalPagina = () => {
             {[{ label: 'Proyectos', icon: ClipboardList }, { label: 'Notas privadas', icon: NotebookPen }, { label: 'Calendario', icon: CalendarDays }].map(({ label, icon: FeatureIcon }) => <span key={label} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><FeatureIcon size={14} />{label}</span>)}
           </div>
         </div>
-      </section>
+        </header>
 
-      <section className="relative z-10 px-4 py-12 sm:px-6 lg:py-16" aria-labelledby="espacio-acceso-titulo">
-        <FondoTech hideWaves />
+      <div className="relative z-10 py-10 sm:py-12 lg:py-14" aria-labelledby="espacio-acceso-titulo">
         <div className="relative z-10 mx-auto max-w-6xl">
           <div className="mx-auto mb-8 max-w-3xl text-center">
             <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Empezá en minutos</span>
@@ -195,16 +196,17 @@ const EspacioPersonalPagina = () => {
             </div>
           </div>
         </div>
+      </div>
       </section>
-      <div className="relative z-10 h-px bg-gradient-to-r from-transparent via-[#A3E635]/60 to-transparent" />
-    </main>
+    </div>
   );
 
   return (
-    <main className="relative min-h-screen overflow-hidden bg-[#050505] px-4 pb-12 text-white sm:px-6 lg:pb-16">
+    <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
       <FondoTech />
-      <div className="relative z-10 mx-auto max-w-7xl">
-        <header className="mx-auto max-w-5xl pb-9 pt-10 text-center sm:pb-12 lg:pt-14">
+      <section className="relative z-10 mx-auto max-w-7xl px-4 pb-12 pt-6 sm:px-6 lg:pb-16 lg:pt-8">
+        <GlobalBreadcrumb embedded />
+        <header className="mx-auto max-w-5xl border-b border-[#A3E635]/15 pb-8 text-center sm:pb-10">
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">Proyectos, notas privadas y recordatorios organizados desde tu cuenta.</p>
@@ -216,7 +218,7 @@ const EspacioPersonalPagina = () => {
         {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
         {notice && <div role="status" className="mb-5 flex items-center gap-2 rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-3 text-sm font-semibold text-lime-100"><Check size={16} className="text-[#A3E635]" />{notice}</div>}
 
-        <section aria-labelledby="espacio-tablero-titulo" className="relative overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:rounded-[2.5rem]">
+        <div aria-labelledby="espacio-tablero-titulo" className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:mt-10 sm:rounded-[2.5rem]">
           <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7">
             <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span>
             <h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Proyectos, notas y calendario</h2>
@@ -259,8 +261,8 @@ const EspacioPersonalPagina = () => {
               </div>}
             </>}
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
       {modal && <div className="fixed inset-0 z-[300] grid place-items-center overflow-y-auto bg-black/75 p-4 backdrop-blur-sm" onMouseDown={(event) => { if (event.target === event.currentTarget) setModal(null); }}><form onSubmit={guardar} className="my-8 w-full max-w-xl rounded-[1.75rem] border border-[#A3E635]/20 bg-[#10140e] p-5 shadow-2xl sm:p-7"><div className="mb-6 flex items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">Espacio privado</p><h3 className="mt-1 text-xl font-black">{modal.tipo === 'proyecto' ? (modal.id ? 'Editar proyecto' : 'Nuevo proyecto') : modal.tipo === 'nota' ? (modal.id ? 'Editar nota' : 'Nueva nota') : (modal.id ? 'Editar recordatorio' : 'Nuevo recordatorio')}</h3></div><button type="button" aria-label="Cerrar" onClick={() => setModal(null)} className="rounded-xl p-2 text-slate-400 hover:bg-white/5 hover:text-white"><X size={18} /></button></div>
         {modal.tipo === 'proyecto' && <div className="grid gap-4"><Campo label="Nombre" name="titulo" maxLength={120} value={modal.titulo} onChange={(event) => setModal({ ...modal, titulo: event.target.value })} placeholder="Ej. Monografía de biología" required /><Campo label="Categoría" name="categoria" maxLength={60} value={modal.categoria} onChange={(event) => setModal({ ...modal, categoria: event.target.value })} placeholder="Académico, web, diseño…" /><Campo as="textarea" label="Descripción u objetivo" name="descripcion" maxLength={4000} value={modal.descripcion} onChange={(event) => setModal({ ...modal, descripcion: event.target.value })} placeholder="Anotá qué querés organizar" /><label className="grid gap-2 text-sm font-bold text-slate-200">Etapa personal<select value={modal.etapa} onChange={(event) => setModal({ ...modal, etapa: event.target.value })} className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white">{ETAPAS.map((item) => <option key={item.id} value={item.id}>{item.label}</option>)}</select></label></div>}
@@ -268,7 +270,7 @@ const EspacioPersonalPagina = () => {
         {modal.tipo === 'evento' && <div className="grid gap-4"><Campo label="Qué querés recordar" name="titulo" maxLength={120} value={modal.titulo} onChange={(event) => setModal({ ...modal, titulo: event.target.value })} placeholder="Ej. Entregar avance" required /><Campo label="Fecha y hora" name="inicio" type="datetime-local" value={modal.inicio} onChange={(event) => setModal({ ...modal, inicio: event.target.value })} required /><Campo label="Hasta (opcional)" name="fin" type="datetime-local" value={modal.fin} onChange={(event) => setModal({ ...modal, fin: event.target.value })} /><Campo label="Detalle" name="descripcion" maxLength={500} value={modal.descripcion} onChange={(event) => setModal({ ...modal, descripcion: event.target.value })} placeholder="Un detalle breve" /><label className="grid gap-2 text-sm font-bold text-slate-200">Proyecto asociado<select value={modal.proyectoId} onChange={(event) => setModal({ ...modal, proyectoId: event.target.value })} className="rounded-xl border border-white/10 bg-black/30 px-4 py-3 text-white"><option value="">Sin proyecto</option>{proyectos.map((project) => <option key={project.id} value={project.id}>{project.titulo}</option>)}</select></label></div>}
         <div className="mt-7 flex justify-end gap-3"><button type="button" onClick={() => setModal(null)} className="rounded-full border border-white/15 px-5 py-2.5 text-xs font-bold text-slate-300 hover:bg-white/5">Cancelar</button><button disabled={saving} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-xs font-black text-black disabled:opacity-60">{saving ? 'Guardando…' : <><Check size={14} /> Guardar</>}</button></div>
       </form></div>}
-    </main>
+    </div>
   );
 };
 

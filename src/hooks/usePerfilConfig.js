@@ -80,17 +80,21 @@ export function usePreferencias() {
 export function useSesiones() {
   const [sesiones, setSesiones] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [alcance, setAlcance] = useState('');
 
   const listar = useCallback(async () => {
     setLoading(true);
+    setError('');
     try {
       const token = getToken();
       const { data } = await apiClient.get('/perfil/sessions', {
         headers: { Authorization: `Bearer ${token}` }
       });
       setSesiones(data.data || data || []);
-    } catch {
-      setSesiones([]);
+      setAlcance(data.alcance || '');
+    } catch (requestError) {
+      setError(requestError.response?.data?.mensaje || requestError.response?.data?.error || 'No se pudieron cargar las sesiones.');
     } finally {
       setLoading(false);
     }
@@ -104,12 +108,12 @@ export function useSesiones() {
       });
       setSesiones(prev => prev.filter(s => s.id !== id));
       return { success: true };
-    } catch {
-      return { success: false };
+    } catch (requestError) {
+      return { success: false, message: requestError.response?.data?.mensaje || requestError.response?.data?.error || 'No se pudo revocar la sesión.' };
     }
   }, []);
 
-  return { sesiones, loading, listar, revocar };
+  return { sesiones, loading, error, alcance, listar, revocar };
 }
 
 export function useDosFA() {

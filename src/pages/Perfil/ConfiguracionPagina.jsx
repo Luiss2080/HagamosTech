@@ -13,7 +13,7 @@ import {
     useSesiones,
     useDosFA,
     useDesactivarCuenta,
-    useExportarDatos
+    useExportarDatos,
     PREFERENCIAS_PERFIL_INICIALES,
 } from '../../hooks/usePerfilConfig';
 
@@ -45,7 +45,7 @@ const ConfiguracionPagina = () => {
 
     const { loading: passLoading, cambiar: cambiarPassword } = useCambioPassword();
     const { preferences: preferenciasServidor, loading: prefLoading, error: prefApiError, guardar: guardarPrefs } = usePreferencias();
-    const { sesiones, loading: sesLoading, listar: listarSesiones, revocar: revocarSesion } = useSesiones();
+    const { sesiones, loading: sesLoading, error: sesionesError, alcance: sesionesAlcance, listar: listarSesiones, revocar: revocarSesion } = useSesiones();
     const { loading: faLoading, toggle: toggle2FA, setup: setup2FA } = useDosFA();
     const { loading: desLoading, desactivar: desactivarCuenta } = useDesactivarCuenta();
     const { exportar: exportarDatos } = useExportarDatos();
@@ -144,12 +144,16 @@ const ConfiguracionPagina = () => {
     };
 
     // --- Handlers de 2FA ---
-    const handleToggle2FA = () => {
+    const handleToggle2FA = async () => {
         if (is2FAEnabled) {
-            setIs2FAEnabled(false);
-            toggle2FA(false);
-            setSuccessMessage('2FA desactivada.');
-            setShowSuccessModal(true);
+            const result = await toggle2FA(false);
+            if (result.success) {
+                setIs2FAEnabled(false);
+                setSuccessMessage('2FA desactivada.');
+                setShowSuccessModal(true);
+            } else {
+                setCodeError(result.message);
+            }
         } else {
             setCodeError('');
             (async () => {
@@ -202,7 +206,7 @@ const ConfiguracionPagina = () => {
     ];
 
     return (
-        <div id="config-page" className="relative overflow-hidden min-h-screen bg-white">
+        <div id="config-page" className="relative min-h-screen overflow-hidden bg-[#050505] text-white">
             <CircuitBackground />
             
             {/* Dots grid overlay */}
@@ -260,7 +264,7 @@ const ConfiguracionPagina = () => {
                                     <i className="fas fa-palette"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Personalización Visual</h3>
+                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Personalización Visual</h3>
                                     <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">APARIENCIA DEL PORTAL</p>
                                 </div>
                             </div>
@@ -268,7 +272,7 @@ const ConfiguracionPagina = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Accent Color Selector */}
                                 <div className="space-y-2">
-                                    <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Color de Acento</h4>
+                                    <h4 className="text-[10px] font-black text-slate-200 uppercase tracking-wider">Color de Acento</h4>
                                     <div className="grid grid-cols-2 gap-1.5">
                                         {ACCENT_COLORS.map((color) => {
                                             const isSelected = accentColor === color.value;
@@ -320,7 +324,7 @@ const ConfiguracionPagina = () => {
                                     <i className="fas fa-user-shield"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Nivel de Privacidad</h3>
+                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Nivel de Privacidad</h3>
                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">VISIBILIDAD DEL PERFIL</p>
                                 </div>
                             </div>
@@ -358,7 +362,7 @@ const ConfiguracionPagina = () => {
                                     <i className="fas fa-lock"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Seguridad</h3>
+                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Seguridad</h3>
                                     <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">PROTECCIÓN DE LA CUENTA</p>
                                 </div>
                             </div>
@@ -366,7 +370,7 @@ const ConfiguracionPagina = () => {
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {/* Change Password */}
                                 <div className="space-y-2 border-r-0 sm:border-r border-slate-100 sm:pr-4">
-                                    <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Cambiar Contraseña</h4>
+                                    <h4 className="text-[10px] font-black text-slate-200 uppercase tracking-wider">Cambiar Contraseña</h4>
                                     <form onSubmit={handlePasswordSubmit} className="space-y-2">
                                         <input 
                                             type="password" 
@@ -452,13 +456,13 @@ const ConfiguracionPagina = () => {
                                         <i className="fas fa-desktop"></i>
                                     </div>
                                     <div>
-                                        <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Sesiones Activas</h3>
+                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Sesiones Activas</h3>
                                         <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">DISPOSITIVOS CONECTADOS</p>
                                     </div>
                                 </div>
                                 <div className="space-y-2">
                                     {sesiones.length === 0 ? (
-                                        <p className="text-xs text-slate-400 italic text-center py-6">No hay otras sesiones activas.</p>
+                                        <p className="text-xs text-slate-400 italic text-center py-6">{sesionesError || (sesionesAlcance === 'sin_registro_multisesion' ? 'La gestión de sesiones múltiples todavía no está disponible.' : 'No hay otras sesiones activas.')}</p>
                                     ) : (
                                         sesiones.map((sess) => (
                                             <div key={sess.id} className="flex items-center justify-between border-b border-slate-100 pb-2 last:border-0 last:pb-0">
@@ -494,14 +498,14 @@ const ConfiguracionPagina = () => {
                                             <i className="fas fa-gears"></i>
                                         </div>
                                         <div>
-                                            <h3 className="text-[11px] font-black text-slate-900 uppercase tracking-wider m-0">Acciones Avanzadas</h3>
+                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Acciones Avanzadas</h3>
                                             <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">GESTIÓN DE DATOS</p>
                                         </div>
                                     </div>
                                     
                                     <div className="space-y-2">
                                         <div>
-                                            <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider">Exportar Información</h4>
+                                            <h4 className="text-[10px] font-black text-slate-200 uppercase tracking-wider">Exportar Información</h4>
                                             <p className="text-[9px] text-slate-500 leading-normal mt-1">
                                                 Copia de seguridad JSON de tus datos.
                                             </p>
