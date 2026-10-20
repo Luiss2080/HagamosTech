@@ -1,9 +1,17 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import apiClient from '../servicios/clienteApi';
 import Cookies from 'js-cookie';
 import useAuthStore from '../store/useAutenticacionStore';
 
 const getToken = () => sessionStorage.getItem('hagamostech_token') || Cookies.get('hagamostech_token');
+
+export const PREFERENCIAS_PERFIL_INICIALES = {
+  colorAcento: '#A3E635',
+  privacidadPerfil: 'members',
+  email_promociones: true,
+  email_pedidos: true,
+  sms_alertas: false,
+};
 
 export function useCambioPassword() {
   const [loading, setLoading] = useState(false);
@@ -26,21 +34,47 @@ export function useCambioPassword() {
 
 export function usePreferencias() {
   const [loading, setLoading] = useState(false);
-  const guardar = useCallback(async (preferences) => {
+  const [preferences, setPreferences] = useState(PREFERENCIAS_PERFIL_INICIALES);
+  const [error, setError] = useState('');
+
+  const cargar = useCallback(async () => {
     setLoading(true);
+    setError('');
     try {
       const token = getToken();
-      await apiClient.put('/perfil/preferences', preferences, {
+      const { data } = await apiClient.get('/perfil/preferences', {
         headers: { Authorization: `Bearer ${token}` }
       });
-      return { success: true };
-    } catch {
-      return { success: false, message: 'Error al guardar preferencias' };
+      setPreferences({ ...PREFERENCIAS_PERFIL_INICIALES, ...data.data });
+    } catch (requestError) {
+      setError(requestError.response?.data?.mensaje || requestError.response?.data?.error || 'No se pudieron cargar tus preferencias.');
     } finally {
       setLoading(false);
     }
   }, []);
-  return { loading, guardar };
+
+  useEffect(() => { cargar(); }, [cargar]);
+
+  const guardar = useCallback(async (preferences) => {
+    setLoading(true);
+    setError('');
+    try {
+      const token = getToken();
+      const { data } = await apiClient.put('/perfil/preferences', preferences, {
+        headers: { Authorization: `Bearer ${token}` }
+      });
+      const saved = { ...PREFERENCIAS_PERFIL_INICIALES, ...data.data };
+      setPreferences(saved);
+      return { success: true, data: saved };
+    } catch (requestError) {
+      const message = requestError.response?.data?.mensaje || requestError.response?.data?.error || 'No se pudieron guardar tus preferencias.';
+      setError(message);
+      return { success: false, message };
+    } finally {
+      setLoading(false);
+    }
+  }, []);
+  return { preferences, loading, error, cargar, guardar };
 }
 
 export function useSesiones() {

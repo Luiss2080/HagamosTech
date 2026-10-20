@@ -273,29 +273,26 @@ const useAuthStore = create((set, get) => ({
 
     updateProfile: async (datos) => {
         set({ loading: true });
-        if (datos.fotoPerfil && get().user?.id) {
-            localStorage.setItem(fotoKey(get().user.id), datos.fotoPerfil);
-        }
         try {
             const token = getToken() || Cookies.get('hagamostech_token');
             const { data } = await apiClient.put('/perfil', datos, {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            if (data.success) {
-                const updatedUser = { ...data.data, ...datos };
-                sessionStorage.setItem(SS_PROFILE, JSON.stringify(updatedUser));
-                set({ user: updatedUser, loading: false });
-                return { success: true };
+            if (!data.success || !data.data) {
+                return { success: false, message: data.mensaje || data.error || 'El servidor no confirmó los cambios del perfil.' };
             }
-        } catch (error) {
-            console.warn('API /perfil update failed, falling back to local state only.', error);
-        }
-        set((state) => {
-            const updatedUser = { ...state.user, ...datos };
+            const updatedUser = { ...data.data, ...datos };
+            if (datos.fotoPerfil && updatedUser.id) {
+                localStorage.setItem(fotoKey(updatedUser.id), datos.fotoPerfil);
+            }
             sessionStorage.setItem(SS_PROFILE, JSON.stringify(updatedUser));
-            return { user: updatedUser, loading: false };
-        });
-        return { success: true, message: 'Perfil actualizado localmente' };
+            set({ user: updatedUser });
+            return { success: true };
+        } catch (error) {
+            return { success: false, message: error.response?.data?.mensaje || error.response?.data?.error || 'No se pudieron guardar los cambios en el servidor.' };
+        } finally {
+            set({ loading: false });
+        }
     },
 
     fetchProfile: async () => {
