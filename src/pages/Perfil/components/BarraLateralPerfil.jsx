@@ -3,18 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 import useAuthStore from '../../../store/useAutenticacionStore';
 
-const ACHIEVEMENTS = [
-    { id: 'ach-1', name: 'Líder Frontend', desc: 'Completó los módulos 1 y 2 de Desarrollo Web', icon: 'fa-microchip', color: 'text-amber-400 bg-amber-400/10 border-amber-400/30' },
-    { id: 'ach-2', name: 'Master Coder', desc: 'Desarrollador de Páginas Web', icon: 'fa-code', color: 'text-blue-400 bg-blue-400/10 border-blue-400/30' },
-    { id: 'ach-3', name: 'Proyecto Destacado', desc: 'Publicó su primer proyecto web en producción', icon: 'fa-rocket', color: 'text-emerald-400 bg-emerald-400/10 border-emerald-400/30' },
-];
-
 const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref, isSavingPrefs, handleSavePreferences }) => {
     const location = useLocation();
     const user = useAuthStore(state => state.user);
     
     const [showDiploma, setShowDiploma] = useState(false);
-    const [selectedAch, setSelectedAch] = useState(null);
     const diplomaRef = useRef(null);
 
     const displayName = user?.nombre || 'Usuario Tech';
@@ -27,12 +20,8 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
         { path: '/configuracion', label: 'Configuración', sub: 'Preferencias y seguridad', icon: 'fa-gear' },
     ];
 
-    const handleAchClick = (ach) => {
-        setSelectedAch(ach);
-    };
-
     return (
-        <div className="relative hidden lg:flex flex-col justify-start p-6 overflow-hidden bg-gradient-to-br from-[#0A0A0A] via-[#111827] to-[#0A0A0A] w-full h-full rounded-[2.5rem] shadow-xl">
+        <div className="relative hidden lg:flex flex-col justify-start p-6 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full rounded-[2rem] shadow-xl border border-[#A3E635]/20">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-[#111827]/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
@@ -44,9 +33,9 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                 {/* 1. SECCIÓN DE CABECERA BRANDING (Como en el panel del usuario) */}
                 <div className="w-full pb-3.5 border-b border-white/10 text-left">
                     <h1 className="text-xs font-black uppercase tracking-wider text-white flex items-center gap-1.5">
-                        <i className="fas fa-microchip text-amber-400"></i> HagamosTech
+                        <i className="fas fa-microchip text-[#A3E635]"></i> HagamosTech
                     </h1>
-                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Estudio de Software & IA</p>
+                    <p className="text-[8px] text-white/50 font-bold uppercase tracking-widest mt-0.5">Tu espacio personal</p>
                 </div>
 
                 {/* 2. SECCIÓN DE AVATAR Y METADATA */}
@@ -64,12 +53,12 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     <h2 className="text-sm font-black text-white leading-tight mb-0.5 tracking-tight drop-shadow-lg truncate max-w-full">
                         {displayName}
                     </h2>
-                    <p className="text-[8px] text-red-100 font-bold uppercase tracking-widest mb-1 opacity-80 truncate max-w-full">
+                    <p className="text-[9px] text-white/60 font-bold uppercase tracking-widest mb-2 truncate max-w-full">
                         {user?.correo || 'correo@ejemplo.com'}
                     </p>
-                    <div className="inline-flex items-center gap-1.5 rounded-full border border-white/25 bg-white/10 px-3 py-0.5 text-[7px] font-black uppercase tracking-wider text-white shadow-sm backdrop-blur-sm">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#10b981] animate-pulse"></span>
-                        {user?.rolNombre || 'Invitado'}
+                    <div className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-3 py-1 text-[8px] font-black uppercase tracking-wider text-[#A3E635]">
+                        <i className={`fas ${user?.emailVerificado ? 'fa-circle-check' : 'fa-user'} text-[9px]`}></i>
+                        {user?.emailVerificado ? 'Cuenta verificada' : user?.rolNombre || 'Cuenta personal'}
                     </div>
                 </div>
 
@@ -81,60 +70,18 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <Link 
                                 key={item.path}
                                 to={item.path} 
-                                className={`flex items-center gap-3 rounded-xl border px-3 py-2 text-left transition-all duration-200 ${isActive ? 'border-transparent bg-white shadow-md scale-[1.01]' : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'}`}
+                                className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 text-left transition-all duration-200 ${isActive ? 'border-transparent bg-white shadow-md scale-[1.01]' : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'}`}
                             >
-                                <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-red-50 text-[#A3E635]' : 'bg-white/10 text-white'}`}>
+                                <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-[#A3E635]/15 text-[#65A30D]' : 'bg-white/10 text-[#A3E635]'}`}>
                                     <i className={`fas ${item.icon} text-[10px]`}></i>
                                 </div>
                                 <div className="truncate">
                                     <p className={`font-black text-[11px] leading-tight ${isActive ? 'text-[#111827]' : 'text-white'}`}>{item.label}</p>
-                                    <p className={`text-[7px] font-bold uppercase tracking-wider mt-0.5 ${isActive ? 'text-[#A3E635]' : 'text-white/50'}`}>{item.sub.substring(0, 24)}</p>
+                                    <p className={`text-[9px] font-semibold leading-tight mt-1 ${isActive ? 'text-black/65' : 'text-white/55'}`}>{item.sub}</p>
                                 </div>
                             </Link>
                         );
                     })}
-                </div>
-
-                {/* 4. WIDGET: PROGRESO DEL CLUB */}
-                <div className="w-full bg-black/15 border border-white/5 rounded-2xl p-3.5 text-left shadow-inner">
-                    <div className="flex items-center justify-between mb-1.5">
-                        <span className="text-[8px] font-black uppercase tracking-widest text-[#A3E635] flex items-center gap-1">
-                            <i className="fas fa-crown text-amber-400 text-[9px]"></i> Club HagamosTech
-                        </span>
-                        <span className="text-[8px] font-black text-white">2,450 / 3,000 pts</span>
-                    </div>
-                    
-                    <div className="w-full bg-white/10 h-1.5 rounded-full overflow-hidden mb-1">
-                        <div className="h-full bg-gradient-to-r from-amber-400 to-[#A3E635] rounded-full" style={{ width: '81%' }} />
-                    </div>
-                    
-                    <div className="flex justify-between items-center text-[7px] text-white/50 font-bold uppercase tracking-wider">
-                        <span>Diamante</span>
-                        <span className="text-amber-450">Faltan 550 pts</span>
-                    </div>
-                </div>
-
-                {/* 5. WIDGET: LOGROS ACADÉMICOS */}
-                <div className="w-full bg-black/15 border border-white/5 rounded-2xl p-3.5 text-left shadow-inner">
-                    <h3 className="text-[8px] font-black uppercase tracking-widest text-red-200 mb-2 flex items-center gap-1">
-                        <i className="fas fa-award text-xs text-amber-400"></i> Logros Académicos
-                    </h3>
-                    
-                    <div className="grid grid-cols-3 gap-1.5">
-                        {ACHIEVEMENTS.map((ach) => (
-                            <button
-                                key={ach.id}
-                                onClick={() => handleAchClick(ach)}
-                                className={`group p-1.5 rounded-lg border text-center transition-all cursor-pointer hover:bg-white/5 ${ach.color}`}
-                                title={ach.name}
-                            >
-                                <i className={`fas ${ach.icon} text-xs mb-0.5 block`}></i>
-                                <span className="text-[6px] font-black uppercase block truncate text-white">
-                                    {ach.name.split(' ')[0]}
-                                </span>
-                            </button>
-                        ))}
-                    </div>
                 </div>
 
                 {/* 6. PREFERENCIAS DE ALERTAS - Solo en /configuracion */}
@@ -174,7 +121,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     <button 
                         onClick={handleSavePreferences}
                         disabled={isSavingPrefs}
-                        className="w-full mt-2 py-1.5 rounded-lg bg-[#A3E635] hover:bg-red-800 text-[#0A0A0A] text-[7px] font-black uppercase tracking-widest transition-all cursor-pointer border-0 disabled:opacity-50"
+                        className="w-full mt-2 py-2 rounded-lg bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[9px] font-black uppercase tracking-widest transition-all cursor-pointer border-0 disabled:opacity-50"
                     >
                         {isSavingPrefs ? 'Guardando...' : 'Guardar Preferencias'}
                     </button>
@@ -229,26 +176,6 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     </button>
                 </div>
             </div>
-
-            {/* MODAL DE LOGRO INDIVIDUAL */}
-            {selectedAch && (
-                <div className="fixed inset-0 z-[300] flex items-center justify-center p-4">
-                    <div className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm" onClick={() => setSelectedAch(null)}></div>
-                    <div className="relative w-full max-w-xs transform overflow-hidden rounded-[2rem] bg-white p-6 text-center shadow-2xl border-2 border-[#A3E635] animate-modal-pop">
-                        <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-100 text-amber-500 text-2xl mb-4">
-                            <i className="fas fa-award"></i>
-                        </div>
-                        <h4 className="text-sm font-black text-slate-850 uppercase tracking-wider mb-1">{selectedAch.name}</h4>
-                        <p className="text-xs text-slate-500 mb-5 leading-relaxed">{selectedAch.desc}</p>
-                        <button 
-                            onClick={() => setSelectedAch(null)}
-                            className="w-full py-2.5 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] font-black text-[10px] uppercase tracking-widest rounded-xl transition active:scale-95 cursor-pointer"
-                        >
-                            Aceptar
-                        </button>
-                    </div>
-                </div>
-            )}
 
             {/* DIPLOMA MODAL WIDGET */}
             {showDiploma && (
