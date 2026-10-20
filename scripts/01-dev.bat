@@ -17,16 +17,16 @@ if errorlevel 1 (
     exit /b 1
 )
 
-REM --- Verificar MySQL ---
-mysql -u root -e "SELECT 1" >nul 2>&1
+REM --- Verificar PostgreSQL disponible en el puerto local por defecto ---
+powershell -NoProfile -Command "$tcp = New-Object System.Net.Sockets.TcpClient; try { $tcp.Connect('127.0.0.1', 5432); exit 0 } catch { exit 1 } finally { $tcp.Close() }" >nul 2>&1
 if errorlevel 1 (
-    echo [ERROR] MySQL no esta corriendo. Inicia Laragon primero.
+    echo [ERROR] PostgreSQL no esta escuchando en localhost:5432. Inicia PostgreSQL y revisa server/.env.
     pause
     exit /b 1
 )
 
 echo [OK] Node.js detectado
-echo [OK] MySQL detectado
+echo [OK] PostgreSQL detectado en localhost:5432
 echo.
 
 REM --- Iniciar Backend Node.js ---

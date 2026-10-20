@@ -6,8 +6,8 @@
   <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
   <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite 8" />
   <img src="https://img.shields.io/badge/Express-5-000000?style=for-the-badge&logo=express&logoColor=white" alt="Express 5" />
-  <img src="https://img.shields.io/badge/Prisma-6%20%2B%20MySQL-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 6 y MySQL" />
-  <img src="https://img.shields.io/badge/tests-52%20pasan-22c55e?style=for-the-badge" alt="52 tests pasan" />
+  <img src="https://img.shields.io/badge/Prisma-6%20%2B%20PostgreSQL-2D3748?style=for-the-badge&logo=prisma&logoColor=white" alt="Prisma 6 y PostgreSQL" />
+  <img src="https://img.shields.io/badge/tests-102%20pasan-22c55e?style=for-the-badge" alt="102 tests pasan" />
   <img src="https://img.shields.io/badge/licencia-MIT-yellow?style=for-the-badge" alt="Licencia MIT" />
   <br/>
   <a href="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml"><img src="https://github.com/Luiss2080/HagamosTech/actions/workflows/ci.yml/badge.svg" alt="CI" /></a>
@@ -43,7 +43,7 @@ Capturas reales del frontend en modo desarrollo (Chrome headless, 1280x800).
 |---|---|
 | Catálogo de servicios | 8 categorías y 35 servicios definidos en `src/data/serviciosData.js` (estudiantes 6, emprendedores 6, empleo 6, diseño 5, web 5, software 3, IA 3, a medida 1). Es la fuente única de datos del frontend. |
 | Páginas | Inicio, Qué hacemos, Servicios (8 páginas), Cómo trabajamos, Sobre nosotros, Promociones, Novedades, Contacto, páginas legales, errores 401/403/404/419/500. Rutas con `HashRouter` y carga diferida. |
-| Contacto | `POST /api/contacto` guarda el mensaje en MySQL y notifica por correo (SMTP con nodemailer) sin bloquear la respuesta. |
+| Contacto | `POST /api/contacto` guarda el mensaje en PostgreSQL y notifica por correo (SMTP con nodemailer) sin bloquear la respuesta. |
 | Cuentas | Registro con código de verificación por correo, login, recuperación y restablecimiento de contraseña. Contraseñas con `scrypt`. Token firmado HMAC-SHA256 de 7 días (implementación propia, sin librería JWT). |
 | 2FA | TOTP (RFC 6238, compatible con Google Authenticator) implementado en `server/auth/utils/totp.js`. |
 | Perfil | Ver/editar perfil, cambiar contraseña, exportar datos, desactivar cuenta. |
@@ -62,7 +62,7 @@ flowchart LR
     B --> K["store: contacto"]
     A --> P["Prisma 6"]
     K --> P
-    P --> D[("MySQL")]
+    P --> D[("PostgreSQL")]
     A --> M["nodemailer (SMTP)"]
     K --> M
 ```
@@ -96,7 +96,7 @@ HagamosTech/
 │   ├── server.js       # Express; monta /api/auth, /api/contacto, /api/perfil...
 │   ├── auth/           # controllers, routes, utils (token, password, totp, mailer)
 │   ├── store/routes/   # contactoRoutes.js
-│   ├── prisma/         # schema.prisma (MySQL) y seed.js
+│   ├── prisma/         # schema.prisma (PostgreSQL), migrador de datos y seed.js
 │   └── test/           # tests con Prisma mockeado
 ├── e2e/                # Playwright (auth, chat, humo, paginas)
 ├── specs/              # Especificaciones SDD por feature
@@ -111,7 +111,7 @@ HagamosTech/
 | Requisito | Versión |
 |---|---|
 | Node.js | 18+ (el CI usa 20) |
-| MySQL | 8.x (para el backend con datos reales) |
+| PostgreSQL | 16+ (base activa del backend) |
 | Puertos | 4000 (frontend) y 4321 (API) por defecto |
 
 1. Instala dependencias del frontend y del backend:
@@ -119,10 +119,10 @@ HagamosTech/
    npm install
    cd server && npm install && cd ..
    ```
-2. Crea `server/.env` con al menos `DATABASE_URL` (MySQL) y `JWT_SECRET`; opcional `PORT`, `FRONTEND_URL` y `SMTP_*` (ver el desplegable de variables).
+2. Crea `server/.env` con al menos `DATABASE_URL` (PostgreSQL) y `JWT_SECRET`; opcional `PORT`, `FRONTEND_URL` y `SMTP_*` (ver el desplegable de variables).
 3. Crea las tablas y los datos semilla:
    ```bash
-   cd server && npx prisma db push && npm run db:seed && cd ..
+   cd server && npm run db:push && npm run db:seed && cd ..
    ```
 4. Levanta todo (o solo el frontend con `npm run dev`; las pantallas estáticas funcionan sin backend):
    ```bash

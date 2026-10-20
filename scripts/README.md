@@ -23,7 +23,7 @@ cd .. && npm run dev        # Frontend en localhost:4001
 
 **Qué hace:**
 1. Detecta si Node.js está instalado
-2. Detecta si MySQL está corriendo (Laragon)
+2. Detecta si PostgreSQL está escuchando en localhost:5432
 3. Abre una terminal para el backend Node.js (puerto 4321)
 4. Espera 3 segundos
 5. Abre otra terminal para el frontend Vite (puerto 4001)
