@@ -73,21 +73,15 @@ const GlobalBreadcrumb = () => {
 
     let host = null;
     let root = null;
-    let originalPosition = '';
-    const offset = pathname.startsWith('/perfil') || pathname === '/configuracion' ? 'top-3' : 'top-16';
     const placeBreadcrumb = () => {
       const target = main.querySelector('section') || main;
       if (target === host) return;
 
-      if (host && host !== main) host.style.position = originalPosition;
       root?.remove();
       host = target;
-      originalPosition = host === main ? '' : host.style.position;
-      if (host !== main && window.getComputedStyle(host).position === 'static') {
-        host.style.position = 'relative';
-      }
       root = document.createElement('div');
-      root.className = `pointer-events-none absolute inset-x-0 ${offset} z-20 flex justify-center px-4`;
+      const isProfile = pathname.startsWith('/perfil') || pathname === '/configuracion';
+      root.className = `relative z-20 flex justify-center px-4 ${isProfile ? 'mb-5' : 'pt-14 mb-5'}`;
       host.prepend(root);
       setMountNode(root);
     };
@@ -98,7 +92,6 @@ const GlobalBreadcrumb = () => {
 
     return () => {
       observer.disconnect();
-      if (host && host !== main) host.style.position = originalPosition;
       root?.remove();
       setMountNode(null);
     };

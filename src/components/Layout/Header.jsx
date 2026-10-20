@@ -226,8 +226,8 @@ const Header = () => {
             <header
                 className={`fixed top-0 left-0 w-full z-[80] transition-all duration-500 animate-slide-down ${
                     isScrolled
-                        ? 'bg-[#0A0A0A]/95 backdrop-blur-xl border-b border-[#A3E635]/15 shadow-lg shadow-black/30 py-2 sm:py-3'
-                        : 'bg-[#0A0A0A]/85 backdrop-blur-lg border-b border-transparent py-3 sm:py-4'
+                        ? 'bg-[#0A0A0A] backdrop-blur-xl border-b border-[#A3E635]/15 shadow-lg shadow-black/30 py-2 sm:py-3'
+                        : 'bg-[#0A0A0A] backdrop-blur-lg border-b border-transparent py-3 sm:py-4'
                 }`}
                 id="main-header"
             >

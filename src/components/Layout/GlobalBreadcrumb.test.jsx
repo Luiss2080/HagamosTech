@@ -22,6 +22,8 @@ describe('GlobalBreadcrumb', () => {
     expect(within(navigation).getByRole('link', { name: 'Ir al inicio' })).toHaveAttribute('href', '/');
     expect(within(navigation).getByRole('link', { name: 'Sobre nosotros' })).toHaveAttribute('href', '/sobre-nosotros');
     expect(within(navigation).getByText('Misión y visión')).toHaveAttribute('aria-current', 'page');
+    expect(navigation.parentElement).toHaveClass('relative');
+    expect(navigation.parentElement).not.toHaveClass('absolute');
   });
 
   it('no muestra la miga de pan en la portada', () => {

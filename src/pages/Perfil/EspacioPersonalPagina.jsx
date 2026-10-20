@@ -158,6 +158,10 @@ const EspacioPersonalPagina = () => {
   }, [agendaRange, eventos]);
 
   const abrirModal = (tipo, initial = {}) => setModal({ tipo, ...initial });
+  const irATablero = (nextTab) => {
+    setTab(nextTab);
+    requestAnimationFrame(() => document.getElementById('espacio-tablero')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
+  };
   const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
 
   if (!user) return (
@@ -234,7 +238,7 @@ const EspacioPersonalPagina = () => {
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">Proyectos, notas privadas y recordatorios organizados desde tu cuenta.</p>
           <div className="mt-6 flex flex-wrap justify-center gap-3">
-            {[{ label: 'Mis proyectos', icon: ClipboardList }, { label: 'Notas', icon: NotebookPen }, { label: 'Calendario', icon: CalendarDays }].map(({ label, icon: FeatureIcon }) => <span key={label} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635]"><FeatureIcon size={14} />{label}</span>)}
+            {[{ id: 'proyectos', label: 'Mis proyectos', icon: ClipboardList }, { id: 'notas', label: 'Notas', icon: NotebookPen }, { id: 'calendario', label: 'Calendario', icon: CalendarDays }].map(({ id, label, icon: FeatureIcon }) => <button key={id} type="button" onClick={() => irATablero(id)} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635] transition hover:border-[#A3E635]/60 hover:bg-[#A3E635]/20"><FeatureIcon size={14} />{label}</button>)}
           </div>
         </header>
 
@@ -244,7 +248,7 @@ const EspacioPersonalPagina = () => {
             { id: 'notas', label: 'Notas privadas', detalle: 'Apuntes guardados', cantidad: notas.length, icon: NotebookPen },
             { id: 'calendario', label: 'Esta semana', detalle: 'Recordatorios próximos', cantidad: recordatoriosSemana, icon: CalendarDays },
           ].map(({ id, label, detalle, cantidad, icon: SummaryIcon }) => (
-            <button key={id} type="button" onClick={() => setTab(id)} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4 text-left transition hover:border-[#A3E635]/40 hover:bg-[#151912]">
+            <button key={id} type="button" onClick={() => irATablero(id)} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4 text-left transition hover:border-[#A3E635]/40 hover:bg-[#151912]">
               <Icono><SummaryIcon size={20} /></Icono>
               <span className="min-w-0 flex-1"><span className="block text-xs font-black uppercase tracking-wide">{label}</span><span className="mt-1 block text-[11px] text-slate-400">{detalle}</span></span>
               <span className="text-2xl font-black text-[#A3E635]">{cantidad}</span>
@@ -255,7 +259,7 @@ const EspacioPersonalPagina = () => {
         {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
         {notice && <div role="status" className="mb-5 flex items-center gap-2 rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-3 text-sm font-semibold text-lime-100"><Check size={16} className="text-[#A3E635]" />{notice}</div>}
 
-        <div aria-labelledby="espacio-tablero-titulo" className="relative mt-8 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:mt-10 sm:rounded-[2.5rem]">
+        <div id="espacio-tablero" aria-labelledby="espacio-tablero-titulo" className="relative mt-8 scroll-mt-24 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:mt-10 sm:rounded-[2.5rem]">
           <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7">
             <span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span>
             <h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Proyectos, notas y calendario</h2>
