@@ -1,3 +1,4 @@
+import { createPortal } from 'react-dom';
 import { Check, X } from 'lucide-react';
 import { estilosBoton } from './estilosEspacio';
 import { SelectorFiltro } from './ComponentesEspacio';
@@ -19,7 +20,7 @@ const Campo = ({ label, as: Element = 'input', className = '', ...props }) => (
 const FormularioEspacioPersonal = ({ modal, proyectos, saving, onChange, onClose, onSubmit }) => {
   const tipoLabel = ({ proyecto: 'proyecto', nota: 'nota privada', evento: 'recordatorio', tarea: 'tarea', recurso: 'enlace de biblioteca' })[modal.tipo];
   const titulo = modal.id ? `Editar ${tipoLabel}` : `Nuevo ${tipoLabel}`;
-  return (
+  return createPortal((
     <div className="fixed inset-0 z-[300] grid place-items-center overflow-y-auto bg-black/75 p-4 backdrop-blur-sm" onMouseDown={(event) => { if (event.target === event.currentTarget) onClose(); }}>
       <form role="dialog" aria-modal="true" aria-labelledby="formulario-espacio-titulo" onSubmit={onSubmit} className="my-8 w-full max-w-xl rounded-[1.75rem] border border-[#A3E635]/20 bg-[#10140e] p-5 shadow-2xl sm:p-7">
         <div className="mb-6 flex items-start justify-between gap-4"><div><p className="text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]">Espacio privado · {tipoLabel}</p><h3 id="formulario-espacio-titulo" className="mt-1 text-xl font-black">{titulo}</h3></div><button type="button" aria-label="Cerrar" onClick={onClose} className="rounded-xl p-2 text-slate-400 hover:bg-white/5 hover:text-white"><X size={18} /></button></div>
@@ -31,7 +32,7 @@ const FormularioEspacioPersonal = ({ modal, proyectos, saving, onChange, onClose
         <div className="mt-7 flex justify-end gap-3"><button type="button" onClick={onClose} className={estilosBoton.secundario}>Cancelar</button><button type="submit" disabled={saving} className={`${estilosBoton.principal} disabled:opacity-60`}>{saving ? 'Guardando…' : <><Check size={14} /> Guardar {tipoLabel}</>}</button></div>
       </form>
     </div>
-  );
+  ), document.body);
 };
 
 export default FormularioEspacioPersonal;
