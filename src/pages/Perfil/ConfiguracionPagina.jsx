@@ -4,6 +4,7 @@ import { QRCodeSVG } from 'qrcode.react';
 import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
+import PreferenciasConfiguracion from './components/PreferenciasConfiguracion';
 import useAuthStore from '../../store/useAutenticacionStore';
 import './perfil-theme.css';
 import {
@@ -15,13 +16,6 @@ import {
     useExportarDatos,
     PREFERENCIAS_PERFIL_INICIALES,
 } from '../../hooks/usePerfilConfig';
-
-const ACCENT_COLORS = [
-    { name: 'Rojo Robótico', value: '#ef4444', hover: '#dc2626', bg: 'bg-red-500', ring: 'ring-red-500' },
-    { name: 'Dorado Tech', value: '#d4a72c', hover: '#b88914', bg: 'bg-amber-400', ring: 'ring-amber-400' },
-    { name: 'Azul Espacial', value: '#1d4ed8', hover: '#1e40af', bg: 'bg-blue-700', ring: 'ring-blue-700' },
-    { name: 'Verde Cyber', value: '#10b981', hover: '#059669', bg: 'bg-[#10b981]', ring: 'ring-[#10b981]' },
-];
 
 const PRIVACY_LEVELS = [
     { id: 'public', name: 'Público', desc: 'Tu perfil es visible para otros usuarios y pueden ver tus proyectos y servicios.', icon: 'fa-earth-americas', color: 'text-blue-500' },
@@ -220,94 +214,38 @@ const ConfiguracionPagina = () => {
                 className="!pt-4 sm:!pt-6 !pb-6"
             />
 
-            {/* Todo el módulo comparte una única sección y un solo panel. */}
+            <div className="mb-4 flex gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-black/45 p-2 lg:hidden">
+                {navItemsMobile.map((item) => {
+                    const isActive = location.pathname === item.path;
+                    return (
+                        <Link key={item.path} to={item.path} className={`flex shrink-0 items-center gap-2.5 rounded-xl px-5 py-3 text-xs font-black uppercase tracking-wider transition-all ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:bg-white/5'}`}>
+                            <i className={`fas ${item.icon}`} />{item.label}
+                        </Link>
+                    );
+                })}
+            </div>
+
+            {/* La columna lateral agrupa identidad, apariencia y avisos. */}
             <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
-                    
-                    {/* LEFT SIDE: SIDEBAR */}
-                    <div className="sticky top-32 hidden self-start overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
-                        <ProfileSidebar />
-                    </div>
+
+                    <aside className="flex self-start flex-col gap-4">
+                        <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:block">
+                            <ProfileSidebar />
+                        </div>
+                        <PreferenciasConfiguracion
+                            accentColor={accentColor}
+                            onAccentChange={handleAccentChange}
+                            preferences={preferences}
+                            onToggle={handleTogglePref}
+                            error={prefError}
+                            saving={prefLoading}
+                            onSave={handleSavePreferences}
+                        />
+                    </aside>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
                     <div className="flex min-w-0 flex-col gap-0 rounded-2xl border border-white/10 bg-[#090b08]/90 p-4 sm:p-5 lg:p-6">
                         
-                        {/* MOBILE TABS NAVIGATION */}
-                        <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
-                            {navItemsMobile.map((item) => {
-                                const isActive = location.pathname === item.path;
-                                return (
-                                    <Link 
-                                        key={item.path}
-                                        to={item.path}
-                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-500 hover:bg-[#A3E635]/5 dark:hover:bg-white/5'}`}
-                                    >
-                                        <i className={`fas ${item.icon}`}></i>
-                                        {item.label}
-                                    </Link>
-                                );
-                            })}
-                        </div>
-
-                        {/* PERSONALIZACIÓN VISUAL */}
-                        <div id="personalizacion" className="scroll-mt-36 border-b border-white/10 py-4 first:pt-0">
-                            <div className="mb-4 flex items-center gap-3">
-                                <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
-                                    <i className="fas fa-palette"></i>
-                                </div>
-                                <div>
-                                    <h3 className="text-[11px] font-black text-white uppercase tracking-wider m-0">Personalización Visual</h3>
-                                    <p className="text-[8px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">APARIENCIA DEL PORTAL</p>
-                                </div>
-                            </div>
-
-                            <div className="grid grid-cols-1 gap-4">
-                                {/* Accent Color Selector */}
-                                <div className="space-y-2">
-                                    <h4 className="text-[10px] font-black text-slate-200 uppercase tracking-wider">Color de Acento</h4>
-                                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
-                                        {ACCENT_COLORS.map((color) => {
-                                            const isSelected = accentColor === color.value;
-                                            return (
-                                                <button
-                                                    key={color.value}
-                                                    onClick={() => handleAccentChange(color.value)}
-                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-white/10 bg-black/25 text-slate-200 hover:border-[#A3E635]/40'}`}
-                                                >
-                                                    <span className={`w-3 h-3 rounded-full shrink-0 ${color.bg} ${isSelected ? 'ring-2 ring-offset-2 ring-slate-800 dark:ring-offset-slate-900' : ''}`} />
-                                                    <span className="truncate">{color.name.split(' ')[0]}</span>
-                                                </button>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div id="notificaciones" className="scroll-mt-36 border-b border-white/10 py-4">
-                            <div className="mb-4 flex items-center gap-3">
-                                <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl bg-[#A3E635] text-[11px] text-[#0A0A0A]"><i className="fas fa-bell" /></div>
-                                <div>
-                                    <h3 className="m-0 text-[11px] font-black uppercase tracking-wider text-white">Notificaciones</h3>
-                                    <p className="m-0 mt-0.5 text-[9px] font-bold uppercase tracking-widest text-slate-500">Preferencias vinculadas a tu cuenta</p>
-                                </div>
-                            </div>
-                            <div className="grid gap-2 sm:grid-cols-3">
-                                {[
-                                    { key: 'email_promociones', label: 'Promociones por email' },
-                                    { key: 'email_pedidos', label: 'Novedades de cuenta' },
-                                    { key: 'sms_alertas', label: 'Alertas de seguridad' },
-                                ].map((item) => (
-                                    <button key={item.key} type="button" aria-pressed={preferences[item.key]} onClick={() => handleTogglePref(item.key)} className="flex items-center justify-between gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-3 text-left text-[10px] font-bold text-slate-200 transition hover:border-[#A3E635]/40">
-                                        {item.label}<span className={`h-2.5 w-2.5 shrink-0 rounded-full ${preferences[item.key] ? 'bg-[#A3E635] shadow-[0_0_10px_rgba(163,230,53,.65)]' : 'bg-slate-600'}`} />
-                                    </button>
-                                ))}
-                            </div>
-                            {prefError && <p role="alert" className="mt-3 rounded-lg border border-rose-400/25 bg-rose-950/30 px-3 py-2 text-xs font-semibold text-rose-100">{prefError}</p>}
-                            <button type="button" onClick={handleSavePreferences} disabled={prefLoading} className="mt-4 inline-flex items-center justify-center gap-2 rounded-full bg-[#A3E635] px-5 py-2.5 text-[10px] font-black uppercase tracking-wider text-[#0A0A0A] transition hover:bg-[#84CC16] disabled:cursor-wait disabled:opacity-60">
-                                <i className={`fas ${prefLoading ? 'fa-spinner fa-spin' : 'fa-floppy-disk'}`} />{prefLoading ? 'Guardando...' : 'Guardar preferencias'}
-                            </button>
-                        </div>
-
                         {/* INTERACTIVE PRIVACY METER */}
                         <div id="privacidad" className="scroll-mt-36 border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">

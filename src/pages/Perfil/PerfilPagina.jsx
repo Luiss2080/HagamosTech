@@ -4,6 +4,8 @@ import useAuthStore from '../../store/useAutenticacionStore';
 import CircuitBackground from '../../components/fondos/FondoTech';
 import PageHero from '../../components/func/MigasPan';
 import ProfileSidebar from './components/BarraLateralPerfil';
+import ProgresoPerfil from './components/ProgresoPerfil';
+import EditorImagenPerfil from './components/EditorImagenPerfil';
 import './perfil-theme.css';
 
 const GRADIENTS = [
@@ -418,126 +420,39 @@ const PerfilPagina = () => {
                 className="!pt-10 sm:!pt-12 lg:!pt-14 !pb-6"
             />
 
-            {/* Todo el perfil comparte una única sección y un solo panel. */}
+            {/* La navegación móvil queda antes del contenido de ambas columnas. */}
+            <div className="mb-4 flex gap-2 overflow-x-auto rounded-2xl border border-white/10 bg-black/45 p-2 lg:hidden">
+                {navItemsMobile.map((item) => {
+                    const isActive = location.pathname === item.path;
+                    return (
+                        <Link key={item.path} to={item.path} className={`flex shrink-0 items-center gap-2.5 rounded-xl px-5 py-3 text-xs font-black uppercase tracking-wider transition-all ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-400 hover:bg-white/5'}`}>
+                            <i className={`fas ${item.icon}`} />{item.label}
+                        </Link>
+                    );
+                })}
+            </div>
+
+            {/* La columna lateral reúne el resumen y las herramientas de perfil. */}
             <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
-                    
-                    {/* LEFT SIDEBAR (Red outline border) */}
-                    <div className="sticky top-32 hidden self-start overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
-                        <ProfileSidebar formData={formData} handleChange={handleChange} />
-                    </div>
+
+                    <aside className="flex self-start flex-col gap-4">
+                        <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:block">
+                            <ProfileSidebar formData={formData} handleChange={handleChange} />
+                        </div>
+                        <ProgresoPerfil completion={completion} />
+                        <EditorImagenPerfil
+                            gradients={GRADIENTS}
+                            userAvatar={userAvatar}
+                            displayName={displayName}
+                            photoError={photoError}
+                            onFileUpload={handleFileUpload}
+                            onPresetSelect={handlePresetSelect}
+                        />
+                    </aside>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
                     <div className="flex min-w-0 flex-col gap-0 rounded-2xl border border-white/10 bg-[#090b08]/90 p-4 sm:p-5 lg:p-6">
                         
-                        {/* MOBILE TABS NAVIGATION */}
-                        <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
-                            {navItemsMobile.map((item) => {
-                                const isActive = location.pathname === item.path;
-                                return (
-                                    <Link 
-                                        key={item.path}
-                                        to={item.path}
-                                        className={`flex items-center gap-2.5 px-5 py-3 rounded-xl font-black text-xs uppercase tracking-wider transition-all whitespace-nowrap ${isActive ? 'bg-[#A3E635] text-[#0A0A0A] shadow-md' : 'text-slate-500 hover:bg-[#A3E635]/5 dark:hover:bg-white/5'}`}
-                                    >
-                                        <i className={`fas ${item.icon}`}></i>
-                                        {item.label}
-                                    </Link>
-                                );
-                            })}
-                        </div>
-
-                        {/* INTERACTIVE PROFILE COMPLETION PROGRESS (Red outline border) */}
-                        <div className="border-b border-white/10 py-4 first:pt-0">
-                            <div className="mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
-                                    <i className="fas fa-chart-line"></i>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Completitud del Perfil</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Progreso de datos configurados</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center justify-between mb-3">
-                                <span className="text-[9px] font-black uppercase tracking-wider text-[#A3E635] flex items-center gap-2">
-                                    <i className="fas fa-chart-line text-xs"></i> Progreso
-                                </span>
-                                <span className="text-sm font-black text-white">{completion}%</span>
-                            </div>
-                            <div className="w-full bg-white/10 h-3.5 rounded-full overflow-hidden border border-white/15">
-                                <div 
-                                    className="h-full bg-gradient-to-r from-[#A3E635] to-[#A3E635] transition-all duration-700 ease-out rounded-full"
-                                    style={{ width: `${completion}%` }}
-                                />
-                            </div>
-                            <p className="text-[10px] text-slate-400 font-bold uppercase mt-2.5 flex items-center gap-1.5">
-                                <i className="fas fa-sparkles text-[#A3E635]"></i>
-                                {completion === 100 ? '¡Tu perfil está completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
-                            </p>
-                        </div>
-
-                        {/* PHOTO & AVATAR PICKER (Red outline border) */}
-                        <div className="border-b border-white/10 py-4">
-                            <div className="mb-4 flex items-center gap-3">
-                                <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
-                                    <i className="fas fa-camera"></i>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Imagen de Perfil</h3>
-                                    <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Personaliza tu foto o avatar institucional</p>
-                                </div>
-                            </div>
-                            
-                            <div className="flex flex-col sm:flex-row gap-8 items-center">
-                                {/* Current Avatar Preview */}
-                                <div className="relative group shrink-0">
-                                    <div className="w-32 h-32 rounded-[2.5rem] overflow-hidden bg-[#f1f5f9] border-4 border-white shadow-xl flex items-center justify-center text-5xl font-black text-[#A3E635] select-none animate-pulse-slow">
-                                        {userAvatar ? (
-                                            <img src={userAvatar} alt="Perfil" className="w-full h-full object-cover" />
-                                        ) : (
-                                            displayName.split(' ').map(n => n[0]).join('').toUpperCase().substring(0, 2)
-                                        )}
-                                    </div>
-                                    <label className="absolute bottom-1 right-1 w-9 h-9 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] rounded-xl shadow-lg border-2 border-white flex items-center justify-center cursor-pointer transition-all duration-200 active:scale-90">
-                                        <i className="fas fa-pen text-xs"></i>
-                                        <input type="file" accept="image/*" className="hidden" onChange={handleFileUpload} />
-                                    </label>
-                                </div>
-
-                                <div className="flex-1 w-full text-center sm:text-left">
-                                    <h4 className="text-base font-extrabold text-slate-850">Cambiar foto de perfil</h4>
-                                    <p className="text-[11px] text-slate-500 mt-1 mb-4 leading-relaxed">
-                                        Sube tu foto o escoge uno de nuestros gradientes de alta fidelidad tecnológica de abajo.
-                                    </p>
-                                    {photoError && (
-                                        <div className="mb-4 px-4 py-3 rounded-xl bg-red-50 border border-red-200 text-[11px] font-bold text-red-600 flex items-start gap-2.5">
-                                            <i className="fas fa-circle-exclamation mt-0.5 text-sm shrink-0"></i>
-                                            <span>{photoError}</span>
-                                        </div>
-                                    )}
-
-                                    {/* Presets Grid */}
-                                    <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-                                        {GRADIENTS.map((grad) => (
-                                            <button
-                                                key={grad.id}
-                                                onClick={() => handlePresetSelect(grad)}
-                                                    className="group relative flex flex-col items-center p-2.5 rounded-2xl border border-white/10 bg-black/25 hover:border-[#A3E635]/50 hover:bg-[#A3E635]/5 transition-all duration-300 cursor-pointer"
-                                                title={grad.name}
-                                            >
-                                                <div 
-                                                    className="w-8 h-8 rounded-xl shadow-md transition-transform group-hover:scale-110"
-                                                    style={{ background: `linear-gradient(135deg, ${grad.from}, ${grad.to})` }}
-                                                />
-                                                <span className="text-[8px] font-black uppercase text-slate-450 mt-2 truncate w-full text-center">
-                                                    {grad.name.split(' ')[0]}
-                                                </span>
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
                         {/* PERSONAL INFORMATION FORM (Red outline border) */}
                         <div className="py-6 last:pb-0">
                             <div className="mb-4 flex items-center gap-3">
