@@ -3,20 +3,20 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import ProyectosPanel from './ProyectosPanel';
 import NotasPanel from './NotasPanel';
 
-const acciones = { onCrear: vi.fn(), onEditar: vi.fn(), onEliminar: vi.fn(), onCambiarEtapa: vi.fn() };
+const acciones = { onEditar: vi.fn(), onEliminar: vi.fn(), onCambiarEtapa: vi.fn() };
 
 describe('paneles de organización personal', () => {
-  it('mantiene una sola acción para crear proyectos y permite personalizar la vista', () => {
+  it('deja la creación en el menú central y permite personalizar la vista de proyectos', () => {
     render(<ProyectosPanel proyectos={[]} {...acciones} />);
-    expect(screen.getAllByRole('button', { name: 'Nuevo proyecto' })).toHaveLength(1);
+    expect(screen.queryByRole('button', { name: 'Nuevo proyecto' })).not.toBeInTheDocument();
     const lista = screen.getByRole('button', { name: 'Vista de lista' });
     fireEvent.click(lista);
     expect(lista).toHaveAttribute('aria-pressed', 'true');
     expect(screen.getByRole('button', { name: 'Vista de tarjetas' })).toHaveAttribute('aria-pressed', 'false');
   });
 
-  it('mantiene una sola acción para crear notas', () => {
-    render(<NotasPanel notas={[]} proyectos={[]} onCrear={vi.fn()} onEditar={vi.fn()} onEliminar={vi.fn()} />);
-    expect(screen.getAllByRole('button', { name: 'Nueva nota' })).toHaveLength(1);
+  it('evita duplicar la acción para crear notas dentro del panel', () => {
+    render(<NotasPanel notas={[]} proyectos={[]} onEditar={vi.fn()} onEliminar={vi.fn()} />);
+    expect(screen.queryByRole('button', { name: 'Nueva nota' })).not.toBeInTheDocument();
   });
 });

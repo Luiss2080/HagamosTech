@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { AlarmClock, CalendarDays, ChevronLeft, ChevronRight, Plus, Trash2 } from 'lucide-react';
+import { AlarmClock, CalendarDays, ChevronLeft, ChevronRight, Trash2 } from 'lucide-react';
 import { fechaLocal, filtrarEventos, obtenerDiasDelCalendario } from './espacioPersonalUtils';
 import { IconoEspacio } from './ComponentesEspacio';
 
@@ -12,7 +12,7 @@ const CalendarioPanel = ({ eventos, proyectos, month, setMonth, range, setRange,
 
   return (
     <section id="panel-calendario" role="tabpanel" tabIndex={0} aria-labelledby="tab-calendario" hidden={hidden}>
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3"><div className="flex items-center gap-3"><IconoEspacio><CalendarDays size={21} /></IconoEspacio><div><h3 id="calendario-titulo" className="font-black">Calendario personal <span className="text-sm font-bold text-slate-500">{eventos.length}</span></h3><p className="text-xs text-slate-400">Organizá entregas, fechas y recordatorios propios.</p></div></div><button type="button" onClick={() => onCrear(new Date())} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-4 py-2.5 text-xs font-black text-black hover:bg-lime-300"><Plus size={15} /> Añadir fecha</button></div>
+      <div className="mb-5 flex flex-col items-center gap-3 text-center"><IconoEspacio><CalendarDays size={21} /></IconoEspacio><div><h3 id="calendario-titulo" className="font-black">Calendario personal <span className="text-sm font-bold text-slate-500">{eventos.length}</span></h3><p className="text-xs text-slate-400">Organizá entregas, fechas y recordatorios propios.</p></div></div>
       <div className="grid gap-5 lg:grid-cols-[1.4fr_.8fr]">
         <section aria-label="Vista mensual" className="rounded-2xl border border-white/10 bg-[#151912] p-4 sm:p-5">
           <div className="mb-4 flex items-center justify-between"><button type="button" aria-label="Mes anterior" onClick={() => setMonth(new Date(month.getFullYear(), month.getMonth() - 1, 1))} className="rounded-lg p-2 text-slate-300 hover:bg-white/5"><ChevronLeft size={19} /></button><h4 className="font-black capitalize">{month.toLocaleDateString('es-BO', { month: 'long', year: 'numeric' })}</h4><div className="flex items-center gap-1"><button type="button" onClick={() => setMonth(new Date())} className="rounded-lg px-2.5 py-2 text-xs font-bold text-[#A3E635] hover:bg-[#A3E635]/10">Hoy</button><button type="button" aria-label="Mes siguiente" onClick={() => setMonth(new Date(month.getFullYear(), month.getMonth() + 1, 1))} className="rounded-lg p-2 text-slate-300 hover:bg-white/5"><ChevronRight size={19} /></button></div></div>

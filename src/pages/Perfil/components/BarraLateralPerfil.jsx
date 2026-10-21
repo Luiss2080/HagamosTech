@@ -83,9 +83,12 @@ const ProfileSidebar = ({ formData, handleChange }) => {
                 </div>
 
                 {location.pathname === '/configuracion' && (
-                    <nav aria-label="Accesos directos de configuración" className="w-full rounded-xl border border-white/10 bg-black/20 p-3">
-                        <p className="mb-2 text-[9px] font-black uppercase tracking-wider text-[#A3E635]">Ir a configuración</p>
-                        <div className="grid gap-1">
+                    <details className="group w-full rounded-xl border border-white/10 bg-black/20">
+                        <summary className="flex cursor-pointer list-none items-center justify-between gap-3 rounded-xl px-3 py-3 text-[9px] font-black uppercase tracking-wider text-[#A3E635] transition hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#A3E635]/70">
+                            <span className="flex items-center gap-2"><i className="fas fa-sliders" aria-hidden="true" /> Ir a configuración</span>
+                            <i className="fas fa-chevron-down text-[8px] transition-transform group-open:rotate-180" aria-hidden="true" />
+                        </summary>
+                        <nav aria-label="Accesos directos de configuración" className="grid gap-1 border-t border-white/10 px-2 py-2">
                             {[
                                 ['personalizacion', 'Personalización'],
                                 ['notificaciones', 'Notificaciones'],
@@ -97,8 +100,8 @@ const ProfileSidebar = ({ formData, handleChange }) => {
                                     {label}
                                 </a>
                             ))}
-                        </div>
-                    </nav>
+                        </nav>
+                    </details>
                 )}
 
                 {/* 7. REDES SOCIALES Y ENLACES - Solo en /perfil */}

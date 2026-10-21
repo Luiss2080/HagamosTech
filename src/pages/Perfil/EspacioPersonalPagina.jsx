@@ -8,13 +8,14 @@ import FormularioEspacioPersonal from './espacio/FormularioEspacioPersonal';
 import NotasPanel from './espacio/NotasPanel';
 import ProyectosPanel from './espacio/ProyectosPanel';
 import { IconoEspacio } from './espacio/ComponentesEspacio';
+import AccionesEspacio from './espacio/AccionesEspacio';
 import { estilosBoton } from './espacio/estilosEspacio';
 import { fechaHoraLocal, fechaLocal, filtrarEventos } from './espacio/espacioPersonalUtils';
 
 const secciones = [
-  { id: 'proyectos', label: 'Proyectos', acceso: 'Mis proyectos', singular: 'proyecto', icon: ClipboardList },
-  { id: 'notas', label: 'Notas', acceso: 'Mis notas', singular: 'nota', icon: NotebookPen },
-  { id: 'calendario', label: 'Calendario', acceso: 'Calendario', singular: 'recordatorio', icon: CalendarDays },
+  { id: 'proyectos', label: 'Proyectos', singular: 'proyecto', icon: ClipboardList },
+  { id: 'notas', label: 'Notas', singular: 'nota', icon: NotebookPen },
+  { id: 'calendario', label: 'Calendario', singular: 'recordatorio', icon: CalendarDays },
 ];
 
 const mensajeError = (error, fallback) => error.response?.data?.mensaje || error.response?.data?.error || fallback;
@@ -108,11 +109,12 @@ const EspacioPersonalPagina = () => {
     }
   };
 
-  const irASeccion = (nextTab) => {
-    setTab(nextTab);
-    requestAnimationFrame(() => document.getElementById('espacio-tablero')?.scrollIntoView({ behavior: 'smooth', block: 'start' }));
-  };
   const cambiarCampo = (campo, valor) => setModal((actual) => ({ ...actual, [campo]: valor }));
+  const crearElemento = (tipo) => {
+    if (tipo === 'proyecto') abrirProyecto();
+    else if (tipo === 'nota') abrirNota();
+    else abrirEventoDia(new Date());
+  };
 
   if (!user) return (
     <div className="relative min-h-screen overflow-hidden bg-[#050505] text-white"><FondoTech />
@@ -137,26 +139,25 @@ const EspacioPersonalPagina = () => {
           <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-2 text-[10px] font-black uppercase tracking-[.2em] text-[#A3E635]"><UserRound size={14} /> Espacio personal HagamosTech</span>
           <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl">Hola, {user.nombre?.split(' ')[0] || 'bienvenido'}.<br /><span className="text-[#A3E635]">Organicemos tus ideas.</span></h1>
           <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-white/70">Proyectos, notas privadas y recordatorios organizados desde tu cuenta.</p>
-          <div className="mt-6 flex flex-wrap justify-center gap-3">{secciones.map(({ id, acceso, icon: SectionIcon }) => <button key={id} type="button" onClick={() => irASeccion(id)} className="inline-flex items-center gap-2 rounded-full border border-[#A3E635]/25 bg-[#A3E635]/10 px-4 py-2.5 text-[10px] font-black uppercase tracking-[.14em] text-[#A3E635] transition hover:border-[#A3E635]/60 hover:bg-[#A3E635]/20"><SectionIcon size={14} /> {acceso}</button>)}</div>
         </header>
 
-        {!loading && !error && <div aria-label="Resumen de tu espacio personal" className="my-6 grid gap-3 sm:grid-cols-3">{[
+        {!loading && !error && <div aria-label="Resumen de tu espacio personal" className="mx-auto my-6 grid max-w-5xl gap-3 sm:grid-cols-3">{[
           { id: 'proyectos', label: 'Proyectos', detalle: 'Ideas en seguimiento', cantidad: proyectos.length, icon: ClipboardList },
           { id: 'notas', label: 'Notas privadas', detalle: 'Apuntes guardados', cantidad: notas.length, icon: NotebookPen },
           { id: 'calendario', label: 'Próximos 7 días', detalle: 'Recordatorios próximos', cantidad: eventosSemana.length, icon: CalendarDays },
-        ].map(({ id, label, detalle, cantidad, icon: SummaryIcon }) => <button key={id} type="button" onClick={() => irASeccion(id)} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4 text-left transition hover:border-[#A3E635]/40 hover:bg-[#151912]"><IconoEspacio><SummaryIcon size={20} /></IconoEspacio><span className="min-w-0 flex-1"><span className="block text-xs font-black uppercase tracking-wide">{label}</span><span className="mt-1 block text-[11px] text-slate-400">{detalle}</span></span><span className="text-2xl font-black text-[#A3E635]">{cantidad}</span></button>)}</div>}
+        ].map(({ id, label, detalle, cantidad, icon: SummaryIcon }) => <div key={id} className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#0e110d]/85 p-4"><IconoEspacio><SummaryIcon size={20} /></IconoEspacio><span className="min-w-0 flex-1"><span className="block text-xs font-black uppercase tracking-wide">{label}</span><span className="mt-1 block text-[11px] text-slate-400">{detalle}</span></span><span className="text-2xl font-black text-[#A3E635]">{cantidad}</span></div>)}</div>}
 
         {error && <div role="alert" className="mb-5 flex items-start justify-between gap-4 rounded-2xl border border-rose-400/30 bg-rose-950/40 px-4 py-3 text-sm text-rose-100"><span>{error}</span><button type="button" aria-label="Cerrar aviso" onClick={() => setError('')}><X size={16} /></button></div>}
         {notice && <div role="status" className="mb-5 flex items-center gap-2 rounded-2xl border border-[#A3E635]/30 bg-[#A3E635]/10 px-4 py-3 text-sm font-semibold text-lime-100"><Check size={16} className="text-[#A3E635]" />{notice}</div>}
 
         <div id="espacio-tablero" aria-labelledby="espacio-tablero-titulo" className="relative mt-8 scroll-mt-24 overflow-hidden rounded-[2rem] border border-[#A3E635]/25 bg-[#0e110d]/95 shadow-[0_30px_90px_rgba(0,0,0,.45)] sm:mt-10 sm:rounded-[2.5rem]">
           <div className="border-b border-white/10 px-5 py-5 text-center sm:px-7 sm:py-7"><span className="text-[10px] font-black uppercase tracking-[.22em] text-[#A3E635]">Tu organización personal</span><h2 id="espacio-tablero-titulo" className="mt-2 text-2xl font-black sm:text-3xl">Todo lo que estás organizando</h2><p className="mx-auto mt-2 max-w-2xl text-sm leading-6 text-white/60">Cada elemento es privado y se guarda en tu cuenta. Las etapas son personales; los recordatorios no crean citas con el equipo.</p></div>
-          <div className="border-b border-white/10 px-5 py-5 sm:px-7"><h3 className="text-lg font-black sm:text-xl">Tu espacio</h3><p className="mt-1 text-xs text-slate-400">Elegí una sección. Cada una tiene sus propias acciones de creación y personalización.</p></div>
+          <div className="flex flex-col items-center gap-4 border-b border-white/10 px-5 py-6 text-center sm:px-7"><div><h3 className="text-lg font-black sm:text-xl">Tu espacio</h3><p className="mt-1 text-xs text-slate-400">Proyectos, notas y recordatorios en un solo lugar.</p></div><AccionesEspacio onCrear={crearElemento} /></div>
 
-          <div role="tablist" aria-label="Secciones de tu espacio" className="flex gap-2 overflow-x-auto border-b border-white/10 px-4 py-3 sm:px-7">{secciones.map(({ id, label, icon: SectionIcon }) => <button key={id} id={`tab-${id}`} type="button" role="tab" aria-controls={`panel-${id}`} aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-xs font-black transition ${tab === id ? 'bg-[#A3E635] text-black' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}><SectionIcon size={15} />{label}{id === 'proyectos' && proyectos.length > 0 ? ` · ${proyectos.length}` : ''}{id === 'notas' && notas.length > 0 ? ` · ${notas.length}` : ''}</button>)}</div>
+          <div role="tablist" aria-label="Secciones de tu espacio" className="flex justify-center gap-2 overflow-x-auto border-b border-white/10 px-4 py-3 sm:px-7">{secciones.map(({ id, label, icon: SectionIcon }) => <button key={id} id={`tab-${id}`} type="button" role="tab" aria-controls={`panel-${id}`} aria-selected={tab === id} onClick={() => setTab(id)} className={`inline-flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 text-xs font-black transition ${tab === id ? 'bg-[#A3E635] text-black' : 'text-slate-400 hover:bg-white/5 hover:text-white'}`}><SectionIcon size={15} />{label}{id === 'proyectos' && proyectos.length > 0 ? ` · ${proyectos.length}` : ''}{id === 'notas' && notas.length > 0 ? ` · ${notas.length}` : ''}</button>)}</div>
           <div className="p-4 sm:p-7">{loading ? <div className="grid min-h-56 place-items-center text-sm font-bold text-slate-400"><span className="flex items-center gap-3"><span className="h-5 w-5 animate-spin rounded-full border-2 border-[#A3E635]/30 border-t-[#A3E635]" />Cargando tus datos guardados…</span></div> : <>
-            <ProyectosPanel proyectos={proyectos} onCrear={() => abrirProyecto()} onEditar={abrirProyecto} onEliminar={eliminar} onCambiarEtapa={cambiarEtapa} hidden={tab !== 'proyectos'} />
-            <NotasPanel notas={notas} proyectos={proyectos} onCrear={() => abrirNota()} onEditar={abrirNota} onEliminar={eliminar} hidden={tab !== 'notas'} />
+            <ProyectosPanel proyectos={proyectos} onEditar={abrirProyecto} onEliminar={eliminar} onCambiarEtapa={cambiarEtapa} hidden={tab !== 'proyectos'} />
+            <NotasPanel notas={notas} proyectos={proyectos} onEditar={abrirNota} onEliminar={eliminar} hidden={tab !== 'notas'} />
             <CalendarioPanel eventos={eventos} proyectos={proyectos} month={month} setMonth={setMonth} range={agendaRange} setRange={setAgendaRange} onCrear={abrirEventoDia} onEditar={abrirEvento} onEliminar={eliminar} hidden={tab !== 'calendario'} />
           </>}</div>
         </div>

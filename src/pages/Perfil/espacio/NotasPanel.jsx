@@ -1,9 +1,9 @@
 import { useMemo, useState } from 'react';
-import { LayoutGrid, List, NotebookPen, Plus, Search, Trash2 } from 'lucide-react';
+import { LayoutGrid, List, NotebookPen, Search, Trash2 } from 'lucide-react';
 import { filtrarNotas, ordenarNotas } from './espacioPersonalUtils';
 import { CampoFiltro, EstadoVacio, IconoEspacio, SelectorFiltro } from './ComponentesEspacio';
 
-const NotasPanel = ({ notas, proyectos, onCrear, onEditar, onEliminar, hidden = false }) => {
+const NotasPanel = ({ notas, proyectos, onEditar, onEliminar, hidden = false }) => {
   const [busqueda, setBusqueda] = useState('');
   const [proyectoId, setProyectoId] = useState('todas');
   const [orden, setOrden] = useState('actualizadas');
@@ -14,9 +14,8 @@ const NotasPanel = ({ notas, proyectos, onCrear, onEditar, onEliminar, hidden = 
 
   return (
     <section id="panel-notas" role="tabpanel" tabIndex={0} aria-labelledby="tab-notas" hidden={hidden}>
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-4">
-        <div className="flex items-center gap-3"><IconoEspacio><NotebookPen size={21} /></IconoEspacio><div><h3 id="notas-titulo" className="font-black">Notas privadas <span className="text-sm font-bold text-slate-500">{notas.length}</span></h3><p className="text-xs text-slate-400">Apuntes vinculados a tus proyectos o notas generales.</p></div></div>
-        <button type="button" onClick={onCrear} className="inline-flex items-center gap-2 rounded-full bg-[#A3E635] px-4 py-2.5 text-xs font-black text-black hover:bg-lime-300"><Plus size={15} /> Nueva nota</button>
+      <div className="mb-5 flex flex-col items-center gap-3 text-center">
+        <IconoEspacio><NotebookPen size={21} /></IconoEspacio><div><h3 id="notas-titulo" className="font-black">Notas privadas <span className="text-sm font-bold text-slate-500">{notas.length}</span></h3><p className="text-xs text-slate-400">Apuntes vinculados a tus proyectos o notas generales.</p></div>
       </div>
       <div className="mb-3 flex flex-col gap-3 rounded-2xl border border-white/10 bg-black/15 p-3 sm:flex-row sm:items-end">
         <div className="relative flex min-w-0 flex-1 items-end gap-2"><Search size={17} className="mb-3 ml-1 shrink-0 text-slate-500" /><CampoFiltro label="Buscar en notas" type="search" value={busqueda} onChange={(event) => setBusqueda(event.target.value)} placeholder="Título o contenido" /></div>
