@@ -604,9 +604,14 @@ const AuthController = {
                 prisma.notaPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { creadoEn: 'asc' } }),
                 prisma.eventoPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { inicio: 'asc' } }),
             ]);
+            const [tareasPersonales, recursosPersonales, sesionesEnfoque] = await Promise.all([
+                prisma.tareaPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { creadoEn: 'asc' } }),
+                prisma.recursoPersonal.findMany({ where: { usuarioId: usuario.id }, orderBy: { creadoEn: 'asc' } }),
+                prisma.sesionEnfoque.findMany({ where: { usuarioId: usuario.id }, orderBy: { completadoEn: 'asc' } }),
+            ]);
             res.json({
                 success: true,
-                data: { ...datosSeguros, proyectosPersonales, notasPersonales, eventosPersonales, exportadoEn: new Date().toISOString() }
+                data: { ...datosSeguros, proyectosPersonales, notasPersonales, eventosPersonales, tareasPersonales, recursosPersonales, sesionesEnfoque, exportadoEn: new Date().toISOString() }
             });
         } catch (error) {
             console.error(error);

@@ -29,6 +29,9 @@ describe('Perfil — gestión de cuenta', () => {
     espiarModelo('proyectoPersonal', ['findMany']);
     espiarModelo('notaPersonal', ['findMany']);
     espiarModelo('eventoPersonal', ['findMany']);
+    espiarModelo('tareaPersonal', ['findMany']);
+    espiarModelo('recursoPersonal', ['findMany']);
+    espiarModelo('sesionEnfoque', ['findMany']);
   });
 
   afterEach(() => {
@@ -65,6 +68,9 @@ describe('Perfil — gestión de cuenta', () => {
     prisma.proyectoPersonal.findMany.mockResolvedValue([]);
     prisma.notaPersonal.findMany.mockResolvedValue([]);
     prisma.eventoPersonal.findMany.mockResolvedValue([]);
+    prisma.tareaPersonal.findMany.mockResolvedValue([]);
+    prisma.recursoPersonal.findMany.mockResolvedValue([]);
+    prisma.sesionEnfoque.findMany.mockResolvedValue([]);
 
     const res = await request(app)
       .get('/api/perfil/exportar')
@@ -73,6 +79,7 @@ describe('Perfil — gestión de cuenta', () => {
     expect(res.status).toBe(200);
     expect(res.body.data.contrasena).toBeUndefined();
     expect(res.body.data.twoFactorSecret).toBeUndefined();
+    expect(res.body.data.sesionesEnfoque).toEqual([]);
   });
 
   it('informa que no hay sesiones múltiples en lugar de inventarlas', async () => {

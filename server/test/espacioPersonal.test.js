@@ -16,6 +16,7 @@ describe('Espacio personal', () => {
     espiarModelo('eventoPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
     espiarModelo('tareaPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
     espiarModelo('recursoPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
+    espiarModelo('sesionEnfoque', ['findMany', 'findFirst', 'create', 'delete']);
     prisma.usuario.findUnique.mockResolvedValue({ id: 7, activo: true });
   });
 
@@ -98,5 +99,27 @@ describe('Espacio personal', () => {
     const invalid = await request(app).post('/api/perfil/espacio/recursos').set('Authorization', `Bearer ${TOKEN}`).send({ titulo: 'Docs', url: 'javascript:alert(1)' });
     expect(invalid.status).toBe(400);
     expect(prisma.recursoPersonal.create).toHaveBeenCalledTimes(1);
+  });
+
+  it('guarda sesiones de enfoque bajo el usuario autenticado y valida duración y propiedad del proyecto', async () => {
+    prisma.sesionEnfoque.create.mockResolvedValue({ id: 4, usuarioId: 7, titulo: 'Estudiar', duracionMinutos: 25 });
+    const res = await request(app).post('/api/perfil/espacio/enfoque').set('Authorization', `Bearer ${TOKEN}`).send({
+      usuarioId: 99, titulo: 'Estudiar', duracionMinutos: 25, iniciadoEn: '2026-10-21T10:00:00.000Z', completadoEn: '2026-10-21T10:25:00.000Z',
+    });
+    expect(res.status).toBe(201);
+    expect(prisma.sesionEnfoque.create.mock.calls[0][0].data.usuarioId).toBe(7);
+
+    const invalid = await request(app).post('/api/perfil/espacio/enfoque').set('Authorization', `Bearer ${TOKEN}`).send({
+      titulo: 'Estudiar', duracionMinutos: 181, iniciadoEn: '2026-10-21T10:00:00.000Z', completadoEn: '2026-10-21T10:25:00.000Z',
+    });
+    expect(invalid.status).toBe(400);
+    expect(prisma.sesionEnfoque.create).toHaveBeenCalledTimes(1);
+  });
+
+  it('no permite eliminar una sesión de enfoque ajena', async () => {
+    prisma.sesionEnfoque.findFirst.mockResolvedValue(null);
+    const res = await request(app).delete('/api/perfil/espacio/enfoque/30').set('Authorization', `Bearer ${TOKEN}`);
+    expect(res.status).toBe(404);
+    expect(prisma.sesionEnfoque.delete).not.toHaveBeenCalled();
   });
 });

@@ -38,6 +38,7 @@ model Usuario {
   eventosPersonales     EventoPersonal[]
   tareasPersonales      TareaPersonal[]
   recursosPersonales    RecursoPersonal[]
+  sesionesEnfoque       SesionEnfoque[]
   preferenciasPerfil    PreferenciaPerfil?
 
   @@index([rolId], map: "usuarios_rol_id_idx")
@@ -59,18 +60,19 @@ model Suscripcion {
 }
 
 model ProyectoPersonal {
-  id            Int              @id @default(autoincrement())
-  usuarioId     Int              @map("usuario_id")
-  titulo        String           @db.VarChar(120)
-  categoria     String           @default("Personal") @db.VarChar(60)
-  descripcion   String?          @db.Text
-  etapa         String           @default("idea") @db.VarChar(30)
-  creadoEn      DateTime         @default(now()) @map("creado_en") @db.Timestamp(0)
-  actualizadoEn DateTime         @updatedAt @map("actualizado_en") @db.Timestamp(0)
-  usuario       Usuario          @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
-  notas         NotaPersonal[]
-  eventos       EventoPersonal[]
-  tareas        TareaPersonal[]
+  id              Int              @id @default(autoincrement())
+  usuarioId       Int              @map("usuario_id")
+  titulo          String           @db.VarChar(120)
+  categoria       String           @default("Personal") @db.VarChar(60)
+  descripcion     String?          @db.Text
+  etapa           String           @default("idea") @db.VarChar(30)
+  creadoEn        DateTime         @default(now()) @map("creado_en") @db.Timestamp(0)
+  actualizadoEn   DateTime         @updatedAt @map("actualizado_en") @db.Timestamp(0)
+  usuario         Usuario          @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  notas           NotaPersonal[]
+  eventos         EventoPersonal[]
+  tareas          TareaPersonal[]
+  sesionesEnfoque SesionEnfoque[]
 
   @@index([usuarioId, actualizadoEn])
   @@map("proyectos_personales")
@@ -142,6 +144,23 @@ model RecursoPersonal {
 
   @@index([usuarioId, actualizadoEn])
   @@map("recursos_personales")
+}
+
+model SesionEnfoque {
+  id              Int               @id @default(autoincrement())
+  usuarioId       Int               @map("usuario_id")
+  proyectoId      Int?              @map("proyecto_id")
+  titulo          String            @db.VarChar(120)
+  duracionMinutos Int               @map("duracion_minutos")
+  iniciadoEn      DateTime          @map("iniciado_en") @db.Timestamp(0)
+  completadoEn    DateTime          @map("completado_en") @db.Timestamp(0)
+  creadoEn        DateTime          @default(now()) @map("creado_en") @db.Timestamp(0)
+  usuario         Usuario           @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  proyecto        ProyectoPersonal? @relation(fields: [proyectoId], references: [id], onDelete: SetNull)
+
+  @@index([usuarioId, completadoEn])
+  @@index([proyectoId])
+  @@map("sesiones_enfoque")
 }
 
 model PreferenciaPerfil {

@@ -22,6 +22,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - H10: Como usuario quiero consultar mis recordatorios por período sin perderlos al cambiar de sección.
 - H11: Como usuario quiero organizar tareas personales con vencimiento y estado.
 - H12: Como usuario quiero guardar enlaces útiles en una biblioteca privada.
+- H13: Como usuario quiero organizar bloques de concentración y revisar mi historial personal de enfoque.
 
 ## Requisitos funcionales (criterios de aceptación en EARS)
 - RF-1: CUANDO el usuario envíe `PUT /api/perfil/password` con la contraseña actual correcta, una nueva de al menos 6 caracteres y su confirmación coincidente, EL SISTEMA actualizará la contraseña y responderá `200`.
@@ -49,6 +50,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-23: CUANDO el usuario explore proyectos o notas, EL SISTEMA permitirá cambiar entre vista de tarjetas y lista y ordenar los registros disponibles sin duplicar acciones de creación; estas preferencias serán temporales y no cambiarán los registros de PostgreSQL.
 - RF-24: CUANDO el usuario gestione tareas personales, EL SISTEMA permitirá listar, crear, actualizar y eliminar tareas propias en PostgreSQL, con título, detalle, vencimiento, prioridad, estado y asociación opcional a un proyecto propio.
 - RF-25: CUANDO el usuario gestione su biblioteca personal, EL SISTEMA permitirá listar, crear, actualizar y eliminar enlaces propios en PostgreSQL, con título, URL, descripción y etiquetas; las URLs inválidas se rechazarán.
+- RF-26: CUANDO el usuario complete un bloque de enfoque, EL SISTEMA ofrecerá temporizador configurable para concentración y descansos, asociación opcional a un proyecto, historial con filtros y resumen de tiempo, y guardará cada bloque completado en PostgreSQL bajo el propietario autenticado.
 
 ## Requisitos no funcionales
 - Mensajes en español; JSON consistente.
@@ -62,6 +64,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Evento sin fecha válida o título vacío → 400, sin persistir (RF-12).
 - Tarea con estado/prioridad/vencimiento inválidos o proyecto ajeno → 400/404 sin persistir (RF-24).
 - Recurso con URL inválida o datos fuera de límite → 400 sin persistir (RF-25).
+- Sesión de enfoque con duración de 0, mayor a 180 minutos, fechas inválidas o proyecto ajeno → 400/404 sin persistir (RF-26).
 - Registro duplicado → 400; registro nuevo crea un pendiente y la verificación correcta persiste la cuenta en PostgreSQL (RF-16).
 - Inicio de sesión contra PostgreSQL rechaza contraseña incorrecta y emite token con credenciales válidas.
 - jsPDF/html2canvas no disponibles → mensaje claro en cliente (RF-7).
@@ -82,6 +85,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-22: `src/servicios/espacioPersonalApi.test.js` verifica el uso de endpoints para lectura, alta, actualización y eliminación; `server/test/espacioPersonal.test.js` verifica autenticación, propiedad y escritura mediante Prisma.
 - RF-23: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica los criterios de orden; `ComponentesEspacio.test.jsx` valida el menú personalizado y `PanelesPersonalizacion.test.jsx` comprueba vista de lista y ausencia de acciones duplicadas.
 - RF-24..RF-25: tests de API y rutas verifican validación, autenticación, propiedad y escritura mediante Prisma para tareas y recursos.
+- RF-26: `src/pages/Perfil/espacio/EnfoquePanel.test.jsx` prueba temporizador, pausa/reinicio, descansos e historial; `src/servicios/espacioPersonalApi.test.js` y `server/test/espacioPersonal.test.js` verifican lectura y persistencia autenticada.
 - PostgreSQL: comprobación transaccional de creación y relación de proyecto, nota y evento; la transacción de verificación se revierte.
 
 ## Dudas abiertas

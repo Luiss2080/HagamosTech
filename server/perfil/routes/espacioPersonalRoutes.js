@@ -360,4 +360,53 @@ router.delete('/recursos/:id', async (req, res) => {
     }
 });
 
+router.get('/enfoque', async (req, res) => {
+    try {
+        const data = await prisma.sesionEnfoque.findMany({ where: { usuarioId: req.usuario.id }, orderBy: { completadoEn: 'desc' } });
+        return res.json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] listar sesiones de enfoque:', error.message);
+        return res.status(500).json({ error: 'No se pudo cargar el historial de enfoque' });
+    }
+});
+
+router.post('/enfoque', async (req, res) => {
+    const { titulo, duracionMinutos, iniciadoEn, completadoEn } = req.body || {};
+    const proyectoId = numeroProyecto(req.body?.proyectoId);
+    const inicioValido = fecha(iniciadoEn);
+    const finValido = fecha(completadoEn);
+    if (!texto(titulo, 120) || !Number.isInteger(duracionMinutos) || duracionMinutos < 1 || duracionMinutos > 180 ||
+        !inicioValido || !finValido || new Date(completadoEn) < new Date(iniciadoEn) || (proyectoId !== null && !idValido(proyectoId))) {
+        return res.status(400).json({ error: 'Revisa el título, duración y fechas de la sesión' });
+    }
+    try {
+        if (!(await proyectoDeUsuario(proyectoId, req.usuario.id))) return res.status(404).json({ error: 'Proyecto no encontrado' });
+        const data = await prisma.sesionEnfoque.create({ data: {
+            usuarioId: req.usuario.id,
+            proyectoId,
+            titulo: titulo.trim(),
+            duracionMinutos,
+            iniciadoEn: new Date(iniciadoEn),
+            completadoEn: new Date(completadoEn),
+        } });
+        return res.status(201).json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] guardar sesión de enfoque:', error.message);
+        return res.status(500).json({ error: 'No se pudo guardar la sesión de enfoque' });
+    }
+});
+
+router.delete('/enfoque/:id', async (req, res) => {
+    if (!idValido(req.params.id)) return res.status(400).json({ error: 'Identificador inválido' });
+    try {
+        const id = Number(req.params.id);
+        if (!(await prisma.sesionEnfoque.findFirst({ where: { id, usuarioId: req.usuario.id }, select: { id: true } }))) return res.status(404).json({ error: 'Sesión no encontrada' });
+        await prisma.sesionEnfoque.delete({ where: { id } });
+        return res.status(204).end();
+    } catch (error) {
+        console.error('[ESPACIO] eliminar sesión de enfoque:', error.message);
+        return res.status(500).json({ error: 'No se pudo eliminar la sesión' });
+    }
+});
+
 module.exports = router;
