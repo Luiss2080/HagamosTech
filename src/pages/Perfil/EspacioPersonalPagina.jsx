@@ -190,7 +190,7 @@ const EspacioPersonalPagina = () => {
             <ProyectosPanel proyectos={proyectos} onEditar={abrirProyecto} onEliminar={eliminar} onCambiarEtapa={cambiarEtapa} hidden={tab !== 'proyectos'} />
             <NotasPanel notas={notas} proyectos={proyectos} onEditar={abrirNota} onEliminar={eliminar} hidden={tab !== 'notas'} />
             <CalendarioPanel eventos={eventos} proyectos={proyectos} month={month} setMonth={setMonth} range={agendaRange} setRange={setAgendaRange} onCrear={abrirEventoDia} onEditar={abrirEvento} onEliminar={eliminar} hidden={tab !== 'calendario'} />
-            <TareasPanel tareas={tareas} proyectos={proyectos} onEditar={abrirTarea} onEliminar={eliminar} onEstado={cambiarEstadoTarea} hidden={tab !== 'tareas'} />
+            <TareasPanel tareas={tareas} proyectos={proyectos} onCrear={() => crearElemento('tarea')} onEditar={abrirTarea} onEliminar={eliminar} onEstado={cambiarEstadoTarea} hidden={tab !== 'tareas'} />
             <BibliotecaPanel recursos={recursos} onEditar={abrirRecurso} onEliminar={eliminar} onCrear={() => abrirRecurso()} hidden={tab !== 'biblioteca'} />
             <EnfoquePanel sesiones={sesionesEnfoque} proyectos={proyectos} onGuardarSesion={guardarSesionEnfoque} onEliminar={(session) => eliminar('enfoque', session)} hidden={tab !== 'enfoque'} />
           </>}</div>

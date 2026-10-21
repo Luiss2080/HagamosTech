@@ -6,7 +6,10 @@ import BibliotecaPanel from './BibliotecaPanel';
 describe('herramientas nuevas del espacio personal', () => {
   it('muestra tareas y permite completar una desde su fila', () => {
     const onEstado = vi.fn();
-    render(<TareasPanel tareas={[{ id: 1, titulo: 'Preparar entrega', prioridad: 'alta', estado: 'pendiente' }]} proyectos={[]} onEditar={() => {}} onEliminar={() => {}} onEstado={onEstado} />);
+    const onCrear = vi.fn();
+    render(<TareasPanel tareas={[{ id: 1, titulo: 'Preparar entrega', prioridad: 'alta', estado: 'pendiente' }]} proyectos={[]} onCrear={onCrear} onEditar={() => {}} onEliminar={() => {}} onEstado={onEstado} />);
+    fireEvent.click(screen.getByRole('button', { name: 'Nueva tarea' }));
+    expect(onCrear).toHaveBeenCalledOnce();
     fireEvent.click(screen.getByRole('button', { name: 'Completar Preparar entrega' }));
     expect(onEstado).toHaveBeenCalledWith(expect.objectContaining({ id: 1 }), 'completada');
   });
