@@ -20,6 +20,8 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - H8: Como usuario quiero que el registro, la verificación y los datos de mi cuenta funcionen sobre PostgreSQL.
 - H9: Como usuario quiero encontrar rápidamente mis proyectos y notas usando búsquedas y filtros.
 - H10: Como usuario quiero consultar mis recordatorios por período sin perderlos al cambiar de sección.
+- H11: Como usuario quiero organizar tareas personales con vencimiento y estado.
+- H12: Como usuario quiero guardar enlaces útiles en una biblioteca privada.
 
 ## Requisitos funcionales (criterios de aceptación en EARS)
 - RF-1: CUANDO el usuario envíe `PUT /api/perfil/password` con la contraseña actual correcta, una nueva de al menos 6 caracteres y su confirmación coincidente, EL SISTEMA actualizará la contraseña y responderá `200`.
@@ -45,6 +47,8 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-21: CUANDO el usuario consulte sus recordatorios, EL SISTEMA permitirá ver la agenda de hoy, los próximos siete días o todos los eventos futuros, conservando la navegación mensual del calendario.
 - RF-22: EL ESPACIO PERSONAL organizará proyectos, notas, calendario, formularios y acceso a datos en módulos separados; todas las operaciones de creación, edición y eliminación seguirán usando los endpoints autenticados existentes y persistirán en PostgreSQL.
 - RF-23: CUANDO el usuario explore proyectos o notas, EL SISTEMA permitirá cambiar entre vista de tarjetas y lista y ordenar los registros disponibles sin duplicar acciones de creación; estas preferencias serán temporales y no cambiarán los registros de PostgreSQL.
+- RF-24: CUANDO el usuario gestione tareas personales, EL SISTEMA permitirá listar, crear, actualizar y eliminar tareas propias en PostgreSQL, con título, detalle, vencimiento, prioridad, estado y asociación opcional a un proyecto propio.
+- RF-25: CUANDO el usuario gestione su biblioteca personal, EL SISTEMA permitirá listar, crear, actualizar y eliminar enlaces propios en PostgreSQL, con título, URL, descripción y etiquetas; las URLs inválidas se rechazarán.
 
 ## Requisitos no funcionales
 - Mensajes en español; JSON consistente.
@@ -56,6 +60,8 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - Token con id inexistente → 401 (RF-8).
 - Un usuario intenta leer, modificar o eliminar un registro ajeno → 404, sin modificar datos (RF-9, RF-13).
 - Evento sin fecha válida o título vacío → 400, sin persistir (RF-12).
+- Tarea con estado/prioridad/vencimiento inválidos o proyecto ajeno → 400/404 sin persistir (RF-24).
+- Recurso con URL inválida o datos fuera de límite → 400 sin persistir (RF-25).
 - Registro duplicado → 400; registro nuevo crea un pendiente y la verificación correcta persiste la cuenta en PostgreSQL (RF-16).
 - Inicio de sesión contra PostgreSQL rechaza contraseña incorrecta y emite token con credenciales válidas.
 - jsPDF/html2canvas no disponibles → mensaje claro en cliente (RF-7).
@@ -75,6 +81,7 @@ Usuarios autenticados desde `/configuracion` y `/perfil`.
 - RF-19..RF-21: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica búsqueda, filtros por etapa/proyecto, agenda temporal y calendario mensual.
 - RF-22: `src/servicios/espacioPersonalApi.test.js` verifica el uso de endpoints para lectura, alta, actualización y eliminación; `server/test/espacioPersonal.test.js` verifica autenticación, propiedad y escritura mediante Prisma.
 - RF-23: `src/pages/Perfil/espacio/espacioPersonalUtils.test.js` verifica los criterios de orden; `ComponentesEspacio.test.jsx` valida el menú personalizado y `PanelesPersonalizacion.test.jsx` comprueba vista de lista y ausencia de acciones duplicadas.
+- RF-24..RF-25: tests de API y rutas verifican validación, autenticación, propiedad y escritura mediante Prisma para tareas y recursos.
 - PostgreSQL: comprobación transaccional de creación y relación de proyecto, nota y evento; la transacción de verificación se revierte.
 
 ## Dudas abiertas

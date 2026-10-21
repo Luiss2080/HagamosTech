@@ -10,12 +10,14 @@ import { actualizarEtapaProyecto, eliminarRegistroPersonal, guardarRegistroPerso
 describe('API del espacio personal', () => {
   beforeEach(() => vi.clearAllMocks());
 
-  it('lee las tres colecciones persistidas desde los endpoints autenticados', async () => {
+  it('lee las cinco colecciones persistidas desde los endpoints autenticados', async () => {
     apiClient.get.mockResolvedValue({ data: { data: [] } });
-    await expect(listarEspacioPersonal()).resolves.toEqual({ proyectos: [], notas: [], eventos: [] });
+    await expect(listarEspacioPersonal()).resolves.toEqual({ proyectos: [], notas: [], eventos: [], tareas: [], recursos: [] });
     expect(apiClient.get).toHaveBeenNthCalledWith(1, '/perfil/espacio/proyectos');
     expect(apiClient.get).toHaveBeenNthCalledWith(2, '/perfil/espacio/notas');
     expect(apiClient.get).toHaveBeenNthCalledWith(3, '/perfil/espacio/eventos');
+    expect(apiClient.get).toHaveBeenNthCalledWith(4, '/perfil/espacio/tareas');
+    expect(apiClient.get).toHaveBeenNthCalledWith(5, '/perfil/espacio/recursos');
   });
 
   it('envía recordatorios a PostgreSQL por el endpoint de eventos y limpia fechas opcionales vacías', async () => {
@@ -33,5 +35,12 @@ describe('API del espacio personal', () => {
     expect(apiClient.put).toHaveBeenNthCalledWith(1, '/perfil/espacio/notas/12', { titulo: 'Idea', contenido: 'Apunte' });
     expect(apiClient.put).toHaveBeenNthCalledWith(2, '/perfil/espacio/proyectos/4', { etapa: 'progreso' });
     expect(apiClient.delete).toHaveBeenCalledWith('/perfil/espacio/eventos/8');
+  });
+
+  it('crea tareas y enlaces en colecciones separadas', async () => {
+    await guardarRegistroPersonal({ tipo: 'tarea', values: { titulo: 'Revisar propuesta', vencimiento: '2026-11-03' } });
+    await guardarRegistroPersonal({ tipo: 'recurso', values: { titulo: 'Guía', url: 'https://example.org' } });
+    expect(apiClient.post).toHaveBeenNthCalledWith(1, '/perfil/espacio/tareas', { titulo: 'Revisar propuesta', vencimiento: '2026-11-03' });
+    expect(apiClient.post).toHaveBeenNthCalledWith(2, '/perfil/espacio/recursos', { titulo: 'Guía', url: 'https://example.org' });
   });
 });

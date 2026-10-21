@@ -228,4 +228,136 @@ router.delete('/eventos/:id', async (req, res) => {
     }
 });
 
+const ESTADOS_TAREA = new Set(['pendiente', 'en_progreso', 'completada']);
+const PRIORIDADES_TAREA = new Set(['baja', 'media', 'alta']);
+const urlValida = (value) => {
+    try { const parsed = new URL(value); return ['http:', 'https:'].includes(parsed.protocol); } catch { return false; }
+};
+
+router.get('/tareas', async (req, res) => {
+    try {
+        const data = await prisma.tareaPersonal.findMany({ where: { usuarioId: req.usuario.id }, orderBy: [{ vencimiento: 'asc' }, { actualizadoEn: 'desc' }] });
+        return res.json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] listar tareas:', error.message);
+        return res.status(500).json({ error: 'No se pudieron cargar las tareas' });
+    }
+});
+
+router.post('/tareas', async (req, res) => {
+    const { titulo, descripcion, vencimiento, prioridad = 'media', estado = 'pendiente' } = req.body || {};
+    const proyectoId = numeroProyecto(req.body?.proyectoId);
+    if (!texto(titulo, 120) || (descripcion != null && (typeof descripcion !== 'string' || descripcion.length > 4000)) ||
+        (vencimiento && !fecha(vencimiento)) || !PRIORIDADES_TAREA.has(prioridad) || !ESTADOS_TAREA.has(estado) ||
+        (proyectoId !== null && !idValido(proyectoId))) return res.status(400).json({ error: 'Revisa el título, fecha, prioridad y estado de la tarea' });
+    try {
+        if (!(await proyectoDeUsuario(proyectoId, req.usuario.id))) return res.status(404).json({ error: 'Proyecto no encontrado' });
+        const data = await prisma.tareaPersonal.create({ data: { usuarioId: req.usuario.id, proyectoId, titulo: titulo.trim(), descripcion: descripcion?.trim() || null, vencimiento: vencimiento ? new Date(vencimiento) : null, prioridad, estado } });
+        return res.status(201).json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] crear tarea:', error.message);
+        return res.status(500).json({ error: 'No se pudo guardar la tarea' });
+    }
+});
+
+router.put('/tareas/:id', async (req, res) => {
+    if (!idValido(req.params.id)) return res.status(400).json({ error: 'Identificador inválido' });
+    const { titulo, descripcion, vencimiento, prioridad, estado } = req.body || {};
+    const tieneProyecto = Object.hasOwn(req.body || {}, 'proyectoId');
+    const proyectoId = tieneProyecto ? numeroProyecto(req.body.proyectoId) : undefined;
+    if ((titulo !== undefined && !texto(titulo, 120)) || (descripcion !== undefined && descripcion !== null && (typeof descripcion !== 'string' || descripcion.length > 4000)) ||
+        (vencimiento !== undefined && vencimiento !== null && vencimiento !== '' && !fecha(vencimiento)) ||
+        (prioridad !== undefined && !PRIORIDADES_TAREA.has(prioridad)) || (estado !== undefined && !ESTADOS_TAREA.has(estado)) ||
+        (tieneProyecto && proyectoId !== null && !idValido(proyectoId))) return res.status(400).json({ error: 'Datos de tarea inválidos' });
+    try {
+        const id = Number(req.params.id);
+        const existente = await prisma.tareaPersonal.findFirst({ where: { id, usuarioId: req.usuario.id }, select: { id: true } });
+        if (!existente) return res.status(404).json({ error: 'Tarea no encontrada' });
+        if (tieneProyecto && !(await proyectoDeUsuario(proyectoId, req.usuario.id))) return res.status(404).json({ error: 'Proyecto no encontrado' });
+        const data = {};
+        if (titulo !== undefined) data.titulo = titulo.trim();
+        if (descripcion !== undefined) data.descripcion = descripcion?.trim() || null;
+        if (vencimiento !== undefined) data.vencimiento = vencimiento ? new Date(vencimiento) : null;
+        if (prioridad !== undefined) data.prioridad = prioridad;
+        if (estado !== undefined) data.estado = estado;
+        if (tieneProyecto) data.proyectoId = proyectoId;
+        return res.json({ data: await prisma.tareaPersonal.update({ where: { id }, data }) });
+    } catch (error) {
+        console.error('[ESPACIO] actualizar tarea:', error.message);
+        return res.status(500).json({ error: 'No se pudo actualizar la tarea' });
+    }
+});
+
+router.delete('/tareas/:id', async (req, res) => {
+    if (!idValido(req.params.id)) return res.status(400).json({ error: 'Identificador inválido' });
+    try {
+        const id = Number(req.params.id);
+        if (!(await prisma.tareaPersonal.findFirst({ where: { id, usuarioId: req.usuario.id }, select: { id: true } }))) return res.status(404).json({ error: 'Tarea no encontrada' });
+        await prisma.tareaPersonal.delete({ where: { id } });
+        return res.status(204).end();
+    } catch (error) {
+        console.error('[ESPACIO] eliminar tarea:', error.message);
+        return res.status(500).json({ error: 'No se pudo eliminar la tarea' });
+    }
+});
+
+router.get('/recursos', async (req, res) => {
+    try {
+        const data = await prisma.recursoPersonal.findMany({ where: { usuarioId: req.usuario.id }, orderBy: { actualizadoEn: 'desc' } });
+        return res.json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] listar recursos:', error.message);
+        return res.status(500).json({ error: 'No se pudo cargar la biblioteca' });
+    }
+});
+
+router.post('/recursos', async (req, res) => {
+    const { titulo, url, descripcion, etiquetas = '' } = req.body || {};
+    if (!texto(titulo, 120) || typeof url !== 'string' || url.length > 2048 || !urlValida(url) ||
+        (descripcion != null && (typeof descripcion !== 'string' || descripcion.length > 500)) || typeof etiquetas !== 'string' || etiquetas.length > 300) {
+        return res.status(400).json({ error: 'Revisa el título, URL, descripción y etiquetas del recurso' });
+    }
+    try {
+        const data = await prisma.recursoPersonal.create({ data: { usuarioId: req.usuario.id, titulo: titulo.trim(), url, descripcion: descripcion?.trim() || null, etiquetas: etiquetas.trim() } });
+        return res.status(201).json({ data });
+    } catch (error) {
+        console.error('[ESPACIO] crear recurso:', error.message);
+        return res.status(500).json({ error: 'No se pudo guardar el recurso' });
+    }
+});
+
+router.put('/recursos/:id', async (req, res) => {
+    if (!idValido(req.params.id)) return res.status(400).json({ error: 'Identificador inválido' });
+    const { titulo, url, descripcion, etiquetas } = req.body || {};
+    if ((titulo !== undefined && !texto(titulo, 120)) || (url !== undefined && (typeof url !== 'string' || url.length > 2048 || !urlValida(url))) ||
+        (descripcion !== undefined && descripcion !== null && (typeof descripcion !== 'string' || descripcion.length > 500)) ||
+        (etiquetas !== undefined && (typeof etiquetas !== 'string' || etiquetas.length > 300))) return res.status(400).json({ error: 'Datos de recurso inválidos' });
+    try {
+        const id = Number(req.params.id);
+        if (!(await prisma.recursoPersonal.findFirst({ where: { id, usuarioId: req.usuario.id }, select: { id: true } }))) return res.status(404).json({ error: 'Recurso no encontrado' });
+        const data = {};
+        if (titulo !== undefined) data.titulo = titulo.trim();
+        if (url !== undefined) data.url = url;
+        if (descripcion !== undefined) data.descripcion = descripcion?.trim() || null;
+        if (etiquetas !== undefined) data.etiquetas = etiquetas.trim();
+        return res.json({ data: await prisma.recursoPersonal.update({ where: { id }, data }) });
+    } catch (error) {
+        console.error('[ESPACIO] actualizar recurso:', error.message);
+        return res.status(500).json({ error: 'No se pudo actualizar el recurso' });
+    }
+});
+
+router.delete('/recursos/:id', async (req, res) => {
+    if (!idValido(req.params.id)) return res.status(400).json({ error: 'Identificador inválido' });
+    try {
+        const id = Number(req.params.id);
+        if (!(await prisma.recursoPersonal.findFirst({ where: { id, usuarioId: req.usuario.id }, select: { id: true } }))) return res.status(404).json({ error: 'Recurso no encontrado' });
+        await prisma.recursoPersonal.delete({ where: { id } });
+        return res.status(204).end();
+    } catch (error) {
+        console.error('[ESPACIO] eliminar recurso:', error.message);
+        return res.status(500).json({ error: 'No se pudo eliminar el recurso' });
+    }
+});
+
 module.exports = router;

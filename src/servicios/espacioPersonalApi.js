@@ -1,16 +1,18 @@
 import apiClient from './clienteApi';
 
 const API = '/perfil/espacio';
-const rutas = { proyecto: 'proyectos', nota: 'notas', evento: 'eventos' };
-const rutasPlural = new Set(['proyectos', 'notas', 'eventos']);
+const rutas = { proyecto: 'proyectos', nota: 'notas', evento: 'eventos', tarea: 'tareas', recurso: 'recursos' };
+const rutasPlural = new Set(['proyectos', 'notas', 'eventos', 'tareas', 'recursos']);
 
 export const listarEspacioPersonal = async () => {
-  const [proyectos, notas, eventos] = await Promise.all([
+  const [proyectos, notas, eventos, tareas, recursos] = await Promise.all([
     apiClient.get(`${API}/proyectos`),
     apiClient.get(`${API}/notas`),
     apiClient.get(`${API}/eventos`),
+    apiClient.get(`${API}/tareas`),
+    apiClient.get(`${API}/recursos`),
   ]);
-  return { proyectos: proyectos.data.data, notas: notas.data.data, eventos: eventos.data.data };
+  return { proyectos: proyectos.data.data, notas: notas.data.data, eventos: eventos.data.data, tareas: tareas.data.data, recursos: recursos.data.data };
 };
 
 export const guardarRegistroPersonal = async ({ tipo, id, values }) => {

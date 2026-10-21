@@ -36,6 +36,8 @@ model Usuario {
   proyectosPersonales   ProyectoPersonal[]
   notasPersonales       NotaPersonal[]
   eventosPersonales     EventoPersonal[]
+  tareasPersonales      TareaPersonal[]
+  recursosPersonales    RecursoPersonal[]
   preferenciasPerfil    PreferenciaPerfil?
 
   @@index([rolId], map: "usuarios_rol_id_idx")
@@ -68,6 +70,7 @@ model ProyectoPersonal {
   usuario       Usuario          @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
   notas         NotaPersonal[]
   eventos       EventoPersonal[]
+  tareas        TareaPersonal[]
 
   @@index([usuarioId, actualizadoEn])
   @@map("proyectos_personales")
@@ -107,16 +110,50 @@ model EventoPersonal {
   @@map("eventos_personales")
 }
 
+model TareaPersonal {
+  id            Int               @id @default(autoincrement())
+  usuarioId     Int               @map("usuario_id")
+  proyectoId    Int?              @map("proyecto_id")
+  titulo        String            @db.VarChar(120)
+  descripcion   String?           @db.Text
+  vencimiento   DateTime?         @db.Timestamp(0)
+  prioridad     String            @default("media") @db.VarChar(20)
+  estado        String            @default("pendiente") @db.VarChar(20)
+  creadoEn      DateTime          @default(now()) @map("creado_en") @db.Timestamp(0)
+  actualizadoEn DateTime          @updatedAt @map("actualizado_en") @db.Timestamp(0)
+  usuario       Usuario           @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  proyecto      ProyectoPersonal? @relation(fields: [proyectoId], references: [id], onDelete: SetNull)
+
+  @@index([usuarioId, vencimiento])
+  @@index([proyectoId])
+  @@map("tareas_personales")
+}
+
+model RecursoPersonal {
+  id            Int      @id @default(autoincrement())
+  usuarioId     Int      @map("usuario_id")
+  titulo        String   @db.VarChar(120)
+  url           String   @db.VarChar(2048)
+  descripcion   String?  @db.VarChar(500)
+  etiquetas     String   @default("") @db.VarChar(300)
+  creadoEn      DateTime @default(now()) @map("creado_en") @db.Timestamp(0)
+  actualizadoEn DateTime @updatedAt @map("actualizado_en") @db.Timestamp(0)
+  usuario       Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+
+  @@index([usuarioId, actualizadoEn])
+  @@map("recursos_personales")
+}
+
 model PreferenciaPerfil {
-  id                 Int      @id @default(autoincrement())
-  usuarioId          Int      @unique @map("usuario_id")
-  colorAcento        String   @default("#A3E635") @map("color_acento") @db.VarChar(7)
-  privacidadPerfil   String   @default("members") @map("privacidad_perfil") @db.VarChar(20)
-  emailPromociones   Boolean  @default(true) @map("email_promociones")
-  emailPedidos       Boolean  @default(true) @map("email_pedidos")
-  smsAlertas         Boolean  @default(false) @map("sms_alertas")
-  actualizadoEn      DateTime @default(now()) @updatedAt @map("actualizado_en") @db.Timestamp(0)
-  usuario            Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
+  id               Int      @id @default(autoincrement())
+  usuarioId        Int      @unique @map("usuario_id")
+  colorAcento      String   @default("#A3E635") @map("color_acento") @db.VarChar(7)
+  privacidadPerfil String   @default("members") @map("privacidad_perfil") @db.VarChar(20)
+  emailPromociones Boolean  @default(true) @map("email_promociones")
+  emailPedidos     Boolean  @default(true) @map("email_pedidos")
+  smsAlertas       Boolean  @default(false) @map("sms_alertas")
+  actualizadoEn    DateTime @default(now()) @updatedAt @map("actualizado_en") @db.Timestamp(0)
+  usuario          Usuario  @relation(fields: [usuarioId], references: [id], onDelete: Cascade)
 
   @@map("preferencias_perfil")
 }

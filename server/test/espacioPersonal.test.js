@@ -14,6 +14,8 @@ describe('Espacio personal', () => {
     espiarModelo('proyectoPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
     espiarModelo('notaPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
     espiarModelo('eventoPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
+    espiarModelo('tareaPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
+    espiarModelo('recursoPersonal', ['findMany', 'findFirst', 'create', 'update', 'delete']);
     prisma.usuario.findUnique.mockResolvedValue({ id: 7, activo: true });
   });
 
@@ -76,5 +78,25 @@ describe('Espacio personal', () => {
       .send({ usuarioId: 88, titulo: 'Entrega', inicio: '2026-11-01T15:00:00.000Z' });
     expect(res.status).toBe(201);
     expect(prisma.eventoPersonal.create.mock.calls[0][0].data.usuarioId).toBe(7);
+  });
+
+  it('crea tareas bajo el usuario autenticado y no acepta estado inválido', async () => {
+    prisma.tareaPersonal.create.mockResolvedValue({ id: 3, usuarioId: 7, titulo: 'Estudiar' });
+    const res = await request(app).post('/api/perfil/espacio/tareas').set('Authorization', `Bearer ${TOKEN}`).send({ usuarioId: 99, titulo: 'Estudiar', prioridad: 'alta' });
+    expect(res.status).toBe(201);
+    expect(prisma.tareaPersonal.create.mock.calls[0][0].data.usuarioId).toBe(7);
+    const invalid = await request(app).post('/api/perfil/espacio/tareas').set('Authorization', `Bearer ${TOKEN}`).send({ titulo: 'Estudiar', estado: 'inventado' });
+    expect(invalid.status).toBe(400);
+    expect(prisma.tareaPersonal.create).toHaveBeenCalledTimes(1);
+  });
+
+  it('guarda enlaces propios y rechaza protocolos inseguros o ajenos', async () => {
+    prisma.recursoPersonal.create.mockResolvedValue({ id: 10, usuarioId: 7, titulo: 'Docs' });
+    const res = await request(app).post('/api/perfil/espacio/recursos').set('Authorization', `Bearer ${TOKEN}`).send({ usuarioId: 99, titulo: 'Docs', url: 'https://example.org' });
+    expect(res.status).toBe(201);
+    expect(prisma.recursoPersonal.create.mock.calls[0][0].data.usuarioId).toBe(7);
+    const invalid = await request(app).post('/api/perfil/espacio/recursos').set('Authorization', `Bearer ${TOKEN}`).send({ titulo: 'Docs', url: 'javascript:alert(1)' });
+    expect(invalid.status).toBe(400);
+    expect(prisma.recursoPersonal.create).toHaveBeenCalledTimes(1);
   });
 });
