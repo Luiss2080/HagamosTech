@@ -422,7 +422,7 @@ const PerfilPagina = () => {
             <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
                     
                     {/* LEFT SIDEBAR (Red outline border) */}
-                    <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
+                    <div className="sticky top-32 hidden self-start overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
                         <ProfileSidebar formData={formData} handleChange={handleChange} />
                     </div>
 

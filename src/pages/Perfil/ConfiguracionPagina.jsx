@@ -224,7 +224,7 @@ const ConfiguracionPagina = () => {
             <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
                     
                     {/* LEFT SIDE: SIDEBAR */}
-                    <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
+                    <div className="sticky top-32 hidden self-start overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
                         <ProfileSidebar />
                     </div>
 
@@ -249,7 +249,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PERSONALIZACIÓN VISUAL */}
-                        <div className="border-b border-white/10 py-4 first:pt-0">
+                        <div id="personalizacion" className="scroll-mt-36 border-b border-white/10 py-4 first:pt-0">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-palette"></i>
@@ -260,18 +260,18 @@ const ConfiguracionPagina = () => {
                                 </div>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div className="grid grid-cols-1 gap-4">
                                 {/* Accent Color Selector */}
                                 <div className="space-y-2">
                                     <h4 className="text-[10px] font-black text-slate-200 uppercase tracking-wider">Color de Acento</h4>
-                                    <div className="grid grid-cols-2 gap-1.5">
+                                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 xl:grid-cols-6">
                                         {ACCENT_COLORS.map((color) => {
                                             const isSelected = accentColor === color.value;
                                             return (
                                                 <button
                                                     key={color.value}
                                                     onClick={() => handleAccentChange(color.value)}
-                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-white/10 bg-black/25 text-slate-700 hover:border-[#A3E635]/40'}`}
+                                                    className={`p-2 rounded-xl border flex items-center gap-2 transition-all cursor-pointer text-left text-[10px] ${isSelected ? `border-[#A3E635] bg-[#A3E635]/5 font-black text-[#A3E635] ring-2 ${color.ring}/25` : 'border-white/10 bg-black/25 text-slate-200 hover:border-[#A3E635]/40'}`}
                                                 >
                                                     <span className={`w-3 h-3 rounded-full shrink-0 ${color.bg} ${isSelected ? 'ring-2 ring-offset-2 ring-slate-800 dark:ring-offset-slate-900' : ''}`} />
                                                     <span className="truncate">{color.name.split(' ')[0]}</span>
@@ -283,7 +283,7 @@ const ConfiguracionPagina = () => {
                             </div>
                         </div>
 
-                        <div className="border-b border-white/10 py-4">
+                        <div id="notificaciones" className="scroll-mt-36 border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl bg-[#A3E635] text-[11px] text-[#0A0A0A]"><i className="fas fa-bell" /></div>
                                 <div>
@@ -309,7 +309,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PRIVACY METER */}
-                        <div className="border-b border-white/10 py-4">
+                        <div id="privacidad" className="scroll-mt-36 border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-user-shield"></i>
@@ -347,7 +347,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PRIVACIDAD Y SEGURIDAD */}
-                        <div className="border-b border-white/10 py-4">
+                        <div id="seguridad" className="scroll-mt-36 border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-lock"></i>
@@ -404,7 +404,7 @@ const ConfiguracionPagina = () => {
                                 </div>
 
                                 {/* 2FA Setup */}
-                                <div className="space-y-2 flex flex-col justify-between">
+                                <div className="space-y-2 flex flex-col justify-start">
                                     <div>
                                         <h4 className="text-[10px] font-black text-slate-850 uppercase tracking-wider flex items-center gap-2">
                                             Doble Factor (2FA) 
@@ -417,7 +417,7 @@ const ConfiguracionPagina = () => {
                                         </p>
                                     </div>
                                     
-                                    <div className="bg-black/25 p-2.5 rounded-xl border border-white/10 flex items-center justify-between gap-2">
+                                    <div className="mt-4 bg-black/25 p-2.5 rounded-xl border border-white/10 flex items-center justify-between gap-2">
                                         <div className="flex gap-2 items-center">
                                             <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-500 flex items-center justify-center text-sm"><i className="fas fa-mobile-screen"></i></div>
                                             <div>
@@ -438,7 +438,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* SESSIONS & DATA MANAGEMENT */}
-                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div id="sesiones" className="scroll-mt-36 grid grid-cols-1 sm:grid-cols-2 gap-4">
                             
                             {/* Active Sessions */}
                             <div className="border-t border-white/10 pt-6">

@@ -20,7 +20,7 @@ const ProfileSidebar = ({ formData, handleChange }) => {
     ];
 
     return (
-        <div className="relative hidden lg:flex flex-col justify-start p-4 lg:p-5 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full">
+        <div className="relative hidden h-auto w-full flex-col justify-start overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] p-4 lg:flex lg:p-5">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-[#111827]/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
@@ -68,7 +68,7 @@ const ProfileSidebar = ({ formData, handleChange }) => {
                             <Link 
                                 key={item.path}
                                 to={item.path} 
-                                className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 text-left transition-all duration-200 ${isActive ? 'border-transparent bg-white shadow-md scale-[1.01]' : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'}`}
+                                className={`flex items-center gap-3 rounded-xl border px-3.5 py-3 text-left transition-all duration-200 ${isActive ? 'border-[#A3E635] bg-[#A3E635] shadow-md scale-[1.01]' : 'border-white/10 bg-white/5 hover:bg-white/10 hover:border-white/20'}`}
                             >
                                 <div className={`w-8 h-8 rounded-lg flex items-center justify-center shrink-0 ${isActive ? 'bg-[#A3E635]/15 text-[#65A30D]' : 'bg-white/10 text-[#A3E635]'}`}>
                                     <i className={`fas ${item.icon} text-[10px]`}></i>
@@ -81,6 +81,25 @@ const ProfileSidebar = ({ formData, handleChange }) => {
                         );
                     })}
                 </div>
+
+                {location.pathname === '/configuracion' && (
+                    <nav aria-label="Accesos directos de configuración" className="w-full rounded-xl border border-white/10 bg-black/20 p-3">
+                        <p className="mb-2 text-[9px] font-black uppercase tracking-wider text-[#A3E635]">Ir a configuración</p>
+                        <div className="grid gap-1">
+                            {[
+                                ['personalizacion', 'Personalización'],
+                                ['notificaciones', 'Notificaciones'],
+                                ['privacidad', 'Privacidad'],
+                                ['seguridad', 'Seguridad'],
+                                ['sesiones', 'Sesiones y datos'],
+                            ].map(([id, label]) => (
+                                <a key={id} href={`#${id}`} className="rounded-lg px-2.5 py-2 text-[10px] font-bold text-slate-300 transition hover:bg-white/5 hover:text-[#A3E635]">
+                                    {label}
+                                </a>
+                            ))}
+                        </div>
+                    </nav>
+                )}
 
                 {/* 7. REDES SOCIALES Y ENLACES - Solo en /perfil */}
                 {location.pathname === '/perfil' && (
