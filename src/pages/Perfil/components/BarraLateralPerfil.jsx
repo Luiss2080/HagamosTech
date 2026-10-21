@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import useAuthStore from '../../../store/useAutenticacionStore';
 
-const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref, isSavingPrefs, handleSavePreferences }) => {
+const ProfileSidebar = ({ formData, handleChange }) => {
     const location = useLocation();
     const user = useAuthStore(state => state.user);
     
@@ -20,13 +20,13 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
     ];
 
     return (
-        <div className="relative hidden lg:flex flex-col justify-start p-6 lg:p-8 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full">
+        <div className="relative hidden lg:flex flex-col justify-start p-4 lg:p-5 overflow-hidden bg-gradient-to-br from-[#080a05] via-[#10150a] to-[#080a05] w-full h-full">
             <div className="absolute inset-0 z-0 pointer-events-none">
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#111827]/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div className="absolute bottom-0 left-0 w-[420px] h-[420px] bg-[#111827]/30 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4"></div>
             </div>
 
-            <div className="relative z-10 flex flex-col items-center w-full space-y-4">
+            <div className="relative z-10 flex flex-col items-center w-full space-y-3">
                 
                 {/* 1. SECCIÓN DE CABECERA BRANDING (Como en el panel del usuario) */}
                 <div className="w-full pb-3.5 border-b border-white/10 text-left">
@@ -82,50 +82,6 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                     })}
                 </div>
 
-                {/* 6. PREFERENCIAS DE ALERTAS - Solo en /configuracion */}
-                {location.pathname === '/configuracion' && preferences && (
-                <div className="w-full bg-black/15 border border-white/5 rounded-2xl p-3 text-left shadow-inner">
-                    <div className="flex items-center gap-2 mb-2.5">
-                        <div className="w-6 h-6 rounded-lg bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[9px] shadow-md shrink-0">
-                            <i className="fas fa-bell"></i>
-                        </div>
-                        <div>
-                            <h4 className="text-[8px] font-black text-amber-400 uppercase tracking-wider m-0 leading-tight">Preferencias de Alertas</h4>
-                            <p className="text-[6px] text-white/40 font-bold uppercase tracking-widest m-0">NOTIFICACIONES</p>
-                        </div>
-                    </div>
-                    <div className="flex flex-col gap-2">
-                        {[
-                            { key: 'email_promociones', label: 'Promociones', icon: 'fa-envelope-open-text' },
-                            { key: 'email_pedidos', label: 'Pedidos', icon: 'fa-circle-check' },
-                            { key: 'sms_alertas', label: 'Seguridad', icon: 'fa-shield-heart' },
-                        ].map((item) => (
-                            <div key={item.key} className="flex items-center justify-between gap-2">
-                                <div className="flex items-center gap-2">
-                                    <div className="w-5 h-5 rounded flex items-center justify-center bg-white/10 text-amber-400/80">
-                                        <i className={`fas ${item.icon} text-[8px]`}></i>
-                                    </div>
-                                    <span className="text-[8px] font-bold text-white/70 uppercase tracking-wider">{item.label}</span>
-                                </div>
-                                <button 
-                                    onClick={() => handleTogglePref(item.key)}
-                                    className={`relative inline-flex h-5 w-9 shrink-0 cursor-pointer rounded-full border border-transparent transition-colors duration-200 focus:outline-none ${preferences[item.key] ? 'bg-[#A3E635]' : 'bg-white/20'}`}
-                                >
-                                    <span className={`pointer-events-none inline-block h-4 w-4 transform rounded-full bg-white shadow transition duration-200 ${preferences[item.key] ? 'translate-x-[18px]' : 'translate-x-[1px]'}`} />
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                    <button 
-                        onClick={handleSavePreferences}
-                        disabled={isSavingPrefs}
-                        className="w-full mt-2 py-2 rounded-lg bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[9px] font-black uppercase tracking-widest transition-all cursor-pointer border-0 disabled:opacity-50"
-                    >
-                        {isSavingPrefs ? 'Guardando...' : 'Guardar Preferencias'}
-                    </button>
-                </div>
-                )}
-
                 {/* 7. REDES SOCIALES Y ENLACES - Solo en /perfil */}
                 {location.pathname === '/perfil' && (
                 <div className="w-full bg-black/15 border border-white/5 rounded-2xl p-3 text-left shadow-inner">
@@ -134,30 +90,30 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                             <i className="fas fa-share-nodes"></i>
                         </div>
                         <div>
-                            <h4 className="text-[8px] font-black text-amber-400 uppercase tracking-wider m-0 leading-tight">Redes Sociales y Enlaces</h4>
+                            <h4 className="text-[8px] font-black text-[#A3E635] uppercase tracking-wider m-0 leading-tight">Redes Sociales y Enlaces</h4>
                             <p className="text-[6px] text-white/40 font-bold uppercase tracking-widest m-0">Perfiles profesionales y contacto</p>
                         </div>
                     </div>
                     <div className="flex flex-col gap-2">
                         <div>
-                            <label className="block text-[7px] font-black uppercase tracking-wider text-amber-400/80 mb-0.5">LinkedIn</label>
+                            <label className="block text-[7px] font-black uppercase tracking-wider text-[#A3E635]/80 mb-0.5">LinkedIn</label>
                             <div className="relative">
                                 <span className="absolute inset-y-0 left-0 pl-2.5 flex items-center text-[#0077b5]"><i className="fab fa-linkedin text-[9px]"></i></span>
-                                <input type="url" name="linkedin" value={formData?.linkedin || ''} onChange={handleChange} placeholder="URL de LinkedIn" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-amber-400/40 outline-none font-bold placeholder:text-white/30" />
+                                <input type="url" name="linkedin" value={formData?.linkedin || ''} onChange={handleChange} placeholder="URL de LinkedIn" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-white/30" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-[7px] font-black uppercase tracking-wider text-amber-400/80 mb-0.5">GitHub</label>
+                            <label className="block text-[7px] font-black uppercase tracking-wider text-[#A3E635]/80 mb-0.5">GitHub</label>
                             <div className="relative">
                                 <span className="absolute inset-y-0 left-0 pl-2.5 flex items-center text-slate-400"><i className="fab fa-github text-[9px]"></i></span>
-                                <input type="url" name="github" value={formData?.github || ''} onChange={handleChange} placeholder="URL de GitHub" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-amber-400/40 outline-none font-bold placeholder:text-white/30" />
+                                <input type="url" name="github" value={formData?.github || ''} onChange={handleChange} placeholder="URL de GitHub" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-white/30" />
                             </div>
                         </div>
                         <div>
-                            <label className="block text-[7px] font-black uppercase tracking-wider text-amber-400/80 mb-0.5">Facebook</label>
+                            <label className="block text-[7px] font-black uppercase tracking-wider text-[#A3E635]/80 mb-0.5">Facebook</label>
                             <div className="relative">
                                 <span className="absolute inset-y-0 left-0 pl-2.5 flex items-center text-[#1877f2]"><i className="fab fa-facebook text-[9px]"></i></span>
-                                <input type="url" name="facebook" value={formData?.facebook || ''} onChange={handleChange} placeholder="URL de Facebook" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-amber-400/40 outline-none font-bold placeholder:text-white/30" />
+                                <input type="url" name="facebook" value={formData?.facebook || ''} onChange={handleChange} placeholder="URL de Facebook" className="w-full pl-8 pr-2.5 py-1.5 rounded-lg border border-white/10 bg-white/10 text-white text-[9px] focus:ring-2 focus:ring-[#A3E635]/40 outline-none font-bold placeholder:text-white/30" />
                             </div>
                         </div>
                     </div>
@@ -168,7 +124,7 @@ const ProfileSidebar = ({ formData, handleChange, preferences, handleTogglePref,
                 <div className="w-full pt-1.5 border-t border-white/10">
                     <button 
                         onClick={() => setShowDiploma(true)}
-                        className="w-full py-3.5 bg-white hover:bg-slate-100 text-[#A3E635] text-[10px] font-black uppercase tracking-widest shadow-lg transition-all hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center gap-2 rounded-full border-0"
+                        className="w-full py-3.5 bg-[#A3E635] hover:bg-[#84CC16] text-[#0A0A0A] text-[10px] font-black uppercase tracking-widest shadow-lg transition-all hover:scale-[1.02] active:scale-95 cursor-pointer flex items-center justify-center gap-2 rounded-full border-0"
                     >
                         <i className="fas fa-file-pdf text-xs"></i> Descargar constancia personal
                     </button>

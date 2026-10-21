@@ -81,7 +81,7 @@ const GlobalBreadcrumb = () => {
       host = target;
       root = document.createElement('div');
       const isProfile = pathname.startsWith('/perfil') || pathname === '/configuracion';
-      root.className = `relative z-20 flex justify-center px-4 ${isProfile ? 'mb-5' : 'pt-14 mb-5'}`;
+      root.className = `relative z-20 flex justify-center px-4 ${isProfile ? 'pt-3 mb-4 sm:pt-4' : 'pt-16 mb-5 sm:pt-20'}`;
       host.prepend(root);
       setMountNode(root);
     };

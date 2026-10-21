@@ -409,27 +409,25 @@ const PerfilPagina = () => {
             {/* Dots grid overlay */}
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
-            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-0 sm:px-6">
+            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-8 pt-0 sm:px-6">
             <PageHero
                 title="Mi cuenta"
                 highlight="personalizable"
                 description="Gestiona tus datos personales, información de contacto y personaliza tu avatar institucional en HagamosTech."
                 embedded
-                className="!pt-16 sm:!pt-16 lg:!pt-20 !pb-8"
+                className="!pt-10 sm:!pt-12 lg:!pt-14 !pb-6"
             />
 
             {/* Todo el perfil comparte una única sección y un solo panel. */}
-            <div className="relative">
-                <CircuitBackground />
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(260px,0.72fr)_minmax(0,1.6fr)] gap-0 items-stretch overflow-hidden rounded-[2.5rem] border border-[#A3E635]/25 bg-[#090b08]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+            <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
                     
                     {/* LEFT SIDEBAR (Red outline border) */}
-                    <div className="hidden lg:flex overflow-hidden border-r border-[#A3E635]/15">
+                    <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
                         <ProfileSidebar formData={formData} handleChange={handleChange} />
                     </div>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
-                    <div className="flex min-w-0 flex-col gap-0 p-5 sm:p-7 lg:p-9">
+                    <div className="flex min-w-0 flex-col gap-0 rounded-2xl border border-white/10 bg-[#090b08]/90 p-4 sm:p-5 lg:p-6">
                         
                         {/* MOBILE TABS NAVIGATION */}
                         <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
@@ -449,13 +447,13 @@ const PerfilPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PROFILE COMPLETION PROGRESS (Red outline border) */}
-                        <div className="border-b border-white/10 py-6 first:pt-0">
+                        <div className="border-b border-white/10 py-4 first:pt-0">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-chart-line"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Completitud del Perfil</h3>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Completitud del Perfil</h3>
                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Progreso de datos configurados</p>
                                 </div>
                             </div>
@@ -463,28 +461,28 @@ const PerfilPagina = () => {
                                 <span className="text-[9px] font-black uppercase tracking-wider text-[#A3E635] flex items-center gap-2">
                                     <i className="fas fa-chart-line text-xs"></i> Progreso
                                 </span>
-                                <span className="text-sm font-black text-slate-800">{completion}%</span>
+                                <span className="text-sm font-black text-white">{completion}%</span>
                             </div>
-                            <div className="w-full bg-slate-100 h-3.5 rounded-full overflow-hidden border border-slate-200/50">
+                            <div className="w-full bg-white/10 h-3.5 rounded-full overflow-hidden border border-white/15">
                                 <div 
                                     className="h-full bg-gradient-to-r from-[#A3E635] to-[#A3E635] transition-all duration-700 ease-out rounded-full"
                                     style={{ width: `${completion}%` }}
                                 />
                             </div>
                             <p className="text-[10px] text-slate-400 font-bold uppercase mt-2.5 flex items-center gap-1.5">
-                                <i className="fas fa-sparkles text-amber-500"></i>
+                                <i className="fas fa-sparkles text-[#A3E635]"></i>
                                 {completion === 100 ? '¡Tu perfil está completamente configurado!' : 'Completa todos los campos para alcanzar el 100%'}
                             </p>
                         </div>
 
                         {/* PHOTO & AVATAR PICKER (Red outline border) */}
-                        <div className="border-b border-white/10 py-6">
+                        <div className="border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-9 h-9 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-sm shadow-md shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-camera"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Imagen de Perfil</h3>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Imagen de Perfil</h3>
                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Personaliza tu foto o avatar institucional</p>
                                 </div>
                             </div>
@@ -547,7 +545,7 @@ const PerfilPagina = () => {
                                     <i className="fas fa-id-card"></i>
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider m-0">Datos Personales</h3>
+                                    <h3 className="text-sm font-black text-white uppercase tracking-wider m-0">Datos Personales</h3>
                                     <p className="text-[10px] text-slate-500 font-bold uppercase tracking-widest leading-normal m-0 mt-0.5">Información personal y de contacto</p>
                                 </div>
                             </div>
@@ -746,7 +744,6 @@ const PerfilPagina = () => {
                         </div>
 
                     </div>
-                </div>
             </div>
             </section>
 

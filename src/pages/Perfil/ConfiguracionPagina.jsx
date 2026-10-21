@@ -211,32 +211,25 @@ const ConfiguracionPagina = () => {
             {/* Dots grid overlay */}
             <div className="absolute inset-0 opacity-[0.06] dark:opacity-[0.09] pointer-events-none" style={{ backgroundImage: 'radial-gradient(#A3E635 2px, transparent 2px)', backgroundSize: '24px 24px' }}></div>
 
-            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-10 pt-6 sm:px-6">
+            <section className="relative z-10 mx-auto max-w-[95rem] px-4 pb-8 pt-0 sm:px-6">
             <PageHero
                 title="Ajustes y"
                 highlight="preferencias"
                 description="Personaliza la apariencia del portal, administra tus preferencias de notificaciones, sesiones activas y seguridad."
                 embedded
-                className="!pt-0 !pb-8"
+                className="!pt-4 sm:!pt-6 !pb-6"
             />
 
             {/* Todo el módulo comparte una única sección y un solo panel. */}
-            <div className="relative">
-                <CircuitBackground />
-                <div className="relative z-10 grid grid-cols-1 lg:grid-cols-[minmax(260px,0.72fr)_minmax(0,1.6fr)] gap-0 items-stretch overflow-hidden rounded-[2.5rem] border border-[#A3E635]/25 bg-[#090b08]/90 shadow-[0_24px_80px_rgba(0,0,0,0.45)] backdrop-blur-xl">
+            <div className="grid grid-cols-1 items-start gap-4 lg:grid-cols-[minmax(250px,0.68fr)_minmax(0,1.72fr)] lg:gap-5">
                     
                     {/* LEFT SIDE: SIDEBAR */}
-                    <div className="hidden lg:flex overflow-hidden border-r border-[#A3E635]/15">
-                        <ProfileSidebar
-                            preferences={preferences}
-                            handleTogglePref={handleTogglePref}
-                            isSavingPrefs={prefLoading}
-                            handleSavePreferences={handleSavePreferences}
-                        />
+                    <div className="hidden overflow-hidden rounded-2xl border border-white/10 bg-[#090b08]/90 lg:flex">
+                        <ProfileSidebar />
                     </div>
 
                     {/* RIGHT SIDE: CONTENT & FORMS */}
-                    <div className="flex min-w-0 flex-col gap-0 p-5 sm:p-7 lg:p-9">
+                    <div className="flex min-w-0 flex-col gap-0 rounded-2xl border border-white/10 bg-[#090b08]/90 p-4 sm:p-5 lg:p-6">
                         
                         {/* MOBILE TABS NAVIGATION */}
                         <div className="flex lg:hidden gap-2 bg-black/45 p-2 rounded-2xl border border-white/10 overflow-x-auto scrollbar-none">
@@ -256,7 +249,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PERSONALIZACIÓN VISUAL */}
-                        <div className="border-b border-white/10 py-6 first:pt-0">
+                        <div className="border-b border-white/10 py-4 first:pt-0">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-palette"></i>
@@ -290,7 +283,7 @@ const ConfiguracionPagina = () => {
                             </div>
                         </div>
 
-                        <div className="border-b border-white/10 py-6">
+                        <div className="border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="flex h-7 w-7 shrink-0 items-center justify-center rounded-xl bg-[#A3E635] text-[11px] text-[#0A0A0A]"><i className="fas fa-bell" /></div>
                                 <div>
@@ -316,7 +309,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* INTERACTIVE PRIVACY METER */}
-                        <div className="border-b border-white/10 py-6">
+                        <div className="border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-user-shield"></i>
@@ -336,7 +329,7 @@ const ConfiguracionPagina = () => {
                                                 key={level.id}
                                                 onClick={() => { setPrivacy(level.id); setPreferences(prev => ({ ...prev, privacidadPerfil: level.id })); setPrefError(''); }}
                                                 aria-pressed={isSelected}
-                                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#A3E635] bg-[#A3E635]/5 font-black shadow-md ring-2 ring-[#A3E635]/15' : 'border-slate-100 bg-slate-50/50 font-bold text-slate-700 dark:text-slate-300'}`}
+                                                className={`p-3 rounded-xl border text-left transition-all cursor-pointer flex flex-col justify-between ${isSelected ? 'border-[#A3E635] bg-[#A3E635]/5 font-black shadow-md ring-2 ring-[#A3E635]/15' : 'border-white/10 bg-white/[0.03] font-bold text-slate-200'}`}
                                             >
                                                 <div className="flex items-center justify-between w-full mb-3">
                                                     <i className={`fas ${level.icon} text-lg ${level.color}`}></i>
@@ -354,7 +347,7 @@ const ConfiguracionPagina = () => {
                         </div>
 
                         {/* PRIVACIDAD Y SEGURIDAD */}
-                        <div className="border-b border-white/10 py-6">
+                        <div className="border-b border-white/10 py-4">
                             <div className="mb-4 flex items-center gap-3">
                                 <div className="w-7 h-7 rounded-xl bg-[#A3E635] text-[#0A0A0A] flex items-center justify-center text-[11px] shadow-sm shadow-[#A3E635]/10 shrink-0">
                                     <i className="fas fa-lock"></i>
@@ -460,7 +453,7 @@ const ConfiguracionPagina = () => {
                                 </div>
                                 <div className="space-y-2">
                                     {sesiones.length === 0 ? (
-                                        <p className="text-xs text-slate-400 italic text-center py-6">{sesionesError || (sesionesAlcance === 'sin_registro_multisesion' ? 'La gestión de sesiones múltiples todavía no está disponible.' : 'No hay otras sesiones activas.')}</p>
+                                        <p className="text-xs text-slate-400 italic text-center py-4">{sesionesError || (sesionesAlcance === 'sin_registro_multisesion' ? 'La gestión de sesiones múltiples todavía no está disponible.' : 'No hay otras sesiones activas.')}</p>
                                     ) : (
                                         sesiones.map((sess) => (
                                             <div key={sess.id} className="flex items-center justify-between border-b border-slate-100 pb-2 last:border-0 last:pb-0">
@@ -534,7 +527,6 @@ const ConfiguracionPagina = () => {
                         </div>
 
                     </div>
-                </div>
             </div>
             </section>
 

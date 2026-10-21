@@ -28,7 +28,7 @@ const AppLayout = ({ children }) => {
             </div>
             <Header />
             {pathname !== '/' && <GlobalBreadcrumb />}
-            <main className={`${esPerfil ? 'pt-[84px] sm:pt-[92px] lg:pt-[102px]' : 'mt-[58px]'} flex-grow relative z-10`}>
+            <main className={`${esPerfil ? 'bg-[#050505] pt-[112px] sm:pt-[120px] lg:pt-[132px]' : 'mt-[58px]'} flex-grow relative z-10`}>
                 {children}
             </main>
             <Footer />

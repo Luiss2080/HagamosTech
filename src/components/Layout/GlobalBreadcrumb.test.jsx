@@ -26,6 +26,22 @@ describe('GlobalBreadcrumb', () => {
     expect(navigation.parentElement).not.toHaveClass('absolute');
   });
 
+  it.each(['/perfil', '/configuracion'])('deja espacio bajo el encabezado en %s', (path) => {
+    renderAt(path);
+
+    const section = screen.getByTestId('primera-seccion');
+    const navigation = within(section).getByRole('navigation', { name: 'Migas de pan' });
+    expect(navigation.parentElement).toHaveClass('pt-3', 'sm:pt-4');
+  });
+
+  it('baja las migas en las vistas públicas', () => {
+    renderAt('/sobre-nosotros');
+
+    const section = screen.getByTestId('primera-seccion');
+    const navigation = within(section).getByRole('navigation', { name: 'Migas de pan' });
+    expect(navigation.parentElement).toHaveClass('pt-16', 'sm:pt-20');
+  });
+
   it('no muestra la miga de pan en la portada', () => {
     renderAt('/');
 
