@@ -72,7 +72,7 @@ const EspacioPersonalPagina = () => {
     fin: event.fin ? fechaHoraLocal(event.fin) : '',
   } : { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(new Date())}T09:00`, fin: '' });
   const abrirEventoDia = (day) => abrirModal('evento', { titulo: '', descripcion: '', proyectoId: '', inicio: `${fechaLocal(day)}T09:00`, fin: '' });
-  const abrirTarea = (task) => abrirModal('tarea', task ? { id: task.id, titulo: task.titulo, descripcion: task.descripcion || '', vencimiento: task.vencimiento ? fechaLocal(task.vencimiento) : '', prioridad: task.prioridad, estado: task.estado, proyectoId: task.proyectoId || '' } : { titulo: '', descripcion: '', vencimiento: '', prioridad: 'media', estado: 'pendiente', proyectoId: '' });
+  const abrirTarea = (task) => abrirModal('tarea', task ? { id: task.id, titulo: task.titulo, descripcion: task.descripcion || '', vencimiento: task.vencimiento ? String(task.vencimiento).slice(0, 10) : '', prioridad: task.prioridad, estado: task.estado, proyectoId: task.proyectoId || '' } : { titulo: '', descripcion: '', vencimiento: '', prioridad: 'media', estado: 'pendiente', proyectoId: '' });
   const abrirRecurso = (resource) => abrirModal('recurso', resource ? { id: resource.id, titulo: resource.titulo, url: resource.url, descripcion: resource.descripcion || '', etiquetas: resource.etiquetas || '' } : { titulo: '', url: '', descripcion: '', etiquetas: '' });
 
   const guardar = async (event) => {
