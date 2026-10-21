@@ -12,7 +12,7 @@ export const CampoFiltro = ({ label, ...props }) => (
   </label>
 );
 
-export const SelectorFiltro = ({ label, value, options, onChange, className = '', abrirArriba = false }) => {
+export const SelectorFiltro = ({ label, value, options, onChange, className = '', abrirArriba = false, disabled = false }) => {
   const [open, setOpen] = useState(false);
   const id = useId();
   const rootRef = useRef(null);
@@ -59,7 +59,7 @@ export const SelectorFiltro = ({ label, value, options, onChange, className = ''
   return (
     <div ref={rootRef} className={`relative grid min-w-[150px] gap-1.5 ${className}`}>
       <span id={`${id}-label`} className="text-[10px] font-black uppercase tracking-wider text-slate-400">{label}</span>
-      <button ref={buttonRef} type="button" aria-haspopup="listbox" aria-expanded={open} aria-labelledby={`${id}-label ${id}-value`} aria-controls={`${id}-list`} onClick={() => (open ? setOpen(false) : abrirYEnfocar())} onKeyDown={(event) => { if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); abrirYEnfocar(); } }} className="flex w-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-[#0b0e09] px-3.5 py-2.5 text-left text-sm font-semibold text-white outline-none transition hover:border-[#A3E635]/50 focus-visible:ring-2 focus-visible:ring-[#A3E635]/60">
+      <button ref={buttonRef} type="button" disabled={disabled} aria-haspopup="listbox" aria-expanded={open} aria-labelledby={`${id}-label ${id}-value`} aria-controls={`${id}-list`} onClick={() => (open ? setOpen(false) : abrirYEnfocar())} onKeyDown={(event) => { if (event.key === 'ArrowDown' || event.key === 'ArrowUp') { event.preventDefault(); abrirYEnfocar(); } }} className="flex w-full items-center justify-between gap-3 rounded-xl border border-white/10 bg-[#0b0e09] px-3.5 py-2.5 text-left text-sm font-semibold text-white outline-none transition hover:border-[#A3E635]/50 focus-visible:ring-2 focus-visible:ring-[#A3E635]/60 disabled:cursor-not-allowed disabled:opacity-50">
         <span id={`${id}-value`} className="truncate">{selected?.label}</span><ChevronDown size={16} aria-hidden="true" className={`shrink-0 text-[#A3E635] transition ${open ? 'rotate-180' : ''}`} />
       </button>
       {open && <div id={`${id}-list`} role="listbox" aria-labelledby={`${id}-label`} className={`absolute left-0 z-50 max-h-64 w-full min-w-48 overflow-y-auto rounded-xl border border-[#A3E635]/30 bg-[#0b0e09] p-1.5 shadow-[0_16px_40px_rgba(0,0,0,.65)] ${abrirArriba ? 'bottom-full mb-1.5' : 'top-full mt-1.5'}`}>

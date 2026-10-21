@@ -12,12 +12,13 @@ describe('API del espacio personal', () => {
 
   it('lee las cinco colecciones persistidas desde los endpoints autenticados', async () => {
     apiClient.get.mockResolvedValue({ data: { data: [] } });
-    await expect(listarEspacioPersonal()).resolves.toEqual({ proyectos: [], notas: [], eventos: [], tareas: [], recursos: [] });
+    await expect(listarEspacioPersonal()).resolves.toEqual({ proyectos: [], notas: [], eventos: [], tareas: [], recursos: [], sesionesEnfoque: [] });
     expect(apiClient.get).toHaveBeenNthCalledWith(1, '/perfil/espacio/proyectos');
     expect(apiClient.get).toHaveBeenNthCalledWith(2, '/perfil/espacio/notas');
     expect(apiClient.get).toHaveBeenNthCalledWith(3, '/perfil/espacio/eventos');
     expect(apiClient.get).toHaveBeenNthCalledWith(4, '/perfil/espacio/tareas');
     expect(apiClient.get).toHaveBeenNthCalledWith(5, '/perfil/espacio/recursos');
+    expect(apiClient.get).toHaveBeenNthCalledWith(6, '/perfil/espacio/enfoque');
   });
 
   it('envía recordatorios a PostgreSQL por el endpoint de eventos y limpia fechas opcionales vacías', async () => {
@@ -42,5 +43,14 @@ describe('API del espacio personal', () => {
     await guardarRegistroPersonal({ tipo: 'recurso', values: { titulo: 'Guía', url: 'https://example.org' } });
     expect(apiClient.post).toHaveBeenNthCalledWith(1, '/perfil/espacio/tareas', { titulo: 'Revisar propuesta', vencimiento: '2026-11-03' });
     expect(apiClient.post).toHaveBeenNthCalledWith(2, '/perfil/espacio/recursos', { titulo: 'Guía', url: 'https://example.org' });
+  });
+
+  it('registra y elimina sesiones completadas por el endpoint autenticado', async () => {
+    await guardarRegistroPersonal({ tipo: 'enfoque', values: { titulo: 'Estudiar', duracionMinutos: 25, iniciadoEn: '2026-10-21T10:00:00.000Z', completadoEn: '2026-10-21T10:25:00.000Z', proyectoId: '' } });
+    await eliminarRegistroPersonal('enfoque', 9);
+    expect(apiClient.post).toHaveBeenCalledWith('/perfil/espacio/enfoque', {
+      titulo: 'Estudiar', duracionMinutos: 25, iniciadoEn: '2026-10-21T10:00:00.000Z', completadoEn: '2026-10-21T10:25:00.000Z', proyectoId: null,
+    });
+    expect(apiClient.delete).toHaveBeenCalledWith('/perfil/espacio/enfoque/9');
   });
 });
