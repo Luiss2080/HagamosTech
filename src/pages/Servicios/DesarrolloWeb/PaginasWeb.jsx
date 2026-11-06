@@ -21,16 +21,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Planificación","desc":"Conversamos sobre los objetivos, el contenido disponible y la estructura que necesitás.","image":"/img/08_Cards/proceso-web-planificacion.webp"},
-  {"title":"Diseño UX/UI","desc":"Creamos mockups interactivos alineados a tu marca para una experiencia de uso acorde al proyecto.","image":"/img/08_Cards/proceso-web-uxui.webp"},
-  {"title":"Programación","desc":"Desarrollamos con React, Vite y CSS según el alcance y los requisitos acordados.","image":"/img/08_Cards/proceso-web-programacion.webp"},
-  {"title":"Lanzamiento","desc":"La publicación, el hosting y la indexación se evalúan por separado según el alcance acordado.","image":"/img/08_Cards/proceso-web-publicacion.webp"}
+  {"title":"Estructura y Contenido","desc":"Planificamos la arquitectura de la página, jerarquía visual y llamadas a la acción acordes a tu objetivo.","image":"/img/08_Cards/proceso-web-planificacion.webp"},
+  {"title":"Diseño UX/UI","desc":"Creamos la interfaz visual en Figma cuidando la estética de marca, navegación intuitiva y legibilidad.","image":"/img/08_Cards/proceso-web-uxui.webp"},
+  {"title":"Desarrollo Tecnológico","desc":"Programamos con React y Tailwind CSS logrando una carga instantánea y diseño responsive en cualquier pantalla.","image":"/img/08_Cards/proceso-web-programacion.webp"},
+  {"title":"Puesta en Marcha","desc":"Revisamos detalles, conectamos formularios y WhatsApp, y entregamos el proyecto listo para recibir visitantes.","image":"/img/08_Cards/proceso-web-publicacion.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Sitio corporativo","role":"Ejemplo de proyecto","text":"Quiero presentar mi empresa, sus servicios y formas de contacto."},
-  {"name":"Tienda o pedidos","role":"Ejemplo de proyecto","text":"Necesito mostrar productos y revisar las opciones de pedido que requiere mi negocio."},
-  {"name":"Portafolio digital","role":"Ejemplo de proyecto","text":"Busco reunir proyectos y trabajos en una página fácil de recorrer."},
+  {"name":"Sitio Web Corporativo","role":"Ejemplo de proyecto","text":"Necesito presentar mi empresa, mostrar el catálogo de servicios y canalizar consultas directamente a mi WhatsApp comercial."},
+  {"name":"Landing Page de Campaña","role":"Ejemplo de proyecto","text":"Quiero lanzar una página promocional para captar clientes para un curso o lanzamiento específico."},
+  {"name":"Tienda Online y Catálogo","role":"Ejemplo de proyecto","text":"Busco organizar productos con fotografías, precios y un carrito interactivo que facilite pedidos inmediatos."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -38,10 +38,10 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-globe","label":"Páginas Modernas"},
-  {"icon":"fa-gauge-high","label":"Rendimiento a evaluar"},
-  {"icon":"fa-magnifying-glass","label":"Estructura SEO a definir"},
-  {"icon":"fa-shield","label":"Certificado SSL sujeto al servicio contratado"}
+  {"icon":"fa-bolt","label":"Carga Ultrarrápida"},
+  {"icon":"fa-mobile-screen-button","label":"100% Adaptable a Móviles"},
+  {"icon":"fa-magnifying-glass","label":"Optimización SEO para Google"},
+  {"icon":"fa-shield-halved","label":"Estructura Segura y Escalable"}
 ];
 
 const PaginasWeb = () => {

@@ -3,9 +3,10 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Sitio web definido según tus objetivos, contenidos y funciones necesarias. El alcance se acuerda antes de iniciar.', color: 'bg-[#111827]' },
-        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Revisamos tus procesos y necesidades para determinar qué sistema es viable y qué etapas requiere.', color: 'bg-[#171717]' },
-        { nombre: 'Identidad visual y diseño', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'Recursos gráficos para presentar tu proyecto, marca o emprendimiento. Entregables según propuesta.', color: 'bg-[#0A0A0A]' },
+        { nombre: 'Trabajos académicos y escolares', precio: 'A conversar', normal: '', img: '/img/08_Cards/novedad-home-academia.webp', desc: 'Tesis, proyectos de grado, monografías, presentaciones en diapositivas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.', color: 'bg-[#0D150B]' },
+        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Sitios corporativos, landing pages de alta conversión, tiendas online y catálogos digitales con conexión a pedidos por WhatsApp.', color: 'bg-[#111827]' },
+        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Control de inventarios, sistemas POS de ventas, facturación, bases de datos y paneles de gestión adaptados a tu operación.', color: 'bg-[#171717]' },
+        { nombre: 'Diseño gráfico y marketing comercial', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'Identidad visual, logos vectoriales, flyers publicitarios para redes sociales, packaging y catálogos de productos para promociones.', color: 'bg-[#0A0A0A]' },
     ];
 
     return (
@@ -28,7 +29,7 @@ const PromoDestacada = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
                         {combos.map((combo, i) => (
                             <div key={i} className={`relative rounded-[2rem] p-6 transition-all duration-500 group overflow-hidden border hover:-translate-y-1.5 z-10 text-center ${combo.color} text-white shadow-xl shadow-black/30/10`}>
                                 <div className="absolute top-0 left-0 w-full h-1 bg-white/40"></div>

@@ -28,9 +28,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Marca","role":"Ejemplo de proyecto","text":"Quiero desarrollar una identidad visual inicial para mi emprendimiento."},
-  {"name":"Catálogo digital","role":"Ejemplo de proyecto","text":"Necesito presentar mis productos o servicios en formato digital."},
-  {"name":"Piezas de difusión","role":"Ejemplo de proyecto","text":"Busco comunicar una promoción o fecha especial con recursos gráficos."},
+  {"name":"Lanzamiento de Marca","role":"Ejemplo de emprendimiento","text":"Estoy abriendo un negocio y necesito una identidad visual profesional, logotipo y piezas para anunciarme en redes."},
+  {"name":"Catálogo Digital con QR","role":"Ejemplo de emprendimiento","text":"Quiero un catálogo digital que mis clientes puedan abrir desde un código QR en mi local y hacer pedidos por WhatsApp."},
+  {"name":"Promociones y Campañas","role":"Ejemplo de emprendimiento","text":"Busco diseñar volantes y anuncios atractivos para fechas especiales y ofertas de fin de mes."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';

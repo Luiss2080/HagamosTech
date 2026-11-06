@@ -21,16 +21,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Análisis de Perfil","desc":"Evaluamos tu experiencia, metas y el mercado laboral al que apuntas.","image":"/img/08_Cards/proceso-empleo-perfil.webp"},
-  {"title":"Estructuración","desc":"Diseñamos tu CV optimizado ATS y tu perfil de LinkedIn con palabras clave.","image":"/img/08_Cards/proceso-empleo-cv.webp"},
-  {"title":"Documentos","desc":"Redactamos cartas de presentación y traducimos tu CV al inglés si lo necesitas.","image":"/img/08_Cards/proceso-empleo-documentos.webp"},
-  {"title":"Preparación","desc":"Simulamos entrevistas y armamos tu portafolio digital profesional.","image":"/img/08_Cards/proceso-empleo-entrevista.webp"}
+  {"title":"Auditoría de Perfil","desc":"Evaluamos tu experiencia profesional, competencias técnicas y el perfil del puesto al que aspiras.","image":"/img/08_Cards/proceso-empleo-perfil.webp"},
+  {"title":"Redacción y Formato ATS","desc":"Redactamos tu CV con formato estándar, tipografía legible por escáners y palabras clave estratégicas.","image":"/img/08_Cards/proceso-empleo-cv.webp"},
+  {"title":"Optimización de LinkedIn","desc":"Ajustamos tus secciones de destacados, experiencia y titulares para generar visibilidad profesional.","image":"/img/08_Cards/proceso-empleo-documentos.webp"},
+  {"title":"Simulación y Consejos","desc":"Practicamos preguntas frecuentes y armamos tu portafolio digital para compartir en postulaciones.","image":"/img/08_Cards/proceso-empleo-entrevista.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Currículum","role":"Ejemplo de orientación","text":"Quiero ordenar mi experiencia y formación para una postulación."},
-  {"name":"Perfil profesional","role":"Ejemplo de orientación","text":"Necesito revisar cómo presento mis habilidades y proyectos."},
-  {"name":"Entrevista","role":"Ejemplo de orientación","text":"Busco practicar respuestas y prepararme para un proceso de selección."},
+  {"name":"CV con Filtros ATS","role":"Ejemplo de postulación","text":"Quiero renovar mi currículum para que los sistemas de selección de empresas grandes no lo descarten y resalte mis logros."},
+  {"name":"Estrategia en LinkedIn","role":"Ejemplo de postulación","text":"Necesito optimizar mi titular, extracto y palabras clave para que reclutadores de mi rubro encuentren mi perfil."},
+  {"name":"Preparación de Entrevista","role":"Ejemplo de postulación","text":"Busco practicar preguntas difíciles, estructurar mis respuestas con el método STAR y ganar confianza para la entrevista."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';

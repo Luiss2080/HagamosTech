@@ -20,16 +20,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Requerimientos","desc":"Analizamos tus procesos y definimos la arquitectura de la solución a medida.","image":"/img/08_Cards/proceso-sistemas-requisitos.webp"},
-  {"title":"Bases de Datos","desc":"Diseñamos y normalizamos la estructura de datos que soportará la operación.","image":"/img/08_Cards/proceso-sistemas-datos.webp"},
-  {"title":"Desarrollo","desc":"Construimos el sistema según requisitos, funcionalidades y entregables acordados.","image":"/img/08_Cards/proceso-sistemas-desarrollo.webp"},
-  {"title":"Entrega","desc":"Presentamos los entregables acordados. El mantenimiento posterior se conversa por separado.","image":"/img/08_Cards/proceso-sistemas-entrega.webp"}
+  {"title":"Análisis de Procesos","desc":"Mapeamos el flujo de trabajo: qué información entra, quién la manipula y qué reportes se esperan.","image":"/img/08_Cards/proceso-sistemas-requisitos.webp"},
+  {"title":"Arquitectura de Datos","desc":"Diseñamos la base de datos relacional y la seguridad para asegurar consultas rápidas y consistentes.","image":"/img/08_Cards/proceso-sistemas-arquitectura.webp"},
+  {"title":"Desarrollo de Módulos","desc":"Programamos las pantallas de administración, formularios, filtros avanzados y permisos por perfil.","image":"/img/08_Cards/proceso-sistemas-desarrollo.webp"},
+  {"title":"Validación y Puesta en Marcha","desc":"Probamos el sistema en conjunto con datos de prueba y dejamos todo configurado para su uso diario.","image":"/img/08_Cards/proceso-sistemas-entrega.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Sistema de inventario","role":"Ejemplo de proyecto","text":"Quiero revisar si un sistema puede organizar mi inventario y reportes."},
-  {"name":"Gestión de datos","role":"Ejemplo de proyecto","text":"Necesito estructurar la información que utiliza mi aplicación."},
-  {"name":"Herramienta interna","role":"Ejemplo de proyecto","text":"Busco evaluar una aplicación que responda a requisitos específicos."},
+  {"name":"Control de Ventas y Stock","role":"Ejemplo de sistema","text":"Necesito registrar ventas diarias, controlar el stock de productos y saber qué artículos requieren reposición urgente."},
+  {"name":"Portal Institucional y Académico","role":"Ejemplo de sistema","text":"Queremos una plataforma para gestionar notas, usuarios, comunicados internos y matrículas de forma organizada."},
+  {"name":"Panel de Clientes y Cobranzas","role":"Ejemplo de sistema","text":"Busco automatizar el seguimiento de presupuestos, historial de compras de clientes y reportes de facturación."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -37,10 +37,10 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-laptop-code","label":"Sistemas a Medida"},
-  {"icon":"fa-database","label":"Datos Normalizados"},
-  {"icon":"fa-database","label":"Bases de datos"},
-  {"icon":"fa-headset","label":"Mantenimiento a coordinar"}
+  {"icon":"fa-cash-register","label":"Punto de Venta (POS)"},
+  {"icon":"fa-boxes-stacked","label":"Control de Inventarios"},
+  {"icon":"fa-database","label":"Bases de Datos Seguras"},
+  {"icon":"fa-user-shield","label":"Roles y Permisos de Usuario"}
 ];
 
 const SistemasApps = () => {

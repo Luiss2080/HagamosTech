@@ -21,16 +21,16 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Identidad y Brief","desc":"Estudiamos los valores de tu marca, colores corporativos y a quién te diriges.","image":"/img/08_Cards/proceso-diseno-brief.webp"},
-  {"title":"Concepto y Diseño","desc":"Creamos propuestas conceptuales y bocetos iniciales hasta definir la dirección visual.","image":"/img/08_Cards/proceso-diseno-concepto.webp"},
-  {"title":"Producción Final","desc":"Vectorizamos, preparamos fondos transparentes y formatos listos para imprimir o redes.","image":"/img/08_Cards/proceso-diseno-produccion.webp"},
-  {"title":"Entrega acordada","desc":"Presentamos los archivos y formatos incluidos en la propuesta; los ajustes se conversan según el alcance acordado.","image":"/img/08_Cards/proceso-diseno-entrega.webp"}
+  {"title":"Brief y Objetivos","desc":"Analizamos el público objetivo, estilo visual deseado y las aplicaciones que tendrá el diseño.","image":"/img/08_Cards/proceso-diseno-brief.webp"},
+  {"title":"Bocetos y Concepto","desc":"Exploramos propuestas tipográficas, símbolos e isotipos hasta encontrar la dirección visual ideal.","image":"/img/08_Cards/proceso-diseno-concepto.webp"},
+  {"title":"Vectorización y Pulido","desc":"Digitalizamos y ajustamos proporciones en alta precisión para garantizar nitidez en cualquier escala.","image":"/img/08_Cards/proceso-diseno-produccion.webp"},
+  {"title":"Entrega de Formatos","desc":"Entregamos los archivos vectoriales originales, versiones con fondo transparente y archivos para imprenta.","image":"/img/08_Cards/proceso-diseno-entrega.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Identidad visual","role":"Ejemplo de proyecto","text":"Quiero definir una imagen coherente para presentar mi marca."},
-  {"name":"Piezas gráficas","role":"Ejemplo de proyecto","text":"Necesito piezas para redes, impresión o difusión de un evento."},
-  {"name":"Catálogo","role":"Ejemplo de proyecto","text":"Busco organizar visualmente los productos o servicios de mi emprendimiento."},
+  {"name":"Identidad y Logotipo","role":"Ejemplo de proyecto","text":"Quiero un logotipo profesional con manual de marca y versiones a color y monocromáticas para uniformes y papelería."},
+  {"name":"Campaña en Redes Sociales","role":"Ejemplo de proyecto","text":"Necesito un paquete de flyers e historias para promocionar ofertas y captar clientes en Instagram y TikTok."},
+  {"name":"Catálogo y Etiquetas de Producto","role":"Ejemplo de proyecto","text":"Busco maquetar el catálogo de mis productos con empaques y etiquetas listas para mandar a la imprenta."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -38,10 +38,10 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-pen-nib","label":"Identidad Única"},
-  {"icon":"fa-expand","label":"Formatos 4x4 y Print"},
-  {"icon":"fa-eraser","label":"Fondos Transparentes"},
-  {"icon":"fa-boxes","label":"Entrega Completa"}
+  {"icon":"fa-pen-nib","label":"Logos Vectoriales"},
+  {"icon":"fa-rectangle-ad","label":"Publicidad para Redes"},
+  {"icon":"fa-layer-group","label":"Fondos Transparentes y PNG"},
+  {"icon":"fa-file-pdf","label":"Formatos Listos para Imprenta"}
 ];
 
 const DisenoGrafico = () => {
