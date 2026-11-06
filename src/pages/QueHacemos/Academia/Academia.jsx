@@ -58,31 +58,31 @@ const ESPECIALIDADES = [
     title: 'Trabajos Escolares y Secundaria',
     desc: 'Trípticos, tareas guiadas, informes escolares, periódicos murales, carpetas y proyectos de feria para estudiantes de colegio y secundaria.',
     icon: <BookOpen size={20} />,
-    image: '/img/08_Cards/academico-tareas.webp'
+    image: '/img/08_Cards/academico-apoyo-escolar-v2.webp'
   },
   {
     title: 'Tesis, Monografías y Proyectos de Grado',
     desc: 'Asesoramiento y acompañamiento en delimitación de tema, marco teórico, metodología, estructura APA 7 y preparación de defensa para institutos y universidades.',
     icon: <GraduationCap size={20} />,
-    image: '/img/08_Cards/academico-mentorias.webp'
+    image: '/img/08_Cards/academico-tesis-monografia-v2.webp'
   },
   {
     title: 'Informes Técnicos y Ensayos',
     desc: 'Elaboración y revisión guiada de informes de pasantía, prácticas, ensayos académicos y monografías con rigor y formato estandarizado.',
     icon: <Microscope size={20} />,
-    image: '/img/08_Cards/academico-sistemas-datos.webp'
+    image: '/img/08_Cards/academico-informes-tecnicos-v2.webp'
   },
   {
     title: 'Diapositivas y Presentaciones',
     desc: 'Organización visual de diapositivas interactivas en PowerPoint y Canva para exposiciones, clases, defensas de tesis y proyectos.',
     icon: <Stethoscope size={20} />,
-    image: '/img/08_Cards/academico-exposiciones.webp'
+    image: '/img/08_Cards/academico-presentaciones-v2.webp'
   },
   {
     title: 'Trípticos, Afiches e Infografías',
     desc: 'Diseño de trípticos, dípticos, esquemas, mapas conceptuales y líneas de tiempo para estructurar contenidos escolares y de estudio.',
     icon: <LineChart size={20} />,
-    image: '/img/08_Cards/academico-infografias.webp'
+    image: '/img/08_Cards/academico-triptico-feria-v2.webp'
   },
   {
     title: 'Proyectos Tecnológicos y Programación',
@@ -176,7 +176,7 @@ const Academia = () => {
           buttonLabel: 'Consultar acompañamiento',
           href: 'https://wa.me/59161320004?text=Hola,%20quiero%20consultar%20por%20acompañamiento%20académico',
           eyebrow: 'ACOMPAÑAMIENTO ACADÉMICO',
-          image: '/img/08_Cards/academico-mentorias.webp',
+          image: '/img/08_Cards/academico-apoyo-escolar-v2.webp',
           imageAlt: 'Sesión de orientación académica',
         }}
       />

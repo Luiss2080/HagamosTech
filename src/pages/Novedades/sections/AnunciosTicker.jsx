@@ -5,7 +5,7 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 const ANUNCIOS = [
     { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB', link: '/que-hacemos/tecnologia' },
     { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE', link: '/servicios/sistemas-apps' },
-    { titulo: 'Trabajos escolares y tesis', desc: 'Tesis, informes, monografías, diapositivas y trípticos para colegio, instituto y universidad.', img: '/img/08_Cards/novedad-ticker-academia.webp', tag: 'ACADEMIA', link: '/que-hacemos/academia' },
+    { titulo: 'Trabajos escolares y tesis', desc: 'Tesis, informes, monografías, diapositivas y trípticos para colegio, instituto y universidad.', img: '/img/08_Cards/academico-triptico-feria-v2.webp', tag: 'ACADEMIA', link: '/que-hacemos/academia' },
     { titulo: 'Diseño y marketing digital', desc: 'Logos, identidad visual, flyers para redes sociales y catálogos de venta con QR.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO', link: '/servicios/diseno-grafico' },
     { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO', link: '/servicios/empleo' },
     { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA', link: '/contactanos' },

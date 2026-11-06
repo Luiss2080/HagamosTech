@@ -271,7 +271,7 @@ Tesis y proyectos de grado, monografías, informes académicos, trípticos y afi
         title: "Tu proyecto académico, con orientación clara",
         description: "Cuéntanos la materia o consigna y revisamos una modalidad adecuada para avanzar.",
         href: "https://wa.me/59161320004?text=Hola%2C%20quiero%20consultar%20sobre%20acompa%C3%B1amiento%20acad%C3%A9mico",
-        image: "/img/08_Cards/academico-mentorias.webp",
+        image: "/img/08_Cards/academico-apoyo-escolar-v2.webp",
         imageAlt: "Tu proyecto académico, con orientación clara",
       }}>
 

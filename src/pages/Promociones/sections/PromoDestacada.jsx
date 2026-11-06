@@ -3,7 +3,7 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Trabajos académicos y escolares', precio: 'A conversar', normal: '', img: '/img/08_Cards/novedad-home-academia.webp', desc: 'Tesis, proyectos de grado, monografías, presentaciones en diapositivas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.', color: 'bg-[#0D150B]' },
+        { nombre: 'Trabajos académicos y escolares', precio: 'A conversar', normal: '', img: '/img/08_Cards/academico-promocion-v2.webp', desc: 'Tesis, proyectos de grado, monografías, presentaciones en diapositivas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.', color: 'bg-[#0D150B]' },
         { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Sitios corporativos, landing pages de alta conversión, tiendas online y catálogos digitales con conexión a pedidos por WhatsApp.', color: 'bg-[#111827]' },
         { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Control de inventarios, sistemas POS de ventas, facturación, bases de datos y paneles de gestión adaptados a tu operación.', color: 'bg-[#171717]' },
         { nombre: 'Diseño gráfico y marketing comercial', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'Identidad visual, logos vectoriales, flyers publicitarios para redes sociales, packaging y catálogos de productos para promociones.', color: 'bg-[#0A0A0A]' },
