@@ -2,15 +2,19 @@ import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const ROW1 = [
-  { name: 'Sitio web', logoIcon: 'fa-globe', industry: 'Presencia digital', icon: 'fa-code', metric: 'A evaluar' },
-  { name: 'Sistema a medida', logoIcon: 'fa-window-maximize', industry: 'Gestión de información', icon: 'fa-database', metric: 'Según alcance' },
-  { name: 'Base de datos', logoIcon: 'fa-database', industry: 'Organización de datos', icon: 'fa-table', metric: 'Según requisitos' }
+  { name: 'Páginas Web y Tiendas', logoIcon: 'fa-globe', industry: 'Presencia digital y comercio', icon: 'fa-code', metric: 'Web y Móvil' },
+  { name: 'Tesis y Monografías', logoIcon: 'fa-graduation-cap', industry: 'Acompañamiento universitario', icon: 'fa-book-bookmark', metric: 'APA 7 / Pauta' },
+  { name: 'Software y Sistemas POS', logoIcon: 'fa-window-maximize', industry: 'Gestión comercial e inventarios', icon: 'fa-database', metric: 'A medida' },
+  { name: 'Marketing y Publicidad', logoIcon: 'fa-bullhorn', industry: 'Redes sociales y campañas', icon: 'fa-rectangle-ad', metric: 'Digital e impreso' },
+  { name: 'Trabajos Escolares y Trípticos', logoIcon: 'fa-school', industry: 'Colegio y secundaria', icon: 'fa-file-lines', metric: 'Todos los niveles' }
 ];
 
 const ROW2 = [
-  { name: 'Mentoría académica', logoIcon: 'fa-book-open', industry: 'Acompañamiento', icon: 'fa-user-graduate', metric: 'Según materia' },
-  { name: 'Diseño gráfico', logoIcon: 'fa-pen-nib', industry: 'Identidad y piezas', icon: 'fa-palette', metric: 'A conversar' },
-  { name: 'Portafolio digital', logoIcon: 'fa-briefcase', industry: 'Presentación profesional', icon: 'fa-id-card', metric: 'Según alcance' }
+  { name: 'Diapositivas y Exposiciones', logoIcon: 'fa-file-powerpoint', industry: 'PowerPoint y defensas', icon: 'fa-presentation-screen', metric: 'Diseño dinámico' },
+  { name: 'Logos y Branding', logoIcon: 'fa-pen-nib', industry: 'Identidad visual y manuales', icon: 'fa-palette', metric: 'Vectorial' },
+  { name: 'Paneles y Dashboards', logoIcon: 'fa-table-columns', industry: 'Control de datos y reportes', icon: 'fa-chart-pie', metric: 'A medida' },
+  { name: 'CV y Portafolio Digital', logoIcon: 'fa-id-card', industry: 'Optimización ATS y LinkedIn', icon: 'fa-user-tie', metric: 'Profesional' },
+  { name: 'Soluciones a Medida con IA', logoIcon: 'fa-lightbulb', industry: 'Prototipos y herramientas', icon: 'fa-microchip', metric: 'Viabilidad técnica' }
 ];
 
 const TrustedClients = () => {

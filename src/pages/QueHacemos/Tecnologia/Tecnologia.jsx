@@ -113,7 +113,7 @@ const Tecnologia = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollamos sitios web y software a medida, además de recursos de diseño y acompañamiento académico. Revisamos cada solicitud según su alcance y viabilidad.
+            Desarrollamos soluciones de software a medida, plataformas web interactivas, sistemas de gestión y herramientas digitales adaptadas a tus procesos y objetivos comerciales.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

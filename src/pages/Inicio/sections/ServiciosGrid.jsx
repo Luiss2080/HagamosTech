@@ -36,7 +36,7 @@ const ServiciosGrid = () => {
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-                        Ofrecemos acompañamiento académico, diseño gráfico, desarrollo web y software a medida. Alcance, tiempos, presupuesto y modalidad se conversan para cada caso.
+                        Soluciones digitales integrales para cada etapa: tareas y trabajos escolares, tesis de grado, software a medida, desarrollo web, identidad de marca y piezas de marketing publicitario. Modalidad y acompañamiento académico adaptados a tu caso.
                     </p>
                 </div>
 

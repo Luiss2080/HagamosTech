@@ -45,7 +45,7 @@ const Footer = () => {
               />
             </Link>
             <p className="text-white/70 text-[14px] leading-relaxed max-w-sm font-medium">
-              Transformamos problemas, necesidades e ideas en soluciones reales usando tecnología, creatividad y conocimiento. Vos tenés la necesidad, hagámosla juntos.
+              Soluciones digitales, trabajos académicos y escolares, desarrollo de software, páginas web y diseño para marketing y marcas. Vos tenés la necesidad, hagámosla juntos.
             </p>
             <div className="flex items-center justify-center gap-4 pt-3">
               {[

@@ -21,7 +21,7 @@ const HeroHagamosTech = () => {
                     <div className="lg:col-span-6 flex flex-col gap-7 text-center lg:text-left items-center lg:items-start justify-center animate-fade-in-up">
 
                         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#A3E635]/10 border border-[#A3E635]/30 text-[#A3E635] text-[11px] font-black uppercase tracking-[0.18em] shadow-[0_0_15px_rgba(163,230,53,0.15)]">
-                            <i className="fas fa-bolt"></i> Soluciones digitales y tecnológicas
+                            <i className="fas fa-bolt"></i> Soluciones digitales, académicas y de software
                         </span>
 
                         <h1
@@ -47,7 +47,7 @@ const HeroHagamosTech = () => {
                         </h1>
 
                         <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Acompañamiento <strong className="text-white">académico</strong>, <strong className="text-white">diseño gráfico</strong> y desarrollo <strong className="text-white">web y de software</strong> para personas, profesionales, emprendimientos e instituciones. Contanos qué necesitás y revisamos el alcance contigo.
+                            Todo tipo de solución digital: trabajos <strong className="text-white">escolares y académicos</strong> (informes, tesis, diapositivas, trípticos), desarrollo de <strong className="text-white">software y páginas web</strong>, y diseño gráfico para <strong className="text-white">marketing y marcas</strong>. Contanos qué necesitás y lo hacemos realidad.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center lg:justify-start">

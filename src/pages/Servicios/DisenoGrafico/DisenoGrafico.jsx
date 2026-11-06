@@ -98,7 +98,7 @@ const DisenoGrafico = () => {
 </h1>
 
               <p className="text-base sm:text-lg font-bold text-slate-300 dark:text-slate-300 leading-relaxed max-w-xl text-center">
-                Producción visual de alto impacto con revisión técnica según el alcance acordado, fondos transparentes y adaptabilidad para medios impresos y digitales.
+                Diseño gráfico para marketing y presencia de marca: piezas publicitarias para redes sociales, flyers, catálogos comerciales, packaging e identidad visual de alto impacto.
               </p>
 
               {/* Action Buttons */}
