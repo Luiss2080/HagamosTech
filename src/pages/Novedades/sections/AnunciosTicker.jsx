@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const ANUNCIOS = [
-    { titulo: 'Desarrollo web', desc: 'Sitios, landing pages, catálogos y portafolios, según alcance.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB', link: '/que-hacemos/tecnologia' },
-    { titulo: 'Sistemas a medida', desc: 'Revisamos requisitos, usuarios y datos antes de proponer un desarrollo.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE', link: '/servicios/sistemas-apps' },
-    { titulo: 'Trabajos escolares y tesis', desc: 'Tesis, informes, monografías, diapositivas y trípticos para colegio, instituto y universidad.', img: '/img/08_Cards/academico-triptico-feria-v2.webp', tag: 'ACADEMIA', link: '/que-hacemos/academia' },
-    { titulo: 'Diseño y marketing digital', desc: 'Logos, identidad visual, flyers para redes sociales y catálogos de venta con QR.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO', link: '/servicios/diseno-grafico' },
-    { titulo: 'Desarrollo profesional', desc: 'Orientación para currículums, portafolios y preparación de entrevistas.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO', link: '/servicios/empleo' },
-    { titulo: 'Condiciones conversables', desc: 'Alcance, tiempos, presupuesto y modalidad se revisan para cada caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA', link: '/contactanos' },
+    { titulo: 'Desarrollo web', desc: 'Anota el objetivo del sitio, las secciones necesarias y el contenido que ya tienes.', img: '/img/08_Cards/novedad-ticker-web.webp', tag: 'WEB', link: '/que-hacemos/tecnologia' },
+    { titulo: 'Sistemas a medida', desc: 'Enumera tareas, usuarios, datos e informes que el sistema tendría que manejar.', img: '/img/08_Cards/novedad-ticker-software.webp', tag: 'SOFTWARE', link: '/servicios/sistemas-apps' },
+    { titulo: 'Trabajos escolares y tesis', desc: 'Comparte la consigna, materia, nivel y pauta para revisar disponibilidad y tipo de orientación.', img: '/img/08_Cards/academico-triptico-feria-v2.webp', tag: 'ACADEMIA', link: '/que-hacemos/academia' },
+    { titulo: 'Diseño y marketing digital', desc: 'Define dónde se usará cada pieza, en qué formato y qué materiales de marca están disponibles.', img: '/img/08_Cards/novedad-ticker-diseno.webp', tag: 'DISEÑO', link: '/servicios/diseno-grafico' },
+    { titulo: 'Desarrollo profesional', desc: 'Ten a mano tu CV, el puesto de interés y la etapa del proceso de selección.', img: '/img/08_Cards/novedad-ticker-empleo.webp', tag: 'EMPLEO', link: '/servicios/empleo' },
+    { titulo: 'Consulta de proyecto', desc: 'Explica el objetivo y los límites del pedido; tiempos, presupuesto y modalidad se conversan por caso.', img: '/img/08_Cards/novedad-ticker-consulta.webp', tag: 'CONSULTA', link: '/contactanos' },
 ];
 
 const TAG_STYLES = {
@@ -113,7 +113,7 @@ const AnunciosTicker = ({ compact = false }) => {
             {/* Título */}
             <div className="relative z-10 text-center mb-5 px-6">
                 <span className="inline-block bg-[#A3E635]/10 text-[#A3E635] px-4 py-1.5 rounded-full text-[10px] font-black tracking-[0.2em] uppercase border border-[#A3E635]/25 backdrop-blur-sm">
-                    <i className="fas fa-bullhorn mr-1.5 text-[#A3E635]"></i> Avisos Rápidos
+                    <i className="fas fa-bullhorn mr-1.5 text-[#A3E635]"></i> Antes de consultar
                 </span>
                 <h2 className="text-white text-3xl sm:text-4xl md:text-5xl font-black font-heading mt-3 mb-3">
                     Enterate de <span className="relative inline-block text-[#A3E635]">

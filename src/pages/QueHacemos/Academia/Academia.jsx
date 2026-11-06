@@ -16,12 +16,12 @@ const METRICS = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Carpeta Escolar y Tareas', role: 'Secundaria y Primaria', text: 'Mi hijo tenía una carpeta escolar completa con resúmenes, esquemas visuales e infografías; el resultado fue claro y muy ordenado.' },
-  { name: 'Proyectos de Informática y Redes', role: 'Educación Superior', text: 'Requería orientación para simular topologías de red y entender la lógica de algoritmos de programación para mi entrega práctica.' },
-  { name: 'Investigación y Salud', role: 'Área Biomédica y Social', text: 'Me apoyaron con diagramas explicativos, líneas de tiempo y la adaptación estricta de tablas y figuras al formato APA 7 para mi investigación.' }
+  { name: 'Tareas y carpeta escolar', role: 'Ejemplo · primaria y secundaria', text: 'Organizar una carpeta con resúmenes, esquemas e infografías a partir de la consigna escolar.' },
+  { name: 'Práctica de informática', role: 'Ejemplo · instituto', text: 'Repasar algoritmos y planificar una simulación de redes según los requisitos de la práctica.' },
+  { name: 'Informe de investigación', role: 'Ejemplo · universidad', text: 'Revisar estructura, tablas, figuras y referencias según la pauta metodológica y el formato solicitado.' }
 ];
 
-const FULL_TEXT = `[solicitud] Apoyo con tareas, trabajos escolares o universitarios\n[organización] Delimitamos tema, estructura y pauta (APA / escolar)\n[desarrollo] Elaboramos informes, diapositivas, trípticos o tesis\n[revisión] Revisamos avances y preparamos la exposición o entrega\n> Acompañamiento académico para colegio, instituto y universidad.`;
+const FULL_TEXT = `[consulta] Materia, nivel y consigna\n[plan] Revisamos tema y pauta de entrega\n[acompañamiento] Explicación y ejercicios guiados\n[exposición] El estudiante prepara su propio trabajo\n> La disponibilidad depende de la materia y el nivel.`;
 
 const CompilerWindow = () => {
   const [text, setText] = useState('');
@@ -55,38 +55,38 @@ const CompilerWindow = () => {
 
 const ESPECIALIDADES = [
   {
-    title: 'Trabajos Escolares y Secundaria',
-    desc: 'Trípticos, tareas guiadas, informes escolares, periódicos murales, carpetas y proyectos de feria para estudiantes de colegio y secundaria.',
+    title: 'Acompañamiento Escolar',
+    desc: 'Tareas guiadas, repaso de contenidos y organización de carpetas para primaria, colegio y secundaria, según la materia disponible.',
     icon: <BookOpen size={20} />,
     image: '/img/08_Cards/academico-apoyo-escolar-v2.webp'
   },
   {
     title: 'Tesis, Monografías y Proyectos de Grado',
-    desc: 'Asesoramiento y acompañamiento en delimitación de tema, marco teórico, metodología, estructura APA 7 y preparación de defensa para institutos y universidades.',
+    desc: 'Delimitación de tema, marco teórico, metodología, citas APA 7 y preparación de defensa a partir del trabajo del estudiante.',
     icon: <GraduationCap size={20} />,
     image: '/img/08_Cards/academico-tesis-monografia-v2.webp'
   },
   {
     title: 'Informes Técnicos y Ensayos',
-    desc: 'Elaboración y revisión guiada de informes de pasantía, prácticas, ensayos académicos y monografías con rigor y formato estandarizado.',
+    desc: 'Organización de informes de práctica o pasantía y ensayos: secciones, fuentes y referencias según la pauta recibida.',
     icon: <Microscope size={20} />,
     image: '/img/08_Cards/academico-informes-tecnicos-v2.webp'
   },
   {
     title: 'Diapositivas y Presentaciones',
-    desc: 'Organización visual de diapositivas interactivas en PowerPoint y Canva para exposiciones, clases, defensas de tesis y proyectos.',
+    desc: 'Estructura de ideas y jerarquía visual para diapositivas de clases, exposiciones o defensas, según el formato solicitado.',
     icon: <Stethoscope size={20} />,
     image: '/img/08_Cards/academico-presentaciones-v2.webp'
   },
   {
     title: 'Trípticos, Afiches e Infografías',
-    desc: 'Diseño de trípticos, dípticos, esquemas, mapas conceptuales y líneas de tiempo para estructurar contenidos escolares y de estudio.',
+    desc: 'Síntesis de información en trípticos, mapas, esquemas e infografías para estudio y exposición, de acuerdo con la consigna.',
     icon: <LineChart size={20} />,
     image: '/img/08_Cards/academico-triptico-feria-v2.webp'
   },
   {
     title: 'Proyectos Tecnológicos y Programación',
-    desc: 'Tutoría en proyectos de grado, algoritmos, lógica, bases de datos y simuladores educativos según consigna.',
+    desc: 'Tutoría para comprender algoritmos, lógica, bases de datos y simuladores; el estudiante desarrolla su propio proyecto.',
     icon: <Binary size={20} />,
     image: '/img/08_Cards/academico-programacion.webp'
   }
@@ -120,7 +120,7 @@ const Academia = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Acompañamiento académico integral en todo tipo de trabajo escolar y formativo: informes, proyectos, tesis, monografías, presentaciones en diapositivas, trípticos y tareas para colegio, secundaria, instituto y universidad.
+            Orientación para estudiantes de primaria, colegio, secundaria, institutos y universidades. Revisamos materia, nivel, consigna y disponibilidad; el estudiante conserva la autoría de su trabajo.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

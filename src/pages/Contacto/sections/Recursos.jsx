@@ -3,8 +3,9 @@ import FondoTech from '../../../components/fondos/FondoTech';
 
 const recursosData = [
     {
+        eyebrow: "ACOMPAÑAMIENTO ACADÉMICO",
         title: "Trabajos Escolares y Académicos",
-        desc: "Elaboración y apoyo en tesis, proyectos de grado, monografías, informes técnicos, diapositivas dinámicas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.",
+        desc: "Orientación según materia, nivel y consigna. El estudiante conserva la autoría y desarrolla su propio trabajo.",
         icon: "fa-graduation-cap",
         theme: {
             cardBg: "bg-[#A3E635]",
@@ -20,14 +21,15 @@ const recursosData = [
             buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
-            { label: "Colegio a U", icon: "fa-school" },
-            { label: "Formato APA 7", icon: "fa-book" },
-            { label: "Diapositivas y Trípticos", icon: "fa-file-powerpoint" }
+            { label: "Tareas guiadas", icon: "fa-book-open" },
+            { label: "Informes y monografías", icon: "fa-file-lines" },
+            { label: "Exposiciones", icon: "fa-person-chalkboard" }
         ]
     },
     {
+        eyebrow: "DESARROLLO DIGITAL",
         title: "Software, Sistemas y Web",
-        desc: "Desarrollo de páginas web corporativas, tiendas online con catálogo, sistemas POS de ventas, inventarios, bases de datos seguras y herramientas digitales a medida.",
+        desc: "Páginas, tiendas y sistemas se delimitan según los requisitos, datos y funciones de cada proyecto.",
         icon: "fa-laptop-code",
         theme: {
             cardBg: "bg-white",
@@ -43,14 +45,15 @@ const recursosData = [
             buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
-            { label: "Sistemas POS", icon: "fa-cash-register" },
-            { label: "Tiendas Online", icon: "fa-cart-shopping" },
-            { label: "Bases de Datos", icon: "fa-database" }
+            { label: "Sitios y catálogos", icon: "fa-globe" },
+            { label: "POS e inventarios", icon: "fa-cash-register" },
+            { label: "Datos y reportes", icon: "fa-database" }
         ]
     },
     {
+        eyebrow: "DISEÑO Y COMUNICACIÓN",
         title: "Diseño Gráfico y Marketing",
-        desc: "Identidad visual de marca, logos vectoriales, piezas publicitarias para redes sociales (Instagram, TikTok, Facebook), packaging, etiquetas y catálogos con código QR.",
+        desc: "El uso, el canal y el formato ayudan a definir qué piezas gráficas necesita presentar una marca o producto.",
         icon: "fa-palette",
         theme: {
             cardBg: "bg-[#171717]",
@@ -66,9 +69,9 @@ const recursosData = [
             buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
         },
         tags: [
-            { label: "Branding", icon: "fa-pen-nib" },
-            { label: "Redes Sociales", icon: "fa-rectangle-ad" },
-            { label: "Catálogos QR", icon: "fa-qrcode" }
+            { label: "Identidad visual", icon: "fa-pen-nib" },
+            { label: "Piezas para redes", icon: "fa-rectangle-ad" },
+            { label: "Packaging y catálogos", icon: "fa-box" }
         ]
     }
 ];
@@ -81,12 +84,12 @@ const Recursos = () => {
                 <div className="container mx-auto px-6 max-w-6xl relative z-20">
                     <div className="text-center mb-4 relative z-10">
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-4 leading-tight">
-                            Recursos de <span className="relative inline-block px-2 text-[#84CC16]">
-                                Atención
+                            Elige un <span className="relative inline-block px-2 text-[#84CC16]">
+                                tema para consultar
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 z-[-1] text-[#A3E635] opacity-80" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
                             </span>
                         </h2>
-                        <p className="text-white/70 font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">Todo lo que necesitás saber para empezar a convertir tu necesidad en solución.</p>
+                        <p className="text-white/70 font-medium max-w-3xl mx-auto text-base sm:text-lg leading-relaxed">Comparte el contexto que ya tienes y revisaremos qué información hace falta para orientar tu consulta.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -104,7 +107,7 @@ const Recursos = () => {
                                     </div>
 
                                     <div className="absolute top-6 right-6 text-xs font-black uppercase tracking-widest opacity-70">
-                                        <i className="fas fa-sparkles mr-1"></i> TOP
+                                        <i className="fas fa-sparkles mr-1"></i> {item.eyebrow}
                                     </div>
 
                                     <h3 className="text-2xl font-black mb-4 tracking-tight leading-none">{item.title}</h3>

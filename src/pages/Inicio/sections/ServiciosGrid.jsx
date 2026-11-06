@@ -36,7 +36,7 @@ const ServiciosGrid = () => {
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-medium leading-relaxed">
-                        Soluciones digitales integrales para cada etapa: tareas y trabajos escolares, tesis de grado, software a medida, desarrollo web, identidad de marca y piezas de marketing publicitario. Modalidad y acompañamiento académico adaptados a tu caso.
+                        Elegí la categoría que mejor se acerque a tu necesidad. Cada servicio muestra ejemplos y condiciones que revisamos antes de definir el alcance.
                     </p>
                 </div>
 

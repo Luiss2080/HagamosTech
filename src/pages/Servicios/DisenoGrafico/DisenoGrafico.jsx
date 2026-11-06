@@ -23,17 +23,16 @@ const BRANDS = [
 const PROCESO = [
   {"title":"Brief y Objetivos","desc":"Analizamos el público objetivo, estilo visual deseado y las aplicaciones que tendrá el diseño.","image":"/img/08_Cards/proceso-diseno-brief.webp"},
   {"title":"Bocetos y Concepto","desc":"Exploramos propuestas tipográficas, símbolos e isotipos hasta encontrar la dirección visual ideal.","image":"/img/08_Cards/proceso-diseno-concepto.webp"},
-  {"title":"Vectorización y Pulido","desc":"Digitalizamos y ajustamos proporciones en alta precisión para garantizar nitidez en cualquier escala.","image":"/img/08_Cards/proceso-diseno-produccion.webp"},
+  {"title":"Vectorización y Pulido","desc":"Digitalizamos y ajustamos proporciones para conservar las formas al preparar el diseño en distintos tamaños.","image":"/img/08_Cards/proceso-diseno-produccion.webp"},
   {"title":"Entrega de Formatos","desc":"Entregamos los archivos vectoriales originales, versiones con fondo transparente y archivos para imprenta.","image":"/img/08_Cards/proceso-diseno-entrega.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Identidad y Logotipo","role":"Ejemplo de proyecto","text":"Quiero un logotipo profesional con manual de marca y versiones a color y monocromáticas para uniformes y papelería."},
-  {"name":"Campaña en Redes Sociales","role":"Ejemplo de proyecto","text":"Necesito un paquete de flyers e historias para promocionar ofertas y captar clientes en Instagram y TikTok."},
-  {"name":"Catálogo y Etiquetas de Producto","role":"Ejemplo de proyecto","text":"Busco maquetar el catálogo de mis productos con empaques y etiquetas listas para mandar a la imprenta."}
+  {"name":"Identidad y logotipo","role":"Marca visual","text":"Definir el logotipo, sus variantes y los usos previstos en piezas digitales o impresas."},
+  {"name":"Piezas para redes sociales","role":"Comunicación digital","text":"Organizar textos, formatos y recursos visuales para una campaña en los canales elegidos."},
+  {"name":"Catálogo y etiquetas de producto","role":"Material de producto","text":"Ordenar información e imágenes y definir formatos para presentar productos en piezas gráficas."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -175,7 +174,6 @@ const DisenoGrafico = () => {
       </section>
       
       {/* SECCI�N 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCI�N 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -274,7 +272,7 @@ Logos e Identidad Visual (Isologotipos), Flyers, Banners, Pancartas y Redes Soci
         imageAlt: "Démosle forma a la identidad de tu proyecto",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de diseño gráfico" description="Revisamos cada pedido según sus objetivos, piezas necesarias y alcance acordado." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de diseño gráfico" description="El uso final define el formato: una pieza para redes, un catálogo y un material impreso necesitan preparaciones distintas." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

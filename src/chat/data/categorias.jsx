@@ -19,10 +19,10 @@ export const categories = [
     icon: <BookOpen size={16} />,
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
-      { q: '¿Qué trabajos escolares y académicos realizan?', a: '**Realizamos y apoyamos en todo tipo de trabajo escolar y académico:** informes, proyectos, tesis, monografías, presentaciones en diapositivas, trípticos, afiches y tareas guiadas para todos los niveles: colegio, secundaria, instituto y universidad. Ofrecemos acompañamiento académico integral y formato APA 7.' },
-      { q: '¿Hacen trípticos, diapositivas y proyectos de colegio?', a: '**Sí.** Diseñamos trípticos informativos, esquemas visuales, carpetas y diapositivas dinámicas en PowerPoint para exposiciones escolares, ferias y clases.' },
-      { q: '¿Dan apoyo en tesis, proyectos de grado y tecnología?', a: '**Sí.** Apoyamos en proyectos de grado, tesis, monografías, desarrollo de sistemas y algoritmos computacionales.' },
-      { q: '¿Hacen entregas urgentes de trabajos escolares?', a: '**Sí.** Atendemos urgencias de colegio y universidad. Trípticos, diapositivas y tareas guiadas pueden coordinarse para entrega rápida (24 a 48 hrs según materia y volumen). Escribinos por WhatsApp para revisar tu caso.' }
+      { q: '¿Qué apoyo académico ofrecen?', a: '**Orientamos** en tareas guiadas, informes, monografías, exposiciones y proyectos de aprendizaje. La disponibilidad depende de la materia y el nivel; el estudiante desarrolla y presenta su propio trabajo.' },
+      { q: '¿Pueden orientarme con un tríptico o una exposición escolar?', a: '**Sí.** Podemos revisar la consigna y orientar la organización de contenidos, esquemas y diapositivas para una exposición o feria escolar.' },
+      { q: '¿Dan apoyo en tesis, proyectos de grado y tecnología?', a: '**Sí.** Podemos orientar la delimitación del tema, la estructura, las referencias y la comprensión de algoritmos o simulaciones, según la consigna y el alcance.' },
+      { q: '¿Qué pasa si mi fecha de entrega está cerca?', a: 'Compartinos la fecha, la materia y la consigna. Revisamos disponibilidad antes de confirmar si podemos acompañarte; no asumimos un plazo sin evaluar el caso.' }
     ]
   },
   {

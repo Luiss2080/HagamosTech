@@ -3,10 +3,10 @@ import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const PromoDestacada = () => {
     const combos = [
-        { nombre: 'Trabajos académicos y escolares', precio: 'A conversar', normal: '', img: '/img/08_Cards/academico-promocion-v2.webp', desc: 'Tesis, proyectos de grado, monografías, presentaciones en diapositivas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.', color: 'bg-[#0D150B]' },
-        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Sitios corporativos, landing pages de alta conversión, tiendas online y catálogos digitales con conexión a pedidos por WhatsApp.', color: 'bg-[#111827]' },
-        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Control de inventarios, sistemas POS de ventas, facturación, bases de datos y paneles de gestión adaptados a tu operación.', color: 'bg-[#171717]' },
-        { nombre: 'Diseño gráfico y marketing comercial', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'Identidad visual, logos vectoriales, flyers publicitarios para redes sociales, packaging y catálogos de productos para promociones.', color: 'bg-[#0A0A0A]' },
+        { nombre: 'Trabajos académicos y escolares', precio: 'A conversar', normal: '', img: '/img/08_Cards/academico-promocion-v2.webp', desc: 'La orientación se define con la materia, el nivel y la consigna. El estudiante desarrolla y presenta su propio trabajo.', color: 'bg-[#0D150B]' },
+        { nombre: 'Diseño y desarrollo web', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-web.webp', desc: 'Objetivo, secciones, contenidos y funciones se acuerdan para cada sitio, landing page, tienda o catálogo según alcance y viabilidad.', color: 'bg-[#111827]' },
+        { nombre: 'Sistemas y software a medida', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-software.webp', desc: 'Definimos tareas, perfiles, datos e informes necesarios. Inventario y POS son ejemplos para evaluar, no paquetes predeterminados.', color: 'bg-[#171717]' },
+        { nombre: 'Diseño gráfico y marketing comercial', precio: 'A conversar', normal: '', img: '/img/08_Cards/promocion-diseno.webp', desc: 'El uso, el canal y el formato orientan las piezas: identidad visual, publicaciones para redes, packaging o catálogos.', color: 'bg-[#0A0A0A]' },
     ];
 
     return (

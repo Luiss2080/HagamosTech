@@ -6,44 +6,44 @@ const originalHighlights = [
         id: 'tecnologia',
         title: 'Soluciones',
         highlight: 'Tecnológicas',
-        desc: 'Desarrollamos páginas web y sistemas personalizados según el alcance acordado para tu negocio.',
+        desc: 'Antes de proponer una solución, revisamos quién la usará, qué información manejará y qué necesita resolver.',
         icon: 'fa-laptop-code',
-        badge: 'Desarrollo Profesional',
+        badge: 'Desarrollo según alcance',
         color: "bg-[#111827]",
         textColor: "text-white",
         iconColor: "text-[#111827] bg-[#84CC16]",
         badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
-            { icon: 'fa-code', text: 'Código Limpio' },
-            { icon: 'fa-screwdriver-wrench', text: 'Mantenimiento a coordinar' },
-            { icon: 'fa-paint-brush', text: 'Diseño gráfico' },
-            { icon: 'fa-cloud', text: 'Alcance según proyecto' }
+            { icon: 'fa-list-check', text: 'Requisitos y alcance' },
+            { icon: 'fa-users', text: 'Usuarios y permisos' },
+            { icon: 'fa-database', text: 'Datos y reportes' },
+            { icon: 'fa-diagram-project', text: 'Etapas acordadas' }
         ]
     },
     {
         id: 'academia',
         title: 'Trabajos',
         highlight: 'Académicos',
-        desc: 'Elaboramos y orientamos todo tipo de trabajo escolar y académico: informes, proyectos, tesis, monografías, diapositivas y trípticos.',
+        desc: 'Orientación para comprender contenidos y avanzar en el trabajo propio, según materia, nivel y disponibilidad.',
         icon: 'fa-graduation-cap',
-        badge: 'Todos los niveles',
+        badge: 'Según materia y nivel',
         color: "bg-[#A3E635]",
         textColor: "text-[#0A0A0A]",
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-file-lines', text: 'Tesis y Monografías' },
-            { icon: 'fa-file-powerpoint', text: 'Diapositivas y Trípticos' },
-            { icon: 'fa-diagram-project', text: 'Proyectos e Informes' },
-            { icon: 'fa-school', text: 'Colegio, Instituto y U' }
+            { icon: 'fa-person-chalkboard', text: 'Explicación de temas' },
+            { icon: 'fa-list-check', text: 'Ejercicios guiados' },
+            { icon: 'fa-file-lines', text: 'Revisión de avances' },
+            { icon: 'fa-school', text: 'Colegio a universidad' }
         ]
     },
     {
         id: 'negocios',
         title: 'Impulso a',
         highlight: 'Negocios',
-        desc: 'Llevamos tu negocio al mundo digital con catálogos en línea, landing pages y formularios de contacto directos.',
+        desc: 'La presencia digital se organiza según lo que necesitas mostrar y el canal por el que quieres recibir consultas.',
         icon: 'fa-briefcase',
         badge: 'Digitalización',
         color: "bg-[#111827]",
@@ -52,28 +52,28 @@ const originalHighlights = [
         badgeColor: "bg-white/10 text-[#84CC16] border-[#84CC16]/20",
         borderColor: "border-[#A3E635]/20",
         features: [
-            { icon: 'fa-list-check', text: 'Catálogos Digitales' },
-            { icon: 'fa-message', text: 'Contacto WhatsApp' },
-            { icon: 'fa-chart-line', text: 'Mayor Visibilidad' },
-            { icon: 'fa-gears', text: 'Fácil Gestión' }
+            { icon: 'fa-bullseye', text: 'Objetivo del sitio' },
+            { icon: 'fa-boxes-stacked', text: 'Productos y contenido' },
+            { icon: 'fa-message', text: 'Canal de consultas' },
+            { icon: 'fa-images', text: 'Material disponible' }
         ]
     },
     {
         id: 'personalizadas',
         title: 'Soluciones',
         highlight: 'Personalizadas',
-        desc: 'Conversamos la necesidad, revisamos viabilidad y acordamos alcance, entregables y etapas.',
+        desc: 'Para una necesidad que no encaja en una categoría, revisamos el contexto y qué debería resolver la solución.',
         icon: 'fa-gears',
-        badge: 'Metodología Ágil',
+        badge: 'Evaluación por proyecto',
         color: "bg-[#A3E635]",
         textColor: "text-[#0A0A0A]",
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-comments', text: 'Análisis inicial' },
-            { icon: 'fa-file-signature', text: 'Propuesta Clara' },
-            { icon: 'fa-code-branch', text: 'Etapas acordadas' },
-            { icon: 'fa-circle-check', text: 'Entrega acordada' }
+            { icon: 'fa-briefcase', text: 'Situación actual' },
+            { icon: 'fa-users', text: 'Personas usuarias' },
+            { icon: 'fa-list-check', text: 'Funciones por evaluar' },
+            { icon: 'fa-diagram-project', text: 'Etapas y entregables' }
         ]
     }
 ];
@@ -210,16 +210,16 @@ const VentajasCarrusel = () => {
                 {/* --- Header --- */}
                 <div className="container mx-auto px-4 sm:px-6 text-center max-w-5xl mb-4">
                     <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-5 sm:mb-6 tracking-tighter">
-                        Ventajas de trabajar con <br />
+                        Cada proyecto empieza por <br />
                         <span className="relative inline-block px-2">
-                            <span className="relative z-10 text-[#A3E635]">HagamosTech</span>
+                            <span className="relative z-10 text-[#A3E635]">entender la necesidad</span>
                             <svg className="absolute w-full h-4 -bottom-2 left-0 z-0 text-[#A3E635]/60" viewBox="0 0 200 9" fill="none">
                                 <path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </span>
                     </h2>
                     <p className="text-base sm:text-lg text-slate-400 font-semibold leading-relaxed max-w-3xl mx-auto">
-                        Transformamos tus problemas, necesidades e ideas en soluciones reales con tecnología, creatividad y un proceso cercano.
+                        Estos puntos ayudan a precisar el pedido antes de revisar alcance, disponibilidad y próximos pasos.
                     </p>
                 </div>
 

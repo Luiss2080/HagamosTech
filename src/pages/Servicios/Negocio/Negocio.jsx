@@ -28,12 +28,11 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Lanzamiento de Marca","role":"Ejemplo de emprendimiento","text":"Estoy abriendo un negocio y necesito una identidad visual profesional, logotipo y piezas para anunciarme en redes."},
-  {"name":"Catálogo Digital con QR","role":"Ejemplo de emprendimiento","text":"Quiero un catálogo digital que mis clientes puedan abrir desde un código QR en mi local y hacer pedidos por WhatsApp."},
-  {"name":"Promociones y Campañas","role":"Ejemplo de emprendimiento","text":"Busco diseñar volantes y anuncios atractivos para fechas especiales y ofertas de fin de mes."}
+  {"name":"Identidad para un emprendimiento","role":"Marca y presentación","text":"Definir una identidad visual inicial y las piezas necesarias para presentar el negocio en sus canales."},
+  {"name":"Catálogo digital","role":"Organización de la oferta","text":"Organizar productos o servicios en un catálogo y definir cómo compartirlo con las personas interesadas."},
+  {"name":"Promociones y campañas","role":"Difusión comercial","text":"Preparar piezas gráficas para una oferta o fecha comercial con los formatos definidos para cada canal."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -174,8 +173,6 @@ const Negocio = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -274,7 +271,7 @@ Creación de marca y branding básico, manual de identidad visual, catálogos di
         imageAlt: "Impulsemos la presencia digital de tu negocio",
       }}>
 
-          <TestimonialCarousel title="Ejemplos para negocios" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos para negocios" description="La identidad, el catálogo y las piezas de campaña se preparan con materiales y formatos distintos." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

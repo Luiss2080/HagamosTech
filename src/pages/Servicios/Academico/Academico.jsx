@@ -29,12 +29,11 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Colegio y Secundaria","role":"Caso de apoyo escolar","text":"Teníamos que presentar un tríptico para la feria de ciencias y unas diapositivas en PowerPoint para defender en grupo; la organización visual y el orden de contenidos fue impecable."},
-  {"name":"Informe de Pasantía / Monografía","role":"Caso de instituto técnico","text":"Tenía que presentar mi informe de práctica profesional y monografía con formato APA 7; me guiaron en cada capítulo, citas y bibliografía sin complicaciones."},
-  {"name":"Tesis de Grado","role":"Caso universitario","text":"Buscaba estructurar el marco metodológico y preparar las diapositivas para la defensa de mi proyecto de grado con total seguridad."},
+  {"name":"Feria de ciencias y exposición","role":"Ejemplo · colegio y secundaria","text":"Definir la estructura del tríptico, los puntos de la feria y el orden de las diapositivas para una exposición grupal."},
+  {"name":"Informe de práctica","role":"Ejemplo · instituto técnico","text":"Organizar las secciones del informe, las fuentes y las referencias según la pauta de presentación."},
+  {"name":"Proyecto de grado","role":"Ejemplo · universidad","text":"Revisar el orden del marco metodológico y planificar las diapositivas para exponer el trabajo propio."},
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -175,8 +174,6 @@ const Academico = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -216,11 +213,11 @@ const Academico = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Ofrecemos acompañamiento académico integral en todo tipo de trabajo escolar y formativo: tesis, monografías, informes técnicos, proyectos de feria, diapositivas y trípticos para estudiantes de colegio, secundaria, institutos y universidades. El estudiante desarrolla y presenta su propio trabajo con nuestra guía.
+Acompañamiento para estudiantes de colegio, secundaria, institutos y universidades, sujeto a disponibilidad por materia y nivel. El estudiante conserva la autoría de su investigación, tarea o proyecto.
 </p>
 <p>
-<span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Tesis y proyectos de grado, monografías, informes académicos, trípticos y afiches, diapositivas en PowerPoint, formato APA 7, proyectos socioformativos, carpetas escolares y tutorías prácticas.
+<span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Cómo empieza: </span>
+Revisamos la consigna y la pauta para definir si hace falta explicar contenidos, organizar secciones, resolver ejercicios guiados o preparar una exposición.
 </p>
 </div>
             </div>
@@ -275,7 +272,7 @@ Tesis y proyectos de grado, monografías, informes académicos, trípticos y afi
         imageAlt: "Tu proyecto académico, con orientación clara",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de acompañamiento académico" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades. El estudiante desarrolla su propio trabajo." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de acompañamiento académico" description="La orientación parte de la consigna, la materia y el nivel disponible; el estudiante conserva la autoría de su trabajo." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

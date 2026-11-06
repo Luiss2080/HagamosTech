@@ -28,12 +28,11 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"CV con Filtros ATS","role":"Ejemplo de postulación","text":"Quiero renovar mi currículum para que los sistemas de selección de empresas grandes no lo descarten y resalte mis logros."},
-  {"name":"Estrategia en LinkedIn","role":"Ejemplo de postulación","text":"Necesito optimizar mi titular, extracto y palabras clave para que reclutadores de mi rubro encuentren mi perfil."},
-  {"name":"Preparación de Entrevista","role":"Ejemplo de postulación","text":"Busco practicar preguntas difíciles, estructurar mis respuestas con el método STAR y ganar confianza para la entrevista."}
+  {"name":"Currículum para una postulación","role":"Documento profesional","text":"Ordenar experiencia y formación relacionadas con los requisitos del puesto y preparar una presentación clara del perfil."},
+  {"name":"Perfil de LinkedIn","role":"Presencia profesional","text":"Revisar titular, extracto y experiencia para que describan con claridad el recorrido profesional."},
+  {"name":"Preparación de entrevista","role":"Práctica laboral","text":"Practicar respuestas a preguntas del puesto y ordenar ejemplos de experiencia antes de la conversación."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -175,7 +174,6 @@ const Empleo = () => {
       </section>
       
       {/* SECCI�N 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCI�N 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -274,7 +272,7 @@ Currículum Profesional y CV Optimizado ATS, Optimización de Perfil de LinkedIn
         imageAlt: "Prepara tu siguiente paso profesional",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de orientación laboral" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de orientación laboral" description="La preparación cambia según el puesto: cada perfil, documento o entrevista requiere información diferente." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

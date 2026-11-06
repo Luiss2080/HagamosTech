@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { ArrowUpRight, CalendarDays, Clock3, Lightbulb, MapPin, Quote, UserRound } from 'lucide-react';
+import { Lightbulb, Quote } from 'lucide-react';
 
 const TestimonialCarousel = ({
   testimonials,
@@ -144,43 +144,13 @@ const TestimonialCarousel = ({
                       <div className="flex h-14 w-14 items-center justify-center rounded-2xl border border-[#A3E635]/35 bg-[#A3E635]/10 text-[#A3E635] shadow-[0_0_28px_rgba(163,230,53,.12)] group-hover:bg-[#A3E635] group-hover:text-[#0A0A0A] transition-all duration-300">
                         <Quote size={25} aria-hidden="true" />
                       </div>
-                      <span className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#C9F88D]"><Lightbulb size={12} aria-hidden="true" /> {t.role || 'Caso ilustrativo'}</span>
+                      <span className="inline-flex items-center gap-1.5 text-[9px] font-black uppercase tracking-[0.16em] text-[#C9F88D]"><Lightbulb size={12} aria-hidden="true" /> {t.role || 'Ejemplo orientativo'}</span>
                     </div>
 
                     {/* Example text */}
                     <h3 className="text-white text-lg sm:text-xl font-black leading-snug">{t.name}</h3>
                     <p className="mt-3 mb-5 max-w-sm text-slate-200 text-sm sm:text-[15px] font-medium leading-relaxed">{t.text}</p>
 
-                    <div className="mb-5 flex flex-wrap justify-center gap-2">
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-[#A3E635]/15 bg-[#A3E635]/[0.06] px-3 py-1.5 text-[10px] font-semibold text-slate-300">
-                        <ArrowUpRight size={13} className="text-[#A3E635]" aria-hidden="true" /> Alcance por definir
-                      </span>
-                      <span className="inline-flex items-center gap-1.5 rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-[10px] font-semibold text-slate-400">
-                        <Lightbulb size={12} className="text-[#A3E635]" aria-hidden="true" /> Caso ilustrativo
-                      </span>
-                    </div>
-
-                    {/* Tipo de solicitud */}
-                    <div className="mb-3 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-[9px] font-bold text-slate-400" aria-label="Datos orientativos del proyecto">
-                      <span className="inline-flex items-center gap-1" aria-label={`Fecha: ${t.date || 'a coordinar'}`} title={`Fecha: ${t.date || 'a coordinar'}`}><CalendarDays size={12} className="text-[#A3E635]" aria-hidden="true" />{t.date || 'A coordinar'}</span>
-                      <span className="inline-flex items-center gap-1" aria-label={`Hora: ${t.time || 'a coordinar'}`} title={`Hora: ${t.time || 'a coordinar'}`}><Clock3 size={12} className="text-[#A3E635]" aria-hidden="true" />{t.time || 'A coordinar'}</span>
-                      <span className="inline-flex items-center gap-1" aria-label={`Lugar o modalidad: ${t.place || 'a definir'}`} title={`Lugar o modalidad: ${t.place || 'a definir'}`}><MapPin size={12} className="text-[#A3E635]" aria-hidden="true" />{t.place || 'A definir'}</span>
-                    </div>
-                    <div className="flex w-full items-center justify-center gap-2.5 border-t border-[#A3E635]/20 pt-4">
-                      <div className="w-9 h-9 rounded-full p-[2px] bg-gradient-to-tr from-[#A3E635] to-[#84CC16] shadow-[0_0_20px_rgba(163,230,53,0.18)] flex-shrink-0">
-                        <div role="img" aria-label="Usuario del proyecto" className="w-full h-full rounded-full overflow-hidden bg-white flex items-center justify-center text-[#171717]">
-                          <UserRound size={17} aria-hidden="true" />
-                        </div>
-                      </div>
-                      <div className="text-left leading-tight">
-                        <h4 className="text-[10px] font-black uppercase tracking-wider text-slate-800 dark:text-white mb-0.5">
-                          Contexto del proyecto
-                        </h4>
-                        <p className="text-[9px] font-bold text-gray-500 dark:text-neutral-400">
-                          Ejemplo · sin datos de cliente
-                        </p>
-                      </div>
-                    </div>
                   </article>
                 </div>
               );

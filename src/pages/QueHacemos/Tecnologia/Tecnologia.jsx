@@ -52,9 +52,9 @@ const VERTICALS = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Comercio y Distribuidora', role: 'Solución web y software', text: 'Implementamos un sistema web de control de stock y ventas para múltiples sucursales con alertas automáticas de inventario bajo.' },
-  { name: 'Consultorio y Salud', role: 'Solución web y software', text: 'Diseñamos una agenda digital de citas con historial de pacientes accesible desde el celular o computadora del médico.' },
-  { name: 'Portal Académico y Cursos', role: 'Solución web y software', text: 'Creamos una plataforma con acceso exclusivo para alumnos, descarga de materiales en PDF y exámenes autoevaluables.' }
+  { name: 'Inventario y ventas', role: 'Datos y reportes', text: 'Definir qué movimientos registrar, quiénes usarán el sistema y qué consultas necesita el negocio.' },
+  { name: 'Agenda de atención', role: 'Turnos y perfiles', text: 'Acordar horarios, tipos de cita, perfiles de acceso y datos que requiere la gestión de turnos.' },
+  { name: 'Portal educativo', role: 'Funciones institucionales', text: 'Priorizar perfiles, calificaciones, inscripciones o comunicados según las necesidades del centro.' }
 ];
 
 const FULL_TEXT = `> Ejemplo de flujo de trabajo\n> Conversando requisitos\n> Revisando alcance y viabilidad\n> Definiendo etapas y entregables\n> Este ejemplo no representa una ejecución ni resultado real\n$ `;

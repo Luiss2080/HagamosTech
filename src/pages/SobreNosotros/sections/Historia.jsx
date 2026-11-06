@@ -9,7 +9,7 @@ const ProcesoTrabajo = () => {
         {
             num: "1",
             title: "De la necesidad a la acción",
-            desc: "Nacimos respondiendo a necesidades cotidianas reales: desde tareas escolares, tesis y diapositivas urgentes, hasta las primeras páginas web para emprendedores locales.",
+            desc: "Nacimos respondiendo a necesidades cotidianas: desde acompañamiento en tareas escolares, tesis y exposiciones, hasta páginas web para emprendimientos locales.",
             icon: "fa-lightbulb",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"
@@ -33,7 +33,7 @@ const ProcesoTrabajo = () => {
         {
             num: "4",
             title: "Soluciones multidisciplinarias",
-            desc: "Hoy cubrimos todo el ciclo de soluciones digitales: trabajos académicos para todos los niveles formativos, desarrollo de software, presencia web y branding comercial.",
+            desc: "Hoy trabajamos en acompañamiento académico, desarrollo de software y páginas web, y diseño gráfico para marcas y emprendimientos.",
             icon: "fa-rocket",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"

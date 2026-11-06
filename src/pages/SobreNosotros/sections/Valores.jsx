@@ -19,7 +19,7 @@ const teamValues = [
     {
         name: 'Resolutividad',
         role: 'Nuestro compromiso',
-        desc: 'No dejamos tu problema a medias. Desde una tarea escolar urgente hasta un sistema web completo, nos comprometemos a entregarte una solución lista.',
+        desc: 'Entendemos el contexto y conversamos con claridad sobre el alcance. Desde una consulta académica hasta un proyecto web, definimos juntos los pasos posibles.',
         icon: 'fa-screwdriver-wrench'
     },
     {

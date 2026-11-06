@@ -20,7 +20,7 @@ const TECH_DETAILS = {
 
 const PROJECTS = [
   {"num":"01","category":"TESIS Y MONOGRAFÍAS","firstPart":"Tesis","highlightPart":"y Monografías","desc":"Orientación en temas, estructura, marco teórico, citas APA 7 y preparación de defensas de grado para instituto y universidad.","tags":["Tesis","APA 7","Monografías"],"icon":"fa-graduation-cap","image":"/img/08_Cards/academico-tesis-monografia-v2.webp"},
-  {"num":"02","category":"DIAPOSITIVAS Y PRESENTACIONES","firstPart":"Diapositivas","highlightPart":"y Exposiciones","desc":"Diseño y organización visual de diapositivas en PowerPoint y recursos interactivos para clases, defensas y exposiciones en todos los niveles.","tags":["PowerPoint","Defensas","Diapositivas"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/academico-presentaciones-v2.webp"},
+  {"num":"02","category":"DIAPOSITIVAS Y PRESENTACIONES","firstPart":"Diapositivas","highlightPart":"y Exposiciones","desc":"Organización visual de diapositivas en PowerPoint para clases, defensas y exposiciones, según materia, nivel y pauta.","tags":["PowerPoint","Defensas","Diapositivas"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/academico-presentaciones-v2.webp"},
   {"num":"03","category":"TRÍPTICOS E INFOGRAFÍAS","firstPart":"Trípticos","highlightPart":"e Infografías","desc":"Diseño de trípticos escolares, afiches, mapas conceptuales, líneas de tiempo y esquemas explicativos para colegio, secundaria e instituto.","tags":["Trípticos","Mapas","Infografías"],"icon":"fa-project-diagram","image":"/img/08_Cards/academico-triptico-feria-v2.webp"},
   {"num":"04","category":"INFORMES Y PROYECTOS","firstPart":"Informes","highlightPart":"y Proyectos Escolares","desc":"Acompañamiento en informes técnicos, carpetas escolares, proyectos de feria, simuladores y tareas guiadas.","tags":["Informes","Proyectos","Colegio a U"],"icon":"fa-book-open","image":"/img/08_Cards/academico-informes-tecnicos-v2.webp"}
 ];
@@ -93,13 +93,13 @@ const RecorridoAcademico = () => {
         {/* Header Section */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <h2 className="text-3xl md:text-4xl font-black text-white dark:text-white mb-6 leading-none">
-            Nuestro recorrido en <br />
+            Ejemplos de <br />
             <span className="text-[#A3E635] dark:text-[#A3E635] relative inline-block">
-              Apoyo Académico.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
+              trabajos académicos.<svg className="absolute w-full h-4 -bottom-2 left-0 z-[-1] text-[#84CC16]" viewBox="0 0 200 9" fill="none"><path d="M2.00025 6.99997C25.7509 4.50435 65.2536 2.07897 197.994 4.4151" stroke="currentColor" strokeWidth="6" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Todo tipo de trabajo académico: tesis, monografías, informes, proyectos escolares, diapositivas y trípticos para colegio, secundaria, instituto y universidad.
+            Cada ejemplo aborda una necesidad distinta. La consigna, el nivel y la disponibilidad ayudan a delimitar el acompañamiento.
           </p>
         </div>
 

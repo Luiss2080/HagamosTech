@@ -27,12 +27,11 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Control de Ventas y Stock","role":"Ejemplo de sistema","text":"Necesito registrar ventas diarias, controlar el stock de productos y saber qué artículos requieren reposición urgente."},
-  {"name":"Portal Institucional y Académico","role":"Ejemplo de sistema","text":"Queremos una plataforma para gestionar notas, usuarios, comunicados internos y matrículas de forma organizada."},
-  {"name":"Panel de Clientes y Cobranzas","role":"Ejemplo de sistema","text":"Busco automatizar el seguimiento de presupuestos, historial de compras de clientes y reportes de facturación."}
+  {"name":"Registro de ventas e inventario","role":"Operación comercial","text":"Revisar qué datos se registran en cada venta, cómo se actualiza el inventario y qué reportes necesita el negocio."},
+  {"name":"Portal institucional y académico","role":"Gestión educativa","text":"Definir perfiles y necesidades de información para calificaciones, inscripciones, comunicados o aulas virtuales."},
+  {"name":"Gestión de clientes y facturación","role":"Documentación y seguimiento","text":"Delimitar los datos, permisos y reportes que apoyarían el seguimiento de clientes y documentos de facturación."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -173,8 +172,6 @@ const SistemasApps = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -273,7 +270,7 @@ Desarrollo de sistemas web y software, diseño de interfaces y gestión de bases
         imageAlt: "Diseñemos una solución para tu operación",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de sistemas y aplicaciones" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de sistemas y aplicaciones" description="Los perfiles, permisos, datos y reportes ayudan a precisar qué módulos necesita cada sistema." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

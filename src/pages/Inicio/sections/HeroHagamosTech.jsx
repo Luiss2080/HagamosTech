@@ -47,7 +47,7 @@ const HeroHagamosTech = () => {
                         </h1>
 
                         <p className="text-white/70 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Todo tipo de solución digital: trabajos <strong className="text-white">escolares y académicos</strong> (informes, tesis, diapositivas, trípticos), desarrollo de <strong className="text-white">software y páginas web</strong>, y diseño gráfico para <strong className="text-white">marketing y marcas</strong>. Contanos qué necesitás y lo hacemos realidad.
+                            Acompañamiento académico, desarrollo de <strong className="text-white">software y páginas web</strong>, y diseño gráfico para <strong className="text-white">marcas y emprendimientos</strong>. Contanos qué necesitás; revisamos el alcance y la disponibilidad para cada caso.
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 mt-2 w-full sm:w-auto items-center justify-center lg:justify-start">

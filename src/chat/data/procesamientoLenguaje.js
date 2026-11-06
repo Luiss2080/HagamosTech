@@ -72,7 +72,7 @@ export const BANCO_CONOCIMIENTO = [
   },
   {
     id: 'emprendedores',
-    keywords: ['emprendedor', 'emprendedores', 'emprendimiento', 'negocio', 'negocios', 'pyme', 'marca', 'branding', 'identidad visual', 'manual de identidad', 'menus qr', 'menu qr', 'catalogo', 'catalogos', 'publicidad', 'promocion', 'promociones', 'oferta', 'ofertas', 'fechas especiales', 'whatsapp business', 'clientes', 'local', 'tienda'],
+    keywords: ['emprendedor', 'emprendedores', 'emprendimiento', 'negocio', 'negocios', 'pyme', 'marca', 'branding', 'identidad visual', 'manual de identidad', 'catalogo', 'catalogos', 'publicidad', 'promocion', 'promociones', 'oferta', 'ofertas', 'fechas especiales', 'whatsapp business', 'clientes', 'local', 'tienda'],
     answer:
       'Para emprendedores y negocios ofrecemos:\n' +
       '• **Creación de marca y branding básico**.\n' +

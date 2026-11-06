@@ -21,27 +21,26 @@ const BRANDS = [
 ];
 
 const PROCESO = [
-  {"title":"Estructura y Contenido","desc":"Planificamos la arquitectura de la página, jerarquía visual y llamadas a la acción acordes a tu objetivo.","image":"/img/08_Cards/proceso-web-planificacion.webp"},
-  {"title":"Diseño UX/UI","desc":"Creamos la interfaz visual en Figma cuidando la estética de marca, navegación intuitiva y legibilidad.","image":"/img/08_Cards/proceso-web-uxui.webp"},
-  {"title":"Desarrollo Tecnológico","desc":"Programamos con React y Tailwind CSS logrando una carga instantánea y diseño responsive en cualquier pantalla.","image":"/img/08_Cards/proceso-web-programacion.webp"},
-  {"title":"Puesta en Marcha","desc":"Revisamos detalles, conectamos formularios y WhatsApp, y entregamos el proyecto listo para recibir visitantes.","image":"/img/08_Cards/proceso-web-publicacion.webp"}
+  {"title":"Estructura y Contenido","desc":"Organizamos las páginas, la jerarquía visual y las llamadas a la acción según los objetivos y materiales disponibles.","image":"/img/08_Cards/proceso-web-planificacion.webp"},
+  {"title":"Diseño UX/UI","desc":"Definimos la navegación y la presentación de contenidos para que las pantallas respondan al uso previsto.","image":"/img/08_Cards/proceso-web-uxui.webp"},
+  {"title":"Desarrollo","desc":"Desarrollamos las funciones acordadas y revisamos su adaptación a las pantallas previstas en el alcance.","image":"/img/08_Cards/proceso-web-programacion.webp"},
+  {"title":"Revisión y Entrega","desc":"Revisamos navegación y formularios acordados. El alojamiento y la operación de servidores se gestionan por separado.","image":"/img/08_Cards/proceso-web-publicacion.webp"}
 ];
 
 const TESTIMONIOS = [
-  {"name":"Sitio Web Corporativo","role":"Ejemplo de proyecto","text":"Necesito presentar mi empresa, mostrar el catálogo de servicios y canalizar consultas directamente a mi WhatsApp comercial."},
-  {"name":"Landing Page de Campaña","role":"Ejemplo de proyecto","text":"Quiero lanzar una página promocional para captar clientes para un curso o lanzamiento específico."},
-  {"name":"Tienda Online y Catálogo","role":"Ejemplo de proyecto","text":"Busco organizar productos con fotografías, precios y un carrito interactivo que facilite pedidos inmediatos."}
+  {"name":"Sitio institucional","role":"Información pública","text":"Presentar una organización, ordenar sus secciones y definir el canal de consulta disponible."},
+  {"name":"Landing page informativa","role":"Campaña digital","text":"Presentar una iniciativa con su información principal y la acción que se espera del visitante."},
+  {"name":"Catálogo digital","role":"Contenido organizado","text":"Agrupar información e imágenes para que las personas encuentren productos o servicios con facilidad."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-bolt","label":"Carga Ultrarrápida"},
-  {"icon":"fa-mobile-screen-button","label":"100% Adaptable a Móviles"},
-  {"icon":"fa-magnifying-glass","label":"Optimización SEO para Google"},
-  {"icon":"fa-shield-halved","label":"Estructura Segura y Escalable"}
+  {"icon":"fa-gauge-high","label":"Rendimiento según alcance"},
+  {"icon":"fa-mobile-screen-button","label":"Diseño para distintas pantallas"},
+  {"icon":"fa-list-check","label":"Formularios según objetivos"},
+  {"icon":"fa-shield-halved","label":"Requisitos técnicos por definir"}
 ];
 
 const PaginasWeb = () => {
@@ -174,8 +173,6 @@ const PaginasWeb = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -274,7 +271,7 @@ Páginas Web Empresariales, Landing Pages y Portafolios Personales, Tiendas Onli
         imageAlt: "Hablemos de tu próximo sitio web",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de desarrollo web" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de desarrollo web" description="Páginas, campañas y catálogos requieren contenidos y recorridos distintos; las funciones se delimitan antes de proponer el desarrollo." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

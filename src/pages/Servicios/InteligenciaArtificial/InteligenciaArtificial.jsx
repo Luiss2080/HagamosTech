@@ -27,12 +27,11 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Dashboard de Rendimiento","role":"Ejemplo de proyecto","text":"Necesito un panel administrativo que resuma las métricas de mi negocio con gráficos interactivos y filtros por fecha."},
-  {"name":"Búsqueda Inteligente","role":"Ejemplo de proyecto","text":"Busco una aplicación web donde mis usuarios puedan consultar expedientes o productos con filtrado predictivo instantáneo."},
-  {"name":"Prototipo de Producto Digital","role":"Ejemplo de proyecto","text":"Quiero validar los flujos y pantallas de mi idea en Figma antes de comenzar la programación final."}
+  {"name":"Panel de datos","role":"Visualización","text":"Definir qué indicadores, gráficos y filtros ayudarían a consultar los datos disponibles."},
+  {"name":"Consulta de información","role":"Búsqueda asistida","text":"Evaluar filtros y criterios para consultar información según las fuentes y requisitos disponibles."},
+  {"name":"Prototipo de producto digital","role":"Exploración de una idea","text":"Ordenar pantallas y recorridos para revisar una idea antes de definir si conviene desarrollarla."}
 ];
 
-import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 
@@ -173,8 +172,6 @@ const InteligenciaArtificial = () => {
         </div>
       </section>
       
-      {/* SECCIÓN 2: CLIENTES */}
-      <TrustedClients />
 
       {/* SECCIÓN 3: PROCESO */}
       <section className="py-12 relative overflow-hidden reveal">
@@ -273,7 +270,7 @@ Desarrollo de Sistemas Web y Software, Diseño y Gestión de Bases de Datos, y S
         imageAlt: "Exploremos una solución con inteligencia artificial",
       }}>
 
-          <TestimonialCarousel title="Ejemplos de inteligencia artificial" description="Revisamos cada proyecto según sus objetivos, alcance y posibilidades." testimonials={TESTIMONIOS.map((t, idx) => {
+          <TestimonialCarousel title="Ejemplos de inteligencia artificial" description="Antes de proponer una función con IA, revisamos el problema, los datos disponibles y la viabilidad técnica." testimonials={TESTIMONIOS.map((t, idx) => {
           const photos = [
             'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=80',
             'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=80',

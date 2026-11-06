@@ -2,10 +2,10 @@ import React from 'react';
 import CircuitBackground from '../../../components/fondos/FondoTech';
 
 const AREAS_TRABAJO = [
-    { year: '01', icon: 'fa-globe', titulo: 'Desarrollo web y tiendas', desc: 'Páginas web corporativas, landing pages de alta conversión y catálogos interactivos con conexión a pedidos por WhatsApp.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', badge: 'bg-[#A3E635]', feats: [{ icon: 'fa-cart-shopping', label: 'Tiendas y catálogos', chip: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' }, { icon: 'fa-mobile-screen', label: '100% Responsive', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '02', icon: 'fa-code', titulo: 'Software y sistemas POS', desc: 'Sistemas de ventas, control de inventarios, reportes de facturación, bases de datos y paneles de gestión a medida.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25', badge: 'bg-[#171717]', feats: [{ icon: 'fa-cash-register', label: 'Punto de venta (POS)', chip: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25' }, { icon: 'fa-database', label: 'Bases de datos', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '03', icon: 'fa-graduation-cap', titulo: 'Trabajos escolares y tesis', desc: 'Tesis de grado, monografías, informes técnicos, presentaciones en diapositivas, trípticos y tareas para todos los niveles formativos.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25', badge: 'bg-[#0A0A0A]', feats: [{ icon: 'fa-school', label: 'Colegio a Universidad', chip: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25' }, { icon: 'fa-book-bookmark', label: 'Formato APA 7', chip: 'bg-white/5 text-white border-white/10' }] },
-    { year: '04', icon: 'fa-palette', titulo: 'Diseño gráfico y marketing', desc: 'Identidad visual, logos vectoriales, manuales de marca y piezas publicitarias para campañas comerciales en redes sociales.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', badge: 'bg-[#84CC16]', feats: [{ icon: 'fa-pen-nib', label: 'Logos e identidad', chip: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' }, { icon: 'fa-rectangle-ad', label: 'Redes sociales', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '01', icon: 'fa-globe', titulo: 'Páginas y plataformas web', desc: 'Un sitio institucional, un portal educativo y un catálogo tienen objetivos distintos; el propósito determina su estructura y funciones.', color: 'bg-[#A3E635]', soft: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25', badge: 'bg-[#A3E635]', feats: [{ icon: 'fa-bullseye', label: 'Objetivo y público', chip: 'bg-[#A3E635]/10 text-[#A3E635] border-[#A3E635]/25' }, { icon: 'fa-mobile-screen', label: 'Diseño adaptable', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '02', icon: 'fa-code', titulo: 'Sistemas de gestión', desc: 'Se revisan las tareas, perfiles, datos y reportes que necesita cada organización antes de plantear un sistema.', color: 'bg-[#171717]', soft: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25', badge: 'bg-[#171717]', feats: [{ icon: 'fa-users', label: 'Roles de usuario', chip: 'bg-[#171717]/10 text-slate-300 border-[#171717]/25' }, { icon: 'fa-database', label: 'Datos y reportes', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '03', icon: 'fa-graduation-cap', titulo: 'Acompañamiento académico', desc: 'La guía cambia según la materia, la consigna y el nivel; el estudiante desarrolla y presenta su propio trabajo.', color: 'bg-[#0A0A0A]', soft: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25', badge: 'bg-[#0A0A0A]', feats: [{ icon: 'fa-school', label: 'Pauta de entrega', chip: 'bg-[#0A0A0A]/10 text-white border-[#0A0A0A]/25' }, { icon: 'fa-user-graduate', label: 'Autoría del estudiante', chip: 'bg-white/5 text-white border-white/10' }] },
+    { year: '04', icon: 'fa-palette', titulo: 'Identidad y piezas de difusión', desc: 'El canal y el formato orientan si se necesita identidad visual, una pieza para redes o un catálogo de productos.', color: 'bg-[#84CC16]', soft: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25', badge: 'bg-[#84CC16]', feats: [{ icon: 'fa-rectangle-ad', label: 'Uso digital o impreso', chip: 'bg-[#84CC16]/10 text-[#84CC16] border-[#84CC16]/25' }, { icon: 'fa-pen-nib', label: 'Recursos de marca', chip: 'bg-white/5 text-white border-white/10' }] },
 ];
 
 const LogrosNovedades = () => {
@@ -16,18 +16,18 @@ const LogrosNovedades = () => {
                 <div className="container mx-auto px-6 max-w-7xl relative z-20">
                     <div className="text-center mb-5 relative z-10">
                         <span className="inline-block py-1.5 px-4 rounded-full bg-[#171717]/10 text-slate-300 text-[10px] font-black tracking-widest uppercase mb-4 border border-[#171717]/20">
-                            <i className="fas fa-medal text-slate-300 mr-1"></i> Áreas de trabajo
+                            <i className="fas fa-medal text-slate-300 mr-1"></i> Ejemplos de alcance
                         </span>
                         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black font-heading text-white mb-3 leading-tight">
-                            Soluciones para <span className="relative inline-block text-[#A3E635]">
-                                conversar
+                            Proyectos con <span className="relative inline-block text-[#A3E635]">
+                                distintos objetivos
                                 <svg className="absolute w-full h-3 -bottom-1.5 left-0 z-[-1] text-lime-400 drop-shadow-[0_0_8px_rgba(245,158,11,0.55)]" viewBox="0 0 200 12" preserveAspectRatio="none" fill="none">
                                     <path d="M8,8 C22,5 38,7.5 55,7.5 C130,7.5 165,7.5 188,7.5 C194,7.5 198,6 196,7.5" stroke="currentColor" strokeWidth="7" strokeLinecap="round"/>
                                 </svg>
                             </span>
                         </h2>
                         <p className="text-slate-300 font-medium max-w-2xl mx-auto text-base sm:text-lg leading-relaxed">
-                            Soluciones digitales, tecnológicas, de diseño y apoyo académico adaptadas a cada necesidad.
+                            Cada categoría plantea preguntas distintas para precisar contenido, funciones, nivel de apoyo o formato.
                         </p>
                     </div>
 
@@ -58,9 +58,6 @@ const LogrosNovedades = () => {
                                             <div className="flex items-center justify-center gap-1.5 mb-2">
                                                 <span className={`inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[9px] font-black tracking-widest ${l.soft}`}>
                                                     <i className="fas fa-hashtag mr-0.5"></i>{l.year}
-                                                </span>
-                                                <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-[#111111] text-white text-[9px] font-black tracking-widest border border-white/10">
-                                                    <i className="fas fa-layer-group mr-0.5"></i>Área {l.year}
                                                 </span>
                                             </div>
                                             <h3 className="text-sm font-black font-heading text-white leading-tight mb-1.5">{l.titulo}</h3>

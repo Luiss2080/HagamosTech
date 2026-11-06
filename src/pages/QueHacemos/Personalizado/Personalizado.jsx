@@ -10,16 +10,16 @@ import TechToolsCarousel from '../../../components/ui/TechToolsCarousel';
 import { HERRAMIENTAS_DESARROLLO } from '../../../data/herramientasCarruselData';
 
 const TESTIMONIOS = [
-  { name: 'Gestión para Educadores', role: 'Herramienta a medida', text: 'Necesitaba una herramienta personalizada para generar constancias y diplomas automáticos en PDF con un clic para mis alumnos.' },
-  { name: 'Control de Producción y Talleres', role: 'Herramienta a medida', text: 'Desarrollamos una interfaz táctil simple para que los operarios del taller registren el avance de cada pedido sin complicaciones.' },
-  { name: 'Formularios Interactivos y Diagnósticos', role: 'Herramienta a medida', text: 'Conectamos un cuestionario interactivo en mi página que genera cotizaciones y resúmenes automáticos al correo.' }
+  { name: 'Constancias para cursos', role: 'Documentos digitales', text: 'Definir los datos, el diseño y el formato de archivo necesarios para preparar certificados o constancias.' },
+  { name: 'Seguimiento de producción', role: 'Herramienta interna', text: 'Identificar las etapas de trabajo, los datos que se registran y las personas que consultan cada avance.' },
+  { name: 'Formulario de solicitud', role: 'Captura de información', text: 'Precisar qué datos se piden, cómo se agrupan y qué información debe quedar disponible para su revisión.' }
 ];
 
 const FULL_CONVERSATION = [
-  { role: 'user', text: 'Hola, tengo una necesidad integral: requiero un sistema para gestionar pedidos y apoyo con el informe y las diapositivas para presentarlo.' },
-  { role: 'assistant', text: '¡Excelente! En HagamosTech resolvemos todo en un solo lugar: desarrollamos la herramienta y estructuramos la documentación técnica e informes necesarios.' },
-  { role: 'user', text: '¿También pueden incluir la identidad visual del proyecto y el catálogo en línea?' },
-  { role: 'assistant', text: 'Así es. Diseñamos el logotipo, armamos el catálogo digital y dejamos todo listo para pedidos directos a WhatsApp.' }
+  { role: 'user', text: 'Quiero organizar los pedidos y saber en qué etapa está cada uno. ¿Qué tendría que definir?' },
+  { role: 'assistant', text: 'Para evaluar la idea, conviene describir el flujo actual, los estados de cada pedido, quiénes usarían el sistema y qué reportes necesitan.' },
+  { role: 'user', text: '¿Qué información sirve para preparar una propuesta?' },
+  { role: 'assistant', text: 'Un ejemplo de pedido, los perfiles de usuario y las tareas prioritarias ayudan a conversar requisitos, alcance y viabilidad.' }
 ];
 
 const ChatAssistantWindow = () => {

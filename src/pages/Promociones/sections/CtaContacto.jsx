@@ -31,7 +31,7 @@ const CtaContacto = () => {
                             </h2>
 
                             <p className="text-white/90 text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto font-semibold leading-relaxed">
-                                Trabajos escolares y universitarios, desarrollo de software, páginas web y diseño para marketing comercial. Contanos qué necesitás y te asesoramos para avanzar de inmediato.
+                                Contanos qué querés resolver. Revisamos el alcance y la disponibilidad antes de acordar cómo avanzar.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-3">
@@ -44,9 +44,9 @@ const CtaContacto = () => {
                             </div>
 
                             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/70">
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-bolt text-lime-300 text-lg"></i> Respuesta rápida por WhatsApp</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-certificate text-lime-300 text-lg"></i> Alcance claro y a tu medida</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-scale-balanced text-lime-300 text-lg"></i> Entregas puntuales garantizadas</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-comments text-lime-300 text-lg"></i> Consulta por WhatsApp</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-list-check text-lime-300 text-lg"></i> Alcance definido por proyecto</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-calendar-check text-lime-300 text-lg"></i> Plazos a coordinar</div>
                             </div>
                         </div>
                     </div>

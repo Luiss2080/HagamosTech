@@ -12,10 +12,10 @@ import ServiceCardsCarousel from '../../../components/ui/ServiceCardsCarousel';
 import ProjectPlanningSelector from '../../../components/ui/ProjectPlanningSelector';
 
 const SOLUCIONES = [
-  { title: 'Sitios, plataformas y tiendas online', desc: 'Sitios corporativos, portales educativos e institucionales, landing pages, catálogos, blogs, cursos, reservas, comunidades y tiendas con pedidos. Funciones y pagos se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
+  { title: 'Sitios y plataformas web', desc: 'Páginas institucionales, landing pages, catálogos informativos, blogs, cursos y comunidades; las funciones dependen del objetivo y el alcance acordado.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
   { title: 'Sistemas y software a medida', desc: 'ERP, inventario, ventas/POS, facturación, CRM, gestión documental y sistemas para clínicas, hoteles, gimnasios, talleres, transporte o producción. Portales académicos pueden incluir perfiles, notas, inscripciones, pagos, comunicados, bibliotecas y aulas virtuales según alcance.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
   { title: 'Diseño gráfico e identidad', desc: 'Logos, identidad visual, flyers, banners, catálogos, tarjetas y piezas para difusión digital o impresión.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
-  { title: 'Publicidad comercial y piezas especiales', desc: 'Diseño de promociones, catálogos digitales de productos o servicios, afiches y piezas publicitarias para campañas comerciales y fechas especiales.', icon: <TrendingUp size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'PUBLICIDAD' }
+  { title: 'Piezas para campañas', desc: 'Diseño de promociones, catálogos de productos o servicios, afiches y materiales para campañas y fechas especiales.', icon: <TrendingUp size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'PUBLICIDAD' }
 ];
 
 const SolucionesGrid = () => {
@@ -38,9 +38,9 @@ const ProcessTimeline = () => {
 };
 
 const TESTIMONIOS = [
-  { name: 'Local Gastronómico / Restaurante', role: 'Caso comercial', text: 'Colocamos códigos QR en las mesas con el catálogo digital del menú y los pedidos de los clientes llegan directo al WhatsApp del mostrador.' },
-  { name: 'Boutique y Moda', role: 'Caso comercial', text: 'Necesitaba piezas publicitarias para la campaña de inauguración en Instagram y un catálogo virtual interactivo para compartir por mensaje.' },
-  { name: 'Empresa de Servicios Técnicos', role: 'Caso comercial', text: 'Implementamos un sistema web para registrar órdenes de servicio, clientes y control de fechas de entrega de equipos.' }
+  { name: 'Identidad para un emprendimiento', role: 'Marca y presentación', text: 'Definir una identidad visual inicial y las piezas necesarias para presentar el proyecto en sus canales.' },
+  { name: 'Campaña de temporada', role: 'Publicidad comercial', text: 'Organizar el mensaje, los formatos y los recursos gráficos de una promoción o fecha especial.' },
+  { name: 'Catálogo de servicios', role: 'Contenido digital', text: 'Ordenar descripciones e imágenes para que las personas puedan consultar una oferta con claridad.' }
 ];
 
 const Negocios = () => {
@@ -69,7 +69,7 @@ const Negocios = () => {
           </h1>
           
           <p className="text-slate-400 text-base md:text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Desarrollamos páginas, tiendas, portales institucionales, aplicaciones y sistemas empresariales; también ofrecemos diseño gráfico y acompañamiento académico. Revisamos el alcance y conversamos alternativas según cada necesidad y posibilidades.
+            Revisamos necesidades digitales e identidad visual para emprendimientos y organizaciones, y conversamos alternativas según el objetivo, los materiales disponibles y la viabilidad del proyecto.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
@@ -88,10 +88,10 @@ const Negocios = () => {
         <div className="container relative z-10 mx-auto max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tight mb-4">
-              Soluciones <span className="text-[#A3E635]">Integrales</span>
+              Opciones <span className="text-[#A3E635]">para tu proyecto</span>
             </h2>
             <p className="text-slate-400 font-medium max-w-2xl mx-auto">
-              Desde recursos académicos y diseño gráfico hasta plataformas web, aplicaciones móviles, sistemas de gestión, bases de datos e integraciones técnicas viables.
+              Estos cuatro puntos de partida cubren presencia web, software de gestión, identidad visual y piezas de campaña. El alcance de cada propuesta se define según sus funciones y materiales.
             </p>
           </div>
 

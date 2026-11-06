@@ -4,7 +4,7 @@ import TestimonialCarousel from '../carouseles/CarruselTestimonios';
 import CenteredProjectCTA from './CenteredProjectCTA';
 
 const TestimonialCTASection = ({ testimonialTitle, testimonialDescription, testimonials, cta, children }) => (
-  <section className="relative z-10 overflow-hidden px-5 py-14 sm:px-6 sm:py-16" aria-label="Testimonios y consulta del proyecto">
+  <section className="relative z-10 overflow-hidden px-5 py-14 sm:px-6 sm:py-16" aria-label="Ejemplos y consulta del proyecto">
     <FondoTech />
     <div className="relative z-10 mx-auto max-w-7xl">
       {children || <TestimonialCarousel title={testimonialTitle} description={testimonialDescription} testimonials={testimonials} />}
