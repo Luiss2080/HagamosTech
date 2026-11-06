@@ -58,7 +58,7 @@ export const BANCO_CONOCIMIENTO = [
   },
   {
     id: 'estudiantes',
-    keywords: ['estudiante', 'estudiantes', 'academico', 'universidad', 'colegio', 'escuela', 'docente', 'institucion', 'tesis', 'monografia', 'presentacion', 'powerpoint', 'diapositivas', 'apa', 'apa 7', 'infografia', 'diagrama', 'linea de tiempo', 'mapa conceptual', 'portada', 'simulador', 'simuladores', 'redes', 'programacion', 'algoritmo', 'medicina', 'salud', 'enfermeria'],
+    keywords: ['estudiante', 'estudiantes', 'academico', 'universidad', 'colegio', 'escuela', 'docente', 'institucion', 'tesis', 'monografia', 'presentacion', 'powerpoint', 'diapositivas', 'apa', 'apa 7', 'infografia', 'diagrama', 'linea de tiempo', 'mapa conceptual', 'portada', 'simulador', 'simuladores', 'redes', 'programacion', 'algoritmo', 'medicina', 'salud', 'enfermeria', 'triptico', 'tripticos', 'tarea', 'tareas', 'informe', 'informes', 'secundaria', 'feria de ciencias', 'carpeta escolar'],
     answer:
       'Apoyamos a estudiantes, docentes e instituciones con:\n' +
       '• **Presentaciones PowerPoint e Interactivas** (defensas de tesis, ciencias de la salud).\n' +

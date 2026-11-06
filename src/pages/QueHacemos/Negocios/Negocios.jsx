@@ -38,9 +38,9 @@ const ProcessTimeline = () => {
 };
 
 const TESTIMONIOS = [
-  { name: 'Sitio web', role: 'Ejemplo de necesidad', text: 'Quiero presentar mi empresa, explicar mis servicios, mostrar trabajos y facilitar que las personas interesadas puedan consultarme.' },
-  { name: 'Catálogo digital', role: 'Ejemplo de necesidad', text: 'Necesito ordenar mis productos o servicios por categorías, incluir descripciones claras y compartir el catálogo fácilmente con mis clientes.' },
-  { name: 'Sistema a medida', role: 'Ejemplo de necesidad', text: 'Busco organizar información y tareas de mi negocio en una herramienta que responda a requisitos y funciones que podamos definir.' }
+  { name: 'Local Gastronómico / Restaurante', role: 'Caso comercial', text: 'Colocamos códigos QR en las mesas con el catálogo digital del menú y los pedidos de los clientes llegan directo al WhatsApp del mostrador.' },
+  { name: 'Boutique y Moda', role: 'Caso comercial', text: 'Necesitaba piezas publicitarias para la campaña de inauguración en Instagram y un catálogo virtual interactivo para compartir por mensaje.' },
+  { name: 'Empresa de Servicios Técnicos', role: 'Caso comercial', text: 'Implementamos un sistema web para registrar órdenes de servicio, clientes y control de fechas de entrega de equipos.' }
 ];
 
 const Negocios = () => {

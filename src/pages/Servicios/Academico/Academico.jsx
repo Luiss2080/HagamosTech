@@ -29,9 +29,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Mentoría académica","role":"Ejemplo de acompañamiento","text":"Quiero comprender un tema, resolver dudas y planificar mi estudio."},
-  {"name":"Tarea guiada","role":"Ejemplo de acompañamiento","text":"Necesito orientación para resolver ejercicios y entender el procedimiento."},
-  {"name":"Proyecto socioformativo","role":"Ejemplo de acompañamiento","text":"Busco ordenar objetivos, actividades y evidencias de mi propio proyecto."},
+  {"name":"Colegio y Secundaria","role":"Caso de apoyo escolar","text":"Teníamos que presentar un tríptico para la feria de ciencias y unas diapositivas en PowerPoint para defender en grupo; la organización visual y el orden de contenidos fue impecable."},
+  {"name":"Informe de Pasantía / Monografía","role":"Caso de instituto técnico","text":"Tenía que presentar mi informe de práctica profesional y monografía con formato APA 7; me guiaron en cada capítulo, citas y bibliografía sin complicaciones."},
+  {"name":"Tesis de Grado","role":"Caso universitario","text":"Buscaba estructurar el marco metodológico y preparar las diapositivas para la defensa de mi proyecto de grado con total seguridad."},
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';

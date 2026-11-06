@@ -31,7 +31,7 @@ const CtaContacto = () => {
                             </h2>
 
                             <p className="text-white/90 text-base sm:text-lg md:text-xl mb-8 max-w-2xl mx-auto font-semibold leading-relaxed">
-                                Desarrollo web y de software, diseño gráfico y acompañamiento académico. Contanos qué necesitás y revisamos alternativas según tus posibilidades.
+                                Trabajos escolares y universitarios, desarrollo de software, páginas web y diseño para marketing comercial. Contanos qué necesitás y te asesoramos para avanzar de inmediato.
                             </p>
 
                             <div className="flex flex-wrap justify-center gap-3">
@@ -44,9 +44,9 @@ const CtaContacto = () => {
                             </div>
 
                             <div className="mt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-6 text-white/70">
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-bolt text-lime-300 text-lg"></i> Tiempo de respuesta a coordinar</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-certificate text-lime-300 text-lg"></i> Propuesta según el proyecto</div>
-                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-scale-balanced text-lime-300 text-lg"></i> Modalidad conversable</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-bolt text-lime-300 text-lg"></i> Respuesta rápida por WhatsApp</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-certificate text-lime-300 text-lg"></i> Alcance claro y a tu medida</div>
+                                <div className="inline-flex items-center gap-2 text-[10px] font-black uppercase tracking-widest"><i className="fas fa-scale-balanced text-lime-300 text-lg"></i> Entregas puntuales garantizadas</div>
                             </div>
                         </div>
                     </div>

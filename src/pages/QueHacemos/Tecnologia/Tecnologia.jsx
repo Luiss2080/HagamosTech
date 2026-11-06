@@ -52,9 +52,9 @@ const VERTICALS = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Aplicación web', role: 'Ejemplo orientativo', text: 'Quiero evaluar una aplicación web para presentar y gestionar información de mi proyecto.' },
-  { name: 'Solución digital', role: 'Ejemplo orientativo', text: 'Necesito conversar el alcance y las etapas de una solución digital para mi negocio.' },
-  { name: 'Herramienta web', role: 'Ejemplo orientativo', text: 'Busco orientación para definir las funcionalidades y el contenido de una herramienta web.' }
+  { name: 'Comercio y Distribuidora', role: 'Solución web y software', text: 'Implementamos un sistema web de control de stock y ventas para múltiples sucursales con alertas automáticas de inventario bajo.' },
+  { name: 'Consultorio y Salud', role: 'Solución web y software', text: 'Diseñamos una agenda digital de citas con historial de pacientes accesible desde el celular o computadora del médico.' },
+  { name: 'Portal Académico y Cursos', role: 'Solución web y software', text: 'Creamos una plataforma con acceso exclusivo para alumnos, descarga de materiales en PDF y exámenes autoevaluables.' }
 ];
 
 const FULL_TEXT = `> Ejemplo de flujo de trabajo\n> Conversando requisitos\n> Revisando alcance y viabilidad\n> Definiendo etapas y entregables\n> Este ejemplo no representa una ejecución ni resultado real\n$ `;

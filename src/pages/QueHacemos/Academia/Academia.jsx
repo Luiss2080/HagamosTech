@@ -16,9 +16,9 @@ const METRICS = [
 ];
 
 const TESTIMONIOS = [
-  { name: 'Mentoría académica', role: 'Ejemplo orientativo', text: 'Necesito repasar un tema y resolver ejercicios guiados de una materia.' },
-  { name: 'Informe o monografía', role: 'Ejemplo orientativo', text: 'Busco orientación para organizar el tema, las secciones y las referencias según la pauta.' },
-  { name: 'Proyecto socioformativo', role: 'Ejemplo orientativo', text: 'Quiero planificar objetivos, actividades y evidencias para desarrollar mi proyecto.' }
+  { name: 'Carpeta Escolar y Tareas', role: 'Secundaria y Primaria', text: 'Mi hijo tenía una carpeta escolar completa con resúmenes, esquemas visuales e infografías; el resultado fue claro y muy ordenado.' },
+  { name: 'Proyectos de Informática y Redes', role: 'Educación Superior', text: 'Requería orientación para simular topologías de red y entender la lógica de algoritmos de programación para mi entrega práctica.' },
+  { name: 'Investigación y Salud', role: 'Área Biomédica y Social', text: 'Me apoyaron con diagramas explicativos, líneas de tiempo y la adaptación estricta de tablas y figuras al formato APA 7 para mi investigación.' }
 ];
 
 const FULL_TEXT = `[solicitud] Apoyo con tareas, trabajos escolares o universitarios\n[organización] Delimitamos tema, estructura y pauta (APA / escolar)\n[desarrollo] Elaboramos informes, diapositivas, trípticos o tesis\n[revisión] Revisamos avances y preparamos la exposición o entrega\n> Acompañamiento académico para colegio, instituto y universidad.`;

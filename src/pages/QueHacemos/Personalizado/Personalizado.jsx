@@ -10,9 +10,9 @@ import TechToolsCarousel from '../../../components/ui/TechToolsCarousel';
 import { HERRAMIENTAS_DESARROLLO } from '../../../data/herramientasCarruselData';
 
 const TESTIMONIOS = [
-  { name: 'Panel de gestión', role: 'Ejemplo orientativo', text: 'Necesito organizar información y consultar los datos que son importantes para mi proyecto.' },
-  { name: 'Aplicación web', role: 'Ejemplo orientativo', text: 'Quiero conversar sobre una herramienta web y las funciones que podría incluir.' },
-  { name: 'Mejora de sistema', role: 'Ejemplo orientativo', text: 'Busco revisar qué cambios son posibles en una aplicación existente según su estado y alcance.' }
+  { name: 'Gestión para Educadores', role: 'Herramienta a medida', text: 'Necesitaba una herramienta personalizada para generar constancias y diplomas automáticos en PDF con un clic para mis alumnos.' },
+  { name: 'Control de Producción y Talleres', role: 'Herramienta a medida', text: 'Desarrollamos una interfaz táctil simple para que los operarios del taller registren el avance de cada pedido sin complicaciones.' },
+  { name: 'Formularios Interactivos y Diagnósticos', role: 'Herramienta a medida', text: 'Conectamos un cuestionario interactivo en mi página que genera cotizaciones y resúmenes automáticos al correo.' }
 ];
 
 const FULL_CONVERSATION = [
