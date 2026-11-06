@@ -21,7 +21,7 @@ const REGLAS = [
   {
     coincide: (p) => p.startsWith('/que-hacemos/academia'),
     title: 'Academia | HagamosTech',
-    description: 'Mentorías y orientación para estudiantes de colegio, secundaria e instituto o universidad: tareas guiadas, informes, monografías y proyectos propios.',
+    description: 'Acompañamiento integral en todo tipo de trabajo escolar y académico: informes, proyectos, monografías, tesis, diapositivas y trípticos para colegio, secundaria, instituto y universidad.',
   },
   {
     coincide: (p) => p.startsWith('/que-hacemos/negocios'),

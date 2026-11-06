@@ -13,13 +13,13 @@ const teamValues = [
     {
         name: 'Creatividad',
         role: 'Nuestra energía',
-        desc: 'Revisamos cada necesidad y conversamos alternativas de diseño o desarrollo que se ajusten al alcance del proyecto.',
+        desc: 'Diseñamos alternativas visuales y tecnológicas frescas que destaquen tu proyecto en el aula, en internet o en el mercado.',
         icon: 'fa-paintbrush'
     },
     {
         name: 'Resolutividad',
         role: 'Nuestro compromiso',
-        desc: 'No dejamos tu problema a medias. Analizamos, proponemos y construimos hasta entregarte la solución.',
+        desc: 'No dejamos tu problema a medias. Desde una tarea escolar urgente hasta un sistema web completo, nos comprometemos a entregarte una solución lista.',
         icon: 'fa-screwdriver-wrench'
     },
     {
