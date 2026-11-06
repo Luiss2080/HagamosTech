@@ -27,9 +27,9 @@ const PROCESO = [
 ];
 
 const TESTIMONIOS = [
-  {"name":"Aplicación web","role":"Ejemplo de proyecto","text":"Quiero evaluar una herramienta web con funciones definidas para mis usuarios."},
-  {"name":"Panel administrativo","role":"Ejemplo de proyecto","text":"Necesito revisar qué información y permisos debería gestionar un panel."},
-  {"name":"Diseño de interfaz","role":"Ejemplo de proyecto","text":"Busco ordenar la experiencia y navegación de una solución digital."},
+  {"name":"Dashboard de Rendimiento","role":"Ejemplo de proyecto","text":"Necesito un panel administrativo que resuma las métricas de mi negocio con gráficos interactivos y filtros por fecha."},
+  {"name":"Búsqueda Inteligente","role":"Ejemplo de proyecto","text":"Busco una aplicación web donde mis usuarios puedan consultar expedientes o productos con filtrado predictivo instantáneo."},
+  {"name":"Prototipo de Producto Digital","role":"Ejemplo de proyecto","text":"Quiero validar los flujos y pantallas de mi idea en Figma antes de comenzar la programación final."}
 ];
 
 import TrustedClients from '../../../components/carouseles/ClientesConfian';
@@ -37,10 +37,10 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-globe","label":"Aplicaciones web"},
-  {"icon":"fa-table-columns","label":"Paneles a medida"},
-  {"icon":"fa-database","label":"Gestión de datos"},
-  {"icon":"fa-comments","label":"Requisitos conversados"}
+  {"icon":"fa-chart-pie","label":"Dashboards Analíticos"},
+  {"icon":"fa-magnifying-glass-chart","label":"Filtros Inteligentes"},
+  {"icon":"fa-table-columns","label":"Paneles de Control"},
+  {"icon":"fa-microchip","label":"Integraciones de IA"}
 ];
 
 const InteligenciaArtificial = () => {

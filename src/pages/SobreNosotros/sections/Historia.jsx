@@ -8,32 +8,32 @@ const ProcesoTrabajo = () => {
     const steps = [
         {
             num: "1",
-            title: "Una idea simple",
-            desc: "HagamosTech parte de escuchar cada necesidad y revisar si podemos acompañarla con los servicios de diseño, desarrollo digital o apoyo académico que ofrecemos.",
+            title: "De la necesidad a la acción",
+            desc: "Nacimos respondiendo a necesidades cotidianas reales: desde tareas escolares, tesis y diapositivas urgentes, hasta las primeras páginas web para emprendedores locales.",
             icon: "fa-lightbulb",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"
         },
         {
             num: "2",
-            title: "Proyecto de dos personas",
-            desc: "Comenzamos como un pequeño proyecto de dos personas resolviendo necesidades concretas con herramientas tecnológicas y digitales.",
+            title: "Dos visiones complementarias",
+            desc: "Unimos experiencia en programación, diseño visual y orientación académica para crear un espacio donde nadie se sienta perdido frente a la tecnología.",
             icon: "fa-users",
             color: "text-white",
             bg: "bg-white/[0.04]"
         },
         {
             num: "3",
-            title: "De la necesidad a la solución",
-            desc: "Cada caso se trabaja bajo el modelo: Necesidad → Análisis → Propuesta → Desarrollo → Entrega. El cliente explica qué quiere, nosotros encontramos cómo.",
+            title: "Metodología clara y sin rodeos",
+            desc: "Consolidamos un proceso transparente: conversamos tu necesidad, delimitamos el alcance sin letras chicas, cotizamos a tu medida y entregamos lo acordado.",
             icon: "fa-diagram-project",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"
         },
         {
             num: "4",
-            title: "Marca multidisciplinaria",
-            desc: "Nuestra visión es consolidar una propuesta de acompañamiento académico, diseño y desarrollo de soluciones digitales a medida.",
+            title: "Soluciones multidisciplinarias",
+            desc: "Hoy cubrimos todo el ciclo de soluciones digitales: trabajos académicos para todos los niveles formativos, desarrollo de software, presencia web y branding comercial.",
             icon: "fa-rocket",
             color: "text-[#84CC16]",
             bg: "bg-[#A3E635]/10"

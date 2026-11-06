@@ -16,10 +16,10 @@ const TESTIMONIOS = [
 ];
 
 const FULL_CONVERSATION = [
-  { role: 'user', text: 'Hola, necesito una herramienta web para registrar solicitudes y consultar su estado.' },
-  { role: 'assistant', text: 'Podemos revisar quiénes la usarían y qué información necesitarían registrar.' },
-  { role: 'user', text: 'También quisiera consultar el historial y filtrar la información.' },
-  { role: 'assistant', text: 'Anotamos esas funciones para evaluar requisitos, alcance y viabilidad antes de conversar una propuesta.' }
+  { role: 'user', text: 'Hola, tengo una necesidad integral: requiero un sistema para gestionar pedidos y apoyo con el informe y las diapositivas para presentarlo.' },
+  { role: 'assistant', text: '¡Excelente! En HagamosTech resolvemos todo en un solo lugar: desarrollamos la herramienta y estructuramos la documentación técnica e informes necesarios.' },
+  { role: 'user', text: '¿También pueden incluir la identidad visual del proyecto y el catálogo en línea?' },
+  { role: 'assistant', text: 'Así es. Diseñamos el logotipo, armamos el catálogo digital y dejamos todo listo para pedidos directos a WhatsApp.' }
 ];
 
 const ChatAssistantWindow = () => {

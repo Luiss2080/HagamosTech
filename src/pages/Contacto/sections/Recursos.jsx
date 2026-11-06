@@ -3,16 +3,16 @@ import FondoTech from '../../../components/fondos/FondoTech';
 
 const recursosData = [
     {
-        title: "Consultas de Proyectos",
-        desc: "Contanos tu idea, problema o necesidad y te ayudamos a definir la mejor solución tecnológica.",
-        icon: "fa-lightbulb",
+        title: "Trabajos Escolares y Académicos",
+        desc: "Elaboración y apoyo en tesis, proyectos de grado, monografías, informes técnicos, diapositivas dinámicas, trípticos y tareas guiadas para colegio, secundaria, instituto y universidad.",
+        icon: "fa-graduation-cap",
         theme: {
             cardBg: "bg-[#A3E635]",
             accentLine: "bg-[#0A0A0A]",
             iconBg: "bg-white/20",
             iconColor: "text-[#0A0A0A]",
             textColor: "text-[#0A0A0A]",
-            descColor: "text-[#0A0A0A]/80",
+            descColor: "text-[#0A0A0A]/85",
             borderColor: "border-[#A3E635]",
             shadow: "shadow-2xl shadow-[#A3E635]/20",
             buttonBg: "bg-[#0A0A0A]",
@@ -20,15 +20,15 @@ const recursosData = [
             buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
-            { label: "Ideas", icon: "fa-lightbulb" },
-            { label: "Análisis", icon: "fa-magnifying-glass" },
-            { label: "Propuestas", icon: "fa-diagram-project" }
+            { label: "Colegio a U", icon: "fa-school" },
+            { label: "Formato APA 7", icon: "fa-book" },
+            { label: "Diapositivas y Trípticos", icon: "fa-file-powerpoint" }
         ]
     },
     {
-        title: "Consultas sobre servicios",
-        desc: "Resolvemos tus dudas sobre tecnología, proyectos académicos y acompañamiento digital.",
-        icon: "fa-headset",
+        title: "Software, Sistemas y Web",
+        desc: "Desarrollo de páginas web corporativas, tiendas online con catálogo, sistemas POS de ventas, inventarios, bases de datos seguras y herramientas digitales a medida.",
+        icon: "fa-laptop-code",
         theme: {
             cardBg: "bg-white",
             accentLine: "bg-[#A3E635]",
@@ -43,15 +43,15 @@ const recursosData = [
             buttonHover: "hover:bg-[#171717] hover:text-white"
         },
         tags: [
-            { label: "Tecnología", icon: "fa-microchip" },
-            { label: "Academia", icon: "fa-graduation-cap" },
-            { label: "Orientación", icon: "fa-circle-question" }
+            { label: "Sistemas POS", icon: "fa-cash-register" },
+            { label: "Tiendas Online", icon: "fa-cart-shopping" },
+            { label: "Bases de Datos", icon: "fa-database" }
         ]
     },
     {
-        title: "Soluciones según alcance",
-        desc: "Desde páginas web y diseño gráfico hasta sistemas digitales, revisamos cada solicitud según sus requisitos y viabilidad.",
-        icon: "fa-bolt",
+        title: "Diseño Gráfico y Marketing",
+        desc: "Identidad visual de marca, logos vectoriales, piezas publicitarias para redes sociales (Instagram, TikTok, Facebook), packaging, etiquetas y catálogos con código QR.",
+        icon: "fa-palette",
         theme: {
             cardBg: "bg-[#171717]",
             accentLine: "bg-[#A3E635]",
@@ -66,9 +66,9 @@ const recursosData = [
             buttonHover: "hover:bg-[#84CC16] hover:text-[#0A0A0A]"
         },
         tags: [
-            { label: "Web", icon: "fa-globe" },
-            { label: "Sistemas a medida", icon: "fa-gear" },
-            { label: "IA", icon: "fa-robot" }
+            { label: "Branding", icon: "fa-pen-nib" },
+            { label: "Redes Sociales", icon: "fa-rectangle-ad" },
+            { label: "Catálogos QR", icon: "fa-qrcode" }
         ]
     }
 ];
