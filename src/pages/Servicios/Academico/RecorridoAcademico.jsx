@@ -19,10 +19,10 @@ const TECH_DETAILS = {
 };
 
 const PROJECTS = [
-  {"num":"01","category":"INFORMES Y MONOGRAFÍAS","firstPart":"Informes","highlightPart":"y Monografías","desc":"Orientación para organizar tema, secciones, citas y referencias según la consigna. El estudiante escribe y presenta su propio trabajo.","tags":["APA 7","Documentación","Word"],"icon":"fa-book","image":"/img/08_Cards/proyecto-academico-tesis.webp"},
-  {"num":"02","category":"PRESENTACIONES","firstPart":"Presentaciones","highlightPart":"y exposiciones","desc":"Organización visual de exposiciones, proyectos, clases y defensas académicas a partir del contenido del estudiante.","tags":["PowerPoint","Exposición","Diseño"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp"},
-  {"num":"03","category":"DIAGRAMAS","firstPart":"Infografías","highlightPart":"y Diagramas","desc":"Esquemas anatómicos, flujos de bases de datos y líneas de tiempo para visualizar tu investigación.","tags":["Infografías","Diagramas","Esquemas"],"icon":"fa-project-diagram","image":"/img/08_Cards/proyecto-academico-infografias.webp"},
-  {"num":"04","category":"SIMULACIÓN","firstPart":"Simuladores","highlightPart":"y Programación","desc":"Simuladores educativos, proyectos de redes y apoyo en lógica de programación.","tags":["Simuladores","Redes","Código"],"icon":"fa-code","image":"/img/08_Cards/proyecto-academico-programacion.webp"}
+  {"num":"01","category":"TESIS Y MONOGRAFÍAS","firstPart":"Tesis","highlightPart":"y Monografías","desc":"Orientación en temas, estructura, marco teórico, citas APA 7 y preparación de defensas de grado para instituto y universidad.","tags":["Tesis","APA 7","Monografías"],"icon":"fa-graduation-cap","image":"/img/08_Cards/proyecto-academico-tesis.webp"},
+  {"num":"02","category":"DIAPOSITIVAS Y PRESENTACIONES","firstPart":"Diapositivas","highlightPart":"y Exposiciones","desc":"Diseño y organización visual de diapositivas en PowerPoint y recursos interactivos para clases, defensas y exposiciones en todos los niveles.","tags":["PowerPoint","Defensas","Diapositivas"],"icon":"fa-file-powerpoint","image":"/img/08_Cards/proyecto-academico-presentaciones.webp"},
+  {"num":"03","category":"TRÍPTICOS E INFOGRAFÍAS","firstPart":"Trípticos","highlightPart":"e Infografías","desc":"Diseño de trípticos escolares, afiches, mapas conceptuales, líneas de tiempo y esquemas explicativos para colegio, secundaria e instituto.","tags":["Trípticos","Mapas","Infografías"],"icon":"fa-project-diagram","image":"/img/08_Cards/proyecto-academico-infografias.webp"},
+  {"num":"04","category":"INFORMES Y PROYECTOS","firstPart":"Informes","highlightPart":"y Proyectos Escolares","desc":"Acompañamiento en informes técnicos, carpetas escolares, proyectos de feria, simuladores y tareas guiadas.","tags":["Informes","Proyectos","Colegio a U"],"icon":"fa-book-open","image":"/img/08_Cards/proyecto-academico-programacion.webp"}
 ];
 
 const ProjectCarousel = ({ images }) => {
@@ -99,7 +99,7 @@ const RecorridoAcademico = () => {
             </span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500 dark:text-slate-400 font-semibold leading-relaxed max-w-2xl mx-auto mb-8 text-center justify-center">
-            Orientación para tareas, informes, monografías, proyectos socioformativos, presentaciones y ejercicios de programación, según la consigna y disponibilidad.
+            Todo tipo de trabajo académico: tesis, monografías, informes, proyectos escolares, diapositivas y trípticos para colegio, secundaria, instituto y universidad.
           </p>
         </div>
 

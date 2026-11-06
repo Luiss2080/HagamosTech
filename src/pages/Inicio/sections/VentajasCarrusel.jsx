@@ -23,20 +23,20 @@ const originalHighlights = [
     },
     {
         id: 'academia',
-        title: 'Apoyo',
-        highlight: 'Académico',
-        desc: 'Te ayudamos a estructurar, programar y documentar tus proyectos universitarios de programación y tecnología.',
+        title: 'Trabajos',
+        highlight: 'Académicos',
+        desc: 'Elaboramos y orientamos todo tipo de trabajo escolar y académico: informes, proyectos, tesis, monografías, diapositivas y trípticos.',
         icon: 'fa-graduation-cap',
-        badge: 'Apoyo Estudiantil',
+        badge: 'Todos los niveles',
         color: "bg-[#A3E635]",
         textColor: "text-[#0A0A0A]",
         iconColor: "text-[#A3E635] bg-white",
         badgeColor: "bg-white/20 text-white border-white/10",
         features: [
-            { icon: 'fa-user-graduate', text: 'Asesoría Técnica' },
-            { icon: 'fa-diagram-project', text: 'Modelado y Lógica' },
-            { icon: 'fa-file-lines', text: 'Guías de Defensa' },
-            { icon: 'fa-chalkboard-user', text: 'Aprendizaje Guiado' }
+            { icon: 'fa-file-lines', text: 'Tesis y Monografías' },
+            { icon: 'fa-file-powerpoint', text: 'Diapositivas y Trípticos' },
+            { icon: 'fa-diagram-project', text: 'Proyectos e Informes' },
+            { icon: 'fa-school', text: 'Colegio, Instituto y U' }
         ]
     },
     {

@@ -19,9 +19,9 @@ export const categories = [
     icon: <BookOpen size={16} />,
     color: 'text-[#A3E635] bg-[#A3E635]/10',
     questions: [
-      { q: '¿Ayudan con trabajos académicos?', a: '**Brindamos mentorías, tareas guiadas y orientación para informes, monografías y proyectos socioformativos**, además de presentaciones, formato APA 7 y recursos visuales. El estudiante desarrolla y presenta su propio trabajo.' },
-      { q: '¿Hacen simuladores y proyectos de redes?', a: '**Podemos orientar en simuladores educativos y proyectos de redes**, según la consigna, el nivel y el alcance.' },
-      { q: '¿Dan apoyo en programación?', a: '**Sí.** Asesoría en código estructurado, algoritmos y lógica computacional para tus proyectos.' }
+      { q: '¿Qué trabajos escolares y académicos realizan?', a: '**Realizamos y apoyamos en todo tipo de trabajo escolar y académico:** informes, proyectos, tesis, monografías, presentaciones en diapositivas, trípticos, afiches y tareas guiadas para todos los niveles: colegio, secundaria, instituto y universidad. Ofrecemos acompañamiento académico integral y formato APA 7.' },
+      { q: '¿Hacen trípticos, diapositivas y proyectos de colegio?', a: '**Sí.** Diseñamos trípticos informativos, esquemas visuales, carpetas y diapositivas dinámicas en PowerPoint para exposiciones escolares, ferias y clases.' },
+      { q: '¿Dan apoyo en tesis, proyectos de grado y tecnología?', a: '**Sí.** Apoyamos en proyectos de grado, tesis, monografías, desarrollo de sistemas y algoritmos computacionales.' }
     ]
   },
   {

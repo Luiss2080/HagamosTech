@@ -21,7 +21,7 @@ export const SERVICIOS_DATA = {
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
-                { icon: 'fa-graduation-cap', label: 'Foco', value: 'Universitario' }
+                { icon: 'fa-graduation-cap', label: 'Niveles', value: 'Colegio a Universidad' }
             ],
             includes: [
                 { icon: 'fa-desktop', label: 'Diseño Visual' },
@@ -61,7 +61,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-estudiante-infografias.webp',
             category: 'Visualización',
             pillLabel: 'ESQUEMAS',
-            shortDesc: 'Recursos visuales para explicar temas, procesos y contenidos de estudio.',
+            shortDesc: 'Trípticos, infografías, esquemas y recursos visuales para explicar temas y contenidos de estudio en colegio, instituto o universidad.',
             stats: [
                 { icon: 'fa-headset', label: 'Modalidad', value: 'A conversar' },
                 { icon: 'fa-pen-ruler', label: 'Diseño', value: 'A Medida' },
@@ -171,7 +171,7 @@ export const SERVICIOS_DATA = {
             img: '/img/08_Cards/servicio-estudiante-informes.webp',
             category: 'Documentación',
             pillLabel: 'ORIENTACIÓN',
-            shortDesc: 'Guía para delimitar tema, organizar capítulos, revisar avances y preparar citas y referencias.',
+            shortDesc: 'Guía y redacción para tesis, monografías, informes de pasantía y proyectos de grado con citas APA y referencias.',
             stats: [
                 { icon: 'fa-book', label: 'Formato', value: 'Según pauta' },
                 { icon: 'fa-spell-check', label: 'Revisión', value: 'A Coordinar' },

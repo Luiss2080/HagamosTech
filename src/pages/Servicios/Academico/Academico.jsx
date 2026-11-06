@@ -13,12 +13,12 @@ import Breadcrumb from '../../../components/func/MigasPan';
 const CLIENTES = ['Acompañamiento académico', 'Diseño gráfico', 'Desarrollo web', 'Software a medida', 'Emprendimientos', 'Instituciones', 'Profesionales'];
 
 const BRANDS = [
-  {"name":"Informes y Monografías","tag":"Orientación de estructura y APA 7","icon":"fa-book"},
-  {"name":"Presentaciones","tag":"PowerPoint e interactivas","icon":"fa-file-powerpoint"},
-  {"name":"Infografías y Diagramas","tag":"Esquemas y líneas de tiempo","icon":"fa-project-diagram"},
-  {"name":"Simuladores educativos","tag":"Orientación según consigna","icon":"fa-shapes"},
-  {"name":"Proyectos de Redes","tag":"Topologías y pruebas","icon":"fa-network-wired"},
-  {"name":"Programación","tag":"Apoyo en código y lógica","icon":"fa-code"}
+  {"name":"Tesis y Monografías","tag":"Proyectos de grado y APA 7","icon":"fa-graduation-cap"},
+  {"name":"Diapositivas y Exposiciones","tag":"PowerPoint e interactivas","icon":"fa-file-powerpoint"},
+  {"name":"Trípticos e Infografías","tag":"Material escolar y afiches","icon":"fa-file-lines"},
+  {"name":"Informes Académicos","tag":"Colegio, instituto y universidad","icon":"fa-book"},
+  {"name":"Proyectos de Feria y Tareas","tag":"Apoyo guiado en materias","icon":"fa-school"},
+  {"name":"Proyectos Tecnológicos","tag":"Sistemas, simuladores y redes","icon":"fa-code"}
 ];
 
 const PROCESO = [
@@ -39,9 +39,9 @@ import TrustedClients from '../../../components/carouseles/ClientesConfian';
 
 
 const VALUE_POINTS = [
-  {"icon":"fa-file-powerpoint","label":"Presentaciones Profesionales"},
-  {"icon":"fa-book","label":"Formato APA 7"},
-  {"icon":"fa-shapes","label":"Simuladores y Redes"},
+  {"icon":"fa-graduation-cap","label":"Tesis e Informes"},
+  {"icon":"fa-file-powerpoint","label":"Diapositivas y Trípticos"},
+  {"icon":"fa-school","label":"Colegio a Universidad"},
   {"icon":"fa-award","label":"Rigor Académico"}
 ];
 
@@ -216,11 +216,11 @@ const Academico = () => {
 
               <div className="space-y-5 text-slate-300 dark:text-slate-300 font-bold leading-relaxed text-sm sm:text-base max-w-2xl text-justify">
 <p>
-Ofrecemos mentorías y orientación académica para comprender contenidos y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
+Ofrecemos acompañamiento académico integral en todo tipo de trabajo escolar y formativo: tesis, monografías, informes técnicos, proyectos de feria, diapositivas y trípticos para estudiantes de colegio, secundaria, institutos y universidades. El estudiante desarrolla y presenta su propio trabajo con nuestra guía.
 </p>
 <p>
 <span className="font-black uppercase tracking-widest text-[#A3E635] dark:text-[#A3E635]">Servicios Específicos: </span>
-Mentorías académicas, apoyo guiado en tareas, informes, monografías, proyectos socioformativos, presentaciones, formato APA 7 y apoyo en proyectos de programación según materia y disponibilidad.
+Tesis y proyectos de grado, monografías, informes académicos, trípticos y afiches, diapositivas en PowerPoint, formato APA 7, proyectos socioformativos, carpetas escolares y tutorías prácticas.
 </p>
 </div>
             </div>

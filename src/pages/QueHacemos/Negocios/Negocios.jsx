@@ -15,7 +15,7 @@ const SOLUCIONES = [
   { title: 'Sitios, plataformas y tiendas online', desc: 'Sitios corporativos, portales educativos e institucionales, landing pages, catálogos, blogs, cursos, reservas, comunidades y tiendas con pedidos. Funciones y pagos se revisan según viabilidad.', icon: <Globe size={24} />, image: '/img/08_Cards/negocios-web.webp', category: 'DESARROLLO WEB' },
   { title: 'Sistemas y software a medida', desc: 'ERP, inventario, ventas/POS, facturación, CRM, gestión documental y sistemas para clínicas, hoteles, gimnasios, talleres, transporte o producción. Portales académicos pueden incluir perfiles, notas, inscripciones, pagos, comunicados, bibliotecas y aulas virtuales según alcance.', icon: <Cpu size={24} />, image: '/img/08_Cards/negocios-software.webp', category: 'SOFTWARE' },
   { title: 'Diseño gráfico e identidad', desc: 'Logos, identidad visual, flyers, banners, catálogos, tarjetas y piezas para difusión digital o impresión.', icon: <Store size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'DISEÑO' },
-  { title: 'Acompañamiento académico', desc: 'Mentorías y orientación en tareas guiadas, informes, monografías y proyectos socioformativos, según materia y disponibilidad. Cada estudiante desarrolla su propio trabajo.', icon: <Users size={24} />, image: '/img/08_Cards/negocios-academico.webp', category: 'ACOMPAÑAMIENTO' }
+  { title: 'Publicidad comercial y piezas especiales', desc: 'Diseño de promociones, catálogos digitales de productos o servicios, afiches y piezas publicitarias para campañas comerciales y fechas especiales.', icon: <TrendingUp size={24} />, image: '/img/08_Cards/negocios-identidad.webp', category: 'PUBLICIDAD' }
 ];
 
 const SolucionesGrid = () => {

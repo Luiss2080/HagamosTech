@@ -21,7 +21,7 @@ const TESTIMONIOS = [
   { name: 'Proyecto socioformativo', role: 'Ejemplo orientativo', text: 'Quiero planificar objetivos, actividades y evidencias para desarrollar mi proyecto.' }
 ];
 
-const FULL_TEXT = `[ejemplo] Conversamos sobre la materia y la consigna\n[guía] Organizamos los temas que requieren repaso\n[práctica] Resolvemos ejercicios de forma guiada\n[revisión] Contrastamos el avance con la pauta compartida\n> El estudiante desarrolla y presenta su propio trabajo.`;
+const FULL_TEXT = `[solicitud] Apoyo con tareas, trabajos escolares o universitarios\n[organización] Delimitamos tema, estructura y pauta (APA / escolar)\n[desarrollo] Elaboramos informes, diapositivas, trípticos o tesis\n[revisión] Revisamos avances y preparamos la exposición o entrega\n> Acompañamiento académico para colegio, instituto y universidad.`;
 
 const CompilerWindow = () => {
   const [text, setText] = useState('');
@@ -55,38 +55,38 @@ const CompilerWindow = () => {
 
 const ESPECIALIDADES = [
   {
-    title: 'Apoyo por materia',
-    desc: 'Mentorías y orientación en tareas, informes, monografías y proyectos socioformativos, según nivel, materia y disponibilidad. El estudiante realiza su propio trabajo.',
-    icon: <Stethoscope size={20} />,
-    image: '/img/08_Cards/academico-mentorias.webp'
-  },
-  {
-    title: 'Sistemas de Información',
-    desc: 'Modelado de bases de datos y documentación técnica para proyectos de ingeniería.',
-    icon: <Laptop size={20} />,
-    image: '/img/08_Cards/academico-sistemas-datos.webp'
-  },
-  {
-    title: 'Acompañamiento en tareas',
-    desc: 'Explicación de contenidos y resolución guiada de ejercicios; el estudiante desarrolla sus respuestas.',
-    icon: <Microscope size={20} />,
+    title: 'Trabajos Escolares y Secundaria',
+    desc: 'Trípticos, tareas guiadas, informes escolares, periódicos murales, carpetas y proyectos de feria para estudiantes de colegio y secundaria.',
+    icon: <BookOpen size={20} />,
     image: '/img/08_Cards/academico-tareas.webp'
   },
   {
-    title: 'Presentaciones y exposiciones',
-    desc: 'Organización visual de ideas para clases, exposiciones y defensas académicas.',
-    icon: <BookOpen size={20} />,
+    title: 'Tesis, Monografías y Proyectos de Grado',
+    desc: 'Asesoramiento y acompañamiento en delimitación de tema, marco teórico, metodología, estructura APA 7 y preparación de defensa para institutos y universidades.',
+    icon: <GraduationCap size={20} />,
+    image: '/img/08_Cards/academico-mentorias.webp'
+  },
+  {
+    title: 'Informes Técnicos y Ensayos',
+    desc: 'Elaboración y revisión guiada de informes de pasantía, prácticas, ensayos académicos y monografías con rigor y formato estandarizado.',
+    icon: <Microscope size={20} />,
+    image: '/img/08_Cards/academico-sistemas-datos.webp'
+  },
+  {
+    title: 'Diapositivas y Presentaciones',
+    desc: 'Organización visual de diapositivas interactivas en PowerPoint y Canva para exposiciones, clases, defensas de tesis y proyectos.',
+    icon: <Stethoscope size={20} />,
     image: '/img/08_Cards/academico-exposiciones.webp'
   },
   {
-    title: 'Infografías y Líneas de Tiempo',
-    desc: 'Esquemas, diagramas y líneas de tiempo para estructurar ideas e investigaciones.',
+    title: 'Trípticos, Afiches e Infografías',
+    desc: 'Diseño de trípticos, dípticos, esquemas, mapas conceptuales y líneas de tiempo para estructurar contenidos escolares y de estudio.',
     icon: <LineChart size={20} />,
     image: '/img/08_Cards/academico-infografias.webp'
   },
   {
-    title: 'Algoritmos y Lógica',
-    desc: 'Tutoría de lógica, algoritmos y comprensión de código; el estudiante desarrolla su solución.',
+    title: 'Proyectos Tecnológicos y Programación',
+    desc: 'Tutoría en proyectos de grado, algoritmos, lógica, bases de datos y simuladores educativos según consigna.',
     icon: <Binary size={20} />,
     image: '/img/08_Cards/academico-programacion.webp'
   }
@@ -120,7 +120,7 @@ const Academia = () => {
           </h1>
           
           <p className="text-slate-400 text-lg max-w-2xl font-medium mb-10 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-            Mentorías y apoyo académico para comprender contenidos, resolver ejercicios y avanzar en tareas, informes, monografías y proyectos socioformativos. El estudiante desarrolla y presenta su propio trabajo.
+            Acompañamiento académico integral en todo tipo de trabajo escolar y formativo: informes, proyectos, tesis, monografías, presentaciones en diapositivas, trípticos y tareas para colegio, secundaria, instituto y universidad.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center animate-fade-in-up" style={{ animationDelay: '0.3s' }}>

@@ -87,7 +87,7 @@ const FormularioContacto = () => {
                                     </div>
                                     <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/70"><i className="fas fa-graduation-cap mr-1"></i> Academia</p>
-                                        <p className="text-xs font-bold text-white">Proyectos y simulaciones</p>
+                                        <p className="text-xs font-bold text-white">Trabajos escolares y tesis</p>
                                     </div>
                                     <div className="rounded-xl border border-white/20 bg-black/20 px-3 py-2 text-left backdrop-blur-sm">
                                         <p className="text-[9px] font-black uppercase tracking-widest text-white/70"><i className="fas fa-store mr-1"></i> Negocios</p>

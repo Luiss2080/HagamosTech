@@ -11,7 +11,7 @@ const NAV_ITEMS = [
         type: 'dropdown',
         subItems: [
             { id: 'cat-tecnologia', label: 'Tecnología', desc: 'Desarrollo web, sistemas y soluciones digitales a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-microchip' },
-            { id: 'cat-academia', label: 'Academia', desc: 'Mentorías y orientación para avanzar en tus proyectos.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
+            { id: 'cat-academia', label: 'Academia', desc: 'Acompañamiento académico, tareas guiadas y proyectos escolares.', target: '/que-hacemos/academia', icon: 'fa-graduation-cap' },
             { id: 'cat-negocios', label: 'Negocios', desc: 'Identidad visual, diseño y presencia web.', target: '/que-hacemos/negocios', icon: 'fa-store' },
             { id: 'cat-personalizado', label: 'Soluciones personalizadas', desc: 'Revisamos tu necesidad y conversamos alternativas viables.', target: '/que-hacemos/personalizado', icon: 'fa-lightbulb' },
         ]
@@ -26,7 +26,7 @@ const NAV_ITEMS = [
             { id: 'srv-apps', label: 'Sistemas y software a medida', desc: 'Aplicaciones, plataformas y herramientas según requisitos y alcance.', target: '/servicios/sistemas-apps', icon: 'fa-mobile-screen-button' },
             { id: 'srv-ia', label: 'Aplicaciones y paneles', desc: 'Diseño de interfaces para productos digitales.', target: '/servicios/inteligencia-artificial', icon: 'fa-window-maximize' },
             { id: 'srv-negocio', label: 'Para tu Negocio', desc: 'Digitalización y presencia online.', target: '/servicios/para-tu-negocio', icon: 'fa-store' },
-            { id: 'srv-academico', label: 'Apoyo Académico', desc: 'Proyectos, simuladores y recursos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
+            { id: 'srv-academico', label: 'Trabajos Académicos y Escolares', desc: 'Tesis, informes, monografías, diapositivas y trípticos.', target: '/servicios/apoyo-academico', icon: 'fa-graduation-cap' },
             { id: 'srv-empleo', label: 'Empleo', desc: 'CVs y preparación profesional.', target: '/servicios/empleo', icon: 'fa-user-tie' },
             { id: 'srv-diseno', label: 'Diseño Gráfico', desc: 'Identidad visual y branding.', target: '/servicios/diseno-grafico', icon: 'fa-pen-nib' },
         ]
@@ -37,11 +37,11 @@ const NAV_ITEMS = [
         icon: 'fa-users',
         type: 'dropdown',
         subItems: [
-            { id: 'pq-estudiantes', label: 'Estudiantes', desc: 'Mentorías, tareas guiadas e informes académicos.', target: '/que-hacemos/academia', icon: 'fa-user-graduate' },
-            { id: 'pq-emprendedores', label: 'Emprendedores', desc: 'Llevá tu idea al mundo digital.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
-            { id: 'pq-negocios', label: 'Negocios y emprendimientos', desc: 'Sitios web, catálogos y recursos gráficos.', target: '/que-hacemos/negocios', icon: 'fa-shop' },
-            { id: 'pq-empresas', label: 'Empresas', desc: 'Soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
-            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad concreta resuelta.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
+            { id: 'pq-escolares', label: 'Colegio y Secundaria', desc: 'Tareas, informes, trípticos, diapositivas y proyectos escolares.', target: '/que-hacemos/academia', icon: 'fa-school' },
+            { id: 'pq-universitarios', label: 'Universidad e Instituto', desc: 'Tesis, proyectos de grado, monografías, formato APA 7 y defensas.', target: '/servicios/apoyo-academico', icon: 'fa-user-graduate' },
+            { id: 'pq-emprendedores', label: 'Emprendedores y Negocios', desc: 'Identidad visual, catálogos digitales y presencia online.', target: '/que-hacemos/negocios', icon: 'fa-rocket' },
+            { id: 'pq-empresas', label: 'Empresas e Instituciones', desc: 'Sistemas, portales y soluciones tecnológicas a medida.', target: '/que-hacemos/tecnologia', icon: 'fa-building' },
+            { id: 'pq-particulares', label: 'Personas particulares', desc: 'Tu necesidad o proyecto concreto resuelto.', target: '/que-hacemos/personalizado', icon: 'fa-user' },
         ]
     },
     { id: 'flujo', label: 'Cómo trabajamos', icon: 'fa-diagram-project', type: 'route', target: '/como-trabajamos' },
